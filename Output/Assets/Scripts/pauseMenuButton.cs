@@ -154,7 +154,6 @@ public class pauseMenuButton : RagnarComponent
 		OptionsBackHide();
 		optionsScreenSDCH.GetComponent<UICheckbox>().SetCheckboxState(Light.shadowsEnabled);
 		optionsScreenFSCH.GetComponent<UICheckbox>().SetCheckboxState(InternalCalls.GetFullScreen());
-		InternalCalls.SetFullScreen(true);
 		optionsScreenVSCH.GetComponent<UICheckbox>().SetCheckboxState(InternalCalls.GetVSync());
 
 		//////////////GAME//////////////

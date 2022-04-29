@@ -99,6 +99,11 @@ void GameObject::Draw(CameraComponent* gameCam)
 		float3 points[8];
 		globalAabb.GetCornerPoints(points);
 		DebugColliders(points, float3(0.2f, 1.f, 0.101f));
+
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
 	}
 
 	if (showOBB == true)
@@ -117,9 +122,15 @@ void GameObject::Draw(CameraComponent* gameCam)
 			glMatrixMode(GL_MODELVIEW);
 			glLoadMatrixf(app->camera->matrixViewFrustum.Transposed().ptr());
 		}
+		
 		float3 points[8];
 		globalObb.GetCornerPoints(points);
 		DebugColliders(points);
+
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
 	}
 }
 
