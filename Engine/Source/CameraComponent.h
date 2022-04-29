@@ -32,7 +32,7 @@ public:
 
 	void CompileBuffers();
 	bool CompareRotations(Quat& quat1, Quat& quat2);
-	void RequestShake(float strength, float duration);
+	void RequestShake(float strength, float duration, int smothness);
 
 	bool OnLoad(JsonParsing& node) override;
 	bool OnSave(JsonParsing& node, JSON_Array* array) override;
@@ -93,7 +93,7 @@ private:
 	float shakeStrength = 0.6f;
 	float shakeDuration = 1.0f;
 	bool shake = false;
-	int smooth = 0;
+	int easeType = 0;
 	float elapsedTime = 0.0f;
 	float currentStrength = 0.0f;
 

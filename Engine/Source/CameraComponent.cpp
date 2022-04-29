@@ -149,18 +149,18 @@ void CameraComponent::OnEditorShake()
 	ImGui::DragFloat("shakeStrength", &shakeStrength, 0.1f, 0.0f);
 	ImGui::DragFloat("shakeDuration", &shakeDuration, 0.1f, 0.0f);
 
-	if (ImGui::Button("<") && smooth > 0) smooth--;
+	if (ImGui::Button("<") && easeType > 0) easeType--;
 	ImGui::SameLine();
 	ImGui::Button("Smoothness Type");
 	ImGui::SameLine();
-	if (ImGui::Button(">") && smooth < 3) smooth++;
+	if (ImGui::Button(">") && easeType < 3) easeType++;
 
-	if (smooth == 0) ImGui::Text("Smoothnes:: none");
-	if (smooth == 1) ImGui::Text("Smoothnes:: in-out");
-	if (smooth == 2) ImGui::Text("Smoothnes:: in");
-	if (smooth == 3) ImGui::Text("Smoothnes:: out");
+	if (easeType == 0) ImGui::Text("Smoothnes:: none");
+	if (easeType == 1) ImGui::Text("Smoothnes:: in-out");
+	if (easeType == 2) ImGui::Text("Smoothnes:: in");
+	if (easeType == 3) ImGui::Text("Smoothnes:: out");
 	if (ImGui::Button("Shake"))
-		RequestShake(shakeStrength, shakeDuration);
+		RequestShake(shakeStrength, shakeDuration, easeType);
 
 	ImGui::DragFloat4("##Limits", limits.ptr());
 }
@@ -470,7 +470,7 @@ bool CameraComponent::OnLoad(JsonParsing& node)
 	// SHAKE
 	shakeStrength = node.GetJsonNumber("Shake Strength");
 	shakeDuration = node.GetJsonNumber("Shake Duration");
-	smooth = node.GetJsonNumber("Shake Smooth");
+	easeType = node.GetJsonNumber("Shake Smooth");
 
 	// Limits
 	limits = node.GetJson4Number(node, "Limits");
@@ -509,7 +509,7 @@ bool CameraComponent::OnSave(JsonParsing& node, JSON_Array* array)
 	// SHAKE
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Shake Strength", shakeStrength);
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Shake Duration", shakeDuration);
-	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Shake Smooth", smooth);
+	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Shake Smooth", easeType);
 
 	// Limits
 	file.SetNewJson4Number(file, "Limits", limits);
@@ -548,11 +548,16 @@ float4x4 CameraComponent::ViewMatrixOpenGL()
 //	return mat.Transposed();
 //}
 
-void CameraComponent::RequestShake(float strength, float duration)
+// easing = 0 --> none
+// easing = 1 --> ease in-out
+// easing = 2 --> ease in
+// easing = 3 --> ease out
+void CameraComponent::RequestShake(float strength, float duration, int easing)
 {
 	shakeStrength = strength;
 	shakeDuration = duration;
-	if (smooth != 0) currentStrength = 0;
+	easeType = easing;
+	if (easeType != 0) currentStrength = 0;
 	else currentStrength = strength;
 	shake = true;
 	originalPos = transform->GetGlobalPosition();
@@ -561,9 +566,9 @@ void CameraComponent::RequestShake(float strength, float duration)
 void CameraComponent::Shake(float dt)
 {
 	// Exponential
-	if (smooth != 0)
+	if (easeType != 0)
 	{
-		if ((elapsedTime < shakeDuration / 2 && smooth == 1) || (smooth == 2 && elapsedTime < shakeDuration))
+		if ((elapsedTime < shakeDuration / 2 && easeType == 1) || (easeType == 2 && elapsedTime < shakeDuration))
 		{
 			if (currentStrength < shakeStrength)
 			{
@@ -571,7 +576,7 @@ void CameraComponent::Shake(float dt)
 			}
 			else currentStrength = shakeStrength;
 		}
-		else if ((currentStrength > 0 && elapsedTime < shakeDuration && smooth == 1) || (elapsedTime < shakeDuration && smooth == 3))
+		else if ((currentStrength > 0 && elapsedTime < shakeDuration && easeType == 1) || (elapsedTime < shakeDuration && easeType == 3))
 		{
 			currentStrength = shakeStrength * (shakeDuration - elapsedTime) * (shakeDuration - elapsedTime);
 		}
