@@ -33,7 +33,7 @@ CameraComponent::CameraComponent(GameObject* own, TransformComponent* trans) : h
 	camera.SetPerspective(horizontalFov, verticalFov);
 	camera.SetFrame(float3(0.0f, 0.0f, 0.0f), float3(0.0f, 0.0f, 1.0f), float3(0.0f, 1.0f, 0.0f));
 	//camera.SetPos(math::vec(0, 0, 0));
-
+	
 	controllerTrans = owner->GetParent()->GetComponent<TransformComponent>();
 	transform->SetPosition(float3(0.0f, 55.0f, -50.0f));
 
@@ -542,12 +542,6 @@ float4x4 CameraComponent::ViewMatrixOpenGL()
 	return mat.Transposed();
 }
 
-//float4x4 CameraComponent::ViewMatrixOpenGL()
-//{
-//	math::float4x4 mat = camera.ViewMatrix();
-//	return mat.Transposed();
-//}
-
 // easing = 0 --> none
 // easing = 1 --> ease in-out
 // easing = 2 --> ease in
@@ -601,4 +595,10 @@ void CameraComponent::Shake(float dt)
 		elapsedTime = 0.0f;
 		camera.SetPos(originalPos);
 	}
+}
+
+void CameraComponent::ScriptMovement(float x, float y, float z)
+{
+	controllerTrans->SetPosition(float3(x, y, z));
+	controllerTrans->ForceUpdateTransform();
 }

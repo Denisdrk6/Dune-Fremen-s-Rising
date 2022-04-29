@@ -172,6 +172,7 @@ MonoObject* RotateY(MonoObject* go, MonoObject* vector, int anglesDegrees)
 {
 	float3 dirV = app->moduleMono->UnboxVector(vector);
 	return app->moduleMono->Float3ToCS(dirV * math::float3x3::RotateY(anglesDegrees * DEGTORAD));
+
 }
 // Transform ========
 

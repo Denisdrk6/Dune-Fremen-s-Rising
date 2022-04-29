@@ -195,6 +195,7 @@ bool MonoManager::Init(JsonParsing& node)
 	// Camera ====================
 	mono_add_internal_call("RagnarEngine.Camera::LookAt", LookAt);
 	mono_add_internal_call("RagnarEngine.Camera::ChangeFov", ChangeFov);
+	mono_add_internal_call("RagnarEngine.Camera::ScriptMovement", ScriptMovement);
 	// Camera ====================
 
 	// Scene Manager =============

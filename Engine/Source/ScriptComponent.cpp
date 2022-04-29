@@ -81,7 +81,7 @@ bool ScriptComponent::Update(float dt)
 		}
 		else
 		{
-			DEBUG_LOG(mono_class_get_name(mono_object_get_class(exec)));
+			//DEBUG_LOG(mono_class_get_name(mono_object_get_class(exec)));
 		}
 	}
 	return true;
