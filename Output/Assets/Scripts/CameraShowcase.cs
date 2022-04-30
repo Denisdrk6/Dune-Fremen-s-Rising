@@ -43,22 +43,48 @@ public class CameraShowcase : RagnarComponent
             if (index < waypoints.Length)
             {
                 t += Time.deltaTime * speed;
-                Debug.Log("I'm here");
 
                 // Movement
                 Vector3 newpos = CustomLerp(pointA, pointB, pointC, pointD, t);
                 gameObject.GetComponent<Camera>().ScriptMovement(newpos.x, newpos.y, newpos.z);
 
-                //Rotation
-                Vector3 nextPoint = CustomLerp(pointA, pointB, pointC, pointD, t + 0.01f);
-                Vector3 dir = nextPoint - controller.transform.globalPosition;
-                gameObject.GetComponent<Camera>().ScriptRotation(dir.x, dir.y, dir.z);
 
-                if (t >= 1f)
+                //Rotation
+                float newT = t + 0.04f;
+                if ((newT > 1f))
                 {
+                    if ((t >= 1.0f) && (index == 8)) index = waypoints.Length; // BUG FIX, DON'T TOUCH
+                    else
+                    {
+                        Vector3 tempPointA = pointD;
+                        Vector3 vec = waypoints[index + 4].transform.globalPosition;
+                        Vector3 tempPointB = new Vector3(vec.x, vec.y, vec.z);
+
+
+                        vec = waypoints[index + 1 + 4].transform.globalPosition;
+                        Vector3 tempPointC = new Vector3(vec.x, vec.y, vec.z);
+                        vec = waypoints[index + 2 + 4].transform.globalPosition;
+                        Vector3 tempPointD = new Vector3(vec.x, vec.y, vec.z);
+
+                        Vector3 nextPoint = CustomLerp(tempPointA, tempPointB, tempPointC, tempPointD, newT - 1.0f);
+                        Vector3 dir = nextPoint - controller.transform.globalPosition;
+                        gameObject.GetComponent<Camera>().ScriptRotation(dir.x, dir.y, dir.z);
+                    }
+
+                }
+                else
+                {
+                    Vector3 nextPoint = CustomLerp(pointA, pointB, pointC, pointD, newT);
+                    Vector3 dir = nextPoint - controller.transform.globalPosition;
+                    gameObject.GetComponent<Camera>().ScriptRotation(dir.x, dir.y, dir.z);
+                }
+
+                if (t >= 1.0f)
+                {
+                    //Debug.Log("Time: " + t.ToString());
                     index += 4;
                     Debug.Log("INDEX: " + index.ToString());
-                    float oldMagnitude = Vector3.Magnitude(pointB - pointA);
+                    //float oldMagnitude = Vector3.Magnitude(pointB - pointA);
 
                     pointA = pointD;
                     Vector3 vec = waypoints[index].transform.globalPosition;
@@ -69,15 +95,15 @@ public class CameraShowcase : RagnarComponent
                     pointC = new Vector3(vec.x, vec.y, vec.z);
                     vec = waypoints[index + 2].transform.globalPosition;
                     pointD = new Vector3(vec.x, vec.y, vec.z);
-                    Debug.Log("PointA: " + pointA.ToString());
-                    Debug.Log("PointB: " + pointB.ToString());
-                    Debug.Log("PointC: " + pointC.ToString());
-                    Debug.Log("PointD: " + pointD.ToString());
+                    //Debug.Log("PointA: " + pointA.ToString());
+                    //Debug.Log("PointB: " + pointB.ToString());
+                    //Debug.Log("PointC: " + pointC.ToString());
+                    //Debug.Log("PointD: " + pointD.ToString());
 
                     // Adjust speed so its the same no matter the length to the next waypoint
                     //speed = speed * oldMagnitude / Vector3.Magnitude(pointB - pointA);
 
-                    t = 0;
+                    t = 0.0f;
                 }
             }
 
