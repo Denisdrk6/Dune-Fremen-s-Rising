@@ -208,7 +208,7 @@ bool CameraComponent::Update(float dt)
 		targetUID = 0;
 	}*/
 
-	Zoom();
+	if(!lockControlls) Zoom();
 
 	if (target && app->input->GetKey(SDL_SCANCODE_F) == KeyState::KEY_DOWN)
 	{
@@ -244,8 +244,11 @@ bool CameraComponent::Update(float dt)
 	}
 
 	// -------------MOVEMENT---------------
-	UpdateMovement();
-	UpdateRotation();
+	if (!lockControlls)
+	{
+		UpdateMovement();
+		UpdateRotation();
+	}
 
 
 	matrixProjectionFrustum = camera.ComputeProjectionMatrix();
@@ -606,11 +609,11 @@ void CameraComponent::ScriptMovement(float x, float y, float z)
 void CameraComponent::ScriptRotation(float vecX, float vecY, float vecZ)
 {
 	float3 vector = float3(vecX, vecY, vecZ);
-	float angle = controllerTrans->GetForward().AngleBetween(vector);
+	//float angle = controllerTrans->GetForward().AngleBetween(vector);
 	//DEBUG_LOG("Forward: %f, %f, %f", controllerTrans->GetForward().x, controllerTrans->GetForward().y, controllerTrans->GetForward().z);
-	DEBUG_LOG("angle: %f", angle);
-	angle = -((float)Atan2(vecX, vecZ));
-	horizontalAngle += angle;
+	//DEBUG_LOG("angle: %f", angle);
+	float angle = ((float)Atan2(vecX, vecZ)) * RADTODEG;
+	horizontalAngle = angle;
 	//DEBUG_LOG("horizontalAngle: %f", horizontalAngle);
 	if (horizontalAngle < 0) horizontalAngle += 360;
 	if (horizontalAngle > 360) horizontalAngle -= 360;

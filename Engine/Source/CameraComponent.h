@@ -22,8 +22,6 @@ public:
 	void OnEditor() override;
 	void OnEditorMovement();
 	void OnEditorShake();
-	void ScriptMovement(float x, float y, float z);
-	void ScriptRotation(float x, float y, float z);
 
 	void SetPlanes();
 	void CalculateVerticalFov(float horizontalFovRadians, float width, float height);
@@ -49,6 +47,11 @@ public:
 
 	float4x4 matrixViewFrustum;
 	float4x4 matrixProjectionFrustum;
+
+	// Scrpting
+	void ScriptMovement(float x, float y, float z);
+	void ScriptRotation(float x, float y, float z);
+	void LockControlls(bool lock) { lockControlls = lock; };
 
 private:
 	void Shake(float dt);
@@ -101,4 +104,7 @@ private:
 
 	// Limits
 	float4 limits;
+
+	//Lock
+	bool lockControlls = true;
 };
