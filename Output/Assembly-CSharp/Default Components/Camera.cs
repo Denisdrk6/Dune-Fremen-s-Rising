@@ -19,5 +19,8 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void ScriptMovement(float x, float y, float z);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void ScriptRotation(float x, float y, float z);
     }
 }

@@ -602,3 +602,20 @@ void CameraComponent::ScriptMovement(float x, float y, float z)
 	controllerTrans->SetPosition(float3(x, y, z));
 	controllerTrans->ForceUpdateTransform();
 }
+
+void CameraComponent::ScriptRotation(float vecX, float vecY, float vecZ)
+{
+	float3 vector = float3(vecX, vecY, vecZ);
+	float angle = controllerTrans->GetForward().AngleBetween(vector);
+	//DEBUG_LOG("Forward: %f, %f, %f", controllerTrans->GetForward().x, controllerTrans->GetForward().y, controllerTrans->GetForward().z);
+	DEBUG_LOG("angle: %f", angle);
+	angle = -((float)Atan2(vecX, vecZ));
+	horizontalAngle += angle;
+	//DEBUG_LOG("horizontalAngle: %f", horizontalAngle);
+	if (horizontalAngle < 0) horizontalAngle += 360;
+	if (horizontalAngle > 360) horizontalAngle -= 360;
+	//DEBUG_LOG("horizontalAngle: %f", horizontalAngle);
+	controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
+	controllerTrans->UpdateEditorRotation();
+	controllerTrans->ForceUpdateTransform();
+}

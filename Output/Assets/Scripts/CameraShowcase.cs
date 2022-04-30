@@ -18,13 +18,14 @@ public class CameraShowcase : RagnarComponent
     {
         waypoints = GameObject.FindGameObjectsWithTag("CamWaypoints");
         controller = GameObject.Find("cameraController");
-        Vector3 vec = controller.transform.globalPosition;
+        Debug.Log("Waypoints: " + waypoints.Length.ToString());
+        Vector3 vec = waypoints[0].GetComponent<Transform>().globalPosition;
         pointA = new Vector3(vec.x, vec.y, vec.z);
-        vec = waypoints[0].GetComponent<Transform>().globalPosition;
-        pointB = new Vector3(vec.x, vec.y, vec.z);
         vec = waypoints[1].GetComponent<Transform>().globalPosition;
-        pointC = new Vector3(vec.x, vec.y, vec.z);
+        pointB = new Vector3(vec.x, vec.y, vec.z);
         vec = waypoints[2].GetComponent<Transform>().globalPosition;
+        pointC = new Vector3(vec.x, vec.y, vec.z);
+        vec = waypoints[3].GetComponent<Transform>().globalPosition;
         pointD = new Vector3(vec.x, vec.y, vec.z);
 
     }
@@ -39,27 +40,42 @@ public class CameraShowcase : RagnarComponent
         if (index < waypoints.Length)
         {
             t += Time.deltaTime * speed;
+            Debug.Log("I'm here");
 
+            // Movement
             Vector3 newpos = CustomLerp(pointA, pointB, pointC, pointD, t);
-            //gameObject.transform.globalPosition.Set(newpos.x, newpos.y, newpos.z);
             gameObject.GetComponent<Camera>().ScriptMovement(newpos.x, newpos.y, newpos.z);
+
+            //Rotation
+            Vector3 nextPoint = waypoints[index + 3].transform.globalPosition;
+            Vector3 dir = nextPoint - controller.transform.globalPosition;
+
+           // float angle = ((float)Math.Atan2(dir.y, dir.x)) * 57.295779513082320876f;
+            gameObject.GetComponent<Camera>().ScriptRotation(dir.x, dir.y, dir.z);
 
             if (t >= 1f)
             {
                 index += 4;
+                Debug.Log("INDEX: " + index.ToString());
                 float oldMagnitude = Vector3.Magnitude(pointB - pointA);
 
                 pointA = pointD;
                 Vector3 vec = waypoints[index].transform.globalPosition;
                 pointB = new Vector3(vec.x, vec.y, vec.z);
-                vec = waypoints[index + 1].transform.globalPosition;
-                pointC = new Vector3(vec.x, vec.y, vec.z);
-                vec = waypoints[index + 2].transform.globalPosition;
-                pointD = new Vector3(vec.x, vec.y, vec.z);
+
+                
+                    vec = waypoints[index + 1].transform.globalPosition;
+                    pointC = new Vector3(vec.x, vec.y, vec.z);
+                    vec = waypoints[index + 2].transform.globalPosition;
+                    pointD = new Vector3(vec.x, vec.y, vec.z);
+                Debug.Log("PointA: " + pointA.ToString());
+                Debug.Log("PointB: " + pointB.ToString());
+                Debug.Log("PointC: " + pointC.ToString());
+                Debug.Log("PointD: " + pointD.ToString());
 
 
                 // Adjust speed so its the same no matter the length to the next waypoint
-                speed = speed * oldMagnitude / Vector3.Magnitude(pointB - pointA);
+                //speed = speed * oldMagnitude / Vector3.Magnitude(pointB - pointA);
 
                 t = 0;
             }

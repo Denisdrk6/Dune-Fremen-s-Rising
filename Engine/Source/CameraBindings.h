@@ -40,6 +40,12 @@ void ScriptMovement(MonoObject* go, float x, float y, float z)
 	cam->ScriptMovement(x, y, z);
 }
 
+void ScriptRotation(MonoObject* go, float x, float y, float z)
+{
+	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
+	cam->ScriptRotation(x, y, z);
+}
+
 MonoObject* HitToTag(MonoObject* initPos, MonoObject* endPos, MonoObject* tag)
 {
 	float3 pointA = app->moduleMono->UnboxVector(initPos);

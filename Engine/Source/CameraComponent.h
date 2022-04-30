@@ -23,6 +23,7 @@ public:
 	void OnEditorMovement();
 	void OnEditorShake();
 	void ScriptMovement(float x, float y, float z);
+	void ScriptRotation(float x, float y, float z);
 
 	void SetPlanes();
 	void CalculateVerticalFov(float horizontalFovRadians, float width, float height);
