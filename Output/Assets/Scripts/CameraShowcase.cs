@@ -9,7 +9,9 @@ public class CameraShowcase : RagnarComponent
 
     private Vector3 pointA;
     private Vector3 pointB;
-    private float speed = 1.0f;
+    private Vector3 pointC;
+    private Vector3 pointD;
+    private float speed = 0.5f;
     private float t = 0;
 
     public void Start()
@@ -20,11 +22,16 @@ public class CameraShowcase : RagnarComponent
         pointA = new Vector3(vec.x, vec.y, vec.z);
         vec = waypoints[0].GetComponent<Transform>().globalPosition;
         pointB = new Vector3(vec.x, vec.y, vec.z);
+        vec = waypoints[1].GetComponent<Transform>().globalPosition;
+        pointC = new Vector3(vec.x, vec.y, vec.z);
+        vec = waypoints[2].GetComponent<Transform>().globalPosition;
+        pointD = new Vector3(vec.x, vec.y, vec.z);
+
     }
 
-    private Vector3 CustomLerp(Vector3 a, Vector3 b, float t)
+    public Vector3 CustomLerp(Vector3 p0, Vector3 p1, Vector3 p2, Vector3 p3, float t)
     {
-        return a * (1 - t) + b * t;
+        return ((p0 + (p1 - p0) * t) * (1 - t) + (p1 + (p2 - p1) * t) * t) * (1 - t) + ((p1 + (p2 - p1) * t) * (1 - t) + (p2 + (p3 - p2 * t)) * t) * t;
     }
 
     public void Update()
@@ -33,17 +40,26 @@ public class CameraShowcase : RagnarComponent
         {
             t += Time.deltaTime * speed;
 
-            Vector3 newpos = CustomLerp(pointA, pointB, t);
+            Vector3 newpos = CustomLerp(pointA, pointB, pointC, pointD, t);
             //gameObject.transform.globalPosition.Set(newpos.x, newpos.y, newpos.z);
             gameObject.GetComponent<Camera>().ScriptMovement(newpos.x, newpos.y, newpos.z);
 
-            if (t >= 1)
+            if (t >= 1f)
             {
-                index++;
+                index += 4;
+                float oldMagnitude = Vector3.Magnitude(pointB - pointA);
 
-                pointA = pointB;
+                pointA = pointD;
                 Vector3 vec = waypoints[index].transform.globalPosition;
                 pointB = new Vector3(vec.x, vec.y, vec.z);
+                vec = waypoints[index + 1].transform.globalPosition;
+                pointC = new Vector3(vec.x, vec.y, vec.z);
+                vec = waypoints[index + 2].transform.globalPosition;
+                pointD = new Vector3(vec.x, vec.y, vec.z);
+
+
+                // Adjust speed so its the same no matter the length to the next waypoint
+                speed = speed * oldMagnitude / Vector3.Magnitude(pointB - pointA);
 
                 t = 0;
             }
