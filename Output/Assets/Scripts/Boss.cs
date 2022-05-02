@@ -37,8 +37,9 @@ public class Boss : RagnarComponent
 	private Vector3 offset;
 	public int index = 0;
 
-	// Arrays for the players
+	// Arrays for the players and colliders
 	GameObject[] players = new GameObject[3];
+	public GameObject[] colliders;
 
 	// Phase 2 mechanics
 	int indexPlayerTarget;
@@ -73,6 +74,7 @@ public class Boss : RagnarComponent
 
 	public void Start()
 	{
+		colliders = GameObject.FindGameObjectsWithTag("Collider");
 		material = gameObject.GetComponent<Material>();
 		state = BossState.PHASE1;
 
@@ -150,10 +152,12 @@ public class Boss : RagnarComponent
 		InternalCalls.InstancePrefab("Basic Enemy 15");
 		GameObject enemy1 = GameObject.Find("Basic Enemy 15");
 		enemy1.GetComponent<Rigidbody>().SetBodyPosition(new Vector3(2.07f, 6.66f, -19.0f));
+		enemy1.GetComponent<EnemyBoss>().colliders = colliders;
 
 		InternalCalls.InstancePrefab("Basic Enemy 16");
 		enemy1 = GameObject.Find("Basic Enemy 16");
 		enemy1.GetComponent<Rigidbody>().SetBodyPosition(new Vector3(0.61f, 6.66f, -8.0f));
+		enemy1.GetComponent<EnemyBoss>().colliders = colliders;
 	}
 	public void GenerateRocks()
 	{
@@ -348,7 +352,7 @@ public class Boss : RagnarComponent
 		Vector3 bossForward = gameObject.transform.forward;
 		Vector3 initPos = new Vector3(bossPos.x + (bossForward.x * offset.x * 0.6f), bossPos.y + 0.1f, bossPos.z + (bossForward.z * offset.z * 0.6f));
 
-		index = RayCast.PerceptionCone(initPos, bossForward, angleDegrees, 16, 8, players, players.Length);
+		index = RayCast.PerceptionCone(initPos, bossForward, angleDegrees, 16, 8, players, players.Length, colliders, colliders.Length);
 		return (index == -1) ? false : true;
 	}
 

@@ -15,7 +15,7 @@ public:
 	~PrefabManager();
 
 	void SavePrefab(GameObject* gameObject, int option);
-	void LoadPrefab(const char* path, bool begin = false);
+	GameObject* LoadPrefab(const char* path, bool begin = false);
 	void UpdatePrefabs(GameObject* prefabPath);
 
 	void AddObjectsFromPrefabs(JsonParsing& prefabFile, GameObject* gameObject, std::vector<uint>& idToDeletePrefab, std::vector<GameObject*>& listGo, std::vector<GameObject*>& listParents);

@@ -19,6 +19,7 @@ public class AirEnemy : RagnarComponent
 
     // Player tracker
     public GameObject[] players;
+    public GameObject[] colliders;
     GameObject SceneAudio;
     private Vector3 offset;
     public int index = 0;
@@ -159,7 +160,7 @@ public class AirEnemy : RagnarComponent
         Vector3 enemyForward = gameObject.transform.forward;
         Vector3 initPos = new Vector3(enemyPos.x + (enemyForward.x * offset.x * 0.6f), enemyPos.y + 0.1f, enemyPos.z + (enemyForward.z * offset.z * 0.6f));
 
-        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 8, players, players.Length);
+        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 8, players, players.Length, colliders, colliders.Length);
         if (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead) return false;
         return (index == -1) ? false : true;
     }
@@ -174,6 +175,11 @@ public class AirEnemy : RagnarComponent
             gameObject.GetComponent<AudioSource>().PlayClip("ENEMY1SHOOT");
             canShoot = false;
             shootCooldown = 4f;
+            //GameObject bullet = InternalCalls.InstancePrefab("EnemyBullet", true);
+            //bullet.GetComponent<EnemyBullet>().enemy = gameObject;
+            //bullet.GetComponent<EnemyBullet>().index = index;
+            //bullet.GetComponent<EnemyBullet>().offset = offset;
+
             InternalCalls.InstancePrefab("EnemyBullet", true);
             GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().enemy = gameObject;
             GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().index = index;

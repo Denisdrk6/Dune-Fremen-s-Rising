@@ -47,6 +47,9 @@ GameObject::~GameObject()
 	}
 	components.clear();
 
+	if (isUI)
+		app->userInterface->DeleteUIGameObjects(this);
+
 	// Recursive Release, delete all childrens
 	for (int i = 0; i < children.size(); ++i)
 	{

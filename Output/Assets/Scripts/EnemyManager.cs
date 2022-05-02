@@ -6,6 +6,7 @@ public class EnemyManager : RagnarComponent
     public Enemies[] enemies;
     public GameObject[] enemyGOs;
     public GameObject[] deadEnemies;
+    public GameObject[] colliders;
 
     public void Start()
     {
@@ -15,6 +16,7 @@ public class EnemyManager : RagnarComponent
         }
 
         enemyGOs = GameObject.FindGameObjectsWithTag("Enemies");
+        colliders = GameObject.FindGameObjectsWithTag("Collider");
 
         for(int i = 0; i < enemyGOs.Length; i++)
         {
@@ -26,18 +28,22 @@ public class EnemyManager : RagnarComponent
                     case EnemyType.BASIC:
                         enemyGOs[i].GetComponent<BasicEnemy>().waypoints = enemies[i].waypoints;
                         enemyGOs[i].GetComponent<BasicEnemy>().state = EnemyState.IDLE;
+                        enemyGOs[i].GetComponent<BasicEnemy>().colliders = colliders;
                         break;
                     case EnemyType.TANK:
                         enemyGOs[i].GetComponent<TankEnemy>().waypoints = enemies[i].waypoints;
                         enemyGOs[i].GetComponent<TankEnemy>().state = EnemyState.IDLE;
+                        enemyGOs[i].GetComponent<TankEnemy>().colliders = colliders;
                         break;
                     case EnemyType.UNDISTRACTABLE:
                         enemyGOs[i].GetComponent<UndistractableEnemy>().waypoints = enemies[i].waypoints;
                         enemyGOs[i].GetComponent<UndistractableEnemy>().state = EnemyState.IDLE;
+                        enemyGOs[i].GetComponent<UndistractableEnemy>().colliders = colliders;
                         break;
                     case EnemyType.AIR:
                         enemyGOs[i].GetComponent<AirEnemy>().waypoints = enemies[i].waypoints;
                         enemyGOs[i].GetComponent<AirEnemy>().state = EnemyState.IDLE;
+                        enemyGOs[i].GetComponent<AirEnemy>().colliders = colliders;
                         break;
                 }
 

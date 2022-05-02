@@ -60,7 +60,7 @@ namespace RagnarEngine
         public static extern GameObject HitToTag(Vector3 initPos, Vector3 endPos, object tag);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public static extern int PerceptionCone(Vector3 initPos, Vector3 _forward, int _angle, int rays, int radius, GameObject[] arr, int size);
+        public static extern int PerceptionCone(Vector3 initPos, Vector3 _forward, int _angle, int rays, int radius, GameObject[] players, int size, GameObject[] colliders, int size2);
     }
     public class Input
     {

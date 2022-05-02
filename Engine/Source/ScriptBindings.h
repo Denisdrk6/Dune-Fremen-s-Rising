@@ -156,11 +156,11 @@ void SetScale(MonoObject* go, MonoObject* scale)
 		tr->UpdateTransform();
 	}
 }
-float GetAngleBetween(MonoObject* vector1, MonoObject* vector2)
+float GetAngleBetween(MonoObject* vector1, MonoObject* vector2) // In degrees
 {
 	float3 vec1 = app->moduleMono->UnboxVector(vector1);
 	float3 vec2 = app->moduleMono->UnboxVector(vector2);	
-	return vec1.AngleBetween(vec2);
+	return vec1.AngleBetween(vec2) * RADTODEG;
 }
 float GetDistanceBetween(MonoObject* vector1, MonoObject* vector2)
 {
@@ -168,7 +168,7 @@ float GetDistanceBetween(MonoObject* vector1, MonoObject* vector2)
 	float3 vec2 = app->moduleMono->UnboxVector(vector2);
 	return vec1.Distance(vec2);
 }
-MonoObject* RotateY(MonoObject* go, MonoObject* vector, int anglesDegrees)
+MonoObject* RotateY(MonoObject* vector, float anglesDegrees)
 {
 	float3 dirV = app->moduleMono->UnboxVector(vector);
 	return app->moduleMono->Float3ToCS(dirV * math::float3x3::RotateY(anglesDegrees * DEGTORAD));
@@ -341,7 +341,7 @@ MonoObject* Instantiate3DGameObject(MonoObject* name, int primitiveType, MonoObj
 	return app->moduleMono->GoToCSGO(go);
 }
 
-void InstancePrefab(MonoObject* name, bool begin = false)
+MonoObject* InstancePrefab(MonoObject* name, bool begin = false)
 {
 	char* goName = mono_string_to_utf8(mono_object_to_string(name, 0));
 
@@ -355,10 +355,11 @@ void InstancePrefab(MonoObject* name, bool begin = false)
 
 	path += goName;
 	path += ".rgprefab";
-
-	PrefabManager::GetInstance()->LoadPrefab(path.c_str(), begin);
-
+	
 	mono_free(goName);
+
+	GameObject* go = PrefabManager::GetInstance()->LoadPrefab(path.c_str(), begin);
+	return app->moduleMono->GoToCSGO(go);
 }
 
 MonoObject* Destroy(MonoObject* go)

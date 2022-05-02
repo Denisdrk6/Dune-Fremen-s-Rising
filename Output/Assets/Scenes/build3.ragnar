@@ -51,7 +51,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Level_3",
-                    "pointer": 359092160,
+                    "pointer": 366905024,
                     "type": 4,
                     "componentTable": 0,
                     "characters": 0,
@@ -1138,7 +1138,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        1.8197708129882812,
+                        1.8197708129882813,
                         5.2899999618530273,
                         -4.1131281852722168
                     ],
@@ -1317,19 +1317,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -8.6204404830932617,
+                        20,
                         0,
-                        15.257144927978516
+                        18.539106369018555
                     ],
                     "Quaternion": [
                         0,
-                        0.98705941438674927,
+                        0.97040951251983643,
                         0,
-                        0.1603550910949707
+                        -0.24146506190299988
                     ],
                     "RotationEditor": [
                         -3.1415927410125732,
-                        0.32210078835487366,
+                        -0.48775061964988708,
                         -3.1415927410125732
                     ],
                     "Scale": [
@@ -1371,36 +1371,36 @@
                         -0
                     ],
                     "Scale": [
-                        1.414212703704834,
+                        1.4142129421234131,
                         1.0000001192092896,
-                        1
+                        1.0000001192092896
                     ]
                 },
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.40904459357261658,
+                    "Vertical Fov": 0.48647212982177734,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -24.448856353759766,
+                        43.432613372802734,
                         55,
-                        62.68701171875
+                        62.709724426269531
                     ],
                     "Type": 3,
-                    "Zoom": -16,
+                    "Zoom": -20,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -8.6204404830932617,
+                        20,
                         0,
-                        15.257144927978516
+                        18.539106369018555
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 161.54498291015625,
+                    "Horizontal Angle": 207.94606018066406,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -1469,73 +1469,6 @@
             ]
         },
         {
-            "UUID": 892262844,
-            "Parent UUID": 417171234,
-            "Name": "WinCondition",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.28327390551567078,
-                        7.2703380584716797,
-                        -23.220611572265625
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.69967001676559448,
-                        0,
-                        0.7144661545753479
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0.30368727445602417,
-                        0
-                    ],
-                    "Scale": [
-                        1.000005841255188,
-                        1,
-                        1.000005841255188
-                    ]
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 0,
-                    "Size": [
-                        1.1000000238418579,
-                        3,
-                        2.9000000953674316
-                    ],
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": true,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
             "UUID": 1058993489,
             "Parent UUID": 417171234,
             "Name": "UIOptions",
@@ -1589,7 +1522,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1991.5,
+                        1974.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1605,7 +1538,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1654,7 +1587,7 @@
                     "buttonWidth": 263,
                     "buttonHeight": 52.5,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1687,7 +1620,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1781.5,
+                        1764.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1703,7 +1636,7 @@
                     "buttonWidth": 254.5,
                     "buttonHeight": 46,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1765,7 +1698,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1773,
+                        1756,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1781,7 +1714,7 @@
                     "buttonWidth": 650,
                     "buttonHeight": 650,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1814,7 +1747,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1830,7 +1763,7 @@
                     "buttonWidth": 376.5,
                     "buttonHeight": 42.5,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1892,7 +1825,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1798.5,
+                        1781.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1908,7 +1841,7 @@
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1970,7 +1903,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1798.5,
+                        1781.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1986,7 +1919,7 @@
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2019,7 +1952,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1798.5,
+                        1781.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2035,7 +1968,7 @@
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2097,7 +2030,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1798.5,
+                        1781.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2113,7 +2046,7 @@
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2146,7 +2079,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1798.5,
+                        1781.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2162,7 +2095,7 @@
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2224,7 +2157,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1798.5,
+                        1781.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2240,7 +2173,7 @@
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2273,7 +2206,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1888,
+                        1871,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2289,7 +2222,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2330,7 +2263,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1888,
+                        1871,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2346,7 +2279,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2387,7 +2320,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1888,
+                        1871,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2403,7 +2336,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2444,7 +2377,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1913.5,
+                        1896.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2460,7 +2393,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2473,7 +2406,7 @@
                 },
                 {
                     "Type": 16,
-                    "buttonText": "RESOLUTION\n\n\nFULLSCREEN\n\n\nV SYNC\n\n\nSHADOWS\n\n\nLENGUAJE",
+                    "buttonText": "RESOLUTION\n\n\nFULLSCREEN\n\n\nV SYNC\n\n\nSHADOWS\n\n\nLANGUAGE",
                     "fontPath": "Library\/Fonts\/Dune_Rise.otf",
                     "fontScale": 0.5,
                     "textColor.r": 1,
@@ -2499,7 +2432,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1913.5,
+                        1896.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2515,7 +2448,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2554,7 +2487,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2570,7 +2503,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2579,7 +2512,7 @@
                     "Type": 19,
                     "Position": [
                         -0.727996826171875,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2595,7 +2528,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2636,7 +2569,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2652,7 +2585,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2661,7 +2594,7 @@
                     "Type": 19,
                     "Position": [
                         -5.5,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2677,7 +2610,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2718,7 +2651,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2734,7 +2667,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2743,7 +2676,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2759,7 +2692,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2800,7 +2733,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2816,7 +2749,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2825,7 +2758,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        1983,
+                        1966,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2841,7 +2774,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2882,7 +2815,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1991.5,
+                        1974.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2898,7 +2831,7 @@
                     "buttonWidth": 250,
                     "buttonHeight": 60,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2970,7 +2903,7 @@
             "Parent UUID": 417171234,
             "Name": "Boss",
             "Active": true,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Boss.rgprefab",
             "tag": "Untagged",
@@ -3016,12 +2949,13 @@
                 {
                     "Type": 4,
                     "ScriptName": "Boss",
-                    "pointer": 306976680,
+                    "pointer": 345483384,
                     "type": 4,
                     "componentTable": 0,
                     "state": 0,
                     "index": 0,
-                    "barrelLocations": 182828936,
+                    "colliders": 0,
+                    "barrelLocations": 216379272,
                     "barrelCount": 0,
                     "stunnedHits": 0
                 },
@@ -3069,1187 +3003,6 @@
                     "NumPolys": 0,
                     "NumStraight": 0,
                     "NumSmooth": 0
-                }
-            ]
-        },
-        {
-            "UUID": 270232771,
-            "Parent UUID": 417171234,
-            "Name": "RootNode",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 393531562,
-            "Parent UUID": 270232771,
-            "Name": "wall_01",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.18102176487445831,
-                        6.8560891151428223,
-                        -19.596662521362305
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/win_replay_button_rect.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__wall_01.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 6,
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1223622745,
-            "Parent UUID": 270232771,
-            "Name": "wall_02",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.15803016722202301,
-                        7.4306154251098633,
-                        8.7629432678222656
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/win_replay_button_rect.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__wall_02.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 6,
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 2075714164,
-            "Parent UUID": 270232771,
-            "Name": "Stairs",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.203884556889534,
-                        2.9634592533111572,
-                        15.819911956787109
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__Stairs.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 679301865,
-            "Parent UUID": 270232771,
-            "Name": "palm_01",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        6.328831672668457,
-                        7.3390164375305176,
-                        -2.7235426902770996
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_01.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1346062182,
-            "Parent UUID": 270232771,
-            "Name": "palm_02",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -5.1361279487609863,
-                        7.3390164375305176,
-                        -6.5809907913208008
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_02.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 2011360458,
-            "Parent UUID": 270232771,
-            "Name": "palm_03",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -5.0807218551635742,
-                        7.3390169143676758,
-                        -10.510031700134277
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_02.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 193810730,
-            "Parent UUID": 270232771,
-            "Name": "palm_04",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        4.2233757972717285,
-                        5.8961315155029297,
-                        -7.330136775970459
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_04.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1061079527,
-            "Parent UUID": 270232771,
-            "Name": "palm_05",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        7.7913269996643066,
-                        5.8824009895324707,
-                        -11.997332572937012
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_05.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 2005558013,
-            "Parent UUID": 270232771,
-            "Name": "palm_06",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -2.9729557037353516,
-                        5.8924055099487305,
-                        -15.386317253112793
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_06.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 765792964,
-            "Parent UUID": 270232771,
-            "Name": "palm_07",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -5.1084256172180176,
-                        7.3390188217163086,
-                        -18.48175048828125
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_02.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1148429980,
-            "Parent UUID": 270232771,
-            "Name": "palm_08",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        6.2791967391967773,
-                        7.3390178680419922,
-                        -14.719936370849609
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_02.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1522921339,
-            "Parent UUID": 270232771,
-            "Name": "palm_09",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        6.2957429885864258,
-                        7.3390188217163086,
-                        -18.541166305541992
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_02.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1889754388,
-            "Parent UUID": 270232771,
-            "Name": "palm_10",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -5.1180429458618164,
-                        5.8961310386657715,
-                        -0.22369934618473053
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_10.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 520146174,
-            "Parent UUID": 270232771,
-            "Name": "rock_01",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -2.0453846454620361,
-                        4.287419319152832,
-                        14.427778244018555
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/prop_smallrocks_color.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_01.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 0,
-                    "Size": [
-                        0.80000001192092896,
-                        1,
-                        0.80000001192092896
-                    ],
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1186210281,
-            "Parent UUID": 270232771,
-            "Name": "rock_02",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -8.7730855941772461,
-                        6.3298954963684082,
-                        6.9210567474365234
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/prop_smallrocks_color.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_02.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 0,
-                    "Size": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1821989253,
-            "Parent UUID": 270232771,
-            "Name": "rock_03",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        14.341971397399902,
-                        6.3117685317993164,
-                        -2.6217191219329834
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/prop_smallrocks_color.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_03.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 329082248,
-            "Parent UUID": 270232771,
-            "Name": "rock_04",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        10.361147880554199,
-                        5.9594097137451172,
-                        6.0690212249755859
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/prop_smallrocks_color.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_04.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 0,
-                    "Size": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 964443494,
-            "Parent UUID": 270232771,
-            "Name": "ground_01",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.20616856217384338,
-                        0.37700003385543823,
-                        26.464227676391602
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__ground_01.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 0,
-                    "Size": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1582747595,
-            "Parent UUID": 270232771,
-            "Name": "ground_02",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.17980344593524933,
-                        5.2625927925109863,
-                        -16.435939788818359
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__ground_02.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 0,
-                    "Size": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
                 }
             ]
         },
@@ -4374,7 +3127,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1991.5,
+                        1974.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4390,7 +3143,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4408,7 +3161,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "pauseMenuButton",
-                    "pointer": 306975320,
+                    "pointer": 345485560,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -4430,7 +3183,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1868,
+                        1851,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4446,7 +3199,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4508,7 +3261,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1868,
+                        1851,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4524,7 +3277,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4586,7 +3339,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1868,
+                        1851,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4602,7 +3355,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4664,7 +3417,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4680,7 +3433,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4713,7 +3466,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4729,7 +3482,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4762,7 +3515,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4778,7 +3531,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4811,7 +3564,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4827,7 +3580,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4889,7 +3642,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -4905,7 +3658,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4961,7 +3714,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "DialogueManager",
-                    "pointer": 306980080,
+                    "pointer": 345487192,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -4983,7 +3736,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        216.5,
+                        199.5,
                         1
                     ],
                     "Scale": [
@@ -4999,7 +3752,7 @@
                     "buttonWidth": 914,
                     "buttonHeight": 223,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5032,7 +3785,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        93.5,
+                        76.5,
                         5
                     ],
                     "Scale": [
@@ -5048,7 +3801,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5087,7 +3840,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        117.5,
+                        100.5,
                         15
                     ],
                     "Scale": [
@@ -5103,7 +3856,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5142,7 +3895,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        218,
+                        201,
                         15
                     ],
                     "Scale": [
@@ -5158,7 +3911,7 @@
                     "buttonWidth": 912.5,
                     "buttonHeight": 223,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5229,7 +3982,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5245,7 +3998,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5284,7 +4037,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5300,7 +4053,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5333,7 +4086,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5349,7 +4102,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5382,7 +4135,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5398,7 +4151,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5431,7 +4184,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5447,7 +4200,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5509,7 +4262,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5525,7 +4278,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5587,7 +4340,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5603,7 +4356,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5665,7 +4418,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5681,7 +4434,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5743,7 +4496,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2007,
+                        1990,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5759,7 +4512,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5821,7 +4574,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1998.5,
+                        1981.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5837,7 +4590,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5870,7 +4623,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1998.5,
+                        1981.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5886,7 +4639,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5919,7 +4672,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1998.5,
+                        1981.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5935,7 +4688,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5968,7 +4721,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1998.5,
+                        1981.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5984,7 +4737,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6017,7 +4770,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -299.5,
+                        -282.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -6033,7 +4786,7 @@
                     "buttonWidth": 270,
                     "buttonHeight": 134.5,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6066,7 +4819,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -321.5,
+                        -304.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -6082,7 +4835,7 @@
                     "buttonWidth": 500.5,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6115,7 +4868,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1998.5,
+                        1981.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -6131,7 +4884,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6164,7 +4917,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1991.5,
+                        1974.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -6180,7 +4933,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6229,7 +4982,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6278,7 +5031,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6317,7 +5070,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -6333,7 +5086,7 @@
                     "buttonWidth": 70,
                     "buttonHeight": 70,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6366,7 +5119,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -6382,7 +5135,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6415,7 +5168,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1983,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -6431,7 +5184,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1312,
-                    "lastButtonHeight": 657,
+                    "lastButtonHeight": 786,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6445,6 +5198,1076 @@
                 {
                     "Type": 13,
                     "alpha": 1
+                }
+            ]
+        },
+        {
+            "UUID": 754358644,
+            "Parent UUID": 417171234,
+            "Name": "RootNode",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 859834459,
+            "Parent UUID": 754358644,
+            "Name": "wall_01",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.18102176487445831,
+                        6.8560891151428223,
+                        -19.596662521362305
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/win_replay_button_rect.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__wall_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1313067169,
+            "Parent UUID": 754358644,
+            "Name": "wall_02",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.15803016722202301,
+                        7.4306154251098633,
+                        8.7629432678222656
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/win_replay_button_rect.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__wall_02.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1659918991,
+            "Parent UUID": 754358644,
+            "Name": "Stairs",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.203884556889534,
+                        2.9634592533111572,
+                        15.819911956787109
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__Stairs.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 6,
+                    "Gravity": false,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "Mass": 0,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1976764162,
+            "Parent UUID": 754358644,
+            "Name": "rock_01",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -2.0453846454620361,
+                        4.287419319152832,
+                        14.427778244018555
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 145707960,
+            "Parent UUID": 754358644,
+            "Name": "rock_02",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -8.7730855941772461,
+                        6.3298954963684082,
+                        6.9210567474365234
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_02.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 480236865,
+            "Parent UUID": 754358644,
+            "Name": "rock_03",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        14.341971397399902,
+                        6.3117685317993164,
+                        -2.6217191219329834
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_03.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 771183024,
+            "Parent UUID": 754358644,
+            "Name": "rock_04",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        10.361147880554199,
+                        5.9594097137451172,
+                        6.0690212249755859
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__rock_04.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1092623181,
+            "Parent UUID": 754358644,
+            "Name": "ground_01",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.20616856217384338,
+                        0.37700003385543823,
+                        26.464227676391602
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__ground_01.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 0,
+                    "Size": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Gravity": false,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "Mass": 0,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1412601297,
+            "Parent UUID": 754358644,
+            "Name": "ground_02",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.17980344593524933,
+                        5.2625927925109863,
+                        -16.435939788818359
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__ground_02.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 0,
+                    "Size": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "Gravity": false,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "Mass": 0,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1702155036,
+            "Parent UUID": 754358644,
+            "Name": "palm_01",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        6.312563419342041,
+                        7.4850187301635742,
+                        -2.7429816722869873
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 272533520,
+            "Parent UUID": 754358644,
+            "Name": "palm_02",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -5.1477456092834473,
+                        7.4850187301635742,
+                        -6.5509800910949707
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 661854152,
+            "Parent UUID": 754358644,
+            "Name": "palm_03",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -5.074892520904541,
+                        7.4850187301635742,
+                        -10.530731201171875
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1091624585,
+            "Parent UUID": 754358644,
+            "Name": "palm_04",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        4.119572639465332,
+                        6.113677978515625,
+                        -7.3453826904296875
+                    ],
+                    "Quaternion": [
+                        -0.10805103182792664,
+                        -0.10805059224367142,
+                        0.69880306720733643,
+                        0.69880205392837524
+                    ],
+                    "RotationEditor": [
+                        -4.2204058559036639e-07,
+                        -0.30681586265563965,
+                        1.5707976818084717
+                    ],
+                    "Scale": [
+                        0.99999886751174927,
+                        0.99999821186065674,
+                        0.99999946355819702
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_04.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1874582351,
+            "Parent UUID": 754358644,
+            "Name": "palm_05",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        7.783505916595459,
+                        6.1443815231323242,
+                        -12.004458427429199
+                    ],
+                    "Quaternion": [
+                        0.25316882133483887,
+                        0.25316882133483887,
+                        0.66023147106170654,
+                        0.66023141145706177
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_04.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 62393440,
+            "Parent UUID": 754358644,
+            "Name": "palm_06",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -2.9937088489532471,
+                        6.1402864456176758,
+                        -15.344991683959961
+                    ],
+                    "Quaternion": [
+                        0.12943980097770691,
+                        0.12943975627422333,
+                        0.69515860080718994,
+                        0.69515842199325562
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000001192092896,
+                        0.99999964237213135,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_04.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 383903218,
+            "Parent UUID": 754358644,
+            "Name": "palm_07",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -5.0908875465393066,
+                        7.4850187301635742,
+                        -18.45756721496582
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 720729616,
+            "Parent UUID": 754358644,
+            "Name": "palm_08",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        6.2673487663269043,
+                        7.4850187301635742,
+                        -14.732863426208496
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1052961028,
+            "Parent UUID": 754358644,
+            "Name": "palm_09",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        6.3104820251464844,
+                        7.4850187301635742,
+                        -18.58979606628418
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1346204680,
+            "Parent UUID": 754358644,
+            "Name": "palm_10",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -5.1098198890686035,
+                        6.2712192535400391,
+                        -0.25721505284309387
+                    ],
+                    "Quaternion": [
+                        0.49669733643531799,
+                        0.49669733643531799,
+                        0.50328284502029419,
+                        0.50327920913696289
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000003576278687,
+                        1.0000002384185791,
+                        1.0000002384185791
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level3\/lvl3_blockout__palm_04.fbx",
+                    "Active": true
                 }
             ]
         }
