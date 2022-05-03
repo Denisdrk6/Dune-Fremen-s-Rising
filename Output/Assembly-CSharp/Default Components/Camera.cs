@@ -24,6 +24,18 @@ namespace RagnarEngine
         public extern void ScriptRotation(float x, float y, float z);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void ScriptRotationAngle(float angle);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern float GetAngle();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void LockControlls(bool locked);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern float GetZoom();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void ScriptZoom(float zoom);
     }
 }

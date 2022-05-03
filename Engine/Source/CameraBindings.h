@@ -46,10 +46,34 @@ void ScriptRotation(MonoObject* go, float x, float y, float z)
 	cam->ScriptRotation(x, y, z);
 }
 
+void ScriptRotationAngle(MonoObject* go, float ang)
+{
+	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
+	cam->ScriptRotation(ang);
+}
+
+float GetAngle(MonoObject* go)
+{
+	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
+	return cam->GetAngle();
+}
+
 void LockControlls(MonoObject* go, bool lock)
 {
 	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
 	cam->LockControlls(lock);
+}
+
+float GetZoom(MonoObject* go)
+{
+	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
+	return cam->GetZoom();
+}
+
+void ScriptZoom(MonoObject* go, float t)
+{
+	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
+	cam->ScriptZoom(t);
 }
 
 MonoObject* HitToTag(MonoObject* initPos, MonoObject* endPos, MonoObject* tag)

@@ -51,7 +51,11 @@ public:
 	// Scrpting
 	void ScriptMovement(float x, float y, float z);
 	void ScriptRotation(float x, float y, float z);
+	void ScriptRotation(float ang);
+	float GetAngle();
 	void LockControlls(bool lock) { lockControlls = lock; };
+	float GetZoom();
+	void ScriptZoom(float zoom);
 
 private:
 	void Shake(float dt);

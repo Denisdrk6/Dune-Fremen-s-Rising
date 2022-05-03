@@ -84,6 +84,13 @@ void CameraComponent::OnEditor()
 		if (ImGui::DragFloat("", &farPlane, 0.5f, 0.1f)) SetPlanes();
 		ImGui::PopID();
 
+
+		if (ImGui::DragFloat("", &horizontalAngle, 0.1f, 0.1f, 360.0f))
+		{
+			controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
+			controllerTrans->UpdateEditorRotation();
+			controllerTrans->ForceUpdateTransform();
+		}
 		ImGui::Text("horizontal angle: %f", horizontalAngle);
 
 		ImGui::Text("- - - - MOVEMENT - - - -");
@@ -167,6 +174,7 @@ void CameraComponent::OnEditorShake()
 
 bool CameraComponent::Update(float dt)
 {
+	DEBUG_LOG("Zoom: %f", zoom);
 	RG_PROFILING_FUNCTION("Camera Component Update");
 
 	float4 size = float4::zero;
@@ -600,6 +608,7 @@ void CameraComponent::Shake(float dt)
 	}
 }
 
+// Scripting
 void CameraComponent::ScriptMovement(float x, float y, float z)
 {
 	controllerTrans->SetPosition(float3(x, y, z));
@@ -609,16 +618,42 @@ void CameraComponent::ScriptMovement(float x, float y, float z)
 void CameraComponent::ScriptRotation(float vecX, float vecY, float vecZ)
 {
 	float3 vector = float3(vecX, vecY, vecZ);
-	//float angle = controllerTrans->GetForward().AngleBetween(vector);
-	//DEBUG_LOG("Forward: %f, %f, %f", controllerTrans->GetForward().x, controllerTrans->GetForward().y, controllerTrans->GetForward().z);
-	//DEBUG_LOG("angle: %f", angle);
+
 	float angle = ((float)Atan2(vecX, vecZ)) * RADTODEG;
 	horizontalAngle = angle;
-	//DEBUG_LOG("horizontalAngle: %f", horizontalAngle);
+
 	if (horizontalAngle < 0) horizontalAngle += 360;
 	if (horizontalAngle > 360) horizontalAngle -= 360;
-	//DEBUG_LOG("horizontalAngle: %f", horizontalAngle);
+	
 	controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
 	controllerTrans->UpdateEditorRotation();
 	controllerTrans->ForceUpdateTransform();
+}
+
+void CameraComponent::ScriptRotation(float angle)
+{
+	horizontalAngle = angle;
+
+	if (horizontalAngle < 0) horizontalAngle += 360;
+	if (horizontalAngle > 360) horizontalAngle -= 360;
+
+	controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
+	controllerTrans->UpdateEditorRotation();
+	controllerTrans->ForceUpdateTransform();
+}
+
+float CameraComponent::GetAngle()
+{
+	return horizontalAngle;
+}
+
+float CameraComponent::GetZoom()
+{
+	return zoom;
+}
+
+void CameraComponent::ScriptZoom(float t)
+{
+	zoom += zoomSpeed * t;
+	transform->SetGlobalPosition(transform->GetGlobalPosition() + (controllerTrans->GetGlobalPosition() - transform->GetGlobalPosition()).Normalized() * zoomSpeed * t);
 }

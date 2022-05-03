@@ -197,7 +197,11 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.Camera::ChangeFov", ChangeFov);
 	mono_add_internal_call("RagnarEngine.Camera::ScriptMovement", ScriptMovement);
 	mono_add_internal_call("RagnarEngine.Camera::ScriptRotation", ScriptRotation);
+	mono_add_internal_call("RagnarEngine.Camera::ScriptRotationAngle", ScriptRotationAngle);
+	mono_add_internal_call("RagnarEngine.Camera::GetAngle", GetAngle);
 	mono_add_internal_call("RagnarEngine.Camera::LockControlls", LockControlls);
+	mono_add_internal_call("RagnarEngine.Camera::GetZoom", GetZoom);
+	mono_add_internal_call("RagnarEngine.Camera::ScriptZoom", ScriptZoom);
 	// Camera ====================
 
 	// Scene Manager =============
