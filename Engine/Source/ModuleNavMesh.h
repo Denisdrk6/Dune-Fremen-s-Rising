@@ -132,6 +132,7 @@ public:
 	bool SaveConfig(JsonParsing& node) override;
 
 	void CheckNavMeshIntersection(LineSegment raycast, int clickedMouseButton);
+	float3 CalculateHitPosition(LineSegment raycast);
 
 	void ClearNavMeshes();
 	bool IsWalkable(float x, float z, float3& hitPoint);

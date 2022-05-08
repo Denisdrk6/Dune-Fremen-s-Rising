@@ -5,11 +5,32 @@ public class Level_2 : RagnarComponent
 {
 	public Characters[] characters;
 	public Enemies[] enemies;
+    private Chronometer timer = null;
+    private GameObject SceneAudio;
+    public bool runGame = true;
+    public UIButton chrono;
+    public Vector3 hitPoint;
 
-	public void Start()
+    private GameObject preClick;
+    private GameObject preNonClick;
+    private Transform camera;
+    public void Start()
 	{
+        //Play Level Soundtrack
+        SceneAudio = GameObject.Find("AudioLevel1");
+        SceneAudio.GetComponent<AudioSource>().PlayClip("MUSICPLAY");
+        SceneAudio.GetComponent<AudioSource>().SetState("MUSIC", "LEVEL1_BASE");
+        
         // Camera Starting Position
         GameObject.Find("cameraController").transform.localPosition = new Vector3(-23.76f, 0f, -199.01f);
+        GameObject.Find("UI Counter").GetComponent<Transform2D>().position2D = new Vector3(0, (0.5f * InternalCalls.GetRegionGame().y) - 28, 0);
+        chrono = GameObject.Find("UI Counter").GetComponent<UIButton>();
+        chrono.SetTextPosition(-26, -4);
+        timer = new Chronometer();
+
+        preClick = GameObject.Find("preClick");
+        preNonClick = GameObject.Find("preNonClick");
+        camera = GameObject.Find("Camera").transform;
 
         // PLAYERS
         characters = new Characters[3];
@@ -28,7 +49,7 @@ public class Level_2 : RagnarComponent
             name = "BackStab",
             prefabPath = "BackStab_2",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -40,7 +61,7 @@ public class Level_2 : RagnarComponent
             name = "The Voice",
             prefabPath = "Voice",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -52,7 +73,7 @@ public class Level_2 : RagnarComponent
             name = "Knife Throw",
             prefabPath = "Knife",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -64,7 +85,7 @@ public class Level_2 : RagnarComponent
             name = "Rock Throw",
             prefabPath = "Rock",
             transformY = 1.15f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.129f,
             linear = -0.188f,
             quadratic = 0f,
@@ -87,7 +108,7 @@ public class Level_2 : RagnarComponent
             name = "Backstab",
             prefabPath = "BackStab",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -99,7 +120,7 @@ public class Level_2 : RagnarComponent
             name = "Camouflage",
             prefabPath = "Camouflage",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -111,7 +132,7 @@ public class Level_2 : RagnarComponent
             name = "Hunter Seeker",
             prefabPath = "HunterSeeker",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -123,7 +144,7 @@ public class Level_2 : RagnarComponent
             name = "Spice Grenade",
             prefabPath = "SpiceGrenade",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -146,7 +167,7 @@ public class Level_2 : RagnarComponent
             name = "Sword Slash",
             prefabPath = "SwordSlash",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -158,7 +179,7 @@ public class Level_2 : RagnarComponent
             name = "Stunner",
             prefabPath = "StunnerShot",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -170,7 +191,7 @@ public class Level_2 : RagnarComponent
             name = "Trap",
             prefabPath = "Trap",
             transformY = 0.12f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.100f,
             linear = -0.942f,
             quadratic = 0f,
@@ -182,7 +203,7 @@ public class Level_2 : RagnarComponent
             name = "Whistle",
             prefabPath = "Whistle",
             transformY = 1.12f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.201f,
             quadratic = 0f,
@@ -206,7 +227,7 @@ public class Level_2 : RagnarComponent
 
         enemies[1] = new Enemies
         {
-            name = "Basic Enemy 1",
+            name = "Basic Enemy 2",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -217,7 +238,7 @@ public class Level_2 : RagnarComponent
 
         enemies[2] = new Enemies
         {
-            name = "Basic Enemy 2",
+            name = "Basic Enemy 3",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -228,7 +249,7 @@ public class Level_2 : RagnarComponent
 
         enemies[3] = new Enemies
         {
-            name = "Basic Enemy 3",
+            name = "Basic Enemy 4",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -239,7 +260,7 @@ public class Level_2 : RagnarComponent
 
         enemies[4] = new Enemies
         {
-            name = "Basic Enemy 4",
+            name = "Basic Enemy 5",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -250,7 +271,7 @@ public class Level_2 : RagnarComponent
 
         enemies[5] = new Enemies
         {
-            name = "Basic Enemy 5",
+            name = "Basic Enemy 6",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -261,7 +282,7 @@ public class Level_2 : RagnarComponent
 
         enemies[6] = new Enemies
         {
-            name = "Basic Enemy 6",
+            name = "Basic Enemy 7",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -272,7 +293,7 @@ public class Level_2 : RagnarComponent
 
         enemies[7] = new Enemies
         {
-            name = "Basic Enemy 7",
+            name = "Basic Enemy 8",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -283,7 +304,7 @@ public class Level_2 : RagnarComponent
 
         enemies[8] = new Enemies
         {
-            name = "Basic Enemy 8",
+            name = "Basic Enemy 9",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -294,7 +315,7 @@ public class Level_2 : RagnarComponent
 
         enemies[9] = new Enemies
         {
-            name = "Basic Enemy 9",
+            name = "Basic Enemy 10",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -305,7 +326,7 @@ public class Level_2 : RagnarComponent
 
         enemies[10] = new Enemies
         {
-            name = "Basic Enemy 10",
+            name = "Basic Enemy 11",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -316,7 +337,7 @@ public class Level_2 : RagnarComponent
 
         enemies[11] = new Enemies
         {
-            name = "Basic Enemy 11",
+            name = "Basic Enemy 12",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -514,7 +535,7 @@ public class Level_2 : RagnarComponent
 
         enemies[24] = new Enemies
         {
-            name = "Basic Enemy 24",
+            name = "Basic Enemy 25",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -525,7 +546,7 @@ public class Level_2 : RagnarComponent
 
         enemies[25] = new Enemies
         {
-            name = "Basic Enemy 25",
+            name = "Basic Enemy 26",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -536,7 +557,7 @@ public class Level_2 : RagnarComponent
 
         enemies[26] = new Enemies
         {
-            name = "Basic Enemy 26",
+            name = "Basic Enemy 27",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -547,7 +568,7 @@ public class Level_2 : RagnarComponent
 
         enemies[27] = new Enemies
         {
-            name = "Basic Enemy 27",
+            name = "Basic Enemy 28",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -558,7 +579,7 @@ public class Level_2 : RagnarComponent
 
         enemies[28] = new Enemies
         {
-            name = "Basic Enemy 28",
+            name = "Basic Enemy 29",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -569,7 +590,7 @@ public class Level_2 : RagnarComponent
 
         enemies[29] = new Enemies
         {
-            name = "Basic Enemy 29",
+            name = "Basic Enemy 30",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -580,7 +601,7 @@ public class Level_2 : RagnarComponent
 
         enemies[30] = new Enemies
         {
-            name = "Basic Enemy 30",
+            name = "Basic Enemy 31",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -591,7 +612,7 @@ public class Level_2 : RagnarComponent
 
         enemies[31] = new Enemies
         {
-            name = "Basic Enemy 31",
+            name = "Basic Enemy 32",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -602,7 +623,7 @@ public class Level_2 : RagnarComponent
 
         enemies[32] = new Enemies
         {
-            name = "Basic Enemy 32",
+            name = "Basic Enemy 33",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -613,7 +634,7 @@ public class Level_2 : RagnarComponent
 
         enemies[33] = new Enemies
         {
-            name = "Basic Enemy 33",
+            name = "Basic Enemy 34",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -624,7 +645,7 @@ public class Level_2 : RagnarComponent
 
         enemies[34] = new Enemies
         {
-            name = "Basic Enemy 34",
+            name = "Basic Enemy 35",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -668,7 +689,7 @@ public class Level_2 : RagnarComponent
 
         enemies[35] = new Enemies
         {
-            name = "Basic Enemy 35",
+            name = "Basic Enemy 36",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -679,7 +700,7 @@ public class Level_2 : RagnarComponent
 
         enemies[36] = new Enemies
         {
-            name = "Basic Enemy 36",
+            name = "Basic Enemy 37",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -690,7 +711,7 @@ public class Level_2 : RagnarComponent
 
         enemies[37] = new Enemies
         {
-            name = "Basic Enemy 37",
+            name = "Basic Enemy 38",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -701,7 +722,7 @@ public class Level_2 : RagnarComponent
 
         enemies[38] = new Enemies
         {
-            name = "Basic Enemy 38",
+            name = "Basic Enemy 39",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -712,7 +733,7 @@ public class Level_2 : RagnarComponent
 
         enemies[39] = new Enemies
         {
-            name = "Basic Enemy 39",
+            name = "Basic Enemy 40",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -749,7 +770,7 @@ public class Level_2 : RagnarComponent
 
         enemies[41] = new Enemies
         {
-            name = "Basic Enemy 40",
+            name = "Basic Enemy 41",
             prefabPath = "Basic Enemy",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
@@ -767,7 +788,26 @@ public class Level_2 : RagnarComponent
     }
     public void Update()
 	{
+        if (runGame) timer.Update();
+        chrono.text = timer.GetTimeToString();
 
-	}
+        hitPoint = RayCast.ReturnHitpoint();
+        hitPoint.y -= 0.5f;
+        GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
+        if (hittedGO != null)
+        {
+            preClick.isActive = true;
+            preNonClick.isActive = false;
+        }
+        else
+        {
+            preClick.isActive = false;
+            preNonClick.isActive = true;
+        }
+
+        hitPoint.y += 0.54f;
+        if (preClick.isActive) preClick.GetComponent<Transform>().globalPosition = hitPoint;
+        if (preNonClick.isActive) preNonClick.GetComponent<Transform>().globalPosition = hitPoint;
+    }
 
 }

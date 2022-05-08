@@ -9,6 +9,7 @@ public class TankEnemy : RagnarComponent
     public GameObject[] waypoints;
     private int destPoint = 0;
     public EnemyState state;
+    public EnemyType enemyType;
 
     // States
     public bool patrol;
@@ -41,6 +42,7 @@ public class TankEnemy : RagnarComponent
     bool stunned = false;
     float stunnedTimer = -1f;
 
+    GameObject[] childs;
     public void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
@@ -48,14 +50,20 @@ public class TankEnemy : RagnarComponent
         offset = gameObject.GetSizeAABB();
 
         agents = gameObject.GetComponent<NavAgent>();
-        gameObject.GetComponent<Animation>().PlayAnimation("Idle");
-        if (waypoints.Length != 0)
+
+        if (state != EnemyState.DEATH)
         {
-            GotoNextPoint();
-            patrol = false;
+            gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+            if (waypoints.Length != 0)
+            {
+                GotoNextPoint();
+                patrol = false;
+            } 
         }
 
         initialSpeed = agents.speed;
+
+        childs = gameObject.childs;
     }
 
     public void Update()
@@ -89,7 +97,7 @@ public class TankEnemy : RagnarComponent
                     deathTimer -= Time.deltaTime;
                     if (deathTimer < 0)
                     {
-                        gameObject.GetComponent<AudioSource>().PlayClip("ENEMY1DEATH");
+                        gameObject.GetComponent<AudioSource>().PlayClip("EMALE_DEATH4");
                         deathTimer = -1f;
                         pendingToDelete = true;
                     }
@@ -198,6 +206,14 @@ public class TankEnemy : RagnarComponent
             if (other.gameObject.name == "SwordSlash")
             {
                 deathTimer = 2f;
+                for (int i = 0; i < childs.Length; ++i)
+                {
+                    if (childs[i].name == "SwordSlashParticles")
+                    {
+                        childs[i].GetComponent<ParticleSystem>().Play();
+                        break;
+                    }
+                }
                 gameObject.GetComponent<Animation>().PlayAnimation("Dying");
             }
             if (other.gameObject.name == "Whistle")
@@ -211,6 +227,7 @@ public class TankEnemy : RagnarComponent
             {
                 // STUN (BLIND)
                 Stun(5f);
+                GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Play();
             }
         }
     }
@@ -222,7 +239,7 @@ public class TankEnemy : RagnarComponent
         Vector3 initPos = new Vector3(enemyPos.x + (enemyForward.x * offset.x * 0.6f), enemyPos.y + 0.1f, enemyPos.z + (enemyForward.z * offset.z * 0.6f));
 
         index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 8, players, players.Length, colliders, colliders.Length);
-        if (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead) return false;
+        if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }
 
@@ -233,7 +250,7 @@ public class TankEnemy : RagnarComponent
         if (canShoot)
         {
             //TODO_AUDIO
-            gameObject.GetComponent<AudioSource>().PlayClip("ENEMY1SHOOT");
+            gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SHOTGUN");
             canShoot = false;
             shootCooldown = 4f;
             InternalCalls.InstancePrefab("EnemyBullet", true);
@@ -268,7 +285,7 @@ public class TankEnemy : RagnarComponent
 
     public void GotoNextPoint()
     {
-        gameObject.GetComponent<AudioSource>().PlayClip("FOOTSTEPS");
+        gameObject.GetComponent<AudioSource>().PlayClip("ETANK_WALKSAND");
         gameObject.GetComponent<Animation>().PlayAnimation("Walk");
         agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
         destPoint = (destPoint + 1) % waypoints.Length;
@@ -285,7 +302,7 @@ public class TankEnemy : RagnarComponent
         {
             if (stoppedTime >= 0)
             {
-                gameObject.GetComponent<AudioSource>().StopCurrentClip("FOOTSTEPS");
+                gameObject.GetComponent<AudioSource>().StopCurrentClip("ETANK_WALKSAND");
                 stoppedTime -= Time.deltaTime;
                 if (stoppedTime < 0)
                 {

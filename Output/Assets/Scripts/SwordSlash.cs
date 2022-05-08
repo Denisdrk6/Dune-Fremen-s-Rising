@@ -7,7 +7,7 @@ public class SwordSlash : RagnarComponent
 	public bool pendingToDelete = false;
 	public void Start()
     {
-        timeAlive = 2f;
+        timeAlive = 0.1f;
 
         Vector3 pos = GameObject.Find("Player_3").transform.globalPosition;
         pos.y += 1;

@@ -24,6 +24,9 @@ namespace RagnarEngine
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]
             get;
+
+            [MethodImplAttribute(MethodImplOptions.InternalCall)]
+            set;
         }
 
         public extern Quaternion localRotation

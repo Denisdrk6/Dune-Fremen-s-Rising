@@ -210,6 +210,11 @@ void AudioSourceComponent::PlayClip(std::string clipName)
 	}
 }
 
+void AudioSourceComponent::PlayClipEverywhere(std::string clipMap)
+{
+	AudioManager::Get()->PostEvent(clipMap.c_str(), owner->GetUUID());
+}
+
 void AudioSourceComponent::PlayClipsOnAwake()
 {
 	for (int i = 0; i < audioClip.size(); ++i)

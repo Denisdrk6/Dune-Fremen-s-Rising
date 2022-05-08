@@ -137,7 +137,7 @@ float2 TextComponent::GetParentPosition()
 {
 	ComponentTransform2D* transform2D = owner->GetComponent<ComponentTransform2D>();
 	float3 position = transform2D->GetPosition();
-	return { position.x/* - (textToShow.textt.size() * 12 * textToShow.Scale)*/, position.y/* - 5*/ };
+	return { position.x/2, position.y/2 };
 }
 bool TextComponent::OnLoad(JsonParsing& node)
 {

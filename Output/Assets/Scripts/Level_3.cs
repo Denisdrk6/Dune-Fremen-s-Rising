@@ -5,11 +5,32 @@ public class Level_3 : RagnarComponent
 {
 	public Characters[] characters;
 	public Enemies[] enemies;
+    private Chronometer timer = null;
+    public bool runGame = true;
+    public UIButton chrono;
+    public Vector3 hitPoint;
 
-	public void Start()
+    private GameObject SceneAudio;
+    private GameObject preClick;
+    private GameObject preNonClick;
+    private Transform camera;
+    public void Start()
 	{
+        //Play Level Soundtrack
+        SceneAudio = GameObject.Find("AudioLevel1");
+        SceneAudio.GetComponent<AudioSource>().PlayClip("MUSICPLAY");
+        SceneAudio.GetComponent<AudioSource>().SetState("MUSIC", "LEVEL1_BASE");
+        
         // Camera Starting Position
         GameObject.Find("cameraController").transform.localPosition = new Vector3(2.42f, 0f, 30.47f);
+        GameObject.Find("UI Counter").GetComponent<Transform2D>().position2D = new Vector3(0, (0.5f * InternalCalls.GetRegionGame().y) - 28, 0);
+        chrono = GameObject.Find("UI Counter").GetComponent<UIButton>();
+        chrono.SetTextPosition(-26, -4);
+        timer = new Chronometer();
+
+        preClick = GameObject.Find("preClick");
+        preNonClick = GameObject.Find("preNonClick");
+        camera = GameObject.Find("Camera").transform;
 
         // PLAYERS
         characters = new Characters[3];
@@ -28,7 +49,7 @@ public class Level_3 : RagnarComponent
             name = "BackStab",
             prefabPath = "BackStab_2",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -40,7 +61,7 @@ public class Level_3 : RagnarComponent
             name = "The Voice",
             prefabPath = "Voice",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -52,7 +73,7 @@ public class Level_3 : RagnarComponent
             name = "Knife Throw",
             prefabPath = "Knife",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -64,7 +85,7 @@ public class Level_3 : RagnarComponent
             name = "Rock Throw",
             prefabPath = "Rock",
             transformY = 1.15f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.129f,
             linear = -0.188f,
             quadratic = 0f,
@@ -87,7 +108,7 @@ public class Level_3 : RagnarComponent
             name = "Backstab",
             prefabPath = "BackStab",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -99,7 +120,7 @@ public class Level_3 : RagnarComponent
             name = "Camouflage",
             prefabPath = "Camouflage",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -111,7 +132,7 @@ public class Level_3 : RagnarComponent
             name = "Hunter Seeker",
             prefabPath = "HunterSeeker",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -123,7 +144,7 @@ public class Level_3 : RagnarComponent
             name = "Spice Grenade",
             prefabPath = "SpiceGrenade",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -146,7 +167,7 @@ public class Level_3 : RagnarComponent
             name = "Sword Slash",
             prefabPath = "SwordSlash",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -158,7 +179,7 @@ public class Level_3 : RagnarComponent
             name = "Stunner",
             prefabPath = "StunnerShot",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -170,7 +191,7 @@ public class Level_3 : RagnarComponent
             name = "Trap",
             prefabPath = "Trap",
             transformY = 0.12f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.100f,
             linear = -0.942f,
             quadratic = 0f,
@@ -182,7 +203,7 @@ public class Level_3 : RagnarComponent
             name = "Whistle",
             prefabPath = "Whistle",
             transformY = 1.12f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.201f,
             quadratic = 0f,
@@ -433,7 +454,26 @@ public class Level_3 : RagnarComponent
     }
     public void Update()
 	{
+        if (runGame) timer.Update();
+        chrono.text = timer.GetTimeToString();
 
-	}
+        hitPoint = RayCast.ReturnHitpoint();
+        hitPoint.y -= 0.5f;
+        GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
+        if (hittedGO != null)
+        {
+            preClick.isActive = true;
+            preNonClick.isActive = false;
+        }
+        else
+        {
+            preClick.isActive = false;
+            preNonClick.isActive = true;
+        }
+
+        hitPoint.y += 0.54f;
+        if (preClick.isActive) preClick.GetComponent<Transform>().globalPosition = hitPoint;
+        if (preNonClick.isActive) preNonClick.GetComponent<Transform>().globalPosition = hitPoint;
+    }
 
 }

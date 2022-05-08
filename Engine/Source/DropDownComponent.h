@@ -70,6 +70,7 @@ public:
 	uint VAO = 0, VBO = 0;
 	std::map<char, Character> characters;
 	Shadert* shader = nullptr;
+	std::string GetSelect(); 
 private:
 	void SetFocusedButtons();
 	void UpdateButtons(GameObject* auxiliar);

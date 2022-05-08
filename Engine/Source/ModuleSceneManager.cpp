@@ -304,6 +304,34 @@ void ModuleSceneManager::NextScene(const char* name)
 	}
 }
 
+void ModuleSceneManager::SaveScene(const char* name)
+{
+	DEBUG_LOG("Saving Scene");
+
+	if (currentScene->SaveScene(name))
+	{
+		DEBUG_LOG("Succesfully Saved %s", name);
+	}
+	else
+	{
+		DEBUG_LOG("Couldn't save the scene %s", name);
+	}
+}
+
+void ModuleSceneManager::LoadScene(const char* name)
+{
+	DEBUG_LOG("Loading Scene");
+
+	if (currentScene->LoadScene(name))
+	{
+		DEBUG_LOG("Succesfully loaded %s", name);
+	}
+	else
+	{
+		DEBUG_LOG("Couldn't load the scene %s", name);
+	}
+}
+
 void ModuleSceneManager::Play()
 {
 #ifndef DIST
@@ -614,4 +642,26 @@ void ModuleSceneManager::ShowCreateNotLigthSensibleShaderWindow()
 std::string ModuleSceneManager::GetCurrentSceneName()
 {
 	return currentScene->GetName();
+}
+
+
+/////////////////////////
+
+
+void ModuleSceneManager::SaveTesting(int deadCount, std::string playerName, float3 playerPos, float time)
+{
+	DEBUG_LOG("Saving Testing");
+
+	JsonParsing sceneFile;
+
+	sceneFile = sceneFile.SetChild(sceneFile.GetRootValue(), "Testing");
+	JSON_Array* array = sceneFile.SetNewJsonArray(sceneFile.GetRootValue(), "Scenes");
+	currentScene.get()->SaveTest(sceneFile, array, deadCount, playerName, playerPos, time);
+
+	uint size = sceneFile.SaveFile("Testing.json");
+
+	if (size > 0)
+		DEBUG_LOG("Scene saved succesfully");
+	else
+		DEBUG_LOG("Scene couldn't be saved");
 }

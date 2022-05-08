@@ -129,7 +129,10 @@ DropDownComponent::~DropDownComponent()
 {
 	RELEASE(planeToDraw);
 }
-
+std::string DropDownComponent::GetSelect() {
+	ButtonComponent* aux = (ButtonComponent*)buttonsArray[selectedRaw]->GetComponent<ButtonComponent>();
+	return aux->GetButtonText().textt;
+}
 bool DropDownComponent::Update(float dt)
 {
 	RG_PROFILING_FUNCTION("Button Update");

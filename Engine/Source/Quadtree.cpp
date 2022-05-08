@@ -111,7 +111,7 @@ void Quadtree::Intersect(std::set<GameObject*>& gos, CameraComponent* frustum)
 				for (std::vector<GameObject*>::const_iterator it = node->GetObjects().begin(); it != node->GetObjects().end(); ++it)
 				{
 					intersect = frustum->ContainsAaBox((*it)->GetAABB());
-					if (intersect == 1 || intersect == 2)
+					if ((*it)->active && (intersect == 1 || intersect == 2))
 						gos.insert(*it);
 				}
 

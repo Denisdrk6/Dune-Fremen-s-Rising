@@ -22,10 +22,36 @@ MonoArray* CalculateAgentPath(MonoObject* go, MonoObject* dest)
 	return ret;
 }
 
+bool ValidDestination(MonoObject* dest)
+{
+	float3 destination = app->moduleMono->UnboxVector(dest);
+	dtStatus status;
+	const float m_polyPickExt[3] = { 2,4,2 };
+	Pathfinder* path = app->navMesh->GetPathfinding();
+	status = path->m_navQuery->findNearestPoly(destination.ptr(), m_polyPickExt, &path->m_filter, 0, nullptr);
+	if (dtStatusFailed(status) || (status & DT_STATUS_DETAIL_MASK))
+		return false;
+
+	return true;
+}
+
 bool MoveAgentPath(MonoObject* go)
 {
 	NavAgentComponent* agent = GetComponentMono<NavAgentComponent*>(go);
 	return agent->pathfinding->MovePath(agent);
+}
+
+void ClearPath(MonoObject* go)
+{
+	NavAgentComponent* agent = GetComponentMono<NavAgentComponent*>(go);
+	agent->owner->GetComponent<RigidBodyComponent>()->GetBody()->setLinearVelocity({ 0,0,0 });
+	agent->agentProperties->path.clear();
+}
+
+int PathSize(MonoObject* go)
+{
+	NavAgentComponent* agent = GetComponentMono<NavAgentComponent*>(go);
+	return agent->agentProperties->path.size();
 }
 
 MonoObject* GetHitPosition(MonoObject* go)

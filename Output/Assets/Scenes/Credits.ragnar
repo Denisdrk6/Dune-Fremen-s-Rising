@@ -154,7 +154,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 1.0789645910263062,
+                    "Vertical Fov": 1.046697735786438,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -19.078588485717773,
@@ -178,7 +178,13 @@
                     "Horizontal Angle": 160.39971923828125,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
-                    "Shake Smooth": 0
+                    "Shake Smooth": 0,
+                    "Limits": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
                 }
             ]
         },
@@ -213,26 +219,27 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/UI\/black.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 },
                 {
                     "Type": 4,
                     "ScriptName": "Credits",
-                    "pointer": 415246424,
+                    "pointer": 388270272,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -253,7 +260,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -526.5,
+                        -512,
                         -388,
                         36.099998474121094
                     ],
@@ -269,38 +276,38 @@
                     ],
                     "buttonWidth": 326,
                     "buttonHeight": 51,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/white.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 12,
@@ -331,7 +338,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -534.5,
+                        -520,
                         -388,
                         36.099998474121094
                     ],
@@ -347,21 +354,22 @@
                     ],
                     "buttonWidth": 327.5,
                     "buttonHeight": 54,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 }
             ]
         },
@@ -452,17 +460,17 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/white.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 16,
@@ -507,21 +515,21 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/white.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 16,
-                    "buttonText": "Denis Deconinck\n\nIsmael Tejada\n\n\n\n\n\n\n\nIsmael Tejada\n\nPol Vazquez\nMax Llovera\nMarc Ruiz\n\n\nAdrian Aroca\nPol Vazquez\n\n\nEnric Morales\nIsmael Tejada\n\n\nPau Motta\nAlbert Pou\n\n\nIsmael Tejada\nAdrian Aroca\nMax Llovera\nAlbert Pou\n\n\nIsmael Tejada\nMarc Pavón\nIsaac Colomer\nPol Vazquez\n\n\nIsmael Tejada\nAdrian Aroca\nAlbert Pou\nMax Llovera\nMarc Ruiz\n\n\n\n\n\n\n\n\n\n\nAlejandro Moreno\n\nOriol Bernal\nLucas Pérez\n\n\n\n\n\n\nAlejandro Moreno\nRaul Cano\n\n\nMagdalena Ostrowska\nCarlos Megia\n\n\nCarlos Megia\nMario Hernandez\n\n\nOriol Bernal\nLucas Perez\n\n\nHimar Bravo\n\nDenis Deconinck\nIsaac Digon\n\n\nUnai Diaz\nOscar Canales\n\n\nArnau Bonada\nDavid Gonzalez\n\n\nRaul Cano\nMario Hernandez\n\n\n\n\n\n\nIgnasi Pardo\nOriol Valverde\n\n\nIgnasi Pardo\nOriol Valverde\nIsaac Digon\n\n\nOriol Bernal\nLucas Perez\n\n\nPersona\n\n\n\n\n\n\n\nEnric Morales\nMarc Ruiz\nIsmael Tejada\n\n\nEnric Morales\n\nEnric Morales\n\nIsmael Tejada\n\n\n\n\n\n\n\nCarles Garriga\n\nPol Pallares\nCarles Garriga\n\n\nMaria Garrigoles\n\nDavid Lira\nOscar Royo\n\n\nMaria Garrigoles\n\nAlex Gesti\n\nMarc Ramos\n\n\n\n\n\n\n\nDavid Carcelen\n\nPol Pallares\n\nArnau Ustrell\nAlbert Pou\n\n\n\n\n\n\n\nDenis Deconinck\nIsmael Tejada\n\n\n",
+                    "buttonText": "Denis Deconinck\n\nIsmael Tejada\n\n\n\n\n\n\n\nIsmael Tejada\n\nPol Vazquez\nMax Llovera\nMarc Ruiz\n\n\nAdrian Aroca\nPol Vazquez\n\n\nEnric Morales\nIsmael Tejada\n\n\nPau Motta\nAlbert Pou\n\n\nIsmael Tejada\nAdrian Aroca\nMax Llovera\nAlbert Pou\n\n\nIsmael Tejada\nMarc Pavon\nIsaac Colomer\nPol Vazquez\n\n\nIsmael Tejada\nAdrian Aroca\nAlbert Pou\nMax Llovera\nMarc Ruiz\n\n\n\n\n\n\n\n\n\n\nAlejandro Moreno\n\nOriol Bernal\nLucas Pérez\n\n\n\n\n\n\nAlejandro Moreno\nRaul Cano\n\n\nMagdalena Ostrowska\nCarlos Megia\n\n\nCarlos Megia\nMario Hernandez\n\n\nOriol Bernal\nLucas Perez\n\n\nHimar Bravo\n\nDenis Deconinck\nIsaac Digon\n\n\nUnai Diaz\nOscar Canales\n\n\nArnau Bonada\nDavid Gonzalez\n\n\nRaul Cano\nMario Hernandez\n\n\n\n\n\n\nIgnasi Pardo\nOriol Valverde\n\n\nIgnasi Pardo\nOriol Valverde\nIsaac Digon\n\n\nOriol Bernal\nLucas Perez\n\n\nPersona\n\n\n\n\n\n\n\nEnric Morales\nMarc Ruiz\nIsmael Tejada\n\n\nEnric Morales\n\nEnric Morales\n\nIsmael Tejada\n\n\n\n\n\n\n\nCarles Garriga\n\nPol Pallares\nCarles Garriga\n\n\nMaria Garrigoles\n\nDavid Lira\nOscar Royo\n\n\nMaria Garrigoles\n\nAlex Gesti\n\nMarc Ramos\n\n\n\n\n\n\n\nDavid Carcelen\n\nPol Pallares\n\nArnau Ustrell\nAlbert Pou\n\n\n\n\n\n\n\nDenis Deconinck\nIsmael Tejada\n\n\n",
                     "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 0.5,
                     "textColor.r": 1,
@@ -562,17 +570,17 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/white.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 16,
@@ -617,21 +625,22 @@
                     ],
                     "buttonWidth": 492,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/UI\/cropped-logo-hack-CITM.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/cropped-logo-hack-CITM.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 }
             ]
         },
@@ -666,21 +675,22 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1256,
-                    "lastButtonHeight": 752,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
-                  "Type": 2,
-                  "Diffuse Path": "Assets\/Resources\/UI\/logo_1.png",
-                  "Normal Map Path": "Assets\/Resources\/white.png",
-                  "Active": true,
-                  "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/logo_1.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 }
             ]
         }
