@@ -420,9 +420,9 @@ void MeshImporter::ComputeTangents(std::vector<Vertex>& vertices, unsigned int i
 {
 	for (int i = 0; i < indicesSize; i += 3)
 	{
-		float2 uv1 = { vertices[i].texCoords };
-		float2 uv2 = { vertices[i + 1].texCoords };
-		float2 uv3 = { vertices[i + 2].texCoords };
+		float2 uv1 = { vertices[i * 2].texCoords };
+		float2 uv2 = { vertices[i * 2 + 1].texCoords };
+		float2 uv3 = { vertices[i * 2 + 2].texCoords };
 
 		float2 deltaUv1 = uv2 - uv1;
 		float2 deltaUv2 = uv3 - uv1;

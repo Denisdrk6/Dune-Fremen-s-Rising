@@ -1,6 +1,5 @@
 #include "Scene.h"
 #include "Application.h"
-#include "ModuleRenderer3D.h"
 #include "Globals.h"
 
 #include "ModuleEditor.h"
@@ -14,7 +13,6 @@
 #include "AudioManager.h"
 
 //Scripting
-#include "ScriptComponent.h"
 
 #include "TransformComponent.h"
 #include "MeshComponent.h"
@@ -98,8 +96,7 @@ bool Scene::Update(float dt)
 	if (mainCamera != nullptr) mainCamera->Update(dt);
 
 	for (int i = 0; i < root->GetChilds().size(); ++i)
-		if (root->GetChilds()[i]->active)
-			root->GetChilds()[i]->Update(dt);
+		root->GetChilds()[i]->Update(dt);
 
 	if (resetQuadtree)
 	{
@@ -134,7 +131,7 @@ bool Scene::PostUpdate()
 	return true;
 }
 
-bool Scene::Draw(const AABB* shadowsIntersectionAABB)
+bool Scene::Draw()
 {
 	RG_PROFILING_FUNCTION("Scene PostUpdate");
 
@@ -150,19 +147,7 @@ bool Scene::Draw(const AABB* shadowsIntersectionAABB)
 
 		if (go->GetActive())
 		{
-			if (go != app->editor->GetGO() && !go->isUI)
-			{
-				if (app->renderer3D->genShadows)
-				{
-					if(shadowsIntersectionAABB->Contains(go->GetAABB()))
-						go->Draw(nullptr);
-				}
-				else
-				{
-					go->Draw(nullptr);
-				}
-
-			}
+			if (go != app->editor->GetGO()&& !go->isUI) go->Draw(nullptr);
 
 			for (int i = 0; i < go->GetChilds().size(); ++i)
 				stack.push(go->GetChilds()[i]);
@@ -487,13 +472,12 @@ bool Scene::SaveScene(const char* name)
 	DEBUG_LOG("Saving Scene");
 
 	assetsPath = name;
-	
+
 	std::string rootName = name;
 	app->fs->GetFilenameWithoutExtension(rootName);
 	root->SetName(rootName.c_str());
 
 	JsonParsing sceneFile;
-	/*sceneFile.SetNewJsonString(sceneFile.ValueToObject(sceneFile.GetRootValue()), "SceneName", name);*/
 
 	sceneFile = sceneFile.SetChild(sceneFile.GetRootValue(), "Scene");
 	JSON_Array* array = sceneFile.SetNewJsonArray(sceneFile.GetRootValue(), "Game Objects");
@@ -507,38 +491,6 @@ bool Scene::SaveScene(const char* name)
 		DEBUG_LOG("Scene couldn't be saved");
 
 	return true;
-}
-
-void Scene::SaveTest(JsonParsing& node, JSON_Array* array, int deadCount, std::string playerName, float3 playerPos, float time)
-{
-	//Load	
-	JsonParsing sceneFile = JsonParsing();
-	sceneFile.ParseFile("Testing.json");
-	JSON_Array* jsonArray = sceneFile.GetJsonArray(sceneFile.ValueToObject(sceneFile.GetRootValue()), "Scenes");
-	int size = sceneFile.GetJsonArrayCount(jsonArray);
-	for (int i = 0; i < size; ++i)
-	{
-		JsonParsing file = JsonParsing();
-		JsonParsing go = sceneFile.GetJsonArrayValue(jsonArray, i);
-		file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Round", go.GetJsonNumber("Round"));
-		file.SetNewJsonString(file.ValueToObject(file.GetRootValue()), "Scene Name", go.GetJsonString("Scene Name"));
-		file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Dead Count", go.GetJsonNumber("Dead Count"));
-		file.SetNewJsonString(file.ValueToObject(file.GetRootValue()), "Player Dead", go.GetJsonString("Player Dead"));
-		file.SetNewJson3Number(file, "Last Pos", go.GetJson3Number(go, "Last Pos"));
-		file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Time", go.GetJsonNumber("Time"));
-		node.SetValueToArray(array, file.GetRootValue());
-	}
-	// Open
-	JsonParsing file = JsonParsing();
-	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Round", size++);
-	file.SetNewJsonString(file.ValueToObject(file.GetRootValue()), "Scene Name", name.c_str());
-	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Dead Count", deadCount);
-	file.SetNewJsonString(file.ValueToObject(file.GetRootValue()), "Player Dead", playerName.c_str());
-	file.SetNewJson3Number(file, "Last Pos", playerPos);
-	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Time", time);
-
-	//Close
-	node.SetValueToArray(array, file.GetRootValue());
 }
 
 void Scene::DuplicateGO(GameObject* go, GameObject* parent)

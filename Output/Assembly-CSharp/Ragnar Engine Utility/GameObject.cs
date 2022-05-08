@@ -82,9 +82,6 @@ namespace RagnarEngine
         static extern public void ReparentToRoot(GameObject child);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public extern void ChangeMesh(string directory);
-
-        [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern GameObject AddChild(GameObject child);
 		
 		[MethodImplAttribute(MethodImplOptions.InternalCall)]
@@ -151,24 +148,5 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         extern public void SetSizeAABB(Vector3 min, Vector3 max);
-
-        [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        extern public void SubmitOutlineDrawing(Vector3 color);
-
-        public extern bool isInteractuable
-        {
-            [MethodImplAttribute(MethodImplOptions.InternalCall)]
-            get;
-            [MethodImplAttribute(MethodImplOptions.InternalCall)]
-            set;
-        }
-
-        public extern Vector3 interactuableColor
-        {
-            [MethodImplAttribute(MethodImplOptions.InternalCall)]
-            get;
-            [MethodImplAttribute(MethodImplOptions.InternalCall)]
-            set;
-        }
     }
 }

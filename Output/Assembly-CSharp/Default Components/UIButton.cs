@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace RagnarEngine
 {
-    public class UIButton : RagnarComponent
+    class UIButton : RagnarComponent
     {
         public UIButton(UIntPtr ptr) : base(ptr)
         {

@@ -3,11 +3,8 @@
 
 #include "Shapes.h"
 #include "SDL_video.h"
-#include "Geometry/AABB.h"
-
 #include <vector>
 #include <set>
-#include <utility>
 
 #define MAX_LIGHTS 8
 
@@ -18,7 +15,6 @@ class Framebuffer;
 class TextureBuffer;
 class Material;
 class Shader;
-class Texture;
 class GameObject;
 class CameraComponent;
 
@@ -86,19 +82,14 @@ public:
 	void RemovePointLight(PointLight* light);
 	void RemoveSpotLight(SpotLight* light);
 
-	void RequestDamageFeedback();
-
 private:
 	void PushCamera(const float4x4& proj, const float4x4& view);
 	void DebugDraw(GameObject* objSelected);
-	void GenerateShadows(const std::set<GameObject*>& objects, CameraComponent* gameCam, AABB& shadowsAABB);
-
-	void DrawDamageFeedback();
+	void GenerateShadows(std::set<GameObject*> objects, CameraComponent* gameCam);
 
 public:
 	PPlane grid;
 	unsigned int shadowsDepthTexture;
-	std::vector<std::pair<GameObject*, float3>> gosToDrawOutline;
 
 	//Light lights[MAX_LIGHTS];
 	SDL_GLContext context;
@@ -142,14 +133,11 @@ private:
 	IndexBuffer* distIbo;
 	std::shared_ptr<Shader> postProcessingShader;
 	
-	std::shared_ptr<Shader> textureShader;
-	std::shared_ptr<Texture> damageTexture;
 
 	VertexBuffer* vbo;
 	std::shared_ptr<Shader> coneShader;
 
 	unsigned int shadowsFbo;
-	
-	bool dmgFeedbackRequested;
-	
+	//unsigned int shadowsDepthTexture;
+
 };

@@ -3,9 +3,6 @@
 #include "CameraComponent.h"
 #include "ModuleCamera3D.h"
 #include "ModuleRenderer3D.h"
-#include "ModuleEditor.h"
-#include "ModuleNavMesh.h"
-#include "Viewport.h"
 
 #include "Math/float3x3.h"
 #include "Geometry/LineSegment.h"
@@ -101,50 +98,27 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 		Triangle t(vertex[i], vertex[i+1], vertex[i+2]);
 		for (size_t j = 0; j < players.size(); j++)
 		{
-			if (players.at(j)->GetComponent<TransformComponent>()->GetGlobalPosition().Distance(pointA) < radius + 0.5) {
-				if (t.Intersects(players.at(j)->GetOOB()))
-				{
-					vec bottomPoint = players.at(j)->GetComponent<TransformComponent>()->GetGlobalPosition();
-					vec topPoint = bottomPoint;
-					topPoint.y += 1;
-					if (t.Intersects(Capsule(bottomPoint, topPoint, 0.60f))) {
-						ret = j;
-						break;
-					}
+			if (t.Intersects(players.at(j)->GetOOB()))
+			{
+				vec bottomPoint = players.at(j)->GetComponent<TransformComponent>()->GetGlobalPosition();
+				vec topPoint = bottomPoint;
+				topPoint.y += 1;
+				if (t.Intersects(Capsule(bottomPoint, topPoint, 0.60f))) {
+					ret = j;
+					break;
 				}
-			}			
+				
+			}
 		}		
 	}
 
 	// Inverse triangle
 	std::reverse(vertex.begin(), vertex.end());
 
-	// Z fighting
-	int sizeCon = app->renderer3D->enemyCones.size();
-	if (sizeCon != 0)
-	{
-		int numCones = sizeCon / vertex.size();
-		for (int i = 0; i < vertex.size(); i++)
-		{
-			vertex[i].y += 0.01f * numCones;
-		}
-	}
-
 	// Add to enemyCones list
+	int sizeCon = app->renderer3D->enemyCones.size();
 	app->renderer3D->enemyCones.resize(sizeCon + vertex.size());
 	memcpy(&app->renderer3D->enemyCones[sizeCon], &vertex[0], vertex.size() * sizeof(float3));
 
 	return ret;
-}
-
-MonoObject* ReturnHitpoint()
-{
-	float4 size = app->editor->GetGameView()->GetBounds();
-	float2 mousePos = { (float)app->input->GetMouseX(), (float)app->input->GetMouseY() };
-
-	mousePos.x = 2 * ((mousePos.x - size.x) / (size.z)) - 1.0f;
-	mousePos.y = -(2 * ((mousePos.y - (size.y + 10.0f)) / (size.w)) - 1.0f);
-
-	LineSegment picking = app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->UnProjectLineSegment(mousePos.x, mousePos.y);
-	return app->moduleMono->Float3ToCS(app->navMesh->CalculateHitPosition(picking));
 }

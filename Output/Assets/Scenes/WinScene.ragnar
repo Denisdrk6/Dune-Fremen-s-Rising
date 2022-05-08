@@ -72,8 +72,7 @@
                         1,
                         1
                     ],
-                    "Intensity": 0,
-                    "Shadows": true
+                    "Intensity": 0
                 }
             ]
         },
@@ -135,10 +134,10 @@
                         -50
                     ],
                     "Quaternion": [
-                        0.34202012419700623,
+                        0.38268345594406128,
                         0,
                         0,
-                        0.93969261646270752
+                        0.92387950420379639
                     ],
                     "RotationEditor": [
                         0,
@@ -154,7 +153,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 1.046697735786438,
+                    "Vertical Fov": 1.0064557790756226,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -4.9477472305297852,
@@ -165,7 +164,6 @@
                     "Zoom": 0,
                     "Zoom Min": 0,
                     "Zoom Max": 0,
-                    "Zoom Speed": 0,
                     "Free Movement": true,
                     "Default Target Pos": [
                         -4.9477472305297852,
@@ -176,15 +174,10 @@
                     "Rotation Speed": 0.5,
                     "Radius": 20,
                     "Horizontal Angle": 160.39971923828125,
+                    "Arrow Rotation": false,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
-                    "Shake Smooth": 0,
-                    "Limits": [
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
+                    "Shake Smooth": 0
                 }
             ]
         },
@@ -219,8 +212,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -233,13 +226,12 @@
                 },
                 {
                     "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
+                    "alpha": 1
                 },
                 {
                     "Type": 4,
                     "ScriptName": "winScren",
-                    "pointer": 388270544,
+                    "pointer": 336148160,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -260,7 +252,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -512,
+                        -547,
                         -430.5,
                         36.099998474121094
                     ],
@@ -276,8 +268,8 @@
                     ],
                     "buttonWidth": 326,
                     "buttonHeight": 51,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -312,7 +304,6 @@
                 {
                     "Type": 12,
                     "buttonText": "Main Menu",
-                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 1,
                     "textColor.r": 1,
                     "textColor.g": 1,
@@ -338,7 +329,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -520,
+                        -555,
                         -430.5,
                         36.099998474121094
                     ],
@@ -354,8 +345,8 @@
                     ],
                     "buttonWidth": 327.5,
                     "buttonHeight": 54,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -368,8 +359,7 @@
                 },
                 {
                     "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
+                    "alpha": 1
                 }
             ]
         },
@@ -404,8 +394,8 @@
                     ],
                     "buttonWidth": 301.5,
                     "buttonHeight": 51.5,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -440,7 +430,6 @@
                 {
                     "Type": 12,
                     "buttonText": "Replay",
-                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 1,
                     "textColor.r": 1,
                     "textColor.g": 1,
@@ -482,8 +471,8 @@
                     ],
                     "buttonWidth": 294,
                     "buttonHeight": 46.5,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -496,8 +485,7 @@
                 },
                 {
                     "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
+                    "alpha": 1
                 }
             ]
         },
@@ -516,7 +504,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        454,
+                        419,
                         -430.5,
                         36.099998474121094
                     ],
@@ -532,8 +520,8 @@
                     ],
                     "buttonWidth": 292.5,
                     "buttonHeight": 52,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -568,7 +556,6 @@
                 {
                     "Type": 12,
                     "buttonText": "Next Level",
-                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 1,
                     "textColor.r": 1,
                     "textColor.g": 1,
@@ -594,7 +581,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        454,
+                        419,
                         -430.5,
                         36.099998474121094
                     ],
@@ -610,8 +597,8 @@
                     ],
                     "buttonWidth": 301,
                     "buttonHeight": 54,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -624,8 +611,7 @@
                 },
                 {
                     "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
+                    "alpha": 1
                 }
             ]
         },
@@ -644,7 +630,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -357,
+                        -392,
                         199,
                         36.099998474121094
                     ],
@@ -660,8 +646,8 @@
                     ],
                     "buttonWidth": 391,
                     "buttonHeight": 175.5,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1297,
+                    "lastButtonHeight": 714,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -674,8 +660,7 @@
                 },
                 {
                     "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
+                    "alpha": 1
                 }
             ]
         },
@@ -685,7 +670,7 @@
             "Name": "AudioWinMenu",
             "Active": true,
             "Static": true,
-            "PrefabID": false,
+            "PrefabID": true,
             "Prefab Path": "Assets\/Prefabs\/AudioWinMenu.rgprefab",
             "tag": "Untagged",
             "layer": "Default",

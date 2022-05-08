@@ -109,13 +109,6 @@ void ModuleNavMesh::CheckNavMeshIntersection(LineSegment raycast, int clickedMou
 		pathfinder->hitPosition = raycast.a + (raycast.b - raycast.a) * hitTime;
 }
 
-float3 ModuleNavMesh::CalculateHitPosition(LineSegment raycast)
-{
-	float hitTime;
-	geometry->raycastMesh(raycast.a.ptr(), raycast.b.ptr(), hitTime);
-	return raycast.a + (raycast.b - raycast.a) * hitTime;
-}
-
 void ModuleNavMesh::ClearNavMeshes()
 {
 	CleanUp();

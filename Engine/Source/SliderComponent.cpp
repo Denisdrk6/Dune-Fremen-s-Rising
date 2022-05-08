@@ -105,30 +105,28 @@ bool SliderComponent::Update(float dt)
 		r->SetButtonHeight(q->GetButtonHeight()+20);
 		r->Update(0);
 
-		if (app->userInterface->focusedGameObject == owner)
-		{
-			state = State::FOCUSED;
 
-			if (app->input->GetMouseButton(SDL_BUTTON_LEFT) == KeyState::KEY_REPEAT) {
-				isHolding = true;
-				state = State::PRESSED;
+
+
+		
+
+		
+			if (app->userInterface->focusedGameObject == owner)
+			{
+				state = State::FOCUSED;
+
+				if (app->input->GetMouseButton(SDL_BUTTON_LEFT) == KeyState::KEY_REPEAT)
+					state = State::PRESSED;
 			}
-		}
-		else state = State::NORMAL;
+			else state = State::NORMAL;
 
-		if (app->userInterface->UIGameObjectSelected == owner)
-		{
-			state = State::SELECTED;
-		}
-		bool enter = false;
-		if (isHolding && app->input->GetMouseButton(SDL_BUTTON_LEFT) == KeyState::KEY_REPEAT) 
-		{
-			enter = true;
-		}
-		else {
-			isHolding = false;
-		}
-		if (state == State::PRESSED|| enter) {
+			if (app->userInterface->UIGameObjectSelected == owner)
+			{
+				state = State::SELECTED;
+			}
+		
+
+		if (state == State::PRESSED) {
 
 			if (fMousePos.x > posXMin && fMousePos.x < posXMax)
 			{

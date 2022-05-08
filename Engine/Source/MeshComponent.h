@@ -17,7 +17,7 @@ public:
 	~MeshComponent();
 
 	void Draw(CameraComponent* gameCam = nullptr) override;
-	void DrawOutline(CameraComponent* gameCam, const float3& color) override;
+	void DrawOutline() override;
 	void OnEditor() override;
 
 	void MenuChangeMesh();

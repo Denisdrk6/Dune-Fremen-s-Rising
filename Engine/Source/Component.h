@@ -54,7 +54,7 @@ public:
 	virtual bool Update(float dt) { return true; }
 	virtual void Disable() {}
 	virtual void Draw(CameraComponent* gameCam = nullptr) {}
-	virtual void DrawOutline(CameraComponent* gameCam, const float3& color = float3::one) {}
+	virtual void DrawOutline() {}
 
 	virtual void OnEditor() {}
 

@@ -4,7 +4,7 @@ using RagnarEngine;
 public class Knife : RagnarComponent
 {
 	private float force = 1500;
-	public bool canReload = false;
+	private bool canReload = false;
 	private bool pendingToDelete = false;
 	private bool grabOnce = false;
 	
@@ -24,6 +24,7 @@ public class Knife : RagnarComponent
         gameObject.transform.localPosition = pos;
 
         Vector3 direction = HitEnemy(agent, player);
+		direction.y = 0;
 
         Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
         goRB.SetBodyPosition(pos);
@@ -52,7 +53,7 @@ public class Knife : RagnarComponent
 			if (!grabOnce)
 			{
 				grabOnce = true;
-				gameObject.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFERECOVERSAND");
+				gameObject.GetComponent<AudioSource>().PlayClip("WEAPONTHROWINGKNIFERECOVERSAND");
 			}
 
 			pendingToDelete = true;
@@ -68,14 +69,14 @@ public class Knife : RagnarComponent
 
 		if (obj != null)
 		{
-			//Debug.Log(obj.name.ToString());
+			Debug.Log(obj.name.ToString());
 			return obj.GetComponent<Transform>().globalPosition - player.transform.globalPosition;
 		}
 
 		return agent.hitPosition - player.transform.globalPosition;
 	}
 
-	public void OnCollision(Rigidbody other)
+	public void OnCollisionEnter(Rigidbody other)
 	{
 		canReload = true;
 	}

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using RagnarEngine;
 
 public class PlayerManager : RagnarComponent
@@ -11,23 +10,33 @@ public class PlayerManager : RagnarComponent
     public Characters playableCharacter;
 
     GameObject[] area = null;
-    GameObject lightHab = null;
     public bool drawnArea = false;
+    bool crouched = false;
     DialogueManager dialogue;
 
     public void Start()
 	{
         foreach (Characters c in characters)
         {
-            InternalCalls.InstancePrefab(c.prefabPath);   
+            InternalCalls.InstancePrefab(c.prefabPath);
+            //c.abilities[4] = new Abilities
+            //{
+            //    name = "CorpseCarrier",
+            //    prefabPath = "",
+            //    transformY = 0.0f,
+            //    intensity = 4.0f,
+            //    constant = 0.0f,
+            //    linear = 0.0f,
+            //    quadratic = 0f,
+            //    charges = -1,
+            //    cooldown = 0f
+            //}; // Corpse Carrier Ability
         }
 
         players = GameObject.FindGameObjectsWithTag("Player");
-        Vector3[] outlineColors = new Vector3[3] { new Vector3(0,1,0), new Vector3(0.5f,0,0.5f), new Vector3(0,0,1) };
-        for (int i = 0; i < players.Length; i++)
+        for(int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<Rigidbody>().SetBodyPosition(characters[i].pos);
-            players[i].SubmitOutlineDrawing(outlineColors[i]);
         }
 
         ChangeCharacter(characterSelected);
@@ -45,35 +54,22 @@ public class PlayerManager : RagnarComponent
         }
         area = aux;
         dialogue = GameObject.Find("Dialogue").GetComponent<DialogueManager>();
-
-        lightHab = GameObject.Find("ControllableLight");
-        if (SaveSystem.fromContinue)
-        {
-            LoadPlayer();
-        }
     }
 
 	public void Update()
     {
-        if (Input.GetKey(KeyCode.Y) == KeyState.KEY_DOWN)
-        {
-            SaveSystem.LoadScene();
-            //LoadPlayer();
-            //GameObject.Find("EnemyManager").GetComponent<EnemyManager>().LoadEnemy();
-            SaveSystem.fromContinue = true;
-        }
-        if (Input.GetKey(KeyCode.L) == KeyState.KEY_DOWN)
-        {
-            GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveEnemies();
-            SavePlayer();
-        }
         if (!dialogue.GetInDialogue())
         {
+            if (Input.GetKey(KeyCode.LSHIFT) == KeyState.KEY_DOWN)
+            {
+                crouched = !crouched;
+            }
+
             PlayerCases();
 
-            /*Cambiador de estados para saber que habilidad estas o no casteando (Basicamente hace que el personaje entre en un estado donde si clickas una tecla
+            /*Cambiador de estados para saber qué habilidad estás o no casteando (Básicamente hace que el personaje entre en un estado donde si clickas una tecla
             muestre el rango de habilidad, y entre en un estado de castear o cancelar la habilidad seleccionada (Click derecho cancel/click izquierdo casteo)).
-            Aqui deberia ir la zona de rango de cada habilidad.*/
+            Aquí debería ir la zona de rango de cada habilidad.*/
             AbilityStateChanger();
 
             /*Contador de cooldown para cada habilidad
@@ -101,101 +97,67 @@ public class PlayerManager : RagnarComponent
 
     private void AbilityStateChanger()
     {
-        if (playableCharacter.pickedEnemy == null)
+        // LETRA Z --> HABILIDAD 1 DE TODOS LOS PJS
+        if (Input.GetKey(KeyCode.Z) == KeyState.KEY_DOWN)
         {
-            // LETRA Z --> HABILIDAD 1 DE TODOS LOS PJS
-            if (Input.GetKey(KeyCode.Z) == KeyState.KEY_DOWN)
-            {
-                SpawnArea(State.ABILITY_1);
-            }
-
-            // LETRA X --> HABILIDAD 2 DE TODOS LOS PJS
-            if (Input.GetKey(KeyCode.X) == KeyState.KEY_DOWN)
-            {
-                SpawnArea(State.ABILITY_2);
-            }
-
-            // LETRA C --> HABILIDAD 3 DE TODOS LOS PJS
-            if (Input.GetKey(KeyCode.C) == KeyState.KEY_DOWN)
-            {
-                SpawnArea(State.ABILITY_3);
-            }
-
-            // LETRA V --> HABILIDAD 4 DE TODOS LOS PJS
-            if (Input.GetKey(KeyCode.V) == KeyState.KEY_DOWN)
-            {
-                SpawnArea(State.ABILITY_4);
-            }
-
-            // Change Condition to all players
-            if (((playableCharacter == characters[0]) && (playableCharacter.state == State.ABILITY_4)) || (playableCharacter == characters[1]) && (playableCharacter.state == State.ABILITY_4))
-            {
-                float radius = 0f;
-                if (playableCharacter == characters[0]) radius = 11.5f;
-                if (playableCharacter == characters[1]) radius = 12.7f;
-
-                lightHab.GetComponent<Light>().intensity = 6;
-
-                Vector3 hit;
-                if (SceneManager.currentSceneName == "build")
-                    hit = GameObject.Find("LevelManager").GetComponent<Level_1>().hitPoint;
-                else if (SceneManager.currentSceneName == "build2")
-                    hit = GameObject.Find("LevelManager").GetComponent<Level_2>().hitPoint;
-                else
-                    hit = GameObject.Find("LevelManager").GetComponent<Level_3>().hitPoint;
-                    
-                if (Transform.GetDistanceBetween(players[characterSelected].transform.globalPosition, hit) < radius)
-                {
-                    hit.y += 0.2f;
-                    lightHab.transform.globalPosition = hit;
-                }
-                else
-                {
-                    // No BORRAR
-                    //Vector3 a = players[characterSelected].transform.globalPosition;
-                    //Vector3 b = (hit - a).normalized * 11.5f + a;
-                    //b.y = lightHab.transform.globalPosition.y;
-                    //lightHab.transform.globalPosition = b;
-                }
-            }
+            SpawnArea((int)State.ABILITY_1);
         }
-            // LETRA B --> ARRASTRAR CUERPOS
-            if (Input.GetKey(KeyCode.B) == KeyState.KEY_DOWN)
-            {
-                //SpawnArea((int)State.CARRYING);
-                playableCharacter.state = State.CARRYING;
-                players[characterSelected].GetComponent<Player>().SetState(State.CARRYING);
-            }
 
-            // Si el estado no es NONE, significa que la habilidad estï¿½ lista para ser casteada, y entrarï¿½ en esta funciï¿½n.
-            if (playableCharacter.state != State.NONE) CastOrCancel();
+        // LETRA X --> HABILIDAD 2 DE TODOS LOS PJS
+        if (Input.GetKey(KeyCode.X) == KeyState.KEY_DOWN)
+        {
+            SpawnArea((int)State.ABILITY_2);
+        }
+
+        // LETRA C --> HABILIDAD 3 DE TODOS LOS PJS
+        if (Input.GetKey(KeyCode.C) == KeyState.KEY_DOWN)
+        {
+            SpawnArea((int)State.ABILITY_3);
+        }
+
+        // LETRA V --> HABILIDAD 4 DE TODOS LOS PJS
+        if (Input.GetKey(KeyCode.V) == KeyState.KEY_DOWN)
+        {
+            SpawnArea((int)State.ABILITY_4);
+        }
+
+        // LETRA B --> ARRASTRAR CUERPOS
+        if (Input.GetKey(KeyCode.B) == KeyState.KEY_DOWN)
+        {
+            //SpawnArea((int)State.CARRYING);
+            playableCharacter.state = State.CARRYING;
+            players[characterSelected].GetComponent<Player>().SetState((int)State.CARRYING);
+        }
+
+        // Si el estado no es NONE, significa que la habilidad está lista para ser casteada, y entrará en esta función.
+        if (playableCharacter.state != State.NONE) CastOrCancel();
     }
 
-    private void SpawnArea(State ability)
+    private void SpawnArea(int ability)
     {
-        // Comprobador de cargas de habilidad. Si entra aquï¿½, significa que la habilidad no tiene cargas
-        if (playableCharacter.abilities[(int)ability - 1].charges == 0)
+        // Comprobador de cargas de habilidad. Si entra aquí, significa que la habilidad no tiene cargas
+        if (playableCharacter.abilities[ability - 1].charges == 0)
         {
             playableCharacter.state = State.NONE;
         }
-        // Entra aquï¿½ si la habilidad tiene cargas o las cargas son -1 (Habilidad infinita (Solo cooldown)). Cambia el estado del player al de la habilidad que haya marcado.
-        else if (!playableCharacter.abilities[(int)ability - 1].onCooldown)
+        // Entra aquí si la habilidad tiene cargas o las cargas son -1 (Habilidad infinita (Solo cooldown)). Cambia el estado del player al de la habilidad que haya marcado.
+        else if (!playableCharacter.abilities[ability - 1].onCooldown)
         {
             playableCharacter.state = (State)ability;
 
-            // Dibujado del ï¿½rea de rango.
+            // Dibujado del área de rango.
             if (!drawnArea)
             {
                 drawnArea = true;
-                DrawArea((int)ability);
+                DrawArea(ability);
             }
 
             players[characterSelected].GetComponent<Player>().SetState(ability);
         }
-        // Si la habilidad estï¿½ en cooldown y tiene cargas, entrarï¿½ aquï¿½ y pondrï¿½ el state del player en NONE.
+        // Si la habilidad está en cooldown y tiene cargas, entrará aquí y pondrá el state del player en NONE.
         else
         {
-            //Debug.Log("Ability on Cooldown! You have" + (playableCharacter.abilities[(int)ability - 1].cooldown - playableCharacter.abilities[(int)ability - 1].counter) + "seconds left to use it again!");
+            Debug.Log("Ability on Cooldown! You have" + (playableCharacter.abilities[ability - 1].cooldown - playableCharacter.abilities[ability - 1].counter) + "seconds left to use it again!");
             playableCharacter.state = State.NONE;
         }
     }
@@ -213,38 +175,30 @@ public class PlayerManager : RagnarComponent
     {
         if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
         {
-            switch (players[characterSelected].GetComponent<Player>().GetAction())
+            if (crouched)
             {
-                //NONE
-                case 0:
-                    players[characterSelected].GetComponent<Animation>().PlayAnimation("Shoot");
-                    break;
-                //CROUCH
-                case 1:
-                    players[characterSelected].GetComponent<Animation>().PlayAnimation("CrouchShoot");
-                    break;
-                //CARRY
-                case 2:
-                    break;
-            };
+                players[characterSelected].GetComponent<Animation>().PlayAnimation("CrouchShoot");
+            }
+            else
+            {
+                players[characterSelected].GetComponent<Animation>().PlayAnimation("Shoot");
+            }
 
-            GameObject obj = null;
-            switch (playableCharacter.state)
+            switch(playableCharacter.state)
             {
                 case State.ABILITY_1:
                     {
                         if (playableCharacter == characters[0])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFETHROW");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONTHROWINGKNIFETHROW");
                         }
                         else if (playableCharacter == characters[1])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_CRYSKNIFESTAB");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONCRYSKNIFESTAB");
                         }
                         else if (playableCharacter == characters[2])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_SWORDHIT");
-                            GameObject.Find("SlashParticles").GetComponent<ParticleSystem>().Play();
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONSWORDHIT");
                         }
                         break;
                     }
@@ -252,15 +206,15 @@ public class PlayerManager : RagnarComponent
                     {
                         if (playableCharacter == characters[0])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_VOICE");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("THROWROCK");
                         }
                         else if (playableCharacter == characters[1])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_CAMOUFLAGEACTIVATE");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONCAMOUFLAGEACTIVATE");
                         }
                         else if (playableCharacter == characters[2])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_STUNNERGUNSHOT");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONSTUNNERSHOT");
                         }
                         break;
                     }
@@ -268,15 +222,15 @@ public class PlayerManager : RagnarComponent
                     {
                         if (playableCharacter == characters[0])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("EBOSS_THROWOBJECT");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("THROWROCK");
                         }
                         else if (playableCharacter == characters[1])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_CAMOUFLAGEACTIVATE");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONCAMOUFLAGEACTIVATE");
                         }
                         else if (playableCharacter == characters[2])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_TRAPACTIVE");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONSTUNNERSHOT");
                         }
                         break;
                     }
@@ -284,49 +238,48 @@ public class PlayerManager : RagnarComponent
                     {
                         if (playableCharacter == characters[0])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("EBOSS_THROWOBJECT");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("THROWROCK");
                         }
                         else if (playableCharacter == characters[1])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("SMOKEGRENADE_ACTIVATE");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONCAMOUFLAGEACTIVATE");
                         }
                         else if (playableCharacter == characters[2])
                         {
-                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WPN_WHISTLE");
+                            players[characterSelected].GetComponent<AudioSource>().PlayClip("WEAPONSTUNNERSHOT");
                         }
                         break;
                     }
                 case State.CARRYING:
                     {
-                        if (playableCharacter.pickedEnemy != null && players[characterSelected].GetComponent<Player>().GetAction() == 2)
+                        if (playableCharacter.pickedEnemy != null)
                         {
                             GameObject.ReparentToRoot(playableCharacter.pickedEnemy);
 
-                            players[characterSelected].GetComponent<Animation>().PlayAnimation("CorpseDrop");
                             playableCharacter.pickedEnemy.transform.localPosition = players[characterSelected].transform.globalPosition;
 
-                            //Debug.Log("Dropping the corpse of" + playableCharacter.pickedEnemy.name.ToString());
+                            Debug.Log("Dropping the corpse of" + playableCharacter.pickedEnemy.name.ToString());
                             playableCharacter.pickedEnemy = null;
                         }
                         else
                         {
                             NavAgent agent = players[characterSelected].GetComponent<NavAgent>();
-                            obj = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+                            GameObject obj = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
 
                             if (obj != null && Transform.GetDistanceBetween(obj.transform.globalPosition, players[characterSelected].transform.globalPosition) < 3)
                             {
-                                List<GameObject> enemiesDead = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().deadEnemies;
+                                GameObject[] enemiesDead = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().deadEnemies;
                                 foreach (GameObject g in enemiesDead)
                                 {
                                     if (g != null && obj.name == g.name)
                                     {
                                         players[characterSelected].AddChild(obj);
 
-                                        obj.transform.localPosition = new Vector3(0, 2, 0);
-                                        players[characterSelected].GetComponent<Animation>().PlayAnimation("CorpsePick");
-                                        playableCharacter.pickedEnemy = obj;
+                                        //setear position, animation, whatever de obj
+                                        obj.transform.localPosition = new Vector3(0,2,0);
 
-                                        //Debug.Log("Carrying the corpse of" + obj.name.ToString());
+                                        Debug.Log("Carrying the corpse of" + obj.name.ToString());
+                                        playableCharacter.pickedEnemy = obj;
                                         break;
                                     }
                                 }
@@ -340,7 +293,7 @@ public class PlayerManager : RagnarComponent
 
             if (playableCharacter.state != State.CARRYING)
             {
-                // Instancia la habilidad en cuestiï¿½n. 
+                // Instancia la habilidad en cuestión. 
                 InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath);
 
                 // Al haberse instanciado una habilidad, comprueba si funciona por cargas. Si lo hace resta una carga a la habilidad.
@@ -351,38 +304,22 @@ public class PlayerManager : RagnarComponent
 
                 // Pone la habilidad en cooldown y el player en estado de NONE
                 playableCharacter.abilities[(int)playableCharacter.state - 1].onCooldown = true;
-                playableCharacter.state = State.NONE;
-
-                // Se cambia el estado a POSTCAST para evitar que se mueva directamente despuï¿½s de castear la habilidad. En el update de los players se cambiarï¿½ a NONE nuevamente para que se pueda mover (Tras un ciclo de update). 
-                players[characterSelected].GetComponent<Player>().SetState(State.POSTCAST);
-
-                area[characterSelected].GetComponent<Light>().intensity = 0f;
-                lightHab.GetComponent<Light>().intensity = 0f;
-                drawnArea = false;
             }
-            else if (playableCharacter.state == State.CARRYING)
-            {
-                if (players[characterSelected].GetComponent<Animation>().HasFinished())
-                {
-                    playableCharacter.state = State.NONE;
-                    players[characterSelected].GetComponent<Player>().SetState(State.POSTCAST);
+            playableCharacter.state = State.NONE;
 
-                    if (playableCharacter.pickedEnemy != null)
-                        players[characterSelected].GetComponent<Player>().SetAction(2);
-                    else
-                        players[characterSelected].GetComponent<Player>().SetAction(0);
-                }
-            }
+            // Se cambia el estado a POSTCAST para evitar que se mueva directamente después de castear la habilidad. En el update de los players se cambiará a NONE nuevamente para que se pueda mover (Tras un ciclo de update). 
+            players[characterSelected].GetComponent<Player>().SetState((int)State.POSTCAST);
+
+            area[characterSelected].GetComponent<Light>().intensity = 0f;
+            drawnArea = false;
         }
-
-        // Se cancela el estado de la habilidad para que el ï¿½rea de rango deje de mostrarse.
+        // Se cancela el estado de la habilidad para que el área de rango deje de mostrarse.
         if (Input.GetMouseClick(MouseButton.RIGHT) == KeyState.KEY_DOWN)
         {
             playableCharacter.state = State.NONE;
             players[characterSelected].GetComponent<Player>().SetState((int)State.NONE);
 
             area[characterSelected].GetComponent<Light>().intensity = 0f;
-            lightHab.GetComponent<Light>().intensity = 0f;
             drawnArea = false;
         }
     }
@@ -398,7 +335,6 @@ public class PlayerManager : RagnarComponent
                     characterSelected = 3;
                     playableCharacter.state = State.NONE;
                     if (area != null) area[characterSelected].GetComponent<Light>().intensity = 0f;
-                    lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
                     Debug.Log("Character Changed");
@@ -411,7 +347,6 @@ public class PlayerManager : RagnarComponent
                     characterSelected = 2;
                     playableCharacter.state = State.NONE;
                     if(area != null) area[characterSelected].GetComponent<Light>().intensity = 0f;
-                    lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
                     Debug.Log("Character Changed");
@@ -424,7 +359,6 @@ public class PlayerManager : RagnarComponent
                     characterSelected = 1;
                     playableCharacter.state = State.NONE;
                     if (area != null) area[characterSelected].GetComponent<Light>().intensity = 0f;
-                    lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
                     Debug.Log("Character Changed");
@@ -437,7 +371,6 @@ public class PlayerManager : RagnarComponent
                     characterSelected = 0;
                     playableCharacter.state = State.NONE;
                     if (area != null) area[characterSelected].GetComponent<Light>().intensity = 0f;
-                    lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
                     Debug.Log("Character Changed");
@@ -455,32 +388,6 @@ public class PlayerManager : RagnarComponent
         }
         players[id].GetComponent<Player>().SetControled(true);
         
-    }
-
-    public void SavePlayer()
-    {
-        SaveSystem.DeleteDirectoryFiles("Library/SavedGame/Players");
-        SaveSystem.SaveScene();
-        for (int i = 0; i < players.Length; ++i)
-        { 
-            SaveSystem.SavePlayer(players[i].GetComponent<Player>());
-        }
-    }
-
-    public void LoadPlayer()
-    {
-        for (int i = 0; i < players.Length; ++i)
-        {
-            PlayerData data = SaveSystem.LoadPlayer(players[i].name);
-
-            players[i].GetComponent<Player>().hitPoints = data.hitPoints;
-
-            Vector3 pos = new Vector3(data.position[0], data.position[1], data.position[2]);
-            players[i].GetComponent<Rigidbody>().SetBodyPosition(pos);
-
-            Quaternion rot = new Quaternion(data.rotation[0], data.rotation[1], data.rotation[2], data.rotation[3]);
-            players[i].GetComponent<Rigidbody>().SetBodyRotation(rot); 
-        }
     }
 }
 
