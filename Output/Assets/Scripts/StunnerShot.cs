@@ -5,12 +5,9 @@ public class StunnerShot : RagnarComponent
 {
     private float force = 2500;
     private bool pendingToDelete = false;
-    private GameObject sceneAudio;
 
     public void Start()
     {
-        sceneAudio = GameObject.Find("AudioLevel1");
-        sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_STUNNERGUNSHOT");
         AimMethod();
     }
 
@@ -24,6 +21,7 @@ public class StunnerShot : RagnarComponent
         gameObject.transform.localPosition = pos;
 
         Vector3 direction = HitEnemy(agent, player);
+        direction.y = 0;
 
         Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
         goRB.SetBodyPosition(pos);
@@ -40,7 +38,6 @@ public class StunnerShot : RagnarComponent
 
     public void OnCollisionEnter(Rigidbody other)
     {
-        sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_STUNNERHIT");
         pendingToDelete = true;
     }
 
@@ -50,7 +47,7 @@ public class StunnerShot : RagnarComponent
 
         if (obj != null)
         {
-            //Debug.Log(obj.name.ToString());
+            Debug.Log(obj.name.ToString());
             return obj.GetComponent<Transform>().globalPosition - player.transform.globalPosition;
         }
 

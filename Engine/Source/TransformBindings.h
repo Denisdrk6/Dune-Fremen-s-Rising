@@ -46,7 +46,6 @@ MonoObject* GetGameObjectMonoObject(MonoObject* comp)
 MonoObject* TryGetComponentMono(MonoObject* go, MonoString* type, int inputType)
 {
 	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
-	//DEBUG_LOG("GO Name: %s", gameObject->name.c_str());
 
 	ComponentType t = ComponentType(inputType);
 	Component* comp = gameObject->GetComponent(t);

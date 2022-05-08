@@ -51,7 +51,7 @@ public class Trap : RagnarComponent
 
         if (distance < 1.0f)
         {
-            GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[2].abilities[2].charges = 1;
+            GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[2].abilities[3].charges = 1;
             pendingToDelete = true;
             canReload = false;
         }

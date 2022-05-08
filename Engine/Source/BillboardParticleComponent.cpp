@@ -148,7 +148,7 @@ Quat BillboardParticleComponent::CameraAlign()
 	if (app->sceneManager->GetGameState() == GameState::NOT_PLAYING)
 		camFrust = &app->camera->cameraFrustum;
 
-	float3 billboardForward = ((camFrust->pos - transform->GetGlobalTransform().TranslatePart()) * transform->GetGlobalTransform().RotatePart()).Normalized();
+	float3 billboardForward = (camFrust->pos - transform->GetGlobalTransform().TranslatePart()).Normalized();
 
 	float3 up = camFrust->up;
 	float3 right = up.Cross(billboardForward);

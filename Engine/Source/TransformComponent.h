@@ -51,7 +51,7 @@ public:
 	inline float3 GetRotEditor() const { return rotationEditor; }
 
 	inline void SetPosition(const float3& newPosition) { position = newPosition; }
-	void SetGlobalPosition(const float3& pos);
+	void SetGlobalPosition(const float3 pos);
 	inline void SetRotation(const Quat& newRotation) { rotation = newRotation; }
 	inline void SetScale(const float3& newScale) { scale = newScale; }
 

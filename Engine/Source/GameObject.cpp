@@ -36,7 +36,6 @@ GameObject::GameObject() : active(true), parent(nullptr), name("Game Object"), n
 	globalAabb.SetNegativeInfinity();
 	LCG lcg;
 	uuid = lcg.Int();
-	isInteractuable = false;
 }
 
 GameObject::~GameObject()
@@ -138,10 +137,10 @@ void GameObject::Draw(CameraComponent* gameCam)
 	}
 }
 
-void GameObject::DrawOutline(CameraComponent* gameCam, const float3& color)
+void GameObject::DrawOutline()
 {
-	if (MeshComponent* border = GetComponent<MeshComponent>())
-		border->DrawOutline(gameCam, color);
+	if(MeshComponent* border = GetComponent<MeshComponent>())
+		border->DrawOutline();
 }
 
 void GameObject::DrawEditor()
@@ -538,7 +537,6 @@ void GameObject::OnLoad(JsonParsing& node)
 	prefabPath = node.GetJsonString("Prefab Path");
 	tag = node.GetJsonString("tag");
 	layer = node.GetJsonString("layer");
-	isInteractuable = node.GetJsonBool("Is Interactuable");
 
 	JSON_Array* jsonArray = node.GetJsonArray(node.ValueToObject(node.GetRootValue()), "Components");
 
@@ -564,7 +562,6 @@ void GameObject::OnSave(JsonParsing& node, JSON_Array* array)
 	file.SetNewJsonString(file.ValueToObject(file.GetRootValue()), "Prefab Path", prefabPath.c_str());
 	file.SetNewJsonString(file.ValueToObject(file.GetRootValue()), "tag", tag.c_str());
 	file.SetNewJsonString(file.ValueToObject(file.GetRootValue()), "layer", layer.c_str());
-	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Is Interactuable", isInteractuable);
 
 	JSON_Array* newArray = file.SetNewJsonArray(file.GetRootValue(), "Components");
 

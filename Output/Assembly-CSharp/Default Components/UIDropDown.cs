@@ -36,9 +36,6 @@ namespace RagnarEngine
         public extern void SetDropGeneralColor(float Red, float Green, float Blue);
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern Vector3 GetDropGeneralColor();
-
-        [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public extern String GetSelected();
         public extern string text
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]

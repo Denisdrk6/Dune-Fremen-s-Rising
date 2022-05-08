@@ -27,17 +27,5 @@ namespace RagnarEngine
         public extern void SetImageAlpha(float NewAlpha);
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern float GetImageAlpha();
-
-
-        [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public extern void StartAnimation(int animation);
-        [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public extern void StopAnimation(int animation);
-
-        [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public extern void ChangeAnimationVelocity(int animation, float velocity);
-
-        [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public extern void SetStaticImage(int animation, int image);
     }
 }

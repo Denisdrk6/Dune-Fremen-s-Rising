@@ -9,7 +9,6 @@
 
 #include "TransformComponent.h"
 #include "MaterialComponent.h"
-#include "AnimationComponent.h"
 
 #include "FileSystem.h"
 #include "ResourceManager.h"
@@ -52,55 +51,26 @@ void MeshComponent::Draw(CameraComponent* gameCam)
 	if (material != nullptr && material->GetActive()) material->Unbind();
 }
 
-void MeshComponent::DrawOutline(CameraComponent* gameCam, const float3& color)
+void MeshComponent::DrawOutline()
 {
-	if (!mesh)
-		return;
-	
-	glEnableClientState(GL_VERTEX_ARRAY);
-	float scaleFactor = 0;
-	float cmMultiplier = 0;
-#ifdef DIST
-	scaleFactor = 1.0f;
-	cmMultiplier = 0.0001f;
-#else
-	scaleFactor = 1.05f;
-	cmMultiplier = 0.05;
-#endif
-
-	float4x4 model = float4x4::FromTRS(transform->GetGlobalTransform().Col3(3) - owner->GetOffsetCM() * cmMultiplier, transform->GetRotation(), transform->GetScale() * scaleFactor);
-	float4x4 view = float4x4::identity;
-	float4x4 projection = float4x4::identity;
-	if (gameCam)
+	if (mesh)
 	{
-		view = gameCam->matrixViewFrustum;
-		projection = gameCam->matrixProjectionFrustum;
+		glEnableClientState(GL_VERTEX_ARRAY);
+
+		float4x4 model = float4x4::FromTRS(transform->GetGlobalTransform().Col3(3) - owner->GetOffsetCM() * 0.05f, transform->GetRotation(), transform->GetScale() * 1.05f);
+		
+		std::shared_ptr<Shader> s = material->GetOutlineShader();
+		s->Bind();
+		s->SetUniformMatrix4f("model", model.Transposed());
+		s->SetUniformMatrix4f("view", app->camera->matrixViewFrustum.Transposed());
+		s->SetUniformMatrix4f("projection", app->camera->matrixProjectionFrustum.Transposed());
+
+		mesh->Draw(verticesNormals, faceNormals, colorNormal, normalLength);
+
+		s->Unbind();
+
+		glDisableClientState(GL_VERTEX_ARRAY);
 	}
-	else
-	{
-		view = app->camera->matrixViewFrustum;
-		projection = app->camera->matrixProjectionFrustum;
-	}
-
-	std::shared_ptr<Shader> s = material->GetOutlineShader();
-	s->Bind();
-	s->SetUniformMatrix4f("model", model.Transposed());
-	s->SetUniformMatrix4f("view", view.Transposed());
-	s->SetUniformMatrix4f("projection", projection.Transposed());
-	s->SetUniformVec3f("color", color);
-	
-	if (AnimationComponent* anim = owner->GetComponent<AnimationComponent>())
-	{
-		auto transforms = anim->GetFinalBoneMatrices();
-		for (int i = 0; i < transforms.size(); ++i)
-			s->SetUniformMatrix4f("finalBonesMatrices[" + std::to_string(i) + "]", transforms[i].Transposed());
-	}
-
-	mesh->Draw(verticesNormals, faceNormals, colorNormal, normalLength);
-
-	s->Unbind();
-
-	glDisableClientState(GL_VERTEX_ARRAY);
 }
 
 void MeshComponent::OnEditor()
@@ -178,7 +148,10 @@ void MeshComponent::MenuChangeMesh()
 	for (std::vector<std::shared_ptr<Resource>>::iterator it = res.begin(); it != res.end(); ++it)
 	{
 		if (ImGui::Selectable((*it).get()->GetName().c_str()))
+		{
+			if (mesh.use_count() - 1 == 1) mesh->UnLoad();
 			SetMesh((*it));
+		}
 	}
 
 	ImGui::End();
@@ -216,7 +189,6 @@ bool MeshComponent::OnSave(JsonParsing& node, JSON_Array* array)
 
 void MeshComponent::SetMesh(std::shared_ptr<Resource> m)
 {
-	if (mesh.use_count() - 1 == 1) mesh->UnLoad();
 	mesh = std::static_pointer_cast<Mesh>(m);
 
 	if (mesh)

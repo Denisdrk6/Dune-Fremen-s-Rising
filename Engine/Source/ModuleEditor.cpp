@@ -35,8 +35,7 @@ bool ModuleEditor::Start()
 	mainMenuBar.Start();
 
 	ImGuiIO& io = ImGui::GetIO();
-	//io.Fonts->AddFontDefault();
-	io.FontDefault = io.Fonts->AddFontFromFileTTF("Settings/EngineResources/SourceSansPro-Regular.ttf", 16.5f);
+	io.Fonts->AddFontDefault();
 
 	// merge in icons from Font Awesome
 	static const ImWchar icons_ranges[] = { ICON_MIN_FA, ICON_MAX_FA, 0 };

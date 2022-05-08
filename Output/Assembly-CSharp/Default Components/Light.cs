@@ -28,15 +28,6 @@ namespace RagnarEngine
             set;
         }
 
-        public extern Vector3 diffuse
-        {
-            [MethodImplAttribute(MethodImplOptions.InternalCall)]
-            get;
-
-            [MethodImplAttribute(MethodImplOptions.InternalCall)]
-            set;
-        }
-
         // ONLY FOR DIRECTIONAL LIGHT !! 
         public static extern bool shadowsEnabled
         {

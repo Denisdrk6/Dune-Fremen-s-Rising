@@ -438,15 +438,6 @@ void ScriptComponent::CallOnTrigger(RigidBodyComponent* other)
 		mono_runtime_invoke(onTriggerMethod, mono_gchandle_get_target(noGCobject), params, nullptr);
 	}
 }
-void ScriptComponent::CallOnTriggerExit(RigidBodyComponent* other)
-{
-	if (onTriggerExitMethod)
-	{
-		void* params[1];
-		params[0] = app->moduleMono->ComponentToCS(other);
-		mono_runtime_invoke(onTriggerExitMethod, mono_gchandle_get_target(noGCobject), params, nullptr);
-	}
-}
 
 void ScriptComponent::CallOnCollisionEnter(RigidBodyComponent* other)
 {
@@ -506,10 +497,6 @@ void ScriptComponent::LoadScriptData(const char* scriptName)
 	MonoMethodDesc* triggerDesc = mono_method_desc_new(":OnTrigger", false);
 	onTriggerMethod = mono_method_desc_search_in_class(triggerDesc, klass);
 	mono_method_desc_free(triggerDesc);
-
-	MonoMethodDesc* triggerExitDesc = mono_method_desc_new(":OnTriggerExit", false);
-	onTriggerExitMethod = mono_method_desc_search_in_class(triggerExitDesc, klass);
-	mono_method_desc_free(triggerExitDesc);
 
 	MonoMethodDesc* collisionEnterDesc = mono_method_desc_new(":OnCollisionEnter", false);
 	onCollisionEnterMethod = mono_method_desc_search_in_class(collisionEnterDesc, klass);

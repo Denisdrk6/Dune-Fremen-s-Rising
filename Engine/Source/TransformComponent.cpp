@@ -238,13 +238,10 @@ void TransformComponent::UpdateBoundingBox()
 		owner->SetAABB(newObb);
 		//owner->GetComponent<MeshComponent>()->CalculateCM();
 	}
-	else
-	{
-		ParticleSystemComponent* partComp = owner->GetComponent<ParticleSystemComponent>();
-		if (partComp)
-			partComp->UpdateAABB();
-	}
 
+	ParticleSystemComponent* partComp = owner->GetComponent<ParticleSystemComponent>();
+	if (partComp)
+		partComp->UpdateAABB();
 }
 
 bool TransformComponent::DrawVec3(std::string& name, float3& vec)
@@ -373,19 +370,10 @@ void TransformComponent::AlignViewWithSelected()
 	app->camera->CalculateViewMatrix();
 }
 
-void TransformComponent::SetGlobalPosition(const float3& pos)
+void TransformComponent::SetGlobalPosition(const float3 pos)
 {
 	// Posición relativa al padre
 	globalMatrix.SetTranslatePart(float4(pos.x, pos.y, pos.z, 1));
-	if (owner->GetParent() != app->sceneManager->GetCurrentScene()->GetRoot())
-	{
-
-		localMatrix = owner->GetParent()->GetComponent<TransformComponent>()->globalMatrix.Inverted().Mul(globalMatrix);
-		localMatrix.Decompose(position, rotation, scale);
-	}
-	else
-	{
-		localMatrix = globalMatrix;
-		localMatrix.Decompose(position, rotation, scale);
-	}
+	localMatrix = owner->GetParent()->GetComponent<TransformComponent>()->globalMatrix.Inverted().Mul(globalMatrix);
+	localMatrix.Decompose(position, rotation, scale);
 }

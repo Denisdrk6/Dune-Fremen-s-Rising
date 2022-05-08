@@ -55,8 +55,6 @@ public:
 
 	inline void SetOnCollision(bool ret) { onCollision = ret; };
 	inline bool GetOnCollision() { return onCollision; };
-	inline void SetOnTrigger(bool ret) { onTrigger = ret; };
-	inline bool GetOnTrigger() { return onTrigger; };
 
 	inline void SetCollisionTarget(RigidBodyComponent* obj) { collisionTarget = obj; };
 	inline RigidBodyComponent* GetCollisionTarget() { return collisionTarget; };
@@ -101,7 +99,6 @@ private:
 
 	bool editMesh = false;
 	bool onCollision = false;
-	bool onTrigger = false;
 
 	RigidBodyComponent* collisionTarget = nullptr;
 };

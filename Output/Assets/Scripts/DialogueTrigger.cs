@@ -86,10 +86,7 @@ public class DialogueTrigger : RagnarComponent
     void LoadSceneWin()
     {
         if (manager.GetComponent<DialogueManager>().GetEndDialogue())
-        {
-            GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveTest("WIIIIIN", gameObject.transform.globalPosition);
             SceneManager.LoadScene("WinScene");
-        }
     }
     public void ActiveDialogue()
     {
