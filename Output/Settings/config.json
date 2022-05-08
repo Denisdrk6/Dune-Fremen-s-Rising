@@ -47,7 +47,8 @@
       { "11": "Rocks" },
       { "12": "Collider" },
       { "13": "Hidde" },
-      { "14": "CheckPoint" }
+      { "14": "CheckPoint" },
+      { "15": "CamWaypoints" }
     ],
     "layers": [
       { "0": "Default" },
