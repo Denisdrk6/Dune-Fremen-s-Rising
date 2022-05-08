@@ -13,9 +13,8 @@ public class Credits : RagnarComponent
 	GameObject RagnarLogo;
 	GameObject UPCLogo;
 	GameObject AudioManager;
-	float textCounter = 0;
 	float newDelta=0;
-	float velocity = 30;
+	float velocity = 60;
 	bool isFirstM = true;
 	public void Start()
 	{
@@ -29,9 +28,13 @@ public class Credits : RagnarComponent
 		TextTitles = GameObject.Find("Tiles List");
 		RagnarLogo = GameObject.Find("Ragnar Logo");
 		UPCLogo = GameObject.Find("UPC Logo");
+
 		AudioManager = GameObject.Find("AudioWinMenu");
-		
-		Pos = new Vector3(0, 0, 0);
+        AudioManager.GetComponent<AudioSource>().PlayClip("MUSICPLAY");
+        //Credits music placeholder
+        AudioManager.GetComponent<AudioSource>().SetState("MUSIC", "MAINMENU");
+
+        Pos = new Vector3(0, 0, 0);
 
 		Pos.Set(-150, -(InternalCalls.GetRegionGame().y / 2)+210, 36.1f);
 		TextJob.GetComponent<Transform2D>().position2D = Pos;
@@ -57,30 +60,30 @@ public class Credits : RagnarComponent
 	}
 	void textAction()
     {
-		if (textCounter >= 5)
-        {			
-			float vel = newDelta * velocity;
-			Pos.Set(-150, TextJob.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
-			TextJob.GetComponent<Transform2D>().position2D = Pos;
+        if (Input.GetKey(KeyCode.SPACE) == KeyState.KEY_REPEAT)
+        {
+			velocity = 100;
 
-			Pos.Set(30, TextName.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
-			TextName.GetComponent<Transform2D>().position2D = Pos;
-
-			Pos.Set(-100, TextTitles.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
-			TextTitles.GetComponent<Transform2D>().position2D = Pos;
-
-			Pos.Set(0, UPCLogo.GetComponent<Transform2D>().position2D.y + (vel*2), 36.1f);
-			UPCLogo.GetComponent<Transform2D>().position2D = Pos;
-
-			Pos.Set(0, RagnarLogo.GetComponent<Transform2D>().position2D.y + (vel * 2), 36.1f);
-			RagnarLogo.GetComponent<Transform2D>().position2D = Pos;
-
-		}
+        }
         else
         {
-			textCounter += newDelta;
-		}
-		
+			velocity = 60;
+		}			
+		float vel = newDelta * velocity;
+		Pos.Set(-150, TextJob.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
+		TextJob.GetComponent<Transform2D>().position2D = Pos;
+
+		Pos.Set(130, TextName.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
+		TextName.GetComponent<Transform2D>().position2D = Pos;
+
+		Pos.Set(-100, TextTitles.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
+		TextTitles.GetComponent<Transform2D>().position2D = Pos;
+
+		Pos.Set(0, UPCLogo.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
+		UPCLogo.GetComponent<Transform2D>().position2D = Pos;
+
+		Pos.Set(0, RagnarLogo.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
+		RagnarLogo.GetComponent<Transform2D>().position2D = Pos;		
 	}
 	void BackgroundImageAction()
 	{
@@ -126,12 +129,12 @@ public class Credits : RagnarComponent
 					MenuImage.GetComponent<Transform2D>().position2D = Pos;
 					isFirstM = false;
 					//poner sonido
-					AudioManager.GetComponent<AudioSource>().PlayClip("UIHOVER");
+					AudioManager.GetComponent<AudioSource>().PlayClip("UI_HOVER");
 				}
 				break;
 			case 3:
 				// pressed mode
-				AudioManager.GetComponent<AudioSource>().PlayClip("UISELECT");
+				AudioManager.GetComponent<AudioSource>().PlayClip("UI_SELECT");
 				Menu.GetComponent<UIButton>().SetButtonAlpha(0.75f);
 				SceneManager.LoadScene("MainMenu");
 				//cambiar de escena

@@ -10,10 +10,13 @@ public class BackStab_2 : RagnarComponent
 	public bool backstabed;
 	NavAgent agent;
 	public GameObject boss;
+    private GameObject sceneAudio;
 	public void Start()
 	{
 		Debug.Log("Start Knife");
-		player = GameObject.Find("Player");
+        sceneAudio = GameObject.Find("AudioLevel1");
+        sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFETHROW");
+        player = GameObject.Find("Player");
 		pos = player.transform.globalPosition;
 		pos.y += 1;
 		gameObject.transform.localPosition = pos;
@@ -34,16 +37,28 @@ public class BackStab_2 : RagnarComponent
 			player.GetComponent<Rigidbody>().SetBodyPosition(behind);
 			if(selectedEnemy.GetComponent<BasicEnemy>().ToString() == "BasicEnemy")
             {
-				selectedEnemy.GetComponent<BasicEnemy>().pendingToDelete = true;
+                sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFEHIT");
+                selectedEnemy.GetComponent<BasicEnemy>().pendingToDelete = true;
             }
 			if(selectedEnemy.GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy")
             {
-				selectedEnemy.GetComponent<UndistractableEnemy>().pendingToDelete = true;
+                sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFEHITSHIELD");
+                selectedEnemy.GetComponent<UndistractableEnemy>().pendingToDelete = true;
             }
 			if(selectedEnemy.GetComponent<TankEnemy>().ToString() == "TankEnemy")
             {
-				selectedEnemy.GetComponent<TankEnemy>().pendingToDelete = true;
+                sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFEHIT");
+                selectedEnemy.GetComponent<TankEnemy>().pendingToDelete = true;
             }
+			GameObject[] childs = selectedEnemy.childs;
+			for (int i = 0; i < childs.Length; ++i)
+			{
+				if (childs[i].name == "StabParticles")
+				{
+					childs[i].GetComponent<ParticleSystem>().Play();
+					break;
+				}
+			}
 			selectedEnemy.GetComponent<Animation>().PlayAnimation("Dying");
 		}
 		if (boss != null)
@@ -58,18 +73,9 @@ public class BackStab_2 : RagnarComponent
 	}
 	public GameObject CalculateDistancePlayerEnemies()
 	{
-		//for (int i = 0; i < enemies.Length; i++)
-		//{
-		//	Vector3 enemyPos = enemies[i].transform.globalPosition;
-		//	Vector3 distance = player.transform.globalPosition - enemyPos;
-		//	distance.y = 0;
-		//	if (distance.magnitude <= 3)
-		//	{
-		//		return enemies[i];
-		//	}
-		//}
-		//return null;
-		return RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+		GameObject enemy = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+		if (enemy != null && Transform.GetDistanceBetween(player.transform.globalPosition, enemy.transform.globalPosition) < 3) return enemy;
+		return null;
 	}
 
 }

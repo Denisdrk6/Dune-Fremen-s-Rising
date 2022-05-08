@@ -47,6 +47,8 @@ public:
 
 	void NextScene();
 	void NextScene(const char* name);
+	void SaveScene(const char* name);
+	void LoadScene(const char* name);
 
 	// Pop Up
 	void WarningWindow();
@@ -72,6 +74,8 @@ public:
 
 	std::vector<std::shared_ptr<Scene>>& GetScenes() { return scenes; }
 	void ShortCuts();
+
+	void SaveTesting(int deadCount, std::string playerName, float3 playerPos, float time);
 
 	std::multimap<uint, SerializedField*> referenceMap;
 	bool newSceneLoaded;

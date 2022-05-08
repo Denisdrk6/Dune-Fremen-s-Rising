@@ -10,10 +10,13 @@ public class BackStab : RagnarComponent
 	public bool backstabed;
 	NavAgent agent;
 	public GameObject boss;
+    private GameObject sceneAudio;
 	public void Start()
 	{
-		Debug.Log("Start Knife");
-		player = GameObject.Find("Player_2");
+        Debug.Log("Start Knife");
+        sceneAudio = GameObject.Find("AudioLevel1");
+        sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFETHROW");
+        player = GameObject.Find("Player_2");
 		pos = player.transform.globalPosition;
 		pos.y += 1;
 		gameObject.transform.localPosition = pos;
@@ -32,17 +35,29 @@ public class BackStab : RagnarComponent
 			Vector3 behind = selectedEnemy.transform.globalPosition - (selectedEnemy.transform.forward * 1);
 			behind.y = -0.8f;
 			player.GetComponent<Rigidbody>().SetBodyPosition(behind);
-			if (selectedEnemy.GetComponent<BasicEnemy>().ToString() == "BasicEnemy")
+            if (selectedEnemy.GetComponent<BasicEnemy>().ToString() == "BasicEnemy")
 			{
-				selectedEnemy.GetComponent<BasicEnemy>().pendingToDelete = true;
+                sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFEHIT");
+                selectedEnemy.GetComponent<BasicEnemy>().pendingToDelete = true;
 			}
 			if (selectedEnemy.GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy")
 			{
-				selectedEnemy.GetComponent<UndistractableEnemy>().pendingToDelete = true;
+                sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFEHITSHIELD");
+                selectedEnemy.GetComponent<UndistractableEnemy>().pendingToDelete = true;
 			}
 			if (selectedEnemy.GetComponent<TankEnemy>().ToString() == "TankEnemy")
 			{
-				selectedEnemy.GetComponent<TankEnemy>().pendingToDelete = true;
+                sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFEHIT");
+                selectedEnemy.GetComponent<TankEnemy>().pendingToDelete = true;
+			}
+			GameObject[] childs = selectedEnemy.childs;
+			for (int i = 0; i < childs.Length; ++i)
+			{
+				if (childs[i].name == "StabParticles")
+				{
+					childs[i].GetComponent<ParticleSystem>().Play();
+					break;
+				}
 			}
 			selectedEnemy.GetComponent<Animation>().PlayAnimation("Dying");
 		}
@@ -73,7 +88,9 @@ public class BackStab : RagnarComponent
 	public GameObject CalculateDistancePlayerEnemies()
     {
 		
-		return RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+		GameObject enemy = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+		if (enemy != null && Transform.GetDistanceBetween(player.transform.globalPosition, enemy.transform.globalPosition) < 3) return enemy;
+		return null;
 	}
 
 }

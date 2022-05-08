@@ -17,7 +17,7 @@ public class Voice : RagnarComponent
 	}
 	public void Update()
 	{
-		Debug.Log(enemies.Length.ToString());
+		//Debug.Log(enemies.Length.ToString());
 		selectedEnemy = EnemyFound();
 		if (selectedEnemy != null)
 		{
@@ -28,21 +28,10 @@ public class Voice : RagnarComponent
 	}
 	public GameObject EnemyFound()
 	{
-		//for (int i = 0; i < enemies.Length; i++)
-		//{
-		//	Vector3 enemyPos = enemies[i].transform.globalPosition;
-		//	Vector3 distance = player.transform.globalPosition - enemyPos;
-		//	distance.y = 0;
-		//	if (distance.magnitude <= 5)
-		//	{
-		//		return enemies[i];
-		//	}
-		//}
-		//return null;
-		//index = RayCast.PerceptionCone(player.transform.globalPosition, player.transform.forward, 60, 10, 5, enemies, enemies.Length);
-		//Debug.Log(index.ToString());
-		return RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
-		
+		GameObject enemy = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+		if (enemy != null && Transform.GetDistanceBetween(player.transform.globalPosition, enemy.transform.globalPosition) < 15) return enemy;
+		return null;
+
 	}
 	public void AddNewEnemyToPlayer()
     {

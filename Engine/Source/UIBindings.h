@@ -8,6 +8,7 @@
 #include "Transform2DComponent.h"
 #include "TextComponent.h"
 #include "ImageComponent.h"
+#include "DropDownComponent.h"
 
 #include <metadata\object-forward.h>
 #include <metadata\object.h>
@@ -166,12 +167,11 @@ void SetText(MonoObject* go, MonoString* text)
 	TextComponent* tr = GetComponentMono<TextComponent*>(go);
 	char* aux = mono_string_to_utf8(text);
 	tr->SetText(aux);
-
 }
-const char* GetText(MonoObject* go)
+MonoString* GetText(MonoObject* go)
 {
 	TextComponent* tr = GetComponentMono<TextComponent*>(go);
-	return tr->GetText();
+	return mono_string_new(app->moduleMono->domain, tr->GetText().c_str());
 }
 void SetTextTextColor(MonoObject* go, float Red,float Green,float Blue)
 {
@@ -241,4 +241,33 @@ void SetImageAlpha(MonoObject* go, float newAlpha)
 {
 	ImageComponent* tr = GetComponentMono<ImageComponent*>(go);
 	tr->SetAlpha(newAlpha);
+}
+
+const char* GetSelected(MonoObject* go)
+{
+	DropDownComponent* tr = GetComponentMono<DropDownComponent*>(go);
+	return tr->GetSelect().c_str();
+}
+// Animation ========================================
+
+void StartAnimation(MonoObject* go, int animation) 
+{
+	ImageComponent* tr = GetComponentMono<ImageComponent*>(go);
+	tr->animations[animation]->StartAnim();
+}
+
+void StopAnimation(MonoObject* go, int animation) 
+{
+	ImageComponent* tr = GetComponentMono<ImageComponent*>(go);
+	tr->animations[animation]->StopAnim();
+}
+
+void ChangeAnimationVelocity(MonoObject* go, int animation,float velocity)
+{
+	ImageComponent* tr = GetComponentMono<ImageComponent*>(go);
+	tr->animations[animation]->ChageVelocity(velocity);
+}
+void SetStaticImage(MonoObject* go, int animation, int image) {
+	ImageComponent* tr = GetComponentMono<ImageComponent*>(go);
+	tr->animations[animation]->SetStaticimage(image);
 }

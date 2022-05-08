@@ -161,7 +161,7 @@ void ParticleEmitter::DrawParticle(const float3& pos, float rotation, const floa
 		loopTimer = loopTimerOnEditor;
 		iterTileX++;
 	}
-	
+
 	if (iterTileX >= tilesX)
 	{
 		iterTileX = 0;
@@ -177,20 +177,19 @@ void ParticleEmitter::DrawParticle(const float3& pos, float rotation, const floa
 	texCoords[2] = { (1.0f / tilesX) + (iterTileX / tilesX), (1.0f / tilesY) + (iterTileY / tilesY) };
 	texCoords[3] = { iterTileX / tilesX, (1.0f / tilesY) + (iterTileY / tilesY) };
 
-		Quat q = newRotation * Quat::RotateAxisAngle({ 0.0f,0.0f,1.0f }, rotation);
-		float4x4 transform = float4x4::FromTRS(pos, q, size);
+	Quat q = newRotation /** Quat::RotateAxisAngle({ 0.0f,0.0f,1.0f }, rotation)*/;
+	float4x4 transform = float4x4::FromTRS(pos, q, size);
 
-		const int quadVertexCount = 4;
-		for (int i = 0; i < quadVertexCount; i++)
-		{
-			float4 p = transform * data.vertexPositions[i];
-			data.vertexBufferPtr->position = p.Float3Part();
-			
+	const int quadVertexCount = 4;
+	for (int i = 0; i < quadVertexCount; i++)
+	{
+		float4 p = transform * data.vertexPositions[i];
+		data.vertexBufferPtr->position = p.Float3Part();
 
-			data.vertexBufferPtr->texCoords = texCoords[i];
-			data.vertexBufferPtr->color = color;
-			data.vertexBufferPtr++;
-		}
+		data.vertexBufferPtr->texCoords = texCoords[i];
+		data.vertexBufferPtr->color = color;
+		data.vertexBufferPtr++;
+	}
 
 	data.indexCount += 6;
 }

@@ -6,6 +6,9 @@
 #include "SDL_scancode.h"
 #include "SDL_mouse.h"
 
+#include <Windows.h>
+#include <iostream>
+#include <conio.h>
 #include <vector>
 #include <array>
 #include <string>
@@ -89,6 +92,8 @@ public:
 	bool GetButtonDown(int joystickId, Button button);
 	bool GetButtonUp(int joystickId, Button button);
 	bool GetAxis(int joystickId, JAxis axis);
+
+	HCURSOR LoadCursorIcon(const char* iconPath, int width, int height);
 
 	inline std::vector<std::string> GetInputList() const { return strings; }
 

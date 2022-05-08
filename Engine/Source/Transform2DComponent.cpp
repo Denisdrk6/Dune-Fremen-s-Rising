@@ -42,7 +42,6 @@ ComponentTransform2D::ComponentTransform2D(/*float3 pos, float3 sca, float3 rot,
 
 ComponentTransform2D::~ComponentTransform2D()
 {
-	app->userInterface->DeleteUIGameObjects(owner);
 }
 void ComponentTransform2D::UpdateChilds(float3 newPosition, float2 newScale) {
 	std::vector<GameObject*> auxiliar;

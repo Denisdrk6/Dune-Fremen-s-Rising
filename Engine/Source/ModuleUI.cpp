@@ -751,8 +751,7 @@ void ModuleUI::DeleteUIGameObjects(GameObject* ui)
 		return;
 
 	auto obj = FindUI(ui);
-	if(!ui->GetComponent<SliderComponent>())
-		UIGameObjects.erase(obj);
+	UIGameObjects.erase(obj);
 	UIGameObjectSelected = nullptr;
 }
 

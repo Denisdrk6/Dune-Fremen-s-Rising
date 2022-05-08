@@ -27,12 +27,7 @@ public:
 
 	float2 GetParentPosition();
 
-	char* GetText() 
-	{ 
-		char* rText{};
-		strcpy(rText, textToShow.textt.c_str());
-		return rText;
-	}
+	std::string GetText() { return textToShow.textt; };
 	void SetText(char* newText)
 	{		
 		textToShow.setOnlyText(newText);

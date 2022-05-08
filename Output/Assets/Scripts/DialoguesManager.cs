@@ -5,6 +5,7 @@ public class DialogueManager : RagnarComponent
 {
 	//UIText toxt;
 	GameObject box;
+	private GameObject SceneAudio;
 	GameObject text;
 	GameObject image;
     GameObject name;
@@ -23,7 +24,8 @@ public class DialogueManager : RagnarComponent
 	public void Start()
 	{
 		Dialogue.LoadDialogueFile("");
-		box = GameObject.Find("DialogueBox");
+        SceneAudio = GameObject.Find("AudioLevel1");
+        box = GameObject.Find("DialogueBox");
 		text = GameObject.Find("DialogueText");
 		image = GameObject.Find("DialogueAuthImg");
         name = GameObject.Find("DialogueAuthName");
@@ -42,16 +44,24 @@ public class DialogueManager : RagnarComponent
     {
         if (firstTime)
         {
-
-            pos.Set(192.0f, text.GetComponent<Transform2D>().position2D.y + 25, text.GetComponent<Transform2D>().position2D.z + 20);
-            text.GetComponent<Transform2D>().position2D = pos;
-            pos.Set(0.0f, image.GetComponent<Transform2D>().position2D.y-2, image.GetComponent<Transform2D>().position2D.z + 20);
-            image.GetComponent<Transform2D>().position2D = pos;
-            pos.Set(185.0f, name.GetComponent<Transform2D>().position2D.y + 25, image.GetComponent<Transform2D>().position2D.z + 20);
-            name.GetComponent<Transform2D>().position2D = pos;
-            pos.Set(box.GetComponent<Transform2D>().position2D.x, box.GetComponent<Transform2D>().position2D.y, box.GetComponent<Transform2D>().position2D.z - 10);
+            float posY = InternalCalls.GetRegionGame().y , posX = InternalCalls.GetRegionGame().x;
+            posY *= 0.33f;
+            posX = 0;
+            //box
+            pos.Set(posX, posY, box.GetComponent<Transform2D>().position2D.z - 10);
             box.GetComponent<Transform2D>().position2D = pos;
 
+            posX = box.GetComponent<Transform2D>().position2D.x;
+            //face
+            pos.Set(posX, posY - 2, image.GetComponent<Transform2D>().position2D.z + 20);
+            image.GetComponent<Transform2D>().position2D = pos;
+
+            //author
+            pos.Set(posX - 195.0f, box.GetComponent<Transform2D>().position2D.y + 60, name.GetComponent<Transform2D>().position2D.z + 20);
+            name.GetComponent<Transform2D>().position2D = pos;
+            //text
+            pos.Set(posX - 192.0f, box.GetComponent<Transform2D>().position2D.y + 10, text.GetComponent<Transform2D>().position2D.z + 20);
+            text.GetComponent<Transform2D>().position2D = pos;
 
             firstTime = false;
         }
@@ -59,11 +69,13 @@ public class DialogueManager : RagnarComponent
         // Next Line
         if (Input.GetKey(KeyCode.SPACE) == KeyState.KEY_UP && gameObject.isActive)
         {
+            SceneAudio.GetComponent<AudioSource>().PlayClip("UI_DIALOGUEPASS");
             NextLine();
         }
         //End Dialogue
         if (Input.GetKey(KeyCode.P) == KeyState.KEY_UP)
         {
+            SceneAudio.GetComponent<AudioSource>().PlayClip("UI_DIALOGUEPASS");
             EndDialogue();
         }
         /*
@@ -132,7 +144,7 @@ public class DialogueManager : RagnarComponent
 		if (endDialogue == false)
 		{
             UpdateDialogue();
-            Debug.Log(authId.ToString());
+            //Debug.Log(authId.ToString());
         }
         else
 		{
@@ -163,7 +175,7 @@ public class DialogueManager : RagnarComponent
         inDialogue = true;
         Dialogue.StartDialogueById(id);
         UpdateDialogue();
-        Debug.Log(authId.ToString());
+        //Debug.Log(authId.ToString());
     }
 
     public void DisableDialogue()

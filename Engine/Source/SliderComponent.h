@@ -45,7 +45,7 @@ private:
 	float alpha = 1.0f;
 	State state;
 	Color actualColor = white;
-
+	bool isHolding = false;
 	bool firstDraw = false;
 	bool drawRect;
 	ComponentTransform2D* smallCuad;

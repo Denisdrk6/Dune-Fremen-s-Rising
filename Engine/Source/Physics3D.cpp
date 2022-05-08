@@ -79,63 +79,88 @@ bool Physics3D::PreUpdate(float dt)
 				btCollisionObject* obA = (btCollisionObject*)(contactManifold->getBody0());
 				btCollisionObject* obB = (btCollisionObject*)(contactManifold->getBody1());
 
+				// Find what objects have collided  
+				for (int j = 0; j < bodies.size(); j++)
+				{
+					if (obA == bodies.at(j)->GetBody())
+						obAobject = bodies.at(j);
+					if (obB == bodies.at(j)->GetBody())
+						obBobject = bodies.at(j);
+				}
+
 				// numContacts is important because otherwise we can get false collisions  
 				int numContacts = contactManifold->getNumContacts();
 				if (numContacts > 0) 
 				{
-					// Find what objects have collided  
-					for (int j = 0; j < bodies.size(); j++)
-					{
-						if (obA == bodies.at(j)->GetBody())
-							obAobject = bodies.at(j);
-						if (obB == bodies.at(j)->GetBody())
-							obBobject = bodies.at(j);
-					}
 					// Call Methods for obA
 					if (!obAobject->trigger && obAobject->owner->GetComponent<ScriptComponent>())
 					{
 						script = obAobject->owner->GetComponent<ScriptComponent>();
 						// OnEnter
-						if (!obAobject->GetOnCollision())
+						if (!obBobject->trigger)
 						{
-							obAobject->SetOnCollision(true);
-							if (obBobject->trigger)
-								script->CallOnTriggerEnter(obBobject);
-							else
+							if (!obAobject->GetOnCollision())
+							{
+								obAobject->SetOnCollision(true);
 								script->CallOnCollisionEnter(obBobject);
-						}	
-						// OnState
-						else
-						{
-							if (obBobject->trigger)
-								script->CallOnTrigger(obBobject);
-							else
+							}
+							else 
 								script->CallOnCollision(obBobject);
 						}
+						else
+						{
+							if (!obAobject->GetOnTrigger())
+							{
+								obAobject->SetOnTrigger(true);
+								script->CallOnTriggerEnter(obBobject);
+							}
+							else
+								script->CallOnTrigger(obBobject);
+						}
 					}
+					
 					// Call Methods for obB
 					if (!obBobject->trigger && obBobject->owner->GetComponent<ScriptComponent>())
 					{
 						script = obBobject->owner->GetComponent<ScriptComponent>();
 						// OnEnter
-						if (!obBobject->GetOnCollision())
+						if (!obAobject->trigger)
 						{
-							obBobject->SetOnCollision(true);
-							if (obAobject->trigger)
-								script->CallOnTriggerEnter(obAobject);
-							else
+							if (!obBobject->GetOnCollision())
+							{
+								obBobject->SetOnCollision(true);
 								script->CallOnCollisionEnter(obAobject);
-						}
-						// OnState
-						else
-						{
-							if (obAobject->trigger)
-								script->CallOnTrigger(obAobject);
+							}
 							else
 								script->CallOnCollision(obAobject);
 						}
+						else
+						{
+							if (!obBobject->GetOnTrigger())
+							{
+								obBobject->SetOnTrigger(true);
+								script->CallOnTriggerEnter(obAobject);
+							}
+							else
+								script->CallOnTrigger(obAobject);
+						}
 					}
-				}				
+				}	
+				else // OnTriggerExit
+				{
+					if (obAobject->GetOnTrigger() && !obAobject->trigger && obBobject->trigger && obAobject->owner->GetComponent<ScriptComponent>())
+					{
+						script = obAobject->owner->GetComponent<ScriptComponent>();
+						obAobject->SetOnTrigger(false);
+						script->CallOnTriggerExit(obBobject);
+					}
+					if (obBobject->GetOnTrigger() && !obBobject->trigger && obAobject->trigger && obBobject->owner->GetComponent<ScriptComponent>())
+					{
+						script = obBobject->owner->GetComponent<ScriptComponent>();
+						obBobject->SetOnTrigger(false);
+						script->CallOnTriggerExit(obAobject);
+					}
+				}
 			}
 		}
 	}

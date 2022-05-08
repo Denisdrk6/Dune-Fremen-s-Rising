@@ -13,7 +13,7 @@ public class UndistractableEnemy : RagnarComponent
     // States
     public bool patrol;
     public bool stopState = false;
-    public bool controlled = false;
+    private bool stay = false;
 
     // Timers
     public float stoppedTime = 0f;
@@ -21,6 +21,7 @@ public class UndistractableEnemy : RagnarComponent
 
     // Player tracker
     public GameObject[] players;
+    public GameObject[] colliders;
     GameObject SceneAudio;
     private Vector3 offset;
     public int index = 0;
@@ -28,6 +29,7 @@ public class UndistractableEnemy : RagnarComponent
     // States
     public bool canShoot = true;
     public bool pendingToDelete = false;
+    public bool controlled = false;
 
     // Timers
     public float shootCooldown = 0f;
@@ -40,6 +42,7 @@ public class UndistractableEnemy : RagnarComponent
     bool stunned = false;
     float stunnedTimer = -1f;
 
+    GameObject[] childs;
     public void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
@@ -47,14 +50,21 @@ public class UndistractableEnemy : RagnarComponent
         offset = gameObject.GetSizeAABB();
 
         agents = gameObject.GetComponent<NavAgent>();
-        gameObject.GetComponent<Animation>().PlayAnimation("Idle");
-        if (waypoints.Length != 0)
+
+
+        if (state != EnemyState.DEATH)
         {
-            GotoNextPoint();
-            patrol = false;
+            gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+            if (waypoints.Length != 0)
+            {
+                GotoNextPoint();
+                patrol = false;
+            } 
         }
 
         initialSpeed = agents.speed;
+
+        childs = gameObject.childs;
     }
 
     public void Update()
@@ -88,7 +98,7 @@ public class UndistractableEnemy : RagnarComponent
                     deathTimer -= Time.deltaTime;
                     if (deathTimer < 0)
                     {
-                        gameObject.GetComponent<AudioSource>().PlayClip("ENEMY1DEATH");
+                        gameObject.GetComponent<AudioSource>().PlayClip("EMALE_DEATH3");
                         deathTimer = -1f;
                         pendingToDelete = true;
                     }
@@ -145,6 +155,14 @@ public class UndistractableEnemy : RagnarComponent
             if (other.gameObject.name == "Knife")
             {
                 deathTimer = 4f;
+                for (int i = 0; i < childs.Length; ++i)
+                {
+                    if (childs[i].name == "KnifeParticles")
+                    {
+                        childs[i].GetComponent<ParticleSystem>().Play();
+                        break;
+                    }
+                }
                 gameObject.GetComponent<Animation>().PlayAnimation("Dying");
 
                 // WHEN RUNES FUNCTIONAL
@@ -182,6 +200,14 @@ public class UndistractableEnemy : RagnarComponent
             if (other.gameObject.name == "SwordSlash")
             {
                 deathTimer = 2f;
+                for (int i = 0; i < childs.Length; ++i)
+                {
+                    if (childs[i].name == "SwordSlashParticles")
+                    {
+                        childs[i].GetComponent<ParticleSystem>().Play();
+                        break;
+                    }
+                }
                 gameObject.GetComponent<Animation>().PlayAnimation("Dying");
             }
             if (other.gameObject.name == "Whistle")
@@ -198,6 +224,7 @@ public class UndistractableEnemy : RagnarComponent
             {
                 // STUN (BLIND)
                 Stun(5f);
+                GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Play();
             }
         }
     }
@@ -208,8 +235,8 @@ public class UndistractableEnemy : RagnarComponent
         Vector3 enemyForward = gameObject.transform.forward;
         Vector3 initPos = new Vector3(enemyPos.x + (enemyForward.x * offset.x * 0.6f), enemyPos.y + 0.1f, enemyPos.z + (enemyForward.z * offset.z * 0.6f));
 
-        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 8, players, players.Length);
-        if (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead) return false;
+        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 8, players, players.Length, colliders, colliders.Length);
+        if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }
 
@@ -220,7 +247,7 @@ public class UndistractableEnemy : RagnarComponent
         if (canShoot)
         {
             //TODO_AUDIO
-            gameObject.GetComponent<AudioSource>().PlayClip("ENEMY1SHOOT");
+            gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SHOTGUN");
             canShoot = false;
             shootCooldown = 4f;
             InternalCalls.InstancePrefab("EnemyBullet", true);
@@ -255,10 +282,17 @@ public class UndistractableEnemy : RagnarComponent
 
     public void GotoNextPoint()
     {
-        gameObject.GetComponent<AudioSource>().PlayClip("FOOTSTEPS");
-        gameObject.GetComponent<Animation>().PlayAnimation("Walk");
-        agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
-        destPoint = (destPoint + 1) % waypoints.Length;
+        if (!stay)
+        {
+            if (waypoints.Length == 1)
+            {
+                stay = true;
+                gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+            }
+            gameObject.GetComponent<Animation>().PlayAnimation("Walk");
+            agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
+            destPoint = (destPoint + 1) % waypoints.Length;
+        }
     }
 
     public void Patrol()
@@ -272,7 +306,7 @@ public class UndistractableEnemy : RagnarComponent
         {
             if (stoppedTime >= 0)
             {
-                gameObject.GetComponent<AudioSource>().StopCurrentClip("FOOTSTEPS");
+                gameObject.GetComponent<AudioSource>().StopCurrentClip("ETANK_WALKSAND");
                 stoppedTime -= Time.deltaTime;
                 if (stoppedTime < 0)
                 {

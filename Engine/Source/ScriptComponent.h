@@ -29,6 +29,7 @@ public:
 
 	void CallOnTriggerEnter(RigidBodyComponent* other);
 	void CallOnTrigger(RigidBodyComponent* other);
+	void CallOnTriggerExit(RigidBodyComponent* other);
 
 	void CallOnCollisionEnter(RigidBodyComponent* other);
 	void CallOnCollision(RigidBodyComponent* other);
@@ -51,6 +52,7 @@ public:
 	MonoMethod* updateMethod;
 	MonoMethod* onTriggerEnterMethod;
 	MonoMethod* onTriggerMethod;
+	MonoMethod* onTriggerExitMethod;
 	MonoMethod* onCollisionEnterMethod;
 	MonoMethod* onCollisionMethod;
 

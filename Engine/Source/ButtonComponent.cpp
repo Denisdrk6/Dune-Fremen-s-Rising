@@ -143,6 +143,7 @@ void ButtonComponent::LoadFont(const char* path) {
 ButtonComponent::~ButtonComponent()
 {
 	RELEASE(planeToDraw);
+	RELEASE(shader);
 }
 
 bool ButtonComponent::Update(float dt)
@@ -248,8 +249,7 @@ void ButtonComponent::OnEditor()
 
 		fontPath = au;
 		if(ImGui::Button("Set Font"))
-		{
-			
+		{			
 			RELEASE(shader);
 			shader = nullptr;
 			VAO = 0;

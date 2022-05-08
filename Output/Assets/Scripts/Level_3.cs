@@ -5,11 +5,32 @@ public class Level_3 : RagnarComponent
 {
 	public Characters[] characters;
 	public Enemies[] enemies;
+    private Chronometer timer = null;
+    public bool runGame = true;
+    public UIButton chrono;
+    public Vector3 hitPoint;
 
-	public void Start()
+    private GameObject SceneAudio;
+    private GameObject preClick;
+    private GameObject preNonClick;
+    private Transform camera;
+    public void Start()
 	{
+        //Play Level Soundtrack
+        SceneAudio = GameObject.Find("AudioLevel1");
+        SceneAudio.GetComponent<AudioSource>().PlayClip("MUSICPLAY");
+        SceneAudio.GetComponent<AudioSource>().SetState("MUSIC", "LEVEL1_BASE");
+        
         // Camera Starting Position
         GameObject.Find("cameraController").transform.localPosition = new Vector3(2.42f, 0f, 30.47f);
+        GameObject.Find("UI Counter").GetComponent<Transform2D>().position2D = new Vector3(0, (0.5f * InternalCalls.GetRegionGame().y) - 28, 0);
+        chrono = GameObject.Find("UI Counter").GetComponent<UIButton>();
+        chrono.SetTextPosition(-26, -4);
+        timer = new Chronometer();
+
+        preClick = GameObject.Find("preClick");
+        preNonClick = GameObject.Find("preNonClick");
+        camera = GameObject.Find("Camera").transform;
 
         // PLAYERS
         characters = new Characters[3];
@@ -28,7 +49,7 @@ public class Level_3 : RagnarComponent
             name = "BackStab",
             prefabPath = "BackStab_2",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -40,7 +61,7 @@ public class Level_3 : RagnarComponent
             name = "The Voice",
             prefabPath = "Voice",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -52,7 +73,7 @@ public class Level_3 : RagnarComponent
             name = "Knife Throw",
             prefabPath = "Knife",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -64,7 +85,7 @@ public class Level_3 : RagnarComponent
             name = "Rock Throw",
             prefabPath = "Rock",
             transformY = 1.15f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.129f,
             linear = -0.188f,
             quadratic = 0f,
@@ -87,7 +108,7 @@ public class Level_3 : RagnarComponent
             name = "Backstab",
             prefabPath = "BackStab",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -99,7 +120,7 @@ public class Level_3 : RagnarComponent
             name = "Camouflage",
             prefabPath = "Camouflage",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -111,7 +132,7 @@ public class Level_3 : RagnarComponent
             name = "Hunter Seeker",
             prefabPath = "HunterSeeker",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -123,7 +144,7 @@ public class Level_3 : RagnarComponent
             name = "Spice Grenade",
             prefabPath = "SpiceGrenade",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -146,7 +167,7 @@ public class Level_3 : RagnarComponent
             name = "Sword Slash",
             prefabPath = "SwordSlash",
             transformY = 0.2f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.1f,
             linear = -0.574f,
             quadratic = 0f,
@@ -158,7 +179,7 @@ public class Level_3 : RagnarComponent
             name = "Stunner",
             prefabPath = "StunnerShot",
             transformY = 1.32f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
@@ -170,7 +191,7 @@ public class Level_3 : RagnarComponent
             name = "Trap",
             prefabPath = "Trap",
             transformY = 0.12f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 0.100f,
             linear = -0.942f,
             quadratic = 0f,
@@ -182,7 +203,7 @@ public class Level_3 : RagnarComponent
             name = "Whistle",
             prefabPath = "Whistle",
             transformY = 1.12f,
-            intensity = 4.0f,
+            intensity = 1.250f,
             constant = 1.232f,
             linear = -0.201f,
             quadratic = 0f,
@@ -191,7 +212,7 @@ public class Level_3 : RagnarComponent
         }; // Whistle
 
         // ENEMIES
-        enemies = new Enemies[20];
+        enemies = new Enemies[18];
 
         enemies[0] = new Enemies
         {
@@ -303,18 +324,18 @@ public class Level_3 : RagnarComponent
         };
         enemies[9].waypoints[0] = GameObject.Find("10");
 
-        enemies[10] = new Enemies
-        {
-            name = "Undistractable Enemy 1",
-            prefabPath = "Undistractable Enemy",
-            type = EnemyType.UNDISTRACTABLE,
-            state = EnemyState.IDLE,
-            pos = new Vector3(12.31f, 5.29f, -7.62f),
-            waypoints = new GameObject[1]
-        };
-        enemies[10].waypoints[0] = GameObject.Find("11");
+        //enemies[10] = new Enemies
+        //{
+        //    name = "Undistractable Enemy 1",
+        //    prefabPath = "Undistractable Enemy",
+        //    type = EnemyType.UNDISTRACTABLE,
+        //    state = EnemyState.IDLE,
+        //    pos = new Vector3(12.31f, 5.29f, -7.62f),
+        //    waypoints = new GameObject[1]
+        //};
+        //enemies[10].waypoints[0] = GameObject.Find("11");
 
-        enemies[11] = new Enemies
+        enemies[10] = new Enemies
         {
             name = "Basic Enemy 9",
             prefabPath = "Basic Enemy",
@@ -323,9 +344,9 @@ public class Level_3 : RagnarComponent
             pos = new Vector3(5.67f, 5.29f, -3.86f),
             waypoints = new GameObject[1]
         };
-        enemies[11].waypoints[0] = GameObject.Find("12");
+        enemies[10].waypoints[0] = GameObject.Find("12");
 
-        enemies[12] = new Enemies
+        enemies[11] = new Enemies
         {
             name = "Basic Enemy 10",
             prefabPath = "Basic Enemy",
@@ -334,9 +355,9 @@ public class Level_3 : RagnarComponent
             pos = new Vector3(5.64f, 5.29f, -11.4f),
             waypoints = new GameObject[1]
         };
-        enemies[12].waypoints[0] = GameObject.Find("13");
+        enemies[11].waypoints[0] = GameObject.Find("13");
 
-        enemies[13] = new Enemies
+        enemies[12] = new Enemies
         {
             name = "Basic Enemy 11",
             prefabPath = "Basic Enemy",
@@ -345,20 +366,20 @@ public class Level_3 : RagnarComponent
             pos = new Vector3(-1.37f, 5.29f, -16.74f),
             waypoints = new GameObject[1]
         };
-        enemies[13].waypoints[0] = GameObject.Find("14");
+        enemies[12].waypoints[0] = GameObject.Find("14");
 
-        enemies[14] = new Enemies
-        {
-            name = "Undistractable Enemy 2",
-            prefabPath = "Undistractable Enemy",
-            type = EnemyType.UNDISTRACTABLE,
-            state = EnemyState.IDLE,
-            pos = new Vector3(-3.29f, 5.29f, -21.28f),
-            waypoints = new GameObject[1]
-        };
-        enemies[14].waypoints[0] = GameObject.Find("15");
+        //enemies[13] = new Enemies
+        //{
+        //    name = "Undistractable Enemy 2",
+        //    prefabPath = "Undistractable Enemy",
+        //    type = EnemyType.UNDISTRACTABLE,
+        //    state = EnemyState.IDLE,
+        //    pos = new Vector3(-3.29f, 5.29f, -21.28f),
+        //    waypoints = new GameObject[1]
+        //};
+        //enemies[13].waypoints[0] = GameObject.Find("15");
 
-        enemies[15] = new Enemies
+        enemies[13] = new Enemies
         {
             name = "Tank Enemy 3",
             prefabPath = "Tank Enemy",
@@ -367,10 +388,10 @@ public class Level_3 : RagnarComponent
             pos = GameObject.Find("16").transform.globalPosition,
             waypoints = new GameObject[2]
         };
-        enemies[15].waypoints[0] = GameObject.Find("16");
-        enemies[15].waypoints[1] = GameObject.Find("17");
+        enemies[13].waypoints[0] = GameObject.Find("16");
+        enemies[13].waypoints[1] = GameObject.Find("17");
 
-        enemies[16] = new Enemies
+        enemies[14] = new Enemies
         {
             name = "Basic Enemy 12",
             prefabPath = "Basic Enemy",
@@ -379,11 +400,11 @@ public class Level_3 : RagnarComponent
             pos = GameObject.Find("18").transform.globalPosition,
             waypoints = new GameObject[3]
         };
-        enemies[16].waypoints[0] = GameObject.Find("18");
-        enemies[16].waypoints[1] = GameObject.Find("19");
-        enemies[16].waypoints[2] = GameObject.Find("20");
+        enemies[14].waypoints[0] = GameObject.Find("18");
+        enemies[14].waypoints[1] = GameObject.Find("19");
+        enemies[14].waypoints[2] = GameObject.Find("20");
 
-        enemies[17] = new Enemies
+        enemies[15] = new Enemies
         {
             name = "Tank Enemy 4",
             prefabPath = "Tank Enemy",
@@ -392,10 +413,10 @@ public class Level_3 : RagnarComponent
             pos = GameObject.Find("21").transform.globalPosition,
             waypoints = new GameObject[2]
         };
-        enemies[17].waypoints[0] = GameObject.Find("21");
-        enemies[17].waypoints[1] = GameObject.Find("22");
+        enemies[15].waypoints[0] = GameObject.Find("21");
+        enemies[15].waypoints[1] = GameObject.Find("22");
 
-        enemies[18] = new Enemies
+        enemies[16] = new Enemies
         {
             name = "Basic Enemy 13",
             prefabPath = "Basic Enemy",
@@ -404,13 +425,13 @@ public class Level_3 : RagnarComponent
             pos = GameObject.Find("23").transform.globalPosition,
             waypoints = new GameObject[5]
         };
-        enemies[18].waypoints[0] = GameObject.Find("23");
-        enemies[18].waypoints[1] = GameObject.Find("24");
-        enemies[18].waypoints[2] = GameObject.Find("25");
-        enemies[18].waypoints[3] = GameObject.Find("26");
-        enemies[18].waypoints[4] = GameObject.Find("27");
+        enemies[16].waypoints[0] = GameObject.Find("23");
+        enemies[16].waypoints[1] = GameObject.Find("24");
+        enemies[16].waypoints[2] = GameObject.Find("25");
+        enemies[16].waypoints[3] = GameObject.Find("26");
+        enemies[16].waypoints[4] = GameObject.Find("27");
         
-        enemies[19] = new Enemies
+        enemies[17] = new Enemies
         {
             name = "Basic Enemy 14",
             prefabPath = "Basic Enemy",
@@ -419,11 +440,11 @@ public class Level_3 : RagnarComponent
             pos = GameObject.Find("27").transform.globalPosition,
             waypoints = new GameObject[5]
         };
-        enemies[19].waypoints[0] = GameObject.Find("23");
-        enemies[19].waypoints[1] = GameObject.Find("24");
-        enemies[19].waypoints[2] = GameObject.Find("25");
-        enemies[19].waypoints[3] = GameObject.Find("26");
-        enemies[19].waypoints[4] = GameObject.Find("27");
+        enemies[17].waypoints[0] = GameObject.Find("23");
+        enemies[17].waypoints[1] = GameObject.Find("24");
+        enemies[17].waypoints[2] = GameObject.Find("25");
+        enemies[17].waypoints[3] = GameObject.Find("26");
+        enemies[17].waypoints[4] = GameObject.Find("27");
         ///////////////////////////////////////////////////////////////////
 
         InternalCalls.InstancePrefab("PlayerManager");
@@ -433,7 +454,26 @@ public class Level_3 : RagnarComponent
     }
     public void Update()
 	{
+        if (runGame) timer.Update();
+        chrono.text = timer.GetTimeToString();
 
-	}
+        hitPoint = RayCast.ReturnHitpoint();
+        hitPoint.y -= 0.5f;
+        GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
+        if (hittedGO != null)
+        {
+            preClick.isActive = true;
+            preNonClick.isActive = false;
+        }
+        else
+        {
+            preClick.isActive = false;
+            preNonClick.isActive = true;
+        }
+
+        hitPoint.y += 0.54f;
+        if (preClick.isActive) preClick.GetComponent<Transform>().globalPosition = hitPoint;
+        if (preNonClick.isActive) preNonClick.GetComponent<Transform>().globalPosition = hitPoint;
+    }
 
 }

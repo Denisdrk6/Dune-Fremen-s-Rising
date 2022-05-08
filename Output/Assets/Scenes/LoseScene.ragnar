@@ -72,7 +72,8 @@
                         1,
                         1
                     ],
-                    "Intensity": 0
+                    "Intensity": 0,
+                    "Shadows": true
                 }
             ]
         },
@@ -134,10 +135,10 @@
                         -50
                     ],
                     "Quaternion": [
-                        0.38268345594406128,
+                        0.34202012419700623,
                         0,
                         0,
-                        0.92387950420379639
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0,
@@ -153,7 +154,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 1.0064557790756226,
+                    "Vertical Fov": 1.046697735786438,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -4.9477472305297852,
@@ -164,6 +165,7 @@
                     "Zoom": 79,
                     "Zoom Min": 0,
                     "Zoom Max": 0,
+                    "Zoom Speed": 0,
                     "Free Movement": true,
                     "Default Target Pos": [
                         -4.9477472305297852,
@@ -174,10 +176,15 @@
                     "Rotation Speed": 0.5,
                     "Radius": 20,
                     "Horizontal Angle": 189.39971923828125,
-                    "Arrow Rotation": false,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
-                    "Shake Smooth": 0
+                    "Shake Smooth": 0,
+                    "Limits": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ]
                 }
             ]
         },
@@ -212,26 +219,27 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1297,
-                    "lastButtonHeight": 714,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/ui_losescreen.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 },
                 {
                     "Type": 4,
                     "ScriptName": "loseScreen",
-                    "pointer": 329966112,
+                    "pointer": 388268912,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -252,7 +260,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -556,
+                        -521,
                         -100.5,
                         36.099998474121094
                     ],
@@ -268,42 +276,43 @@
                     ],
                     "buttonWidth": 290,
                     "buttonHeight": 42.5,
-                    "lastButtonWidth": 1297,
-                    "lastButtonHeight": 714,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 12,
                     "buttonText": "Restart",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 1,
                     "textColor.r": 1,
                     "textColor.g": 1,
@@ -329,7 +338,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -558.5,
+                        -523.5,
                         -196,
                         36.099998474121094
                     ],
@@ -345,42 +354,43 @@
                     ],
                     "buttonWidth": 290,
                     "buttonHeight": 42.5,
-                    "lastButtonWidth": 1297,
-                    "lastButtonHeight": 714,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 12,
                     "buttonText": "Main Menu",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 1,
                     "textColor.r": 1,
                     "textColor.g": 1,
@@ -406,7 +416,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -568,
+                        -533,
                         -206,
                         36.099998474121094
                     ],
@@ -422,21 +432,22 @@
                     ],
                     "buttonWidth": 290,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1297,
-                    "lastButtonHeight": 714,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 }
             ]
         },
@@ -455,7 +466,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -565,
+                        -530,
                         -109.5,
                         36.099998474121094
                     ],
@@ -471,21 +482,22 @@
                     ],
                     "buttonWidth": 290,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1297,
-                    "lastButtonHeight": 714,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 }
             ]
         },
@@ -504,7 +516,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -399,
+                        -364,
                         132.5,
                         36.099998474121094
                     ],
@@ -520,21 +532,22 @@
                     ],
                     "buttonWidth": 376,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1297,
-                    "lastButtonHeight": 714,
+                    "lastButtonWidth": 1227,
+                    "lastButtonHeight": 708,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/UI\/lose_game_over_text.png",
-                    "Normal Map Path" : "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
                 },
                 {
                     "Type": 13,
-                    "alpha": 1
+                    "alpha": 1,
+                    "numOfAnimations": 0
                 }
             ]
         },
@@ -544,7 +557,7 @@
             "Name": "AudioLoseScene",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/AudioLoseScene.rgprefab",
             "tag": "Untagged",
             "layer": "Default",

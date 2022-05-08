@@ -24,6 +24,7 @@ public:
 	bool OnSave(JsonParsing& node, JSON_Array* array) override;
 
 	void PlayClip(std::string clipMap);
+	void PlayClipEverywhere(std::string clipMap);
 	void PlayClipsOnAwake();
 	void StopClip(std::string audioName);
 	void PauseClip(std::string audioName);

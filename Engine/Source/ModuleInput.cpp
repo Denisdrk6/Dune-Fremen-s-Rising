@@ -1,3 +1,4 @@
+
 #include "ModuleInput.h"
 #include "Application.h"
 #include "Globals.h"
@@ -326,4 +327,16 @@ bool ModuleInput::GetAxis(int joystickId, JAxis axis)
 	}
 	DEBUG_LOG("Joystick with id %d is not available!", joystickId);
 	return 0.0f;
+}
+
+HCURSOR ModuleInput::LoadCursorIcon(const char* iconPath, int width, int height)
+{
+	HICON i = (HICON)LoadImage(0, iconPath, IMAGE_ICON, width, height, LR_LOADFROMFILE);
+
+	ICONINFO icoInfo;
+	GetIconInfo(i, &icoInfo);
+	icoInfo.xHotspot = 0;
+	icoInfo.yHotspot = 0;
+
+	return CreateIconIndirect(&icoInfo);
 }

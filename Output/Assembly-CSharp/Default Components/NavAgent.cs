@@ -14,6 +14,9 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern Vector3[] CalculatePath(Vector3 destination);
+        
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern bool ValidDestination(Vector3 destination);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern bool MovePath();

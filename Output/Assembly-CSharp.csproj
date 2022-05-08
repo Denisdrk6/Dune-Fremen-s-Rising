@@ -65,6 +65,7 @@
     <Compile Include="Assembly-CSharp\Default Components\UIImage.cs" />
     <Compile Include="Assembly-CSharp\Default Components\UISlider.cs" />
     <Compile Include="Assembly-CSharp\Default Components\UIText.cs" />
+    <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Chronometer.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Emitter.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\SceneManager.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\GameObject.cs" />
@@ -112,6 +113,9 @@
     <Compile Include="Assets\Scripts\Level_3.cs" />
     <Compile Include="Assets\Scripts\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\EnemyBoss.cs" />
+    <Compile Include="Assets\Scripts\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\SaveSystem.cs" />
+    <Compile Include="Assets\Scripts\EnemyData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assembly-CSharp\App.config" />

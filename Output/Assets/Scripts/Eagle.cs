@@ -13,6 +13,7 @@ public class Eagle : RagnarComponent
     NavAgent agent;
     public void Start()
 	{
+        gameObject.GetComponent<AudioSource>().PlayClip("WPN_EAGLEORDER");
         agent = gameObject.GetComponent<NavAgent>();
         controled = true;
         player = GameObject.Find("Player");

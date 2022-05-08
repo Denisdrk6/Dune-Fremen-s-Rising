@@ -41,7 +41,7 @@ public class Rock : RagnarComponent
 
 		if (obj != null)
 		{
-			Debug.Log(obj.name.ToString());
+			//Debug.Log(obj.name.ToString());
 			return obj.GetComponent<Transform>().globalPosition - player.transform.globalPosition;
 		}
 
@@ -66,11 +66,12 @@ public class Rock : RagnarComponent
 	{
 		if (other.gameObject.tag == "Ground" && !hitOnce)
         {
-			gameObject.GetComponent<AudioSource>().PlayClip("WEAPONROCKHITGROUND");
+			gameObject.GetComponent<AudioSource>().PlayClip("BG_SANDHITROCK");
 			hitOnce = true;
 		}
 
 		goRB.SetAsStatic();
+
 		Rigidbody area = gameObject.CreateComponent<Rigidbody>();
 		CreateSphereTrigger(area, soundRadius, gameObject.transform.globalPosition);
 		cooldown = 2f;

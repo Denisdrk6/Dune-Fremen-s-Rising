@@ -320,10 +320,12 @@ std::string PrefabManager::RenameFile(GameObject* gameObject, std::string& fileN
 	return fileName;
 }
 
-void PrefabManager::LoadPrefab(const char* path, bool begin)
+GameObject* PrefabManager::LoadPrefab(const char* path, bool begin)
 {
-	JsonParsing prefabFile = JsonParsing();
+	GameObject* ret = nullptr;
 
+	JsonParsing prefabFile = JsonParsing();
+	
 	if (prefabFile.ParseFile(path) > 0)
 	{
 		JSON_Array* jsonArray = prefabFile.GetJsonArray(prefabFile.ValueToObject(prefabFile.GetRootValue()), "Game Objects");
@@ -336,6 +338,7 @@ void PrefabManager::LoadPrefab(const char* path, bool begin)
 				JsonParsing go = prefabFile.GetJsonArrayValue(jsonArray, i);
 				GameObject* parent = app->sceneManager->GetCurrentScene()->GetGoByUuid(0);
 				GameObject* child = app->sceneManager->GetCurrentScene()->CreateGameObject(parent, false, begin);
+				ret = child;
 				child->OnLoad(go);
 			}
 			else
@@ -351,6 +354,8 @@ void PrefabManager::LoadPrefab(const char* path, bool begin)
 	{
 		DEBUG_LOG("Prefab couldn't be loaded");
 	}
+
+	return ret;
 }
 
 void PrefabManager::UpdatePrefabs(GameObject* gameObject)

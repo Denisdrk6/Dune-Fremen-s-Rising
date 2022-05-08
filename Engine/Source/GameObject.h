@@ -22,7 +22,7 @@ public:
 
 	bool Update(float dt);
 	void Draw(CameraComponent* gameCam);
-	void DrawOutline();
+	void DrawOutline(CameraComponent* gameCam, const float3& color);
 	void DrawEditor();
 	void DebugColliders(float3* points, float3 color = float3::one);
 
@@ -95,6 +95,9 @@ public:
 
 	bool showAABB = false;
 	bool showOBB = false;
+	bool castShadows = true;
+	bool isInteractuable;
+
 private:
 
 	GameObject* parent;

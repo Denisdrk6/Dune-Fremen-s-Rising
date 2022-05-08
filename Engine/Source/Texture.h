@@ -7,6 +7,7 @@ enum class TextureType
 {
 	NONE = -1,
 	DIFFUSE,
+	EMISSIVE = 4, // Because of assimp textures
 	NORMAL = 6, // Because of assimp textures
 };
 

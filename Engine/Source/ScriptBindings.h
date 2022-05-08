@@ -12,6 +12,7 @@
 
 #include "ButtonComponent.h"
 #include "MaterialComponent.h"
+#include "MeshComponent.h"
 #include "Texture.h"
 #include "ParticleSystemComponent.h"
 #include "LightComponent.h"
@@ -138,6 +139,15 @@ void SetPosition(MonoObject* go, MonoObject* position)
 	}
 }
 
+void SetGlobalPosition(MonoObject* go, MonoObject* position)
+{
+	if (TransformComponent* tr = GetComponentMono<TransformComponent*>(go))
+	{
+		tr->SetGlobalPosition(app->moduleMono->UnboxVector(position));
+		tr->UpdateTransform();
+	}
+}
+
 void SetRotation(MonoObject* go, MonoObject* rotation)
 {
 	if (TransformComponent* tr = GetComponentMono<TransformComponent*>(go))
@@ -156,11 +166,11 @@ void SetScale(MonoObject* go, MonoObject* scale)
 		tr->UpdateTransform();
 	}
 }
-float GetAngleBetween(MonoObject* vector1, MonoObject* vector2)
+float GetAngleBetween(MonoObject* vector1, MonoObject* vector2) // In degrees
 {
 	float3 vec1 = app->moduleMono->UnboxVector(vector1);
 	float3 vec2 = app->moduleMono->UnboxVector(vector2);	
-	return vec1.AngleBetween(vec2);
+	return vec1.AngleBetween(vec2) * RADTODEG;
 }
 float GetDistanceBetween(MonoObject* vector1, MonoObject* vector2)
 {
@@ -168,7 +178,7 @@ float GetDistanceBetween(MonoObject* vector1, MonoObject* vector2)
 	float3 vec2 = app->moduleMono->UnboxVector(vector2);
 	return vec1.Distance(vec2);
 }
-MonoObject* RotateY(MonoObject* go, MonoObject* vector, int anglesDegrees)
+MonoObject* RotateY(MonoObject* vector, float anglesDegrees)
 {
 	float3 dirV = app->moduleMono->UnboxVector(vector);
 	return app->moduleMono->Float3ToCS(dirV * math::float3x3::RotateY(anglesDegrees * DEGTORAD));
@@ -194,10 +204,44 @@ void SetTexturePath(MonoObject* go, MonoString* texturePath)
 	std::shared_ptr<Texture> newTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(p));
 	matComp->SetTextureType(TextureType::DIFFUSE);
 	matComp->SetTexture(newTexture);
+}
 
-	/*res->Load();
-	if (diff.use_count() - 1 == 1) diff->UnLoad();
-	SetTexture(res);*/
+float GetDiffuseAlpha(MonoObject* go)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	return gameObject->GetComponent<MaterialComponent>()->GetDiffuseAlpha();
+}
+
+void SetDiffuseAlpha(MonoObject* go, float value)
+{
+	if (value > 1) value = 1;
+	else if (value < 0) value = 0;
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	gameObject->GetComponent<MaterialComponent>()->SetDiffuseAlpha(value);
+}
+
+MonoBoolean GetEmissiveEnabled(MonoObject* go)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	return gameObject->GetComponent<MaterialComponent>()->IsEmissiveEnabled();
+}
+
+void SetEmissiveEnabled(MonoObject* go, MonoBoolean value)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	gameObject->GetComponent<MaterialComponent>()->SetEmissiveEnabled(value);
+}
+
+MonoObject* GetEmissiveColor(MonoObject* go)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	return app->moduleMono->Float3ToCS(gameObject->GetComponent<MaterialComponent>()->GetEmissiveColor());
+}
+
+void SetEmissiveColor(MonoObject* go, MonoObject* color)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	gameObject->GetComponent<MaterialComponent>()->SetEmissiveColor(app->moduleMono->UnboxVector(color));
 }
 
 // Light ============================
@@ -275,7 +319,7 @@ void SetLightConstant(MonoObject* go, float constant)
 	assert(lightComp->GetLight()->type == LightType::POINT && "The Light MUST be a Point Light");
 
 	PointLight* l = (PointLight*)lightComp->GetLight();
-	l->quadratic = constant;
+	l->constant = constant;
 }
 
 MonoObject* GetLightAmbient(MonoObject* go)
@@ -290,10 +334,30 @@ void SetLightAmbient(MonoObject* go, MonoObject* ambient)
 	lightComp->GetLight()->ambient = app->moduleMono->UnboxVector(ambient);
 }
 
+MonoObject* GetLightDiffuse(MonoObject* go)
+{
+	ComponentLight* lightComp = GetComponentMono<ComponentLight*>(go);
+	return app->moduleMono->Float3ToCS(lightComp->GetLight()->diffuse);
+}
+void SetLightDiffuse(MonoObject* go, MonoObject* ambient)
+{
+	ComponentLight* lightComp = GetComponentMono<ComponentLight*>(go);
+	lightComp->GetLight()->diffuse = app->moduleMono->UnboxVector(ambient);
+}
+
 // Light ============================
 
 
 // GameObject =======================
+
+void GameObjectDrawOutline(MonoObject* gameObject, MonoObject* color)
+{
+	GameObject* go = app->moduleMono->GameObjectFromCSGO(gameObject);
+	float3 col = app->moduleMono->UnboxVector(color);
+	std::pair<GameObject*, float3> p(go, col);
+	app->renderer3D->gosToDrawOutline.push_back(p);
+}
+
 MonoObject* InstantiateGameObject(MonoObject* name, MonoObject* position, MonoObject* rotation)
 {
 	GameObject* go = app->sceneManager->GetCurrentScene()->CreateGameObject(nullptr);
@@ -342,7 +406,7 @@ MonoObject* Instantiate3DGameObject(MonoObject* name, int primitiveType, MonoObj
 	return app->moduleMono->GoToCSGO(go);
 }
 
-void InstancePrefab(MonoObject* name, bool begin = false)
+MonoObject* InstancePrefab(MonoObject* name, bool begin = false)
 {
 	char* goName = mono_string_to_utf8(mono_object_to_string(name, 0));
 
@@ -356,10 +420,11 @@ void InstancePrefab(MonoObject* name, bool begin = false)
 
 	path += goName;
 	path += ".rgprefab";
-
-	PrefabManager::GetInstance()->LoadPrefab(path.c_str(), begin);
-
+	
 	mono_free(goName);
+
+	GameObject* go = PrefabManager::GetInstance()->LoadPrefab(path.c_str(), begin);
+	return app->moduleMono->GoToCSGO(go);
 }
 
 MonoObject* Destroy(MonoObject* go)
@@ -526,6 +591,21 @@ void ReparentToRoot(MonoObject* go)
 	currentScene->ReparentGameObjects(parent, currentScene->GetRoot());
 }
 
+void ChangeMesh(MonoObject* go, std::string directory)
+{
+	GameObject* parent = app->moduleMono->GameObjectFromCSGO(go);
+
+	std::vector<std::string> files;
+	app->fs->DiscoverFiles(directory.c_str(), files);
+	std::vector<std::string>::iterator it = files.begin();
+	if ((*it).find(".rgmesh") != std::string::npos)
+	{
+		app->fs->GetFilenameWithoutExtension(*it);
+		*it = (*it).substr((*it).find_last_of("_") + 1, (*it).length());
+		parent->GetComponent<MeshComponent>()->SetMesh(ResourceManager::GetInstance()->LoadResource(std::stoll(*it)));
+	}
+}
+
 void AddChild(MonoObject* go, MonoObject* child)
 {
 	GameObject* parent = app->moduleMono->GameObjectFromCSGO(go);
@@ -542,6 +622,31 @@ void EraseChild(MonoObject* go, MonoObject* child)
 	GameObject* newChild = app->moduleMono->GameObjectFromCSGO(child);
 
 	parent->RemoveChild(newChild);
+}
+
+bool GetGameObjectIsInteractuable(MonoObject* go)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	return gameObject->isInteractuable;
+}
+
+void SetGameObjectIsInteractuable(MonoObject* go, MonoBoolean value)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	gameObject->isInteractuable = value;
+}
+
+MonoObject* GetGameObjectInteractuableColor(MonoObject* go)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	return app->moduleMono->Float3ToCS(gameObject->GetComponent<MaterialComponent>()->GetInteractuableColor());
+}
+
+void SetGameObjectInteractuableColor(MonoObject* go, MonoObject* color)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	float3 col = app->moduleMono->UnboxVector(color);
+	gameObject->GetComponent<MaterialComponent>()->SetInteractuableColor(col);
 }
 
 // GameObject =======================
@@ -604,12 +709,27 @@ void SetDirectionParticle(MonoObject* go, MonoObject* direction)
 void NextScene()
 {
 	app->sceneManager->NextScene();
+	app->renderer3D->gosToDrawOutline.clear();
+}
+
+void SaveScene(MonoString* string)
+{
+	char* name = mono_string_to_utf8(string);
+	app->sceneManager->SaveScene(name);
 }
 
 void LoadScene(MonoString* string)
 {
 	char* name = mono_string_to_utf8(string);
 	app->sceneManager->NextScene(name);
+	app->renderer3D->gosToDrawOutline.clear();
+}
+
+void SaveTest(int deadCount, MonoString* playerName, MonoObject* playerPos, float time)
+{
+	char* name = mono_string_to_utf8(playerName);
+	float3 pos = app->moduleMono->UnboxVector(playerPos);
+	app->sceneManager->SaveTesting(deadCount, name, pos, time);
 }
 
 MonoString* GetLastSceneName()
@@ -637,6 +757,11 @@ MonoObject* GetRegionGame()
 #endif
 	float3 vec3 = { vec4.z, vec4.w, 0 };
 	return app->moduleMono->Float3ToCS(vec3);
+}
+
+void RequestDamageFeedback()
+{
+	app->renderer3D->RequestDamageFeedback();
 }
 
 // Dialogue System ======================================
@@ -710,4 +835,20 @@ void SetVSync(bool newState)
 bool GetVSync()
 {
 	return app->renderer3D->GetVsync();
+}
+MonoObject* GetMousePosition()
+{
+	float2 fMousePos;
+	float2 mPos = float2::zero;
+	float4 viewport = float4::zero;
+#ifndef DIST
+	mPos = { ImGui::GetIO().MousePos.x, ImGui::GetIO().MousePos.y };
+	viewport = app->editor->GetGameView()->GetBounds();
+#else
+	mPos = { (float)app->input->GetMouseX() ,(float)app->input->GetMouseY() };
+	viewport = { 0,0, (float)*app->window->GetWindowWidth(), (float)*app->window->GetWindowHeight() };
+#endif
+	fMousePos = { mPos.x - viewport.x , mPos.y - viewport.y };
+	float3 ret(fMousePos.x- (viewport.z/2), -fMousePos.y+(viewport.w / 2), 0);
+	return app->moduleMono->Float3ToCS(ret);
 }
