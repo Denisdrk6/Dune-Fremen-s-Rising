@@ -25,7 +25,7 @@ public class mainMenuBackScreen : RagnarComponent
 	GameObject exitImage;
 	GameObject creditsImage;
 
-	GameObject back ;
+	GameObject back;
 
     //////////////OPTIONS//////////////
     bool isOptions = false;
@@ -33,7 +33,7 @@ public class mainMenuBackScreen : RagnarComponent
     bool isFirstOScreenB = true;
     bool isFirstOSoundB = true;
     bool isFirstOControlsB = true;
-
+	float lastWindowW = 0;
     GameObject optionsBack;
     GameObject optionsBackImage;
     GameObject optionsBackButton;
@@ -117,15 +117,17 @@ public class mainMenuBackScreen : RagnarComponent
         optionsFXcSound = GameObject.Find("optionsFXcSound");
         optionsMusicSound = GameObject.Find("optionsMusicSound");
         optionsGeneralSound = GameObject.Find("optionsGeneralSound");
-
-		optionsScreenSDCH.GetComponent<UICheckbox>().SetCheckboxState(Light.shadowsEnabled);
-		optionsScreenFSCH.GetComponent<UICheckbox>().SetCheckboxState(InternalCalls.GetFullScreen());
-		optionsScreenVSCH.GetComponent<UICheckbox>().SetCheckboxState(InternalCalls.GetVSync());
+		lastWindowW= (InternalCalls.GetRegionGame().x / 2);
+		//optionsScreenSDCH.GetComponent<UICheckbox>().SetCheckboxState(Light.shadowsEnabled);
+		//optionsScreenFSCH.GetComponent<UICheckbox>().SetCheckboxState(InternalCalls.GetFullScreen());
+		//optionsScreenVSCH.GetComponent<UICheckbox>().SetCheckboxState(InternalCalls.GetVSync());
 		OptionsBackHide();
     }
 
 	public void Update()
 	{
+		// Button options
+		OptionsButtonAction();
 		// Button start
 		PlayButtonAction();
 		// Button exit
@@ -133,13 +135,12 @@ public class mainMenuBackScreen : RagnarComponent
 		// Button credits
 		CreditsButtonAction();
 		// Button options
-		ContinueButtonAction();
-		// Button options
-		OptionsButtonAction();
+		ContinueButtonAction();		
 		// Image back
-		BackgroundImageAction();
+		
 
 		updateOptions();
+		BackgroundImageAction();
 	}
 	void ContinueButtonAction()
     {
@@ -251,6 +252,7 @@ public class mainMenuBackScreen : RagnarComponent
         }
         else
         {
+			
             optionsImage.isActive = false;
             options.isActive = false;
         }
@@ -313,9 +315,9 @@ public class mainMenuBackScreen : RagnarComponent
     }
 	void PlayButtonAction()
 	{
-        if (!isOptions) 
+		if (!isOptions) 
         {
-            start.isActive = true;
+			start.isActive = true;
             startImage.isActive = true;
             int a = start.GetComponent<UIButton>().GetButtonState();
             switch (a)
@@ -364,7 +366,8 @@ public class mainMenuBackScreen : RagnarComponent
         }
         else
         {
-            start.isActive = false;
+			
+			start.isActive = false;
             startImage.isActive = false;
         }
 
@@ -420,7 +423,7 @@ public class mainMenuBackScreen : RagnarComponent
         }
         else
         {
-            exit.isActive = false;
+			exit.isActive = false;
             exitImage.isActive = false;
         }
 
@@ -436,24 +439,24 @@ public class mainMenuBackScreen : RagnarComponent
             pos = back.GetComponent<Transform2D>().position2D;
             pos.Set(0.0f, 0.0f, -8.5f);
             back.GetComponent<Transform2D>().position2D = pos;
-
-
         }
         else
         {
-            back.isActive = false;
-        }
+			pos.Set(0.0f, 2000.0f, -8.5f);
+			back.GetComponent<Transform2D>().position2D = pos;
+			//back.isActive = false;
+		}
 	}
 	//////////OPTIONS
 	void updateOptions()
 	{
 		if (isOptions)
 		{
-			OptionsBackShow();
-			SelectedOptionShow();
-			OptionsAllButtonsShow();
 
-		}
+            OptionsBackShow();
+            SelectedOptionShow();
+            OptionsAllButtonsShow();
+        }
 		else
 		{
 			OptionsBackHide();
@@ -555,7 +558,8 @@ public class mainMenuBackScreen : RagnarComponent
 		////////////////////////////////////////////////
 		/// CONTROLS BUTTON
 		////////////////////////////////////////////////
-
+		float X = (InternalCalls.GetRegionGame().x / 2);
+		float sum=(lastWindowW- X)/2;
 		int a = optionsControlsButton.GetComponent<UIButton>().GetButtonState();
 		switch (a)
 		{
@@ -567,16 +571,17 @@ public class mainMenuBackScreen : RagnarComponent
 				{
 
 					isFirstOControlsB = false;
-					pos.Set(-257, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
-					optionsControlsButton.GetComponent<Transform2D>().position2D = pos;
-					bounds.Set(275, 58.5f, 0);
-					optionsControlsButton.GetComponent<Transform2D>().SetSize(bounds);
-
-					pos.Set(-257, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
-					optionsControlsImage.GetComponent<Transform2D>().position2D = pos;
-					bounds.Set(273.5f, 48, 0);
-					optionsControlsImage.GetComponent<Transform2D>().SetSize(bounds);
+					
 				}
+				pos.Set(X-1217+sum, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
+				optionsControlsButton.GetComponent<Transform2D>().position2D = pos;
+				bounds.Set(275, 58.5f, 0);
+				optionsControlsButton.GetComponent<Transform2D>().SetSize(bounds);
+
+				pos.Set(X - 1217 + sum, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
+				optionsControlsImage.GetComponent<Transform2D>().position2D = pos;
+				bounds.Set(273.5f, 48, 0);
+				optionsControlsImage.GetComponent<Transform2D>().SetSize(bounds);
 				// normal Mode
 				break;
 			case 2:
@@ -587,12 +592,12 @@ public class mainMenuBackScreen : RagnarComponent
 					SceneAudio.GetComponent<AudioSource>().PlayClip("UI_HOVER");
 					//poner sonido
 				}
-				pos.Set(-277, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
+				pos.Set(X - 1237 + sum, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
 				optionsControlsButton.GetComponent<Transform2D>().position2D = pos;
 				bounds.Set(275 + 40, 58.5f, 0);
 				optionsControlsButton.GetComponent<Transform2D>().SetSize(bounds);
 
-				pos.Set(-277, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
+				pos.Set(X - 1237 + sum, (InternalCalls.GetRegionGame().y / 2) - 380, -10.4f);
 				optionsControlsImage.GetComponent<Transform2D>().position2D = pos;
 				bounds.Set(273.5f + 40, 48, 0);
 				optionsControlsImage.GetComponent<Transform2D>().SetSize(bounds);
@@ -620,16 +625,17 @@ public class mainMenuBackScreen : RagnarComponent
 				{
 
 					isFirstOSoundB = false;
-					pos.Set(-257, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
-					optionsSoundButton.GetComponent<Transform2D>().position2D = pos;
-					bounds.Set(275, 58.5f, 0);
-					optionsSoundButton.GetComponent<Transform2D>().SetSize(bounds);
-
-					pos.Set(-257, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
-					optionsSoundImage.GetComponent<Transform2D>().position2D = pos;
-					bounds.Set(273.5f, 48, 0);
-					optionsSoundImage.GetComponent<Transform2D>().SetSize(bounds);
+					
 				}
+				pos.Set(X - 1217 + sum, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
+				optionsSoundButton.GetComponent<Transform2D>().position2D = pos;
+				bounds.Set(275, 58.5f, 0);
+				optionsSoundButton.GetComponent<Transform2D>().SetSize(bounds);
+
+				pos.Set(X - 1217 + sum, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
+				optionsSoundImage.GetComponent<Transform2D>().position2D = pos;
+				bounds.Set(273.5f, 48, 0);
+				optionsSoundImage.GetComponent<Transform2D>().SetSize(bounds);
 				// normal Mode
 				break;
 			case 2:
@@ -640,12 +646,12 @@ public class mainMenuBackScreen : RagnarComponent
 					SceneAudio.GetComponent<AudioSource>().PlayClip("UI_HOVER");
 					//poner sonido
 				}
-				pos.Set(-277, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
+				pos.Set(X - 1237 + sum, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
 				optionsSoundButton.GetComponent<Transform2D>().position2D = pos;
 				bounds.Set(275 + 40, 58.5f, 0);
 				optionsSoundButton.GetComponent<Transform2D>().SetSize(bounds);
 
-				pos.Set(-277, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
+				pos.Set(X - 1237 + sum, (InternalCalls.GetRegionGame().y / 2) - 280, -10.4f);
 				optionsSoundImage.GetComponent<Transform2D>().position2D = pos;
 				bounds.Set(273.5f + 40, 48, 0);
 				optionsSoundImage.GetComponent<Transform2D>().SetSize(bounds);
@@ -674,16 +680,17 @@ public class mainMenuBackScreen : RagnarComponent
 				{
 
 					isFirstOScreenB = false;
-					pos.Set(-257, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
-					optionsScreenButton.GetComponent<Transform2D>().position2D = pos;
-					bounds.Set(275, 58.5f, 0);
-					optionsScreenButton.GetComponent<Transform2D>().SetSize(bounds);
-
-					pos.Set(-257, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
-					optionsScreenImage.GetComponent<Transform2D>().position2D = pos;
-					bounds.Set(273.5f, 48, 0);
-					optionsScreenImage.GetComponent<Transform2D>().SetSize(bounds);
+					
 				}
+				pos.Set(X - 1217 + sum, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
+				optionsScreenButton.GetComponent<Transform2D>().position2D = pos;
+				bounds.Set(275, 58.5f, 0);
+				optionsScreenButton.GetComponent<Transform2D>().SetSize(bounds);
+
+				pos.Set(X - 1217 + sum, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
+				optionsScreenImage.GetComponent<Transform2D>().position2D = pos;
+				bounds.Set(273.5f, 48, 0);
+				optionsScreenImage.GetComponent<Transform2D>().SetSize(bounds);
 				// normal Mode
 				break;
 			case 2:
@@ -694,12 +701,12 @@ public class mainMenuBackScreen : RagnarComponent
 					SceneAudio.GetComponent<AudioSource>().PlayClip("UI_HOVER");
 					//poner sonido
 				}
-				pos.Set(-277, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
+				pos.Set(X - 1237 + sum, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
 				optionsScreenButton.GetComponent<Transform2D>().position2D = pos;
 				bounds.Set(275 + 40, 58.5f, 0);
 				optionsScreenButton.GetComponent<Transform2D>().SetSize(bounds);
 
-				pos.Set(-277, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
+				pos.Set(X - 1237 + sum, (InternalCalls.GetRegionGame().y / 2) - 180, -10.4f);
 				optionsScreenImage.GetComponent<Transform2D>().position2D = pos;
 				bounds.Set(273.5f + 40, 48, 0);
 				optionsScreenImage.GetComponent<Transform2D>().SetSize(bounds);
@@ -790,6 +797,7 @@ public class mainMenuBackScreen : RagnarComponent
 	{
 		float y = (InternalCalls.GetRegionGame().y / 2);
 		float x = (InternalCalls.GetRegionGame().x / 2);
+		float sum = (lastWindowW - x);
 		optionsScreenFSCH.isActive = true;
 		optionsScreenVSCH.isActive = true;
 		optionsScreenSDCH.isActive = true;
@@ -848,7 +856,7 @@ public class mainMenuBackScreen : RagnarComponent
 			Light.shadowsEnabled = false;
 		}
 
-		pos.Set(0, y - 230, 36.1f);
+		pos.Set(-sum+20, y - 230, 36.1f);
 		optionsSreenText.GetComponent<Transform2D>().position2D = pos;
 
 		pos.Set(x - 550, y - 500, 36.1f);
@@ -866,6 +874,7 @@ public class mainMenuBackScreen : RagnarComponent
 	{
 		float y = (InternalCalls.GetRegionGame().y / 2);
 		float x = (InternalCalls.GetRegionGame().x / 2);
+		float sum = (lastWindowW - x);
 		optionsSoundText.isActive = true;
 
 		optionsVoicesSound.isActive = true;
@@ -874,7 +883,7 @@ public class mainMenuBackScreen : RagnarComponent
 		optionsGeneralSound.isActive = true;
 
 
-		pos.Set(0, y - 230, 36.1f);
+		pos.Set(-sum + 20, y - 230, 36.1f);
 		optionsSoundText.GetComponent<Transform2D>().position2D = pos;
 
 		float generalSound;

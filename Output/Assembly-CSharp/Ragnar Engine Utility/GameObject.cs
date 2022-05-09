@@ -91,6 +91,9 @@ namespace RagnarEngine
         public extern GameObject EraseChild(GameObject child);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern GameObject GetParent();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
         static extern public GameObject Find(string name);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]

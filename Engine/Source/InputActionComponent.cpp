@@ -20,6 +20,7 @@ InputActionComponent::InputActionComponent(GameObject* own)
 	owner = own;
 	type = ComponentType::INPUT_ACTION;
 	assetWindowActive = false;
+	currentPreset = nullptr;
 }
 
 InputActionComponent::~InputActionComponent()
@@ -44,7 +45,7 @@ void InputActionComponent::OnEditor()
 		{
 			assetWindowActive = true;
 			inputAssetsList.clear();
-			LoadAllInputAssets("Assets");
+			LoadAllInputAssets("Library");
 		}
 
 		if (currentActionMaps.size() > 0)
@@ -99,7 +100,7 @@ void InputActionComponent::OnEditor()
 											MonoClass* klass = mono_class_from_name(app->moduleMono->image, USER_SCRIPTS_NAMESPACE, scriptsNameList[i][j].c_str());
 											std::string methodN = ":" + std::string(methodName);
 											MonoMethodDesc* mdesc = mono_method_desc_new(methodN.c_str(), false);
-											monoMethodList[i][j] = mono_method_desc_search_in_class(mdesc, klass);
+											monoMethodList[j] = mono_method_desc_search_in_class(mdesc, klass);
 											mono_method_desc_free(mdesc);
 										}
 									}
@@ -142,6 +143,7 @@ void InputActionComponent::OnEditor()
 				{
 					assetWindowActive = false;
 					LoadInputAsset(inputAssetsList[item].c_str());
+					currentPreset = currentActionMaps[0];
 				}
 			}
 			ImGui::EndTable();
@@ -158,20 +160,16 @@ bool InputActionComponent::Update(float dt)
 	//Check if bindings have been pressed
 	if (app->sceneManager->GetGameState() == GameState::PLAYING)
 	{
-		for (std::vector<std::shared_ptr<ActionMaps>>::iterator actionMap = currentActionMaps.begin(); actionMap < currentActionMaps.end(); actionMap++)
+		for (std::vector<std::shared_ptr<Actions>>::iterator action = currentPreset->GetActions()->begin(); action < currentPreset->GetActions()->end(); action++)
 		{
-			int i = actionMap - currentActionMaps.begin();
-			for (std::vector<std::shared_ptr<Actions>>::iterator action = (*actionMap)->GetActions()->begin(); action < (*actionMap)->GetActions()->end(); action++)
+			int j = action - currentPreset->GetActions()->begin();
+			for (std::vector<int>::iterator bind = (*action)->GetBindings()->begin(); bind < (*action)->GetBindings()->end(); bind++)
 			{
-				int j = action - (*actionMap)->GetActions()->begin();
-				for (std::vector<int>::iterator bind = (*action)->GetBindings()->begin(); bind < (*action)->GetBindings()->end(); bind++)
+				if (app->input->GetKey(*bind) == KeyState::KEY_DOWN && monoMethodList[j] != nullptr)
 				{
-					if (app->input->GetKey(*bind) == KeyState::KEY_DOWN && monoMethodList[i][j] != nullptr)
-					{
-						MonoObject* exec = nullptr;
-						uint32_t objOwner = dynamic_cast<ScriptComponent*>(owner->GetComponent(ComponentType::SCRIPT))->GetScriptGO();
-						mono_runtime_invoke(monoMethodList[i][j], mono_gchandle_get_target(objOwner), NULL, &exec);
-					}
+					MonoObject* exec = nullptr;
+					uint32_t objOwner = dynamic_cast<ScriptComponent*>(owner->GetComponent(ComponentType::SCRIPT))->GetScriptGO();
+					mono_runtime_invoke(monoMethodList[j], mono_gchandle_get_target(objOwner), NULL, &exec);
 				}
 			}
 		}
@@ -205,12 +203,12 @@ bool InputActionComponent::OnLoad(JsonParsing& node)
 				MonoClass* klass = mono_class_from_name(app->moduleMono->image, USER_SCRIPTS_NAMESPACE, a.GetJsonString("Script"));
 				std::string methodN = ":" + methodName;
 				MonoMethodDesc* mdesc = mono_method_desc_new(methodN.c_str(), false);
-				monoMethodList[i][j] = mono_method_desc_search_in_class(mdesc, klass);
+				monoMethodList[j] = mono_method_desc_search_in_class(mdesc, klass);
 				mono_method_desc_free(mdesc);
 			}
 		}
 	}
-
+	currentPreset = currentActionMaps[0];
 
 	return true;
 }
@@ -263,7 +261,6 @@ bool InputActionComponent::LoadInputAsset(const char* path)
 		scriptsNameList.resize(size);
 		scriptsMethodsList.resize(size);
 		currentMethodList.resize(size);
-		monoMethodList.resize(size);
 		for (int i = 0; i < size; ++i)
 		{
 			JsonParsing go = sceneFile.GetJsonArrayValue(jsonArray, i);
@@ -273,7 +270,7 @@ bool InputActionComponent::LoadInputAsset(const char* path)
 			scriptsNameList[i].resize(aM->GetActions()->size());
 			scriptsMethodsList[i].resize(aM->GetActions()->size());
 			currentMethodList[i].resize(aM->GetActions()->size());
-			monoMethodList[i].resize(aM->GetActions()->size());
+			monoMethodList.resize(aM->GetActions()->size());
 		}
 		currentAssetPath = path;
 		currentAssetName = path;
@@ -302,5 +299,13 @@ void InputActionComponent::LoadAllInputAssets(const char* folder)
 	for (std::vector<std::string>::iterator it = dirs.begin(); it != dirs.end(); ++it)
 	{
 		LoadAllInputAssets((*it).c_str());
+	}
+}
+
+void InputActionComponent::SetActionMap(int index)
+{
+	if (currentActionMaps[index] != nullptr)
+	{
+		currentPreset = currentActionMaps[index];
 	}
 }

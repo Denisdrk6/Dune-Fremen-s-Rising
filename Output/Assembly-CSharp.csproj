@@ -50,6 +50,7 @@
     <Compile Include="Assembly-CSharp\Default Components\AudioListener.cs" />
     <Compile Include="Assembly-CSharp\Default Components\AudioSource.cs" />
     <Compile Include="Assembly-CSharp\Default Components\Camera.cs" />
+    <Compile Include="Assembly-CSharp\Default Components\InputAction.cs" />
     <Compile Include="Assembly-CSharp\Default Components\Light.cs" />
     <Compile Include="Assembly-CSharp\Default Components\Material.cs" />
     <Compile Include="Assembly-CSharp\Default Components\NavAgent.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Scripts\Knife.cs" />
     <Compile Include="Assets\Scripts\Rock.cs" />
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
+    <Compile Include="Assets\Scripts\SoundAreaManager.cs" />
     <Compile Include="Assets\Scripts\TankEnemy.cs" />
     <Compile Include="Assets\Scripts\UndistractableEnemy.cs" />
     <Compile Include="Assets\Scripts\WinScreen.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\BackStabEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assembly-CSharp\App.config" />

@@ -201,6 +201,11 @@ void GameObject::DrawEditor()
 			CreateComponent(ComponentType::SCRIPT);
 			newComponent = false;
 		}
+		if (ImGui::Selectable("Input Component"))
+		{
+			CreateComponent(ComponentType::INPUT_ACTION);
+			newComponent = false;
+		}
 		/*if (ImGui::Selectable("Billboard Component"))
 		{
 			CreateComponent(ComponentType::BILLBOARD);

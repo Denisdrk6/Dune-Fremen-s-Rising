@@ -252,12 +252,6 @@
     <ClInclude Include="Engine\Source\CommandsDispatcher.h">
       <Filter>Sources\Commands</Filter>
     </ClInclude>
-    <ClInclude Include="Engine\Source\InputActionMenu.h">
-      <Filter>Sources\Menus</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine\Source\InputActionComponent.h">
-      <Filter>Sources\GameObject\Components</Filter>
-    </ClInclude>
     <ClInclude Include="Engine\Source\VertexArray.h">
       <Filter>Sources\Buffers</Filter>
     </ClInclude>
@@ -795,6 +789,9 @@
     </ClInclude>
     <ClInclude Include="Engine\Source\CheckBoxComponent.h">
       <Filter>Sources\GameObject\Components\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Source\InputActionBindings.h">
+      <Filter>Sources\Tools\Bindings</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

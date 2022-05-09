@@ -41,6 +41,19 @@ bool MoveAgentPath(MonoObject* go)
 	return agent->pathfinding->MovePath(agent);
 }
 
+void ClearPath(MonoObject* go)
+{
+	NavAgentComponent* agent = GetComponentMono<NavAgentComponent*>(go);
+	agent->owner->GetComponent<RigidBodyComponent>()->GetBody()->setLinearVelocity({ 0,0,0 });
+	agent->agentProperties->path.clear();
+}
+
+int PathSize(MonoObject* go)
+{
+	NavAgentComponent* agent = GetComponentMono<NavAgentComponent*>(go);
+	return agent->agentProperties->path.size();
+}
+
 MonoObject* GetHitPosition(MonoObject* go)
 {
 	NavAgentComponent* agent = GetComponentMono<NavAgentComponent*>(go);

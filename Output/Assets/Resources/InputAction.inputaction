@@ -1,0 +1,94 @@
+{
+    "Action Maps": [
+        {
+            "Name": "Presset1",
+            "Actions": [
+                {
+                    "Name": "Ability1",
+                    "Bindings": [
+                        {
+                            "Path": 29
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability2",
+                    "Bindings": [
+                        {
+                            "Path": 27
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability3",
+                    "Bindings": [
+                        {
+                            "Path": 6
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability4",
+                    "Bindings": [
+                        {
+                            "Path": 25
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability5",
+                    "Bindings": [
+                        {
+                            "Path": 5
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Presset2",
+            "Actions": [
+                {
+                    "Name": "Ability1",
+                    "Bindings": [
+                        {
+                            "Path": 4
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability2",
+                    "Bindings": [
+                        {
+                            "Path": 22
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability3",
+                    "Bindings": [
+                        {
+                            "Path": 7
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability4",
+                    "Bindings": [
+                        {
+                            "Path": 9
+                        }
+                    ]
+                },
+                {
+                    "Name": "Ability5",
+                    "Bindings": [
+                        {
+                            "Path": 10
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

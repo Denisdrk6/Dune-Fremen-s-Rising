@@ -9,10 +9,12 @@ public class BasicEnemy : RagnarComponent
     public GameObject[] waypoints;
     private int destPoint = 0;
     public EnemyState state;
+    public EnemyType enemyType;
 
     // States
     public bool patrol;
     public bool stopState = false;
+    public bool backstab = false;
 
     // Timers
     public float stoppedTime = 0f;
@@ -47,6 +49,7 @@ public class BasicEnemy : RagnarComponent
     private float angleOffset = 0;
 
     GameObject[] childs;
+    ParticleSystem stunPartSys;
 
     public void Start()
     {
@@ -69,6 +72,17 @@ public class BasicEnemy : RagnarComponent
         initialSpeed = agents.speed;
 
         childs = gameObject.childs;
+
+        for (int i = 0; i < childs.Length; ++i)
+        {
+            if (childs[i].name == "StunParticles")
+            {
+                stunPartSys = childs[i].GetComponent<ParticleSystem>();
+                break;
+            }
+        }
+
+        stunPartSys.Pause();
     }
 
     public void Update()
@@ -112,6 +126,7 @@ public class BasicEnemy : RagnarComponent
                     stunnedTimer -= Time.deltaTime;
                     if (stunnedTimer < 0)
                     {
+                        stunPartSys.Pause();
                         stunned = false;
                         stunnedTimer = -1f;
                     }
@@ -132,9 +147,27 @@ public class BasicEnemy : RagnarComponent
                 if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
                 {
                     agents.CalculatePath(agents.hitPosition);
-
                 }
                 agents.MovePath();
+                if (!backstab && Input.GetKey(KeyCode.Z) == KeyState.KEY_REPEAT)
+                {
+                    backstab = true;
+                    //area de luz
+                }
+                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_DOWN && backstab)
+                {
+                    Debug.Log("BackStab enemy");
+                    InternalCalls.InstancePrefab("BackStabEnemy");
+                    backstab = false;
+                }
+                if (Input.GetMouseClick(MouseButton.RIGHT) == KeyState.KEY_DOWN && backstab)
+                {
+                    backstab = false;
+                }
+                if (Input.GetKey(KeyCode.F1) == KeyState.KEY_UP || Input.GetKey(KeyCode.F2) == KeyState.KEY_UP || Input.GetKey(KeyCode.F3) == KeyState.KEY_UP)
+                {
+                    controlled = false;
+                }
                 controlledCooldown -= Time.deltaTime;
                 if (controlledCooldown < 0)
                 {
@@ -144,6 +177,11 @@ public class BasicEnemy : RagnarComponent
                     agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
                 }
 
+            }
+
+            if(Input.GetKey(KeyCode.ALPHA1) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA2) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA3) == KeyState.KEY_DOWN)
+            {
+                controlled = false;
             }
         }
     }
@@ -155,29 +193,38 @@ public class BasicEnemy : RagnarComponent
             //gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SCREAM");
             if (other.gameObject.name == "Knife")
             {
-                deathTimer = 4f;
-                for (int i = 0; i < childs.Length; ++i)
+                if (deathTimer == -1f)
                 {
-                    if (childs[i].name == "KnifeParticles")
+                    deathTimer = 4f;
+                    for (int i = 0; i < childs.Length; ++i)
                     {
-                        childs[i].GetComponent<ParticleSystem>().Play();
-                        break;
+                        if (childs[i].name == "KnifeParticles")
+                        {
+                            childs[i].GetComponent<ParticleSystem>().Play();
+                            break;
+                        }
                     }
+                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
                 }
-                gameObject.GetComponent<Animation>().PlayAnimation("Dying");
                 // WHEN RUNES FUNCTIONAL
                 // deathTimer = 0f;
             }
             if (other.gameObject.name == "StunnerShot")
             {
-                gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_BULLETHIT");
-                deathTimer = 2f;
-                gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                if (deathTimer == -1f)
+                {
+                    gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_BULLETHIT");
+                    deathTimer = 2f;
+                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                }
             }
             if (other.gameObject.name == "HunterSeeker")
             {
-                deathTimer = 5f;
-                gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                if (deathTimer == -1f)
+                {
+                    deathTimer = 5f;
+                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                }
 
                 // WHEN RUNES FUNCTIONAL
                 // EXPLOSION AREA
@@ -211,6 +258,7 @@ public class BasicEnemy : RagnarComponent
                 // STUN (BLIND)
                 gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SCREAM");
                 Stun(5f);
+                stunPartSys.Play();
             }
 
 
@@ -245,6 +293,7 @@ public class BasicEnemy : RagnarComponent
                 gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SCREAM");
                 Stun(5f);
                 GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Play();
+                stunPartSys.Play();
             }
         }
     }
@@ -301,7 +350,7 @@ public class BasicEnemy : RagnarComponent
             //TODO_AUDIO
             gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SHOTGUN");
             canShoot = false;
-            shootCooldown = 4f;
+            shootCooldown = 1f;
             InternalCalls.InstancePrefab("EnemyBullet", true);
             GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().enemy = gameObject;
             GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().index = index;

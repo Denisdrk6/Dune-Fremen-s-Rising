@@ -60,9 +60,16 @@ bool ModuleInput::PreUpdate(float dt)
 		std::string string;
 		if(keys[i] == 1)
 		{
-			if (keyboard[i] == KeyState::KEY_IDLE)
+			if (twiceKey.keyID == i && keyboard[i] == KeyState::KEY_IDLE)
+			{
+				keyboard[i] = KeyState::KEY_TWICE;
+				string = "Keybr :" + std::to_string(i) + " - TWICE";
+				strings.push_back(string);
+			}
+			else if (keyboard[i] == KeyState::KEY_IDLE)
 			{
 				keyboard[i] = KeyState::KEY_DOWN;
+				twiceKey.keyID = i;
 				string = "Keybr :" + std::to_string(i) + " - DOWN";
 				strings.push_back(string);
 			}
@@ -103,9 +110,16 @@ bool ModuleInput::PreUpdate(float dt)
 		std::string string;
 		if(buttons & SDL_BUTTON(i))
 		{
-			if (mouseButtons[i] == KeyState::KEY_IDLE)
+			if (twiceKey.keyID == i && mouseButtons[i] == KeyState::KEY_IDLE)
 			{
-				mouseButtons[i] = KeyState::KEY_DOWN;
+				mouseButtons[i] = KeyState::KEY_TWICE;
+				string = "Mouse :" + std::to_string(i) + " - TWICE";
+				strings.push_back(string);
+			}
+			else if (mouseButtons[i] == KeyState::KEY_IDLE)
+			{
+				mouseButtons[i] = KeyState::KEY_DOWN;			
+				twiceKey.keyID = i;
 				string = "Mouse :" + std::to_string(i) + " - DOWN";
 				strings.push_back(string);
 			}
@@ -136,6 +150,15 @@ bool ModuleInput::PreUpdate(float dt)
 		}
 	}
 
+	if (twiceKey.keyID != -1)
+	{ 
+		twiceKey.timer += app->GetEngineDeltaTime();
+		if (twiceKey.timer > 0.2f)
+		{
+			twiceKey.timer = 0;
+			twiceKey.keyID = -1;
+		}
+	}
 	mouseXMotion = mouseYMotion = 0;
 
 	//Update gamepad controller

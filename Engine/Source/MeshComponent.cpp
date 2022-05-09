@@ -178,10 +178,7 @@ void MeshComponent::MenuChangeMesh()
 	for (std::vector<std::shared_ptr<Resource>>::iterator it = res.begin(); it != res.end(); ++it)
 	{
 		if (ImGui::Selectable((*it).get()->GetName().c_str()))
-		{
-			if (mesh.use_count() - 1 == 1) mesh->UnLoad();
 			SetMesh((*it));
-		}
 	}
 
 	ImGui::End();
@@ -219,6 +216,7 @@ bool MeshComponent::OnSave(JsonParsing& node, JSON_Array* array)
 
 void MeshComponent::SetMesh(std::shared_ptr<Resource> m)
 {
+	if (mesh.use_count() - 1 == 1) mesh->UnLoad();
 	mesh = std::static_pointer_cast<Mesh>(m);
 
 	if (mesh)

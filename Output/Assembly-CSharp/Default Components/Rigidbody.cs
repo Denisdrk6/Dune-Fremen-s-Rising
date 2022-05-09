@@ -26,6 +26,9 @@ namespace RagnarEngine
         public extern void ApplyCentralForce(Vector3 force);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void ApplyVelocity(Vector3 force);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void ApplyCentralImpulse(Vector3 impulse);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
@@ -51,6 +54,9 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void SetBodyRotation(Quaternion rotation);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void SetRadiusSphere(float rad);
 
         public void IgnoreCollision(GameObject other, bool value)
         {

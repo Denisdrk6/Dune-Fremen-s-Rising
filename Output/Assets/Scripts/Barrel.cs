@@ -7,6 +7,8 @@ public class Barrel : RagnarComponent
     GameObject boss;
     public int barrelIndex = 0;
 
+    float deathTimer = -1f;
+
     // Use this for initialization
     public void Start()
     {
@@ -20,6 +22,16 @@ public class Barrel : RagnarComponent
         {
             NotifyBoss();
         }
+
+        if (deathTimer >= 0)
+        {
+            deathTimer -= Time.deltaTime;
+            if (deathTimer < 0)
+            {
+                deathTimer = -1f;
+                InternalCalls.Destroy(gameObject);
+            }
+        }
     }
 
     public void OnColision(Rigidbody other)
@@ -32,7 +44,15 @@ public class Barrel : RagnarComponent
             }
             boss.GetComponent<Boss>().barrelCount--;
             boss.GetComponent<Boss>().barrelLocations[barrelIndex].isDestroyed = true;
-            InternalCalls.Destroy(gameObject);
+            for (int i = 0; i < gameObject.childs.Length; ++i)
+            {
+                if (gameObject.childs[i].name == "BarrelExplosion")
+                {
+                    gameObject.childs[i].GetComponent<ParticleSystem>().Play();
+                    break;
+                }
+            }
+            deathTimer = 0.4f;
         }
     }
     void NotifyBoss()

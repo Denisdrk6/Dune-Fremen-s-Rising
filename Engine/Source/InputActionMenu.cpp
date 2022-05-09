@@ -11,6 +11,7 @@
 
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include "Imgui/imgui_internal.h"
+#include "Imgui/imgui_stdlib.h"
 #include "Profiling.h"
 
 InputActionMenu::InputActionMenu() : Menu(false, "Input Action")
@@ -29,6 +30,12 @@ InputActionMenu::~InputActionMenu()
 bool InputActionMenu::Start()
 {
 	bool ret = true;
+
+#ifdef DIST
+
+#else
+	ImportToLibrary();
+#endif
 
 	return ret;
 }
@@ -141,6 +148,11 @@ void InputActionMenu::ColumnActions()
 		bool open = ImGui::TreeNodeEx(actionMaps[currentMap].get()->GetActions()->at(i)->GetName().c_str(),
 			ImGuiTreeNodeFlags_FramePadding | ImGuiTreeNodeFlags_DefaultOpen | (actionMaps[currentMap].get()->GetActions()->at(currentAction) == actionMaps[currentMap].get()->GetActions()->at(i) ? ImGuiTreeNodeFlags_Selected : 0));
 
+		if (ImGui::IsMouseDoubleClicked(0) && ImGui::IsItemHovered())
+		{
+			showActionNamePopUp = true;
+		}
+
 		if (ImGui::IsItemClicked())
 		{
 			currentAction = i;
@@ -174,6 +186,22 @@ void InputActionMenu::ColumnActions()
 
 		ImGui::PopID();
 	}
+	if (showActionNamePopUp)
+	{
+		ImGui::OpenPopup("SetName");
+		if (ImGui::BeginPopup("SetName"))
+		{
+			static char name[50] = "\0";
+			ImGui::InputText("##Name", name, sizeof(char) * 50);
+
+			if (ImGui::Button("Set"))
+			{
+				actionMaps[currentMap]->GetActions()->at(currentAction)->SetName(name);
+				showActionNamePopUp = false;
+			}
+			ImGui::EndPopup();
+		}
+	}
 	ImGui::EndChild();
 }
 
@@ -197,6 +225,11 @@ void InputActionMenu::ColumnActionMaps()
 		bool open = ImGui::TreeNodeEx(actionMaps[i]->GetName().c_str(),
 			(actionMaps[currentMap] == actionMaps[i] ? ImGuiTreeNodeFlags_Selected : 0) | ImGuiTreeNodeFlags_Leaf | ImGuiTreeNodeFlags_FramePadding);
 
+		if (ImGui::IsMouseDoubleClicked(0) && ImGui::IsItemHovered())
+		{
+			showActionMapNamePopUp = true;
+		}
+
 		if (ImGui::IsItemClicked())
 		{
 			currentMap = i;
@@ -207,6 +240,22 @@ void InputActionMenu::ColumnActionMaps()
 		if (open)
 		{
 			ImGui::TreePop();
+		}
+	}
+	if (showActionMapNamePopUp)
+	{
+		ImGui::OpenPopup("SetName");
+		if (ImGui::BeginPopup("SetName"))
+		{
+			static char name[50] = "\0";
+			ImGui::InputText("##Name", name, sizeof(char) * 50);
+
+			if (ImGui::Button("Set"))
+			{
+				actionMaps[currentMap]->SetName(name);
+				showActionMapNamePopUp = false;
+			}
+			ImGui::EndPopup();
 		}
 	}
 	ImGui::EndChild();
@@ -280,6 +329,25 @@ bool InputActionMenu::LoadInputActionFile(const char* path)
 		DEBUG_LOG("Input Asset couldn't be loaded");
 	}
 	return false;
+}
+
+void InputActionMenu::ImportToLibrary()
+{
+	std::vector<std::string> files;
+	app->fs->DiscoverFiles("Assets/Resources/", files);
+
+	for (std::vector<std::string>::iterator it = files.begin(); it != files.end(); ++it)
+	{
+		std::string ext = (*it).substr((*it).find_last_of("."), (*it).length());
+		if (ext == ".inputaction")
+		{
+			std::string assetsPath = "Assets/Resources/";
+			assetsPath += (*it);
+			std::string libraryPath = LIBRARY_FOLDER;
+			libraryPath += (*it);
+			CopyFileA(assetsPath.c_str(), libraryPath.c_str(), false);
+		}
+	}
 }
 
 Actions::Actions()

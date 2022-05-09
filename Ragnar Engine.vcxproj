@@ -296,6 +296,7 @@
     <ClInclude Include="Engine\Source\DialogueSystem.h" />
     <ClInclude Include="Engine\Source\DropDownComponent.h" />
     <ClInclude Include="Engine\Source\ImageComponent.h" />
+    <ClInclude Include="Engine\Source\InputActionBindings.h" />
     <ClInclude Include="Engine\Source\LightComponent.h" />
     <ClInclude Include="Engine\Source\Lights.h" />
     <ClInclude Include="Engine\Source\FogWarMenu.h" />

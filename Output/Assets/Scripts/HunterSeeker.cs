@@ -8,6 +8,8 @@ public class HunterSeeker : RagnarComponent
 	Rigidbody rb;
 	GameObject player;
     public GameObject sceneAudio;
+	ParticleSystem leftParticles;
+	ParticleSystem rightParticles;
 
 	public void Start()
 	{
@@ -21,7 +23,11 @@ public class HunterSeeker : RagnarComponent
 		rb.IgnoreCollision(player, true);
         sceneAudio = GameObject.Find("AudioLevel1");
         sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_HUNTERSEEKERNEEDLE");
-    }
+		leftParticles = GameObject.Find("LeftWingParticles").GetComponent<ParticleSystem>();
+		rightParticles = GameObject.Find("RightWingParticles").GetComponent<ParticleSystem>();
+		leftParticles.Play();
+		rightParticles.Play();
+	}
 	public void Update()
 	{
 		if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
@@ -37,6 +43,8 @@ public class HunterSeeker : RagnarComponent
                 GameObject player = GameObject.Find("Player_2");
 				player.GetComponent<Player>().SetControled(true);
 				InternalCalls.Destroy(gameObject);
+				leftParticles.Pause();
+				rightParticles.Pause();
 			}
 		}
 	}
@@ -71,7 +79,8 @@ public class HunterSeeker : RagnarComponent
         {
 			player.GetComponent<Player>().SetControled(true);
 			InternalCalls.Destroy(gameObject);
-			
-        }
+			leftParticles.Pause();
+			rightParticles.Pause();
+		}
 	}
 }

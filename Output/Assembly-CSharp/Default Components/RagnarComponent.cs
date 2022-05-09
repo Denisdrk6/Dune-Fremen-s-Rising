@@ -37,6 +37,7 @@ namespace RagnarEngine
         NAVAGENT,
         PARTICLE_SYSTEM,
         BILLBOARD,
+        INPUT_ACTION,
     }
 
     public class RagnarComponent
@@ -64,6 +65,7 @@ namespace RagnarEngine
             { typeof(UISlider), ComponentType.UI_SLIDER},
             { typeof(UIText), ComponentType.UI_TEXT},
             { typeof(Light), ComponentType.LIGHT},
+            { typeof(InputAction), ComponentType.INPUT_ACTION},
         };
 
         public RagnarComponent()

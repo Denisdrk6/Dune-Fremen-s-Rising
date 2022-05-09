@@ -21,7 +21,14 @@ enum KeyState
 	KEY_IDLE = 0,
 	KEY_DOWN,
 	KEY_REPEAT,
-	KEY_UP
+	KEY_UP,
+	KEY_TWICE
+};
+
+struct TwiceKey
+{
+	int keyID = -1;
+	float timer = 0;
 };
 
 //Adapted from SDL_GameControllerAxis
@@ -102,6 +109,7 @@ public:
 private:
 	KeyState* keyboard;
 	KeyState mouseButtons[MAX_MOUSE_BUTTONS];
+	TwiceKey twiceKey;
 	int mouseX;
 	int mouseY;
 	int mouseZ;

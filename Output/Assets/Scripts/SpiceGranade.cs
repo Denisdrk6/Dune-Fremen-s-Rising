@@ -4,18 +4,23 @@ using RagnarEngine;
 public class SpiceGranade : RagnarComponent
 {
 	Rigidbody goRB;
+
 	private float force = 1050;
 	public float explosionRadius = 6f;
 	private float cooldown = 0f;
+	private Vector3 relativePos;
+
 	public bool pendingToDelete = false;
     private GameObject sceneAudio;
 	public void Start()
 	{
+		goRB = gameObject.GetComponent<Rigidbody>();
         sceneAudio = GameObject.Find("AudioLevel1");
 		AimMethod();
 	}
 	public void Update()
 	{
+		goRB.ApplyVelocity(relativePos.normalized * 25);
 		if (cooldown > 0 && gameObject != null)
 		{
 			cooldown -= Time.deltaTime;
@@ -30,21 +35,24 @@ public class SpiceGranade : RagnarComponent
 	private void AimMethod()
 	{
 		GameObject player = GameObject.Find("Player_2");
-		NavAgent agent = player.GetComponent<NavAgent>();
-
 		Vector3 pos = player.transform.globalPosition;
-		pos.y += 1;
-		gameObject.transform.localPosition = pos;
-
-		Vector3 direction = agent.hitPosition - player.transform.globalPosition;
-		direction.y = 0;
-
-		goRB = gameObject.GetComponent<Rigidbody>();
+		pos.y += 1.5f;
 		goRB.SetBodyPosition(pos);
-		goRB.IgnoreCollision(player, true);
-		goRB.ApplyCentralForce(direction.normalized * force);
+		gameObject.transform.globalPosition = pos;
 
-		agent.hitPosition = player.transform.globalPosition;
+		float radius = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().radius;
+		Vector3 hitPoint = GameObject.Find("LevelManager").GetComponent<Level_1>().hitPoint;
+		relativePos = hitPoint - pos;
+		if (relativePos.magnitude > radius)
+		{
+			relativePos.y = hitPoint.y;
+			pos.y -= 1.5f;
+			Vector3 newPos = pos + relativePos.normalized * radius;
+			pos.y += 1.5f;
+			relativePos = newPos - pos;
+		}
+
+		goRB.IgnoreCollision(player, true);
 	}
 	public void OnCollisionEnter(Rigidbody other)
 	{

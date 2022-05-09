@@ -11,11 +11,11 @@ public class Knife : RagnarComponent
 	public void Start()
     {
         AimMethod();
-    }
+		gameObject.GetComponent<ParticleSystem>().Play();
+	}
 
     private void AimMethod()
     {
-    	gameObject.GetComponent<ParticleSystem>().Play();
         GameObject player = GameObject.Find("Player");
         NavAgent agent = player.GetComponent<NavAgent>();
 
@@ -27,8 +27,14 @@ public class Knife : RagnarComponent
 
         Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
         goRB.SetBodyPosition(pos);
+
+		Vector3 newForward = direction.normalized;
+		double angle = Math.Atan2(newForward.x, newForward.z);
+		Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+		goRB.SetBodyRotation(rot);
+
         goRB.IgnoreCollision(player, true);
-        goRB.ApplyCentralForce(direction.normalized * force);
+        goRB.ApplyCentralForce(newForward * force);
 
 		agent.hitPosition = player.transform.globalPosition;
 	}
@@ -62,7 +68,7 @@ public class Knife : RagnarComponent
 
 	private Vector3 HitEnemy(NavAgent agent, GameObject player)
 	{
-		gameObject.GetComponent<ParticleSystem>().Pause();
+		
 			
 		GameObject obj = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
 
@@ -77,6 +83,7 @@ public class Knife : RagnarComponent
 
 	public void OnCollision(Rigidbody other)
 	{
+		gameObject.GetComponent<ParticleSystem>().Pause();
 		canReload = true;
 	}
 

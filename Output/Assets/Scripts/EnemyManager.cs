@@ -8,7 +8,6 @@ public class EnemyManager : RagnarComponent
     public List<GameObject> enemyGOs = new List<GameObject>();
     public List<GameObject> deadEnemies = new List<GameObject>();
     public GameObject[] colliders;
-    public int enemyCount = 0;
 
     public void Start()
     {
@@ -24,32 +23,35 @@ public class EnemyManager : RagnarComponent
         for(int i = 0; i < enemyGOs.Count; i++)
         {
             enemyGOs[i].name = enemies[i].name;
+            enemies[i].state = EnemyState.IDLE;
             enemyGOs[i].SubmitOutlineDrawing(new Vector3(1, 0, 0));
             switch (enemies[i].type)
             {
                 case EnemyType.BASIC:
                     enemyGOs[i].GetComponent<BasicEnemy>().waypoints = enemies[i].waypoints;
-                    enemyGOs[i].GetComponent<BasicEnemy>().state = EnemyState.IDLE;
+                    enemyGOs[i].GetComponent<BasicEnemy>().state = enemies[i].state;
+                    enemyGOs[i].GetComponent<BasicEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<BasicEnemy>().colliders = colliders;
                     break;
                 case EnemyType.TANK:
                     enemyGOs[i].GetComponent<TankEnemy>().waypoints = enemies[i].waypoints;
-                    enemyGOs[i].GetComponent<TankEnemy>().state = EnemyState.IDLE;
+                    enemyGOs[i].GetComponent<TankEnemy>().state = enemies[i].state;
+                    enemyGOs[i].GetComponent<TankEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<TankEnemy>().colliders = colliders;
                     break;
                 case EnemyType.UNDISTRACTABLE:
                     enemyGOs[i].GetComponent<UndistractableEnemy>().waypoints = enemies[i].waypoints;
-                    enemyGOs[i].GetComponent<UndistractableEnemy>().state = EnemyState.IDLE;
+                    enemyGOs[i].GetComponent<UndistractableEnemy>().state = enemies[i].state;
+                    enemyGOs[i].GetComponent<UndistractableEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<UndistractableEnemy>().colliders = colliders;
                     break;
                 case EnemyType.AIR:
                     enemyGOs[i].GetComponent<AirEnemy>().waypoints = enemies[i].waypoints;
-                    enemyGOs[i].GetComponent<AirEnemy>().state = EnemyState.IDLE;
+                    enemyGOs[i].GetComponent<AirEnemy>().state = enemies[i].state;
+                    enemyGOs[i].GetComponent<AirEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<AirEnemy>().colliders = colliders;
                     break;
             }
-            enemies[i].state = EnemyState.IDLE;
-
             enemyGOs[i].GetComponent<Rigidbody>().SetBodyPosition(enemies[i].pos);
         }
 
@@ -63,40 +65,41 @@ public class EnemyManager : RagnarComponent
         // Death Control
         if(enemyGOs.Count > 0)
         {
-            foreach(GameObject go in enemyGOs)
+            for (int i = 0; i < enemyGOs.Count; i++)
             {
-                if((go.GetComponent<BasicEnemy>().pendingToDelete && go.GetComponent<BasicEnemy>().ToString() == "BasicEnemy") || (go.GetComponent<AirEnemy>().pendingToDelete && go.GetComponent<AirEnemy>().ToString() == "AirEnemy") || (go.GetComponent<TankEnemy>().pendingToDelete && go.GetComponent<TankEnemy>().ToString() == "TankEnemy") || (go.GetComponent<UndistractableEnemy>().pendingToDelete && go.GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy"))
+                if ((enemyGOs[i].GetComponent<BasicEnemy>().pendingToDelete && enemyGOs[i].GetComponent<BasicEnemy>().ToString() == "BasicEnemy") || (enemyGOs[i].GetComponent<AirEnemy>().pendingToDelete && enemyGOs[i].GetComponent<AirEnemy>().ToString() == "AirEnemy") || (enemyGOs[i].GetComponent<TankEnemy>().pendingToDelete && enemyGOs[i].GetComponent<TankEnemy>().ToString() == "TankEnemy") || (enemyGOs[i].GetComponent<UndistractableEnemy>().pendingToDelete && enemyGOs[i].GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy"))
                 {
-                    for (int i = 0; i < enemyGOs.Count; i++)
+                    deadEnemies.Add(enemyGOs[i]);
+                    enemyGOs[i].DeleteComponent<Rigidbody>(enemyGOs[i].GetComponent<Rigidbody>());
+
+                    switch (enemyGOs[i].GetComponent<BasicEnemy>().enemyType)
                     {
-                        if (enemyGOs[i] == go)
-                        {
-                            deadEnemies.Add(enemyGOs[i]);
-                            enemyGOs[i].DeleteComponent<Rigidbody>(enemyGOs[i].GetComponent<Rigidbody>());
-                            ChangeEnemyState(enemyGOs[i], EnemyState.DEATH);
-                            enemyCount++;
-                            enemies[i].state = EnemyState.DEATH;
-                            enemyGOs[i].isInteractuable = true;
-                            enemyGOs[i].interactuableColor = new Vector3(0, 0, 1);
-                        }
-                    }
+                        case EnemyType.BASIC:
+                            enemyGOs[i].ChangeMesh("enemy1_modeldeath");
+                            break;
+                            //TODO: Check if drone destroyed
+                        case EnemyType.AIR:
+                            enemyGOs[i].ChangeMesh("enemy4_modeldeath");
+                            break;
+                        case EnemyType.TANK:
+                            enemyGOs[i].ChangeMesh("enemy3_modeldeath");
+                            break;
+                        case EnemyType.UNDISTRACTABLE:
+                            enemyGOs[i].ChangeMesh("enemy2_modeldeath");
+                            break;
+                    };
+
+                    GameObject sound = InternalCalls.InstancePrefab("SoundArea", true);
+                    sound.GetComponent<Rigidbody>().SetRadiusSphere(10f);
+                    sound.GetComponent<Transform>().globalPosition = enemyGOs[i].GetComponent<Transform>().globalPosition;
+
+                    ChangeEnemyState(enemyGOs[i], EnemyState.DEATH);
+                    enemies[i].state = EnemyState.DEATH;
+                    enemyGOs[i].isInteractuable = true;
+                    enemyGOs[i].interactuableColor = new Vector3(0, 0, 1);
+                    enemyGOs[i].GetComponent<BasicEnemy>().pendingToDelete = false;
                 }
             }
-        }
-
-        foreach (GameObject de in deadEnemies)
-        {
-            Vector3 maxPoint = de.GetMaxAABB();
-            maxPoint.x *= 1.08f;
-            maxPoint.y *= 0.25f;
-            maxPoint.z *= 1f;
-
-            Vector3 minPoint = de.GetMinAABB();
-            minPoint.x *= 0.98f;
-            minPoint.y *= 1f;
-            minPoint.z *= 1.015f;
-
-            de.SetSizeAABB(minPoint, maxPoint);
         }
     }
 

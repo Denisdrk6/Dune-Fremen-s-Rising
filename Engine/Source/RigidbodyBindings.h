@@ -13,6 +13,7 @@
 #include <metadata/class.h>
 
 #include "BulletDynamics/Dynamics/btRigidBody.h"
+#include "btBulletDynamicsCommon.h"
 #include "Math/float3.h"
 
 
@@ -24,6 +25,15 @@ void ApplyCentralForce(MonoObject* go, MonoObject* force)
 	btRigidBody* body = rb->GetBody();
 	body->activate(true);
 	body->applyCentralForce(f);
+}
+void ApplyVelocity(MonoObject* go, MonoObject* velocity)
+{
+	float3 f = app->moduleMono->UnboxVector(velocity);
+
+	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
+	btRigidBody* body = rb->GetBody();
+	body->activate(true);
+	body->setLinearVelocity(f);
 }
 
 void ApplyCentralImpulse(MonoObject* go, MonoObject* impulse)
@@ -123,4 +133,10 @@ void SetBodyRotation(MonoObject* go, MonoObject* pos)
 	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
 	Quat bRot = app->moduleMono->UnboxQuat(pos);
 	rb->GetBody()->getWorldTransform().setRotation(bRot);
+}
+
+void SetRadiusSphere(MonoObject* go, float rad)
+{
+	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
+	static_cast<btSphereShape*>(rb->GetBody()->getCollisionShape())->setUnscaledRadius(rad);
 }
