@@ -251,6 +251,8 @@ bool CameraComponent::Update(float dt)
 		camera.SetFront(newFront);
 	}
 
+	DEBUG_LOG("Locked = %d", lockControlls);
+
 	// -------------MOVEMENT---------------
 	if (!lockControlls)
 	{

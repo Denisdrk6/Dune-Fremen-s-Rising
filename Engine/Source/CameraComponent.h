@@ -110,5 +110,5 @@ private:
 	float4 limits;
 
 	//Lock
-	bool lockControlls = true;
+	bool lockControlls = false;
 };

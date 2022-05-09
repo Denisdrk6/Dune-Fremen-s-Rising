@@ -40,6 +40,8 @@ public class CameraShowcase : RagnarComponent
         camComponent = gameObject.GetComponent<Camera>();
 
         ogRotation = camComponent.GetAngle();
+
+        camComponent.LockControlls(true);
     }
 
     // Lerps
