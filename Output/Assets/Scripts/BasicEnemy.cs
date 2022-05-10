@@ -78,7 +78,19 @@ public class BasicEnemy : RagnarComponent
             if (childs[i].name == "StunParticles")
             {
                 stunPartSys = childs[i].GetComponent<ParticleSystem>();
-                break;
+                //break;
+            }
+            else if (childs[i].name == "StabParticles")
+            {
+                childs[i].GetComponent<ParticleSystem>().Pause();
+            }
+            else if (childs[i].name == "KnifeParticles")
+            {
+                childs[i].GetComponent<ParticleSystem>().Pause();
+            }
+            else if (childs[i].name == "SwordSlashParticles")
+            {
+                childs[i].GetComponent<ParticleSystem>().Pause();
             }
         }
 
@@ -215,6 +227,14 @@ public class BasicEnemy : RagnarComponent
                 {
                     gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_BULLETHIT");
                     deathTimer = 2f;
+                    for (int i = 0; i < childs.Length; ++i)
+                    {
+                        if (childs[i].name == "KnifeParticles")
+                        {
+                            childs[i].GetComponent<ParticleSystem>().Play();
+                            break;
+                        }
+                    }
                     gameObject.GetComponent<Animation>().PlayAnimation("Dying");
                 }
             }
@@ -237,18 +257,11 @@ public class BasicEnemy : RagnarComponent
         if (state != EnemyState.DEATH)
         {
             //// Paul ========================================
-            if (other.gameObject.name == "Rock")
+            if (other.gameObject.name == "SoundArea")
             {
                 // DISTRACTION (ROTATE VISION, NO MOVEMENT TO THE DISTRACTION)
                 distracted = true;
                 distractedTimer = 5f;
-                Distraction(other.gameObject.transform.globalPosition);
-            }
-            if (other.gameObject.name == "Eagle")
-            {
-                // DISTRACTION (ROTATE VISION, NO MOVEMENT TO THE DISTRACTION)
-                distracted = true;
-                distractedTimer = 6f;
                 Distraction(other.gameObject.transform.globalPosition);
             }
 
@@ -305,7 +318,7 @@ public class BasicEnemy : RagnarComponent
 
         if (coneRotate) enemyForward = RotateVector(enemyForward, 80, 2);
 
-        index = RayCast.PerceptionCone(enemyPos, enemyForward, 60, 10, 10, players, players.Length, colliders, colliders.Length);
+        index = RayCast.PerceptionCone(enemyPos, enemyForward, 60, 10, 12, players, players.Length, colliders, colliders.Length);
         if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }

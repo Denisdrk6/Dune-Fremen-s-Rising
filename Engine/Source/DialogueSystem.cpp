@@ -5,6 +5,7 @@
 #include "Globals.h"
 #include "Imgui/imgui.h"
 #include "IconsFontAwesome5.h"
+#include "ModuleSceneManager.h"
 
 #define MARGIN_IN_TEXT 45
 
@@ -27,6 +28,7 @@ DialogueSystem::DialogueSystem()
 	newDialogueFile = false;
 	createDialogue = false;
 	fileName = "";
+	lenguage = lenguageList::SPANISH;
 }
 
 DialogueSystem::~DialogueSystem()
@@ -278,7 +280,20 @@ void DialogueSystem::LoadDialogue(std::string path)
 //MHF
 void DialogueSystem::LoadDialogueXML()
 {
-	std::string a = "dialogos_esp2.xml";
+	std::string a;
+	lenguage = (lenguageList)app->sceneManager->GetLenguage();
+	Clean();
+	switch (lenguage)
+	{
+	case lenguageList::SPANISH:
+		a = "dialogos_esp2.xml";
+		break;
+	case lenguageList::ENGLISH:
+		a = "dialogos_ing.xml";
+		break;
+	default:
+		break;
+	}
 	std::string path = DIALOGUES_FOLDER + a;
 	pugi::xml_parse_result result = dialoguesXML.load_file(path.c_str());
 
@@ -467,6 +482,7 @@ void DialogueSystem::ImportToLibrary()
 }
 
 void DialogueSystem::SetCurrentDialogueIdXML(int id) {
+	currentDialogueID = id;
 	for (int i = 0; i < aDialogueXML.size(); i++) {
 		if (id == aDialogueXML[i]->id) {
 			currDialogXML = aDialogueXML[i];

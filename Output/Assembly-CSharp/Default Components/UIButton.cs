@@ -39,6 +39,9 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern int LoadButtonTexture(string path);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void SetVisualDisabled(bool newDisabled);
         public extern string text
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]

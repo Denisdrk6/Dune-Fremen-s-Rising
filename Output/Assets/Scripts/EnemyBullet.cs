@@ -33,7 +33,7 @@ public class EnemyBullet : RagnarComponent
 		if (obj != null)
 		{
 			//Debug.Log(obj.name.ToString());
-			obj.GetComponent<Player>().hitPoints -= 1;
+			obj.GetComponent<Player>().GetHit(1);
 			InternalCalls.RequestDamageFeedback();
 		}
 

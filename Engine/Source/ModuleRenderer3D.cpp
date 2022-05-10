@@ -210,6 +210,7 @@ bool ModuleRenderer3D::Start()
 	coneShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/basic.shader")));
 	textureShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/texture.shader")));
 	damageTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/test.png")));
+	whiteTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/white.png")));
 
 	return true;
 }
@@ -444,8 +445,28 @@ bool ModuleRenderer3D::PostUpdate()
 	
 	glEnable(GL_BLEND);
 	app->userInterface->Draw();
-	glDisable(GL_BLEND);
 	
+	if (app->sceneManager->IsSceneChanging())
+	{
+		textureShader->Bind();
+		textureShader->SetUniform1f("alpha", app->sceneManager->GetTransitionAlpha());
+		textureShader->SetUniformVec3f("color", { 0,0,0 });
+
+		glActiveTexture(GL_TEXTURE0);
+		glBindTexture(GL_TEXTURE_2D, whiteTexture->GetId());
+		GLuint textLoc1 = glGetUniformLocation(whiteTexture->GetId(), "tex");
+		glUniform1i(textLoc1, 0);
+
+		distVao->Bind();
+		distIbo->Bind();
+
+		glDrawElements(GL_TRIANGLES, distIbo->GetCount(), GL_UNSIGNED_INT, 0);
+		
+		distVao->Unbind();
+		distIbo->Unbind();
+	}
+
+	glDisable(GL_BLEND);
 	glEnable(GL_DEPTH_TEST);
 	glBindTexture(GL_TEXTURE_2D, 0);
 
@@ -886,6 +907,7 @@ void ModuleRenderer3D::DrawDamageFeedback()
 
 	glEnable(GL_BLEND);
 	textureShader->SetUniform1f("alpha", alpha);
+	textureShader->SetUniformVec3f("color", { 1,1,1 });
 	glDrawElements(GL_TRIANGLES, distIbo->GetCount(), GL_UNSIGNED_INT, 0);
 	glDisable(GL_BLEND);
 

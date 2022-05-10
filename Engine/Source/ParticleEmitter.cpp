@@ -758,6 +758,7 @@ void ParticleEmitter::NextBatch()
 
 void ParticleEmitter::RestartEmitter()
 {
+	isActive = false;
 	particlePool.clear();
 	particlePool.resize(maxParticles);
 }

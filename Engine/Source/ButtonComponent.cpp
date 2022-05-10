@@ -156,7 +156,7 @@ bool ButtonComponent::Update(float dt)
 		state = State::DISABLED;
 	else
 		state = State::NORMAL;*/
-	if (owner->active) {
+	if (owner->active && !visualDisabled) {
 		
 			if (app->userInterface->focusedGameObject == owner)
 			{

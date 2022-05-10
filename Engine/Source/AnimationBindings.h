@@ -3,6 +3,7 @@
 #include "ScriptComponent.h"
 
 #include "AnimationComponent.h"
+#include "Animation.h"
 
 #include <metadata\object-forward.h>
 #include <metadata\object.h>
@@ -18,4 +19,14 @@ void PlayAnimation(MonoObject* go, MonoObject* animationName)
 bool HasFinished(MonoObject* go)
 {
 	return GetComponentMono<AnimationComponent*>(go)->HasFinished();
+}
+
+float GetDuration(MonoObject* go)
+{
+	return GetComponentMono<AnimationComponent*>(go)->currAnim->anim->GetDuration();
+}
+
+float GetLoopTime(MonoObject* go)
+{
+	return GetComponentMono<AnimationComponent*>(go)->loopTime;
 }

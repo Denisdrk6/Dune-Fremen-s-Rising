@@ -34,6 +34,9 @@ ModuleSceneManager::ModuleSceneManager(bool startEnabled) : gameState(GameState:
 	currentScene = std::static_pointer_cast<Scene>(ResourceManager::GetInstance()->GetResource(uid));
 
 	name = "SceneManager";
+
+	enteringFade = exitingFade = fadeInCompleted = false;
+	transitionAlpha = 0.0f;
 }
 
 ModuleSceneManager::~ModuleSceneManager()
@@ -43,6 +46,9 @@ ModuleSceneManager::~ModuleSceneManager()
 
 bool ModuleSceneManager::Start()
 {
+
+	lenguage = 0;
+
 	ResourceManager::GetInstance()->ImportResourcesFromLibrary();
 
 	ResourceManager::GetInstance()->ImportAllResources();
@@ -93,13 +99,46 @@ bool ModuleSceneManager::Update(float dt)
 	
 	if (changeScene)
 	{
-		lastSceneName = currentScene->GetName();
-		currentScene->UnLoad();
-		currentScene = scenes[index];
-		currentScene->Load();
-		newSceneLoaded = true;
-		changeScene = false;
-		app->navMesh->BakeNavMesh();
+		if (enteringFade)
+		{
+			float alpha = dt;
+			if (dt >= 0.3333)
+				alpha = 0.3333;
+
+			transitionAlpha += alpha;
+			if (transitionAlpha >= 1.0f)
+			{
+				transitionAlpha = 1.0f;
+				enteringFade = false;
+				fadeInCompleted = true;
+			}
+		}
+		else if (fadeInCompleted)
+		{
+			lastSceneName = currentScene->GetName();
+			app->renderer3D->gosToDrawOutline.clear();
+			currentScene->UnLoad();
+			currentScene = scenes[index];
+			currentScene->Load();
+			newSceneLoaded = true;
+			app->navMesh->BakeNavMesh();
+			fadeInCompleted = false;
+			exitingFade = true;
+		}
+		else if (exitingFade)
+		{
+			float alpha = dt;
+			if (dt >= 0.3333)
+				alpha = 0.3333;
+			
+			transitionAlpha -= alpha;
+			if (transitionAlpha <= 0.0f)
+			{
+				transitionAlpha = 0.0f;
+				exitingFade = false;
+				changeScene = false;
+			}
+		}
 	}
 
 	currentScene->Update(gameTimer.GetDeltaTime());
@@ -272,6 +311,8 @@ void ModuleSceneManager::DeleteScene(std::shared_ptr<Scene> scene)
 void ModuleSceneManager::ChangeScene(const char* sceneName)
 {
 	currentScene->UnLoad();
+	app->renderer3D->gosToDrawOutline.clear();
+
 	if (currentScene->GetAssetsPath() == "")
 	{
 		ResourceManager::GetInstance()->DeleteResource(currentScene->GetUID());
@@ -287,6 +328,9 @@ void ModuleSceneManager::NextScene()
 	if (index == scenes.size() - 1) index = 0;
 	else ++index;
 	changeScene = true;
+	enteringFade = true;
+	app->renderer3D->gosToDrawOutline.clear();
+
 }
 
 void ModuleSceneManager::NextScene(const char* name)
@@ -299,6 +343,8 @@ void ModuleSceneManager::NextScene(const char* name)
 			index = i;
 			changeScene = true;
 			pendingToBake = true;
+			enteringFade = true;
+			app->renderer3D->gosToDrawOutline.clear();
 			break;
 		}
 	}
@@ -325,6 +371,7 @@ void ModuleSceneManager::LoadScene(const char* name)
 	if (currentScene->LoadScene(name))
 	{
 		DEBUG_LOG("Succesfully loaded %s", name);
+		app->renderer3D->gosToDrawOutline.clear();
 	}
 	else
 	{

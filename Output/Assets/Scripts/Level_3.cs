@@ -5,7 +5,7 @@ public class Level_3 : RagnarComponent
 {
 	public Characters[] characters;
 	public Enemies[] enemies;
-    private Chronometer timer = null;
+    public Chronometer timer = null;
     public bool runGame = true;
     public UIButton chrono;
     public Vector3 hitPoint;
@@ -31,6 +31,12 @@ public class Level_3 : RagnarComponent
         preClick = GameObject.Find("preClick");
         preNonClick = GameObject.Find("preNonClick");
         camera = GameObject.Find("Camera").transform;
+
+        if (SaveSystem.fromContinue)
+        {
+            TimerData data = SaveSystem.LoadTimer();
+            timer.timer = data.timer;
+        }
 
         // PLAYERS
         characters = new Characters[3];
@@ -451,6 +457,8 @@ public class Level_3 : RagnarComponent
         GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters = characters;
         InternalCalls.InstancePrefab("EnemyManager");
         GameObject.Find("EnemyManager").GetComponent<EnemyManager>().enemies = enemies;
+
+        InternalCalls.InstancePrefab("Dialogue");
     }
     public void Update()
 	{
@@ -472,8 +480,8 @@ public class Level_3 : RagnarComponent
         }
 
         hitPoint.y += 0.54f;
-        if (preClick.isActive) preClick.GetComponent<Transform>().globalPosition = hitPoint;
-        if (preNonClick.isActive) preNonClick.GetComponent<Transform>().globalPosition = hitPoint;
+        if (preClick.isActive) preClick.transform.globalPosition = hitPoint;
+        if (preNonClick.isActive) preNonClick.transform.globalPosition = hitPoint;
     }
 
 }

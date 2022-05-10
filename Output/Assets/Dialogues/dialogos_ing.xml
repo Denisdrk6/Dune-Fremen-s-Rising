@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+
+	<!-- 
+		<Dialogue Id="">
+		<node AuthorId="" Line=""> 
+		</node>
+	</Dialogue>
+	-->
+<dialogueTree>
+	<!-- AuthorId:  0=Paul / 1=Chani / 2=Rehen Fremen / 3=Rabban / 4=Soldado Harkonnen / 5=General Harkonnen / 6=Lady Jessica / 7=Stilgar -->
+	<AuthorList name="Paul"></AuthorList> 
+	<AuthorList name="Chani"></AuthorList>
+	<AuthorList name="Fremen Hostage"></AuthorList>
+	<AuthorList name="Rabban"></AuthorList>
+	<AuthorList name="Harkonnen Soldier"></AuthorList>
+	<AuthorList name="Harkonnen General"></AuthorList>
+	<AuthorList name="Lady Jessica"></AuthorList>
+	<AuthorList name="Stilgar"></AuthorList>
+	
+	<!-- AuthorId:  0=Paul / 1=Chani -->
+<Dialogue Id="0">
+		<node AuthorId="1" Line="Rabban has attacked two settlements further west of here, he is looking for you Paul." >
+		</node>
+		<node AuthorId="1" Line="And he is taking his frustration out on the other Fremen tribes." >
+		</node>
+		<node AuthorId="0" Line="It is not enough to sabotage some spice distribution chain. Death is Harkonnen's real business."> 
+		</node>
+		<node AuthorId="1" Line="Every day that passes I get angrier with them, they are a scourge for this land."> 
+		</node>
+		<node AuthorId="0" Line="They have more weapons to attack our soldiers and Stilgar has asked us for patience."> 
+		</node>
+		<node AuthorId="0" Line="You are not the only one with a score to settle with the Harkonnen and I believe he has a plan."> 
+		</node>
+		<node AuthorId="1" Line="No way..."> 
+		</node>
+	</Dialogue>
+	
+	<!-- AuthorId:  2=Rehen Fremen / 3=Rabban / 4=Soldado Harkonnen  -->
+	<Dialogue Id="1">
+		<node AuthorId="2" Line="I have been giving information to your soldiers for 2 weeks, please let me go, I beg you."> 
+		</node>
+		<node AuthorId="3" Line="Are you sure this is the place? An empty canyon in the middle of the desert?"> 
+		</node>
+		<node AuthorId="3" Line="I thought you preferred the caves, maybe I'll have to return you to the place you deserve."> 
+		</node>
+		<node AuthorId="3" Line="But you are right, you have been helpful to me, and I must be fair, you are free."> 
+		</node>
+		<node AuthorId="3" Line="Silly worm, did the word shoot come out of my mouth?"> 
+		</node>
+		<node AuthorId="4" Line="I thought you were already useless to our house, sir."> 
+		</node>
+		<node AuthorId="3" Line="When did I start paying you to think? A hostage never ceases to be useful."> 
+		</node>
+		<node AuthorId="3" Line="I hope you serve as an example for the rest, there's nothing personal."> 
+		</node>
+		<node AuthorId="3" Line="Don't let anyone get out of here, send a couple of units to the other side of the ridge and set up a perimeter.">  
+		</node>
+		<node AuthorId="3" Line="Today is the day the Atreides legacy dies."> 
+		</node>
+	</Dialogue>
+	
+	<!-- AuthorId:  0=Paul / 1=Chani -->
+	<Dialogue Id="2">
+		<node AuthorId="0" Line="We have them on our own doorstep, we can end this at once."> 
+		</node>
+		<node AuthorId="1" Line="Wait, we can't just act on that way."> 
+		</node>
+		<node AuthorId="0" Line="I think we have no other choice."> 
+		</node>
+	</Dialogue>
+	
+	<!-- AuthorId:  0=Paul / 3=Rabban / 5=General Harkonnen -->
+	<Dialogue Id="3">
+		<node AuthorId="3" Line="I thought you would be more smarter than your father, you are a fool coming to me. I'd have more respect for death, boy."> 
+		</node>
+		<node AuthorId="0" Line="You have no respect for anyone's life, Arrakis people will make you pay, your actions will not leave unpunished Rabban."> 
+		</node>
+		<node AuthorId="3" Line="You're going to regret your existence Atreides fool, I'm going to end everything you love and know."> 
+		</node>
+		<node AuthorId="3" Line="And then I'll finish you off when you have absolutely nothing left, you Caladan rat."> 
+		</node>
+		<node AuthorId="5" Line="Sir, we are being informed that after your departure, disturbances are being generated to sabotage the city's spice production."> 
+		</node>
+		<node AuthorId="3" Line="It's a shame it can't be here and now, but I'll have time to watch you fall Prince of nowhere."> 
+		</node>
+		<node AuthorId="3" Line="Wait for another shuttle to arrive and take him to the Palace, I have business to attend to before I can enjoy this show."> 
+		</node>
+	</Dialogue>
+	
+	<!-- AuthorId:  0=Paul / 1=Chani / 6=Lady Jessica / 7=Stilgar -->
+	<Dialogue Id="4">
+		<node AuthorId="6" Line="Do you realize what could have happened?"> 
+		</node>
+		<node AuthorId="0" Line="I had him in front of me, I just needed a little more time."> 
+		</node>
+		<node AuthorId="7" Line="Time? Are you even aware of the lives at stake? It's not all about the honor of the Atreides, Paul."> 
+		</node>
+		<node AuthorId="7" Line="You have taken too many risks."> 
+		</node>
+		<node AuthorId="0" Line="And what would you have done?"> 
+		</node>
+		<node AuthorId="7" Line="You can't go alone against that bastard!"> 
+		</node>
+		<node AuthorId="1" Line="I hate to agree with him, but you can't go against him head on, at least not without some help."> 
+		</node>
+		<node AuthorId="7" Line="Okay, there's a change of plans, at least this raid has also taken a few of their soldiers."> 
+		</node>
+		<node AuthorId="1" Line="Are you going to Arrakeen?"> 
+		</node>
+		<node AuthorId="7" Line="Those soldiers will be plotting against the other settlements, we have to do something."> 
+		</node>
+		<node AuthorId="7" Line="Paul, Chani, you will come with me and Lady Jessica, but you will stay out of the way."> 
+		</node>
+		<node AuthorId="7" Line="I don't want to get into any trouble and I especially don't want to regret any casualties."> 
+		</node>
+		<node AuthorId="0" Line="But what if..."> 
+		</node>
+		<node AuthorId="7" Line="No more words boy, you will do as you are told."> 
+		</node>
+	</Dialogue>
+	<!-- AuthorId:  0=Paul / 1=Chani  -->
+	<Dialogue Id="5">
+		<node AuthorId="1" Line="The views are nice from here."> 
+		</node>
+		<node AuthorId="0" Line="I would enjoy them more if I didn't think about how many Harkonnen are in there."> 
+		</node>
+		<node AuthorId="1" Line="Lady Jessica will be fine, do you remember who is escorting her?"> 
+		</node>
+		<node AuthorId="0" Line="They could find them anyway."> 
+		</node>
+		<node AuthorId="1" Line="Do you want to approach the guards at the door to ask if they have seen them?"> 
+		</node>
+		<node AuthorId="0" Line="Wait, where are you going?"> 
+		</node>
+		<node AuthorId="1" Line="You are not seriously thinking we are going to ask them directly?"> 
+		</node>
+		
+	</Dialogue>
+	<!-- AuthorId:   3=Rabban / 5=Rehen / 6=Lady Jessica / 7=Stilgar -->
+	<Dialogue Id="6">
+		<node AuthorId="3" Line="Let's see who we have here."> 
+		</node>
+		<node AuthorId="6" Line="What is he doing here?"> 
+		</node>
+		<node AuthorId="7" Line="He apparently likes to draw attention to himself, but there are guards everywhere."> 
+		</node>
+		<node AuthorId="6" Line="With a bit of luck in the crowd we will go unnoticed."> 
+		</node>
+		<node AuthorId="3" Line="Hasn't the House Harkonnen been a good partner for your business?"> 
+		</node>
+		<node AuthorId="5" Line="No one wants to work with you, you are the shame of the empire, the Atreides will..."> 
+		</node>
+		
+	</Dialogue>
+	<!-- AuthorId:   3=Rabban / 6=Lady Jessica  -->
+	<Dialogue Id="7">
+		<node AuthorId="3" Line="As you can see, people are a bit upset, perhaps this will make you consider your words."> 
+		</node>
+		<node AuthorId="3" Line="What a nice surprise Jessica, although I thought you would bring your little boy with you."> 
+		</node>
+		<node AuthorId="6" Line="(Using voice) Make them drop their guns."> 
+		</node>
+		<node AuthorId="3" Line="You seem to know some tricks, I'm going to show you one of mine."> 
+		</node>
+	</Dialogue>
+	<!-- AuthorId:   3=Rabban / 7=Stilgar -->
+	<Dialogue Id="8">
+		<node AuthorId="3" Line="I almost forgot about you in the rush of the moment."> 
+		</node>
+		<node AuthorId="3" Line="Chain him in the main courtyard, tomorrow a short trip to his grave awaits him."> 
+		</node>
+		<node AuthorId="7" Line="You will pay for your crimes Rabban!"> 
+		</node>
+		<node AuthorId="7" Line="This desert will drown you and get rid of you whether I live or die!"> 
+		</node>		
+	</Dialogue>
+	<!-- AuthorId:  0=Paul / 1=Chani  -->
+	<Dialogue Id="9">
+		<node AuthorId="0" Line="I swear I'm gonna..."> 
+		</node>
+		<node AuthorId="1" Line="Hey, hey, hey, hey, stop right there. Have you seen how protected he is?"> 
+		</node>
+		<node AuthorId="0" Line="There are two roads that lead to Palacio let's go for it."> 
+		</node>
+		<node AuthorId="1" Line="Each one can go one way."> 
+		</node>
+		<node AuthorId="0" Line="While the other secures the road on the other side."> 
+		</node>		
+	</Dialogue>
+	<!-- AuthorId:  0=Paul / 1=Chani / 7=Stilgar -->
+	<Dialogue Id="10">
+		<node AuthorId="7" Line="What are you doing here?"> 
+		</node>
+		<node AuthorId="0" Line="I've seen you in a hurry, if you want we can leave?"> 
+		</node>
+		<node AuthorId="7" Line="We will talk about this later. Get ready. We have to rescue your mother."> 
+		</node>
+		<node AuthorId="0" Line="And put an end to the madness of that maniac."> 
+		</node>
+		<node AuthorId="1" Line="Are you guys done yet? I think we have more company ahead"> 
+		</node>		
+	</Dialogue>
+	<!-- AuthorId:  0=Paul / 1=Chani / 7=Stilgar -->
+	<Dialogue Id="11">
+		<node AuthorId="7" Line="Well, all we know is that they have your mother within these walls."> 
+		</node>
+		<node AuthorId="7" Line="Do not let the guards find you or we will be lost."> 
+		</node>
+		<node AuthorId="1" Line="We follow you, old man."> 
+		</node>
+		<node AuthorId="0" Line="Let's put an end to this at once."> 
+		</node>
+		<node AuthorId="7" Line="There are more guards since they took the palace, if you find anything useful we can make our way through more easily."> 
+		</node>
+	</Dialogue>
+	<!-- AuthorId:  0=Paul / 1=Chani / 7=Stilgar -->
+	<Dialogue Id="12">
+		<node AuthorId="7" Line="Give me those explosives, if we put them on that rock, we can get their attention."> 
+		</node>
+		<node AuthorId="1" Line="And so we will clear the entrance."> 
+		</node>
+	</Dialogue>
+
+	<Dialogue Id="13">
+		<node AuthorId="6" Line="Go away! (Using voice)."> 
+		</node>
+	</Dialogue>
+
+	<Dialogue Id="14">
+		<node AuthorId="3" Line="Is it so hard to shut the fuck up?"> 
+		</node>
+	</Dialogue>
+
+	<Dialogue Id="15">
+		<node AuthorId="3" Line="You have brought your friends and yourself to die here, Paul."> 
+		</node>
+		<node AuthorId="0" Line="I'm going to kill you for what you've done."> 
+		</node>
+		<node AuthorId="3" Line="What are you waiting for, kid? Come and get me."> 
+		</node>
+	</Dialogue>
+
+	<Dialogue Id="16">
+		<node AuthorId="3" Line="First I wanted to take it easy, now you're going to be crushed to death like your mother."> 
+		</node>
+		<node AuthorId="0" Line="Don't you dare talk about my mother son of a...."> 
+		</node>
+	</Dialogue>
+
+	<Dialogue Id="17">
+		<node AuthorId="1" Line="Paul?"> 
+		</node>
+		<node AuthorId="7" Line="Are you okay, boy?"> 
+		</node>
+		<node AuthorId="7" Line="Stay among the living ones Paul."> 
+		</node>
+		<node AuthorId="0" Line="... (Paul coughs as he catches his breath)"> 
+		</node>
+		<node AuthorId="1" Line="We almost lost you"> 
+		</node>
+		<node AuthorId="7" Line="If possible, save ourselves from these scares from now on."> 
+		</node>
+	</Dialogue>
+
+	<Dialogue Id="18">
+		<node AuthorId="0" Line="We got rid of Rabban."> 
+		</node>
+		<node AuthorId="1" Line="Yes, but I'm afraid others will come."> 
+		</node>
+		<node AuthorId="7" Line="Killing Rabban will not go unpunished for them."> 
+		</node>
+		<node AuthorId="0" Line="With the leadership of the Fremen, Arrakis will prosper."> 
+		</node>
+		<node AuthorId="7" Line="It will be necessary to prepare, train civilians, repair the damage..."> 
+		</node>
+		<node AuthorId="1" Line="Recovering the glory of our land..."> 
+		</node>
+		<node AuthorId="0" Line="And raise the Fremen against the empire."> 
+		</node>
+		<node AuthorId="1" Line="Arrakis needs a new leader."> 
+		</node>
+		<node AuthorId="7" Line="The people already have a chosen one, they are waiting for you Paul."> 
+		</node>
+		<node AuthorId="1" Line="Will you accept your fate, Muab-Dib?"> 
+		</node>
+	</Dialogue>
+	<!-- 
+	<Dialogue Id="">
+		<node AuthorId="" Line=""> 
+		</node>
+	</Dialogue>
+	-->
+<dialogueTree>

@@ -71,7 +71,15 @@ public:
 	std::map<char, Character> characters;
 	Shadert* shader = nullptr;
 	std::string GetSelect(); 
+
+	int GetSelectedID() { return selectedRaw; };
+	bool GetChangeState() { return changeSelected; };
+	void SetChangeState(bool change) { changeSelected = change; };
+
 private:
+
+	bool changeSelected = false;
+
 	void SetFocusedButtons();
 	void UpdateButtons(GameObject* auxiliar);
 	ComponentTransform2D* transform;

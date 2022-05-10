@@ -13,6 +13,15 @@ public class Barrel : RagnarComponent
     public void Start()
     {
         boss = GameObject.Find("Boss");
+
+        for (int i = 0; i < gameObject.childs.Length; ++i)
+        {
+            if (gameObject.childs[i].name == "BarrelExplosion")
+            {
+                gameObject.childs[i].GetComponent<ParticleSystem>().Pause();
+                break;
+            }
+        }
     }
 
     // Update is called once per frame

@@ -172,7 +172,8 @@ bool DropDownComponent::Update(float dt)
 
 				if (auxiliarButton->GetState() == State::PRESSED)
 				{
-					selectedRaw = a + 1;
+					changeSelected = true;
+					selectedRaw = a;
 					char* au = new char[30];
 					strcpy(au, auxiliarButton->GetButtonText().textt.c_str());
 					this->SetText(au);

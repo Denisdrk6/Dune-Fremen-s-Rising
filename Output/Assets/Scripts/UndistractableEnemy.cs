@@ -73,7 +73,18 @@ public class UndistractableEnemy : RagnarComponent
             if (childs[i].name == "StunParticles")
             {
                 stunPartSys = childs[i].GetComponent<ParticleSystem>();
-                break;
+            }
+            else if (childs[i].name == "StabParticles")
+            {
+                childs[i].GetComponent<ParticleSystem>().Pause();
+            }
+            else if (childs[i].name == "KnifeParticles")
+            {
+                childs[i].GetComponent<ParticleSystem>().Pause();
+            }
+            else if (childs[i].name == "SwordSlashParticles")
+            {
+                childs[i].GetComponent<ParticleSystem>().Pause();
             }
         }
 
@@ -190,6 +201,14 @@ public class UndistractableEnemy : RagnarComponent
                 if (deathTimer == -1f)
                 {
                     deathTimer = 2f;
+                    for (int i = 0; i < childs.Length; ++i)
+                    {
+                        if (childs[i].name == "KnifeParticles")
+                        {
+                            childs[i].GetComponent<ParticleSystem>().Play();
+                            break;
+                        }
+                    }
                     gameObject.GetComponent<Animation>().PlayAnimation("Dying");
                 }
             }
@@ -260,7 +279,7 @@ public class UndistractableEnemy : RagnarComponent
         Vector3 enemyForward = gameObject.transform.forward;
         Vector3 initPos = new Vector3(enemyPos.x + (enemyForward.x * offset.x * 0.6f), enemyPos.y + 0.1f, enemyPos.z + (enemyForward.z * offset.z * 0.6f));
 
-        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 8, players, players.Length, colliders, colliders.Length);
+        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 12, players, players.Length, colliders, colliders.Length);
         if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }

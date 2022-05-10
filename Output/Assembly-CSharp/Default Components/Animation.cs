@@ -17,5 +17,11 @@ namespace RagnarEngine
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern bool HasFinished();
 
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern float GetDuration();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern float GetLoopTime();
+
     }
 }

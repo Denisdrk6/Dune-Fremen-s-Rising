@@ -68,6 +68,7 @@
     <Compile Include="Assembly-CSharp\Default Components\UIText.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Chronometer.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Emitter.cs" />
+    <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Mathf.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\SceneManager.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\GameObject.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\InternalCalls.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\EnemyAbilities.cs" />
     <Compile Include="Assets\Scripts\LoseScreen.cs" />
     <Compile Include="Assets\Scripts\MainMenuBackScreen.cs" />
+    <Compile Include="Assets\Scripts\DialogueData.cs" />
     <Compile Include="Assets\Scripts\PauseMenuButton.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Abilities.cs" />
@@ -91,6 +93,7 @@
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\SoundAreaManager.cs" />
     <Compile Include="Assets\Scripts\TankEnemy.cs" />
+    <Compile Include="Assets\Scripts\TimerData.cs" />
     <Compile Include="Assets\Scripts\UndistractableEnemy.cs" />
     <Compile Include="Assets\Scripts\WinScreen.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />

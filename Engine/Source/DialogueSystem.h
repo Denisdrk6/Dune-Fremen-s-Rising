@@ -8,6 +8,11 @@
 //MHF
 #include "PugiXML/pugixml.hpp"
 //-------------------------
+enum class lenguageList
+{
+	SPANISH,
+	ENGLISH,
+};
 
 class DialogueLine
 {
@@ -57,6 +62,9 @@ public:
 	void SetCurrentDialogueIdXML(int id);
 	DialogueXML* GetCurrentDialogueXML();
 	void StartDialogueXML();
+	void SetCurrentLine() {
+		currLineXML = currDialogXML->dialogue[indexLine];
+	};
 	// If it returns false it means that the dialog is finished
 	bool NextLineXML(){
 		if (currDialogXML->dialogue.size() <= (indexLine+1)) {
@@ -71,6 +79,13 @@ public:
 	}
 	inline std::string GetOwnerOfLineXML() { return authorList[currLineXML->authorId]; }
 	inline int GetOwnerIdOfLineXML() { return currLineXML->authorId; }
+	void UpdateDialogue() {
+		currDialogXML = aDialogueXML[currentDialogueID];
+		currLineXML = currDialogXML->dialogue[indexLine];
+	}
+	// SP=1 / SP=0
+	void SetLenguage(lenguageList lenguageID) { lenguage = lenguageID; }
+	int GetLenguage() { return (int)lenguage; }
 
 	std::string TextWrap(std::string text, int margin);
 	//-------------------------
@@ -78,7 +93,7 @@ public:
 	void SaveDialogue();
 
 	void Reset();
-
+	void Clean() { aDialogueXML.clear(); }
 	inline Dialogue* GetCurrentDialogue() { return currDialogue; }
 	Dialogue* GetDialogueById(int id);
 	inline void SetDialogueAsCurrent(Dialogue* newDialog) { currDialogue = newDialog; }
@@ -105,11 +120,13 @@ private:
 	static DialogueSystem* instance;
 
 	//MHF
-	int indexLine=0;
+	int indexLine = 0;
+	int currentDialogueID = 0;
 	std::string authorList[16];
 	pugi::xml_document dialoguesXML;
 	std::vector<DialogueXML*> aDialogueXML;
 	DialogueXML* currDialogXML = nullptr;
 	DialogueLineXML* currLineXML = nullptr;
+	lenguageList lenguage;
 	//-------------------------
 };

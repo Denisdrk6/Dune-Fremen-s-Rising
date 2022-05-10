@@ -14,7 +14,9 @@ public class Trap : RagnarComponent
 		Vector3 pos = player.transform.globalPosition;
 		pos.y += gameObject.transform.globalPosition.y;
 		gameObject.transform.localPosition = pos;
-	}
+
+        GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Pause();
+    }
 	public void Update()
 	{
         if (placingTrap)

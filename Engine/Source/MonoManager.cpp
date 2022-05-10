@@ -171,6 +171,8 @@ bool MonoManager::Init(JsonParsing& node)
 	// Animation =================
 	mono_add_internal_call("RagnarEngine.Animation::PlayAnimation", PlayAnimation);
 	mono_add_internal_call("RagnarEngine.Animation::HasFinished", HasFinished);
+	mono_add_internal_call("RagnarEngine.Animation::GetDuration", GetDuration);
+	mono_add_internal_call("RagnarEngine.Animation::GetLoopTime", GetLoopTime);
 	// Animation =================
 
 	// Light =====================
@@ -271,6 +273,7 @@ bool MonoManager::Init(JsonParsing& node)
 
 	mono_add_internal_call("RagnarEngine.UIButton::SetButtonGeneralColor", SetButtonGeneralColor);
 	mono_add_internal_call("RagnarEngine.UIButton::GetButtonGeneralColor", GetButtonGeneralColor);
+	mono_add_internal_call("RagnarEngine.UIButton::SetVisualDisabled", SetVisualDisabled);
 
 	mono_add_internal_call("RagnarEngine.UICheckbox::GetIsChecked", GetIsChecked);
 	mono_add_internal_call("RagnarEngine.UICheckbox::GetCheckboxState", GetCheckboxState);

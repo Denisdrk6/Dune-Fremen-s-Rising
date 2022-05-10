@@ -4,13 +4,8 @@ using RagnarEngine;
 
 public class Rock : RagnarComponent
 {
-	public float soundRadius = 6f;
-	private float cooldown = 0f;
 	private Vector3 relativePos;
-
-	private bool pendingToDelete = false;
-	private bool hitOnce = false;
-
+	private float cooldown = -1f;
 	GameObject player;
 	Rigidbody goRB;
 
@@ -47,36 +42,30 @@ public class Rock : RagnarComponent
 	public void Update()
 	{
 		goRB.ApplyVelocity(relativePos.normalized * 25);
-		if (cooldown > 0 && gameObject != null)
-		{
-			cooldown -= Time.deltaTime;
-			if (cooldown < 0)
-			{
-				cooldown = 0f;
-				pendingToDelete = true;
-			}
-		}
-		if (pendingToDelete) InternalCalls.Destroy(gameObject);
 	}
 
 	public void OnCollisionEnter(Rigidbody other)
 	{
-		if (other.gameObject.tag == "Ground" && !hitOnce)
-        {
+		if (other.gameObject.tag == "Ground")
+		{
 			gameObject.GetComponent<AudioSource>().PlayClip("BG_SANDHITROCK");
-			hitOnce = true;
+
+			goRB.SetAsStatic();
+
+			GameObject sound = InternalCalls.InstancePrefab("SoundArea", true);
+			sound.GetComponent<Rigidbody>().SetRadiusSphere(6f);
+			sound.transform.globalPosition = gameObject.transform.globalPosition;
+			sound.GetComponent<SoundAreaManager>().stablishedTimer = 2f;
+
+			cooldown = 2f;
 		}
-
-		goRB.SetAsStatic();
-
-		Rigidbody area = gameObject.CreateComponent<Rigidbody>();
-		CreateSphereTrigger(area, soundRadius, gameObject.transform.globalPosition);
-		cooldown = 2;
-	}
-
-	private static void CreateSphereTrigger(Rigidbody rb, float radius, Vector3 pos)
-	{
-		rb.SetCollisionSphere(radius, pos.x, pos.y, pos.z);
-		rb.SetAsTrigger();
+		if (cooldown != -1f)
+		{
+			cooldown -= Time.deltaTime;
+			if (cooldown < 0)
+			{
+				InternalCalls.Destroy(gameObject);
+			}
+		}
 	}
 }

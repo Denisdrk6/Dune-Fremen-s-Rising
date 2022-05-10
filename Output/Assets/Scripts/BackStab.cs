@@ -50,6 +50,7 @@ public class BackStab : RagnarComponent
                 sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFEHIT");
                 selectedEnemy.GetComponent<TankEnemy>().pendingToDelete = true;
 			}
+
 			GameObject[] childs = selectedEnemy.childs;
 			for (int i = 0; i < childs.Length; ++i)
 			{

@@ -144,6 +144,7 @@ private:
 	
 	std::shared_ptr<Shader> textureShader;
 	std::shared_ptr<Texture> damageTexture;
+	std::shared_ptr<Texture> whiteTexture;
 
 	VertexBuffer* vbo;
 	std::shared_ptr<Shader> coneShader;

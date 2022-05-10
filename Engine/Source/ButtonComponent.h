@@ -68,6 +68,9 @@ public:
 	inline float GetFontScale() {
 		return fontScale;
 	}
+	inline void SetVisualDisabled(bool newDisabled) {
+		visualDisabled = newDisabled;
+	}
 	inline void SetAlpha(float Alpha) { alpha = Alpha; };
 	inline float GetAlpha() { return alpha; };
 	MyPlane* planeToDraw;
@@ -76,7 +79,7 @@ public:
 	std::map<char, Character> characters;
 	Shadert* shader = nullptr;
 private:
-
+	bool visualDisabled = false;
 	float alpha = 1.0f;
 	Text buttonText;
 	State state = State::NORMAL;
