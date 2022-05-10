@@ -80,6 +80,13 @@ void ScriptZoom(MonoObject* go, float t)
 	cam->ScriptZoom(t);
 }
 
+void SwitchPresets(MonoObject* go, bool preset1)
+{
+	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
+	if(preset1) cam->Preset1();
+	else cam->Preset2();
+}
+
 MonoObject* HitToTag(MonoObject* initPos, MonoObject* endPos, MonoObject* tag)
 {
 	float3 pointA = app->moduleMono->UnboxVector(initPos);

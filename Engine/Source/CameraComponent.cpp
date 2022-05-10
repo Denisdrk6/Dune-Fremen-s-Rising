@@ -256,8 +256,16 @@ bool CameraComponent::Update(float dt)
 	// -------------MOVEMENT---------------
 	if (!lockControlls)
 	{
-		UpdateMovement();
-		UpdateRotation();
+		if (preset1)
+		{
+			UpdateMovement();
+			UpdateRotation();
+		}
+		else
+		{
+			UpdateMovement2();
+			UpdateRotation2();
+		}
 	}
 
 
@@ -355,6 +363,60 @@ void CameraComponent::UpdateRotation()
 		controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
 		controllerTrans->UpdateEditorRotation();
 		controllerTrans->ForceUpdateTransform();
+	}
+}
+
+void CameraComponent::UpdateMovement2()
+{
+	if (freeMovement)
+	{
+		float3 pos = controllerTrans->GetPosition();
+		bool mouseDragMid = (app->input->GetMouseButton(2) == KeyState::KEY_REPEAT);
+		float horizontalDrag = app->input->GetMouseXMotion();
+		float verticalDrag = app->input->GetMouseYMotion();
+
+		if (mouseDragMid)
+		{
+			if (horizontalDrag)
+			{
+				pos.x += movementSpeed / 6 * horizontalDrag * sin(DEGTORAD * (horizontalAngle + 90));  // Divide by 6 to smoothen speed without changing it from input preset 1
+				pos.z += movementSpeed / 6 * horizontalDrag * cos(DEGTORAD * (horizontalAngle + 90));
+			}
+			if (verticalDrag)
+			{
+				pos.x -= movementSpeed / 6 * -verticalDrag * sin(DEGTORAD * horizontalAngle);
+				pos.z -= movementSpeed / 6 * -verticalDrag * cos(DEGTORAD * horizontalAngle);
+			}
+
+			controllerTrans->SetPosition(float3(pos.x, 0, pos.z));
+			controllerTrans->ForceUpdateTransform();
+		}
+	}
+}
+
+void CameraComponent::UpdateRotation2()
+{
+	bool mouseDragRight = (app->input->GetMouseButton(3) == KeyState::KEY_REPEAT);
+	float horizontalDrag = app->input->GetMouseXMotion();
+
+	if (app->input->GetKey(SDL_SCANCODE_LCTRL) == KeyState::KEY_REPEAT && mouseDragRight)
+	{
+		if (horizontalDrag > 1)
+		{
+			horizontalAngle -= rotationSpeed * 3;  // Multiply by 3 to smoothen speed without changing it from input preset 1
+			if (horizontalAngle < 0) horizontalAngle += 360;
+			controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
+			controllerTrans->UpdateEditorRotation();
+			controllerTrans->ForceUpdateTransform();
+		}
+		else if (horizontalDrag < -1)
+		{
+			horizontalAngle += rotationSpeed * 3;
+			if (horizontalAngle > 360) horizontalAngle -= 360;
+			controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
+			controllerTrans->UpdateEditorRotation();
+			controllerTrans->ForceUpdateTransform();
+		}
 	}
 }
 

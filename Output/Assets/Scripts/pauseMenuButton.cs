@@ -451,6 +451,7 @@ public class pauseMenuButton : RagnarComponent
 		if (actualControlOption == 0)
         {
             playerManager.GetComponent<InputAction>().SetActionMap(1);
+			GameObject.Find("Camera").GetComponent<Camera>().SwitchPresets(false);
 
 			optionsControl8.GetComponent<UIButton>().text = "Drag";
 			optionsControl9.GetComponent<UIButton>().text = "Crl L";
@@ -463,8 +464,9 @@ public class pauseMenuButton : RagnarComponent
         else if(actualControlOption == 1)
         {
             playerManager.GetComponent<InputAction>().SetActionMap(0);
+			GameObject.Find("Camera").GetComponent<Camera>().SwitchPresets(true);
 
-            optionsControl9.GetComponent<UIButton>().text = "Q E";
+			optionsControl9.GetComponent<UIButton>().text = "Q E";
 			optionsControl8.GetComponent<UIButton>().text = "WASD";
 
 			optionsControl14.GetComponent<UIButton>().text = "Z";

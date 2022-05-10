@@ -225,6 +225,7 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.Camera::LockControlls", LockControlls);
 	mono_add_internal_call("RagnarEngine.Camera::GetZoom", GetZoom);
 	mono_add_internal_call("RagnarEngine.Camera::ScriptZoom", ScriptZoom);
+	mono_add_internal_call("RagnarEngine.Camera::SwitchPresets", SwitchPresets);
 	// Camera ====================
 
 	// Scene Manager =============

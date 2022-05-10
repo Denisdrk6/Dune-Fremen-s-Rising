@@ -37,5 +37,8 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void ScriptZoom(float zoom);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void SwitchPresets(bool preset1);
     }
 }

@@ -17,6 +17,9 @@ public:
 	void UpdateRotation();
 	void UpdateMovement();
 
+	void UpdateRotation2();
+	void UpdateMovement2();
+
 	void Draw(CameraComponent* gameCam = nullptr) override;
 
 	void OnEditor() override;
@@ -56,6 +59,10 @@ public:
 	void LockControlls(bool lock) { lockControlls = lock; };
 	float GetZoom();
 	void ScriptZoom(float zoom);
+
+	// Input System
+	inline void Preset1() { preset1 = true; };
+	inline void Preset2() { preset1 = false; };
 
 private:
 	void Shake(float dt);
@@ -111,4 +118,6 @@ private:
 
 	//Lock
 	bool lockControlls = false;
+
+	bool preset1 = true;
 };
