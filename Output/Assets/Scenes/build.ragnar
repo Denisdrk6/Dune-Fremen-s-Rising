@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Level_1",
-                    "pointer": 162792224,
+                    "pointer": 404699056,
                     "type": 4,
                     "componentTable": 0,
                     "characters": 0,
@@ -1470,15 +1470,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
-                        55,
-                        -50
+                        -7.62939453125e-06,
+                        50.560401916503906,
+                        -45.964012145996094
                     ],
                     "Quaternion": [
-                        0.34202012419700623,
+                        0.34202015399932861,
+                        1.5177326062598695e-08,
                         0,
-                        0,
-                        0.93969261646270752
+                        0.93969273567199707
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -1497,12 +1497,12 @@
                     "Vertical Fov": 0.43478596210479736,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -26.652303695678711,
-                        55,
-                        129.31428527832031
+                        -25.588918685913086,
+                        50.560401916503906,
+                        125.42079162597656
                     ],
                     "Type": 3,
-                    "Zoom": -20,
+                    "Zoom": -14,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
@@ -1525,6 +1525,15 @@
                         60,
                         90
                     ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "CameraShowcase",
+                    "pointer": 702645888,
+                    "type": 4,
+                    "componentTable": 0,
+                    "waypoints": 0,
+                    "targetZoom": 1
                 }
             ]
         },
@@ -8475,7 +8484,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "pauseMenuButton",
-                    "pointer": 431053992,
+                    "pointer": 404701072,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -10650,7 +10659,7 @@
                 },
                 {
                     "Type": 16,
-                    "buttonText": "RESOLUTION\n\n\nFULLSCREEN\n\n\nV SYNC\n\n\nSHADOWS\n\n\nLANGUAGE",
+                    "buttonText": "Text",
                     "fontPath": "Library\/Fonts\/Dune_Rise.otf",
                     "fontScale": 0.5,
                     "textColor.r": 1,
@@ -10719,7 +10728,7 @@
                 },
                 {
                     "Type": 16,
-                    "buttonText": "GENERAL SOUND\n\n\n\nMUSIC SOUND\n\n\n\nFX SOUND\n\n\n\nVOICES SOUND",
+                    "buttonText": "Text",
                     "fontPath": "Library\/Fonts\/Dune_Rise.otf",
                     "fontScale": 0.5,
                     "textColor.r": 1,
@@ -11376,7 +11385,7 @@
                 },
                 {
                     "Type": 16,
-                    "buttonText": "PAUSE\n\nSELECT\nCHAR1\n\nSELECT\nCHAR2\n\nSELECT\nCHAR3\n\nMOVE\nCHAR\n\nINTERACT\n\nCROUCH\n\nMOVE\nCAMERA\n\nROTATE\nCAMERA\n\nZOOM\nCAMERA",
+                    "buttonText": "Text",
                     "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 0.5,
                     "textColor.r": 1,
@@ -11445,7 +11454,7 @@
                 },
                 {
                     "Type": 16,
-                    "buttonText": "RESET\nCAMERA\n\nSAVE\nPOINT\n\nLOAD\nPOINT\n\nSELECT\nSKILL 1\n\nSELECT\nSKILL 2\n\nSELECT\nSKILL3\n\nSELECT\nSKILL4\n\nSELECT\nSKILL5\n\nCANCEL\nSKILL",
+                    "buttonText": "Text",
                     "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 0.5,
                     "textColor.r": 1,
@@ -11514,7 +11523,7 @@
                 },
                 {
                     "Type": 16,
-                    "buttonText": "USE\nSKILL\n\nACTIVE\nQUESTS\n\nSHOW\nCONE",
+                    "buttonText": "Text",
                     "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
                     "fontScale": 0.5,
                     "textColor.r": 1,
@@ -14929,6 +14938,552 @@
                     "Type": 1,
                     "Path": "Assets\/Resources\/preclick_non__pTorus2.fbx",
                     "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1308704540,
+            "Parent UUID": 417171234,
+            "Name": "CamWaypoints",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "Assets\/Prefabs\/CamWaypoints.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1531159667,
+            "Parent UUID": 1308704540,
+            "Name": "1S",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -48.131721496582031,
+                        0,
+                        83
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1823316579,
+            "Parent UUID": 1308704540,
+            "Name": "1A",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -70.780876159667969,
+                        0,
+                        83
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 511455897,
+            "Parent UUID": 1308704540,
+            "Name": "1B",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -70.779998779296875,
+                        0,
+                        16
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 216248444,
+            "Parent UUID": 1308704540,
+            "Name": "2S",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        10.859598159790039,
+                        0,
+                        16
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1679748403,
+            "Parent UUID": 1308704540,
+            "Name": "2A",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        57.880001068115234,
+                        0,
+                        16
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1205177462,
+            "Parent UUID": 1308704540,
+            "Name": "2B",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        57.876335144042969,
+                        0,
+                        -42
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 727978519,
+            "Parent UUID": 1308704540,
+            "Name": "3S",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        44,
+                        0,
+                        -42
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 871095243,
+            "Parent UUID": 1308704540,
+            "Name": "3A",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        44,
+                        50,
+                        -42
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.37262836098670959,
+                        0,
+                        0.92798066139221191
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0.76367950439453125,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1015957327,
+            "Parent UUID": 1308704540,
+            "Name": "3B",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -11.135265350341797,
+                        50,
+                        13.173384666442871
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.38284304738044739,
+                        0,
+                        0.92381340265274048
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0.78574371337890625,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2017437935,
+            "Parent UUID": 1308704540,
+            "Name": "4S",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -11.140000343322754,
+                        30,
+                        13.170000076293945
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 211238921,
+            "Parent UUID": 1308704540,
+            "Name": "4A",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -11.140000343322754,
+                        0,
+                        13.170000076293945
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1421164061,
+            "Parent UUID": 1308704540,
+            "Name": "4B",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -56,
+                        0,
+                        83
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 923892353,
+            "Parent UUID": 1308704540,
+            "Name": "5S",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "CamWaypoints",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -48.130001068115234,
+                        0,
+                        83
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         }
