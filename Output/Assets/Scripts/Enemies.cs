@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using RagnarEngine;
 
 public enum EnemyType
@@ -23,15 +24,14 @@ public class Enemies
 {
     // Basic Enemy info
     public string name;
-    public string prefabPath;
     public EnemyType type;
     public EnemyState state;
 
     // Position
-    public Vector3 pos;
+    public GameObject spawnPoint;
 
     // Patroling
-    public GameObject[] waypoints;
+    public List<GameObject> waypoints = new List<GameObject>();
 
     // Abilities
     public EnemyAbilities[] abilities;

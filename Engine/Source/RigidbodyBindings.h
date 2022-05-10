@@ -128,11 +128,23 @@ void SetBodyPosition(MonoObject* go, MonoObject* pos)
 	rb->GetBody()->getWorldTransform().setOrigin(bPos);
 }
 
+MonoObject* GetBodyPosition(MonoObject* go)
+{
+	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
+	return app->moduleMono->Float3ToCS((float3)rb->GetBody()->getWorldTransform().getOrigin());
+}
+
 void SetBodyRotation(MonoObject* go, MonoObject* pos)
 {
 	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
 	Quat bRot = app->moduleMono->UnboxQuat(pos);
 	rb->GetBody()->getWorldTransform().setRotation(bRot);
+}
+
+MonoObject* GetBodyRotation(MonoObject* go)
+{
+	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
+	return  app->moduleMono->QuatToCS(Quat(rb->GetBody()->getWorldTransform().getRotation()));
 }
 
 void SetRadiusSphere(MonoObject* go, float rad)

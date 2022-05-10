@@ -31,7 +31,7 @@ public class RockBoss : RagnarComponent
         if (deathTimer >= 0)
         {
             deathTimer -= Time.deltaTime;
-            if (deathTimer < 0)
+            if (deathTimer <= 0)
             {
                 deathTimer = -1f;
                 InternalCalls.Destroy(gameObject);
@@ -41,7 +41,10 @@ public class RockBoss : RagnarComponent
 	
     public void OnCollision (Rigidbody other)
     {
-        deathTimer = 0.3f;
-        gameObject.GetComponent<ParticleSystem>().Play();
+        if (deathTimer == -1)
+        {
+            deathTimer = 0.3f;
+            gameObject.GetComponent<ParticleSystem>().Play();
+        }
     }
 }

@@ -53,7 +53,13 @@ namespace RagnarEngine
         public extern void SetBodyPosition(Vector3 position);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern Vector3 GetBodyPosition();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void SetBodyRotation(Quaternion rotation);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern Quaternion GetBodyRotation();
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void SetRadiusSphere(float rad);

@@ -43,7 +43,7 @@ public class Barrel : RagnarComponent
         }
     }
 
-    public void OnColision(Rigidbody other)
+    public void OnCollision(Rigidbody other)
     {
         if (other.gameObject.name == "Knife")
         {

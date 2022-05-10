@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using RagnarEngine;
 
 public class UndistractableEnemy : RagnarComponent
@@ -6,15 +7,17 @@ public class UndistractableEnemy : RagnarComponent
     public int velocity = 1000;
 
     public NavAgent agents;
-    public GameObject[] waypoints;
+    public List<GameObject> waypoints;
     private int destPoint = 0;
     public EnemyState state;
     public EnemyType enemyType;
 
+    public Vector3 initialPos;
+    public Quaternion initialRot;
+
     // States
     public bool patrol;
     public bool stopState = false;
-    private bool stay = false;
 
     // Timers
     public float stoppedTime = 0f;
@@ -31,6 +34,7 @@ public class UndistractableEnemy : RagnarComponent
     public bool canShoot = true;
     public bool pendingToDelete = false;
     public bool controlled = false;
+    public bool returning = false;
 
     // Timers
     public float shootCooldown = 0f;
@@ -39,8 +43,10 @@ public class UndistractableEnemy : RagnarComponent
     float initialSpeed;
 
     bool distracted = false;
-    float distractedTimer = -1f;
     bool stunned = false;
+    public bool backstab = false;
+    
+    float distractedTimer = -1f;
     float stunnedTimer = -1f;
 
     GameObject[] childs;
@@ -57,11 +63,11 @@ public class UndistractableEnemy : RagnarComponent
         if (state != EnemyState.DEATH)
         {
             gameObject.GetComponent<Animation>().PlayAnimation("Idle");
-            if (waypoints.Length != 0)
+            if (waypoints.Count != 0)
             {
                 GotoNextPoint();
                 patrol = false;
-            } 
+            }
         }
 
         initialSpeed = agents.speed;
@@ -101,7 +107,16 @@ public class UndistractableEnemy : RagnarComponent
                 {
                     if (!stunned)
                     {
-                        if (!distracted)
+                        if (returning)
+                        {
+                            agents.CalculatePath(initialPos);
+                            if (agents.MovePath())
+                            {
+                                gameObject.GetComponent<Rigidbody>().SetBodyRotation(initialRot);
+                                returning = false;
+                            }
+                        }
+                        if (!distracted && waypoints.Count != 0)
                         {
                             Patrol();
                         }
@@ -157,12 +172,34 @@ public class UndistractableEnemy : RagnarComponent
 
                 }
                 agents.MovePath();
+                if (!backstab && Input.GetKey(KeyCode.Z) == KeyState.KEY_REPEAT)
+                {
+                    backstab = true;
+                    //area de luz
+                }
+                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_DOWN && backstab)
+                {
+                    Debug.Log("BackStab enemy");
+                    InternalCalls.InstancePrefab("BackStabEnemy");
+                    backstab = false;
+                }
+                if (Input.GetMouseClick(MouseButton.RIGHT) == KeyState.KEY_DOWN && backstab)
+                {
+                    backstab = false;
+                }
+                if (Input.GetKey(KeyCode.ALPHA1) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA2) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA3) == KeyState.KEY_DOWN)
+                {
+                    controlled = false;
+                    returning = true;
+                }
                 controlledCooldown -= Time.deltaTime;
                 if (controlledCooldown < 0)
                 {
                     controlledCooldown = 0f;
                     controlled = false;
                     players[0].GetComponent<Player>().SetControled(true);
+                    if (waypoints.Count != 0) agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
+                    else returning = true;
                 }
             }
         }
@@ -326,17 +363,10 @@ public class UndistractableEnemy : RagnarComponent
 
     public void GotoNextPoint()
     {
-        if (!stay)
-        {
-            if (waypoints.Length == 1)
-            {
-                stay = true;
-                gameObject.GetComponent<Animation>().PlayAnimation("Idle");
-            }
-            gameObject.GetComponent<Animation>().PlayAnimation("Walk");
-            agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
-            destPoint = (destPoint + 1) % waypoints.Length;
-        }
+        gameObject.GetComponent<AudioSource>().PlayClip("FOOTSTEPS");
+        gameObject.GetComponent<Animation>().PlayAnimation("Walk");
+        agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
+        destPoint = (destPoint + 1) % waypoints.Count;
     }
 
     public void Patrol()
@@ -356,7 +386,7 @@ public class UndistractableEnemy : RagnarComponent
                 {
                     stoppedTime = 0f;
                     stopState = false;
-                    if (waypoints.Length != 0)
+                    if (waypoints.Count != 0)
                     {
                         patrol = true;
                         GotoNextPoint();
@@ -365,7 +395,7 @@ public class UndistractableEnemy : RagnarComponent
             }
         }
 
-        if (agents.MovePath() && waypoints.Length != 0 && patrol && !stopState)
+        if (agents.MovePath() && waypoints.Count != 0 && patrol && !stopState)
         {
             GotoNextPoint();
         }

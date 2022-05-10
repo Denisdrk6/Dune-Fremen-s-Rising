@@ -104,7 +104,7 @@ bool Scene::Update(float dt)
 	if (resetQuadtree)
 	{
 		qTree.Clear();
-		qTree.Create(AABB(float3(-200, -50, -200), float3(200, 50, 200)));
+		qTree.Create(AABB(float3(-400, -50, -400), float3(400, 50, 400)));
 		std::stack<GameObject*> objects;
 
 		for (int i = 0; i < root->GetChilds().size(); ++i)
@@ -196,7 +196,7 @@ void Scene::NewScene()
 	camera->CreateComponent(ComponentType::CAMERA);
 	camera->SetName("Camera");
 
-	qTree.Create(AABB(float3(-200, -50, -200), float3(200, 50, 200)));
+	qTree.Create(AABB(float3(-400, -50, -400), float3(400, 50, 400)));
 
 	app->editor->SetGO(nullptr);
 }
@@ -476,7 +476,7 @@ bool Scene::LoadScene(const char* path, bool fromLibrary)
 
 	// TODO: Check this because it can be much cleaner
 	qTree.Clear();
-	qTree.Create(AABB(float3(-200, -50, -200), float3(200, 50, 200)));
+	qTree.Create(AABB(float3(-400, -50, -400), float3(400, 50, 400)));
 	app->editor->SetGO(nullptr);
 
 	return true;

@@ -49,6 +49,7 @@ void Log(const char file[], int line, const char* format, ...);
 #define SCENES_SAVE_FOLDER "Library/SavedGame/Scenes"
 #define ENEMIES_SAVE_FOLDER "Library/SavedGame/Enemies"
 #define DIALOGUES_SAVE_FOLDER "Library/SavedGame/Dialogues"
+#define CONFIG_SAVE_FOLDER "Library/SavedGame/GameConfig"
 
 // Deletes an array of buffers
 #define RELEASE_ARRAY( x )\

@@ -91,6 +91,8 @@ public:
 	bool showCreateNotLightSensibleShaderWindow = false;
 
 	void SetLenguage(int lenguageID) { lenguage = lenguageID; }
+
+	// SP=0 / ING=1
 	int GetLenguage() { return lenguage; }
 
 private:

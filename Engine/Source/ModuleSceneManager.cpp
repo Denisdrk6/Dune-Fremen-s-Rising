@@ -426,7 +426,7 @@ void ModuleSceneManager::Stop()
 	app->fs->RemoveFile("Assets/Scenes/scenePlay.ragnar");
 #endif
 	currentScene->GetQuadtree().Clear();
-	currentScene->GetQuadtree().Create(AABB(float3(-200, -50, -200), float3(200, 50, 200)));
+	currentScene->GetQuadtree().Create(AABB(float3(-400, -50, -400), float3(400, 50, 400)));
 	gameState = GameState::NOT_PLAYING;
 
 	gameTimer.SetTimeScale(1.0f);

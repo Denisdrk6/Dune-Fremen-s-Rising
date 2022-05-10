@@ -35,10 +35,14 @@ public:
 
 	inline Text GetDropDownText() { return DropDownText; };
 	inline char* GetText() { return text; };
-	void SetText(char* newText)
+	void SetText(const char* newText)
 	{
 		DropDownText.setOnlyText(newText);
 		strcpy(text, newText);
+	}
+
+	std::string GetTextID(int id) {
+		return optionsLenguaje[id];
 	}
 
 	inline Color GetActualColor() { return generalColor; };
@@ -73,6 +77,7 @@ public:
 	std::string GetSelect(); 
 
 	int GetSelectedID() { return selectedRaw; };
+	void SetSelectedID(int id) { selectedRaw = id; };
 	bool GetChangeState() { return changeSelected; };
 	void SetChangeState(bool change) { changeSelected = change; };
 
@@ -99,6 +104,8 @@ private:
 	Color textColor = white;
 	Color generalColor = white;
 	char text[64] = "DropDown";
+	// SP=0 / ING=1
+	std::vector<std::string> optionsLenguaje = {"Castellano","English"};
 	float fontScale = 1;
 	std::vector<GameObject*> hitObjs;
 	GameObject* focusedGameObject;

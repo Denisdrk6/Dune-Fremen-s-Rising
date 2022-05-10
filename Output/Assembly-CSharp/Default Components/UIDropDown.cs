@@ -39,6 +39,8 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern String GetSelected();
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void SetSelected(int id);
         public extern string text
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]
@@ -55,6 +57,7 @@ namespace RagnarEngine
         public extern int GetDropDownSelected();
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern bool GetDropDownButtonChange();
-
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern int GetLenguaje();
     }
 }

@@ -180,9 +180,15 @@ bool CheckboxComponent::OnLoad(JsonParsing& node)
 	const char* sel = new char[selected.size()];
 	sel = selected.c_str();
 	if (sel[0] == 'n')
+	{
 		actual = noSelectedMaterial;			
-	else 
+		checked = false;
+	}
+	else
+	{
 		actual = selectedMaterial;	
+		checked = true;
+	}
 	
 	return true;
 }

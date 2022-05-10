@@ -13,46 +13,48 @@ public class EnemyManager : RagnarComponent
     {
         enemyGOs.Clear();
         deadEnemies.Clear();
-        foreach (Enemies e in enemies)
-        {
-            enemyGOs.Add(InternalCalls.InstancePrefab(e.prefabPath));
-        }
 
         colliders = GameObject.FindGameObjectsWithTag("Collider");
 
-        for(int i = 0; i < enemyGOs.Count; i++)
+        for(int i = 0; i < enemies.Length; i++)
         {
-            enemyGOs[i].name = enemies[i].name;
-            enemies[i].state = EnemyState.IDLE;
-            enemyGOs[i].SubmitOutlineDrawing(new Vector3(1, 0, 0));
             switch (enemies[i].type)
             {
                 case EnemyType.BASIC:
+                    enemyGOs.Add(InternalCalls.InstancePrefab("Basic Enemy"));
+                    enemyGOs[i].name = enemies[i].name;
                     enemyGOs[i].GetComponent<BasicEnemy>().waypoints = enemies[i].waypoints;
                     enemyGOs[i].GetComponent<BasicEnemy>().state = enemies[i].state;
                     enemyGOs[i].GetComponent<BasicEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<BasicEnemy>().colliders = colliders;
                     break;
                 case EnemyType.TANK:
+                    enemyGOs.Add(InternalCalls.InstancePrefab("Tank Enemy"));
+                    enemyGOs[i].name = enemies[i].name;
                     enemyGOs[i].GetComponent<TankEnemy>().waypoints = enemies[i].waypoints;
                     enemyGOs[i].GetComponent<TankEnemy>().state = enemies[i].state;
                     enemyGOs[i].GetComponent<TankEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<TankEnemy>().colliders = colliders;
                     break;
                 case EnemyType.UNDISTRACTABLE:
+                    enemyGOs.Add(InternalCalls.InstancePrefab("Undistractable Enemy"));
+                    enemyGOs[i].name = enemies[i].name;
                     enemyGOs[i].GetComponent<UndistractableEnemy>().waypoints = enemies[i].waypoints;
                     enemyGOs[i].GetComponent<UndistractableEnemy>().state = enemies[i].state;
                     enemyGOs[i].GetComponent<UndistractableEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<UndistractableEnemy>().colliders = colliders;
                     break;
                 case EnemyType.AIR:
+                    enemyGOs.Add(InternalCalls.InstancePrefab("Air Enemy"));
+                    enemyGOs[i].name = enemies[i].name;
                     enemyGOs[i].GetComponent<AirEnemy>().waypoints = enemies[i].waypoints;
                     enemyGOs[i].GetComponent<AirEnemy>().state = enemies[i].state;
                     enemyGOs[i].GetComponent<AirEnemy>().enemyType = enemies[i].type;
                     enemyGOs[i].GetComponent<AirEnemy>().colliders = colliders;
                     break;
             }
-            enemyGOs[i].GetComponent<Rigidbody>().SetBodyPosition(enemies[i].pos);
+            enemyGOs[i].SubmitOutlineDrawing(new Vector3(1, 0, 0));
+            SetEnemyPositionAndRotation(enemyGOs[i], enemies[i]);
         }
 
         if (SaveSystem.fromContinue)
@@ -70,27 +72,28 @@ public class EnemyManager : RagnarComponent
                 if ((enemyGOs[i].GetComponent<BasicEnemy>().pendingToDelete && enemyGOs[i].GetComponent<BasicEnemy>().ToString() == "BasicEnemy") || (enemyGOs[i].GetComponent<AirEnemy>().pendingToDelete && enemyGOs[i].GetComponent<AirEnemy>().ToString() == "AirEnemy") || (enemyGOs[i].GetComponent<TankEnemy>().pendingToDelete && enemyGOs[i].GetComponent<TankEnemy>().ToString() == "TankEnemy") || (enemyGOs[i].GetComponent<UndistractableEnemy>().pendingToDelete && enemyGOs[i].GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy"))
                 {
                     deadEnemies.Add(enemyGOs[i]);
+                    enemyGOs[i].transform.globalRotation = enemyGOs[i].GetComponent<Rigidbody>().GetBodyRotation();
                     enemyGOs[i].DeleteComponent<Rigidbody>(enemyGOs[i].GetComponent<Rigidbody>());
 
                     switch (enemyGOs[i].GetComponent<BasicEnemy>().enemyType)
                     {
                         case EnemyType.BASIC:
-                            enemyGOs[i].ChangeMesh("enemy1_modeldeath");
+                            enemyGOs[i].ChangeMesh("1_modeldeath");
                             break;
                             //TODO: Check if drone destroyed
                         case EnemyType.AIR:
-                            enemyGOs[i].ChangeMesh("enemy4_modeldeath");
+                            enemyGOs[i].ChangeMesh("4_modeldeath");
                             break;
                         case EnemyType.TANK:
-                            enemyGOs[i].ChangeMesh("enemy3_modeldeath");
+                            enemyGOs[i].ChangeMesh("3_modeldeath");
                             break;
                         case EnemyType.UNDISTRACTABLE:
-                            enemyGOs[i].ChangeMesh("enemy2_modeldeath");
+                            enemyGOs[i].ChangeMesh("2_modeldeath");
                             break;
                     };
 
                     GameObject sound = InternalCalls.InstancePrefab("SoundArea", true);
-                    sound.GetComponent<Rigidbody>().SetRadiusSphere(8f);
+                    sound.GetComponent<Rigidbody>().SetRadiusSphere(10f);
                     sound.transform.globalPosition = enemyGOs[i].transform.globalPosition;
 
                     ChangeEnemyState(enemyGOs[i], EnemyState.DEATH);
@@ -101,6 +104,23 @@ public class EnemyManager : RagnarComponent
                 }
             }
         }
+    }
+
+    private void SetEnemyPositionAndRotation(GameObject e, Enemies data)
+    {
+        e.GetComponent<Rigidbody>().SetBodyPosition(data.spawnPoint.transform.globalPosition);
+
+        Quaternion rotation = GetFinalRotation(data);
+
+        e.GetComponent<Rigidbody>().SetBodyRotation(rotation);
+    }
+
+    private static Quaternion GetFinalRotation(Enemies data)
+    {
+        Vector3 newForward = data.spawnPoint.transform.forward;
+        double angle = Math.Atan2(newForward.x, newForward.z);
+        Quaternion rotation = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+        return rotation;
     }
 
     private void ChangeEnemyState(GameObject go, EnemyState newState)
@@ -138,13 +158,10 @@ public class EnemyManager : RagnarComponent
         {
             EnemyData data = SaveSystem.LoadEnemy(enemies[i].name);
 
-            Vector3 pos = new Vector3(data.position[0], data.position[1], data.position[2]);
-            enemies[i].pos = pos;
             enemies[i].state = data.state;
             enemies[i].type = data.type;
 
-            enemyGOs[i].GetComponent<Transform>().globalPosition = pos;
-            enemyGOs[i].GetComponent<Rigidbody>().SetBodyPosition(pos);
+            SetEnemyPositionAndRotation(enemyGOs[i], enemies[i]);
             switch (enemies[i].type)
             {
                 case EnemyType.BASIC:

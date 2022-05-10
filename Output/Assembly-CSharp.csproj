@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Credits.cs" />
     <Compile Include="Assets\Scripts\AirEnemy.cs" />
     <Compile Include="Assets\Scripts\BasicEnemy.cs" />
+    <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\HunterSeeker.cs" />
     <Compile Include="Assets\Scripts\DialoguesManager.cs" />
     <Compile Include="Assets\Scripts\EnemyAbilities.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\Scripts\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\QuestSystem.cs" />
     <Compile Include="Assets\Scripts\BackStabEnemy.cs" />
   </ItemGroup>
   <ItemGroup>

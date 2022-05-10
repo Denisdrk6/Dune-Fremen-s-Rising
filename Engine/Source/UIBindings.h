@@ -258,8 +258,18 @@ void SetImageAlpha(MonoObject* go, float newAlpha)
 void SetDropDownLenguage(MonoObject* go, int selected) {
 	app->sceneManager->SetLenguage(selected);
 	DropDownComponent* tr = GetComponentMono<DropDownComponent*>(go);
+	tr->SetSelectedID(selected);
 	tr->SetChangeState(false);
 }
+
+int GetLenguaje(MonoObject* go){
+	return app->sceneManager->GetLenguage();
+}
+
+void SetLenguaje(MonoObject* go, int selected) {
+	app->sceneManager->SetLenguage(selected);
+}
+
 
 void SetDropDownLenguageInPause(MonoObject* go, int selected) {
 	app->sceneManager->SetLenguage(selected);
@@ -280,6 +290,11 @@ const char* GetSelected(MonoObject* go)
 {
 	DropDownComponent* tr = GetComponentMono<DropDownComponent*>(go);
 	return tr->GetSelect().c_str();
+}
+
+void SetSelected(MonoObject* go, int id) {
+	DropDownComponent* tr = GetComponentMono<DropDownComponent*>(go);
+	tr->SetText(tr->GetTextID(id).c_str());
 }
 
 bool GetDropDownButtonChange(MonoObject* go)

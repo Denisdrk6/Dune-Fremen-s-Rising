@@ -125,7 +125,10 @@ void ParticleSystemComponent::OnEditor()
             isActive = !isActive;
 
             if (isActive)
-                timer.Start();
+            {
+                Play();
+            }
+                
             else if (!isActive)
                 timer.Stop();
         }

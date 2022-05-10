@@ -14,6 +14,17 @@ public class PlayerManager : RagnarComponent
     GameObject lightHab = null;
     DialogueManager dialogue;
 
+    UIText cd1;
+    UIText cd2;
+    UIText cd3;
+    UIText cd4;
+
+    GameObject Ability1Bg;
+    GameObject Ability2Bg;
+    GameObject Ability3Bg;
+    GameObject Ability4Bg;
+
+
     public float radius;
     public void Start()
 	{
@@ -45,6 +56,16 @@ public class PlayerManager : RagnarComponent
         }
         area = aux;
         dialogue = GameObject.Find("Dialogue").GetComponent<DialogueManager>();
+
+        cd1 = GameObject.Find("cd1").GetComponent<UIText>();
+        cd2 = GameObject.Find("cd2").GetComponent<UIText>();
+        cd3 = GameObject.Find("cd3").GetComponent<UIText>();
+        cd4 = GameObject.Find("cd4").GetComponent<UIText>();
+
+        Ability1Bg = GameObject.Find("Ability1Bg");
+        Ability2Bg = GameObject.Find("Ability2Bg");
+        Ability3Bg = GameObject.Find("Ability3Bg");
+        Ability4Bg = GameObject.Find("Ability4Bg");
 
         lightHab = GameObject.Find("ControllableLight");
         if (SaveSystem.fromContinue)
@@ -86,15 +107,21 @@ public class PlayerManager : RagnarComponent
 
     private void CooldownCounter()
     {
-        foreach (Abilities a in playableCharacter.abilities)
+        for (int j = 0; j < characters.Length; j++)
         {
-            if (a.onCooldown == true)
+            for (int i = 0; i < characters[j].abilities.Length; i++)
             {
-                a.counter += Time.deltaTime;
-                if (a.counter >= a.cooldown)
+                if (characters[j].abilities[i].onCooldown == true)
                 {
-                    a.onCooldown = false;
-                    a.counter = 0f;
+
+                    characters[j].abilities[i].counter += Time.deltaTime;
+                    if(characters[j] == playableCharacter)
+                        CooldownTimer(i);
+                    if (characters[j].abilities[i].counter >= characters[j].abilities[i].cooldown)
+                    {
+                        characters[j].abilities[i].onCooldown = false;
+                        characters[j].abilities[i].counter = 0f;
+                    }
                 }
             }
         }
@@ -197,6 +224,7 @@ public class PlayerManager : RagnarComponent
         else
         {
             //Debug.Log("Ability on Cooldown! You have" + (playableCharacter.abilities[(int)ability - 1].cooldown - playableCharacter.abilities[(int)ability - 1].counter) + "seconds left to use it again!");
+            
             playableCharacter.state = State.NONE;
         }
     }
@@ -370,6 +398,10 @@ public class PlayerManager : RagnarComponent
 
     private void PlayerCases()
     {
+        for (int i = 0; i < playableCharacter.abilities.Length; i++)
+        {
+            CooldownTimer(i);
+        }
         switch (players.Length)
         {
             case 4:
@@ -477,6 +509,120 @@ public class PlayerManager : RagnarComponent
 
             Quaternion rot = new Quaternion(data.rotation[0], data.rotation[1], data.rotation[2], data.rotation[3]);
             players[i].GetComponent<Rigidbody>().SetBodyRotation(rot); 
+        }
+    }
+
+    public void CooldownTimer(int abilityID)
+    {
+        float temp;
+        temp = playableCharacter.abilities[abilityID].cooldown - playableCharacter.abilities[abilityID].counter;
+
+        temp = (float)Math.Round((double)temp, 0);
+
+        switch(abilityID)
+        {
+            case 0:
+                cd1.text = temp.ToString();
+
+                if (playableCharacter.abilities[abilityID].onCooldown)
+                    Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(128, 128, 128);
+
+                if (temp <= 0.0f || (playableCharacter.abilities[abilityID].counter <= 0.0f))
+                    cd1.text = "";
+
+                if (!playableCharacter.abilities[abilityID].onCooldown)
+                {
+                    if (playableCharacter.name == "Paul Atreides")
+                    {
+                        Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+                    }
+                    else if (playableCharacter.name == "Chani")
+                    {
+                        Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
+                    }
+                    else if (playableCharacter.name == "Stilgar")
+                    {
+                        Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(0, 40, 255);
+                    }
+                }
+                break;
+            case 1:
+                cd2.text = temp.ToString();
+
+                if (playableCharacter.abilities[abilityID].onCooldown)
+                    Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(128, 128, 128);
+
+                if (temp <= 0.0f || (playableCharacter.abilities[abilityID].counter <= 0.0f))
+                    cd2.text = "";
+
+                if (!playableCharacter.abilities[abilityID].onCooldown)
+                {
+                    if (playableCharacter.name == "Paul Atreides")
+                    {
+                        Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+                    }
+                    else if (playableCharacter.name == "Chani")
+                    {
+                        Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
+                    }
+                    else if (playableCharacter.name == "Stilgar")
+                    {
+                        Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(0, 40, 255);
+                    }
+                }
+                break;
+            case 2:
+                cd3.text = temp.ToString();
+
+                if (playableCharacter.abilities[abilityID].onCooldown)
+                    Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(128, 128, 128);
+
+                if (temp <= 0.0f || (playableCharacter.abilities[abilityID].counter <= 0.0f))
+                    cd3.text = "";
+
+                if (!playableCharacter.abilities[abilityID].onCooldown)
+                {
+                    if (playableCharacter.name == "Paul Atreides")
+                    {
+                        Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+                    }
+                    else if (playableCharacter.name == "Chani")
+                    {
+                        Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
+                    }
+                    else if (playableCharacter.name == "Stilgar")
+                    {
+                        Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(0, 40, 255);
+                    }
+                }
+                break;
+            case 3:
+                cd4.text = temp.ToString();
+                if (playableCharacter.abilities[abilityID].onCooldown)
+                    Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(128, 128, 128);
+
+                if (temp <= 0.0f || (playableCharacter.abilities[abilityID].counter <= 0.0f))
+                {
+                    cd4.text = "";
+                }
+
+                if (!playableCharacter.abilities[abilityID].onCooldown)
+                {
+                    if (playableCharacter.name == "Paul Atreides")
+                    {
+                        Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+                    }
+                    else if (playableCharacter.name == "Chani")
+                    {
+                        Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
+                    }
+                   else if (playableCharacter.name == "Stilgar")
+                   {
+                        Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(0, 40, 255);
+                   }
+                }
+                break;
+
         }
     }
 }

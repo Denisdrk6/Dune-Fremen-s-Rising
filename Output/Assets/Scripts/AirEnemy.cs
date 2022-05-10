@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using RagnarEngine;
 
 public class AirEnemy : RagnarComponent
@@ -6,7 +7,7 @@ public class AirEnemy : RagnarComponent
     public int velocity = 1000;
 
     public NavAgent agents;
-    public GameObject[] waypoints;
+    public List<GameObject> waypoints;
     private int destPoint = 0;
     public EnemyState state;
     public EnemyType enemyType;
@@ -53,7 +54,7 @@ public class AirEnemy : RagnarComponent
         if (state != EnemyState.DEATH)
         {
             gameObject.GetComponent<Animation>().PlayAnimation("Idle");
-            if (waypoints.Length != 0)
+            if (waypoints.Count != 0)
             {
                 GotoNextPoint();
                 patrol = false;
@@ -86,7 +87,7 @@ public class AirEnemy : RagnarComponent
                 {
                     if (!stunned)
                     {
-                        if (!distracted)
+                        if (!distracted && waypoints.Count != 0)
                         {
                             Patrol();
                         }
@@ -252,7 +253,7 @@ public class AirEnemy : RagnarComponent
         //gameObject.GetComponent<AudioSource>().PlayClip("EDRONE_FLYING");
         gameObject.GetComponent<Animation>().PlayAnimation("Walk");
         agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
-        destPoint = (destPoint + 1) % waypoints.Length;
+        destPoint = (destPoint + 1) % waypoints.Count;
     }
 
     public void Patrol()
@@ -272,7 +273,7 @@ public class AirEnemy : RagnarComponent
                 {
                     stoppedTime = 0f;
                     stopState = false;
-                    if (waypoints.Length != 0)
+                    if (waypoints.Count != 0)
                     {
                         patrol = true;
                         GotoNextPoint();
@@ -281,7 +282,7 @@ public class AirEnemy : RagnarComponent
             }
         }
 
-        if (agents.MovePath() && waypoints.Length != 0 && patrol && !stopState)
+        if (agents.MovePath() && waypoints.Count != 0 && patrol && !stopState)
         {
             GotoNextPoint();
         }

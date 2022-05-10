@@ -209,7 +209,6 @@ public class Player : RagnarComponent
     {
         agent.ClearPath();
         move = Movement.IDLE;
-        action = Actions.NONE;
         ReloadState();
     }
 

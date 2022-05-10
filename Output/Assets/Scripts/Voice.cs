@@ -8,6 +8,7 @@ public class Voice : RagnarComponent
 	public GameObject[] enemies;
 	public PlayerManager playerManager;
 	NavAgent agent;
+
 	public void Start()
 	{
 		player = GameObject.Find("Player");
@@ -21,8 +22,9 @@ public class Voice : RagnarComponent
 		selectedEnemy = EnemyFound();
 		if (selectedEnemy != null)
 		{
-			Debug.Log("A");
 			AddNewEnemyToPlayer();
+			selectedEnemy.GetComponent<BasicEnemy>().initialPos = selectedEnemy.transform.globalPosition;
+			selectedEnemy.GetComponent<BasicEnemy>().initialRot = selectedEnemy.transform.globalRotation;
 		}
 		InternalCalls.Destroy(gameObject);
 	}

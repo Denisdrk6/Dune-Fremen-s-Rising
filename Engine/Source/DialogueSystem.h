@@ -83,8 +83,8 @@ public:
 		currDialogXML = aDialogueXML[currentDialogueID];
 		currLineXML = currDialogXML->dialogue[indexLine];
 	}
-	// SP=1 / SP=0
 	void SetLenguage(lenguageList lenguageID) { lenguage = lenguageID; }
+	// SP=0 / ING=1
 	int GetLenguage() { return (int)lenguage; }
 
 	std::string TextWrap(std::string text, int margin);
