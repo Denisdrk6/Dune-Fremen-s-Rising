@@ -174,7 +174,6 @@ void CameraComponent::OnEditorShake()
 
 bool CameraComponent::Update(float dt)
 {
-	DEBUG_LOG("Zoom: %f", zoom);
 	RG_PROFILING_FUNCTION("Camera Component Update");
 
 	float4 size = float4::zero;
@@ -250,8 +249,6 @@ bool CameraComponent::Update(float dt)
 		camera.SetUp(newUp);
 		camera.SetFront(newFront);
 	}
-
-	DEBUG_LOG("Locked = %d", lockControlls);
 
 	// -------------MOVEMENT---------------
 	if (!lockControlls)
