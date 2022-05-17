@@ -374,6 +374,10 @@ public class Level_1 : RagnarComponent
         if (runGame) timer.Update();
         chrono.text = timer.GetTimeToString();
 
+        if (Input.GetKey(KeyCode.L) == KeyState.KEY_DOWN)
+        {
+            SceneManager.LoadScene("Cinematic_1");
+        }
         hitPoint = RayCast.ReturnHitpoint();
         hitPoint.y -= 0.5f;
         GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
