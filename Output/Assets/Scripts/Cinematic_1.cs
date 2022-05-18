@@ -3,22 +3,24 @@ using RagnarEngine;
 
 public class Cinematic_1 : RagnarComponent
 {
-    public Characters[] characters;
+    //public Characters[] characters;
     public bool runGame = true;
     public GameObject[] bands;
+    public Characters[] characters;
     public void Start()
 	{
 		// Camera Starting Position
 		GameObject.Find("cameraController").transform.globalPosition = new Vector3(-52.79f, 0f, 89.05f);
 
         //Set UI Bands
+        bands = new GameObject[2];
         bands[0] = GameObject.Find("High_Band");
         bands[1] = GameObject.Find("Low_Band");
 
         bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
-        // PLAYERS
+        ////PLAYERS
         characters = new Characters[2];
         // Player 1
         characters[0] = new Characters
@@ -138,8 +140,8 @@ public class Cinematic_1 : RagnarComponent
             cooldown = 30f
         }; // Spice Bomb
 
-        InternalCalls.InstancePrefab("PlayerManager");
-        GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters = characters;
+        //InternalCalls.InstancePrefab("PlayerManager");
+        //GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters = characters;
     }
 	public void Update()
 	{

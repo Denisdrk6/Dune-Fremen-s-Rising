@@ -53,12 +53,12 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 153514184,
+                    "pointer": 51277128,
                     "type": 4,
                     "componentTable": 0,
-                    "characters": 0,
                     "runGame": true,
-                    "bands": 0
+                    "bands": 0,
+                    "characters": 0
                 }
             ]
         },
@@ -184,14 +184,14 @@
                     "Active": true,
                     "Position": [
                         0,
-                        56.4798583984375,
-                        -51.3453369140625
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
-                        -4.9554615966229676e-10,
-                        2.4777316309787523e-10,
-                        0.93969273567199707
+                        0.34202012419700623,
+                        0,
+                        0,
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -199,7 +199,7 @@
                         -0
                     ],
                     "Scale": [
-                        1.414210319519043,
+                        1.4142102003097534,
                         1.0000002384185791,
                         1.0000005960464478
                     ]
@@ -210,12 +210,12 @@
                     "Vertical Fov": 0.43305343389511108,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -101.36680603027344,
-                        77.579856872558594,
-                        24.557050704956055
+                        -100.02169799804688,
+                        76.099998474121094,
+                        24.530664443969727
                     ],
                     "Type": 3,
-                    "Zoom": -14,
+                    "Zoom": 30,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
@@ -5254,7 +5254,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        450.5,
+                        349,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5272,7 +5272,7 @@
                     "lastButtonWidth": 1368,
                     "lastButtonHeight": 726.5,
                     "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
+                    "MoveOnResizeY": false
                 },
                 {
                     "Type": 2,
@@ -5318,7 +5318,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -448.5,
+                        -345.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5336,7 +5336,7 @@
                     "lastButtonWidth": 1368,
                     "lastButtonHeight": 726.5,
                     "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
+                    "MoveOnResizeY": false
                 },
                 {
                     "Type": 2,
