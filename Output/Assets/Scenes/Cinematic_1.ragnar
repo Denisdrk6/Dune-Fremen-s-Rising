@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 51277128,
+                    "pointer": 49919312,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -144,9 +144,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -50.029998779296875,
-                        21.100000381469727,
-                        23.549999237060547
+                        26.870000839233398,
+                        -45.200000762939453,
+                        26.75
                     ],
                     "Quaternion": [
                         0,
@@ -185,13 +185,13 @@
                     "Position": [
                         0,
                         55,
-                        -50
+                        -49.999996185302734
                     ],
                     "Quaternion": [
-                        0.34202012419700623,
-                        0,
-                        0,
-                        0.93969261646270752
+                        0.34202015399932861,
+                        -8.4595130900311233e-10,
+                        2.4777316309787523e-10,
+                        0.93969273567199707
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -199,7 +199,7 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142102003097534,
+                        1.4142099618911743,
                         1.0000002384185791,
                         1.0000005960464478
                     ]
@@ -207,23 +207,24 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.43305343389511108,
+                    "Vertical Fov": 0.42090722918510437,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -100.02169799804688,
-                        76.099998474121094,
-                        24.530664443969727
+                        -23.121688842773438,
+                        9.7999973297119141,
+                        27.73066520690918
                     ],
                     "Type": 3,
-                    "Zoom": 30,
+                    "Zoom": -20,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
+                    "Lock": true,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -50.029998779296875,
-                        21.100000381469727,
-                        23.549999237060547
+                        26.870000839233398,
+                        -45.200000762939453,
+                        26.75
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
@@ -5270,7 +5271,7 @@
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1368,
-                    "lastButtonHeight": 726.5,
+                    "lastButtonHeight": 705.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -5334,7 +5335,7 @@
                     "buttonWidth": 2028,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1368,
-                    "lastButtonHeight": 726.5,
+                    "lastButtonHeight": 705.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -5362,6 +5363,158 @@
                     "Type": 13,
                     "alpha": 1,
                     "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 996680961,
+            "Parent UUID": 417171234,
+            "Name": "char_paul",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -10.111869812011719,
+                        0,
+                        29.651969909667969
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_paul_menu__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__Armature|Armature|char_paul_idle|BaseLayer.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 683698520,
+            "Parent UUID": 417171234,
+            "Name": "char_chani",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -10.539588928222656,
+                        0,
+                        26.330341339111328
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_chani_menu__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_idle__Armature|Armature|char_chani_idle|BaseLayer.fbx",
+                            "Loop": true
+                        }
+                    ]
                 }
             ]
         }

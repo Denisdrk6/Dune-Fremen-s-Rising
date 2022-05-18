@@ -10,7 +10,7 @@ public class Cinematic_1 : RagnarComponent
     public void Start()
 	{
 		// Camera Starting Position
-		GameObject.Find("cameraController").transform.globalPosition = new Vector3(-52.79f, 0f, 89.05f);
+		GameObject.Find("cameraController").transform.globalPosition = new Vector3(13.11f, -33.5f, 26.15f);
 
         //Set UI Bands
         bands = new GameObject[2];
