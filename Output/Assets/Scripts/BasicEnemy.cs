@@ -328,7 +328,7 @@ public class BasicEnemy : RagnarComponent
 
         if (coneRotate) enemyForward = RotateVector(enemyForward, 80, 2);
 
-        index = RayCast.PerceptionCone(enemyPos, enemyForward, 60, 10, 12, players, players.Length, colliders, colliders.Length);
+        index = RayCast.PerceptionCone(enemyPos, enemyForward, 60, 10, 19, players, players.Length, colliders, colliders.Length);
         if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }

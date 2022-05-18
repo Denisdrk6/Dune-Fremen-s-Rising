@@ -23,6 +23,7 @@ public class Player : RagnarComponent
     public bool invisible = false;
     public bool dead = false;
     public bool isHidden = false;
+    public bool godMode = false;
     private float speedBase = 0;
 
     Rigidbody rb;
@@ -91,6 +92,13 @@ public class Player : RagnarComponent
         if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_DOWN)
             gameObject.GetComponent<AudioSource>().PlayClip("UI_SANDCLICK");
 
+        if (Input.GetKey(KeyCode.G) == KeyState.KEY_DOWN)
+        {
+            agent.CalculatePath(gameObject.transform.globalPosition);
+            invisible = !invisible;
+            godMode = !godMode;
+        }
+        
         if (!dialogue.GetInDialogue())
         {
             if (!dead)
@@ -104,50 +112,62 @@ public class Player : RagnarComponent
                 if (controled)
                 //if (controled && hitPoints > 0 && dialogue.GetInDialogue())
                 {
-                    // Crouch
-                    if (Input.GetKey(KeyCode.LSHIFT) == KeyState.KEY_DOWN)
+                    if (godMode)
                     {
-                        if (action == Actions.NONE)
+                        if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
                         {
-                            action = Actions.CROUCH;
-                            rb.SetHeight(0.6f); // 0.6 = 60%
-                            ReloadState();
-                        }
-                        else if (action == Actions.CROUCH)
-                        {
-                            action = Actions.NONE;
-                            rb.SetHeight(1); // 1 = 100% = Reset
-                            ReloadState();
+                            gameObject.transform.globalPosition = agent.hitPosition;
+                            rb.SetBodyPosition(agent.hitPosition);
+                            Debug.Log("tp");
                         }
                     }
-
-                    // Run
-                    if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_DOWN)
+                    else if (!godMode)
                     {
-                        agent.speed = speedBase;
-                        move = Movement.WALK;
-                    }
-                    else if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_TWICE)
-                    {
-                        agent.speed *= 2;
-                        move = Movement.RUN;
-                    }
-
-
-                    if (abilityState == State.NONE && Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
-                    {
-                        if (agent.CalculatePath(agent.hitPosition).Length > 0)
+                        // Crouch
+                        if (Input.GetKey(KeyCode.LSHIFT) == KeyState.KEY_UP)
                         {
-                            ReloadState();
-                            //Play audio when calculating movement to not repeat the same audio
-                            gameObject.GetComponent<AudioSource>().PlayClip("PAUL_WALKSAND");
+                            if (action == Actions.NONE)
+                            {
+                                action = Actions.CROUCH;
+                                rb.SetHeight(0.6f); // 0.6 = 60%
+                                ReloadState();
+                            }
+                            else if (action == Actions.CROUCH)
+                            {
+                                action = Actions.NONE;
+                                rb.SetHeight(1); // 1 = 100% = Reset
+                                ReloadState();
+                            }
                         }
-                    }
-                    else if (abilityState != State.NONE && agent.PathSize() > 0)
-                    {
-                        agent.ClearPath();
-                        move = Movement.IDLE;
-                        ReloadState();
+
+                        // Run
+                        if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_DOWN)
+                        {
+                            agent.speed = speedBase;
+                            move = Movement.WALK;
+                        }
+                        else if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_TWICE)
+                        {
+                            agent.speed *= 2;
+                            move = Movement.RUN;
+                        }
+
+
+                        if (abilityState == State.NONE && Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
+                        {
+                            if (agent.CalculatePath(agent.hitPosition).Length > 0)
+                            {
+                                ReloadState();
+                                //Play audio when calculating movement to not repeat the same audio
+                                gameObject.GetComponent<AudioSource>().PlayClip("PAUL_WALKSAND");
+                            }
+                        }
+                        else if (abilityState != State.NONE && agent.PathSize() > 0)
+                        {
+                            agent.ClearPath();
+                            move = Movement.IDLE;
+                            ReloadState();
+                        }
                     }
                 }
                 if (agent.MovePath())

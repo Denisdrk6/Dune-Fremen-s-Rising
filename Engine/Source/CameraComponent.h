@@ -48,6 +48,8 @@ public:
 	float4x4 matrixViewFrustum;
 	float4x4 matrixProjectionFrustum;
 
+	bool lock = false;
+
 private:
 	void Shake(float dt);
 

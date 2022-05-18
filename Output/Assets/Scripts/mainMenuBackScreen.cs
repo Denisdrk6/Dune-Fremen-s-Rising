@@ -89,9 +89,21 @@ public class mainMenuBackScreen : RagnarComponent
 	GameObject optionsControlR;
 	GameObject optionsControlL;
 	int actualControlOption = 0;
+
+	GameObject[] players;
+
 	public void Start()
 	{
-        pos = new Vector3(0.0f, 0.0f, 0.0f);
+		players = new GameObject[3];
+		players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (var item in players)
+        {
+			item.GetComponent<Animation>().PlayAnimation("Idle");
+        }
+		GameObject.Find("stilgar_sword").GetComponent<Animation>().PlayAnimation("Idle");
+
+		pos = new Vector3(0.0f, 0.0f, 0.0f);
         bounds = new Vector3(0.0f, 0.0f, 0.0f);
         SceneAudio = GameObject.Find("AudioMainMenu");
         SceneAudio.GetComponent<AudioSource>().PlayClip("MUSICPLAY");
