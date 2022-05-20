@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 49919312,
+                    "pointer": 473111200,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -144,20 +144,20 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        26.870000839233398,
-                        -45.200000762939453,
-                        26.75
+                        -37.830001831054688,
+                        -45.700000762939453,
+                        88.550003051757812
                     ],
                     "Quaternion": [
-                        0,
-                        0.71400725841522217,
-                        0,
-                        0.70013833045959473
+                        -0.0014221933670341969,
+                        0.93265897035598755,
+                        -0.010841436684131622,
+                        0.36061641573905945
                     ],
                     "RotationEditor": [
-                        -3.1415927410125732,
-                        1.5511856079101562,
-                        -3.1415927410125732
+                        -3.1223938465118408,
+                        2.3645720481872559,
+                        -3.1520648002624512
                     ],
                     "Scale": [
                         1.0000262260437012,
@@ -183,14 +183,14 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
-                        55,
-                        -49.999996185302734
+                        4.1961669921875e-05,
+                        69.798439025878906,
+                        -63.453140258789062
                     ],
                     "Quaternion": [
                         0.34202015399932861,
-                        -8.4595130900311233e-10,
-                        2.4777316309787523e-10,
+                        -3.2842268904431648e-09,
+                        -1.5857482438264014e-08,
                         0.93969273567199707
                     ],
                     "RotationEditor": [
@@ -199,7 +199,7 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142099618911743,
+                        1.4142098426818848,
                         1.0000002384185791,
                         1.0000005960464478
                     ]
@@ -210,21 +210,21 @@
                     "Vertical Fov": 0.42090722918510437,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -23.121688842773438,
-                        9.7999973297119141,
-                        27.73066520690918
+                        -80.155181884765625,
+                        25.299888610839844,
+                        134.00498962402344
                     ],
                     "Type": 3,
-                    "Zoom": -20,
+                    "Zoom": -14,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": true,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        26.870000839233398,
-                        -45.200000762939453,
-                        26.75
+                        -37.830001831054688,
+                        -45.700000762939453,
+                        88.550003051757812
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
@@ -290,6 +290,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": false,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -558,7 +559,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -15.136451721191406,
+                        -14.140000343322754,
                         32.360797882080078,
                         -2.4103469848632812
                     ],
@@ -3357,6 +3358,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": false,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -3848,6 +3850,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": true,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -3980,6 +3983,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": true,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -4112,6 +4116,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": true,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -5270,8 +5275,8 @@
                     ],
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -5334,8 +5339,8 @@
                     ],
                     "buttonWidth": 2028,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -5382,25 +5387,25 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -10.111869812011719,
-                        0,
-                        29.651969909667969
+                        -64.953536987304688,
+                        9.3248308985494077e-05,
+                        117.35246276855469
                     ],
                     "Quaternion": [
                         0,
+                        0.9988061785697937,
                         0,
-                        0,
-                        1
+                        -0.048849385231733322
                     ],
                     "RotationEditor": [
                         0,
-                        0,
+                        3.2393312454223633,
                         0
                     ],
                     "Scale": [
+                        1.0000190734863281,
                         1,
-                        1,
-                        1
+                        1.0000190734863281
                     ]
                 },
                 {
@@ -5431,11 +5436,11 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "Idle",
+                    "Current Anim": "Talk",
                     "Animations": [
                         {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__Armature|Armature|char_paul_idle|BaseLayer.fbx",
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_talk__Armature|Armature|char_paul_talk|BaseLayer.fbx",
                             "Loop": true
                         }
                     ]
@@ -5458,9 +5463,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -10.539588928222656,
+                        -64.991294860839844,
                         0,
-                        26.330341339111328
+                        115.42223358154297
                     ],
                     "Quaternion": [
                         0,
@@ -5507,11 +5512,11 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "Idle",
+                    "Current Anim": "Talk",
                     "Animations": [
                         {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_idle__Armature|Armature|char_chani_idle|BaseLayer.fbx",
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_talk__char_chani_talk|Armature|char_chani_talk|BaseLayer.fbx",
                             "Loop": true
                         }
                     ]

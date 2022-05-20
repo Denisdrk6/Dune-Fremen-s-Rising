@@ -9,9 +9,6 @@ public class Cinematic_1 : RagnarComponent
     public Characters[] characters;
     public void Start()
 	{
-		// Camera Starting Position
-		GameObject.Find("cameraController").transform.globalPosition = new Vector3(13.11f, -33.5f, 26.15f);
-
         //Set UI Bands
         bands = new GameObject[2];
         bands[0] = GameObject.Find("High_Band");
@@ -140,8 +137,11 @@ public class Cinematic_1 : RagnarComponent
             cooldown = 30f
         }; // Spice Bomb
 
-        //InternalCalls.InstancePrefab("PlayerManager");
-        //GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters = characters;
+        GameObject characterPaul = GameObject.Find("char_paul");
+        GameObject characterChani = GameObject.Find("char_chani");
+
+        characterPaul.GetComponent<Animation>().PlayAnimation("Talk");
+        characterChani.GetComponent<Animation>().PlayAnimation("Talk");
     }
 	public void Update()
 	{
