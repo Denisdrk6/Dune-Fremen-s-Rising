@@ -9,7 +9,7 @@ public class Cinematic_1 : RagnarComponent
 
     public int IdDialogue = 0;
 
-    private GameObject dialogues;
+    CinematicManager dialogues;
 
     private bool first;
 
@@ -29,15 +29,19 @@ public class Cinematic_1 : RagnarComponent
         characterPaul.GetComponent<Animation>().PlayAnimation("Talk");
         characterChani.GetComponent<Animation>().PlayAnimation("Talk");
 
-        InternalCalls.InstancePrefab("CinematicManager");
+        dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
+
+
+
         first = false;
     }
 	public void Update()
 	{
         if (!first)
         {
-            dialogues = GameObject.Find("CinematicManager");
-            dialogues.GetComponent<CinematicManager>().SetIDDialogue(IdDialogue);
+
+            dialogues.SetIDDialogue(IdDialogue,"build");
+
             first = true;
         }
     }

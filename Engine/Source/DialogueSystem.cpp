@@ -492,6 +492,7 @@ void DialogueSystem::SetCurrentDialogueIdXML(int id) {
 DialogueXML* DialogueSystem::GetCurrentDialogueXML() {
 	return currDialogXML;
 }
+
 void DialogueSystem::StartDialogueXML() {
 	currLineXML = currDialogXML->dialogue.front();
 	indexLine = 0;

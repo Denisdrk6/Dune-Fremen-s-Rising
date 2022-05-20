@@ -3,64 +3,83 @@ using RagnarEngine;
 
 public class CinematicManager : RagnarComponent
 {
-	GameObject cinematic;
-
 	GameObject text;
 
     private int IdDialogue;
     private int indexLine;
 
     private bool endDialogue;
-    private State state;
-    public enum State
+    //private GameObject SceneAudio;
+
+    Vector3 pos = new Vector3(0, 0, 0);
+    enum State
     {
-		START,INCINEMATIC,END
+		START,
+        POST_START,
+        INCINEMATIC,
+        END,
+        NONE
     }
 	
+    int state;
+    String nextScene;
 	public void Start()
 	{
         indexLine = 0;
-        Dialogue.LoadDialogueFile("");
-        cinematic = GameObject.Find("LevelManager");
         text = GameObject.Find("Dialogue");
-        state = State.START;
+        //SceneAudio = GameObject.Find("AudioLevel");
 
+        state = 0;
+        
+        //Pos Text
         Vector3 pos = new Vector3(0, 0, 0);
         float posY = InternalCalls.GetRegionGame().y, posX = InternalCalls.GetRegionGame().x;
         posY *= 0.33f;
         posX = 0;
         pos.Set(posX, posY + 10, text.GetComponent<Transform2D>().position2D.z + 20);
         text.GetComponent<Transform2D>().position2D = pos;
+        
     }
+
 	public void Update()
 	{
         switch (state)
         {
-            case State.START:
+            case 0:// Start
+
                 indexLine = 0;
-                state = State.INCINEMATIC;
-                SetIDDialogue(0);
+                state = 1;
                 break;
-            case State.INCINEMATIC:
-                Debug.Log("INCINEMATIC");
+            case 1:// Update
+
+                state = 2;
+                UpdateDialogue();
+                break;
+            case 2:// Imputs
 
                 InCinematic();
                 break;
-            case State.END:
-                // Cambio de escena
-                text.GetComponent<UIText>().text = "Fin de Cinematica";
+            case 3:// End
+
+                // Load new scene
+                SceneManager.LoadScene(nextScene);
+                state = 4;
+                break;
+            case 4:// NONE
+
 
                 break;
             default:
                 break;
         }
+
     }
 
     private void InCinematic(){
         // Next Line
         if (Input.GetKey(KeyCode.SPACE) == KeyState.KEY_UP)
         {
-            //SceneAudio.GetComponent<AudioSource>().PlayClip("UI_DIALOGUEPASS");
+            state = 1;
             NextLine();
         }
     }
@@ -68,32 +87,36 @@ public class CinematicManager : RagnarComponent
     void NextLine()
     {
         endDialogue = Dialogue.NextLine();
+
         if (endDialogue == false)
-        {
             indexLine++;
-            UpdateDialogue();
-        }
-        else
-        {
-            state = State.END;
-        }
-    }
-    void UpdateDialogue()
-    {
-        text.GetComponent<UIText>().text = Dialogue.GetDialogueLine();
-    }
-    public void SetIDDialogue(int ID) {
-        IdDialogue = ID;
-        state = State.INCINEMATIC;
-        StartNewDialogue(IdDialogue);
+        else // End dialogue
+            state = 3;
+        
     }
 
-    public void StartNewDialogue(int id)
+    void UpdateDialogue()
     {
-        endDialogue = false;
-        Dialogue.StartDialogueById(id);
-        UpdateDialogue();
-        //Debug.Log(authId.ToString());
+        //Text
+        Debug.Log(text.GetComponent<UIText>().text);
+        text.GetComponent<UIText>().text = Dialogue.GetDialogueLine().ToString();
+
+        //Voice
+        String voicePath = "VOICE_" + IdDialogue.ToString() + indexLine.ToString();
+        Debug.Log(voicePath);
+
+        //SceneAudio.GetComponent<AudioSource>().PlayClip(voicePath);
+
     }
+
+    public void SetIDDialogue(int ID,String _nextScene) {
+        endDialogue = false;
+        IdDialogue = ID;
+
+        Dialogue.LoadDialogueFile("");
+        Dialogue.StartDialogueById(IdDialogue);
+        nextScene = _nextScene;
+    }
+
 
 }

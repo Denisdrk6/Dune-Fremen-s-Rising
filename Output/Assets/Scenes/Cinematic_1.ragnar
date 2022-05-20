@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 290559280,
+                    "pointer": 152036496,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -208,7 +208,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.42143398523330688,
+                    "Vertical Fov": 0.40903055667877197,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
                         -71.181488037109375,
@@ -216,7 +216,7 @@
                         124.36778259277344
                     ],
                     "Type": 3,
-                    "Zoom": -14,
+                    "Zoom": -18,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
@@ -5261,7 +5261,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        349,
+                        338.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5277,7 +5277,7 @@
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5325,7 +5325,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -345.5,
+                        -335,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5341,7 +5341,7 @@
                     "buttonWidth": 2028,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5521,6 +5521,121 @@
                             "Loop": true
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "UUID": 81378638,
+            "Parent UUID": 417171234,
+            "Name": "CinematicDialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "CinematicManager",
+                    "pointer": 408449208,
+                    "type": 4,
+                    "componentTable": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1777589784,
+            "Parent UUID": 81378638,
+            "Name": "Dialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        0,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        0.1666666716337204,
+                        0.1666666716337204,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 100,
+                    "buttonHeight": 100,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 16,
+                    "buttonText": "sdfgsdf",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
+                    "fontScale": 0.5,
+                    "textColor.r": 1,
+                    "textColor.g": 1,
+                    "textColor.b": 1,
+                    "TextFile": "-"
                 }
             ]
         }
