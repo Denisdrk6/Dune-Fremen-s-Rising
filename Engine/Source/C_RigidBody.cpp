@@ -117,14 +117,13 @@ bool RigidBodyComponent::Update(float dt)
 		TransformComponent* trans = owner->GetComponent<TransformComponent>();
 		if (trigger)
 		{
-			body->activate(true);
 			btTransform t;
 			t.setBasis(float3x3::FromQuat(trans->GetRotation()));
 			t.setOrigin(trans->GetGlobalTransform().Col3(3) + owner->GetOffsetCM());
 
 			body->setWorldTransform(t);
 		}
-		else if (collisionType != CollisionType::MESH && (body->getActivationState() == 1 || body->getActivationState() == 3))
+		else if (collisionType != CollisionType::MESH && (body->getActivationState() == ACTIVE_TAG || body->getActivationState() == WANTS_DEACTIVATION || body->getActivationState() == DISABLE_DEACTIVATION))
 		{
 			float4x4 CM2 = float4x4::FromTRS(body->getCenterOfMassPosition() - owner->GetOffsetCM(), body->getWorldTransform().getRotation(), trans->GetScale());
 			trans->SetTransform(CM2);
@@ -232,6 +231,13 @@ void RigidBodyComponent::OnEditor()
 				SetAsTrigger();
 			else
 				CreateBody();
+		}
+		if (ImGui::Checkbox("Force Activation", &fActivation))
+		{
+			if (fActivation)
+				body->setActivationState(DISABLE_DEACTIVATION);
+			else
+				body->setActivationState(WANTS_DEACTIVATION);
 		}
 		ImGui::Text("OnCollision: %s", onCollision ? "true" : "false");
 		Combos();
@@ -544,6 +550,8 @@ void RigidBodyComponent::SetAsStatic()
 void RigidBodyComponent::SetAsTrigger()
 {
 	body->setCollisionFlags(body->getFlags() | btCollisionObject::CF_NO_CONTACT_RESPONSE);
+	body->setActivationState(DISABLE_DEACTIVATION);
+	fActivation = true;
 	trigger = true;
 }
 
@@ -557,6 +565,7 @@ bool RigidBodyComponent::OnLoad(JsonParsing& node)
 	useGravity = node.GetJsonBool("Gravity");
 	isKinematic = node.GetJsonBool("Kinematic");
 	trigger = node.GetJsonBool("Trigger");
+	fActivation = node.GetJsonBool("fActivation");
 	mass = node.GetJsonNumber("Mass");
 	friction = node.GetJsonNumber("Friction");
 	restitution = node.GetJsonNumber("Restitution");
@@ -602,6 +611,8 @@ bool RigidBodyComponent::OnLoad(JsonParsing& node)
 	}
 	UpdateCollisionMesh();
 	SetPhysicsProperties();
+
+	if (fActivation) body->setActivationState(DISABLE_DEACTIVATION);
 
 	uint size = node.GetJsonNumber("SizeConstraint");
 	if (size > 0)
@@ -660,6 +671,7 @@ bool RigidBodyComponent::OnSave(JsonParsing& node, JSON_Array* array)
 	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Gravity", useGravity);
 	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Kinematic", isKinematic);
 	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Trigger", trigger);
+	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "fActivation", fActivation);
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Mass", mass);
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Friction", friction);
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Restitution", restitution);

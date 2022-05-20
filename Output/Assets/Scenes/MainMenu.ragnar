@@ -158,7 +158,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 0.95228302478790283,
+                    "Vertical Fov": 0.928486168384552,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -1.6946996450424194,
@@ -225,8 +225,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -258,7 +258,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "mainMenuBackScreen",
-                    "pointer": 500310432,
+                    "pointer": 568753400,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -340,7 +340,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -659.5,
+                        -647,
                         -98.5,
                         36.099998474121094
                     ],
@@ -356,8 +356,8 @@
                     ],
                     "buttonWidth": 323,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -471,7 +471,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -552,
+                        -539.5,
                         27,
                         36.099998474121094
                     ],
@@ -487,8 +487,8 @@
                     ],
                     "buttonWidth": 345.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -602,7 +602,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -700.5,
+                        -688,
                         -157.5,
                         36.099998474121094
                     ],
@@ -618,8 +618,8 @@
                     ],
                     "buttonWidth": 302.5,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -733,7 +733,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -600,
+                        -587.5,
                         -36.5,
                         36.099998474121094
                     ],
@@ -749,8 +749,8 @@
                     ],
                     "buttonWidth": 316,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -864,7 +864,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -510.5,
+                        -498,
                         89.5,
                         36.099998474121094
                     ],
@@ -880,8 +880,8 @@
                     ],
                     "buttonWidth": 407.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -995,7 +995,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -514,
+                        -501.5,
                         88,
                         36.099998474121094
                     ],
@@ -1011,8 +1011,8 @@
                     ],
                     "buttonWidth": 410,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1059,7 +1059,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -570.5,
+                        -558,
                         25,
                         36.099998474121094
                     ],
@@ -1075,8 +1075,8 @@
                     ],
                     "buttonWidth": 387,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1123,7 +1123,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -627,
+                        -614.5,
                         -40,
                         36.099998474121094
                     ],
@@ -1139,8 +1139,8 @@
                     ],
                     "buttonWidth": 372.5,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1187,7 +1187,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -656.5,
+                        -644,
                         -102,
                         36.099998474121094
                     ],
@@ -1203,8 +1203,8 @@
                     ],
                     "buttonWidth": 309,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1251,7 +1251,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -700,
+                        -687.5,
                         -160,
                         36.099998474121094
                     ],
@@ -1267,8 +1267,8 @@
                     ],
                     "buttonWidth": 295,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1519,15 +1519,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -6.1641826629638672,
-                        1.2242894172668457,
-                        -24.379356384277344
+                        -5.909675121307373,
+                        1.364378809928894,
+                        -23.631071090698242
                     ],
                     "Quaternion": [
-                        0,
-                        0.98621970415115356,
-                        0,
-                        -0.16544085741043091
+                        -0.1545494943857193,
+                        0.97470062971115112,
+                        -0.055294882506132126,
+                        -0.15170919895172119
                     ],
                     "RotationEditor": [
                         0,
@@ -1535,9 +1535,9 @@
                         0
                     ],
                     "Scale": [
-                        1.0000041723251343,
-                        1,
-                        1.0000041723251343
+                        1.0000169277191162,
+                        0.99999988079071045,
+                        1.0000213384628296
                     ]
                 },
                 {
@@ -1694,7 +1694,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Abilities models\/wpn_stilgar_sword_texture_basecolor.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -1787,7 +1787,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2182,
+                        2071,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1802,8 +1802,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1866,8 +1866,8 @@
                     ],
                     "buttonWidth": 263,
                     "buttonHeight": 52.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1915,7 +1915,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1972,
+                        1861,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1930,8 +1930,8 @@
                     ],
                     "buttonWidth": 254.5,
                     "buttonHeight": 46,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2046,7 +2046,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1963.5,
+                        1852.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2061,8 +2061,8 @@
                     ],
                     "buttonWidth": 650,
                     "buttonHeight": 650,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2110,7 +2110,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2190.5,
+                        2079.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2125,8 +2125,8 @@
                     ],
                     "buttonWidth": 376.5,
                     "buttonHeight": 42.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2241,7 +2241,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1989,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2256,8 +2256,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2372,7 +2372,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1989,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2387,8 +2387,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2436,7 +2436,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1989,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2451,8 +2451,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2567,7 +2567,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1989,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2582,8 +2582,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2631,7 +2631,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1989,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2646,8 +2646,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2762,7 +2762,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1989,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2777,8 +2777,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2826,7 +2826,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2078.5,
+                        1967.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2841,8 +2841,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2910,7 +2910,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2078.5,
+                        1967.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2925,8 +2925,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2994,7 +2994,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2078.5,
+                        1967.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -3009,8 +3009,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3078,7 +3078,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2104,
+                        1993,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -3093,8 +3093,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3147,7 +3147,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2104,
+                        1993,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -3162,8 +3162,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3216,7 +3216,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3231,8 +3231,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3241,7 +3241,7 @@
                     "Type": 19,
                     "Position": [
                         -0.727996826171875,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3256,8 +3256,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3325,7 +3325,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3340,8 +3340,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3350,7 +3350,7 @@
                     "Type": 19,
                     "Position": [
                         -5.5,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3365,8 +3365,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3434,7 +3434,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3449,8 +3449,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3459,7 +3459,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3474,8 +3474,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3543,7 +3543,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3558,8 +3558,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3568,7 +3568,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        2173.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3583,8 +3583,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3652,7 +3652,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2182,
+                        2071,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3667,8 +3667,8 @@
                     ],
                     "buttonWidth": 250,
                     "buttonHeight": 60,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3804,7 +3804,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1842.5,
+                        1731.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3819,8 +3819,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3873,7 +3873,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1842.5,
+                        1731.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3888,8 +3888,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3942,7 +3942,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1842.5,
+                        1731.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3957,8 +3957,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4011,7 +4011,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4026,8 +4026,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4142,7 +4142,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4157,8 +4157,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4273,7 +4273,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4288,8 +4288,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4404,7 +4404,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4419,8 +4419,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4535,7 +4535,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4550,8 +4550,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4666,7 +4666,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4681,8 +4681,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4797,7 +4797,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4812,8 +4812,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4928,7 +4928,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4943,8 +4943,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5059,7 +5059,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5074,8 +5074,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5190,7 +5190,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5205,8 +5205,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5321,7 +5321,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5336,8 +5336,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5452,7 +5452,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5467,8 +5467,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5583,7 +5583,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5598,8 +5598,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5714,7 +5714,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5729,8 +5729,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5845,7 +5845,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5860,8 +5860,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5976,7 +5976,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5991,8 +5991,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6107,7 +6107,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -6122,8 +6122,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6238,7 +6238,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -6253,8 +6253,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6369,7 +6369,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -6384,8 +6384,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6500,7 +6500,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -6515,8 +6515,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6631,7 +6631,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        10.599998474121094,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -6646,8 +6646,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6777,8 +6777,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6908,8 +6908,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7039,8 +7039,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 705.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7154,8 +7154,8 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -2.0999999046325684,
-                        -5.8299999237060547,
+                        62,
+                        -0.12999999523162842,
                         25.450000762939453
                     ],
                     "Quaternion": [
@@ -7172,16 +7172,16 @@
                     "Scale": [
                         1.0000120401382446,
                         110,
-                        137.69999694824219
+                        232.39999389648438
                     ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/win_lose_background.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/skybox.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
+                    "Cast Shadows": false,
                     "Interactuable Color": [
                         0,
                         0.30000001192092896,
@@ -7320,93 +7320,12 @@
                     "Looping": true,
                     "Emitters": [
                         {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 5,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.20000000298023224,
-                            "Emitter: Current Timer": 0.023999975994229317,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.070000000298023224,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_explosion_single.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PEV: Min Velocity": [
-                                        -0.0099999997764825821,
-                                        0,
-                                        -0.0099999997764825821
-                                    ],
-                                    "PEV: Max Velocity": [
-                                        0.0099999997764825821,
-                                        0.019999999552965164,
-                                        0.0099999997764825821
-                                    ],
-                                    "Effect Type": 0
-                                },
-                                {
-                                    "PES: Start size": 1.7000000476837158,
-                                    "PES: End size": 0.80000001192092896,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        1,
-                                        0.52173912525177002,
-                                        0,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        1,
-                                        0.87871849536895752,
-                                        0,
-                                        1
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        },
-                        {
                             "Emitter: Max Particles": 400,
                             "Emitter: Particles Per Second": 10,
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 0.10000000149011612,
-                            "Emitter: Current Timer": 0.10000000149011612,
+                            "Emitter: Current Timer": 0.0039999894797801971,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -7476,6 +7395,199 @@
                                         0.43707096576690674,
                                         0.43707096576690674,
                                         0
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 31294412,
+            "Parent UUID": 514655822,
+            "Name": "FireParticles",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/FireParticles.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -8.8000001907348633,
+                        -1,
+                        -5.6999998092651367
+                    ],
+                    "Quaternion": [
+                        0.95467978715896606,
+                        -0.058174453675746918,
+                        -0.29176315665245056,
+                        -0.0087477341294288635
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        3.1415927410125732
+                    ],
+                    "Scale": [
+                        4.8000001907348633,
+                        4.8000001907348633,
+                        4.8000001907348633
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        4.9554548263549805,
+                        4.0828089714050293,
+                        14.272259712219238
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 1000,
+                            "Emitter: Particles Per Second": 20,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.05000000074505806,
+                            "Emitter: Current Timer": 0.018000001087784767,
+                            "Emitter: Is Cubical": true,
+                            "Cubical: Spread on X": 0.5,
+                            "Cubical: Spread on Y": 0.10000000149011612,
+                            "Cubical: Spread on Z": 0.5,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 5,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_fire.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 1,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0.49427914619445801,
+                                        0,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 200,
+                            "Emitter: Particles Per Second": 50,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.019999999552965164,
+                            "Emitter: Current Timer": 0.019999999552965164,
+                            "Emitter: Is Cubical": true,
+                            "Cubical: Spread on X": 0.5,
+                            "Cubical: Spread on Y": 0.20000000298023224,
+                            "Cubical: Spread on Z": 0.5,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                -0.0099999997764825821,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 5,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_fire.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.5,
+                                    "PES: End size": 0.20000000298023224,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0.98855835199356079,
+                                        0,
+                                        1
                                     ],
                                     "Effect Type": 3
                                 }

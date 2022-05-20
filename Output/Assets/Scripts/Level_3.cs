@@ -22,7 +22,7 @@ public class Level_3 : RagnarComponent
         SceneAudio.GetComponent<AudioSource>().SetState("MUSIC", "LEVEL1_BASE");
         
         // Camera Starting Position
-        GameObject.Find("cameraController").transform.globalPosition = new Vector3(2.42f, 0f, 30.47f);
+        //GameObject.Find("cameraController").transform.globalPosition = new Vector3(2.42f, 0f, 30.47f);
         GameObject.Find("UI Counter").GetComponent<Transform2D>().position2D = new Vector3(0, (0.5f * InternalCalls.GetRegionGame().y) - 28, 0);
         chrono = GameObject.Find("UI Counter").GetComponent<UIButton>();
         chrono.SetTextPosition(-26, -4);

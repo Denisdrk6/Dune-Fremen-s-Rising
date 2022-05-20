@@ -148,6 +148,18 @@ void Quadtree::CollectGoOnlyStatic(std::set<GameObject*>& gos, std::stack<Quadtr
 	}
 }
 
+void Quadtree::CollectGoByTag(std::set<GameObject*>& gos, std::stack<QuadtreeNode*>& nodes, std::string tag)
+{
+	while (!nodes.empty())
+	{
+		QuadtreeNode* node = nodes.top();
+		for (std::vector<GameObject*>::const_iterator it = node->GetObjects().begin(); it != node->GetObjects().end(); ++it)
+			if ((*it)->tag == tag) gos.insert(*it);
+
+		nodes.pop();
+	}
+}
+
 void Quadtree::CollectNodes(std::stack<QuadtreeNode*>& nodes, LineSegment ray)
 {
 	std::stack<QuadtreeNode*> stack;

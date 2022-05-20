@@ -64,7 +64,14 @@ bool GameObject::Update(float dt)
 	RG_PROFILING_FUNCTION("Game Object Update");
 
 	for (int i = 0; i < components.size() && components[i]->active; ++i)
-		components[i]->Update(dt);
+	{
+		if (components[i]->type != ComponentType::SCRIPT)
+		{
+			components[i]->Update(dt);
+		}
+		else if (app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->Intersects(globalAabb) || !globalAabb.IsFinite())
+			components[i]->Update(dt);
+	}
 
 	for (int i = 0; i < children.size(); ++i)
 		children[i]->Update(dt);

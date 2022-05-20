@@ -18,7 +18,7 @@ public class Level_1 : RagnarComponent
     public void Start()
 	{
         // Camera Starting Position
-        GameObject.Find("cameraController").transform.globalPosition = new Vector3(-52.79f, 0f, 89.05f);
+        //GameObject.Find("cameraController").transform.globalPosition = new Vector3(-52.79f, 0f, 89.05f);
         GameObject.Find("UI Counter").GetComponent<Transform2D>().position2D = new Vector3(0, (0.5f * InternalCalls.GetRegionGame().y) -28, 0);
         chrono = GameObject.Find("UI Counter").GetComponent<UIButton>();
         chrono.SetTextPosition(-26, -4);
@@ -107,7 +107,7 @@ public class Level_1 : RagnarComponent
             state = State.NONE,
             abilities = new Abilities[4],
             hitPoints = 2,
-            pos = new Vector3(-55.30f, 0f, 107.76f)
+            pos = new Vector3(-57.10f, 0f, 106.17f)
         };
         characters[1].abilities[0] = new Abilities
         {

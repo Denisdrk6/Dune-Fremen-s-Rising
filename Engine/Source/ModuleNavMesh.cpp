@@ -714,8 +714,6 @@ bool Pathfinder::MoveTo(NavAgentComponent* agent, float3 destination)
 	float totalheight = math::Abs(direction.y);
 	direction.Normalize();
 
-	rigidBody->activate(true);
-
 	//Movement
 	rigidBody->setLinearVelocity((btVector3)direction * agent->agentProperties->speed);
 

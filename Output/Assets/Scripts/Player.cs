@@ -118,7 +118,7 @@ public class Player : RagnarComponent
                         {
                             gameObject.transform.globalPosition = agent.hitPosition;
                             rb.SetBodyPosition(agent.hitPosition);
-                            Debug.Log("tp");
+                            sound.transform.globalPosition = gameObject.transform.globalPosition;
                         }
                     }
                     else if (!godMode)

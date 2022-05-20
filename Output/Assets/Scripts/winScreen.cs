@@ -83,7 +83,7 @@ public class winScren : RagnarComponent
 			break;
 		}
 	}
-	void nextAction()
+	void NextAction()
 	{		
 		int a = Next.GetComponent<UIButton>().GetButtonState();
 		switch (a)
@@ -184,7 +184,7 @@ public class winScren : RagnarComponent
 	public void Update()
 	{
 		MenuAction();
-		nextAction();
+		NextAction();
 		ReplayAction();
 		if(isFirst)
 			firstTime();

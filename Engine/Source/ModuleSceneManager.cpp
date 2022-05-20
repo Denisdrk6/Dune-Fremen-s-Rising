@@ -99,6 +99,7 @@ bool ModuleSceneManager::Update(float dt)
 	
 	if (changeScene)
 	{
+		gameTimer.SetTimeScale(1);
 		if (enteringFade)
 		{
 			float alpha = dt;

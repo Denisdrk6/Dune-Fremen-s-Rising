@@ -6,7 +6,8 @@ public class Eagle : RagnarComponent
 	public GameObject player;
 	public PlayerManager playerManager;
     public bool controled = false;
-    private float cooldown = -1f;
+    private float cooldown = 6f;
+    private bool pendingToDelete = false;
     Rigidbody goRB;
     ParticleSystem leftParticles;
     ParticleSystem rightParticles;
@@ -49,9 +50,10 @@ public class Eagle : RagnarComponent
             sound.GetComponent<SoundAreaManager>().stablishedTimer = 6f;
 
             cooldown = 6f;
+            pendingToDelete = true;
         }
 
-        if (cooldown != -1f)
+        if (pendingToDelete)
         {
             cooldown -= Time.deltaTime;
             if (cooldown < 0)
