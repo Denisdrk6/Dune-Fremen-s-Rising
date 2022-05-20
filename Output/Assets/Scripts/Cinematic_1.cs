@@ -21,6 +21,9 @@ public class Cinematic_1 : RagnarComponent
 
         characterPaul.GetComponent<Animation>().PlayAnimation("Talk");
         characterChani.GetComponent<Animation>().PlayAnimation("Talk");
+
+        InternalCalls.InstancePrefab("CinematicManager");
+
     }
 	public void Update()
 	{

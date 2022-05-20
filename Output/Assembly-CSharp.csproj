@@ -124,6 +124,7 @@
 		<Compile Include="Assets\Scripts\QuestSystem.cs" />
 		<Compile Include="Assets\Scripts\BackStabEnemy.cs" />
 		<Compile Include="Assets\Scripts\Cinematic_1.cs" />
+		<Compile Include="Assets\Scripts\CinematicManager.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Assembly-CSharp\App.config" />
