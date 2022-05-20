@@ -6,13 +6,6 @@ public class Cinematic_1 : RagnarComponent
     public bool runGame = true;
     public GameObject[] bands;
     public Characters[] characters;
-
-    public int IdDialogue = 0;
-
-    private GameObject dialogues;
-
-    private bool first;
-
     public void Start()
 	{
         //Set UI Bands
@@ -30,16 +23,11 @@ public class Cinematic_1 : RagnarComponent
         characterChani.GetComponent<Animation>().PlayAnimation("Talk");
 
         InternalCalls.InstancePrefab("CinematicManager");
-        first = false;
+
     }
 	public void Update()
 	{
-        if (!first)
-        {
-            dialogues = GameObject.Find("CinematicManager");
-            dialogues.GetComponent<CinematicManager>().SetIDDialogue(IdDialogue);
-            first = true;
-        }
-    }
+
+	}
 
 }
