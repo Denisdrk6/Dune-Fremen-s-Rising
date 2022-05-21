@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 152036496,
+                    "pointer": 45905000,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -208,7 +208,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.40903055667877197,
+                    "Vertical Fov": 0.42143398523330688,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
                         -71.181488037109375,
@@ -5261,7 +5261,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        338.5,
+                        430.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5277,7 +5277,7 @@
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5325,7 +5325,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -335,
+                        -437,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -5341,7 +5341,7 @@
                     "buttonWidth": 2028,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5564,7 +5564,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 408449208,
+                    "pointer": 428626792,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -5603,7 +5603,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
