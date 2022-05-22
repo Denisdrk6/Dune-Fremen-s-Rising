@@ -486,7 +486,7 @@ public class mainMenuBackScreen : RagnarComponent
                     SceneAudio.GetComponent<AudioSource>().PlayClip("UI_SELECT");
 
 					SaveSystem.fromContinue = false;
-                    SceneManager.LoadScene("Cinematic_1");
+                    SceneManager.LoadScene("Cinematic_7");
                     //cambiar de escena
                     break;
             }

@@ -1,7 +1,7 @@
 using System;
 using RagnarEngine;
 
-public class Cinematic_1 : RagnarComponent
+public class Cinematic_7 : RagnarComponent
 {
     public bool runGame = true;
     public GameObject[] bands;
@@ -13,20 +13,22 @@ public class Cinematic_1 : RagnarComponent
     private bool first;
 
     public void Start()
-	{
+    {
         //Set UI Bands
         bands = new GameObject[2];
         bands[0] = GameObject.Find("High_Band");
         bands[1] = GameObject.Find("Low_Band");
-        
+
         bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
         GameObject characterPaul = GameObject.Find("char_paul");
         GameObject characterChani = GameObject.Find("char_chani");
+        GameObject characterStilgar = GameObject.Find("char_stilgar");
 
         characterPaul.GetComponent<Animation>().PlayAnimation("Talk");
         characterChani.GetComponent<Animation>().PlayAnimation("Talk");
+        characterStilgar.GetComponent<Animation>().PlayAnimation("Talk");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
@@ -34,12 +36,12 @@ public class Cinematic_1 : RagnarComponent
 
         first = false;
     }
-	public void Update()
-	{
+    public void Update()
+    {
         if (!first)
         {
 
-            dialogues.SetIDDialogue(IdDialogue,"build");
+            dialogues.SetIDDialogue(IdDialogue, "build");
 
             first = true;
         }
