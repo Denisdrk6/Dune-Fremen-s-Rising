@@ -126,6 +126,7 @@
 		<Compile Include="Assets\Scripts\Cinematic_1.cs" />
 		<Compile Include="Assets\Scripts\CinematicManager.cs" />
 		<Compile Include="Assets\Scripts\Cinematic_7.cs" />
+		<Compile Include="Assets\Scripts\Cinematic_3.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Assembly-CSharp\App.config" />
