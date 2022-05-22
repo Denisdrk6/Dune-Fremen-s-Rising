@@ -65,9 +65,9 @@ public class Player : RagnarComponent
         agent.ClearPath();
         dialogue = GameObject.Find("Dialogue").GetComponent<DialogueManager>();
 
-        sound = InternalCalls.InstancePrefab("SoundArea");
+        sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition);
         gameObject.AddChild(sound);
-        sound.transform.globalPosition = gameObject.transform.globalPosition;
+        //sound.transform.globalPosition = gameObject.transform.globalPosition;
 
         // Asignation of particles depending of the character
         if (gameObject.name == "Player")

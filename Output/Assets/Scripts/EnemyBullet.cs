@@ -16,11 +16,13 @@ public class EnemyBullet : RagnarComponent
 
 		Vector3 pos = enemy.transform.globalPosition;
 		pos.y += 0.5f;
+		
 		gameObject.transform.localPosition = pos;
 
 		Rigidbody bulletRb = gameObject.GetComponent<Rigidbody>();
-		bulletRb.IgnoreCollision(enemy, true);
-		bulletRb.SetBodyPosition(pos);
+		//bulletRb.IgnoreCollision(enemy, true);
+		
+		//bulletRb.SetBodyPosition(pos);
 
 		Vector3 diff = players[index].transform.globalPosition - gameObject.transform.globalPosition;
 		diff.y = gameObject.transform.globalPosition.y;
@@ -40,8 +42,9 @@ public class EnemyBullet : RagnarComponent
 		bulletRb.linearVelocity = diff.normalized * vel;
 
 		Vector3 dir = diff * -2;
-		gameObject.GetComponent<ParticleSystem>().SetDirectionParticle(dir);
-		gameObject.GetComponent<ParticleSystem>().Play();
+		ParticleSystem particles = gameObject.GetComponent<ParticleSystem>();
+		particles.SetDirectionParticle(dir);
+		particles.Play();
 	}
     public void Update()
 	{

@@ -777,6 +777,7 @@ void ModuleRenderer3D::RemoveSpotLight(SpotLight* light)
 
 void ModuleRenderer3D::RequestDamageFeedback()
 {
+	damageTextureAlpha = 0.6f;
 	dmgFeedbackRequested = true;
 }
 
@@ -893,11 +894,10 @@ void ModuleRenderer3D::GenerateShadows(const std::set<GameObject*>& objects, Cam
 
 void ModuleRenderer3D::DrawDamageFeedback()
 {
-	static float alpha = 0.6;
-	alpha -= 0.5 * app->sceneManager->GetGameDeltaTime();
-	if (alpha < 0)
+	damageTextureAlpha -= 0.5 * app->sceneManager->GetGameDeltaTime();
+	if (damageTextureAlpha < 0)
 	{
-		alpha = 0.6;
+		damageTextureAlpha = 0.6;
 		dmgFeedbackRequested = false;
 		return;
 	}
@@ -909,7 +909,7 @@ void ModuleRenderer3D::DrawDamageFeedback()
 	glUniform1i(textLoc1, 0);
 
 	glEnable(GL_BLEND);
-	textureShader->SetUniform1f("alpha", alpha);
+	textureShader->SetUniform1f("alpha", damageTextureAlpha);
 	textureShader->SetUniformVec3f("color", { 1,1,1 });
 	glDrawElements(GL_TRIANGLES, distIbo->GetCount(), GL_UNSIGNED_INT, 0);
 	glDisable(GL_BLEND);

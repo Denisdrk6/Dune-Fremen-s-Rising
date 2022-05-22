@@ -43,6 +43,15 @@ public class Rock : RagnarComponent
 	public void Update()
 	{
 		goRB.ApplyVelocity(relativePos.normalized * 25);
+
+		if (pendingToDelete)
+		{
+			cooldown -= Time.deltaTime;
+			if (cooldown < 0)
+			{
+				InternalCalls.Destroy(gameObject);
+			}
+		}
 	}
 
 	public void OnCollisionEnter(Rigidbody other)
@@ -53,21 +62,13 @@ public class Rock : RagnarComponent
 
 			goRB.SetAsStatic();
 
-			GameObject sound = InternalCalls.InstancePrefab("SoundArea", true);
+			GameObject sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition, true);
 			sound.GetComponent<Rigidbody>().SetRadiusSphere(6f);
-			sound.transform.globalPosition = gameObject.transform.globalPosition;
+			//sound.transform.globalPosition = gameObject.transform.globalPosition;
 			sound.GetComponent<SoundAreaManager>().stablishedTimer = 2f;
 
 			cooldown = 2f;
 			pendingToDelete = true;
-		}
-		if (pendingToDelete)
-		{
-			cooldown -= Time.deltaTime;
-			if (cooldown < 0)
-			{
-				InternalCalls.Destroy(gameObject);
-			}
 		}
 	}
 }

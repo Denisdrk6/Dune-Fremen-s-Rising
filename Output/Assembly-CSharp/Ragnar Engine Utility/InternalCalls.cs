@@ -33,7 +33,7 @@ namespace RagnarEngine
         public static extern GameObject Create3DObject(object name, int primitiveType, object position);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
-        public static extern GameObject InstancePrefab(object path, bool begin = false);
+        public static extern GameObject InstancePrefab(object path, Vector3 position, bool begin = false);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern void Destroy(object go);
@@ -679,25 +679,4 @@ public enum MouseButton
     LEFT = 1,
     MIDDLE,
     RIGHT,
-}
-
-public enum DEControllerButton
-{
-    INVALID = -1,
-    A,
-    B,
-    X,
-    Y,
-    BACK,
-    GUIDE,
-    START,
-    LEFTSTICK,
-    RIGHTSTICK,
-    LEFTSHOULDER,
-    RIGHTSHOULDER,
-    DPAD_UP,
-    DPAD_DOWN,
-    DPAD_LEFT,
-    DPAD_RIGHT,
-    MAX
 }

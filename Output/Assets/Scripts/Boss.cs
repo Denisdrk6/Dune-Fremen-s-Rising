@@ -211,15 +211,11 @@ public class Boss : RagnarComponent
 	{
 		animationComponent.PlayAnimation("CallBackup");
 
-		InternalCalls.InstancePrefab("Basic Enemy 16");
-		GameObject enemy1 = GameObject.Find("Basic Enemy 16");
-		enemy1.GetComponent<Rigidbody>().SetBodyPosition(new Vector3(2.07f, 6.66f, -19.0f));
+		GameObject enemy1 = InternalCalls.InstancePrefab("Basic Enemy 16", new Vector3(2.07f, 6.66f, -19.0f));
 		enemy1.GetComponent<EnemyBoss>().colliders = colliders;
 
-		InternalCalls.InstancePrefab("Basic Enemy 17");
-		enemy1 = GameObject.Find("Basic Enemy 17");
-		enemy1.GetComponent<Rigidbody>().SetBodyPosition(new Vector3(0.61f, 6.66f, -8.0f));
-		enemy1.GetComponent<EnemyBoss>().colliders = colliders;
+		GameObject enemy2 = InternalCalls.InstancePrefab("Basic Enemy 17", new Vector3(0.61f, 6.66f, -8.0f));
+		enemy2.GetComponent<EnemyBoss>().colliders = colliders;
 	}
 	public void GenerateRocks()
 	{
@@ -234,11 +230,12 @@ public class Boss : RagnarComponent
 		for (int i = 0; i < 5; ++i)
 		{
 			string rockPrefab = "Rock" + (i + 1);
-			InternalCalls.InstancePrefab(rockPrefab);
-			GameObject rock = GameObject.Find(rockPrefab);
-			Rigidbody rockRb = rock.GetComponent<Rigidbody>();
-			if (i % 2 == 0) rockRb.SetBodyPosition(new Vector3(bossPos.x, 15.0f, bossPos.z + i));
-			else rockRb.SetBodyPosition(new Vector3(bossPos.x + i, 15.0f, bossPos.z));
+
+			Vector3 pos;
+			if (i % 2 == 0) pos = new Vector3(bossPos.x, 15.0f, bossPos.z + i);
+			else pos = new Vector3(bossPos.x + i, 15.0f, bossPos.z);
+
+			InternalCalls.InstancePrefab(rockPrefab, pos);
 		}
 	}
 
@@ -467,7 +464,11 @@ public class Boss : RagnarComponent
 	private void ThrowRock()
 	{
 		//gameObject.GetComponent<AudioSource>().PlayClip("EBOSS_THROWOBJECT");
-		InternalCalls.InstancePrefab("RockBoss");
+		GameObject boss = GameObject.Find("Boss");
+		Vector3 pos = boss.transform.globalPosition;
+		pos.y += 1;
+		GameObject r = InternalCalls.InstancePrefab("RockBoss", pos);
+		r.transform.localPosition = pos;
 		rocksAvailable = false;
 	}
 	private void GenerateBarrels()
@@ -480,9 +481,7 @@ public class Boss : RagnarComponent
 				{
 					string barrelName = "Barrel" + (i + 1);
 					// Need to know the name of the prefab
-					InternalCalls.InstancePrefab(barrelName);
-					GameObject barrel = GameObject.Find(barrelName);
-					barrel.GetComponent<Rigidbody>().SetBodyPosition(barrelLocations[i].spawnLocation);
+					GameObject barrel = InternalCalls.InstancePrefab(barrelName, barrelLocations[i].spawnLocation);
 					barrel.GetComponent<Barrel>().barrelIndex = i;
 					barrelLocations[i].isDestroyed = false;
 					barrelCount++;

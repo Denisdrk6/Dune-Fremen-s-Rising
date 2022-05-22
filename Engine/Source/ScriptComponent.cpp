@@ -29,6 +29,8 @@ ScriptComponent::ScriptComponent(GameObject* own, const char* scriptName) : call
 
 ScriptComponent::~ScriptComponent()
 {
+	CallOnDestroy();
+
 	if (ScriptComponent::runningScript == this)
 		ScriptComponent::runningScript = nullptr;
 
@@ -420,6 +422,22 @@ bool ScriptComponent::OnSave(JsonParsing& node, JSON_Array* array)
 	return true;
 }
 
+void ScriptComponent::CallOnCreation()
+{
+	if (onCreationMethod)
+	{
+		mono_runtime_invoke(onCreationMethod, mono_gchandle_get_target(noGCobject), NULL, nullptr);
+	}
+}
+
+void ScriptComponent::CallOnDestroy()
+{
+	if (onDestroyMethod)
+	{
+		mono_runtime_invoke(onDestroyMethod, mono_gchandle_get_target(noGCobject), NULL, nullptr);
+	}
+}
+
 void ScriptComponent::CallOnTriggerEnter(RigidBodyComponent* other)
 {
 	if (onTriggerEnterMethod)
@@ -429,6 +447,7 @@ void ScriptComponent::CallOnTriggerEnter(RigidBodyComponent* other)
 		mono_runtime_invoke(onTriggerEnterMethod, mono_gchandle_get_target(noGCobject), params, nullptr);
 	}
 }
+
 void ScriptComponent::CallOnTrigger(RigidBodyComponent* other)
 {
 	if (onTriggerMethod)
@@ -457,6 +476,7 @@ void ScriptComponent::CallOnCollisionEnter(RigidBodyComponent* other)
 		mono_runtime_invoke(onCollisionEnterMethod, mono_gchandle_get_target(noGCobject), params, nullptr);
 	}
 }
+
 void ScriptComponent::CallOnCollision(RigidBodyComponent* other)
 {
 	if (onCollisionMethod)
@@ -518,6 +538,14 @@ void ScriptComponent::LoadScriptData(const char* scriptName)
 	MonoMethodDesc* collisionDesc = mono_method_desc_new(":OnCollision", false);
 	onCollisionMethod = mono_method_desc_search_in_class(collisionDesc, klass);
 	mono_method_desc_free(collisionDesc);
+
+	mdesc = mono_method_desc_new(":OnCreation", false);
+	onCreationMethod = mono_method_desc_search_in_class(mdesc, klass);
+	mono_method_desc_free(mdesc); onDestroyMethod;
+
+	mdesc = mono_method_desc_new(":OnDestroy", false);
+	onDestroyMethod = mono_method_desc_search_in_class(mdesc, klass);
+	mono_method_desc_free(mdesc);
 
 	MonoClass* baseClass = mono_class_get_parent(klass);
 	if (baseClass != nullptr)

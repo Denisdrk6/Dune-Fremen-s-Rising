@@ -382,13 +382,13 @@ public class Level_1 : RagnarComponent
         };
         /////////////////////////////////////////////////
 
-        InternalCalls.InstancePrefab("PlayerManager");
-        GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters = characters;
-        InternalCalls.InstancePrefab("EnemyManager");
-        GameObject.Find("EnemyManager").GetComponent<EnemyManager>().enemies = enemies;
+        GameObject pm = InternalCalls.InstancePrefab("PlayerManager", Vector3.zero);
+        pm.GetComponent<PlayerManager>().characters = characters;
+        GameObject em = InternalCalls.InstancePrefab("EnemyManager", Vector3.zero);
+        em.GetComponent<EnemyManager>().enemies = enemies;
 
-        InternalCalls.InstancePrefab("Dialogue");
-        InternalCalls.InstancePrefab("DialogueLevel1");
+        InternalCalls.InstancePrefab("Dialogue", Vector3.zero);
+        InternalCalls.InstancePrefab("DialogueLevel1", Vector3.zero);
     }
 	public void Update()
 	{

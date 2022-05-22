@@ -30,7 +30,7 @@ public class PlayerManager : RagnarComponent
 	{
         foreach (Characters c in characters)
         {
-            InternalCalls.InstancePrefab(c.prefabPath);   
+            InternalCalls.InstancePrefab(c.prefabPath, c.pos);
         }
 
         players = GameObject.FindGameObjectsWithTag("Player");
@@ -350,7 +350,7 @@ public class PlayerManager : RagnarComponent
             if (playableCharacter.state != State.CARRYING)
             {
                 // Instancia la habilidad en cuesti�n. 
-                InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath);
+                InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath, playableCharacter.pos);
 
                 // Al haberse instanciado una habilidad, comprueba si funciona por cargas. Si lo hace resta una carga a la habilidad.
                 if (playableCharacter.abilities[(int)playableCharacter.state - 1].charges != -1 && playableCharacter.abilities[(int)playableCharacter.state - 1].charges != 0)
@@ -634,5 +634,3 @@ public class PlayerManager : RagnarComponent
         }
     }
 }
-
-

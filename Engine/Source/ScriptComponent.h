@@ -27,6 +27,8 @@ public:
 
 	void LoadScriptData(const char*);
 
+	void CallOnCreation();
+	void CallOnDestroy();
 	void CallOnTriggerEnter(RigidBodyComponent* other);
 	void CallOnTrigger(RigidBodyComponent* other);
 	void CallOnTriggerExit(RigidBodyComponent* other);
@@ -55,6 +57,8 @@ public:
 	MonoMethod* onTriggerExitMethod;
 	MonoMethod* onCollisionEnterMethod;
 	MonoMethod* onCollisionMethod;
+	MonoMethod* onCreationMethod;
+	MonoMethod* onDestroyMethod;
 
 	uint32_t noGCobject;
 	std::string name = "";

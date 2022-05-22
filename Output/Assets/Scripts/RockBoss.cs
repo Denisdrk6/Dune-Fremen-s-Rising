@@ -13,13 +13,15 @@ public class RockBoss : RagnarComponent
 
         Vector3 pos = boss.transform.globalPosition;
         pos.y += 1;
-        gameObject.transform.localPosition = pos;
+        //Done when instancing prefab
+        //gameObject.transform.localPosition = pos;
 
         Vector3 direction = agent.hitPosition - boss.transform.globalPosition;
         direction.y = 0;
 
         Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
-        goRB.SetBodyPosition(pos);
+        //Done when instancing prefab
+        //goRB.SetBodyPosition(pos);
         goRB.IgnoreCollision(boss, true);
         goRB.ApplyCentralForce(direction.normalized * force);
 

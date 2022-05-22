@@ -13,6 +13,7 @@
 #include "ButtonComponent.h"
 #include "MaterialComponent.h"
 #include "MeshComponent.h"
+#include "C_RigidBody.h"
 #include "Texture.h"
 #include "ParticleSystemComponent.h"
 #include "LightComponent.h"
@@ -26,6 +27,8 @@
 
 #include <metadata\object-forward.h>
 #include <metadata\object.h>
+
+#include "BulletDynamics/Dynamics/btRigidBody.h"
 
 // Input bindings ===============================================================================
 
@@ -405,9 +408,10 @@ MonoObject* Instantiate3DGameObject(MonoObject* name, int primitiveType, MonoObj
 	return app->moduleMono->GoToCSGO(go);
 }
 
-MonoObject* InstancePrefab(MonoObject* name, bool begin = false)
+MonoObject* InstancePrefab(MonoObject* name, MonoObject* position, bool begin = false)
 {
 	char* goName = mono_string_to_utf8(mono_object_to_string(name, 0));
+	DEBUG_LOG("Instantiating prefab %s", goName);
 
 	std::string	path;
 
@@ -423,6 +427,16 @@ MonoObject* InstancePrefab(MonoObject* name, bool begin = false)
 	mono_free(goName);
 
 	GameObject* go = PrefabManager::GetInstance()->LoadPrefab(path.c_str(), begin);
+
+	float3 pos = app->moduleMono->UnboxVector(position);
+	go->GetComponent<TransformComponent>()->SetGlobalPosition(pos);
+	go->GetComponent<TransformComponent>()->SetAABB();
+	if (RigidBodyComponent* rb = go->GetComponent<RigidBodyComponent>())
+		rb->GetBody()->getWorldTransform().setOrigin(pos);
+
+	if (ScriptComponent* script = go->GetComponent<ScriptComponent>())
+		script->CallOnCreation();
+
 	return app->moduleMono->GoToCSGO(go);
 }
 
