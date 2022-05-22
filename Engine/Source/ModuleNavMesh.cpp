@@ -64,8 +64,6 @@ bool ModuleNavMesh::LoadNaviConfig(JsonParsing& node)
 	buildSettings->partitionType = node.GetJsonNumber("partitionType");
 	buildSettings->tileSize = node.GetJsonNumber("tileSize");
 
-	BakeNavMesh();
-
 	return true;
 }
 

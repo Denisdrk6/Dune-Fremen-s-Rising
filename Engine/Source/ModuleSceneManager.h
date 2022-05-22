@@ -100,7 +100,6 @@ private:
 	int index = 0;
 	int lastIndex = 0;
 	bool changeScene = false;
-	bool pendingToBake = false;
 	std::string lastSceneName;
 
 	bool exit = false;
