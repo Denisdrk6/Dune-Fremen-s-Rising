@@ -81,7 +81,6 @@ public class CameraShowcase : RagnarComponent
     // Update
     public void Update()
     {
-        Debug.Log("PointA: " + pointA.ToString());
         if (!endedPresentation)
         {
             // Cubic
@@ -89,6 +88,7 @@ public class CameraShowcase : RagnarComponent
             {
                 if (index < waypoints.Length)
                 {
+                    Debug.Log("Index: " + index.ToString() + "Length: " + waypoints.Length.ToString());
                     t += Time.deltaTime * speed;
 
                     // Movement
@@ -153,7 +153,7 @@ public class CameraShowcase : RagnarComponent
                     }
                 }
 
-                else if (camComponent.GetAngle() != ogRotation || camComponent.GetZoom() < targetZoom)
+                else if ((camComponent.GetAngle() != ogRotation || camComponent.GetZoom() < targetZoom) && tEnd < 1.0f)
                 {
                     tEnd += Time.deltaTime * speed;
                     if (camComponent.GetAngle() != ogRotation) camComponent.ScriptRotationAngle(Lerp(endRotation, ogRotation, EaseOut(tEnd)));

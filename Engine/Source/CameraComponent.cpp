@@ -216,7 +216,7 @@ bool CameraComponent::Update(float dt)
 		targetUID = 0;
 	}*/
 
-	if(!lockControlls) Zoom();
+	if(!lock) Zoom();
 
 	if (target && app->input->GetKey(SDL_SCANCODE_F) == KeyState::KEY_DOWN)
 	{
@@ -252,7 +252,7 @@ bool CameraComponent::Update(float dt)
 	}
 
 	// -------------MOVEMENT---------------
-	if (!lockControlls && app->input->GetMouseButton(SDL_BUTTON_RIGHT) != KeyState::KEY_REPEAT)
+	if (!lock && app->input->GetMouseButton(SDL_BUTTON_RIGHT) != KeyState::KEY_REPEAT)
 	{
 		if (preset1)
 		{

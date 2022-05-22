@@ -56,7 +56,7 @@ public:
 	void ScriptRotation(float x, float y, float z);
 	void ScriptRotation(float ang);
 	float GetAngle();
-	void LockControlls(bool lock) { lockControlls = lock; };
+	void LockControlls(bool lock) { this->lock = lock; };
 	float GetZoom();
 	void ScriptZoom(float zoom);
 
@@ -117,7 +117,7 @@ private:
 	float4 limits;
 
 	//Lock
-	bool lockControlls = false;
+	bool lock = false;
 
 	bool preset1 = true;
 };
