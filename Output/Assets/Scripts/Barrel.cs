@@ -47,7 +47,7 @@ public class Barrel : RagnarComponent
 
     public void OnCollision(Rigidbody other)
     {
-        if (other.gameObject.name == "Knife")
+        if (other.gameObject.name == "Knife" || other.gameObject.name == "BackStab")
         {
             if (boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude < 2.0f)
             {

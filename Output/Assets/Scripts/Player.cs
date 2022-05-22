@@ -29,6 +29,7 @@ public class Player : RagnarComponent
     public bool dead = false;
     public bool isHidden = false;
     public bool godMode = false;
+    public bool stunned = false;
     private float speedBase = 0;
 
     Rigidbody rb;
@@ -162,7 +163,7 @@ public class Player : RagnarComponent
                         }
 
 
-                        if (abilityState == State.NONE && Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
+                        if (abilityState == State.NONE && Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP && !stunned)
                         {
                             if (agent.CalculatePath(agent.hitPosition).Length > 0)
                             {

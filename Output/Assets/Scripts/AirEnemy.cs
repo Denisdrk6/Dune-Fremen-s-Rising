@@ -122,6 +122,7 @@ public class AirEnemy : RagnarComponent
 
             if (deathTimer >= 0)
             {
+                state = EnemyState.IS_DYING;
                 deathTimer -= Time.deltaTime;
                 if (deathTimer < 0)
                 {
@@ -191,7 +192,7 @@ public class AirEnemy : RagnarComponent
 
     public void OnTrigger(Rigidbody other)
     {
-        if (state != EnemyState.DEATH)
+        if (state != EnemyState.DEATH || state != EnemyState.IS_DYING)
         {
             //// Stilgar =====================================
             if (other.gameObject.name == "Trap")

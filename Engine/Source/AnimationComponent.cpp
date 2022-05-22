@@ -359,11 +359,13 @@ void AnimationComponent::Play(std::string state)
 
 				currAnim = &animations[i];
 				lastCurrentTime = currentTime;
+				
+				currAnim->hasFinished = false;
+				currentTime = 0.0f;
+				loopTime = 0.0f;
 
 				if (lastAnim != currAnim)
 				{
-					currentTime = 0.0f;
-					loopTime = 0.0f;
 					interpolating = true;
 				}
 				playing = true;

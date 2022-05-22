@@ -41,6 +41,15 @@ public class PlayerManager : RagnarComponent
             players[i].SubmitOutlineDrawing(outlineColors[i]);
         }
 
+        // IgnoreCollision with other players
+        for (int i = 0; i < players.Length; i++)
+        {
+            for (int j = 0; j < players.Length; j++)
+            {
+                players[i].GetComponent<Rigidbody>().IgnoreCollision(players[j], true);
+            }
+        }
+
         ChangeCharacter(characterSelected);
         playableCharacter = characters[characterSelected];
         for(int i = 0; i < players.Length; i++)
@@ -171,7 +180,7 @@ public class PlayerManager : RagnarComponent
         if (((playableCharacter == characters[0]) && (playableCharacter.state == State.ABILITY_4)) || (playableCharacter == characters[1]) && (playableCharacter.state == State.ABILITY_4))
         {
             radius = 0f;
-            if (playableCharacter == characters[0]) radius = 11.5f;
+            if (playableCharacter == characters[0]) radius = 13f;
             else if (playableCharacter == characters[1]) radius = 12.7f;
 
             lightHab.GetComponent<Light>().intensity = 6;

@@ -17,7 +17,8 @@ public enum EnemyState
     CAUTIOUS,
     SEARCHING,
     ANGRY,
-    DEATH
+    DEATH,
+    IS_DYING
 }
 
 public class Enemies

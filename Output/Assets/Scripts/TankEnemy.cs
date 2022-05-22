@@ -55,7 +55,7 @@ public class TankEnemy : RagnarComponent
     AudioSource sceneAudioSource;
 
     GameObject[] childs;
-    ParticleSystem stunPartSys;
+    public ParticleSystem stunPartSys;
     public void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
@@ -142,6 +142,7 @@ public class TankEnemy : RagnarComponent
 
                 if (deathTimer >= 0)
                 {
+                    state = EnemyState.IS_DYING;
                     deathTimer -= Time.deltaTime;
                     if (deathTimer < 0)
                     {
@@ -213,7 +214,7 @@ public class TankEnemy : RagnarComponent
             }
         }        
     }
-        public void SetControled(bool flag)
+    public void SetControled(bool flag)
     {
         controlled = flag;
         if (flag) controlledCooldown = 10;
@@ -260,7 +261,7 @@ public class TankEnemy : RagnarComponent
 
     public void OnTrigger(Rigidbody other)
     {
-        if (state != EnemyState.DEATH)
+        if (state != EnemyState.DEATH || state != EnemyState.IS_DYING)
         {
             //// Paul ========================================
             if (other.gameObject.name == "SoundArea")

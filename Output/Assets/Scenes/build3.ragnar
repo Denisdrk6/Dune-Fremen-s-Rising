@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Level_3",
-                    "pointer": 543490112,
+                    "pointer": 554104896,
                     "type": 4,
                     "componentTable": 0,
                     "characters": 0,
@@ -210,7 +210,7 @@
                     "Vertical Fov": 0.42143398523330688,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -51.919754028320313,
+                        -51.919754028320312,
                         55,
                         111.78361511230469
                     ],
@@ -402,7 +402,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "pauseMenuButton",
-                    "pointer": 543604736,
+                    "pointer": 554107784,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -1204,9 +1204,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0.14920353889465332,
-                        0.1999983936548233,
-                        -3.7166833877563477
+                        -46.948795318603516,
+                        0.20000854134559631,
+                        183.79302978515625
                     ],
                     "Quaternion": [
                         0,
@@ -1230,9 +1230,9 @@
                     "Active": true,
                     "Light Type": 2,
                     "Position": [
-                        0.14920353889465332,
-                        0.1999983936548233,
-                        -3.7166833877563477
+                        -46.948795318603516,
+                        0.20000854134559631,
+                        183.79302978515625
                     ],
                     "Ambient": [
                         1,
@@ -1250,8 +1250,8 @@
                         0
                     ],
                     "Intensity": 0,
-                    "Constant": 0.10000000149011612,
-                    "Linear": -0.37200000882148743,
+                    "Constant": 0.56000000238418579,
+                    "Linear": -0.18899999558925629,
                     "Quadratic": 0
                 }
             ]
@@ -7341,539 +7341,6 @@
             ]
         },
         {
-            "UUID": 1724506246,
-            "Parent UUID": 417171234,
-            "Name": "Boss",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Boss.rgprefab",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        9.2446231842041016,
-                        -58
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        -0,
-                        0,
-                        -0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 0,
-                    "Emissive Enabled": true,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/nme_boss_walknormal__Mesh.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "Boss",
-                    "pointer": 584478352,
-                    "type": 4,
-                    "componentTable": 0,
-                    "state": 0,
-                    "index": 0,
-                    "colliders": 0,
-                    "barrelLocations": 221064872,
-                    "barrelCount": 0,
-                    "stunnedHits": 0
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 2,
-                    "Radius": 0.30000001192092896,
-                    "Height": 1.6000000238418579,
-                    "Gravity": true,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "fActivation": false,
-                    "Mass": 70,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                },
-                {
-                    "Type": 20,
-                    "Active": true,
-                    "Radius": 0.5,
-                    "Height": 2,
-                    "StopHeight": 0.89999997615814209,
-                    "MaxSlope": 45,
-                    "Speed": 6,
-                    "AngularSpeed": 180,
-                    "Acceleration": 1,
-                    "StoppingDistance": 0,
-                    "PathType": 1,
-                    "NumPolys": 0,
-                    "NumStraight": 0,
-                    "NumSmooth": 0
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "Current Anim": "WalkNormal",
-                    "Animations": [
-                        {
-                            "State": "CallBackup",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "Die",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_die__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "Execdie",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_execdie__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "Exhausted",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_exhausted__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "HitGround",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_hitground__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "Ntoa",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_ntoa__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "Run",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_run__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Shield",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shield__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "ShieldDestroy",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shielddestroy__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "ShotCrazy",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shotcrazy__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "SitIdle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_sitidle__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "Throw",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "WalkAngry",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walkangry__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "WalkNormal",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walknormal__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 787600465,
-            "Parent UUID": 1724506246,
-            "Name": "StabParticlesBoss",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        2.1957550048828125,
-                        -0.30602645874023438
-                    ],
-                    "Quaternion": [
-                        -0.7083771824836731,
-                        0,
-                        0,
-                        0.70583409070968628
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1.0000005960464478,
-                        1.0000005960464478
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        0,
-                        11.440378189086914,
-                        -58.306026458740234
-                    ],
-                    "MaxDuration": 0.78899997472763062,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 200,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.004999999888241291,
-                            "Emitter: Current Timer": 0.004999999888241291,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.10000000149011612,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        1,
-                                        0,
-                                        0,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        1,
-                                        0,
-                                        0,
-                                        1
-                                    ],
-                                    "Effect Type": 3
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.5,
-                                    "PESpawnCone: Height": 1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 50,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.019999999552965164,
-                            "Emitter: Current Timer": 0.0039999987930059433,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.10000000149011612,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodmain.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        1,
-                                        0,
-                                        0,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        1,
-                                        0,
-                                        0,
-                                        1
-                                    ],
-                                    "Effect Type": 3
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.5,
-                                    "PESpawnCone: Height": 1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 2019833962,
-            "Parent UUID": 1724506246,
-            "Name": "BossShieldParticles",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        1.1375083923339844,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        0,
-                        10.382131576538086,
-                        -58
-                    ],
-                    "MaxDuration": 0,
-                    "Looping": true,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 100,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.0099999997764825821,
-                            "Emitter: Current Timer": 0.0099999997764825821,
-                            "Emitter: Is Cubical": true,
-                            "Cubical: Spread on X": 0.60000002384185791,
-                            "Cubical: Spread on Y": 1.7999999523162842,
-                            "Cubical: Spread on Z": 0.60000002384185791,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 0.10000000149011612,
-                            "Tiles: X": 5,
-                            "Tiles: Y": 2,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_electric_destroy.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0,
-                                        0.5675055980682373,
-                                        1,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0,
-                                        0.92448520660400391,
-                                        1,
-                                        1
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 1906815624,
             "Parent UUID": 417171234,
             "Name": "UIGame",
@@ -11522,7 +10989,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        5.1778945922851563,
+                        5.1778945922851562,
                         9.5877904891967773,
                         31.956098556518555
                     ],
@@ -12548,7 +12015,7 @@
                     "Position": [
                         4.8114080429077148,
                         1.1470737457275391,
-                        54.863174438476563
+                        54.863174438476562
                     ],
                     "Quaternion": [
                         0,
@@ -12612,7 +12079,7 @@
                     "Position": [
                         -4.7900114059448242,
                         1.1470737457275391,
-                        54.863174438476563
+                        54.863174438476562
                     ],
                     "Quaternion": [
                         0,
@@ -12930,7 +12397,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        28.913650512695313,
+                        28.913650512695312,
                         10.299989700317383,
                         -18.574617385864258
                     ],
@@ -12996,7 +12463,7 @@
                     "Position": [
                         24.906341552734375,
                         10.299989700317383,
-                        -14.350418090820313
+                        -14.350418090820312
                     ],
                     "Quaternion": [
                         0,
@@ -13680,7 +13147,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -0.22806167602539063,
+                        -0.22806167602539062,
                         -17.336030960083008,
                         86.821784973144531
                     ],
@@ -14826,7 +14293,7 @@
                     "Position": [
                         -24.159458160400391,
                         10.213509559631348,
-                        -24.447463989257813
+                        -24.447463989257812
                     ],
                     "Quaternion": [
                         0,
@@ -15401,7 +14868,7 @@
                     "Active": true,
                     "Position": [
                         13.904697418212891,
-                        1.1811904907226563,
+                        1.1811904907226562,
                         27.098545074462891
                     ],
                     "Quaternion": [
@@ -15594,7 +15061,7 @@
                     "Position": [
                         -14.74965763092041,
                         1.1811902523040771,
-                        56.314773559570313
+                        56.314773559570312
                     ],
                     "Quaternion": [
                         0,
@@ -16490,7 +15957,7 @@
                     "Position": [
                         11.011082649230957,
                         5.0660724639892578,
-                        15.840469360351563
+                        15.840469360351562
                     ],
                     "Quaternion": [
                         0,
@@ -16554,7 +16021,7 @@
                     "Position": [
                         -11.547697067260742,
                         5.0660724639892578,
-                        15.840469360351563
+                        15.840469360351562
                     ],
                     "Quaternion": [
                         0,
@@ -16682,7 +16149,7 @@
                     "Position": [
                         -11.547697067260742,
                         5.0660724639892578,
-                        50.571853637695313
+                        50.571853637695312
                     ],
                     "Quaternion": [
                         0,
@@ -16746,7 +16213,7 @@
                     "Position": [
                         4.8026103973388672,
                         5.0660724639892578,
-                        50.839370727539063
+                        50.839370727539062
                     ],
                     "Quaternion": [
                         0,
@@ -16810,7 +16277,7 @@
                     "Position": [
                         -4.7988085746765137,
                         5.0660724639892578,
-                        50.839370727539063
+                        50.839370727539062
                     ],
                     "Quaternion": [
                         0,
@@ -17322,7 +16789,7 @@
                     "Position": [
                         -13.440224647521973,
                         -8.455164909362793,
-                        95.714553833007813
+                        95.714553833007812
                     ],
                     "Quaternion": [
                         0,
@@ -17450,7 +16917,7 @@
                     "Position": [
                         13.68184757232666,
                         -8.3912687301635742,
-                        79.078811645507813
+                        79.078811645507812
                     ],
                     "Quaternion": [
                         0,
@@ -17834,7 +17301,7 @@
                     "Position": [
                         6.3273811340332031,
                         -8.3912677764892578,
-                        100.46560668945313
+                        100.46560668945312
                     ],
                     "Quaternion": [
                         0,
@@ -18282,7 +17749,7 @@
                     "Position": [
                         -8.9245595932006836,
                         8.734562873840332,
-                        -39.351455688476563
+                        -39.351455688476562
                     ],
                     "Quaternion": [
                         0,
@@ -18346,7 +17813,7 @@
                     "Position": [
                         8.5180120468139648,
                         8.734562873840332,
-                        -39.351455688476563
+                        -39.351455688476562
                     ],
                     "Quaternion": [
                         0,
@@ -18602,7 +18069,7 @@
                     "Position": [
                         17.758607864379883,
                         8.734562873840332,
-                        -10.346023559570313
+                        -10.346023559570312
                     ],
                     "Quaternion": [
                         0,
@@ -18986,7 +18453,7 @@
                     "Position": [
                         13.440780639648438,
                         -8.1791505813598633,
-                        98.176101684570313
+                        98.176101684570312
                     ],
                     "Quaternion": [
                         0,
@@ -19501,9 +18968,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        1.9717788696289063,
+                        1.9717788696289062,
                         -0.40999999642372131,
-                        0.14633560180664063
+                        0.14633560180664062
                     ],
                     "Quaternion": [
                         0.20323620736598969,
@@ -19703,8 +19170,8 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        20.695449829101563,
-                        6.2069473266601563,
+                        20.695449829101562,
+                        6.2069473266601562,
                         -1.2541694641113281
                     ],
                     "Quaternion": [
@@ -19767,7 +19234,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -0.10715103149414063,
+                        -0.10715103149414062,
                         -0.34950542449951172,
                         0.20717811584472656
                     ],
@@ -19970,7 +19437,7 @@
                     "Active": true,
                     "Position": [
                         -20.984922409057617,
-                        6.2069473266601563,
+                        6.2069473266601562,
                         -1.2541694641113281
                     ],
                     "Quaternion": [
@@ -21800,7 +21267,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "QuestSystem",
-                    "pointer": 610453384,
+                    "pointer": 554094256,
                     "type": 4,
                     "componentTable": 0,
                     "questList": 0,
@@ -22613,6 +22080,539 @@
                     "Type": 13,
                     "alpha": 1,
                     "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1724506246,
+            "Parent UUID": 417171234,
+            "Name": "Boss",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Boss.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        9.2446231842041016,
+                        -58
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_boss_walknormal__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "Boss",
+                    "pointer": 667979680,
+                    "type": 4,
+                    "componentTable": 0,
+                    "state": 0,
+                    "index": 0,
+                    "colliders": 0,
+                    "barrelLocations": 217329208,
+                    "barrelCount": 0,
+                    "stunnedHits": 0
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 70,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "WalkNormal",
+                    "Animations": [
+                        {
+                            "State": "CallBackup",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Die",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_die__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Execdie",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_execdie__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Exhausted",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_exhausted__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "HitGround",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_hitground__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ntoa",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_ntoa__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_run__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shield",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shield__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShieldDestroy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shielddestroy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShotCrazy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shotcrazy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "SitIdle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_sitidle__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Throw",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "WalkAngry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walkangry__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "WalkNormal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walknormal__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 787600465,
+            "Parent UUID": 1724506246,
+            "Name": "StabParticlesBoss",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        2.1957550048828125,
+                        -0.30602645874023438
+                    ],
+                    "Quaternion": [
+                        -0.7083771824836731,
+                        0,
+                        0,
+                        0.70583409070968628
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1.0000005960464478,
+                        1.0000005960464478
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        0,
+                        11.440378189086914,
+                        -58.306026458740234
+                    ],
+                    "MaxDuration": 0.78899997472763062,
+                    "Looping": false,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 200,
+                            "Emitter: Particles Per Second": 200,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.004999999888241291,
+                            "Emitter: Current Timer": 0.004999999888241291,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0.10000000149011612,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 1,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                },
+                                {
+                                    "PEShape: Offset X": 0,
+                                    "PEShape: Offset Y": 0,
+                                    "PEShape: Offset Z": 0,
+                                    "PEShape: Shape Type": 2,
+                                    "PESpawnCone: Radius": 0.5,
+                                    "PESpawnCone: Height": 1,
+                                    "Effect Type": 4
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 200,
+                            "Emitter: Particles Per Second": 50,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.019999999552965164,
+                            "Emitter: Current Timer": 0.0039999987930059433,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0.10000000149011612,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodmain.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 1,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                },
+                                {
+                                    "PEShape: Offset X": 0,
+                                    "PEShape: Offset Y": 0,
+                                    "PEShape: Offset Z": 0,
+                                    "PEShape: Shape Type": 2,
+                                    "PESpawnCone: Radius": 0.5,
+                                    "PESpawnCone: Height": 1,
+                                    "Effect Type": 4
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2019833962,
+            "Parent UUID": 1724506246,
+            "Name": "BossShieldParticles",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        1.1375083923339844,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        0,
+                        10.382131576538086,
+                        -58
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 200,
+                            "Emitter: Particles Per Second": 100,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.0099999997764825821,
+                            "Emitter: Current Timer": 0.0099999997764825821,
+                            "Emitter: Is Cubical": true,
+                            "Cubical: Spread on X": 0.60000002384185791,
+                            "Cubical: Spread on Y": 1.7999999523162842,
+                            "Cubical: Spread on Z": 0.60000002384185791,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 0.10000000149011612,
+                            "Tiles: X": 5,
+                            "Tiles: Y": 2,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_electric_destroy.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.5,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0,
+                                        0.5675055980682373,
+                                        1,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0,
+                                        0.92448520660400391,
+                                        1,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

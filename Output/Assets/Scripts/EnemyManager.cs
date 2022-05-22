@@ -84,16 +84,19 @@ public class EnemyManager : RagnarComponent
                     {
                         case EnemyType.BASIC:
                             enemyGOs[i].ChangeMesh("1_modeldeath");
+                            enemyGOs[i].GetComponent<BasicEnemy>().stunPartSys.Pause();
                             break;
-                            //TODO: Check if drone destroyed
+                        //TODO: Check if drone destroyed
                         case EnemyType.AIR:
                             enemyGOs[i].ChangeMesh("4_modeldeath");
                             break;
                         case EnemyType.TANK:
                             enemyGOs[i].ChangeMesh("3_modeldeath");
+                            enemyGOs[i].GetComponent<BasicEnemy>().stunPartSys.Pause();
                             break;
                         case EnemyType.UNDISTRACTABLE:
                             enemyGOs[i].ChangeMesh("2_modeldeath");
+                            enemyGOs[i].GetComponent<BasicEnemy>().stunPartSys.Pause();
                             break;
                     };
 
@@ -106,6 +109,7 @@ public class EnemyManager : RagnarComponent
                     enemyGOs[i].isInteractuable = true;
                     enemyGOs[i].interactuableColor = new Vector3(0, 0, 1);
                     enemyGOs[i].GetComponent<BasicEnemy>().pendingToDelete = false;
+                    
                 }
             }
         }

@@ -94,6 +94,7 @@ public class Knife : RagnarComponent
 	{
 		particleComponent.Pause();
 		canReload = true;
+		gameObject.DeleteComponent<Rigidbody>(gameObject.GetComponent<Rigidbody>());
 	}
 
 }

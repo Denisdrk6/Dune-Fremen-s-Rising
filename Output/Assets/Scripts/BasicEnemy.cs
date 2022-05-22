@@ -62,7 +62,7 @@ public class BasicEnemy : RagnarComponent
     private float angleOffset = 0;
 
     GameObject[] childs;
-    ParticleSystem stunPartSys;
+    public ParticleSystem stunPartSys;
 
     public void Start()
     {
@@ -153,6 +153,7 @@ public class BasicEnemy : RagnarComponent
 
                 if (deathTimer >= 0)
                 {
+                    state = EnemyState.IS_DYING;
                     deathTimer -= Time.deltaTime;
                     if (deathTimer < 0)
                     {
@@ -278,7 +279,7 @@ public class BasicEnemy : RagnarComponent
 
     public void OnTrigger(Rigidbody other)
     {
-        if (state != EnemyState.DEATH)
+        if (state != EnemyState.DEATH || state != EnemyState.IS_DYING)
         {
             //// Paul ========================================
             if (other.gameObject.name == "SoundArea")
