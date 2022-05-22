@@ -107,7 +107,7 @@ bool Physics3D::PreUpdate(float dt)
 							else 
 								script->CallOnCollision(obBobject);
 						}
-						else
+						else if (app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->Intersects(obAobject->owner->GetAABB()) || !obAobject->owner->GetAABB().IsFinite())
 						{
 							if (!obAobject->GetOnTrigger())
 							{
@@ -134,7 +134,7 @@ bool Physics3D::PreUpdate(float dt)
 							else
 								script->CallOnCollision(obAobject);
 						}
-						else
+						else if (app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->Intersects(obBobject->owner->GetAABB()) || !obBobject->owner->GetAABB().IsFinite())
 						{
 							if (!obBobject->GetOnTrigger())
 							{

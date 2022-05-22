@@ -20,9 +20,11 @@ ButtonComponent::ButtonComponent(GameObject* own)
 	active = true;
 	buttonText.setText("Button", 5, 5, 0.5, { 255,255,255 });
 	fontPath = "Library/Fonts/Montserrat-Bold.ttf";
-	if (!own->GetComponent<ComponentTransform2D>()) // If comes from Load not enter
+	transform = own->GetComponent<ComponentTransform2D>();
+	if (!transform) // If comes from Load not enter
 	{
 		own->CreateComponent(ComponentType::TRANFORM2D);
+		transform = own->GetComponent<ComponentTransform2D>();
 		normalMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
 		focusedMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
 		pressedMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
@@ -268,8 +270,7 @@ void ButtonComponent::OnEditor()
 
 float2 ButtonComponent::GetParentPosition()
 {
-	ComponentTransform2D* transform2D = owner->GetComponent<ComponentTransform2D>();
-	float3 position = transform2D->GetPosition();
+	float3 position = transform->GetPosition();
 
 	return{ position.x / 2 ,position.y / 2 };
 }

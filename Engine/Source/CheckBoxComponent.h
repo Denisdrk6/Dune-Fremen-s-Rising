@@ -6,6 +6,7 @@
 class MyPlane;
 class GameObject;
 class MaterialComponent;
+class ComponentTransform2D;
 
 class CheckboxComponent : public Component
 {
@@ -70,4 +71,6 @@ private:
 	char text[32] = "V-Sync";
 	float fontScale = 0.5;
 	bool checked = false;
+
+	ComponentTransform2D* ownerTransform;
 };

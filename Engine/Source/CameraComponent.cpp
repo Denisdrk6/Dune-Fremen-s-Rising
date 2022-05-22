@@ -56,6 +56,7 @@ void CameraComponent::OnEditor()
 
 	if (ImGui::CollapsingHeader(ICON_FA_CAMERA" Camera"))
 	{
+		ImGui::Checkbox("Lock", &lock);
 		ImGui::Text("Field of view");
 		ImGui::SameLine();
 		static float horizontalFovEditor = RadToDeg(horizontalFov);
@@ -251,7 +252,7 @@ bool CameraComponent::Update(float dt)
 	}
 
 	// -------------MOVEMENT---------------
-	if (!lockControlls)
+	if (!lockControlls && app->input->GetMouseButton(SDL_BUTTON_RIGHT) != KeyState::KEY_REPEAT)
 	{
 		if (preset1)
 		{
@@ -274,7 +275,6 @@ bool CameraComponent::Update(float dt)
 
 void CameraComponent::Zoom()
 {
-
 	if (app->input->GetMouseZ() > 0 && zoom < zoomMax)
 	{
 		zoom += zoomSpeed;
@@ -337,7 +337,7 @@ void CameraComponent::UpdateMovement()
 			if (pos.z < limits.y) pos.z = limits.y;
 			else if (pos.z > limits.w) pos.z = limits.w; // limit.w = bound.y + bound.h
 
-			controllerTrans->SetPosition(float3(pos.x, 0, pos.z));
+			controllerTrans->SetPosition(float3(pos.x, pos.y, pos.z));
 			controllerTrans->ForceUpdateTransform();
 		}
 	}
@@ -350,6 +350,7 @@ void CameraComponent::UpdateRotation()
 		horizontalAngle -= rotationSpeed;
 		if (horizontalAngle < 0) horizontalAngle += 360;
 		controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
+		//controllerTrans->SetRotation(Quat::FromEulerXYZ(controllerTrans->GetRotation().ToEulerXYZ().x, DEGTORAD * horizontalAngle, controllerTrans->GetRotation().ToEulerXYZ().z));
 		controllerTrans->UpdateEditorRotation();
 		controllerTrans->ForceUpdateTransform();
 	}
@@ -358,6 +359,7 @@ void CameraComponent::UpdateRotation()
 		horizontalAngle += rotationSpeed;
 		if (horizontalAngle > 360) horizontalAngle -= 360;
 		controllerTrans->SetRotation(Quat::RotateY(DEGTORAD * horizontalAngle));
+		//controllerTrans->SetRotation(Quat::FromEulerXYZ(controllerTrans->GetRotation().ToEulerXYZ().x,DEGTORAD * horizontalAngle, controllerTrans->GetRotation().ToEulerXYZ().z));
 		controllerTrans->UpdateEditorRotation();
 		controllerTrans->ForceUpdateTransform();
 	}
@@ -527,6 +529,7 @@ bool CameraComponent::OnLoad(JsonParsing& node)
 	zoomMin = node.GetJsonNumber("Zoom Min");
 	zoomMax = node.GetJsonNumber("Zoom Max");
 	zoomSpeed = node.GetJsonNumber("Zoom Speed");
+	lock = node.GetJsonBool("Lock");
 
 	// MOVEMENT
 	freeMovement = node.GetJsonBool("Free Movement");
@@ -566,6 +569,7 @@ bool CameraComponent::OnSave(JsonParsing& node, JSON_Array* array)
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Zoom Min", zoomMin);
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Zoom Max", zoomMax);
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Zoom Speed", zoomSpeed);
+	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Lock", lock);
 
 	// MOVEMENT
 	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Free Movement", freeMovement);

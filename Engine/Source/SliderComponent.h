@@ -7,6 +7,7 @@ class MyPlane;
 class GameObject;
 class MaterialComponent;
 class ComponentTransform2D;
+class MaterialComponent;
 class SliderComponent : public Component
 {
 public:
@@ -53,4 +54,8 @@ private:
 	Text sliderText;
 	char text[64] = "Camera FOV";
 	float fontScale = 0.5;
+
+	// Components from owner
+	ComponentTransform2D* ownerTransform2DComponent;
+	MaterialComponent* ownerMaterialComponent;
 };

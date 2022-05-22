@@ -2,11 +2,12 @@
 #include "Component.h"
 
 class Light;
+class TransformComponent;
 
 class ComponentLight : public Component
 {
 public:
-	ComponentLight();
+	ComponentLight(GameObject* own);
 	virtual ~ComponentLight();
 
 	bool Update(float dt) override;
@@ -23,4 +24,5 @@ public:
 
 private:
 	Light* light = nullptr;
+	TransformComponent* ownerTransform;
 };

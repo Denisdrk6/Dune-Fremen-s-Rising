@@ -19,11 +19,13 @@ Quadtree::~Quadtree()
 
 void Quadtree::Create(AABB limits)
 {
+	RG_PROFILING_FUNCTION("Creating the quadtree");
 	root = new QuadtreeNode(limits);
 }
 
 void Quadtree::Clear()
 {
+	RG_PROFILING_FUNCTION("Clearing the quadtree");
 	RELEASE(root);
 }
 
@@ -143,6 +145,18 @@ void Quadtree::CollectGoOnlyStatic(std::set<GameObject*>& gos, std::stack<Quadtr
 		QuadtreeNode* node = nodes.top();
 		for (std::vector<GameObject*>::const_iterator it = node->GetObjects().begin(); it != node->GetObjects().end(); ++it)
 			if((*it)->staticObj) gos.insert(*it);
+
+		nodes.pop();
+	}
+}
+
+void Quadtree::CollectGoByTag(std::set<GameObject*>& gos, std::stack<QuadtreeNode*>& nodes, std::string tag)
+{
+	while (!nodes.empty())
+	{
+		QuadtreeNode* node = nodes.top();
+		for (std::vector<GameObject*>::const_iterator it = node->GetObjects().begin(); it != node->GetObjects().end(); ++it)
+			if ((*it)->tag == tag) gos.insert(*it);
 
 		nodes.pop();
 	}

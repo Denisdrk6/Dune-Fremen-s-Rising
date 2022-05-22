@@ -220,17 +220,19 @@ public class QuestSystem : RagnarComponent
 
 		position.Set(180, 30, 0);
 		activeButton.GetComponent<Transform2D>().SetSize(position);
-		activeButton.GetComponent<UIButton>().SetTextPosition(-45,-5);
-		activeButton.GetComponent<UIButton>().SetButtonGeneralColor(0, 0, 255);
-		activeButton.GetComponent<UIButton>().text = "Active Quests";
+		UIButton activeButtonUI = activeButton.GetComponent<UIButton>();
+		activeButtonUI.SetTextPosition(-45,-5);
+		activeButtonUI.SetButtonGeneralColor(0, 0, 255);
+		activeButtonUI.text = "Active Quests";
 		position.Set(xCorner - 600, yCorner - 30, 1000000.0f);
 		activeButton.GetComponent<Transform2D>().position2D = position;
 
 		position.Set(250, 30, 0);
 		completedButton.GetComponent<Transform2D>().SetSize(position);
-		completedButton.GetComponent<UIButton>().SetTextPosition(-55, -5);
-		completedButton.GetComponent<UIButton>().SetButtonGeneralColor(255,0,0);
-		completedButton.GetComponent<UIButton>().text = "Completed Quests";
+		UIButton completedButtonUI = completedButton.GetComponent<UIButton>();
+		completedButtonUI.SetTextPosition(-55, -5);
+		completedButtonUI.SetButtonGeneralColor(255,0,0);
+		completedButtonUI.text = "Completed Quests";
 		position.Set(xCorner - 200, yCorner - 30, 1000000.0f);
 		completedButton.GetComponent<Transform2D>().position2D = position;
 

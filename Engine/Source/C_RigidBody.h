@@ -4,6 +4,7 @@
 
 class GameObject;
 class btRigidBody;
+class TransformComponent;
 enum class Axis;
 
 enum class CollisionType
@@ -69,6 +70,7 @@ public:
 	bool useGravity = true;
 	bool isKinematic = false;
 	bool trigger = false;
+	bool fActivation = false;
 
 	std::vector<RigidBodyComponent*> constraintBodies;
 	std::vector<int> bodiesUIDs;
@@ -96,6 +98,8 @@ private:
 	PCylinder cylinder;
 	PPyramid cone;
 	PPlane plane;
+
+	TransformComponent* ownerTransform;
 
 	int cylinderAxis = 3;
 

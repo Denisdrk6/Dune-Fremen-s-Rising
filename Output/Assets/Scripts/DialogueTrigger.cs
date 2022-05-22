@@ -3,12 +3,17 @@ using RagnarEngine;
 
 public class DialogueTrigger : RagnarComponent
 {
+    // Components
+    private DialogueManager dialogueManager;
+    ///////////
+
     GameObject manager;
     public int dialogueId;
     public bool isUsed = false;
 	public void Start()
 	{
         manager = GameObject.Find("Dialogue");
+        dialogueManager = manager.GetComponent<DialogueManager>();
     }
     public void Update()
 	{
@@ -16,7 +21,7 @@ public class DialogueTrigger : RagnarComponent
         {
             case 0:
                 if (isUsed)
-                    if (manager.GetComponent<DialogueManager>().GetEndDialogue())
+                    if (dialogueManager.GetEndDialogue())
                     {
                         isUsed = false;
                         ActiveDialoguebyID(2);
@@ -32,7 +37,7 @@ public class DialogueTrigger : RagnarComponent
 
             case 3:
                 if (isUsed)
-                    if (manager.GetComponent<DialogueManager>().GetEndDialogue())
+                    if (dialogueManager.GetEndDialogue())
                     {
                         isUsed = false;
                         ActiveDialoguebyID(4);
@@ -49,7 +54,7 @@ public class DialogueTrigger : RagnarComponent
                 break;
 
             case 6:
-                if (manager.GetComponent<DialogueManager>().GetEndDialogue())
+                if (dialogueManager.GetEndDialogue())
                 {
                     isUsed = false;
                     ActiveDialoguebyID(7);
@@ -57,7 +62,7 @@ public class DialogueTrigger : RagnarComponent
                 break;
 
             case 7:
-                if (manager.GetComponent<DialogueManager>().GetEndDialogue())
+                if (dialogueManager.GetEndDialogue())
                 {
                     isUsed = false;
                     ActiveDialoguebyID(8);
@@ -84,7 +89,7 @@ public class DialogueTrigger : RagnarComponent
 
     void LoadSceneWin()
     {
-        if (manager.GetComponent<DialogueManager>().GetEndDialogue())
+        if (dialogueManager.GetEndDialogue())
         {
             isUsed = false;
             GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveTest("WIIIIIN", gameObject.transform.globalPosition);
@@ -96,7 +101,7 @@ public class DialogueTrigger : RagnarComponent
         if (!isUsed)
         {
             isUsed = true;
-            manager.GetComponent<DialogueManager>().StartNewDialogue(dialogueId);
+            dialogueManager.StartNewDialogue(dialogueId);
         }
     }
 
@@ -106,7 +111,7 @@ public class DialogueTrigger : RagnarComponent
         {
             isUsed = true;
             dialogueId = id;
-            manager.GetComponent<DialogueManager>().StartNewDialogue(dialogueId);
+            dialogueManager.StartNewDialogue(dialogueId);
         }
     }
     public bool GetUsed() { return isUsed; }

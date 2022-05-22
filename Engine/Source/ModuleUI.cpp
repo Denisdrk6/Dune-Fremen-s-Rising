@@ -128,11 +128,7 @@ void MyPlane::DrawPlane2D(Texture* texture)
 	DropDownComponent* theDrop = nullptr;
 
 	float4x4 transform = float4x4::FromTRS(auxTrans->GetInternalPosition(), auxTrans->GetRotationQuat(), float3(auxTrans->GetScale().x, auxTrans->GetScale().y, 1));
-	theDrop = own->GetComponent<DropDownComponent>();
-	theButton = own->GetComponent<ButtonComponent>();
-	theSlider = own->GetComponent<SliderComponent>();
-	theCheckbox = own->GetComponent<CheckboxComponent>();
-	theImage = own->GetComponent<ImageComponent>();
+	
 	if (texture)
 		texture->Bind();
 	shader->Use();
@@ -153,26 +149,20 @@ void MyPlane::DrawPlane2D(Texture* texture)
 
 	frustum.SetKind(FrustumProjectiveSpace::FrustumSpaceGL, FrustumHandedness::FrustumRightHanded);
 
-
-	
-	
 	math::float4x4 model = math::float4x4::identity;
-	if (theButton)
+	if (theButton = own->GetComponent<ButtonComponent>())
 	{
-		
-		ComponentTransform2D* w = (ComponentTransform2D*)own->GetComponent<ComponentTransform2D>();
-		math::float3 scl = math::float3(w->GetScale().x* CONVERSION_FACTOR, w->GetScale().y* CONVERSION_FACTOR, 0.9f);
-		math::float3 center = math::float3(w->GetPosition().x, w->GetPosition().y, 0.9f);
+		math::float3 scl = math::float3(auxTrans->GetScale().x* CONVERSION_FACTOR, auxTrans->GetScale().y* CONVERSION_FACTOR, 0.9f);
+		math::float3 center = math::float3(auxTrans->GetPosition().x, auxTrans->GetPosition().y, 0.9f);
 		model = model.Scale(scl, center);
 		model.SetTranslatePart(center);
 		//theButton->GetAlpha()
 		glUniform4f(glGetUniformLocation(shader->ID, "Color"), theButton->GetActualColor().r, theButton->GetActualColor().g, theButton->GetActualColor().b, theButton->GetAlpha());
 	}
-	else if (theSlider)
+	else if (theSlider = own->GetComponent<SliderComponent>())
 	{
-		ComponentTransform2D* w = (ComponentTransform2D*)own->GetComponent<ComponentTransform2D>();
-		math::float3 scl = math::float3(w->GetScale().x * CONVERSION_FACTOR, w->GetScale().y * CONVERSION_FACTOR, 1.0f);
-		math::float3 center = math::float3(w->GetPosition().x, w->GetPosition().y, 1.0f);
+		math::float3 scl = math::float3(auxTrans->GetScale().x * CONVERSION_FACTOR, auxTrans->GetScale().y * CONVERSION_FACTOR, 1.0f);
+		math::float3 center = math::float3(auxTrans->GetPosition().x, auxTrans->GetPosition().y, 1.0f);
 		model = model.Scale(scl, center);
 		model.SetTranslatePart(center);
 		if (theSlider->GetFirstDraw()) {
@@ -181,10 +171,11 @@ void MyPlane::DrawPlane2D(Texture* texture)
 				if (own->components[a]->type == ComponentType::TRANFORM2D)
 				{
 					cont++;
-					if (cont == 1) {
+					// What is this if man
+					//if (cont == 1) {
 
-					}
-					else
+					//}
+					if (cont != 1)
 					{
 						ComponentTransform2D* r = (ComponentTransform2D*)own->components[a];
 
@@ -198,33 +189,28 @@ void MyPlane::DrawPlane2D(Texture* texture)
 				}
 			}
 		}
-
 		glUniform4f(glGetUniformLocation(shader->ID, "Color"), theSlider->GetActualColor().r, theSlider->GetActualColor().g, theSlider->GetActualColor().b, theSlider->GetAlpha());
 	}
-	else if (theCheckbox)
+	else if (theCheckbox = own->GetComponent<CheckboxComponent>())
 	{
-		ComponentTransform2D* w = (ComponentTransform2D*)own->GetComponent<ComponentTransform2D>();
-		math::float3 scl = math::float3(w->GetScale().x * CONVERSION_FACTOR, w->GetScale().y * CONVERSION_FACTOR, 1.0f);
-		math::float3 center = math::float3(w->GetPosition().x, w->GetPosition().y, 1.0f);
+		math::float3 scl = math::float3(auxTrans->GetScale().x * CONVERSION_FACTOR, auxTrans->GetScale().y * CONVERSION_FACTOR, 1.0f);
+		math::float3 center = math::float3(auxTrans->GetPosition().x, auxTrans->GetPosition().y, 1.0f);
 		model = model.Scale(scl, center);
 		model.SetTranslatePart(center);
 		glUniform4f(glGetUniformLocation(shader->ID, "Color"), theCheckbox->GetActualColor().r, theCheckbox->GetActualColor().g, theCheckbox->GetActualColor().b, theCheckbox->GetAlpha());
 	}
-	else if (theImage)
+	else if (theImage = own->GetComponent<ImageComponent>())
 	{
-		ComponentTransform2D* w = (ComponentTransform2D*)own->GetComponent<ComponentTransform2D>();
-		math::float3 scl = math::float3(w->GetScale().x * CONVERSION_FACTOR, w->GetScale().y * CONVERSION_FACTOR, 1.0f);
-		math::float3 center = math::float3(w->GetPosition().x, w->GetPosition().y, 1.0f);
+		math::float3 scl = math::float3(auxTrans->GetScale().x * CONVERSION_FACTOR, auxTrans->GetScale().y * CONVERSION_FACTOR, 1.0f);
+		math::float3 center = math::float3(auxTrans->GetPosition().x, auxTrans->GetPosition().y, 1.0f);
 		model = model.Scale(scl, center);
 		model.SetTranslatePart(center);
 		glUniform4f(glGetUniformLocation(shader->ID, "Color"), theImage->GetActualColor().r, theImage->GetActualColor().g, theImage->GetActualColor().b, theImage->GetAlpha());
 	}
-	if (theDrop)
+	if (theDrop = own->GetComponent<DropDownComponent>())
 	{
-
-		ComponentTransform2D* w = (ComponentTransform2D*)own->GetComponent<ComponentTransform2D>();
-		math::float3 scl = math::float3(w->GetScale().x * CONVERSION_FACTOR, w->GetScale().y * CONVERSION_FACTOR, 0.9f);
-		math::float3 center = math::float3(w->GetPosition().x, w->GetPosition().y, 0.9f);
+		math::float3 scl = math::float3(auxTrans->GetScale().x * CONVERSION_FACTOR, auxTrans->GetScale().y * CONVERSION_FACTOR, 0.9f);
+		math::float3 center = math::float3(auxTrans->GetPosition().x, auxTrans->GetPosition().y, 0.9f);
 		model = model.Scale(scl, center);
 		model.SetTranslatePart(center);
 		//theButton->GetAlpha()

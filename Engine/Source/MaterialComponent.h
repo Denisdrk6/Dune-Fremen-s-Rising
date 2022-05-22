@@ -9,6 +9,7 @@ class Texture;
 enum class TextureType;
 class Resource;
 class CameraComponent;
+class TransformComponent;
 
 class MaterialComponent : public Component
 {
@@ -66,6 +67,7 @@ private:
 	float3 interColor = { 0,0.3,0 };
 	float opacity = 1.0f;
 
+	TransformComponent* ownerTransform;
 	TextEditor editor;
 	std::string fileToEdit;
 

@@ -128,8 +128,8 @@ public:
 	bool Start() override;
 	bool Update(float dt) override;
 
-	bool LoadConfig(JsonParsing& node) override;
-	bool SaveConfig(JsonParsing& node) override;
+	bool LoadNaviConfig(JsonParsing& node);
+	bool SaveNaviConfig(JsonParsing& node);
 
 	void CheckNavMeshIntersection(LineSegment raycast, int clickedMouseButton);
 	float3 CalculateHitPosition(LineSegment raycast);

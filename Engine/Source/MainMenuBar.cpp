@@ -249,17 +249,22 @@ void MainMenuBar::GameObjectMenu()
 
 		// Align with options
 		GameObject* selected = app->editor->GetGO();
+		TransformComponent* transSelected = nullptr;
+		if (selected)
+			transSelected = selected->GetComponent<TransformComponent>();
+
 		if (selected == nullptr)
 		{
 			ImGui::PushStyleColor(ImGuiCol_Text, IM_COL32(128, 128, 128, 255));
 			ImGui::PushStyleColor(ImGuiCol_HeaderHovered, IM_COL32(128, 128, 128, 100));
 		}
 
+
 		if (ImGui::MenuItem("Align with view", "Ctrl+Shift+F"))
-			if (selected) selected->GetComponent<TransformComponent>()->AlignWithView();
+			if (selected) transSelected->AlignWithView();
 
 		if (ImGui::MenuItem("Align view to selected", "Alt+Shift+F"))
-			if (selected) selected->GetComponent<TransformComponent>()->AlignViewWithSelected();
+			if (selected) transSelected->AlignViewWithSelected();
 
 		if (selected == nullptr)
 		{

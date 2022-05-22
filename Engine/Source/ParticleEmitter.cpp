@@ -297,8 +297,8 @@ void ParticleEmitter::Render(CameraComponent* gameCam)
 		data.shader->Bind();
 		data.shader->SetUniformMatrix4f("view", view.Transposed());
 		data.shader->SetUniformMatrix4f("projection", proj.Transposed());
-		TransformComponent* tr = own->GetComponent<TransformComponent>();
-		data.shader->SetUniformMatrix4f("model", tr->GetGlobalTransform().Transposed());
+		ownerTransformComponent = own->GetComponent<TransformComponent>();
+		data.shader->SetUniformMatrix4f("model", ownerTransformComponent->GetGlobalTransform().Transposed());
 
 		data.vertexBuffer->Bind();
 		data.indexBuffer->Bind();

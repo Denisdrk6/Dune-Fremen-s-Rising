@@ -8,13 +8,17 @@ public class Trap : RagnarComponent
     public bool canReload = false;
 	public bool pendingToDelete = false;
 
+    GameObject player;
+    PlayerManager playerManagerScript;
+
 	public void Start()
 	{
-		GameObject player = GameObject.Find("Player_3");
+		player = GameObject.Find("Player_3");
 		Vector3 pos = player.transform.globalPosition;
 		pos.y += gameObject.transform.globalPosition.y;
 		gameObject.transform.localPosition = pos;
 
+        playerManagerScript = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
         GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Pause();
     }
 	public void Update()
@@ -23,13 +27,13 @@ public class Trap : RagnarComponent
         {
             if (timer > 0f)
             {
-                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[2].state = State.POSTCAST;
+                playerManagerScript.characters[2].state = State.POSTCAST;
                 timer -= Time.deltaTime;
             }
             else
             {
                 placingTrap = false;
-                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[2].state = State.NONE;
+                playerManagerScript.characters[2].state = State.NONE;
             }
         }
         if (!placingTrap && !canReload) ReloadCondition();
@@ -53,7 +57,7 @@ public class Trap : RagnarComponent
 
         if (distance < 1.0f)
         {
-            GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[2].abilities[2].charges = 1;
+            playerManagerScript.characters[2].abilities[2].charges = 1;
             pendingToDelete = true;
             canReload = false;
         }
@@ -61,8 +65,6 @@ public class Trap : RagnarComponent
 
     private double CalculateDistance()
     {
-        GameObject player = GameObject.Find("Player_3");
-
         float xDiff = player.transform.globalPosition.x - gameObject.transform.globalPosition.x;
         float zDiff = player.transform.globalPosition.z - gameObject.transform.globalPosition.z;
         double distance = Math.Sqrt(zDiff * zDiff + xDiff * xDiff);

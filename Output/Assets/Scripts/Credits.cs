@@ -16,6 +16,8 @@ public class Credits : RagnarComponent
 	float newDelta=0;
 	float velocity = 60;
 	bool isFirstM = true;
+	bool finish = false;
+
 	public void Start()
 	{
 		Back = GameObject.Find("Background");
@@ -36,9 +38,9 @@ public class Credits : RagnarComponent
 
         Pos = new Vector3(0, 0, 0);
 
-		Pos.Set(-150, -(InternalCalls.GetRegionGame().y / 2)-90, 36.1f);
+		Pos.Set(-170, -(InternalCalls.GetRegionGame().y / 2)- 100, 36.1f);
 		TextJob.GetComponent<Transform2D>().position2D = Pos;
-		Pos.Set(-40, -(InternalCalls.GetRegionGame().y / 2)-90, 36.1f);
+		Pos.Set(-40, -(InternalCalls.GetRegionGame().y / 2)-100, 36.1f);
 		TextName.GetComponent<Transform2D>().position2D = Pos;
 		Pos.Set(-140, -(InternalCalls.GetRegionGame().y / 2) -70, 36.1f);
 		TextTitles.GetComponent<Transform2D>().position2D = Pos;
@@ -47,6 +49,8 @@ public class Credits : RagnarComponent
 		UPCLogo.GetComponent<Transform2D>().position2D = Pos;
 		Pos.Set(0, -(InternalCalls.GetRegionGame().y / 2) - 4450, -10.4f);
 		RagnarLogo.GetComponent<Transform2D>().position2D = Pos;
+
+		finish = false;
 	}
 	public void Update()
 	{
@@ -56,25 +60,25 @@ public class Credits : RagnarComponent
 
 		MenuAction();
 
-		textAction();
+		TextAction();
 	}
-	void textAction()
+	void TextAction()
     {
         if (Input.GetKey(KeyCode.SPACE) == KeyState.KEY_REPEAT)
         {
 			velocity = 200;
-
         }
         else
         {
 			velocity = 60;
 		}
-        if (RagnarLogo.GetComponent<Transform2D>().position2D.y > InternalCalls.GetRegionGame().y / 2 + 50)
+        if (RagnarLogo.GetComponent<Transform2D>().position2D.y > InternalCalls.GetRegionGame().y / 2 + 50 && !finish)
         {
+			finish = true;
 			SceneManager.LoadScene("MainMenu");
         }
 		float vel = newDelta * velocity;
-		Pos.Set(-150, TextJob.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
+		Pos.Set(-170, TextJob.GetComponent<Transform2D>().position2D.y + vel, 36.1f);
 		TextJob.GetComponent<Transform2D>().position2D = Pos;
 
 		Pos.Set(130, TextName.GetComponent<Transform2D>().position2D.y + vel, 36.1f);

@@ -19,9 +19,11 @@ CheckboxComponent::CheckboxComponent(GameObject* own)
 	own->isUI = true;
 	checkboxText.setText("check", 5, 5, 0.5, { 255,255,255 });	
 
-	if (!own->GetComponent<ComponentTransform2D>()) // If comes from Load not enter
+	ownerTransform = own->GetComponent<ComponentTransform2D>();
+	if (!ownerTransform) // If comes from Load not enter
 	{
 		own->CreateComponent(ComponentType::TRANFORM2D);
+		ownerTransform = own->GetComponent<ComponentTransform2D>();
 		selectedMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
 		noSelectedMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
 		actual = noSelectedMaterial;
@@ -153,8 +155,7 @@ void CheckboxComponent::OnEditor()
 
 float2 CheckboxComponent::GetParentPosition()
 {
-	ComponentTransform2D* transform = owner->GetComponent<ComponentTransform2D>();
-	return { transform->GetPosition().x - (strlen(text) * 12 * checkboxText.Scale) - (transform->GetScale().x / 4), transform->GetPosition().y - 5 };
+	return { ownerTransform->GetPosition().x - (strlen(text) * 12 * checkboxText.Scale) - (ownerTransform->GetScale().x / 4), ownerTransform->GetPosition().y - 5 };
 }
 
 bool CheckboxComponent::OnLoad(JsonParsing& node)

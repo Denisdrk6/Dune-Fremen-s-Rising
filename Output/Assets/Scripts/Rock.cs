@@ -5,7 +5,8 @@ using RagnarEngine;
 public class Rock : RagnarComponent
 {
 	private Vector3 relativePos;
-	private float cooldown = -1f;
+	private bool pendingToDelete = false;
+	private float cooldown = 2f;
 	GameObject player;
 	Rigidbody goRB;
 
@@ -58,8 +59,9 @@ public class Rock : RagnarComponent
 			sound.GetComponent<SoundAreaManager>().stablishedTimer = 2f;
 
 			cooldown = 2f;
+			pendingToDelete = true;
 		}
-		if (cooldown != -1f)
+		if (pendingToDelete)
 		{
 			cooldown -= Time.deltaTime;
 			if (cooldown < 0)

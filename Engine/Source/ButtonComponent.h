@@ -5,12 +5,15 @@
 #include "ModuleUI.h"
 #include <map>
 #include <string>
+
+class ComponentTransform2D;
 class MyPlane;
 class GameObject;
 class MaterialComponent;
 class Character;
 class Shadert;
 typedef unsigned int uint;
+
 class ButtonComponent : public Component
 {
 public:
@@ -94,4 +97,6 @@ private:
 	Color generalColor = white;
 	char text[64] = "Button";
 	float fontScale = 1;
+
+	ComponentTransform2D* transform;
 };

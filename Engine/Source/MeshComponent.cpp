@@ -4,6 +4,7 @@
 
 #include "ModuleCamera3D.h"
 #include "ModuleRenderer3D.h"
+#include "ModuleSceneManager.h"
 
 #include "Scene.h"
 
@@ -68,7 +69,16 @@ void MeshComponent::DrawOutline(CameraComponent* gameCam, const float3& color)
 	cmMultiplier = 0.05;
 #endif
 
-	float4x4 model = float4x4::FromTRS(transform->GetGlobalTransform().Col3(3) - owner->GetOffsetCM() * cmMultiplier, transform->GetRotation(), transform->GetScale() * scaleFactor);
+	Quat q = Quat::identity;
+	if (owner->GetParent() != app->sceneManager->GetCurrentScene()->GetRoot())
+	{
+		q = transform->GetRotation() * owner->GetParent()->GetComponent<TransformComponent>()->GetRotation();
+	}
+	else
+	{
+		q = transform->GetRotation();
+	}
+	float4x4 model = float4x4::FromTRS(transform->GetGlobalTransform().Col3(3) - owner->GetOffsetCM() * cmMultiplier, q, transform->GetScale() * scaleFactor);
 	float4x4 view = float4x4::identity;
 	float4x4 projection = float4x4::identity;
 	if (gameCam)

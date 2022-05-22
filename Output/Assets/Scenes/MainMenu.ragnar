@@ -75,7 +75,7 @@
                         0
                     ],
                     "Intensity": 4,
-                    "Shadows": false
+                    "Shadows": true
                 }
             ]
         },
@@ -95,25 +95,25 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -10.5,
-                        -37.099998474121094,
-                        29.600000381469727
+                        1.6597301959991455,
+                        -21.549999237060547,
+                        38.069999694824219
                     ],
                     "Quaternion": [
-                        0.12275835126638412,
-                        0.057122956961393356,
-                        0.014420775696635246,
-                        -0.99069458246231079
+                        -0.25869372487068176,
+                        0.029397355392575264,
+                        -0.0039886757731437683,
+                        0.96550482511520386
                     ],
                     "RotationEditor": [
-                        -0.24783675372600555,
-                        -0.11519172787666321,
-                        -0
+                        -0.52359879016876221,
+                        0.059336293488740921,
+                        0.00083238823572173715
                     ],
                     "Scale": [
-                        1.0000011920928955,
-                        1,
-                        1.0000011920928955
+                        0.99999374151229858,
+                        0.99999880790710449,
+                        0.99999856948852539
                     ]
                 }
             ]
@@ -135,14 +135,14 @@
                     "Active": true,
                     "Position": [
                         0,
-                        55,
-                        -50
+                        55.000007629394531,
+                        -50.000007629394531
                     ],
                     "Quaternion": [
-                        0.34202012419700623,
+                        0.34202015399932861,
                         0,
-                        0,
-                        0.93969261646270752
+                        -5.9073738720184912e-17,
+                        0.93969273567199707
                     ],
                     "RotationEditor": [
                         0,
@@ -150,44 +150,45 @@
                         0
                     ],
                     "Scale": [
-                        1.4142423868179321,
-                        0.99999988079071045,
-                        1.0000045299530029
+                        0.99999994039535522,
+                        1,
+                        1.0000001192092896
                     ]
                 },
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 0.95574444532394409,
+                    "Vertical Fov": 0.928486168384552,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
-                        -2.6750001907348633,
-                        3.9754753112792969,
-                        -31.853940963745117
+                        -1.6946996450424194,
+                        1.1214847564697266,
+                        -32.638847351074219
                     ],
                     "Type": 3,
-                    "Zoom": 0,
-                    "Zoom Min": 0,
-                    "Zoom Max": 0,
-                    "Zoom Speed": 0,
+                    "Zoom": 30.799995422363281,
+                    "Zoom Min": -30,
+                    "Zoom Max": 30,
+                    "Zoom Speed": 1,
+                    "Lock": true,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -10.5,
-                        -37.099998474121094,
-                        29.600000381469727
+                        1.6597301959991455,
+                        -21.549999237060547,
+                        38.069999694824219
                     ],
                     "Movement Speed": 0.5,
                     "Rotation Speed": 0.5,
                     "Radius": 20,
-                    "Horizontal Angle": 308.39971923828125,
+                    "Horizontal Angle": 3.39971923828125,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
                     "Limits": [
-                        0,
-                        0,
-                        0,
-                        0
+                        -100,
+                        -100,
+                        100,
+                        100
                     ]
                 }
             ]
@@ -224,8 +225,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -257,7 +258,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "mainMenuBackScreen",
-                    "pointer": 492271128,
+                    "pointer": 568753400,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -339,7 +340,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -659.5,
+                        -647,
                         -98.5,
                         36.099998474121094
                     ],
@@ -355,8 +356,8 @@
                     ],
                     "buttonWidth": 323,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -470,7 +471,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -552,
+                        -539.5,
                         27,
                         36.099998474121094
                     ],
@@ -486,8 +487,8 @@
                     ],
                     "buttonWidth": 345.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -601,7 +602,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -700.5,
+                        -688,
                         -157.5,
                         36.099998474121094
                     ],
@@ -617,8 +618,8 @@
                     ],
                     "buttonWidth": 302.5,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -732,7 +733,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -600,
+                        -587.5,
                         -36.5,
                         36.099998474121094
                     ],
@@ -748,8 +749,8 @@
                     ],
                     "buttonWidth": 316,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -863,7 +864,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -510.5,
+                        -498,
                         89.5,
                         36.099998474121094
                     ],
@@ -879,8 +880,8 @@
                     ],
                     "buttonWidth": 407.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -994,7 +995,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -514,
+                        -501.5,
                         88,
                         36.099998474121094
                     ],
@@ -1010,8 +1011,8 @@
                     ],
                     "buttonWidth": 410,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1058,7 +1059,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -570.5,
+                        -558,
                         25,
                         36.099998474121094
                     ],
@@ -1074,8 +1075,8 @@
                     ],
                     "buttonWidth": 387,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1122,7 +1123,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -627,
+                        -614.5,
                         -40,
                         36.099998474121094
                     ],
@@ -1138,8 +1139,8 @@
                     ],
                     "buttonWidth": 372.5,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1186,7 +1187,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -656.5,
+                        -644,
                         -102,
                         36.099998474121094
                     ],
@@ -1202,8 +1203,8 @@
                     ],
                     "buttonWidth": 309,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1250,7 +1251,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -700,
+                        -687.5,
                         -160,
                         36.099998474121094
                     ],
@@ -1266,8 +1267,8 @@
                     ],
                     "buttonWidth": 295,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1299,6 +1300,438 @@
             ]
         },
         {
+            "UUID": 65654866,
+            "Parent UUID": 417171234,
+            "Name": "Dunes",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.29282808303833008,
+                        -0.89913046360015869,
+                        1.3604781627655029
+                    ],
+                    "Quaternion": [
+                        -0.7071068286895752,
+                        0,
+                        0,
+                        0.70710670948028564
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/scene_desert__Dunes.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1238096408,
+            "Parent UUID": 417171234,
+            "Name": "RockMedium1_low",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -7.0513448715209961,
+                        -0.32441899180412292,
+                        -22.829887390136719
+                    ],
+                    "Quaternion": [
+                        -0.04569583386182785,
+                        0.99284744262695313,
+                        -0.038181319832801819,
+                        -0.10347956418991089
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000001192092896,
+                        0.99999994039535522,
+                        1.0000001192092896
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/scene_desert__RockMedium1_low.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Player",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -5.0999994277954102,
+                        -0.94506388902664185,
+                        -24.414207458496094
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.98011898994445801,
+                        0,
+                        0.19841064512729645
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1.0000191926956177,
+                        1,
+                        1.0000191926956177
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_paul_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_menu__char_paul_menu|Armature.001|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Player_2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -5.909675121307373,
+                        1.364378809928894,
+                        -23.631071090698242
+                    ],
+                    "Quaternion": [
+                        -0.1545494943857193,
+                        0.97470062971115112,
+                        -0.055294882506132126,
+                        -0.15170919895172119
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000169277191162,
+                        0.99999988079071045,
+                        1.0000213384628296
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_chani_crouchshot__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_menu__char_chani_menu|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1353793875,
+            "Parent UUID": 417171234,
+            "Name": "Player_3",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -6.5500001907348633,
+                        -0.69999998807907104,
+                        -24.850000381469727
+                    ],
+                    "Quaternion": [
+                        0,
+                        1,
+                        0,
+                        -8.9406967163085938e-08
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.1415927410125732,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_stilgar_menu__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_menu__char_stilgar_menu|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1963379057,
+            "Parent UUID": 1353793875,
+            "Name": "stilgar_sword",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        -1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.1415927410125732,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Abilities models\/wpn_stilgar_sword_texture_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/wpn_stilgar_sword_menu__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/wpn_stilgar_sword_menu__wpn_stilgar_sword_menu|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "UUID": 1058993489,
             "Parent UUID": 417171234,
             "Name": "UIOptions",
@@ -1314,15 +1747,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
-                        0,
-                        0
+                        2.1287670135498047,
+                        -1.2242894172668457,
+                        -25.056201934814453
                     ],
                     "Quaternion": [
                         0,
+                        0.98621970415115356,
                         0,
-                        0,
-                        1
+                        0.16544090211391449
                     ],
                     "RotationEditor": [
                         0,
@@ -1330,9 +1763,9 @@
                         0
                     ],
                     "Scale": [
+                        0.99999582767486572,
                         1,
-                        1,
-                        1
+                        0.99999582767486572
                     ]
                 }
             ]
@@ -1354,7 +1787,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2287,
+                        2071,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1369,8 +1802,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1433,8 +1866,8 @@
                     ],
                     "buttonWidth": 263,
                     "buttonHeight": 52.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1482,7 +1915,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2077,
+                        1861,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1497,8 +1930,8 @@
                     ],
                     "buttonWidth": 254.5,
                     "buttonHeight": 46,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1613,7 +2046,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2068.5,
+                        1852.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1628,8 +2061,8 @@
                     ],
                     "buttonWidth": 650,
                     "buttonHeight": 650,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1677,7 +2110,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2295.5,
+                        2079.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1692,8 +2125,8 @@
                     ],
                     "buttonWidth": 376.5,
                     "buttonHeight": 42.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1808,7 +2241,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2094,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1823,8 +2256,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1939,7 +2372,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2094,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1954,8 +2387,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2003,7 +2436,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2094,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2018,8 +2451,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2134,7 +2567,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2094,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2149,8 +2582,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2198,7 +2631,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2094,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2213,8 +2646,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2329,7 +2762,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2094,
+                        1878,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2344,8 +2777,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2393,7 +2826,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2183.5,
+                        1967.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2408,8 +2841,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2477,7 +2910,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2183.5,
+                        1967.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2492,8 +2925,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2561,7 +2994,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2183.5,
+                        1967.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2576,8 +3009,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2645,7 +3078,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2209,
+                        1993,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2660,8 +3093,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2714,7 +3147,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2209,
+                        1993,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -2729,8 +3162,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2783,7 +3216,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2798,8 +3231,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2808,7 +3241,7 @@
                     "Type": 19,
                     "Position": [
                         -0.727996826171875,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2823,8 +3256,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2892,7 +3325,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2907,8 +3340,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2917,7 +3350,7 @@
                     "Type": 19,
                     "Position": [
                         -5.5,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -2932,8 +3365,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3001,7 +3434,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3016,8 +3449,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3026,7 +3459,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3041,8 +3474,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3110,7 +3543,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3125,8 +3558,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3135,7 +3568,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        2278.5,
+                        2062.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3150,8 +3583,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3219,7 +3652,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2287,
+                        2071,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3234,8 +3667,8 @@
                     ],
                     "buttonWidth": 250,
                     "buttonHeight": 60,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3371,7 +3804,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1947.5,
+                        1731.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3386,8 +3819,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3440,7 +3873,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1947.5,
+                        1731.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3455,8 +3888,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3509,7 +3942,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1947.5,
+                        1731.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3524,8 +3957,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3578,7 +4011,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -3593,8 +4026,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3709,7 +4142,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -3724,8 +4157,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3840,7 +4273,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -3855,8 +4288,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3971,7 +4404,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -3986,8 +4419,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4102,7 +4535,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4117,8 +4550,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4233,7 +4666,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4248,8 +4681,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4364,7 +4797,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4379,8 +4812,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4495,7 +4928,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4510,8 +4943,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4626,7 +5059,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4641,8 +5074,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4757,7 +5190,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4772,8 +5205,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4888,7 +5321,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -4903,8 +5336,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5019,7 +5452,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5034,8 +5467,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5150,7 +5583,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5165,8 +5598,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5281,7 +5714,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5296,8 +5729,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5412,7 +5845,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5427,8 +5860,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5543,7 +5976,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5558,8 +5991,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5674,7 +6107,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5689,8 +6122,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5805,7 +6238,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5820,8 +6253,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5936,7 +6369,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -5951,8 +6384,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6067,7 +6500,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -6082,8 +6515,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6198,7 +6631,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -10.399999618530273,
+                        9.5999984741210938,
                         0
                     ],
                     "Scale": [
@@ -6213,8 +6646,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6344,8 +6777,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6464,8 +6897,8 @@
                         -10.399999618530273
                     ],
                     "Scale": [
-                        0.1666666716337204,
-                        0.1666666716337204,
+                        0.083333335816860199,
+                        0.083333335816860199,
                         1
                     ],
                     "rotationEuler": [
@@ -6473,16 +6906,16 @@
                         0,
                         0
                     ],
-                    "buttonWidth": 100,
-                    "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_right.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6502,7 +6935,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_right.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6522,7 +6955,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_right.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6542,7 +6975,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_right.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6595,8 +7028,8 @@
                         -10.399999618530273
                     ],
                     "Scale": [
-                        0.1666666716337204,
-                        0.1666666716337204,
+                        0.083333335816860199,
+                        0.083333335816860199,
                         1
                     ],
                     "rotationEuler": [
@@ -6604,16 +7037,16 @@
                         0,
                         0
                     ],
-                    "buttonWidth": 100,
-                    "buttonHeight": 100,
-                    "lastButtonWidth": 1368,
-                    "lastButtonHeight": 708.5,
+                    "buttonWidth": 50,
+                    "buttonHeight": 50,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_left.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6633,7 +7066,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_left.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6653,7 +7086,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_left.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6673,7 +7106,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/ui_options_arrow_preset_left.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -6706,9 +7139,9 @@
             ]
         },
         {
-            "UUID": 65654866,
+            "UUID": 698691274,
             "Parent UUID": 417171234,
-            "Name": "Dunes",
+            "Name": "Skybox",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -6721,31 +7154,95 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0.29282808303833008,
-                        -0.89913046360015869,
-                        1.3604781627655029
+                        62,
+                        -0.12999999523162842,
+                        25.450000762939453
                     ],
                     "Quaternion": [
-                        -0.7071068286895752,
                         0,
+                        0.71325588226318359,
                         0,
-                        0.70710670948028564
+                        0.70090556144714355
                     ],
                     "RotationEditor": [
                         0,
-                        0,
+                        1.5882495641708374,
                         0
                     ],
                     "Scale": [
-                        1,
-                        0.99999994039535522,
-                        0.99999994039535522
+                        1.0000120401382446,
+                        110,
+                        232.39999389648438
                     ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/skybox.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": false,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Settings\/EngineResources\/__Cube.mesh",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 514655822,
+            "Parent UUID": 417171234,
+            "Name": "prop_ornithopter",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        1,
+                        6,
+                        4.6999998092651367
+                    ],
+                    "Quaternion": [
+                        -0.058175381273031235,
+                        -0.95469915866851807,
+                        -0.0087471166625618935,
+                        -0.29178336262702942
+                    ],
+                    "RotationEditor": [
+                        -0.58643060922622681,
+                        -1.9949114322662354,
+                        0.45902156829833984
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Ornithopter\/prop_ornithopter_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_ornithopter_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -6764,160 +7261,158 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/scene_desert__Dunes.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/Ornithopter\/prop_ornithopter__prop_ornithopter.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1238096408,
-            "Parent UUID": 417171234,
-            "Name": "RockMedium1_low",
+            "UUID": 677600294,
+            "Parent UUID": 514655822,
+            "Name": "Fire&Smoke",
             "Active": true,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -7.0513448715209961,
-                        -0.32441899180412292,
-                        -22.829887390136719
-                    ],
-                    "Quaternion": [
-                        -0.04569583386182785,
-                        0.99284744262695313,
-                        -0.038181319832801819,
-                        -0.10347956418991089
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.0000001192092896,
-                        0.99999994039535522,
-                        1.0000001192092896
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/scene_desert__RockMedium1_low.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 2021177439,
-            "Parent UUID": 417171234,
-            "Name": "Player",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
-            "tag": "Player",
-            "layer": "Default",
             "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -5.0999994277954102,
-                        -0.94506388902664185,
-                        -24.414207458496094
+                        -7.4000000953674316,
+                        -1.2000000476837158,
+                        -3.5
                     ],
                     "Quaternion": [
-                        0,
-                        0.98011898994445801,
-                        0,
-                        0.19841064512729645
+                        0.26892673969268799,
+                        0.75981318950653076,
+                        0.49688345193862915,
+                        -0.32168769836425781
                     ],
                     "RotationEditor": [
-                        -0,
-                        0,
-                        -0
+                        -1.1222467422485352,
+                        0.26529005169868469,
+                        0
                     ],
                     "Scale": [
-                        1.0000191926956177,
-                        1,
-                        1.0000191926956177
+                        5,
+                        5,
+                        5
                     ]
                 },
                 {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
+                    "Type": 21,
                     "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
+                    "Size": [
+                        10,
+                        10,
+                        10
                     ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_paul_walk__Malla.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "Current Anim": "Idle",
-                    "Animations": [
+                    "Offset": [
+                        5.0099101066589355,
+                        4.0089068412780762,
+                        11.658298492431641
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
                         {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/paul_leaning_idle__Armature|Armature|Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
+                            "Emitter: Max Particles": 400,
+                            "Emitter: Particles Per Second": 10,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.10000000149011612,
+                            "Emitter: Current Timer": 0.0039999894797801971,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0.019999999552965164
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PEV: Min Velocity": [
+                                        0,
+                                        -0,
+                                        -0.0099999997764825821
+                                    ],
+                                    "PEV: Max Velocity": [
+                                        -0.029999999329447746,
+                                        0.0010000000474974513,
+                                        0.0099999997764825821
+                                    ],
+                                    "Effect Type": 0
+                                },
+                                {
+                                    "PES: Start size": 1.5,
+                                    "PES: End size": 1,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.24485123157501221,
+                                        0.24485123157501221,
+                                        0.24485123157501221,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.43707096576690674,
+                                        0.43707096576690674,
+                                        0.43707096576690674,
+                                        0
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "UUID": 2021177439,
-            "Parent UUID": 417171234,
-            "Name": "Player_2",
+            "UUID": 31294412,
+            "Parent UUID": 514655822,
+            "Name": "FireParticles",
             "Active": true,
             "Static": true,
             "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
-            "tag": "Player",
+            "Prefab Path": "Assets\/Prefabs\/FireParticles.rgprefab",
+            "tag": "Untagged",
             "layer": "Default",
             "Is Interactuable": true,
             "Components": [
@@ -6925,137 +7420,178 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -6.1641826629638672,
-                        1.2242894172668457,
-                        -24.379356384277344
+                        -8.8000001907348633,
+                        -1,
+                        -5.6999998092651367
                     ],
                     "Quaternion": [
-                        0,
-                        0.98621970415115356,
-                        0,
-                        -0.16544085741043091
+                        0.95467978715896606,
+                        -0.058174453675746918,
+                        -0.29176315665245056,
+                        -0.0087477341294288635
                     ],
                     "RotationEditor": [
                         0,
                         0,
-                        0
+                        3.1415927410125732
                     ],
                     "Scale": [
-                        1.0000041723251343,
-                        1,
-                        1.0000041723251343
+                        4.8000001907348633,
+                        4.8000001907348633,
+                        4.8000001907348633
                     ]
                 },
                 {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
+                    "Type": 21,
                     "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
+                    "Size": [
+                        10,
+                        10,
+                        10
                     ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_chani_crouchshot__Malla.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "Current Anim": "Idle",
-                    "Animations": [
+                    "Offset": [
+                        4.9554548263549805,
+                        4.0828089714050293,
+                        14.272259712219238
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
                         {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/channi_sit_idle__mixamo.com.fbx",
-                            "Loop": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 2021177439,
-            "Parent UUID": 417171234,
-            "Name": "Player_3",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Player_3.rgprefab",
-            "tag": "Player",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -6.5530810356140137,
-                        -0.69859588146209717,
-                        -24.847616195678711
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.99313461780548096,
-                        0,
-                        0.11697719991207123
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.0000053644180298,
-                        1,
-                        1.0000053644180298
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_stilgar_walk__Mesh.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "Current Anim": "Idle",
-                    "Animations": [
+                            "Emitter: Max Particles": 1000,
+                            "Emitter: Particles Per Second": 20,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.05000000074505806,
+                            "Emitter: Current Timer": 0.018000001087784767,
+                            "Emitter: Is Cubical": true,
+                            "Cubical: Spread on X": 0.5,
+                            "Cubical: Spread on Y": 0.10000000149011612,
+                            "Cubical: Spread on Z": 0.5,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 5,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_fire.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 1,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0.49427914619445801,
+                                        0,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
                         {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/stilgar_sword_idle__Armature|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
+                            "Emitter: Max Particles": 200,
+                            "Emitter: Particles Per Second": 50,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.019999999552965164,
+                            "Emitter: Current Timer": 0.019999999552965164,
+                            "Emitter: Is Cubical": true,
+                            "Cubical: Spread on X": 0.5,
+                            "Cubical: Spread on Y": 0.20000000298023224,
+                            "Cubical: Spread on Z": 0.5,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                -0.0099999997764825821,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 5,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_fire.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.5,
+                                    "PES: End size": 0.20000000298023224,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0.98855835199356079,
+                                        0,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
                         }
                     ]
                 }

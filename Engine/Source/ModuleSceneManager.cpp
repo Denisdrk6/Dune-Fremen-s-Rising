@@ -99,6 +99,7 @@ bool ModuleSceneManager::Update(float dt)
 	
 	if (changeScene)
 	{
+		gameTimer.SetTimeScale(1);
 		if (enteringFade)
 		{
 			float alpha = dt;
@@ -447,6 +448,8 @@ void ModuleSceneManager::Resume()
 
 void ModuleSceneManager::ShortCuts()
 {
+	GameObject* goSelected = app->editor->GetGO();
+
 	if (app->input->GetKey(SDL_SCANCODE_LCTRL) == KeyState::KEY_REPEAT)
 	{
 		if (app->input->GetKey(SDL_SCANCODE_LSHIFT) == KeyState::KEY_REPEAT)
@@ -454,20 +457,20 @@ void ModuleSceneManager::ShortCuts()
 			if (app->input->GetKey(SDL_SCANCODE_S) == KeyState::KEY_DOWN)
 			{
 				std::string filePath = Dialogs::SaveFile("Ragnar Scene (*.ragnar)\0*.ragnar\0");
-				if (!filePath.empty()) currentScene.get()->SaveScene(filePath.c_str());
+				if (!filePath.empty()) currentScene->SaveScene(filePath.c_str());
 			}
 			else if (app->input->GetKey(SDL_SCANCODE_F) == KeyState::KEY_DOWN)
 			{
-				if (app->editor->GetGO()) app->editor->GetGO()->GetComponent<TransformComponent>()->AlignWithView();
+				if (goSelected) goSelected->GetComponent<TransformComponent>()->AlignWithView();
 			}
 			else if (app->input->GetKey(SDL_SCANCODE_G) == KeyState::KEY_DOWN)
 			{
-				if (app->editor->GetGO()) currentScene.get()->CreateGameObjectParent("GameObjectParent", app->editor->GetGO());
+				if (goSelected) currentScene->CreateGameObjectParent("GameObjectParent", app->editor->GetGO());
 			}
 			else if (app->input->GetKey(SDL_SCANCODE_N) == KeyState::KEY_DOWN)
 			{
-				if (app->editor->GetGO()) currentScene.get()->CreateGameObject(app->editor->GetGO());
-				else currentScene.get()->CreateGameObject(nullptr);
+				if (goSelected) currentScene->CreateGameObject(goSelected);
+				else currentScene->CreateGameObject(nullptr);
 			}
 		}
 		else if (app->input->GetKey(SDL_SCANCODE_N) == KeyState::KEY_DOWN)
@@ -498,11 +501,11 @@ void ModuleSceneManager::ShortCuts()
 		{
 			if (app->input->GetKey(SDL_SCANCODE_F) == KeyState::KEY_DOWN)
 			{
-				if(app->editor->GetGO()) app->editor->GetGO()->GetComponent<TransformComponent>()->AlignViewWithSelected();
+				if(goSelected) goSelected->GetComponent<TransformComponent>()->AlignViewWithSelected();
 			}
 			else if (app->input->GetKey(SDL_SCANCODE_N) == KeyState::KEY_DOWN)
 			{
-				if (app->editor->GetGO()) currentScene.get()->CreateGameObjectChild("GameObjectChild", app->editor->GetGO());
+				if (goSelected) currentScene.get()->CreateGameObjectChild("GameObjectChild", app->editor->GetGO());
 			}
 		}		
 	}

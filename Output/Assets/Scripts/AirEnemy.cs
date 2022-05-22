@@ -4,6 +4,16 @@ using RagnarEngine;
 
 public class AirEnemy : RagnarComponent
 {
+    // Components
+
+    private AudioSource audioComponent;
+    private Animation animationComponent;
+    private ParticleSystem particleComponent;
+    private EnemyBullet bulletScript;
+    private Rigidbody rb;
+
+    /////////////
+
     public int velocity = 1000;
 
     public NavAgent agents;
@@ -45,6 +55,12 @@ public class AirEnemy : RagnarComponent
     ParticleSystem deathPartSys;
     public void Start()
     {
+        // Get components
+        audioComponent = gameObject.GetComponent<AudioSource>();
+        animationComponent = gameObject.GetComponent<Animation>();
+        particleComponent = gameObject.GetComponent<ParticleSystem>();
+        rb = gameObject.GetComponent<Rigidbody>();
+ 
         players = GameObject.FindGameObjectsWithTag("Player");
         SceneAudio = GameObject.Find("AudioLevel1");
         offset = gameObject.GetSizeAABB();
@@ -109,7 +125,7 @@ public class AirEnemy : RagnarComponent
                 deathTimer -= Time.deltaTime;
                 if (deathTimer < 0)
                 {
-                    gameObject.GetComponent<AudioSource>().PlayClip("EDRONE_DESTROYED");
+                    audioComponent.PlayClip("EDRONE_DESTROYED");
                     deathTimer = -1f;
                     pendingToDelete = true;
                 }
@@ -145,10 +161,10 @@ public class AirEnemy : RagnarComponent
             {
                 if (deathTimer == -1f)
                 {
-                    gameObject.GetComponent<AudioSource>().PlayClip("EDRONE_GETDAMAGE");
+                    audioComponent.PlayClip("EDRONE_GETDAMAGE");
                     deathTimer = 4f;
                     deathPartSys.Play();
-                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                    animationComponent.PlayAnimation("Dying");
                 }
 
                 // WHEN RUNES FUNCTIONAL
@@ -158,10 +174,10 @@ public class AirEnemy : RagnarComponent
             {
                 if (deathTimer == -1f)
                 {
-                    gameObject.GetComponent<AudioSource>().PlayClip("EDRONE_GETDAMAGE");
+                    audioComponent.PlayClip("EDRONE_GETDAMAGE");
                     deathTimer = 2f;
                     deathPartSys.Play();
-                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                    animationComponent.PlayAnimation("Dying");
                 }
             }
             if (other.gameObject.name == "HunterSeeker")
@@ -182,11 +198,11 @@ public class AirEnemy : RagnarComponent
             {
                 if (pendingToDelete == false)
                 {
-                    gameObject.GetComponent<AudioSource>().PlayClip("EDRONE_GETDAMAGE");
+                    audioComponent.PlayClip("EDRONE_GETDAMAGE");
                     pendingToDelete = true;
                     deathPartSys.Play();
                     GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Play();
-                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                    animationComponent.PlayAnimation("Dying");
                 }
             }
         }
@@ -198,7 +214,7 @@ public class AirEnemy : RagnarComponent
         Vector3 enemyForward = gameObject.transform.forward;
         Vector3 initPos = new Vector3(enemyPos.x + (enemyForward.x * offset.x * 0.6f), enemyPos.y + 0.1f, enemyPos.z + (enemyForward.z * offset.z * 0.6f));
 
-        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 12, players, players.Length, colliders, colliders.Length);
+        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 12, players, players.Length, "Collider");
         if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }
@@ -210,7 +226,7 @@ public class AirEnemy : RagnarComponent
         if (canShoot)
         {
             //TODO_AUDIO
-            gameObject.GetComponent<AudioSource>().PlayClip("EDRONE_SHOOT");
+            audioComponent.PlayClip("EDRONE_SHOOT");
             canShoot = false;
             shootCooldown = 4f;
             //GameObject bullet = InternalCalls.InstancePrefab("EnemyBullet", true);
@@ -219,9 +235,10 @@ public class AirEnemy : RagnarComponent
             //bullet.GetComponent<EnemyBullet>().offset = offset;
 
             InternalCalls.InstancePrefab("EnemyBullet", true);
-            GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().enemy = gameObject;
-            GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().index = index;
-            GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().offset = offset;
+            bulletScript = GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>();
+            bulletScript.enemy = gameObject;
+            bulletScript.index = index;
+            bulletScript.offset = offset;
         }
 
         if (!canShoot)
@@ -251,7 +268,7 @@ public class AirEnemy : RagnarComponent
     public void GotoNextPoint()
     {
         //gameObject.GetComponent<AudioSource>().PlayClip("EDRONE_FLYING");
-        gameObject.GetComponent<Animation>().PlayAnimation("Walk");
+        animationComponent.PlayAnimation("Walk");
         agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
         destPoint = (destPoint + 1) % waypoints.Count;
     }
@@ -267,7 +284,7 @@ public class AirEnemy : RagnarComponent
         {
             if (stoppedTime >= 0)
             {
-                gameObject.GetComponent<AudioSource>().StopCurrentClip("EDRONE_FLYING");
+                audioComponent.StopCurrentClip("EDRONE_FLYING");
                 stoppedTime -= Time.deltaTime;
                 if (stoppedTime < 0)
                 {
@@ -295,15 +312,15 @@ public class AirEnemy : RagnarComponent
 
         Quaternion newRot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
 
-        gameObject.GetComponent<Rigidbody>().SetBodyRotation(newRot);
+        rb.SetBodyRotation(newRot);
 
-        gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+        animationComponent.PlayAnimation("Idle");
     }
 
     public void Stun(float timeStunned)
     {
         stunned = true;
         stunnedTimer = timeStunned;
-        gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+        animationComponent.PlayAnimation("Idle");
     }
 }

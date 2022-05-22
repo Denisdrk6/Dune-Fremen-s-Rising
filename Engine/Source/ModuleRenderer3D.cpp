@@ -209,7 +209,7 @@ bool ModuleRenderer3D::Start()
 	postProcessingShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/postProcessing.shader")));
 	coneShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/basic.shader")));
 	textureShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/texture.shader")));
-	damageTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/test.png")));
+	damageTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/damage.png")));
 	whiteTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/white.png")));
 
 	return true;
@@ -802,8 +802,11 @@ void ModuleRenderer3D::DebugDraw(GameObject* objSelected)
 	{
 		app->navMesh->GetNavMeshBuilder()->DebugDraw();
 
-		if (objSelected && objSelected->GetComponent<NavAgentComponent>() != nullptr)
-			app->navMesh->GetPathfinding()->RenderPath(objSelected->GetComponent<NavAgentComponent>());
+		if (objSelected)
+		{
+			NavAgentComponent* navMesh = navMesh = objSelected->GetComponent<NavAgentComponent>();
+			if (navMesh) app->navMesh->GetPathfinding()->RenderPath(navMesh);
+		}
 	}
 
 	if (app->physics->GetDebugMode())

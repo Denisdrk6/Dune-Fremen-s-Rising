@@ -10,6 +10,8 @@ public class BackStab : RagnarComponent
 	public bool backstabed;
 	NavAgent agent;
 	public GameObject boss;
+
+	// Component list
     private GameObject sceneAudio;
 	public void Start()
 	{

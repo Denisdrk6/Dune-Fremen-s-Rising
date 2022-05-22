@@ -55,7 +55,8 @@ public class HunterSeeker : RagnarComponent
 			if (Attack())
 			{
                 sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_HUNTERSEEKERNEEDLE");
-                GameObject player = GameObject.Find("Player_2");
+				// TODO: Must check if more players need to be found, if it's only player 2, it is already stored in "player" at the start
+                // GameObject player = GameObject.Find("Player_2");
 				player.GetComponent<Player>().SetControled(true);
 				InternalCalls.Destroy(gameObject);
 				leftParticles.Pause();

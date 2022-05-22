@@ -52,7 +52,7 @@ void ComponentTransform2D::UpdateChilds(float3 newPosition, float2 newScale) {
 	buttonHeight += newScale.y;
 	for (int a = 0; a < auxiliar.size(); a++) 
 	{		
-		ComponentTransform2D* aux=auxiliar[a]->GetComponent<ComponentTransform2D>();
+		ComponentTransform2D* aux = auxiliar[a]->GetComponent<ComponentTransform2D>();
 		aux->UpdateChilds(newPosition, newScale);
 	}
 }
