@@ -89,6 +89,7 @@ public:
 	void HitPosibleFocusedObjects(const math::float4& viewport);
 
 	void RenderText(std::string text, float x, float y, float scale, float3 color, Shadert* shader, std::map<char, Character>* characters, uint VAO, uint VBO);
+	void CleanText(std::string& text);
 	void DrawCharacters(std::string& text, float& x, float scale, float y, std::map<char, Character>* characters, uint VAO, uint VBO);
 
     void DeleteUIGameObjects(GameObject* ui);

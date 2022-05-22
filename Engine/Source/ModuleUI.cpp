@@ -24,6 +24,7 @@
 
 #include "GL/glew.h"
 #include "Profiling.h"
+#include <locale.h>
 
 #include FT_FREETYPE_H 
 
@@ -331,6 +332,7 @@ ModuleUI::~ModuleUI()
 
 bool ModuleUI::Start()
 {
+	setlocale(LC_CTYPE, "Spanish");
 
 	return true;
 }
@@ -360,7 +362,7 @@ void ModuleUI::loadFont(std::string path, std::map<char, Character>* chara, Shad
 		glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 
 		// load first 128 characters of ASCII set
-		for (unsigned char c = 0; c < 128; c++)
+		for (unsigned char c = 0; c < 255; c++)
 		{
 			// Load character glyph 
 			if (FT_Load_Char(face, c, FT_LOAD_RENDER))
@@ -459,13 +461,69 @@ void ModuleUI::RenderText(std::string text, float x, float y, float scale, float
 	glActiveTexture(GL_TEXTURE0);
 	glBindVertexArray(VAO);
 
+	CleanText(text);
+	//CleanText(text);
+
 	// iterate through all characters
 	DrawCharacters(text, x, scale, y, characters,  VAO, VBO);
 	glBindVertexArray(0);
 	glBindTexture(GL_TEXTURE_2D, 0);
 	shader->StopUse();
 }
-// Draw all text letters 
+
+void ModuleUI::CleanText(std::string& text)
+{
+
+	for (int i = 0; i < text.length(); i++)
+	{
+		if ((text[i]) == 'Â') {
+			if ((text[i + 1]) == '¡') {
+				text.replace(i, 2, "¡");
+				continue;
+			}
+			if ((text[i + 1]) == '¿') {
+				text.replace(i, 2, "¿");
+				continue;
+			}
+		
+		}
+		if ((text[i]) != 'Ã') continue;
+		else
+		{
+			if ((text[i + 1]) == '±') {
+				text.replace(i, 2, "ñ");
+				continue;
+			}
+			if ((text[i + 1]) == '‘'){
+				text.replace(i, 2, "Ñ");
+				continue;
+			}
+			if ((text[i + 1]) == '¡'){
+				text.replace(i, 2, "á");
+				continue;
+			}
+			if ((text[i + 1]) == '©'){
+				text.replace(i, 2, "é");
+				continue;
+			}
+			if ((text[i + 1]) == '³'){
+				text.replace(i, 2, "ó");
+				continue;
+			}
+			if ((text[i + 1]) == 'º'){
+				text.replace(i, 2, "ú");
+				continue;
+			}
+			if ((text[i + 1]) == '¼'){
+				text.replace(i, 2, "ü");
+				continue;
+			}
+			text.replace(i, 2, "í");
+		}
+		
+	}
+}
+// Draw all text letters
 void ModuleUI::DrawCharacters(std::string& text, float& x, float scale, float y, std::map<char, Character>* characters, uint VAO, uint VBO)
 {
 	float auxX = x;
@@ -478,6 +536,7 @@ void ModuleUI::DrawCharacters(std::string& text, float& x, float scale, float y,
 
 		bool newLine = false;
 		u = (*c);
+
 		if (u == "\n")
 		{
 			line++;

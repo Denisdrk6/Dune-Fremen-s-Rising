@@ -10,6 +10,7 @@ public class DialogueTrigger : RagnarComponent
     GameObject manager;
     public int dialogueId;
     public bool isUsed = false;
+    public bool nexLevel = false;
 	public void Start()
 	{
         manager = GameObject.Find("Dialogue");
@@ -17,6 +18,7 @@ public class DialogueTrigger : RagnarComponent
     }
     public void Update()
 	{
+        if (nexLevel == true) return;
         switch (dialogueId)
         {
             case 0:
@@ -28,8 +30,7 @@ public class DialogueTrigger : RagnarComponent
                     }
                     break;
             case 1:
-                if (isUsed)
-                    LoadSceneWin();
+                // Gameplay
                 break;
             case 2:
                 // Gameplay
@@ -81,6 +82,15 @@ public class DialogueTrigger : RagnarComponent
                 if (isUsed)
                     LoadSceneWin();
                 break;
+
+            case 11:
+                // Gameplay
+                break;
+
+            case 12:
+                // Gameplay
+                break;
+
             default:
                 break;
         }
@@ -91,6 +101,7 @@ public class DialogueTrigger : RagnarComponent
     {
         if (dialogueManager.GetEndDialogue())
         {
+            nexLevel = true;
             isUsed = false;
             GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveTest("WIIIIIN", gameObject.transform.globalPosition);
             SceneManager.LoadScene("WinScene");

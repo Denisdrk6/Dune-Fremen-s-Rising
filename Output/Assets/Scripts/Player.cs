@@ -383,6 +383,30 @@ public class Player : RagnarComponent
                 PlayerPause();
             other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(10);
         }
+        if (other.gameObject.name == "DialogueTrigger11")
+        {
+            if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
+                PlayerPause();
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(11);
+        }
+        if (other.gameObject.name == "DialogueTrigger12")
+        {
+            if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
+                PlayerPause();
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(12);
+        }
+        if (other.gameObject.name == "DialogueTrigger13")
+        {
+            if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
+                PlayerPause();
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(13);
+        }
+        if (other.gameObject.name == "DialogueTrigger14")
+        {
+            if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
+                PlayerPause();
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(14);
+        }
         // ===================================================================
     }
 
