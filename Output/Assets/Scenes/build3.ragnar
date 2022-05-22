@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Level_3",
-                    "pointer": 496843096,
+                    "pointer": 543490112,
                     "type": 4,
                     "componentTable": 0,
                     "characters": 0,
@@ -144,9 +144,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -12.907539367675781,
+                        -17.149606704711914,
                         0,
-                        75.781036376953125
+                        75.850799560546875
                     ],
                     "Quaternion": [
                         0,
@@ -183,15 +183,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        1.9073486328125e-05,
-                        62.399330139160156,
-                        -56.726638793945312
+                        0,
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
-                        -1.5857484214620854e-08,
-                        7.9287421073104269e-09,
-                        0.93969273567199707
+                        0.34202012419700623,
+                        0,
+                        0,
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -210,9 +210,9 @@
                     "Vertical Fov": 0.42143398523330688,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -52.355422973632812,
-                        62.399330139160156,
-                        116.54798889160156
+                        -51.919754028320313,
+                        55,
+                        111.78361511230469
                     ],
                     "Type": 3,
                     "Zoom": -20,
@@ -222,9 +222,9 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -12.907539367675781,
+                        -17.149606704711914,
                         0,
-                        75.781036376953125
+                        75.850799560546875
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
@@ -402,7 +402,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "pauseMenuButton",
-                    "pointer": 496842088,
+                    "pointer": 543604736,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -7405,13 +7405,13 @@
                 {
                     "Type": 4,
                     "ScriptName": "Boss",
-                    "pointer": 723607480,
+                    "pointer": 584478352,
                     "type": 4,
                     "componentTable": 0,
                     "state": 0,
                     "index": 0,
                     "colliders": 0,
-                    "barrelLocations": 87109176,
+                    "barrelLocations": 221064872,
                     "barrelCount": 0,
                     "stunnedHits": 0
                 },
@@ -11522,7 +11522,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        5.1778945922851562,
+                        5.1778945922851563,
                         9.5877904891967773,
                         31.956098556518555
                     ],
@@ -12548,7 +12548,7 @@
                     "Position": [
                         4.8114080429077148,
                         1.1470737457275391,
-                        54.863174438476562
+                        54.863174438476563
                     ],
                     "Quaternion": [
                         0,
@@ -12612,7 +12612,7 @@
                     "Position": [
                         -4.7900114059448242,
                         1.1470737457275391,
-                        54.863174438476562
+                        54.863174438476563
                     ],
                     "Quaternion": [
                         0,
@@ -12930,7 +12930,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        28.913650512695312,
+                        28.913650512695313,
                         10.299989700317383,
                         -18.574617385864258
                     ],
@@ -12996,7 +12996,7 @@
                     "Position": [
                         24.906341552734375,
                         10.299989700317383,
-                        -14.350418090820312
+                        -14.350418090820313
                     ],
                     "Quaternion": [
                         0,
@@ -13680,7 +13680,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -0.22806167602539062,
+                        -0.22806167602539063,
                         -17.336030960083008,
                         86.821784973144531
                     ],
@@ -14826,7 +14826,7 @@
                     "Position": [
                         -24.159458160400391,
                         10.213509559631348,
-                        -24.447463989257812
+                        -24.447463989257813
                     ],
                     "Quaternion": [
                         0,
@@ -15401,7 +15401,7 @@
                     "Active": true,
                     "Position": [
                         13.904697418212891,
-                        1.1811904907226562,
+                        1.1811904907226563,
                         27.098545074462891
                     ],
                     "Quaternion": [
@@ -15594,7 +15594,7 @@
                     "Position": [
                         -14.74965763092041,
                         1.1811902523040771,
-                        56.314773559570312
+                        56.314773559570313
                     ],
                     "Quaternion": [
                         0,
@@ -16490,7 +16490,7 @@
                     "Position": [
                         11.011082649230957,
                         5.0660724639892578,
-                        15.840469360351562
+                        15.840469360351563
                     ],
                     "Quaternion": [
                         0,
@@ -16554,7 +16554,7 @@
                     "Position": [
                         -11.547697067260742,
                         5.0660724639892578,
-                        15.840469360351562
+                        15.840469360351563
                     ],
                     "Quaternion": [
                         0,
@@ -16682,7 +16682,7 @@
                     "Position": [
                         -11.547697067260742,
                         5.0660724639892578,
-                        50.571853637695312
+                        50.571853637695313
                     ],
                     "Quaternion": [
                         0,
@@ -16746,7 +16746,7 @@
                     "Position": [
                         4.8026103973388672,
                         5.0660724639892578,
-                        50.839370727539062
+                        50.839370727539063
                     ],
                     "Quaternion": [
                         0,
@@ -16810,7 +16810,7 @@
                     "Position": [
                         -4.7988085746765137,
                         5.0660724639892578,
-                        50.839370727539062
+                        50.839370727539063
                     ],
                     "Quaternion": [
                         0,
@@ -17322,7 +17322,7 @@
                     "Position": [
                         -13.440224647521973,
                         -8.455164909362793,
-                        95.714553833007812
+                        95.714553833007813
                     ],
                     "Quaternion": [
                         0,
@@ -17450,7 +17450,7 @@
                     "Position": [
                         13.68184757232666,
                         -8.3912687301635742,
-                        79.078811645507812
+                        79.078811645507813
                     ],
                     "Quaternion": [
                         0,
@@ -17834,7 +17834,7 @@
                     "Position": [
                         6.3273811340332031,
                         -8.3912677764892578,
-                        100.46560668945312
+                        100.46560668945313
                     ],
                     "Quaternion": [
                         0,
@@ -18282,7 +18282,7 @@
                     "Position": [
                         -8.9245595932006836,
                         8.734562873840332,
-                        -39.351455688476562
+                        -39.351455688476563
                     ],
                     "Quaternion": [
                         0,
@@ -18346,7 +18346,7 @@
                     "Position": [
                         8.5180120468139648,
                         8.734562873840332,
-                        -39.351455688476562
+                        -39.351455688476563
                     ],
                     "Quaternion": [
                         0,
@@ -18602,7 +18602,7 @@
                     "Position": [
                         17.758607864379883,
                         8.734562873840332,
-                        -10.346023559570312
+                        -10.346023559570313
                     ],
                     "Quaternion": [
                         0,
@@ -18986,7 +18986,7 @@
                     "Position": [
                         13.440780639648438,
                         -8.1791505813598633,
-                        98.176101684570312
+                        98.176101684570313
                     ],
                     "Quaternion": [
                         0,
@@ -19501,9 +19501,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        1.9717788696289062,
+                        1.9717788696289063,
                         -0.40999999642372131,
-                        0.14633560180664062
+                        0.14633560180664063
                     ],
                     "Quaternion": [
                         0.20323620736598969,
@@ -19634,9 +19634,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -0.20116615295410156,
-                        -0.23305892944335938,
-                        0.40772628784179688
+                        -0.20000000298023224,
+                        -0.27500000596046448,
+                        0.43999999761581421
                     ],
                     "Quaternion": [
                         0.20323620736598969,
@@ -19703,8 +19703,8 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        20.695449829101562,
-                        6.2069473266601562,
+                        20.695449829101563,
+                        6.2069473266601563,
                         -1.2541694641113281
                     ],
                     "Quaternion": [
@@ -19767,7 +19767,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -0.10715103149414062,
+                        -0.10715103149414063,
                         -0.34950542449951172,
                         0.20717811584472656
                     ],
@@ -19901,8 +19901,8 @@
                     "Active": true,
                     "Position": [
                         0,
-                        -0.22592926025390625,
-                        0.37525177001953125
+                        -0.2800000011920929,
+                        0.43999999761581421
                     ],
                     "Quaternion": [
                         0.20323620736598969,
@@ -19970,7 +19970,7 @@
                     "Active": true,
                     "Position": [
                         -20.984922409057617,
-                        6.2069473266601562,
+                        6.2069473266601563,
                         -1.2541694641113281
                     ],
                     "Quaternion": [
@@ -20805,7 +20805,7 @@
             "Parent UUID": 1433371849,
             "Name": "Enemies",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -20827,9 +20827,9 @@
                         1
                     ],
                     "RotationEditor": [
+                        -0,
                         0,
-                        0,
-                        0
+                        -0
                     ],
                     "Scale": [
                         1,
@@ -20869,7 +20869,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_1",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -20933,7 +20933,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_2",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -20997,7 +20997,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_3",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21061,7 +21061,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_4",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21125,7 +21125,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_5",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21189,7 +21189,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_6",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21253,7 +21253,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_7",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21317,7 +21317,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_8",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21381,7 +21381,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_9",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21445,7 +21445,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_10",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21509,7 +21509,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_11",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21573,7 +21573,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_static_12",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21637,7 +21637,7 @@
             "Parent UUID": 1361691258,
             "Name": "undistractable_static_1",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21701,7 +21701,7 @@
             "Parent UUID": 1361691258,
             "Name": "basic_patrol_1",
             "Active": false,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -21766,7 +21766,7 @@
             "Name": "Quest System",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Quest System.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
@@ -21800,7 +21800,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "QuestSystem",
-                    "pointer": 1218068008,
+                    "pointer": 610453384,
                     "type": 4,
                     "componentTable": 0,
                     "questList": 0,
@@ -21818,7 +21818,7 @@
             "Name": "Boton Activas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -21949,7 +21949,7 @@
             "Name": "Boton Completadas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22080,7 +22080,7 @@
             "Name": "Titulo Activas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22149,7 +22149,7 @@
             "Name": "Titulo Completadas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22218,7 +22218,7 @@
             "Name": "Descripcion",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22287,7 +22287,7 @@
             "Name": "Id",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22356,7 +22356,7 @@
             "Name": "Estado",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22425,7 +22425,7 @@
             "Name": "Tipo",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22494,7 +22494,7 @@
             "Name": "questBord",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22558,7 +22558,7 @@
             "Name": "questBc",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -22623,8 +22623,8 @@
             "cellHeight": 0.20000000298023224,
             "agentHeight": 2,
             "agentRadius": 0.5,
-            "agentMaxClimb": 0,
-            "agentMaxSlope": 0.10000000149011612,
+            "agentMaxClimb": 0.89999997615814209,
+            "agentMaxSlope": 45,
             "regionMinSize": 8,
             "regionMergeSize": 20,
             "edgeMaxLen": 12,

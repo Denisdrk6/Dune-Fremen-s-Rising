@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Level_1",
-                    "pointer": 360065688,
+                    "pointer": 158457848,
                     "type": 4,
                     "componentTable": 0,
                     "characters": 0,
@@ -144,19 +144,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -53.135276794433594,
+                        -54.712394714355469,
                         0,
-                        185.80764770507812
+                        183.8685302734375
                     ],
                     "Quaternion": [
                         0,
-                        0.31500205397605896,
+                        0.34137940406799316,
                         0,
-                        0.94909095764160156
+                        0.93992555141448975
                     ],
                     "RotationEditor": [
                         -0,
-                        0.64091759920120239,
+                        0.69676816463470459,
                         -0
                     ],
                     "Scale": [
@@ -183,15 +183,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        3.0517578125e-05,
-                        52.040260314941406,
-                        -47.309349060058594
+                        0,
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
-                        3.2842202291050171e-09,
-                        1.5857482438264014e-08,
-                        0.93969273567199707
+                        0.34202012419700623,
+                        0,
+                        0,
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -207,29 +207,29 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.42143398523330688,
+                    "Vertical Fov": 0.40903055667877197,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -81.423728942871094,
-                        52.040260314941406,
-                        147.88595581054688
+                        -86.80035400390625,
+                        55,
+                        145.52151489257813
                     ],
                     "Type": 3,
-                    "Zoom": -16,
+                    "Zoom": -20,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -53.135276794433594,
+                        -54.712394714355469,
                         0,
-                        185.80764770507812
+                        183.8685302734375
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 36.721878051757812,
+                    "Horizontal Angle": 39.921875,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -322,7 +322,7 @@
                         0,
                         -0.17417608201503754,
                         0,
-                        0.98471450805664062
+                        0.98471450805664063
                     ],
                     "RotationEditor": [
                         -0,
@@ -548,7 +548,7 @@
                     "Position": [
                         -15.136451721191406,
                         32.360797882080078,
-                        -2.4103469848632812
+                        -2.4103469848632813
                     ],
                     "Quaternion": [
                         0,
@@ -1522,7 +1522,7 @@
                     "Position": [
                         0.14367350935935974,
                         3.3142125606536865,
-                        -67.793533325195312
+                        -67.793533325195313
                     ],
                     "Quaternion": [
                         0,
@@ -1649,7 +1649,7 @@
                     "Active": true,
                     "Position": [
                         48.314388275146484,
-                        2.7870254516601562,
+                        2.7870254516601563,
                         -21.273065567016602
                     ],
                     "Quaternion": [
@@ -2480,7 +2480,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -7.3946304321289062,
+                        -7.3946304321289063,
                         5.3251314163208008,
                         85.330413818359375
                     ],
@@ -2672,7 +2672,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -68.188247680664062,
+                        -68.188247680664063,
                         6.4703893661499023,
                         90.2564697265625
                     ],
@@ -3576,7 +3576,7 @@
                     "Position": [
                         150.14437866210938,
                         0,
-                        -78.662551879882812
+                        -78.662551879882813
                     ],
                     "Quaternion": [
                         0,
@@ -3743,7 +3743,7 @@
                     "Position": [
                         -12.354125022888184,
                         1.3527688980102539,
-                        -52.897659301757812
+                        -52.897659301757813
                     ],
                     "Quaternion": [
                         0,
@@ -4594,7 +4594,7 @@
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
-            "tag": "Collider",
+            "tag": "Untagged",
             "layer": "Default",
             "Is Interactuable": false,
             "Components": [
@@ -4602,7 +4602,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -79.336990356445312,
+                        -79.336990356445313,
                         1.4033336639404297,
                         152.34800720214844
                     ],
@@ -4658,7 +4658,7 @@
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
-            "tag": "Collider",
+            "tag": "Untagged",
             "layer": "Default",
             "Is Interactuable": false,
             "Components": [
@@ -4722,7 +4722,7 @@
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
-            "tag": "Collider",
+            "tag": "Untagged",
             "layer": "Default",
             "Is Interactuable": false,
             "Components": [
@@ -4738,7 +4738,7 @@
                         0,
                         0.98829638957977295,
                         0,
-                        0.15254592895507812
+                        0.15254592895507813
                     ],
                     "RotationEditor": [
                         0,
@@ -4795,12 +4795,12 @@
                     "Active": true,
                     "Position": [
                         -70.791511535644531,
-                        4.1243362426757812,
+                        4.1243362426757813,
                         189.56086730957031
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -4928,7 +4928,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -5440,7 +5440,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -5486,8 +5486,8 @@
             "UUID": 455119600,
             "Parent UUID": 1179485366,
             "Name": "Enemies",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5550,8 +5550,8 @@
             "UUID": 1102386037,
             "Parent UUID": 455119600,
             "Name": "basic_static_0",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5614,8 +5614,8 @@
             "UUID": 1506814426,
             "Parent UUID": 455119600,
             "Name": "basic_patrol_1",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5678,8 +5678,8 @@
             "UUID": 1887850159,
             "Parent UUID": 455119600,
             "Name": "basic_static_2",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5742,8 +5742,8 @@
             "UUID": 109427433,
             "Parent UUID": 455119600,
             "Name": "basic_static_3",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5806,8 +5806,8 @@
             "UUID": 537875067,
             "Parent UUID": 455119600,
             "Name": "basic_patrol_4",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5870,8 +5870,8 @@
             "UUID": 898024500,
             "Parent UUID": 455119600,
             "Name": "basic_static_5",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5934,8 +5934,8 @@
             "UUID": 1254205536,
             "Parent UUID": 455119600,
             "Name": "basic_static_6",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -5998,8 +5998,8 @@
             "UUID": 1593329427,
             "Parent UUID": 455119600,
             "Name": "basic_static_7",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6062,8 +6062,8 @@
             "UUID": 1907807484,
             "Parent UUID": 455119600,
             "Name": "basic_static_8",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6126,8 +6126,8 @@
             "UUID": 74593031,
             "Parent UUID": 455119600,
             "Name": "basic_static_9",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6190,8 +6190,8 @@
             "UUID": 394780010,
             "Parent UUID": 455119600,
             "Name": "basic_static_10",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6254,8 +6254,8 @@
             "UUID": 737384951,
             "Parent UUID": 455119600,
             "Name": "basic_static_11",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6318,8 +6318,8 @@
             "UUID": 1072818929,
             "Parent UUID": 455119600,
             "Name": "basic_static_12",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6382,8 +6382,8 @@
             "UUID": 1417234016,
             "Parent UUID": 455119600,
             "Name": "basic_static_13",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6446,8 +6446,8 @@
             "UUID": 1761788345,
             "Parent UUID": 455119600,
             "Name": "basic_static_14",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6510,8 +6510,8 @@
             "UUID": 2109405998,
             "Parent UUID": 455119600,
             "Name": "basic_patrol_15",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6574,8 +6574,8 @@
             "UUID": 343515052,
             "Parent UUID": 455119600,
             "Name": "undistractable_static_16",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6638,8 +6638,8 @@
             "UUID": 758595454,
             "Parent UUID": 455119600,
             "Name": "undistractable_static_17",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6702,8 +6702,8 @@
             "UUID": 1073073511,
             "Parent UUID": 455119600,
             "Name": "basic_static_18",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6766,8 +6766,8 @@
             "UUID": 1426678570,
             "Parent UUID": 455119600,
             "Name": "basic_static_19",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6830,8 +6830,8 @@
             "UUID": 1739485723,
             "Parent UUID": 455119600,
             "Name": "basic_static_20",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6844,7 +6844,7 @@
                     "Position": [
                         -1.9580674171447754,
                         0,
-                        -54.288284301757812
+                        -54.288284301757813
                     ],
                     "Quaternion": [
                         0,
@@ -6894,8 +6894,8 @@
             "UUID": 2096223727,
             "Parent UUID": 455119600,
             "Name": "basic_static_21",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -6958,8 +6958,8 @@
             "UUID": 276028401,
             "Parent UUID": 455119600,
             "Name": "basic_patrol_22",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -7022,8 +7022,8 @@
             "UUID": 646272879,
             "Parent UUID": 455119600,
             "Name": "basic_static_23",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -7086,8 +7086,8 @@
             "UUID": 976554903,
             "Parent UUID": 455119600,
             "Name": "basic_static_24",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -7150,8 +7150,8 @@
             "UUID": 1300501416,
             "Parent UUID": 455119600,
             "Name": "basic_static_25",
-            "Active": true,
-            "Static": true,
+            "Active": false,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -7162,7 +7162,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -91.878311157226562,
+                        -91.878311157226563,
                         0,
                         137.60739135742188
                     ],
@@ -7211,14 +7211,14 @@
             ]
         },
         {
-            "UUID": 857757542,
+            "UUID": 549270664,
             "Parent UUID": 1179485366,
             "Name": "Colliders",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
-            "tag": "Collider",
+            "tag": "Untagged",
             "layer": "Default",
             "Is Interactuable": false,
             "Components": [
@@ -7226,9 +7226,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -22.43754768371582,
-                        4.542029857635498,
-                        61.861660003662109
+                        0,
+                        0,
+                        0
                     ],
                     "Quaternion": [
                         0,
@@ -7275,10 +7275,10 @@
             ]
         },
         {
-            "UUID": 1377687170,
-            "Parent UUID": 857757542,
+            "UUID": 1423849666,
+            "Parent UUID": 549270664,
             "Name": "Collider_01",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7290,9 +7290,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        4.8142118453979492,
-                        -0.70209115743637085,
-                        -48.28900146484375
+                        -17.623336791992188,
+                        3.8399467468261719,
+                        13.572660446166992
                     ],
                     "Quaternion": [
                         0,
@@ -7339,10 +7339,10 @@
             ]
         },
         {
-            "UUID": 1935908348,
-            "Parent UUID": 857757542,
+            "UUID": 98590029,
+            "Parent UUID": 549270664,
             "Name": "Collider_02",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7354,9 +7354,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        52.726894378662109,
-                        -1.313744068145752,
-                        -53.438739776611328
+                        30.289346694946289,
+                        3.2282938957214355,
+                        8.4229211807250977
                     ],
                     "Quaternion": [
                         0,
@@ -7403,10 +7403,10 @@
             ]
         },
         {
-            "UUID": 250986625,
-            "Parent UUID": 857757542,
+            "UUID": 866788143,
+            "Parent UUID": 549270664,
             "Name": "Collider_03",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7418,9 +7418,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        43.192291259765625,
-                        -1.5508314371109009,
-                        -61.219032287597656
+                        20.754745483398438,
+                        2.9912066459655762,
+                        0.6426270604133606
                     ],
                     "Quaternion": [
                         0,
@@ -7467,10 +7467,10 @@
             ]
         },
         {
-            "UUID": 708048490,
-            "Parent UUID": 857757542,
+            "UUID": 1631574828,
+            "Parent UUID": 549270664,
             "Name": "Collider_04",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7482,9 +7482,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        28.862819671630859,
-                        0.24999997019767761,
-                        -91.359901428222656
+                        6.4252710342407227,
+                        4.7920379638671875,
+                        -29.498239517211914
                     ],
                     "Quaternion": [
                         0,
@@ -7531,10 +7531,10 @@
             ]
         },
         {
-            "UUID": 1338675508,
-            "Parent UUID": 857757542,
+            "UUID": 229732091,
+            "Parent UUID": 549270664,
             "Name": "Collider_05",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7546,9 +7546,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        12.75030517578125,
-                        -0.72239565849304199,
-                        -57.771781921386719
+                        -9.6872425079345703,
+                        3.8196423053741455,
+                        4.0898785591125488
                     ],
                     "Quaternion": [
                         0,
@@ -7595,10 +7595,10 @@
             ]
         },
         {
-            "UUID": 1807990669,
-            "Parent UUID": 857757542,
+            "UUID": 997512479,
+            "Parent UUID": 549270664,
             "Name": "Collider_06",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7610,9 +7610,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -11.621913909912109,
-                        -0.45793688297271729,
-                        -33.500923156738281
+                        -34.059459686279297,
+                        4.0841012001037598,
+                        28.360736846923828
                     ],
                     "Quaternion": [
                         0,
@@ -7659,10 +7659,10 @@
             ]
         },
         {
-            "UUID": 95707893,
-            "Parent UUID": 857757542,
+            "UUID": 1772115725,
+            "Parent UUID": 549270664,
             "Name": "Collider_07",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7674,9 +7674,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -14.374296188354492,
-                        -1.4940602779388428,
-                        -13.485963821411133
+                        -36.811843872070313,
+                        3.0479776859283447,
+                        48.375698089599609
                     ],
                     "Quaternion": [
                         0,
@@ -7723,10 +7723,10 @@
             ]
         },
         {
-            "UUID": 546503868,
-            "Parent UUID": 857757542,
+            "UUID": 370690714,
+            "Parent UUID": 549270664,
             "Name": "Collider_08",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7738,9 +7738,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -15.708334922790527,
-                        -0.81458085775375366,
-                        5.4020471572875977
+                        -38.145881652832031,
+                        3.7274570465087891,
+                        67.263710021972656
                     ],
                     "Quaternion": [
                         0,
@@ -7787,10 +7787,10 @@
             ]
         },
         {
-            "UUID": 965065320,
-            "Parent UUID": 857757542,
+            "UUID": 1104287191,
+            "Parent UUID": 549270664,
             "Name": "Collider_09",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7802,9 +7802,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        3.1303982734680176,
-                        -0.73648124933242798,
-                        -9.4543256759643555
+                        -19.307149887084961,
+                        3.8055567741394043,
+                        52.407333374023438
                     ],
                     "Quaternion": [
                         0,
@@ -7851,10 +7851,10 @@
             ]
         },
         {
-            "UUID": 1374784905,
-            "Parent UUID": 857757542,
+            "UUID": 1851877489,
+            "Parent UUID": 549270664,
             "Name": "Collider_10",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7866,9 +7866,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        52.957424163818359,
-                        -1.8462518453598022,
-                        -77.251495361328125
+                        30.519878387451172,
+                        2.6957862377166748,
+                        -15.389838218688965
                     ],
                     "Quaternion": [
                         0,
@@ -7915,10 +7915,10 @@
             ]
         },
         {
-            "UUID": 1786523499,
-            "Parent UUID": 857757542,
+            "UUID": 441680232,
+            "Parent UUID": 549270664,
             "Name": "Collider_11",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7930,9 +7930,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        15.848892211914062,
-                        -3.0979249477386475,
-                        -4.4676723480224609
+                        -6.5886549949645996,
+                        1.44411301612854,
+                        57.393985748291016
                     ],
                     "Quaternion": [
                         0,
@@ -7979,10 +7979,10 @@
             ]
         },
         {
-            "UUID": 101184050,
-            "Parent UUID": 857757542,
+            "UUID": 1200618753,
+            "Parent UUID": 549270664,
             "Name": "Collider_12",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -7994,9 +7994,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        2.3265748023986816,
-                        -1.010883092880249,
-                        15.563295364379883
+                        -20.110973358154297,
+                        3.5311548709869385,
+                        77.424957275390625
                     ],
                     "Quaternion": [
                         0.00037199535290710628,
@@ -8043,10 +8043,10 @@
             ]
         },
         {
-            "UUID": 549821774,
-            "Parent UUID": 857757542,
+            "UUID": 1951063512,
+            "Parent UUID": 549270664,
             "Name": "Collider_13",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -8058,15 +8058,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -23.106374740600586,
-                        -0.95253944396972656,
-                        93.337928771972656
+                        -47.727519989013672,
+                        3.4106044769287109,
+                        155.29481506347656
                     ],
                     "Quaternion": [
-                        -0.6891828179359436,
-                        -0.1581999808549881,
-                        -0.1581999808549881,
-                        0.6891825795173645
+                        -8.1218388459092239e-08,
+                        -0.077014118432998657,
+                        6.2735971972927018e-09,
+                        0.99703001976013184
                     ],
                     "RotationEditor": [
                         0,
@@ -8107,10 +8107,10 @@
             ]
         },
         {
-            "UUID": 1010225447,
-            "Parent UUID": 857757542,
+            "UUID": 563771564,
+            "Parent UUID": 549270664,
             "Name": "Collider_14",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -8122,15 +8122,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -44.332981109619141,
-                        -1.0428475141525269,
-                        89.321861267089844
+                        -65.100296020507813,
+                        3.4451334476470947,
+                        157.34495544433594
                     ],
                     "Quaternion": [
-                        -0.68868976831436157,
-                        -0.16033264994621277,
-                        -0.16033264994621277,
-                        0.68868952989578247
+                        -6.7913916268480534e-08,
+                        -0.55220967531204224,
+                        4.4983199387615969e-08,
+                        0.83370524644851685
                     ],
                     "RotationEditor": [
                         0,
@@ -8171,10 +8171,10 @@
             ]
         },
         {
-            "UUID": 1529737349,
-            "Parent UUID": 857757542,
+            "UUID": 1310596031,
+            "Parent UUID": 549270664,
             "Name": "Collider_15",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -8186,9 +8186,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -23.223329544067383,
-                        -0.73648124933242798,
-                        131.16978454589844
+                        -47.002681732177734,
+                        1.7006897926330566,
+                        192.22218322753906
                     ],
                     "Quaternion": [
                         0,
@@ -8235,10 +8235,10 @@
             ]
         },
         {
-            "UUID": 1969811690,
-            "Parent UUID": 857757542,
+            "UUID": 2047325453,
+            "Parent UUID": 549270664,
             "Name": "Collider_16",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -8250,9 +8250,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -58.425014495849609,
-                        -0.73648124933242798,
-                        90.405731201171875
+                        -79.297042846679688,
+                        1.7006897926330566,
+                        152.20021057128906
                     ],
                     "Quaternion": [
                         0,
@@ -8299,10 +8299,10 @@
             ]
         },
         {
-            "UUID": 111881782,
-            "Parent UUID": 857757542,
+            "UUID": 293687803,
+            "Parent UUID": 549270664,
             "Name": "Collider_17",
-            "Active": true,
+            "Active": false,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
@@ -8314,9 +8314,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -26.680400848388672,
-                        -0.73648124933242798,
-                        33.635032653808594
+                        -50.194366455078125,
+                        1.7006897926330566,
+                        94.357978820800781
                     ],
                     "Quaternion": [
                         0,
@@ -8444,7 +8444,7 @@
                     "Position": [
                         -8.2231903076171875,
                         -0.64049720764160156,
-                        -4.1796951293945312
+                        -4.1796951293945313
                     ],
                     "Quaternion": [
                         -0.0024560873862355947,
@@ -8701,7 +8701,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1966,
+                        1955.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -8717,7 +8717,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8749,7 +8749,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "pauseMenuButton",
-                    "pointer": 371120616,
+                    "pointer": 158459144,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -8788,7 +8788,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -8919,7 +8919,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -9050,7 +9050,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -9181,7 +9181,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -9245,7 +9245,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -9309,7 +9309,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -9373,7 +9373,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -9504,7 +9504,7 @@
                     "buttonWidth": 400,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -9856,7 +9856,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2276.5,
+                        2266,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -9872,7 +9872,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9936,7 +9936,7 @@
                     "buttonWidth": 263,
                     "buttonHeight": 52.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9984,7 +9984,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2066.5,
+                        2056,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10000,7 +10000,7 @@
                     "buttonWidth": 254.5,
                     "buttonHeight": 46,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10115,7 +10115,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2058,
+                        2047.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10131,7 +10131,7 @@
                     "buttonWidth": 650,
                     "buttonHeight": 650,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10179,7 +10179,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2285,
+                        2274.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10195,7 +10195,7 @@
                     "buttonWidth": 376.5,
                     "buttonHeight": 42.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10310,7 +10310,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2083.5,
+                        2073,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10326,7 +10326,7 @@
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10441,7 +10441,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2083.5,
+                        2073,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10457,7 +10457,7 @@
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10505,7 +10505,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2083.5,
+                        2073,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10521,7 +10521,7 @@
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10636,7 +10636,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2083.5,
+                        2073,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10652,7 +10652,7 @@
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10700,7 +10700,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2083.5,
+                        2073,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10716,7 +10716,7 @@
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10831,7 +10831,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2083.5,
+                        2073,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -10847,7 +10847,7 @@
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10895,7 +10895,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2173,
+                        2162.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -10911,7 +10911,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10979,7 +10979,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2173,
+                        2162.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -10995,7 +10995,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11063,7 +11063,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2173,
+                        2162.5,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -11079,7 +11079,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11147,7 +11147,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2198.5,
+                        2188,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -11163,7 +11163,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11216,7 +11216,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2198.5,
+                        2188,
                         36.099998474121094
                     ],
                     "Scale": [
@@ -11232,7 +11232,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11285,7 +11285,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11301,7 +11301,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11310,7 +11310,7 @@
                     "Type": 19,
                     "Position": [
                         -0.727996826171875,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11326,7 +11326,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11394,7 +11394,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11410,7 +11410,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11419,7 +11419,7 @@
                     "Type": 19,
                     "Position": [
                         -5.5,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11435,7 +11435,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11503,7 +11503,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11519,7 +11519,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11528,7 +11528,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11544,7 +11544,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11612,7 +11612,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11628,7 +11628,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 16,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11637,7 +11637,7 @@
                     "Type": 19,
                     "Position": [
                         -275,
-                        2268,
+                        2257.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11653,7 +11653,7 @@
                     "buttonWidth": 20,
                     "buttonHeight": 36,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11721,7 +11721,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2276.5,
+                        2266,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11737,7 +11737,7 @@
                     "buttonWidth": 250,
                     "buttonHeight": 60,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11873,7 +11873,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1937,
+                        1926.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11889,7 +11889,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -11942,7 +11942,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1937,
+                        1926.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -11958,7 +11958,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12011,7 +12011,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1937,
+                        1926.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -12027,7 +12027,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12080,7 +12080,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -12096,7 +12096,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12211,7 +12211,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -12227,7 +12227,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12342,7 +12342,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -12358,7 +12358,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12473,7 +12473,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -12489,7 +12489,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12604,7 +12604,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -12620,7 +12620,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12735,7 +12735,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -12751,7 +12751,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12866,7 +12866,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -12882,7 +12882,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -12997,7 +12997,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13013,7 +13013,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -13128,7 +13128,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13144,7 +13144,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -13259,7 +13259,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13275,7 +13275,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -13390,7 +13390,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13406,7 +13406,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -13521,7 +13521,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13537,7 +13537,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -13652,7 +13652,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13668,7 +13668,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -13783,7 +13783,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13799,7 +13799,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -13914,7 +13914,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -13930,7 +13930,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14045,7 +14045,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -14061,7 +14061,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14176,7 +14176,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -14192,7 +14192,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14307,7 +14307,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -14323,7 +14323,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14438,7 +14438,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -14454,7 +14454,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14569,7 +14569,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -14585,7 +14585,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14700,7 +14700,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        21.099998474121094,
+                        10.599998474121094,
                         0
                     ],
                     "Scale": [
@@ -14716,7 +14716,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14847,7 +14847,7 @@
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -14978,7 +14978,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -15109,7 +15109,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 50,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -15418,7 +15418,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -41.492507934570312,
+                        -41.492507934570313,
                         -3.608570114010945e-05,
                         56.977767944335938
                     ],
@@ -15615,7 +15615,7 @@
                     "Position": [
                         12.414186477661133,
                         0,
-                        -17.509658813476562
+                        -17.509658813476563
                     ],
                     "Quaternion": [
                         0,
@@ -15770,7 +15770,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1845.5,
+                        1835,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -15786,7 +15786,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -15855,7 +15855,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -15903,7 +15903,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -3.9000015258789062,
+                        6.5999984741210938,
                         -4.9000000953674316
                     ],
                     "Scale": [
@@ -15919,7 +15919,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -15983,7 +15983,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16031,7 +16031,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1845.5,
+                        1835,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16047,7 +16047,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16162,7 +16162,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1845.5,
+                        1835,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16178,7 +16178,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16293,7 +16293,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1845.5,
+                        1835,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16309,7 +16309,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16424,7 +16424,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1845.5,
+                        1835,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16440,7 +16440,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16555,7 +16555,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1837,
+                        1826.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16571,7 +16571,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16619,7 +16619,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1837,
+                        1826.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16635,7 +16635,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16683,7 +16683,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1837,
+                        1826.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16699,7 +16699,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16747,7 +16747,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1837,
+                        1826.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16763,7 +16763,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16827,7 +16827,7 @@
                     "buttonWidth": 513,
                     "buttonHeight": 214,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16875,7 +16875,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -160,
+                        -149.5,
                         2.5999999046325684
                     ],
                     "Scale": [
@@ -16891,7 +16891,7 @@
                     "buttonWidth": 550,
                     "buttonHeight": 90,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -16939,7 +16939,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1837,
+                        1826.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -16955,7 +16955,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17003,7 +17003,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1830,
+                        1819.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -17019,7 +17019,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17067,7 +17067,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -1.3999996185302734,
+                        9.1000003814697266,
                         0
                     ],
                     "Scale": [
@@ -17083,7 +17083,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17131,7 +17131,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1895.5,
+                        1885,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -17147,7 +17147,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17200,7 +17200,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        5.1000003814697266,
+                        -5.3999996185302734,
                         0
                     ],
                     "Scale": [
@@ -17216,7 +17216,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17280,7 +17280,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17328,7 +17328,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        253,
+                        242.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -17344,7 +17344,7 @@
                     "buttonWidth": 186.5,
                     "buttonHeight": 55,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17475,7 +17475,7 @@
                     "buttonWidth": 36.5,
                     "buttonHeight": 81,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17539,7 +17539,7 @@
                     "buttonWidth": 36.5,
                     "buttonHeight": 81,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17587,7 +17587,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -6.5,
+                        4,
                         -5
                     ],
                     "Scale": [
@@ -17603,7 +17603,7 @@
                     "buttonWidth": 36.5,
                     "buttonHeight": 81,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17651,7 +17651,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -0.39999961853027344,
+                        10.100000381469727,
                         -11.899999618530273
                     ],
                     "Scale": [
@@ -17667,7 +17667,7 @@
                     "buttonWidth": 122,
                     "buttonHeight": 83,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17731,7 +17731,7 @@
                     "buttonWidth": 122,
                     "buttonHeight": 83,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17779,7 +17779,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        0.5,
+                        -10,
                         -11.899999618530273
                     ],
                     "Scale": [
@@ -17795,7 +17795,7 @@
                     "buttonWidth": 123,
                     "buttonHeight": 83,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17843,7 +17843,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -148.5,
+                        -138,
                         -15
                     ],
                     "Scale": [
@@ -17859,7 +17859,7 @@
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17907,7 +17907,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1927,
+                        1916.5,
                         -15
                     ],
                     "Scale": [
@@ -17923,7 +17923,7 @@
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -17971,7 +17971,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        1927,
+                        1916.5,
                         -15
                     ],
                     "Scale": [
@@ -17987,7 +17987,7 @@
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18035,7 +18035,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        5,
+                        -5.5,
                         -15
                     ],
                     "Scale": [
@@ -18051,7 +18051,7 @@
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18115,7 +18115,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18184,7 +18184,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18253,7 +18253,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18322,7 +18322,7 @@
                     "buttonWidth": 84,
                     "buttonHeight": 26,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18386,7 +18386,7 @@
                     "buttonWidth": 84,
                     "buttonHeight": 26,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18450,7 +18450,7 @@
                     "buttonWidth": 84,
                     "buttonHeight": 26,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18514,7 +18514,7 @@
                     "buttonWidth": 84,
                     "buttonHeight": 26,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18601,7 +18601,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        246.5,
+                        236,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -18617,7 +18617,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18670,7 +18670,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        96.5,
+                        86,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -18686,7 +18686,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18739,7 +18739,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -96.5,
+                        -86,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -18755,7 +18755,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18808,7 +18808,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -246.5,
+                        -236,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -18824,7 +18824,7 @@
                     "buttonWidth": 45,
                     "buttonHeight": 45,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18893,7 +18893,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 90,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -18957,7 +18957,7 @@
                     "buttonWidth": 50,
                     "buttonHeight": 90,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19097,11 +19097,12 @@
                 {
                     "Type": 4,
                     "ScriptName": "DialogueTrigger",
-                    "pointer": 550935632,
+                    "pointer": 399903648,
                     "type": 4,
                     "componentTable": 0,
                     "dialogueId": 0,
-                    "isUsed": false
+                    "isUsed": false,
+                    "nexLevel": false
                 }
             ]
         },
@@ -19175,11 +19176,12 @@
                 {
                     "Type": 4,
                     "ScriptName": "DialogueTrigger",
-                    "pointer": 550939376,
+                    "pointer": 399902064,
                     "type": 4,
                     "componentTable": 0,
                     "dialogueId": 0,
-                    "isUsed": false
+                    "isUsed": false,
+                    "nexLevel": false
                 }
             ]
         },
@@ -19189,7 +19191,7 @@
             "Name": "Quest System",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Quest System.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
@@ -19223,7 +19225,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "QuestSystem",
-                    "pointer": 551113184,
+                    "pointer": 399903792,
                     "type": 4,
                     "componentTable": 0,
                     "questList": 0,
@@ -19241,7 +19243,7 @@
             "Name": "Boton Activas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19268,7 +19270,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19372,7 +19374,7 @@
             "Name": "Boton Completadas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19399,7 +19401,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19503,7 +19505,7 @@
             "Name": "Titulo Activas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19530,7 +19532,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19572,7 +19574,7 @@
             "Name": "Titulo Completadas",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19599,7 +19601,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19641,7 +19643,7 @@
             "Name": "Descripcion",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19668,7 +19670,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19710,7 +19712,7 @@
             "Name": "Id",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19737,7 +19739,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19779,7 +19781,7 @@
             "Name": "Estado",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19806,7 +19808,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19848,7 +19850,7 @@
             "Name": "Tipo",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19875,7 +19877,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19917,7 +19919,7 @@
             "Name": "questBord",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19928,7 +19930,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1989.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -19944,7 +19946,7 @@
                     "buttonWidth": 732,
                     "buttonHeight": 495,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -19981,7 +19983,7 @@
             "Name": "questBc",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -19992,7 +19994,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        2000,
+                        1989.5,
                         -11.399999618530273
                     ],
                     "Scale": [
@@ -20008,7 +20010,7 @@
                     "buttonWidth": 732.5,
                     "buttonHeight": 492,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
