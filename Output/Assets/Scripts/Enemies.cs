@@ -35,4 +35,6 @@ public class Enemies
 
     // Abilities
     public EnemyAbilities[] abilities;
+
+    public bool coneRotate = true;
 }

@@ -5,19 +5,22 @@ public class SwordSlash : RagnarComponent
 {
 	public float timeAlive = 0f;
 	public bool pendingToDelete = false;
+    GameObject player;
 	public void Start()
     {
         timeAlive = 0.1f;
 
-        Vector3 pos = GameObject.Find("Player_3").transform.globalPosition;
+        player = GameObject.Find("Player_3");
+
+        Vector3 pos = player.transform.globalPosition;
         pos.y += 1;
         gameObject.transform.localPosition = pos;
 
-        gameObject.transform.forward.Set(GameObject.Find("Player_3").transform.forward.x, GameObject.Find("Player_3").transform.forward.y, GameObject.Find("Player_3").transform.forward.z);
+        gameObject.transform.forward.Set(player.transform.forward.x, player.transform.forward.y, player.transform.forward.z);
 
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         rb.SetBodyPosition(pos);
-        rb.IgnoreCollision(GameObject.Find("Player_3"), true);
+        rb.IgnoreCollision(player, true);
         rb.SetAsTrigger();
     }
 

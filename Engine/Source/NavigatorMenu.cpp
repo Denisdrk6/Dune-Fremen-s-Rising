@@ -53,7 +53,7 @@ bool NavigatorMenu::Update(float dt)
     ImGui::Spacing();
     ImGui::PushItemWidth(180);
     ImGui::DragFloat("Cell size", &buildSettings->cellSize, 0.1f, 0.f);
-    ImGui::DragFloat("Cell hight", &buildSettings->cellHeight, 0.1f, 0.f);
+    ImGui::DragFloat("Cell height", &buildSettings->cellHeight, 0.1f, 0.f);
     ImGui::DragFloat("Region minimum size", &buildSettings->regionMinSize, 0.1f,0.f);
     ImGui::DragFloat("Region merge size", &buildSettings->regionMergeSize, 0.1f,0.f);
     ImGui::DragFloat("Edge max lenght", &buildSettings->edgeMaxLen, 0.1f, 0.f);
@@ -61,6 +61,8 @@ bool NavigatorMenu::Update(float dt)
     ImGui::DragFloat("Detail sample distance", &buildSettings->detailSampleDist, 0.1f, 0.f);
     ImGui::DragFloat("Detail sample max error", &buildSettings->detailSampleMaxError, 0.1f, 0.f);
     ImGui::DragFloat("Tile Size", &buildSettings->tileSize, 0.1f, 0.f);
+    ImGui::DragFloat("Verts per Poly", &buildSettings->vertsPerPoly, 0.1f, 0.f);
+    ImGui::DragInt("Partition Type", &buildSettings->partitionType, 1, 0);
     ImGui::PopItemWidth();
     ImGui::Dummy({ 0,10 });
 

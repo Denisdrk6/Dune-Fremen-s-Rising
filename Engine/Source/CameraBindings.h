@@ -116,13 +116,16 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 		Triangle t(vertex[i], vertex[i+1], vertex[i+2]);
 		for (size_t j = 0; j < players.size(); j++)
 		{
-			if (players.at(j)->GetComponent<TransformComponent>()->GetGlobalPosition().Distance(pointA) < radius + 0.5) {
+			TransformComponent* transform = players.at(j)->GetComponent<TransformComponent>();
+			if (transform->GetGlobalPosition().Distance(pointA) < radius + 0.5) 
+			{
 				if (t.Intersects(players.at(j)->GetOOB()))
 				{
-					vec bottomPoint = players.at(j)->GetComponent<TransformComponent>()->GetGlobalPosition();
+					vec bottomPoint = transform->GetGlobalPosition();
 					vec topPoint = bottomPoint;
 					topPoint.y += 1;
-					if (t.Intersects(Capsule(bottomPoint, topPoint, 0.60f))) {
+					if (t.Intersects(Capsule(bottomPoint, topPoint, 0.60f))) 
+					{
 						ret = j;
 						break;
 					}

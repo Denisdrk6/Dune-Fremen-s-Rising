@@ -46,7 +46,7 @@ bool ModuleNavMesh::Update(float dt)
 	return true;
 }
 
-bool ModuleNavMesh::LoadConfig(JsonParsing& node)
+bool ModuleNavMesh::LoadNaviConfig(JsonParsing& node)
 {
 	buildSettings->cellSize = node.GetJsonNumber("cellSize");
 	buildSettings->cellHeight = node.GetJsonNumber("cellHeight");
@@ -69,7 +69,7 @@ bool ModuleNavMesh::LoadConfig(JsonParsing& node)
 	return true;
 }
 
-bool ModuleNavMesh::SaveConfig(JsonParsing& node)
+bool ModuleNavMesh::SaveNaviConfig(JsonParsing& node)
 {
 	node.SetNewJsonNumber(node.ValueToObject(node.GetRootValue()), "cellSize", buildSettings->cellSize);
 	node.SetNewJsonNumber(node.ValueToObject(node.GetRootValue()), "cellHeight", buildSettings->cellHeight);

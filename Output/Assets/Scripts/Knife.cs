@@ -3,6 +3,10 @@ using RagnarEngine;
 
 public class Knife : RagnarComponent
 {
+	// Components
+	private AudioSource audioSourceComponent;
+	private ParticleSystem particleComponent;
+
 	private float force = 1500;
 	public bool canReload = false;
 	private bool pendingToDelete = false;
@@ -11,7 +15,12 @@ public class Knife : RagnarComponent
 	public void Start()
     {
         AimMethod();
-		gameObject.GetComponent<ParticleSystem>().Play();
+
+		// Get components
+		particleComponent = gameObject.GetComponent<ParticleSystem>();
+		audioSourceComponent = gameObject.GetComponent<AudioSource>();
+
+		particleComponent.Play();
 	}
 
     private void AimMethod()
@@ -58,7 +67,7 @@ public class Knife : RagnarComponent
 			if (!grabOnce)
 			{
 				grabOnce = true;
-				gameObject.GetComponent<AudioSource>().PlayClip("WPN_THORWINGKNIFERECOVERSAND");
+				audioSourceComponent.PlayClip("WPN_THORWINGKNIFERECOVERSAND");
 			}
 
 			pendingToDelete = true;
@@ -83,7 +92,7 @@ public class Knife : RagnarComponent
 
 	public void OnCollision(Rigidbody other)
 	{
-		gameObject.GetComponent<ParticleSystem>().Pause();
+		particleComponent.Pause();
 		canReload = true;
 	}
 

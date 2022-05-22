@@ -49,6 +49,8 @@ MaterialComponent::MaterialComponent(GameObject* own, bool defaultMat) : default
 	owner = own;
 	active = true;
 
+	ownerTransform = owner->GetComponent<TransformComponent>();
+
 	shader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/default.shader")));
 	shader->SetUniforms(GetShaderUniforms());
 	diff = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/white.png")));
@@ -72,6 +74,8 @@ MaterialComponent::MaterialComponent(MaterialComponent* mat)
 	checker = mat->checker;
 	diff = mat->diff;
 	normalMap = mat->normalMap;
+
+	ownerTransform = owner->GetComponent<TransformComponent>();
 
 	shader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/default.shader")));
 
@@ -424,8 +428,10 @@ void MaterialComponent::Bind(CameraComponent* gameCam)
 	if (!this)
 		return;
 
-	float4x4 model = owner->GetComponent<TransformComponent>()->GetGlobalTransform();
+	float4x4 model = ownerTransform->GetGlobalTransform();
 	
+	AnimationComponent* anim = owner->GetComponent<AnimationComponent>();
+
 	if (owner->castShadows && app->renderer3D->genShadows)
 	{
 		glViewport(0, 0, 4096, 4096);
@@ -433,7 +439,7 @@ void MaterialComponent::Bind(CameraComponent* gameCam)
 		shadowShader->SetUniformMatrix4f("model", model.Transposed());
 		shadowShader->SetUniformMatrix4f("lightSpaceMatrix", app->renderer3D->dirLight->lightSpace.Transposed());
 
-		if (AnimationComponent* anim = owner->GetComponent<AnimationComponent>())
+		if (anim)
 		{
 			auto transforms = anim->GetFinalBoneMatrices();
 			for (int i = 0; i < transforms.size(); ++i)
@@ -521,7 +527,7 @@ void MaterialComponent::Bind(CameraComponent* gameCam)
 	shader->SetUniform1i("emissiveEnabled", emissiveEnabled);
 	shader->SetUniformVec3f("material.emissiveColor", emissiveColor);
 
-	if (AnimationComponent* anim = owner->GetComponent<AnimationComponent>())
+	if (anim)
 	{
 		auto transforms = anim->GetFinalBoneMatrices();
 		for (int i = 0; i < transforms.size(); ++i)

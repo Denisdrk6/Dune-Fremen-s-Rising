@@ -24,10 +24,11 @@ DropDownComponent::DropDownComponent(GameObject* own)
 	active = true;
 	DropDownText.setText("DropDown", 5, 5, 0.5, { 255,255,255 });
 	fontPath = "Library/Fonts/Montserrat-Bold.ttf";
-	if (!own->GetComponent<ComponentTransform2D>()) // If comes from Load not enter
+
+	transform = own->GetComponent<ComponentTransform2D>();
+	if (!transform) // If comes from Load not enter
 	{
-		
-		transform =(ComponentTransform2D*)own->CreateComponent(ComponentType::TRANFORM2D);
+		transform = (ComponentTransform2D*)own->CreateComponent(ComponentType::TRANFORM2D);
 		normalMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
 		focusedMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
 		pressedMaterial = (MaterialComponent*)own->CreateComponent(ComponentType::MATERIAL);
@@ -129,7 +130,8 @@ DropDownComponent::~DropDownComponent()
 {
 	RELEASE(planeToDraw);
 }
-std::string DropDownComponent::GetSelect() {
+std::string DropDownComponent::GetSelect() 
+{
 	ButtonComponent* aux = (ButtonComponent*)buttonsArray[selectedRaw]->GetComponent<ButtonComponent>();
 	return aux->GetButtonText().textt;
 }
@@ -166,7 +168,6 @@ bool DropDownComponent::Update(float dt)
 			SetFocusedButtons();
 			for (int a = 0; a < buttonsArray.size(); a++)
 			{
-
 				ButtonComponent* auxiliarButton = (ButtonComponent*)buttonsArray[a]->GetComponent<ButtonComponent>();
 				ComponentTransform2D* auxiliarTransform = (ComponentTransform2D*)buttonsArray[a]->GetComponent<ComponentTransform2D>();
 
@@ -412,8 +413,7 @@ void DropDownComponent::UpdateButtons(GameObject* auxiliar)
 }
 float2 DropDownComponent::GetParentPosition()
 {
-	ComponentTransform2D* transform2D = owner->GetComponent<ComponentTransform2D>();
-	float3 position = transform2D->GetPosition();
+	float3 position = transform->GetPosition();
 
 	return{ position.x / 2 ,position.y / 2 };
 }

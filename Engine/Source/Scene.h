@@ -80,6 +80,8 @@ public:
 
 	inline void ResetQuadtree() { resetQuadtree = true; }
 	
+	void RedistributeQuadtree(GameObject* go);
+	
 	// Please do not remove these two getters, if one gets removed and the other is used, some things won't work
 	// ====================================================
 	inline bool* GetDrawQuad() { return &drawQuad; }

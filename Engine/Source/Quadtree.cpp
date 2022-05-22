@@ -19,11 +19,13 @@ Quadtree::~Quadtree()
 
 void Quadtree::Create(AABB limits)
 {
+	RG_PROFILING_FUNCTION("Creating the quadtree");
 	root = new QuadtreeNode(limits);
 }
 
 void Quadtree::Clear()
 {
+	RG_PROFILING_FUNCTION("Clearing the quadtree");
 	RELEASE(root);
 }
 

@@ -226,7 +226,7 @@ void TransformComponent::SetAABB()
 
 	UpdateBoundingBox();
 
-	app->sceneManager->GetCurrentScene()->ResetQuadtree();
+	app->sceneManager->GetCurrentScene()->RedistributeQuadtree(owner);
 }
 
 void TransformComponent::UpdateBoundingBox()

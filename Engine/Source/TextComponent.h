@@ -11,7 +11,10 @@ class MyPlane;
 class GameObject;
 class Character;
 class Shadert;
+class ComponentTransform2D;
+class MaterialComponent;
 typedef unsigned int uint;
+
 class TextComponent : public Component
 {
 public:
@@ -51,4 +54,8 @@ private:
 	//char text[358] = "Text";
 	float fontScale = 0.5;
 	std::string fileText = "-";
+	
+	// Components to get at start
+	ComponentTransform2D* ownerTransform2DComponent;
+	MaterialComponent* ownerMaterialComponent;
 };

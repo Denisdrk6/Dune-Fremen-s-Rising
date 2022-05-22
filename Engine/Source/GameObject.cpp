@@ -259,7 +259,7 @@ void GameObject::DrawEditor()
 Component* GameObject::CreateComponent(ComponentType type, const char* name)
 {
 	Component* component = nullptr;
-	TransformComponent* transform = nullptr;
+	TransformComponent* transform = GetComponent<TransformComponent>();
 	
 	switch (type)
 	{
@@ -268,7 +268,7 @@ Component* GameObject::CreateComponent(ComponentType type, const char* name)
 		break;
 	case ComponentType::MESH_RENDERER:
 	{ // {} are necessary if you want declare variables into the case
-		component = new MeshComponent(this, GetComponent<TransformComponent>());
+		component = new MeshComponent(this, transform);
 
 		MeshComponent* meshComp = (MeshComponent*)component;
 		MaterialComponent* matComp = GetComponent<MaterialComponent>();
@@ -306,17 +306,17 @@ Component* GameObject::CreateComponent(ComponentType type, const char* name)
 		component = new TextComponent(this);
 		break;
 	case ComponentType::CAMERA:
-		component = new CameraComponent(this, GetComponent<TransformComponent>());
+		component = new CameraComponent(this, transform);
 		app->sceneManager->GetCurrentScene()->SetMainCamera((CameraComponent*)component);
 		break;
 	case ComponentType::AUDIO_SOURCE:
-		component = new AudioSourceComponent(this, GetComponent<TransformComponent>());
+		component = new AudioSourceComponent(this, transform);
 		break;
 	case ComponentType::AUDIO_LISTENER:
-		component = new ListenerComponent(this, GetComponent<TransformComponent>());
+		component = new ListenerComponent(this, transform);
 		break;
 	case ComponentType::AUDIO_REVERB_ZONE:
-		component = new AudioReverbZoneComponent(this, GetComponent<TransformComponent>());
+		component = new AudioReverbZoneComponent(this, transform);
 		break;
 	case ComponentType::INPUT_ACTION:
 		component = new InputActionComponent(this);
@@ -359,14 +359,12 @@ Component* GameObject::CreateComponent(ComponentType type, const char* name)
 	}		
 		break;
 	case ComponentType::LIGHT:
-		component = new ComponentLight();
+		component = new ComponentLight(this);
 		break;
 	case ComponentType::PARTICLE_SYSTEM:
-		transform = (TransformComponent*)GetComponent<TransformComponent>();
 		component = new ParticleSystemComponent(this, transform);
 		break;
 	case ComponentType::BILLBOARD:
-		transform = (TransformComponent*)GetComponent<TransformComponent>();
 		component = new BillboardParticleComponent(this, transform);
 		break;
 	case ComponentType::TRANFORM2D:
@@ -398,7 +396,7 @@ void GameObject::RemoveComponent(Component* component)
 			components.erase(it);
 			RELEASE(component);
 			if (GetComponent<MeshComponent>() == nullptr && GetComponent<ParticleSystemComponent>() == nullptr)
-				app->sceneManager->GetCurrentScene()->ResetQuadtree();
+				app->sceneManager->GetCurrentScene()->RedistributeQuadtree(this);
 			break;
 		}
 	}
@@ -490,9 +488,11 @@ void GameObject::SetNewAABB()
 		OBB newObb = children[i]->GetAABB().ToOBB();
 		globalAabb.Enclose(newObb);
 	}
-	if (GetComponent<MeshComponent>() && GetComponent<MeshComponent>()->GetMesh())
+
+	MeshComponent* mesh = GetComponent<MeshComponent>();
+	if (mesh && mesh->GetMesh())
 	{
-		OBB newObb = GetComponent<MeshComponent>()->GetLocalAABB().ToOBB();
+		OBB newObb = mesh->GetLocalAABB().ToOBB();
 		newObb.Transform(GetComponent<TransformComponent>()->GetGlobalTransform());
 		globalAabb.Enclose(newObb);
 	}
@@ -645,129 +645,186 @@ void GameObject::UpdateFromPrefab(JsonParsing& node, bool isParent)
 	for (int i = 0; i < size; ++i)
 	{
 		JsonParsing c = node.GetJsonArrayValue(jsonArray, i);
-		ComponentType comp = (ComponentType)(int)c.GetJsonNumber("Type");
+		ComponentType compType = (ComponentType)(int)c.GetJsonNumber("Type");
 
-		listComp.push_back(comp);
+		listComp.push_back(compType);
 
-		switch (comp)
+		switch (compType)
 		{
 		case ComponentType::TRANSFORM:
 			if (!isParent)
 			{
-				if (GetComponent<TransformComponent>() == nullptr)
+				TransformComponent* transform = GetComponent<TransformComponent>();
+				if (transform == nullptr)
 					CreateComponent(ComponentType::TRANSFORM);
 
-				GetComponent<TransformComponent>()->OnLoad(c);
+				transform->OnLoad(c);
 			}
 			break;
 		case ComponentType::MESH_RENDERER:
-			if (GetComponent<MeshComponent>() == nullptr)
+		{
+			MeshComponent* comp = GetComponent<MeshComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::MESH_RENDERER);
 
-			GetComponent<MeshComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::CAMERA:
-			if (GetComponent<CameraComponent>() == nullptr)
+		{
+			CameraComponent* comp = GetComponent<CameraComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::CAMERA);
 
-			GetComponent<CameraComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::AUDIO_SOURCE:
-			if (GetComponent<AudioSourceComponent>() == nullptr)
+		{
+			AudioSourceComponent* comp = GetComponent<AudioSourceComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::AUDIO_SOURCE);
 
-			GetComponent<AudioSourceComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::AUDIO_LISTENER:
-			if (GetComponent<ListenerComponent>() == nullptr)
+		{
+			ListenerComponent* comp = GetComponent<ListenerComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::AUDIO_LISTENER);
 
-			GetComponent<ListenerComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::AUDIO_REVERB_ZONE:
-			if (GetComponent<AudioReverbZoneComponent>() == nullptr)
+		{
+			AudioReverbZoneComponent* comp = GetComponent<AudioReverbZoneComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::AUDIO_REVERB_ZONE);
 
-			GetComponent<AudioReverbZoneComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::MATERIAL:
-			if (GetComponent<MaterialComponent>() == nullptr)
+		{
+			MaterialComponent* comp = GetComponent<MaterialComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::MATERIAL);
 
-			GetComponent<MaterialComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::LIGHT:
-			if (GetComponent<ComponentLight>() == nullptr)
+		{
+			ComponentLight* comp = GetComponent<ComponentLight>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::LIGHT);
 
-			GetComponent<ComponentLight>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::RIGID_BODY:
-			if (GetComponent<RigidBodyComponent>() == nullptr)
+		{
+			RigidBodyComponent* comp = GetComponent<RigidBodyComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::RIGID_BODY);
 
-			GetComponent<RigidBodyComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::SCRIPT:
-			if (GetComponent<ScriptComponent>() == nullptr)
+		{
+			ScriptComponent* comp = GetComponent<ScriptComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::SCRIPT, c.GetJsonString("ScriptName"));
 
-			GetComponent<ScriptComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::ANIMATION:
-			if (GetComponent<AnimationComponent>() == nullptr)
+		{
+			AnimationComponent* comp = GetComponent<AnimationComponent>();
+			if (comp == nullptr)
+			{
 				CreateComponent(ComponentType::ANIMATION);
+			}
 
-			GetComponent<AnimationComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::INPUT_ACTION:
-			if (GetComponent<InputActionComponent>() == nullptr)
+		{
+			InputActionComponent* comp = GetComponent<InputActionComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::INPUT_ACTION);
 
-			GetComponent<InputActionComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::BILLBOARD:
-			if (GetComponent<BillboardParticleComponent>() == nullptr)
+		{
+			BillboardParticleComponent* comp = GetComponent<BillboardParticleComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::BILLBOARD);
 
-			GetComponent<BillboardParticleComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::PARTICLE_SYSTEM:
-			if (GetComponent<ParticleSystemComponent>() == nullptr)
+		{
+			ParticleSystemComponent* comp = GetComponent<ParticleSystemComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::ANIMATION);
 
-			GetComponent<ParticleSystemComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::UI_BUTTON:
-			if (GetComponent<ButtonComponent>() == nullptr)
+		{
+			ButtonComponent* comp = GetComponent<ButtonComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::UI_BUTTON);
 
-			GetComponent<ButtonComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::UI_CHECKBOX:
-			if (GetComponent<CheckboxComponent>() == nullptr)
+		{
+			CheckboxComponent* comp = GetComponent<CheckboxComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::UI_CHECKBOX);
 
-			GetComponent<CheckboxComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::UI_IMAGE:
-			if (GetComponent<ImageComponent>() == nullptr)
+		{
+			ImageComponent* comp = GetComponent<ImageComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::UI_BUTTON);
 
-			GetComponent<ImageComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::UI_SLIDER:
-			if (GetComponent<SliderComponent>() == nullptr)
+		{
+			SliderComponent* comp = GetComponent<SliderComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::UI_BUTTON);
 
-			GetComponent<SliderComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		case ComponentType::UI_TEXT:
-			if (GetComponent<TextComponent>() == nullptr)
+		{
+			TextComponent* comp = GetComponent<TextComponent>();
+			if (comp == nullptr)
 				CreateComponent(ComponentType::UI_TEXT);
 
-			GetComponent<TextComponent>()->OnLoad(c);
-			break;
+			comp->OnLoad(c);
+		}
+		break;
 		}
 	}
 

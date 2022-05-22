@@ -20,6 +20,7 @@
 SliderComponent::SliderComponent(GameObject* own)
 {
 	type = ComponentType::UI_SLIDER;
+	owner = own;
 	own->isUI = true;
 	sliderText.setText("Slider", 5, 5, 0.5, { 255,255,255 });
 
@@ -49,6 +50,13 @@ SliderComponent::SliderComponent(GameObject* own)
 	frontPlaneToDraw = new MyPlane(float3{ 0,0,0 }, float3{ 1,1,1 });
 	frontPlaneToDraw->own = own;
 	app->userInterface->OrderButtons();
+
+	// Get components
+	if (owner)
+	{
+		ownerTransform2DComponent = owner->GetComponent<ComponentTransform2D>();
+		ownerMaterialComponent = owner->GetComponent<MaterialComponent>();
+	}
 }
 
 SliderComponent::~SliderComponent()
@@ -95,9 +103,8 @@ bool SliderComponent::Update(float dt)
 		float2 mousePos = { (float)app->input->GetMouseX() ,(float)app->input->GetMouseY() };
 		float2 fMousePos = { mPos.x - viewport.x , mPos.y - viewport.y };
 
-		ComponentTransform2D* transform2D = owner->GetComponent<ComponentTransform2D>();
-		float posXMin = ((viewport.z / 2) + (transform2D->GetPosition().x)) - (transform2D->GetButtonWidth() / 2);
-		float posXMax = ((viewport.z / 2) + (transform2D->GetPosition().x)) + (transform2D->GetButtonWidth() / 2);
+		float posXMin = ((viewport.z / 2) + (ownerTransform2DComponent->GetPosition().x)) - (ownerTransform2DComponent->GetButtonWidth() / 2);
+		float posXMax = ((viewport.z / 2) + (ownerTransform2DComponent->GetPosition().x)) + (ownerTransform2DComponent->GetButtonWidth() / 2);
 		float total = posXMax - posXMin;
 		float thePos = total * barProgres;
 
@@ -157,7 +164,7 @@ void SliderComponent::Draw(CameraComponent* gameCam)
 	
 
 	firstDraw = false;
-	planeToDraw->DrawPlane2D(owner->GetComponent<MaterialComponent>()->GetTexture().get());
+	planeToDraw->DrawPlane2D(ownerMaterialComponent->GetTexture().get());
 	firstDraw = true;
 
 	frontPlaneToDraw->DrawPlane2D(secondMaterial->GetTexture().get());
@@ -203,8 +210,7 @@ void SliderComponent::OnEditor()
 
 float2 SliderComponent::GetParentPosition()
 {
-	ComponentTransform2D* transform2D = owner->GetComponent<ComponentTransform2D>();
-	float3 position = transform2D->GetPosition();
+	float3 position = ownerTransform2DComponent->GetPosition();
 	return { position.x - (strlen(text) * 12 * sliderText.Scale), position.y - 5 };
 }
 

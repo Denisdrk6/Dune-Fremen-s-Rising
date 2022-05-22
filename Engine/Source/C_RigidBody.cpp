@@ -19,6 +19,8 @@ RigidBodyComponent::RigidBodyComponent(GameObject* obj, CollisionType type, floa
 {
 	owner = obj;
 	this->type = ComponentType::RIGID_BODY;
+	ownerTransform = owner->GetComponent<TransformComponent>();
+
 	SetCollisionType(type);
 }
 
@@ -56,7 +58,7 @@ void RigidBodyComponent::SetBoundingBox()
 
 	if (owner->GetComponent<MeshComponent>() == nullptr)
 	{
-		pos = owner->GetComponent<TransformComponent>()->GetGlobalTransform().Col3(3);
+		pos = ownerTransform->GetGlobalTransform().Col3(3);
 		radius = { 1,1,1 };
 		size = { 1,1,1 };
 	}
@@ -71,35 +73,35 @@ void RigidBodyComponent::SetBoundingBox()
 	switch (collisionType)
 	{
 	case CollisionType::BOX:
-		box.FromRS(owner->GetComponent<TransformComponent>()->GetRotation(), {1,1,1});
+		box.FromRS(ownerTransform->GetRotation(), {1,1,1});
 		box.SetPos(pos);
 		box.size = size;
 		break;
 	case CollisionType::SPHERE:
-		sphere.FromRS(owner->GetComponent<TransformComponent>()->GetRotation(), { 1,1,1 });
+		sphere.FromRS(ownerTransform->GetRotation(), { 1,1,1 });
 		sphere.SetPos(pos);
 		sphere.radius = radius.MaxElement();
 		break;
 	case CollisionType::CAPSULE:
-		capsule.FromRS(owner->GetComponent<TransformComponent>()->GetRotation(), { 1,1,1 });
+		capsule.FromRS(ownerTransform->GetRotation(), { 1,1,1 });
 		capsule.SetPos(pos);
 		capsule.radius = radius.MaxElementXZ();
 		capsule.height = size.y;
 		break;
 	case CollisionType::CYLINDER:
-		cylinder.FromRS(owner->GetComponent<TransformComponent>()->GetRotation(), { 1,1,1 });
+		cylinder.FromRS(ownerTransform->GetRotation(), { 1,1,1 });
 		cylinder.SetPos(pos);
 		cylinder.radius = radius.MinElement();
 		cylinder.height = size.z;
 		break;
 	case CollisionType::CONE:
-		cone.FromRS(owner->GetComponent<TransformComponent>()->GetRotation(), { 1,1,1 });
+		cone.FromRS(ownerTransform->GetRotation(), { 1,1,1 });
 		cone.SetPos(pos);
 		cone.radius = radius.MaxElementXZ();
 		cone.height = size.y;
 		break;
 	case CollisionType::STATIC_PLANE:
-		plane.FromRS(owner->GetComponent<TransformComponent>()->GetRotation(), { 1,1,1 });
+		plane.FromRS(ownerTransform->GetRotation(), { 1,1,1 });
 		plane.SetPos(pos);
 		break;
 	default:
@@ -114,19 +116,18 @@ bool RigidBodyComponent::Update(float dt)
 
 	if (app->sceneManager->GetGameState() == GameState::PLAYING)
 	{
-		TransformComponent* trans = owner->GetComponent<TransformComponent>();
 		if (trigger)
 		{
 			btTransform t;
-			t.setBasis(float3x3::FromQuat(trans->GetRotation()));
-			t.setOrigin(trans->GetGlobalTransform().Col3(3) + owner->GetOffsetCM());
+			t.setBasis(float3x3::FromQuat(ownerTransform->GetRotation()));
+			t.setOrigin(ownerTransform->GetGlobalTransform().Col3(3) + owner->GetOffsetCM());
 
 			body->setWorldTransform(t);
 		}
 		else if (collisionType != CollisionType::MESH && (body->getActivationState() == ACTIVE_TAG || body->getActivationState() == WANTS_DEACTIVATION || body->getActivationState() == DISABLE_DEACTIVATION))
 		{
-			float4x4 CM2 = float4x4::FromTRS(body->getCenterOfMassPosition() - owner->GetOffsetCM(), body->getWorldTransform().getRotation(), trans->GetScale());
-			trans->SetTransform(CM2);
+			float4x4 CM2 = float4x4::FromTRS(body->getCenterOfMassPosition() - owner->GetOffsetCM(), body->getWorldTransform().getRotation(), ownerTransform->GetScale());
+			ownerTransform->SetTransform(CM2);
 		}
 	}
 
@@ -139,10 +140,10 @@ void RigidBodyComponent::UpdateCollision()
 	if (app->sceneManager->GetGameState() != GameState::PLAYING)
 	{
 		btTransform t;
-		t.setBasis(float3x3::FromQuat(owner->GetComponent<TransformComponent>()->GetRotation()));
+		t.setBasis(float3x3::FromQuat(ownerTransform->GetRotation()));
 		if (collisionType == CollisionType::MESH)
-			t.setOrigin(owner->GetComponent<TransformComponent>()->GetGlobalTransform().Col3(3));
-		else t.setOrigin(owner->GetComponent<TransformComponent>()->GetGlobalTransform().Col3(3) + owner->GetOffsetCM());
+			t.setOrigin(ownerTransform->GetGlobalTransform().Col3(3));
+		else t.setOrigin(ownerTransform->GetGlobalTransform().Col3(3) + owner->GetOffsetCM());
 		
 		body->setWorldTransform(t);
 	}

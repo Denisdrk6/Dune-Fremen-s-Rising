@@ -49,6 +49,10 @@ public class UndistractableEnemy : RagnarComponent
     float distractedTimer = -1f;
     float stunnedTimer = -1f;
 
+    Animation animation;
+    Rigidbody rigidbody;
+    AudioSource audioSource;
+
     GameObject[] childs;
     ParticleSystem stunPartSys;
     public void Start()
@@ -58,11 +62,14 @@ public class UndistractableEnemy : RagnarComponent
         offset = gameObject.GetSizeAABB();
 
         agents = gameObject.GetComponent<NavAgent>();
+        animation = gameObject.GetComponent<Animation>();
 
+        rigidbody = gameObject.GetComponent<Rigidbody>();
+        audioSource = gameObject.GetComponent<AudioSource>();
 
         if (state != EnemyState.DEATH)
         {
-            gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+            animation.PlayAnimation("Idle");
             if (waypoints.Count != 0)
             {
                 GotoNextPoint();
@@ -112,7 +119,7 @@ public class UndistractableEnemy : RagnarComponent
                             agents.CalculatePath(initialPos);
                             if (agents.MovePath())
                             {
-                                gameObject.GetComponent<Rigidbody>().SetBodyRotation(initialRot);
+                                rigidbody.SetBodyRotation(initialRot);
                                 returning = false;
                             }
                         }
@@ -137,7 +144,7 @@ public class UndistractableEnemy : RagnarComponent
                     deathTimer -= Time.deltaTime;
                     if (deathTimer < 0)
                     {
-                        gameObject.GetComponent<AudioSource>().PlayClip("EMALE_DEATH3");
+                        audioSource.PlayClip("EMALE_DEATH3");
                         deathTimer = -1f;
                         pendingToDelete = true;
                     }
@@ -227,7 +234,7 @@ public class UndistractableEnemy : RagnarComponent
                             break;
                         }
                     }
-                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                    animation.PlayAnimation("Dying");
                 }
 
                 // WHEN RUNES FUNCTIONAL
@@ -246,7 +253,7 @@ public class UndistractableEnemy : RagnarComponent
                             break;
                         }
                     }
-                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                    animation.PlayAnimation("Dying");
                 }
             }
             if (other.gameObject.name == "HunterSeeker")
@@ -254,7 +261,7 @@ public class UndistractableEnemy : RagnarComponent
                 if (deathTimer == -1f)
                 {
                     deathTimer = 5f;
-                    gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                    animation.PlayAnimation("Dying");
                 }
 
                 // WHEN RUNES FUNCTIONAL
@@ -288,7 +295,7 @@ public class UndistractableEnemy : RagnarComponent
                         break;
                     }
                 }
-                gameObject.GetComponent<Animation>().PlayAnimation("Dying");
+                animation.PlayAnimation("Dying");
             }
             if (other.gameObject.name == "Whistle")
             {
@@ -328,13 +335,14 @@ public class UndistractableEnemy : RagnarComponent
         if (canShoot)
         {
             //TODO_AUDIO
-            gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SHOTGUN");
+            audioSource.PlayClip("EBASIC_SHOTGUN");
             canShoot = false;
             shootCooldown = 4f;
             InternalCalls.InstancePrefab("EnemyBullet", true);
-            GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().enemy = gameObject;
-            GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().index = index;
-            GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>().offset = offset;
+            EnemyBullet bulletScript = GameObject.Find("EnemyBullet").GetComponent<EnemyBullet>();
+            bulletScript.enemy = gameObject;
+            bulletScript.index = index;
+            bulletScript.offset = offset;
         }
 
         if (!canShoot)
@@ -363,8 +371,8 @@ public class UndistractableEnemy : RagnarComponent
 
     public void GotoNextPoint()
     {
-        gameObject.GetComponent<AudioSource>().PlayClip("FOOTSTEPS");
-        gameObject.GetComponent<Animation>().PlayAnimation("Walk");
+        audioSource.PlayClip("FOOTSTEPS");
+        animation.PlayAnimation("Walk");
         agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
         destPoint = (destPoint + 1) % waypoints.Count;
     }
@@ -380,7 +388,7 @@ public class UndistractableEnemy : RagnarComponent
         {
             if (stoppedTime >= 0)
             {
-                gameObject.GetComponent<AudioSource>().StopCurrentClip("ETANK_WALKSAND");
+                audioSource.StopCurrentClip("ETANK_WALKSAND");
                 stoppedTime -= Time.deltaTime;
                 if (stoppedTime < 0)
                 {
@@ -409,15 +417,15 @@ public class UndistractableEnemy : RagnarComponent
 
         Quaternion newRot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
 
-        gameObject.GetComponent<Rigidbody>().SetBodyRotation(newRot);
+        rigidbody.SetBodyRotation(newRot);
 
-        gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+        animation.PlayAnimation("Idle");
     }
 
     public void Stun(float timeStunned)
     {
         stunned = true;
         stunnedTimer = timeStunned;
-        gameObject.GetComponent<Animation>().PlayAnimation("Idle");
+        animation.PlayAnimation("Idle");
     }
 }

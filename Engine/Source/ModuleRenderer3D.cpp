@@ -802,8 +802,11 @@ void ModuleRenderer3D::DebugDraw(GameObject* objSelected)
 	{
 		app->navMesh->GetNavMeshBuilder()->DebugDraw();
 
-		if (objSelected && objSelected->GetComponent<NavAgentComponent>() != nullptr)
-			app->navMesh->GetPathfinding()->RenderPath(objSelected->GetComponent<NavAgentComponent>());
+		if (objSelected)
+		{
+			NavAgentComponent* navMesh = navMesh = objSelected->GetComponent<NavAgentComponent>();
+			if (navMesh) app->navMesh->GetPathfinding()->RenderPath(navMesh);
+		}
 	}
 
 	if (app->physics->GetDebugMode())

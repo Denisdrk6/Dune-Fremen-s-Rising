@@ -59,6 +59,12 @@ public class QuestSystem : RagnarComponent
 	public GameObject activeButton;
 	public GameObject completedButton;
 
+	public GameObject questBc;
+	public GameObject questBord;
+
+	Transform2D questBcT;
+	Transform2D questBordT;
+
 	public bool showJournal;
 	public bool showActive;
 	public bool showCompleted;
@@ -68,7 +74,28 @@ public class QuestSystem : RagnarComponent
 
 	private string activeQuests;
 	private string completedQuests;
+
+
+	// Easing
+	float actualDt = 0;
+	bool isPlayng = false;
+	double EasingFunction(float x)
+    {
+		float c1 = 1.70158f;
+		float c2 = c1 * 1.525f;
+		if(x < 0.5)
+        {
+			return (Math.Pow(2 * x, 2) * ((c2 + 1) * 2 * x - c2)) / 2;
+
+        }
+        else
+        {
+			return (Math.Pow(2 * x - 2, 2) * ((c2 + 1) * (x * 2 - 2) + c2) + 2) / 2;
+		}
+				
+	}
 	// Methods
+
 	public void CreateQuest(uint _id, string _name, string _description, QuestState _state, QuestType _type)
     {
 		Quest newQuest;
@@ -134,11 +161,29 @@ public class QuestSystem : RagnarComponent
 
 		activeButton = GameObject.Find("Boton Activas");
 		completedButton = GameObject.Find("Boton Completadas");
+		completedButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+		activeButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+		questBc = GameObject.Find("questBc");
+		questBord = GameObject.Find("questBord");
+		
+		questBordT= questBord.GetComponent<Transform2D>();
+		questBcT = questBc.GetComponent<Transform2D>();
 
 		showJournal = false;
 		showActive = true;
 		showCompleted = false;
 		position = new Vector3(0.0f, 0.0f, 0.0f);
+
+		activeButton.isActive = false;
+		completedButton.isActive = false;
+		activeQuestNames.isActive = false;
+		completedQuestNames.isActive = false;
+		questDescription.isActive = false;
+		questId.isActive = false;
+		questState.isActive = false;
+		questType.isActive = false;
+		questBc.isActive = false;
+		questBord.isActive = false;
 
 		CreateQuest(0, "Elimina a los 3 capitanes", "Elimina a los 3 capitanes", QuestState.ACTIVE, QuestType.MAIN);
 		CreateQuest(1, "Sal de la cantera/cañon", "Sal de la cantera/cañon", QuestState.ACTIVE, QuestType.MAIN);
@@ -152,11 +197,51 @@ public class QuestSystem : RagnarComponent
 	}
 	public void Update()
 	{
-		if (Input.GetKey(KeyCode.J) == KeyState.KEY_DOWN) showJournal = !showJournal;
+		float xCorner = (InternalCalls.GetRegionGame().x / 2);
+		float yCorner = (InternalCalls.GetRegionGame().y / 2);
+
+		if (Input.GetKey(KeyCode.J) == KeyState.KEY_DOWN){
+			showJournal = !showJournal;
+			isPlayng = true;
+		}
 		if (showJournal)
         {
+            if (isPlayng) {
+				if (actualDt >= 1)
+				{
+					isPlayng = false;
+					actualDt = 0;
+				}
+				else
+				{
+					actualDt += Time.deltaTime;
+
+					float actualvalue = (float)EasingFunction(actualDt);
+
+
+					position.Set((xCorner - 400) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 280, 0);
+
+					questBcT.position2D = position;
+					questBordT.position2D = position;
+
+					position.Set((xCorner - 579.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
+					activeButton.GetComponent<Transform2D>().position2D = position;
+
+					position.Set((xCorner - 220.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
+					completedButton.GetComponent<Transform2D>().position2D = position;
+
+					position.Set((xCorner - 700) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 150, 1000000.0f);
+					activeQuestNames.GetComponent<Transform2D>().position2D = position;
+
+					completedQuestNames.GetComponent<Transform2D>().position2D = position;
+				}
+
+			}
+
 			activeButton.isActive = true;
 			completedButton.isActive = true;
+			questBc.isActive = true;
+			questBord.isActive = true;
 			if (showActive)
             {
 				activeQuestNames.isActive = true;
@@ -178,14 +263,50 @@ public class QuestSystem : RagnarComponent
         }
         else
         {
-			activeButton.isActive = false;
-			completedButton.isActive = false;
-			activeQuestNames.isActive = false;
-			completedQuestNames.isActive = false;
-			questDescription.isActive = false;
-			questId.isActive = false;
-			questState.isActive = false;
-			questType.isActive = false;
+			if (isPlayng)
+			{
+				if (actualDt >= 1)
+				{
+					isPlayng = false;
+					actualDt = 0;
+
+					activeButton.isActive = false;
+					completedButton.isActive = false;
+					activeQuestNames.isActive = false;
+					completedQuestNames.isActive = false;
+					questDescription.isActive = false;
+					questId.isActive = false;
+					questState.isActive = false;
+					questType.isActive = false;
+					questBc.isActive = false;
+					questBord.isActive = false;
+				}
+				else
+				{
+					actualDt += Time.deltaTime;
+
+					float actualvalue = (float)EasingFunction(actualDt);
+
+
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 400)), yCorner - 280, 0);
+
+					questBcT.position2D = position;
+					questBordT.position2D = position;
+
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 579.5f)), yCorner - 70.5f, 1000000.0f);
+					activeButton.GetComponent<Transform2D>().position2D = position;
+
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 220.5f)), yCorner - 70.5f, 1000000.0f);
+					completedButton.GetComponent<Transform2D>().position2D = position;
+
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 700)), yCorner - 150, 1000000.0f);
+					activeQuestNames.GetComponent<Transform2D>().position2D = position;
+
+					completedQuestNames.GetComponent<Transform2D>().position2D = position;
+				}
+
+			}
+			
 		}
 
 		activeQuests = "";
@@ -215,36 +336,33 @@ public class QuestSystem : RagnarComponent
 			completedQuests = "No completed quests available";
         }
 
-		float xCorner = (InternalCalls.GetRegionGame().x / 2);
-		float yCorner = (InternalCalls.GetRegionGame().y / 2);
+		
 
-		position.Set(180, 30, 0);
+		
+
+		position.Set(365.5f, 69.5f, 0);
 		activeButton.GetComponent<Transform2D>().SetSize(position);
-		activeButton.GetComponent<UIButton>().SetTextPosition(-45,-5);
-		activeButton.GetComponent<UIButton>().SetButtonGeneralColor(0, 0, 255);
-		activeButton.GetComponent<UIButton>().text = "Active Quests";
-		position.Set(xCorner - 600, yCorner - 30, 1000000.0f);
-		activeButton.GetComponent<Transform2D>().position2D = position;
+		UIButton activeButtonUI = activeButton.GetComponent<UIButton>();
+		activeButtonUI.SetTextPosition(-45,-5);
+		activeButtonUI.text = "Active Quests";
+		
 
-		position.Set(250, 30, 0);
+		position.Set(365.5f, 69.5f, 0);
 		completedButton.GetComponent<Transform2D>().SetSize(position);
-		completedButton.GetComponent<UIButton>().SetTextPosition(-55, -5);
-		completedButton.GetComponent<UIButton>().SetButtonGeneralColor(255,0,0);
-		completedButton.GetComponent<UIButton>().text = "Completed Quests";
-		position.Set(xCorner - 200, yCorner - 30, 1000000.0f);
-		completedButton.GetComponent<Transform2D>().position2D = position;
+		UIButton completedButtonUI = completedButton.GetComponent<UIButton>();
+		completedButtonUI.SetTextPosition(-55, -5);
+		completedButtonUI.text = "Completed Quests";
+		
 
 		activeQuestNames.GetComponent<UIText>().text = activeQuests;
-		position.Set(xCorner - 550, yCorner - 80, 1000000.0f);
-		activeQuestNames.GetComponent<Transform2D>().position2D = position;
+		
 		if (activeQuests == "No active quests available")
 			activeQuestNames.GetComponent<UIText>().SetTextTextColor(255, 0, 0);
 		else
 			activeQuestNames.GetComponent<UIText>().SetTextTextColor(255, 255, 255);
 
 		completedQuestNames.GetComponent<UIText>().text = completedQuests;
-		position.Set(xCorner - 550, yCorner - 80, 1000000.0f);
-		completedQuestNames.GetComponent<Transform2D>().position2D = position;
+		
 		if (completedQuests == "No completed quests available")
 			completedQuestNames.GetComponent<UIText>().SetTextTextColor(255, 0, 0);
 		else
@@ -255,18 +373,25 @@ public class QuestSystem : RagnarComponent
 		{
 			case 3:
 				// pressed mode
+				completedButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+				activeButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
 				showActive = true;
 				showCompleted = false;
+				
 				break;
 		}
 
 		int b = completedButton.GetComponent<UIButton>().GetButtonState();
 		switch (b)
 		{
+
 			case 3:
 				// pressed mode
+				activeButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+				completedButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
 				showActive = false;
 				showCompleted = true;
+				
 				break;
 		}
 

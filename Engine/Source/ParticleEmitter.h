@@ -13,6 +13,7 @@ class Shader;
 class VertexArray;
 class VertexBuffer;
 class IndexBuffer;
+class TransformComponents;
 
 struct ParticleVertex
 {
@@ -128,4 +129,7 @@ private:
 
 	float iterTileX = 0;
 	float iterTileY = 0;
+
+	// Owner components
+	TransformComponent* ownerTransformComponent;
 };
