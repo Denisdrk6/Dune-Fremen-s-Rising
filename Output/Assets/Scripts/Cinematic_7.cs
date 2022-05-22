@@ -26,9 +26,9 @@ public class Cinematic_7 : RagnarComponent
         GameObject characterChani = GameObject.Find("char_chani");
         GameObject characterStilgar = GameObject.Find("char_stilgar");
 
-        characterPaul.GetComponent<Animation>().PlayAnimation("Talk");
-        characterChani.GetComponent<Animation>().PlayAnimation("Talk");
-        characterStilgar.GetComponent<Animation>().PlayAnimation("Talk");
+        characterPaul.GetComponent<Animation>().PlayAnimation("Idle");
+        characterChani.GetComponent<Animation>().PlayAnimation("Idle");
+        characterStilgar.GetComponent<Animation>().PlayAnimation("Idle");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
@@ -41,7 +41,7 @@ public class Cinematic_7 : RagnarComponent
         if (!first)
         {
 
-            dialogues.SetIDDialogue(IdDialogue, "build");
+            dialogues.SetIDDialogue(IdDialogue, "build3");
 
             first = true;
         }
