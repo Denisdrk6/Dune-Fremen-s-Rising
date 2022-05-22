@@ -23,6 +23,7 @@ public class CinematicManager : RagnarComponent
 	
     int state;
     String nextScene;
+    String lenguage;
 	public void Start()
 	{
         indexLine = 0;
@@ -98,12 +99,26 @@ public class CinematicManager : RagnarComponent
     void UpdateDialogue()
     {
         //Text
-        Debug.Log(text.GetComponent<UIText>().text);
         text.GetComponent<UIText>().text = Dialogue.GetDialogueLine().ToString();
+        Debug.Log(text.GetComponent<UIText>().text);
 
-        //Voice
-        String voicePath = "VOICE_" + IdDialogue.ToString() + indexLine.ToString();
+        //Voice  
+        // SP=0 / ING=1
+        switch (Dialogue.GetDialogueLenguage())
+        {
+            case 0:
+                lenguage = "SP";
+                break;
+            case 1:
+                lenguage = "ING";
+                break;
+            default:
+                break;
+        }
+
+        String voicePath = "VOICE_" + lenguage + "_" + IdDialogue.ToString() + indexLine.ToString();
         Debug.Log(voicePath);
+
 
         //SceneAudio.GetComponent<AudioSource>().PlayClip(voicePath);
 

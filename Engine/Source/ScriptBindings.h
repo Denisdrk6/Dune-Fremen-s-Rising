@@ -817,6 +817,9 @@ void StartDialogueById(int id)
 	sys->StartDialogueXML();
 }
 
+int GetDialogueLenguage() {
+	return app->sceneManager->GetLenguage();
+}
 
 void LoadDialogueFile(MonoString* name)
 {

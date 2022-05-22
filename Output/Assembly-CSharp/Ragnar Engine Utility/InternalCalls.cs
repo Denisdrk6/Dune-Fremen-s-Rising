@@ -111,6 +111,12 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern int GetDialogueLineAuthorId();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern int GetDialogueLenguage();
+
+
+
     }
 
         [StructLayout(LayoutKind.Sequential)]
