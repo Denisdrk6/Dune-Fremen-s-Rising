@@ -16,7 +16,7 @@
         {
             "UUID": 53078851,
             "Parent UUID": 417171234,
-            "Name": "LevelManager",
+            "Name": "Cinematic1",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -53,12 +53,11 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 45905000,
+                    "pointer": 585485136,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
                     "bands": 0,
-                    "characters": 0,
                     "IdDialogue": 0
                 }
             ]
@@ -5564,7 +5563,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 428626792,
+                    "pointer": 606898312,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -5638,6 +5637,25 @@
                     "TextFile": "-"
                 }
             ]
+        }
+    ],
+    "NavMesh": [
+        {
+            "cellSize": 0.30000001192092896,
+            "cellHeight": 0.20000000298023224,
+            "agentHeight": 2,
+            "agentRadius": 0.5,
+            "agentMaxClimb": 0,
+            "agentMaxSlope": 0.10000000149011612,
+            "regionMinSize": 8,
+            "regionMergeSize": 20,
+            "edgeMaxLen": 12,
+            "edgeMaxError": 1.2999999523162842,
+            "vertsPerPoly": 6,
+            "detailSampleDist": 6,
+            "detailSampleMaxError": 1,
+            "partitionType": 0,
+            "tileSize": 32
         }
     ]
 }

@@ -130,6 +130,7 @@
 		<Compile Include="Assets\Scripts\Cinematic_3.cs" />
 		<Compile Include="Assets\Scripts\Cinematic_7.cs" />
 		<Compile Include="Assets\Scripts\Cinematic_2.cs" />
+		<Compile Include="Assets\Scripts\Cinematic_5.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="Assembly-CSharp\App.config" />

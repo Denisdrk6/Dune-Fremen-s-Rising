@@ -16,7 +16,7 @@
         {
             "UUID": 53078851,
             "Parent UUID": 417171234,
-            "Name": "LevelManager",
+            "Name": "Cinematic4",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -52,13 +52,13 @@
                 },
                 {
                     "Type": 4,
-                    "ScriptName": "Level_2",
-                    "pointer": 568992808,
+                    "ScriptName": "Cinematic_4",
+                    "pointer": 564035416,
                     "type": 4,
                     "componentTable": 0,
-                    "characters": 0,
-                    "enemies": 0,
-                    "runGame": true
+                    "runGame": true,
+                    "bands": 0,
+                    "IdDialogue": 0
                 }
             ]
         },
@@ -144,19 +144,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -67.269996643066406,
+                        -64.365577697753906,
                         -18.600000381469727,
-                        -214.94000244140625
+                        -214.18890380859375
                     ],
                     "Quaternion": [
-                        0.19082319736480713,
-                        0.26192095875740051,
-                        0.054717730730772018,
-                        -0.94445538520812988
+                        0,
+                        0.12618988752365112,
+                        0,
+                        -0.99200612306594849
                     ],
                     "RotationEditor": [
-                        -0.39968037605285645,
-                        -0.54105204343795776,
+                        -0,
+                        -0.25305444002151489,
                         -0
                     ],
                     "Scale": [
@@ -207,12 +207,12 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155.5,
-                    "Vertical Fov": 0.40903055667877197,
+                    "Vertical Fov": 0.42143398523330688,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -32.393753051757812,
-                        12.609088897705078,
-                        -272.68759155273438
+                        -51.847137451171875,
+                        36.400001525878906,
+                        -262.5977783203125
                     ],
                     "Type": 3,
                     "Zoom": -20,
@@ -222,14 +222,14 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -67.269996643066406,
+                        -64.365577697753906,
                         -18.600000381469727,
-                        -214.94000244140625
+                        -214.18890380859375
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 335.90118408203125,
+                    "Horizontal Angle": 345.50103759765625,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -7204,7 +7204,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 568992088,
+                    "pointer": 564036632,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -7243,7 +7243,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7312,7 +7312,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 148.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7376,7 +7376,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 130,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },

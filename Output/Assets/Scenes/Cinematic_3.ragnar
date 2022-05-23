@@ -16,7 +16,7 @@
         {
             "UUID": 53078851,
             "Parent UUID": 417171234,
-            "Name": "LevelManager",
+            "Name": "Cinematic3",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_3",
-                    "pointer": 412269160,
+                    "pointer": 564031464,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -144,19 +144,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        30.750003814697266,
+                        32.253547668457031,
                         0,
-                        -38.506996154785156
+                        -41.103019714355469
                     ],
                     "Quaternion": [
                         0,
-                        0.40611365437507629,
+                        0.49940931797027588,
                         0,
-                        0.91382259130477905
+                        0.86636614799499512
                     ],
                     "RotationEditor": [
                         -0,
-                        0.83639436960220337,
+                        1.0458337068557739,
                         -0
                     ],
                     "Scale": [
@@ -210,9 +210,9 @@
                     "Vertical Fov": 0.42143398523330688,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -6.3625526428222656,
+                        -11.014720916748047,
                         55,
-                        -72.015045166015625
+                        -66.162712097167969
                     ],
                     "Type": 3,
                     "Zoom": -20,
@@ -222,14 +222,14 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        30.750003814697266,
+                        32.253547668457031,
                         0,
-                        -38.506996154785156
+                        -41.103019714355469
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 47.921867370605469,
+                    "Horizontal Angle": 59.921855926513672,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -8825,7 +8825,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 412263256,
+                    "pointer": 564030856,
                     "type": 4,
                     "componentTable": 0
                 }

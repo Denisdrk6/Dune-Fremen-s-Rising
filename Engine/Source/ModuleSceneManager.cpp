@@ -61,7 +61,7 @@ bool ModuleSceneManager::Start()
 	ResourceManager::GetInstance()->DeleteResource(currentScene->GetUID());
 	currentScene = nullptr;
 
-	currentScene = std::static_pointer_cast<Scene>(ResourceManager::GetInstance()->GetResource(std::string("Assets/Scenes/Cinematic_1.ragnar")));
+	currentScene = std::static_pointer_cast<Scene>(ResourceManager::GetInstance()->GetResource(std::string("Assets/Scenes/Cinematic_5.ragnar")));
 	currentScene->Load();
 
 	currentScene->Start();

@@ -16,7 +16,7 @@
         {
             "UUID": 53078851,
             "Parent UUID": 417171234,
-            "Name": "LevelManager",
+            "Name": "Cinematic7",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_7",
-                    "pointer": 622561024,
+                    "pointer": 564038304,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -144,19 +144,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -8,
+                        -11.46560001373291,
                         0,
-                        78.660003662109375
+                        77.227546691894531
                     ],
                     "Quaternion": [
                         0,
-                        0.95512896776199341,
+                        0.98085707426071167,
                         0,
-                        0.29619014263153076
+                        0.19472905993461609
                     ],
                     "RotationEditor": [
                         -3.1415927410125732,
-                        0.60140269994735718,
+                        0.39196240901947021,
                         -3.1415927410125732
                     ],
                     "Scale": [
@@ -207,12 +207,12 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.40903055667877197,
+                    "Vertical Fov": 0.42143398523330688,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -36.290721893310547,
+                        -30.566238403320312,
                         55,
-                        119.88821411132812
+                        123.43682098388672
                     ],
                     "Type": 3,
                     "Zoom": 26,
@@ -222,14 +222,14 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -8,
+                        -11.46560001373291,
                         0,
-                        78.660003662109375
+                        77.227546691894531
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 145.54216003417969,
+                    "Horizontal Angle": 157.54220581054688,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -10003,7 +10003,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 622561784,
+                    "pointer": 564038608,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -10042,7 +10042,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10111,7 +10111,7 @@
                     "buttonWidth": 2500,
                     "buttonHeight": 183,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10175,7 +10175,7 @@
                     "buttonWidth": 2500,
                     "buttonHeight": 183,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 672.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },

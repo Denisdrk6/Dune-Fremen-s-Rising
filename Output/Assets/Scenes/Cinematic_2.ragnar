@@ -16,7 +16,7 @@
         {
             "UUID": 53078851,
             "Parent UUID": 417171234,
-            "Name": "LevelManager",
+            "Name": "Cinematic2",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -52,13 +52,13 @@
                 },
                 {
                     "Type": 4,
-                    "ScriptName": "Level_1",
-                    "pointer": 441517640,
+                    "ScriptName": "Cinematic_2",
+                    "pointer": 564036632,
                     "type": 4,
                     "componentTable": 0,
-                    "characters": 0,
-                    "enemies": 0,
-                    "runGame": true
+                    "runGame": true,
+                    "bands": 0,
+                    "IdDialogue": 0
                 }
             ]
         },
@@ -144,19 +144,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        21.827882766723633,
+                        18.650373458862305,
                         0,
-                        -39.877197265625
+                        -41.868640899658203
                     ],
                     "Quaternion": [
                         0,
-                        0.93458694219589233,
+                        0.96107637882232666,
                         0,
-                        0.35573485493659973
+                        0.27628272771835327
                     ],
                     "RotationEditor": [
                         -3.1415927410125732,
-                        0.72740048170089722,
+                        0.55984824895858765,
                         -3.1415927410125732
                     ],
                     "Scale": [
@@ -183,15 +183,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -9.5367431640625e-07,
-                        74.238090515136719,
-                        -67.489295959472656
+                        0,
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
-                        2.3786213887433405e-08,
-                        -1.5857482438264014e-08,
-                        0.93969273567199707
+                        0.34202012419700623,
+                        0,
+                        0,
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -207,12 +207,12 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.40252074599266052,
+                    "Vertical Fov": 0.42143398523330688,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -23.048973083496094,
-                        74.238090515136719,
-                        10.532249450683594
+                        -7.9032039642333984,
+                        55,
+                        0.49924850463867188
                     ],
                     "Type": 3,
                     "Zoom": -20,
@@ -222,14 +222,14 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        21.827882766723633,
+                        18.650373458862305,
                         0,
-                        -39.877197265625
+                        -41.868640899658203
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 138.32302856445312,
+                    "Horizontal Angle": 147.92306518554688,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -8766,7 +8766,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 441521592,
+                    "pointer": 394915520,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -8805,7 +8805,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 661.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9302,7 +9302,7 @@
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 661.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9366,7 +9366,7 @@
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
                     "lastButtonWidth": 1343,
-                    "lastButtonHeight": 661.5,
+                    "lastButtonHeight": 693.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
