@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Level_1",
-                    "pointer": 375753824,
+                    "pointer": 441517640,
                     "type": 4,
                     "componentTable": 0,
                     "characters": 0,
@@ -144,19 +144,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        29.239999771118164,
+                        21.827882766723633,
                         0,
-                        -20.360000610351562
+                        -39.877197265625
                     ],
                     "Quaternion": [
                         0,
-                        0.94183731079101562,
+                        0.93458694219589233,
                         0,
-                        0.33606910705566406
+                        0.35573485493659973
                     ],
                     "RotationEditor": [
                         -3.1415927410125732,
-                        0.68548023700714111,
+                        0.72740048170089722,
                         -3.1415927410125732
                     ],
                     "Scale": [
@@ -183,14 +183,14 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0.00010633468627929688,
-                        63.879264831542969,
-                        -58.072010040283203
+                        -9.5367431640625e-07,
+                        74.238090515136719,
+                        -67.489295959472656
                     ],
                     "Quaternion": [
                         0.34202015399932861,
-                        -2.0014242352317524e-07,
-                        1.5064613023696438e-07,
+                        2.3786213887433405e-08,
+                        -1.5857482438264014e-08,
                         0.93969273567199707
                     ],
                     "RotationEditor": [
@@ -199,20 +199,20 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142105579376221,
-                        0.99999988079071045,
-                        1.0000003576278687
+                        1.4142104387283325,
+                        1.0000002384185791,
+                        1.0000005960464478
                     ]
                 },
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.43991589546203613,
+                    "Vertical Fov": 0.40252074599266052,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -7.5232372283935547,
-                        63.879264831542969,
-                        24.595531463623047
+                        -23.048973083496094,
+                        74.238090515136719,
+                        10.532249450683594
                     ],
                     "Type": 3,
                     "Zoom": -20,
@@ -222,92 +222,23 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        29.239999771118164,
+                        21.827882766723633,
                         0,
-                        -20.360000610351562
+                        -39.877197265625
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 140.72486877441406,
+                    "Horizontal Angle": 138.32302856445312,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
                     "Limits": [
-                        -80,
+                        -90,
                         -50,
                         60,
-                        100
+                        195
                     ]
-                }
-            ]
-        },
-        {
-            "UUID": 1651812048,
-            "Parent UUID": 417171234,
-            "Name": "CollisionMap",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -60.124015808105469,
-                        2.2085428237915039,
-                        110.69400024414062
-                    ],
-                    "Quaternion": [
-                        0,
-                        -0.21454648673534393,
-                        0,
-                        0.97671377658843994
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 0,
-                    "Size": [
-                        7.9000000953674316,
-                        3.2999999523162842,
-                        3.4000000953674316
-                    ],
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "fActivation": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
                 }
             ]
         },
@@ -715,7 +646,7 @@
             "Parent UUID": 223123506,
             "Name": "RockSmall1_low2",
             "Active": true,
-            "Static": false,
+            "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -726,25 +657,25 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -47.173110961914062,
+                        -46.27764892578125,
                         1.1693505048751831,
                         26.811119079589844
                     ],
                     "Quaternion": [
                         0,
-                        0.70710676908493042,
+                        0.70710664987564087,
                         0,
-                        0.70710676908493042
+                        0.70710688829421997
                     ],
                     "RotationEditor": [
-                        0,
-                        0,
-                        0
+                        -0,
+                        1.570451021194458,
+                        -0
                     ],
                     "Scale": [
+                        0.99999487400054932,
                         1,
-                        1,
-                        1
+                        0.99999487400054932
                     ]
                 },
                 {
@@ -779,7 +710,7 @@
             "Parent UUID": 223123506,
             "Name": "RockSmall1_low1",
             "Active": true,
-            "Static": false,
+            "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
@@ -790,25 +721,25 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        22.34522819519043,
+                        22.267755508422852,
                         1.1756726503372192,
-                        -10.68670654296875
+                        -10.011272430419922
                     ],
                     "Quaternion": [
                         0,
-                        0.70710676908493042,
+                        0.70710664987564087,
                         0,
-                        0.70710676908493042
+                        0.70710688829421997
                     ],
                     "RotationEditor": [
-                        0,
-                        0,
-                        0
+                        -0,
+                        1.570451021194458,
+                        -0
                     ],
                     "Scale": [
+                        0.99999284744262695,
                         1,
-                        1,
-                        1
+                        0.99999284744262695
                     ]
                 },
                 {
@@ -3576,7 +3507,7 @@
             "Parent UUID": 2111321869,
             "Name": "Floor_05",
             "Active": true,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Ground",
@@ -3588,7 +3519,7 @@
                     "Active": true,
                     "Position": [
                         150.14437866210938,
-                        -0.70813846588134766,
+                        0,
                         -78.662551879882812
                     ],
                     "Quaternion": [
@@ -3651,8 +3582,8 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -91.523597717285156,
-                        -0.16233444213867188,
+                        -83.747962951660156,
+                        0,
                         170.53871154785156
                     ],
                     "Quaternion": [
@@ -3662,9 +3593,9 @@
                         1
                     ],
                     "RotationEditor": [
+                        -0,
                         0,
-                        0,
-                        0
+                        -0
                     ],
                     "Scale": [
                         1,
@@ -3850,7 +3781,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": true,
-                    "fActivation": false,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -3983,7 +3914,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": true,
-                    "fActivation": false,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -4116,7 +4047,7 @@
                     "Gravity": false,
                     "Kinematic": false,
                     "Trigger": true,
-                    "fActivation": false,
+                    "fActivation": true,
                     "Mass": 0,
                     "Friction": 1,
                     "Restitution": 0.20000000298023224,
@@ -4305,7 +4236,1198 @@
             ]
         },
         {
-            "UUID": 1713804966,
+            "UUID": 1205518201,
+            "Parent UUID": 1179485366,
+            "Name": "Tutorial",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1709086894,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low46",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        9.9097919464111328,
+                        23.334480285644531,
+                        170.61215209960938
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low46.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 2136629455,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low44",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        31.752336502075195,
+                        21.330528259277344,
+                        218.28025817871094
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.89591753482818604,
+                        0,
+                        -0.44422045350074768
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low44.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 390719736,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low45",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -111.17425537109375,
+                        16.823905944824219,
+                        223.42866516113281
+                    ],
+                    "Quaternion": [
+                        -0.0093520944938063622,
+                        -0.46051257848739624,
+                        -0.018021753057837486,
+                        0.88742095232009888
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low45.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 805034307,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low44",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -163.31150817871094,
+                        10.673864364624023,
+                        171.93601989746094
+                    ],
+                    "Quaternion": [
+                        0.88745391368865967,
+                        -0.010372285731136799,
+                        0.46074831485748291,
+                        -0.0053851520642638206
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low44.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1218165321,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low40",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -79.336990356445312,
+                        1.4033336639404297,
+                        152.34800720214844
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.2796865701675415,
+                        0,
+                        0.96009135246276855
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low40.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1698619842,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low39",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -46.845001220703125,
+                        1.4033336639404297,
+                        192.07598876953125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.99957472085952759,
+                        0,
+                        0.029160257428884506
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low40.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1956287163,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low38",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -50.264686584472656,
+                        1.1715333461761475,
+                        94.217140197753906
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.98829638957977295,
+                        0,
+                        0.15254592895507812
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low38.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 263498267,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low37",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -70.791511535644531,
+                        4.1243362426757812,
+                        189.56086730957031
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.92880630493164062,
+                        0,
+                        0.37056559324264526
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low37.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 645647936,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low36",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -66.606170654296875,
+                        7.568537712097168,
+                        203.38458251953125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low36.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1073608223,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low36",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -95.546318054199219,
+                        4.2315406799316406,
+                        154.49053955078125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.92880630493164062,
+                        0,
+                        0.37056559324264526
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low36.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1472745416,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low35",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -49.652641296386719,
+                        3.3293666839599609,
+                        160.73597717285156
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0.70710676908493042,
+                        0.70710676908493042
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low35.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1868819285,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low34",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -47.973148345947266,
+                        11.504787445068359,
+                        231.89207458496094
+                    ],
+                    "Quaternion": [
+                        0.70705622434616089,
+                        0.69778245687484741,
+                        -0.11445387452840805,
+                        0.0084536029025912285
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low34.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 114763909,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low33",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -12.242474555969238,
+                        15.404747009277344,
+                        176.64802551269531
+                    ],
+                    "Quaternion": [
+                        0.54711335897445679,
+                        0.54711335897445679,
+                        0.44795867800712585,
+                        0.44795864820480347
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low33.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 556926880,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low35",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -93.549522399902344,
+                        11.499602317810059,
+                        189.0767822265625
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.65507060289382935,
+                        0,
+                        0.75556772947311401
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low35.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 945829786,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low32",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -94.72674560546875,
+                        1.1837563514709473,
+                        112.66297912597656
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low32.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1383606634,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium2_low43",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -123.31308746337891,
+                        8.7116622924804688,
+                        132.40251159667969
+                    ],
+                    "Quaternion": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low43.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1751623240,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low42",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -54.302284240722656,
+                        11.67298412322998,
+                        136.85287475585938
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low42.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1675503,
+            "Parent UUID": 1205518201,
+            "Name": "RockMedium1_low43",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -41.525657653808594,
+                        3.7503335475921631,
+                        170.70979309082031
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.92880630493164062,
+                        0,
+                        0.37056559324264526
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low43.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 455119600,
             "Parent UUID": 1179485366,
             "Name": "Enemies",
             "Active": false,
@@ -4321,7 +5443,7 @@
                     "Active": true,
                     "Position": [
                         0,
-                        1,
+                        0,
                         0
                     ],
                     "Quaternion": [
@@ -4363,14 +5485,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 508154207,
-            "Parent UUID": 1713804966,
+            "UUID": 1102386037,
+            "Parent UUID": 455119600,
             "Name": "basic_static_0",
             "Active": false,
             "Static": false,
@@ -4384,9 +5506,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -52.561603546142578,
+                        -53.661354064941406,
                         0,
-                        93.574432373046875
+                        93.206336975097656
                     ],
                     "Quaternion": [
                         0,
@@ -4427,14 +5549,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1535899409,
-            "Parent UUID": 1713804966,
+            "UUID": 1506814426,
+            "Parent UUID": 455119600,
             "Name": "basic_patrol_1",
             "Active": false,
             "Static": false,
@@ -4491,14 +5613,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 474433741,
-            "Parent UUID": 1713804966,
+            "UUID": 1887850159,
+            "Parent UUID": 455119600,
             "Name": "basic_static_2",
             "Active": false,
             "Static": false,
@@ -4555,14 +5677,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1433671879,
-            "Parent UUID": 1713804966,
+            "UUID": 109427433,
+            "Parent UUID": 455119600,
             "Name": "basic_static_3",
             "Active": false,
             "Static": false,
@@ -4619,14 +5741,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 192584031,
-            "Parent UUID": 1713804966,
+            "UUID": 537875067,
+            "Parent UUID": 455119600,
             "Name": "basic_patrol_4",
             "Active": false,
             "Static": false,
@@ -4683,14 +5805,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 995035677,
-            "Parent UUID": 1713804966,
+            "UUID": 898024500,
+            "Parent UUID": 455119600,
             "Name": "basic_static_5",
             "Active": false,
             "Static": false,
@@ -4747,14 +5869,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1919881041,
-            "Parent UUID": 1713804966,
+            "UUID": 1254205536,
+            "Parent UUID": 455119600,
             "Name": "basic_static_6",
             "Active": false,
             "Static": false,
@@ -4811,14 +5933,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 761085215,
-            "Parent UUID": 1713804966,
+            "UUID": 1593329427,
+            "Parent UUID": 455119600,
             "Name": "basic_static_7",
             "Active": false,
             "Static": false,
@@ -4875,14 +5997,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1718791691,
-            "Parent UUID": 1713804966,
+            "UUID": 1907807484,
+            "Parent UUID": 455119600,
             "Name": "basic_static_8",
             "Active": false,
             "Static": false,
@@ -4939,14 +6061,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 586312603,
-            "Parent UUID": 1713804966,
+            "UUID": 74593031,
+            "Parent UUID": 455119600,
             "Name": "basic_static_9",
             "Active": false,
             "Static": false,
@@ -5003,14 +6125,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1643159383,
-            "Parent UUID": 1713804966,
+            "UUID": 394780010,
+            "Parent UUID": 455119600,
             "Name": "basic_static_10",
             "Active": false,
             "Static": false,
@@ -5067,14 +6189,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 409520982,
-            "Parent UUID": 1713804966,
+            "UUID": 737384951,
+            "Parent UUID": 455119600,
             "Name": "basic_static_11",
             "Active": false,
             "Static": false,
@@ -5131,14 +6253,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1256808552,
-            "Parent UUID": 1713804966,
+            "UUID": 1072818929,
+            "Parent UUID": 455119600,
             "Name": "basic_static_12",
             "Active": false,
             "Static": false,
@@ -5195,14 +6317,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 150994307,
-            "Parent UUID": 1713804966,
+            "UUID": 1417234016,
+            "Parent UUID": 455119600,
             "Name": "basic_static_13",
             "Active": false,
             "Static": false,
@@ -5259,14 +6381,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1102782998,
-            "Parent UUID": 1713804966,
+            "UUID": 1761788345,
+            "Parent UUID": 455119600,
             "Name": "basic_static_14",
             "Active": false,
             "Static": false,
@@ -5323,14 +6445,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 12285373,
-            "Parent UUID": 1713804966,
+            "UUID": 2109405998,
+            "Parent UUID": 455119600,
             "Name": "basic_patrol_15",
             "Active": false,
             "Static": false,
@@ -5387,14 +6509,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 956346133,
-            "Parent UUID": 1713804966,
+            "UUID": 343515052,
+            "Parent UUID": 455119600,
             "Name": "undistractable_static_16",
             "Active": false,
             "Static": false,
@@ -5451,14 +6573,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1920388120,
-            "Parent UUID": 1713804966,
+            "UUID": 758595454,
+            "Parent UUID": 455119600,
             "Name": "undistractable_static_17",
             "Active": false,
             "Static": false,
@@ -5515,14 +6637,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 654306333,
-            "Parent UUID": 1713804966,
+            "UUID": 1073073511,
+            "Parent UUID": 455119600,
             "Name": "basic_static_18",
             "Active": false,
             "Static": false,
@@ -5579,14 +6701,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1593702486,
-            "Parent UUID": 1713804966,
+            "UUID": 1426678570,
+            "Parent UUID": 455119600,
             "Name": "basic_static_19",
             "Active": false,
             "Static": false,
@@ -5643,14 +6765,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 343076561,
-            "Parent UUID": 1713804966,
+            "UUID": 1739485723,
+            "Parent UUID": 455119600,
             "Name": "basic_static_20",
             "Active": false,
             "Static": false,
@@ -5707,14 +6829,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1342973363,
-            "Parent UUID": 1713804966,
+            "UUID": 2096223727,
+            "Parent UUID": 455119600,
             "Name": "basic_static_21",
             "Active": false,
             "Static": false,
@@ -5771,14 +6893,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 163360858,
-            "Parent UUID": 1713804966,
+            "UUID": 276028401,
+            "Parent UUID": 455119600,
             "Name": "basic_patrol_22",
             "Active": false,
             "Static": false,
@@ -5835,7 +6957,1351 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__SmallRocks.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 646272879,
+            "Parent UUID": 455119600,
+            "Name": "basic_static_23",
+            "Active": false,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -46.17755126953125,
+                        0,
+                        177.02149963378906
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.32403919100761414,
+                        0,
+                        0.94604367017745972
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000001192092896,
+                        1,
+                        1.0000001192092896
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 976554903,
+            "Parent UUID": 455119600,
+            "Name": "basic_static_24",
+            "Active": false,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -74.609428405761719,
+                        0,
+                        139.42161560058594
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.37816837430000305,
+                        0,
+                        0.92573684453964233
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1300501416,
+            "Parent UUID": 455119600,
+            "Name": "basic_static_25",
+            "Active": false,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -91.878311157226562,
+                        0,
+                        137.60739135742188
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.51181119680404663,
+                        0,
+                        0.85909795761108398
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/enemies__Enemies.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 549270664,
+            "Parent UUID": 1179485366,
+            "Name": "Colliders",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Colliders.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1423849666,
+            "Parent UUID": 549270664,
+            "Name": "Collider_01",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -17.623336791992188,
+                        3.8399467468261719,
+                        13.572660446166992
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.27616411447525024,
+                        0,
+                        0.96111047267913818
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_01.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 98590029,
+            "Parent UUID": 549270664,
+            "Name": "Collider_02",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        30.289346694946289,
+                        3.2282938957214355,
+                        8.4229211807250977
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.2145722359418869,
+                        0,
+                        0.97670817375183105
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_02.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 866788143,
+            "Parent UUID": 549270664,
+            "Name": "Collider_03",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        20.754745483398438,
+                        2.9912066459655762,
+                        0.6426270604133606
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.043619386851787567,
+                        0,
+                        0.99904823303222656
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_03.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1631574828,
+            "Parent UUID": 549270664,
+            "Name": "Collider_04",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        6.4252710342407227,
+                        4.7920379638671875,
+                        -29.498239517211914
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.043619386851787567,
+                        0,
+                        0.99904823303222656
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_04.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 229732091,
+            "Parent UUID": 549270664,
+            "Name": "Collider_05",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -9.6872425079345703,
+                        3.8196423053741455,
+                        4.0898785591125488
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.2588191032409668,
+                        0,
+                        0.96592581272125244
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_05.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 997512479,
+            "Parent UUID": 549270664,
+            "Name": "Collider_06",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -34.059459686279297,
+                        4.0841012001037598,
+                        28.360736846923828
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.67559021711349487,
+                        0,
+                        0.73727738857269287
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_06.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1772115725,
+            "Parent UUID": 549270664,
+            "Name": "Collider_07",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -36.811843872070312,
+                        3.0479776859283447,
+                        48.375698089599609
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.38268345594406128,
+                        0,
+                        0.92387956380844116
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_07.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 370690714,
+            "Parent UUID": 549270664,
+            "Name": "Collider_08",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -38.145881652832031,
+                        3.7274570465087891,
+                        67.263710021972656
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.38268345594406128,
+                        0,
+                        0.92387956380844116
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_08.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1104287191,
+            "Parent UUID": 549270664,
+            "Name": "Collider_09",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -19.307149887084961,
+                        3.8055567741394043,
+                        52.407333374023438
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.97629600763320923,
+                        0,
+                        0.21643964946269989
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_09.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1851877489,
+            "Parent UUID": 549270664,
+            "Name": "Collider_10",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        30.519878387451172,
+                        2.6957862377166748,
+                        -15.389838218688965
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.087155766785144806,
+                        0,
+                        0.99619472026824951
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_10.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 441680232,
+            "Parent UUID": 549270664,
+            "Name": "Collider_11",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -6.5886549949645996,
+                        1.44411301612854,
+                        57.393985748291016
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.15003438293933868,
+                        0,
+                        0.98868077993392944
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_11.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1200618753,
+            "Parent UUID": 549270664,
+            "Name": "Collider_12",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -20.110973358154297,
+                        3.5311548709869385,
+                        77.424957275390625
+                    ],
+                    "Quaternion": [
+                        0.00037199535290710628,
+                        -0.30117172002792358,
+                        -0.0010465957457199693,
+                        0.95356929302215576
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_12.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1951063512,
+            "Parent UUID": 549270664,
+            "Name": "Collider_13",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -47.727519989013672,
+                        3.4106044769287109,
+                        155.29481506347656
+                    ],
+                    "Quaternion": [
+                        -8.1218388459092239e-08,
+                        -0.077014118432998657,
+                        6.2735971972927018e-09,
+                        0.99703001976013184
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_13.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 563771564,
+            "Parent UUID": 549270664,
+            "Name": "Collider_14",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -65.100296020507812,
+                        3.4451334476470947,
+                        157.34495544433594
+                    ],
+                    "Quaternion": [
+                        -6.7913916268480534e-08,
+                        -0.55220967531204224,
+                        4.4983199387615969e-08,
+                        0.83370524644851685
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_14.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1310596031,
+            "Parent UUID": 549270664,
+            "Name": "Collider_15",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -47.002681732177734,
+                        1.7006897926330566,
+                        192.22218322753906
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.97629600763320923,
+                        0,
+                        0.21643964946269989
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_15.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 2047325453,
+            "Parent UUID": 549270664,
+            "Name": "Collider_16",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -79.297042846679688,
+                        1.7006897926330566,
+                        152.20021057128906
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.074562691152095795,
+                        0,
+                        0.99721634387969971
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_15.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 293687803,
+            "Parent UUID": 549270664,
+            "Name": "Collider_17",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Collider",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -50.194366455078125,
+                        1.7006897926330566,
+                        94.357978820800781
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.93814265727996826,
+                        0,
+                        0.34624898433685303
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_15.fbx",
                     "Active": true
                 }
             ]
@@ -6124,14 +8590,14 @@
             ]
         },
         {
-            "UUID": 427133858,
+            "UUID": 224826201,
             "Parent UUID": 417171234,
-            "Name": "Colliders",
+            "Name": "CheckPoint",
             "Active": true,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
-            "tag": "Untagged",
+            "tag": "CheckPoint",
             "layer": "Default",
             "Is Interactuable": false,
             "Components": [
@@ -6139,122 +8605,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -11.859601020812988,
-                        4.5420379638671875,
-                        13.572661399841309
+                        -15.986017227172852,
+                        2.6515331268310547,
+                        22.4949951171875
                     ],
                     "Quaternion": [
                         0,
+                        -0.2346331775188446,
                         0,
-                        0,
-                        1
+                        0.97208398580551147
                     ],
                     "RotationEditor": [
                         0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 802321427,
-            "Parent UUID": 427133858,
-            "Name": "Collider_01",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -5.7637338638305664,
-                        -0.70209121704101562,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        -0.27616378664970398,
-                        0,
-                        0.96111059188842773
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        0.99999994039535522,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_01.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 1220952500,
-            "Parent UUID": 427133858,
-            "Name": "Collider_02",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        42.148948669433594,
-                        -1.3137439489364624,
-                        -5.1497392654418945
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.2145722508430481,
-                        0,
-                        0.97670811414718628
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
+                        -0.47368237376213074,
                         0
                     ],
                     "Scale": [
@@ -6264,669 +8627,34 @@
                     ]
                 },
                 {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
+                    "Type": 11,
+                    "CollisionType": 0,
+                    "Size": [
+                        52.200000762939453,
+                        4.9000000953674316,
+                        6.5
                     ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_02.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 1714704632,
-            "Parent UUID": 427133858,
-            "Name": "Collider_03",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        32.773002624511719,
-                        -1.5508313179016113,
-                        -12.676133155822754
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.043619383126497269,
-                        0,
-                        0.99904823303222656
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
+                    "Gravity": false,
+                    "Kinematic": false,
+                    "Trigger": true,
+                    "fActivation": true,
+                    "Mass": 0,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
                         1,
                         1,
                         1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
                     ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_03.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 2114816519,
-            "Parent UUID": 427133858,
-            "Name": "Collider_04",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        18.464736938476562,
-                        0.2500002384185791,
-                        -43.098320007324219
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.043619383126497269,
-                        0,
-                        0.99904823303222656
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
+                    "RotationConstraint": [
                         1,
                         1,
                         1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
                     ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_04.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 350457235,
-            "Parent UUID": 427133858,
-            "Name": "Collider_05",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        2.2480835914611816,
-                        -0.72239542007446289,
-                        -9.2027082443237305
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.25881904363632202,
-                        0,
-                        0.96592581272125244
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_05.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 700581244,
-            "Parent UUID": 427133858,
-            "Name": "Collider_06",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -20.946060180664062,
-                        -0.45793700218200684,
-                        14.809622764587402
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.6755901575088501,
-                        0,
-                        0.73727738857269287
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_06.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 1058920531,
-            "Parent UUID": 427133858,
-            "Name": "Collider_07",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -24.832763671875,
-                        -1.4940600395202637,
-                        34.867847442626953
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.38268345594406128,
-                        0,
-                        0.92387956380844116
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        0.99999994039535522,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_07.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 1392405121,
-            "Parent UUID": 427133858,
-            "Name": "Collider_08",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -26.635684967041016,
-                        -0.81458067893981934,
-                        54.208236694335938
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.38268345594406128,
-                        0,
-                        0.92387956380844116
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        0.99999994039535522,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_08.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 1719414958,
-            "Parent UUID": 427133858,
-            "Name": "Collider_09",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -7.4844756126403809,
-                        -0.73648113012313843,
-                        38.771121978759766
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.97629600763320923,
-                        0,
-                        0.21643964946269989
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_09.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 2062716109,
-            "Parent UUID": 427133858,
-            "Name": "Collider_10",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        42.158374786376953,
-                        -1.8462517261505127,
-                        -28.9169921875
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.087155751883983612,
-                        0,
-                        0.99619472026824951
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        0.99999994039535522,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_10.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 275730000,
-            "Parent UUID": 427133858,
-            "Name": "Collider_11",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        5.2709469795227051,
-                        -3.0979247093200684,
-                        43.821327209472656
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.15003436803817749,
-                        0,
-                        0.98868077993392944
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_11.fbx",
-                    "Active": false
-                }
-            ]
-        },
-        {
-            "UUID": 648828939,
-            "Parent UUID": 427133858,
-            "Name": "Collider_12",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Collider",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -8.2513694763183594,
-                        -1.0108827352523804,
-                        63.852294921875
-                    ],
-                    "Quaternion": [
-                        0.00037199535290710628,
-                        -0.30117172002792358,
-                        -0.0010465957457199693,
-                        0.95356929302215576
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ]
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/colliders_lvl1__Collider_12.fbx",
-                    "Active": false
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
                 }
             ]
         },
@@ -6937,18 +8665,18 @@
             "Active": true,
             "Static": true,
             "PrefabID": false,
-            "Prefab Path": "None",
+            "Prefab Path": "Assets\/Prefabs\/ControllableLight.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0.14920353889465332,
-                        0.1999983936548233,
-                        -3.7166833877563477
+                        -46.948795318603516,
+                        0.20000854134559631,
+                        183.79302978515625
                     ],
                     "Quaternion": [
                         0,
@@ -6972,9 +8700,9 @@
                     "Active": true,
                     "Light Type": 2,
                     "Position": [
-                        0.14920353889465332,
-                        0.1999983936548233,
-                        -3.7166833877563477
+                        -46.948795318603516,
+                        0.20000854134559631,
+                        183.79302978515625
                     ],
                     "Ambient": [
                         1,
@@ -6992,14 +8720,557 @@
                         0
                     ],
                     "Intensity": 0,
-                    "Constant": 0.10000000149011612,
-                    "Linear": -0.37200000882148743,
+                    "Constant": 0.56000000238418579,
+                    "Linear": -0.18899999558925629,
                     "Quadratic": 0
                 }
             ]
         },
         {
-            "UUID": 1546923506,
+            "UUID": 81378638,
+            "Parent UUID": 417171234,
+            "Name": "CinematicDialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "CinematicManager",
+                    "pointer": 441521592,
+                    "type": 4,
+                    "componentTable": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1777589784,
+            "Parent UUID": 81378638,
+            "Name": "Dialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        0,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        0.1666666716337204,
+                        0.1666666716337204,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 100,
+                    "buttonHeight": 100,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 661.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 16,
+                    "buttonText": "sdfgsdf",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
+                    "fontScale": 0.5,
+                    "textColor.r": 1,
+                    "textColor.g": 1,
+                    "textColor.b": 1,
+                    "TextFile": "-"
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "char_enemy1",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Basic Enemy.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        43.386913299560547,
+                        0,
+                        -40.455375671386719
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.73727738857269287,
+                        0,
+                        0.67559027671813965
+                    ],
+                    "RotationEditor": [
+                        0,
+                        -1.6580628156661987,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy1_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Dying",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_idle__Armature|Armature|nme_enemy2_idle|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_shot__Armature|Armature|nme_enemy2_shot|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Dying",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_dying__Armature|Armature|nme_enemy2_dying|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "char_enemy2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Basic Enemy.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        43.590866088867188,
+                        0,
+                        -35.31658935546875
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.73727738857269287,
+                        0,
+                        0.67559027671813965
+                    ],
+                    "RotationEditor": [
+                        0,
+                        -1.6580628156661987,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy1_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Dying",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_idle__Armature|Armature|nme_enemy2_idle|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_shot__Armature|Armature|nme_enemy2_shot|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Dying",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_dying__Armature|Armature|nme_enemy2_dying|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "char_enemy3",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Basic Enemy.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        38.998260498046875,
+                        -3.0517578125e-05,
+                        -40.567966461181641
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.73727738857269287,
+                        0,
+                        0.67559027671813965
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        -1.6580628156661987,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy1_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Dying",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_idle__Armature|Armature|nme_enemy2_idle|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_shot__Armature|Armature|nme_enemy2_shot|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Dying",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_dying__Armature|Armature|nme_enemy2_dying|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "char_enemy4",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Basic Enemy.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        38.811813354492188,
+                        0,
+                        -35.787017822265625
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.73727738857269287,
+                        0,
+                        0.6755901575088501
+                    ],
+                    "RotationEditor": [
+                        0,
+                        -1.6580628156661987,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000078678131104,
+                        1,
+                        1.0000078678131104
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy1_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Dying",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_idle__Armature|Armature|nme_enemy2_idle|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_shot__Armature|Armature|nme_enemy2_shot|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Dying",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_dying__Armature|Armature|nme_enemy2_dying|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1875967244,
             "Parent UUID": 417171234,
             "Name": "High_Band",
             "Active": true,
@@ -7015,7 +9286,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        444,
+                        -279.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -7030,14 +9301,14 @@
                     ],
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1987,
-                    "lastButtonHeight": 1072.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 661.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Diffuse Path": "Assets\/Resources\/black.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -7063,7 +9334,7 @@
             ]
         },
         {
-            "UUID": 1657071218,
+            "UUID": 1595471751,
             "Parent UUID": 417171234,
             "Name": "Low_Band",
             "Active": true,
@@ -7079,7 +9350,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -443.5,
+                        279,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -7094,14 +9365,14 @@
                     ],
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1987,
-                    "lastButtonHeight": 1072.5,
+                    "lastButtonWidth": 1343,
+                    "lastButtonHeight": 661.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Diffuse Path": "Assets\/Resources\/black.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -7125,6 +9396,246 @@
                     "numOfAnimations": 0
                 }
             ]
+        },
+        {
+            "UUID": 1724506246,
+            "Parent UUID": 417171234,
+            "Name": "char_boss",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Boss.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        38.908912658691406,
+                        0,
+                        -38.053627014160156
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.73727738857269287,
+                        0,
+                        0.67559027671813965
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        -1.6580628156661987,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_boss_walknormal__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "WalkNormal",
+                    "Animations": [
+                        {
+                            "State": "CallBackup",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Die",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_die__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Execdie",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_execdie__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Exhausted",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_exhausted__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "HitGround",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_hitground__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ntoa",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_ntoa__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_run__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shield",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shield__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShieldDestroy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shielddestroy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShotCrazy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shotcrazy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "SitIdle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_sitidle__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Throw",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "WalkAngry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walkangry__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "WalkNormal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walknormal__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 587016443,
+            "Parent UUID": 417171234,
+            "Name": "Hostage",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
+                    "Active": true
+                }
+            ]
+        }
+    ],
+    "NavMesh": [
+        {
+            "cellSize": 0.30000001192092896,
+            "cellHeight": 0.20000000298023224,
+            "agentHeight": 2,
+            "agentRadius": 0.5,
+            "agentMaxClimb": 0,
+            "agentMaxSlope": 0.10000000149011612,
+            "regionMinSize": 8,
+            "regionMergeSize": 20,
+            "edgeMaxLen": 12,
+            "edgeMaxError": 1.2999999523162842,
+            "vertsPerPoly": 6,
+            "detailSampleDist": 6,
+            "detailSampleMaxError": 1,
+            "partitionType": 0,
+            "tileSize": 32
         }
     ]
 }
