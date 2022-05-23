@@ -10,7 +10,12 @@ public class Cinematic_6 : RagnarComponent
 
     CinematicManager dialogues;
 
-    private bool first;
+    public int IdLine = 0;
+    enum CinematicState
+    {
+        FIRST, TRANSITION, ANIMATIONS
+    }
+    private CinematicState state;
 
     public void Start()
     {
@@ -22,6 +27,7 @@ public class Cinematic_6 : RagnarComponent
         bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
+        // Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
         GameObject characterPaul = GameObject.Find("char_paul");
         GameObject characterChani = GameObject.Find("char_chani");
         GameObject characterStilgar = GameObject.Find("char_stilgar");
@@ -31,20 +37,82 @@ public class Cinematic_6 : RagnarComponent
         characterStilgar.GetComponent<Animation>().PlayAnimation("Idle");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
+        //-----------
+        state = CinematicState.FIRST;
+        //-----------
 
-
-
-        first = false;
     }
+
     public void Update()
     {
-        if (!first)
+        switch (state)
         {
+            case CinematicState.FIRST:
 
-            dialogues.SetIDDialogue(IdDialogue, "build2");
+                StartCinematic();
+                state = CinematicState.TRANSITION;
 
-            first = true;
+                break;
+            case CinematicState.TRANSITION:
+                //Aqui no pasara nada
+
+                break;
+            case CinematicState.ANIMATIONS:
+
+                Animations();
+                state = CinematicState.TRANSITION;
+
+                break;
+            default:
+                break;
         }
     }
 
+    // IMPORTATNTE CAMBIAR ESTO SEGUN TU CINEMATICA
+    private void StartCinematic()
+    {
+        //var1: ID del dialogo que se hara en la cinematica(variable arriba)
+        //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
+        //var3: Numera de la cinematica (Ej: Cinematica_1 = 1)
+        dialogues.SetIDDialogue(IdDialogue, "build", 6);
+    }
+
+    private void Animations()
+    {
+        switch (IdLine)
+        {   // EL dialogo puede tener mas o menos lineas
+            // Tened en cuenta que por aqui solo pasara...
+            // cuando se pase a la siguiente linea de dialogo
+            case 0:
+
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            case 4:
+
+                break;
+            case 5:
+
+                break;
+            case 6:
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    public void SetLine(int line)
+    {
+        IdLine = line;
+        state = CinematicState.ANIMATIONS;
+    }
 }

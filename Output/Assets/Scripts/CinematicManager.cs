@@ -4,14 +4,14 @@ using RagnarEngine;
 public class CinematicManager : RagnarComponent
 {
 	GameObject text;
-
+	GameObject cinematic;
+    
     private int IdDialogue;
     private int indexLine;
 
     private bool endDialogue;
     //private GameObject SceneAudio;
 
-    Vector3 pos = new Vector3(0, 0, 0);
     enum State
     {
 		START,
@@ -24,6 +24,7 @@ public class CinematicManager : RagnarComponent
     int state;
     String nextScene;
     String lenguage;
+    
 	public void Start()
 	{
         indexLine = 0;
@@ -116,22 +117,23 @@ public class CinematicManager : RagnarComponent
                 break;
         }
 
+        // VOICE
         String voicePath = "VOICE_" + lenguage + "_" + IdDialogue.ToString() + indexLine.ToString();
-        Debug.Log(voicePath);
-
-
+        //Debug.Log(voicePath);
         //SceneAudio.GetComponent<AudioSource>().PlayClip(voicePath);
+
+        // For animations
+        cinematic.GetComponent<Cinematic_1>().SetLine(indexLine);
 
     }
 
-    public void SetIDDialogue(int ID,String _nextScene) {
+    public void SetIDDialogue(int ID,String _nextScene,int cinematicNumber) {
         endDialogue = false;
         IdDialogue = ID;
 
         Dialogue.LoadDialogueFile("");
         Dialogue.StartDialogueById(IdDialogue);
         nextScene = _nextScene;
+        cinematic = GameObject.Find("Cinematic"+ cinematicNumber.ToString());
     }
-
-
 }
