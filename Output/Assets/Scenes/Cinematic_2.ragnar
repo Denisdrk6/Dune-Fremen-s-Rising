@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_2",
-                    "pointer": 564036632,
+                    "pointer": 564297088,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -144,19 +144,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        18.650373458862305,
+                        36.698886871337891,
                         0,
-                        -41.868640899658203
+                        -28.838663101196289
                     ],
                     "Quaternion": [
                         0,
-                        0.96107637882232666,
+                        0.97652792930603027,
                         0,
-                        0.27628272771835327
+                        0.21539078652858734
                     ],
                     "RotationEditor": [
                         -3.1415927410125732,
-                        0.55984824895858765,
+                        0.43418398499488831,
                         -3.1415927410125732
                     ],
                     "Scale": [
@@ -184,14 +184,14 @@
                     "Active": true,
                     "Position": [
                         0,
-                        55,
-                        -50
+                        61.659397125244141,
+                        -56.053977966308594
                     ],
                     "Quaternion": [
-                        0.34202012419700623,
+                        0.34202015399932861,
+                        -1.1212962114370839e-08,
                         0,
-                        0,
-                        0.93969261646270752
+                        0.93969273567199707
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -199,37 +199,37 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142104387283325,
+                        1.414210319519043,
                         1.0000002384185791,
-                        1.0000005960464478
+                        1.0000003576278687
                     ]
                 },
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.42143398523330688,
+                    "Vertical Fov": 0.39351186156272888,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -7.9032039642333984,
-                        55,
-                        0.49924850463867188
+                        13.11802864074707,
+                        61.659397125244141,
+                        22.015600204467773
                     ],
                     "Type": 3,
-                    "Zoom": -20,
+                    "Zoom": -14,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        18.650373458862305,
+                        36.698886871337891,
                         0,
-                        -41.868640899658203
+                        -28.838663101196289
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 147.92306518554688,
+                    "Horizontal Angle": 155.12309265136719,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -8766,7 +8766,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 394915520,
+                    "pointer": 564302408,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -8804,8 +8804,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 1439,
+                    "lastButtonHeight": 692.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8964,15 +8964,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        43.590866088867188,
+                        42.494125366210938,
                         0,
-                        -35.31658935546875
+                        -36.356983184814453
                     ],
                     "Quaternion": [
                         0,
                         -0.73727738857269287,
                         0,
-                        0.67559027671813965
+                        0.67559021711349487
                     ],
                     "RotationEditor": [
                         0,
@@ -8980,9 +8980,9 @@
                         0
                     ],
                     "Scale": [
+                        1.0000044107437134,
                         1,
-                        1,
-                        1
+                        1.0000044107437134
                     ]
                 },
                 {
@@ -9286,7 +9286,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -279.5,
+                        -254,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -9301,8 +9301,8 @@
                     ],
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 1439,
+                    "lastButtonHeight": 692.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9350,7 +9350,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        279,
+                        255,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -9365,8 +9365,8 @@
                     ],
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 1439,
+                    "lastButtonHeight": 692.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9557,11 +9557,11 @@
         {
             "UUID": 587016443,
             "Parent UUID": 417171234,
-            "Name": "Hostage",
+            "Name": "char_hostage",
             "Active": true,
-            "Static": true,
+            "Static": false,
             "PrefabID": false,
-            "Prefab Path": "None",
+            "Prefab Path": "Assets\/Prefabs\/Hostage.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
             "Is Interactuable": false,
@@ -9570,25 +9570,25 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
-                        0,
-                        0
+                        36.810523986816406,
+                        0.89752542972564697,
+                        -38.012119293212891
                     ],
                     "Quaternion": [
                         0,
+                        -0.70710688829421997,
                         0,
-                        0,
-                        1
+                        0.70710664987564087
                     ],
                     "RotationEditor": [
                         0,
-                        0,
+                        -1.5707963705062866,
                         0
                     ],
                     "Scale": [
+                        0.99998897314071655,
                         1,
-                        1,
-                        1
+                        0.99998897314071655
                     ]
                 },
                 {
@@ -9615,6 +9615,22 @@
                     "Type": 1,
                     "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
                     "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
                 }
             ]
         }
