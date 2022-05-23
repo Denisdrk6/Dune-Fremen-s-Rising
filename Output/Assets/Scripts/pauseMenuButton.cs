@@ -160,6 +160,8 @@ public class pauseMenuButton : RagnarComponent
 
 	GameObject AbilityLeft;
 	GameObject AbilityRight;
+
+	int currentCursor = 0;
 	public void Start()
 	{
 		pos = new Vector3(0.0f, 0.0f, 0.0f);
@@ -1197,6 +1199,8 @@ public class pauseMenuButton : RagnarComponent
                 // Why is it not necessary to put "<Level_2>" and "<Level_3>"?, I don't know
                 if (GameObject.Find("LevelManager").GetComponent<Level_1>() != null) 
 					GameObject.Find("LevelManager").GetComponent<Level_1>().runGame = true;
+
+				Input.SetCursorState(currentCursor);
 			}
             else
 			{
@@ -1207,6 +1211,9 @@ public class pauseMenuButton : RagnarComponent
 
 				if (GameObject.Find("LevelManager").GetComponent<Level_1>() != null)
 					GameObject.Find("LevelManager").GetComponent<Level_1>().runGame = false;
+
+				currentCursor = Input.GetCursorState();
+				Input.SetCursorState(0);
 			}
 		}
 	}
@@ -1690,6 +1697,8 @@ public class pauseMenuButton : RagnarComponent
 				SceneAudio.GetComponent<AudioSource>().PlayClip("UI_SELECT");
 				if (GameObject.Find("LevelManager").GetComponent<Level_1>() != null)
 					GameObject.Find("LevelManager").GetComponent<Level_1>().runGame = true;
+
+				Input.SetCursorState(currentCursor);
 				break;
 		}
 	}

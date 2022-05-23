@@ -1,3 +1,5 @@
+#define OEMRESOURCE
+
 #pragma once
 #include "Module.h"
 
@@ -16,13 +18,36 @@
 #define MAX_MOUSE_BUTTONS 5
 #define MAX_KEYS 300
 
+enum CursorState
+{
+	NORMAL = 0,
+
+	//Paul abilitites
+	PAUL_1,
+	PAUL_2,
+	PAUL_3,
+	PAUL_4,
+
+	//Chani abilities
+	CHANI_1,
+	CHANI_2,
+	CHANI_3,
+	CHANI_4,
+
+	//Stilgar abilities
+	STILGAR_1,
+	STILGAR_2,
+	STILGAR_3,
+	STILGAR_4,
+};
+
 enum KeyState
 {
 	KEY_IDLE = 0,
 	KEY_DOWN,
 	KEY_REPEAT,
 	KEY_UP,
-	KEY_TWICE
+	KEY_TWICE,
 };
 
 struct TwiceKey
@@ -73,6 +98,7 @@ public:
 	~ModuleInput();
 
 	bool Init(JsonParsing& node) override;
+	void LoadCursors();
 	bool PreUpdate(float dt) override;
 	bool CleanUp();
 
@@ -100,7 +126,10 @@ public:
 	bool GetButtonUp(int joystickId, Button button);
 	bool GetAxis(int joystickId, JAxis axis);
 
-	HCURSOR LoadCursorIcon(const char* iconPath, int width, int height);
+	void SetCursorState(int state);
+	int GetCursorState() { return (int)currentCursor; };
+
+	void ImportToLibrary();
 
 	inline std::vector<std::string> GetInputList() const { return strings; }
 
@@ -116,6 +145,10 @@ private:
 	float mouseXMotion;
 	float mouseYMotion;
 	int mouseZMotion;
+
+	HCURSOR defaultCursor;
+	std::vector<HCURSOR> cursors;
+	CursorState currentCursor;
 	
 	SDL_GameController* pad;
 	SDL_Joystick* joy;

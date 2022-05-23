@@ -104,6 +104,7 @@ MyPlane::MyPlane(float3 pos, float3 sca) {
 		}
 	)";
 
+	RELEASE(shader);
 	shader = new Shadert(vertexSource, fragSource);
 }
 

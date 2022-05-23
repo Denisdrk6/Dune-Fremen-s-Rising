@@ -28,7 +28,7 @@ public:
 	bool PreUpdate(float dt);
 	bool Update(float dt);
 	bool PostUpdate();
-	bool Draw(const AABB* shadowsIntersectionAABB = nullptr);
+	bool Draw();
 	bool CleanUp();
 
 	void NewScene();

@@ -31,6 +31,7 @@ TextComponent::TextComponent(GameObject* own)
 		loadFont(fontPath);	
 	}
 	//app->userInterface->loadFont("Library/Fonts/Montserrat-Bold.ttf", &characters, shader, VAO, VBO);
+	//RELEASE(shader); not needed at start
 	shader = new Shadert("", "");
 	app->userInterface->UIGameObjects.push_back(own);
 	app->userInterface->OrderButtons();
@@ -50,6 +51,8 @@ TextComponent::TextComponent(GameObject* own)
 
 TextComponent::~TextComponent()
 {
+	RELEASE(shader);
+	RELEASE(planeToDraw);
 }
 
 bool TextComponent::Update(float dt)
@@ -296,6 +299,7 @@ void TextComponent::loadFont(std::string path) {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 
+	RELEASE(shader);
 	shader = new Shadert("", "");
 }
 void TextComponent::savetext()

@@ -2,6 +2,9 @@
 #include "Application.h"
 
 #include "ModuleRenderer3D.h"
+#include "ModuleCamera3D.h"
+#include "ModuleSceneManager.h"
+#include "Scene.h"
 
 #include "GameObject.h"
 #include "TransformComponent.h"
@@ -32,6 +35,7 @@ ComponentLight::~ComponentLight()
 	default:
 		break;
 	}
+	delete light; light = nullptr;//RELEASE
 }
 
 bool ComponentLight::Update(float dt)
@@ -47,17 +51,27 @@ bool ComponentLight::Update(float dt)
 			l->dir.Normalize();
 			
 			Frustum frustum;
-			frustum.pos = ownerTransform->GetGlobalPosition();
-			//AABB shadowsAABB = app->renderer3D->shadowsAABB;
-			//frustum.pos = float3((shadowsAABB.MaxX() + shadowsAABB.MinX()) * 0.5f, (shadowsAABB.MaxY() + shadowsAABB.MinY()) * 0.5f, shadowsAABB.MaxZ());
+			float3 camPos = float3::zero;
+			if (app->sceneManager->GetGameState() == GameState::PLAYING)
+			{
+				TransformComponent* parentTr = app->sceneManager->GetCurrentScene()->mainCamera->owner->GetParent()->GetComponent<TransformComponent>();
+				camPos = parentTr->GetPosition();
+				frustum.pos = camPos - app->renderer3D->dirLight->dir * 120;
+			}
+			else
+			{
+				camPos = app->camera->cameraFrustum.pos;
+				frustum.pos = camPos - app->renderer3D->dirLight->dir * 120;
+			}
+			
 
 			frustum.front = app->renderer3D->dirLight->dir;
 			float3 right = frustum.front.Cross({ 0,1,0 }).Normalized();
 			frustum.up = right.Cross(frustum.front).Normalized();
 			frustum.type = FrustumType::OrthographicFrustum;
 
-			frustum.orthographicHeight = 512;
-			frustum.orthographicWidth = 512;
+			frustum.orthographicHeight = 128;
+			frustum.orthographicWidth = 128;
 			frustum.nearPlaneDistance = 0.001;
 			frustum.farPlaneDistance = 500000;
 

@@ -178,18 +178,10 @@ bool CheckboxComponent::OnLoad(JsonParsing& node)
 		}
 	}
 	alpha = node.GetJsonNumber("alpha");
-	const char* sel = new char[selected.size()];
-	sel = selected.c_str();
-	if (sel[0] == 'n')
-	{
-		actual = noSelectedMaterial;			
-		checked = false;
-	}
-	else
-	{
-		actual = selectedMaterial;	
-		checked = true;
-	}
+
+	bool sel = (selected.c_str()[0] == 'n');
+	actual = sel ? noSelectedMaterial : selectedMaterial;
+	checked = !sel;
 	
 	return true;
 }

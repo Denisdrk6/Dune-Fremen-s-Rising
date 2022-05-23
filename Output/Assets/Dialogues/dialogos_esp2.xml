@@ -19,11 +19,11 @@
 	
 	<!-- AuthorId:  0=Paul / 1=Chani -->
 <Dialogue Id="0">
-		<node AuthorId="1" Line="Rabban ha atacado dos asentamientos más al oeste de aqui, te está buscando Paul." >
+		<node AuthorId="1" Line="Rabban ha atacado dos asentamientos más al oeste de aquí, te está buscando Paul." >
 		</node>
-		<node AuthorId="1" Line="Y está pagando su frustración con las demas tribus Fremen." >
+		<node AuthorId="1" Line="Y está pagando su frustración con las demás tribus Fremen." >
 		</node>
-		<node AuthorId="0" Line="No basta con sabotear alguna cadena de distribución de espécia. La muerte es el verdadero negocio de los Harkonnen."> 
+		<node AuthorId="0" Line="No basta con sabotear alguna cadena de distribución de especia. La muerte es el verdadero negocio de los Harkonnen."> 
 		</node>
 		<node AuthorId="1" Line="A cada día que pasa les tengo más rabia, son una lacra para esta tierra."> 
 		</node>
@@ -43,7 +43,7 @@
 		</node>
 		<node AuthorId="3" Line="Pensaba que os gustaban más las cuevas, quizás tendré que devolveros al lugar que mereceis."> 
 		</node>
-		<node AuthorId="3" Line="Pero tienes razon, me has sido de ayuda, y debo ser un hombre justo, adelante, eres libre."> 
+		<node AuthorId="3" Line="Pero tienes razón, me has sido de ayuda, y debo ser un hombre justo, adelante, eres libre."> 
 		</node>
 		<node AuthorId="3" Line="Sucio Gusano, ¿Acaso ha salido de mi boca la palabra disparar?"> 
 		</node>
@@ -97,11 +97,11 @@
 		</node>
 		<node AuthorId="7" Line="Te has arriesgado demasiado."> 
 		</node>
-		<node AuthorId="0" Line="¿Y que habriais hecho vosotros?"> 
+		<node AuthorId="0" Line="¿Y que habríais hecho vosotros?"> 
 		</node>
 		<node AuthorId="7" Line="No puedes ir sólo contra ese malnacido!"> 
 		</node>
-		<node AuthorId="1" Line="Odio darle la razón, pero no puedes ir de cara a por el, al menos no sin su ayuda."> 
+		<node AuthorId="1" Line="Odio darle la razón, pero no puedes ir de cara a por él, al menos no sin su ayuda."> 
 		</node>
 		<node AuthorId="7" Line="Vale, hay un cambio de planes, al menos esta incursión también se ha llevado a unos cuantos de los suyos."> 
 		</node>
@@ -115,14 +115,14 @@
 		</node>
 		<node AuthorId="0" Line="Pero y si..."> 
 		</node>
-		<node AuthorId="7" Line="Ni una palabra mas chico, harás lo que se te ordena."> 
+		<node AuthorId="7" Line="Ni una palabra más chico, harás lo que se te ordena."> 
 		</node>
 	</Dialogue>
 	<!-- AuthorId:  0=Paul / 1=Chani  -->
 	<Dialogue Id="5">
 		<node AuthorId="1" Line="Las vistas son bonitas desde aquí."> 
 		</node>
-		<node AuthorId="0" Line="Me gustarían mas si no pensara en la cantidad de Harkonnen que hay ahí dentro."> 
+		<node AuthorId="0" Line="Me gustarían más si no pensara en la cantidad de Harkonnen que hay ahí dentro."> 
 		</node>
 		<node AuthorId="1" Line="Lady Jessica estará bien, recuerdas quién la acompaña?"> 
 		</node>
@@ -167,13 +167,13 @@
 	<Dialogue Id="8">
 		<node AuthorId="3" Line="Casi me olvido de tí con el calor del momento. Stronghold, verdad?"> 
 		</node>
-		<node AuthorId="7" Line="És Stilgar"> 
+		<node AuthorId="7" Line="Es Stilgar"> 
 		</node>
 		<node AuthorId="3" Line="Encadenadlo en el patio principal, mañana le espera un corto viaje a su tumba."> 
 		</node>
 		<node AuthorId="7" Line="Pagarás por tus crimenes Rabban"> 
 		</node>
-		<node AuthorId="7" Line="Éste desierto te engullirá y se deshará de tí, viva o muera yo."> 
+		<node AuthorId="7" Line="Este desierto te engullirá y se deshará de tí, viva o muera yo."> 
 		</node>		
 	</Dialogue>
 	<!-- AuthorId:  0=Paul / 1=Chani  -->
@@ -199,7 +199,7 @@
 		</node>
 		<node AuthorId="0" Line="Y poner fin a las locuras de ese malnacido."> 
 		</node>
-		<node AuthorId="1" Line="¿Habeis terminado ya? Creo que tenemos compania mas adelante."> 
+		<node AuthorId="1" Line="¿Habéis terminado ya? Creo que tenemos compañía más adelante."> 
 		</node>		
 	</Dialogue>
 	<!-- AuthorId:  0=Paul / 1=Chani / 7=Stilgar -->
@@ -212,12 +212,12 @@
 		</node>
 		<node AuthorId="0" Line="Pongamos fin a esto de una vez."> 
 		</node>
-		<node AuthorId="7" Line="Hay más guardias desde que tomaron el palacio, si encontráis algo útil podremos abrirnos paso más facilmente."> 
+		<node AuthorId="7" Line="Hay más guardias desde que tomaron el palacio, si encontráis algo útil podremos abrirnos paso más fácilmente."> 
 		</node>
 	</Dialogue>
 	<!-- AuthorId:  0=Paul / 1=Chani / 7=Stilgar -->
 	<Dialogue Id="12">
-		<node AuthorId="7" Line="Dadme esos explosivos, si los ponemos en esa roca, podemos llamar su atencion."> 
+		<node AuthorId="7" Line="Dadme esos explosivos, si los ponemos en esa roca, podemos llamar su atención."> 
 		</node>
 		<node AuthorId="1" Line="Y así despejaremos la entrada."> 
 		</node>
@@ -229,12 +229,12 @@
 	</Dialogue>
 
 	<Dialogue Id="14">
-		<node AuthorId="3" Line="¿Tan dificil es cerrar la boca?"> 
+		<node AuthorId="3" Line="¿Tan difícil es cerrar la boca?"> 
 		</node>
 	</Dialogue>
 
 	<Dialogue Id="15">
-		<node AuthorId="3" Line="Has traído a tus amigos y a tí mismo a morir aqui, Paul."> 
+		<node AuthorId="3" Line="Has traído a tus amigos y a tí mismo a morir aquí, Paul."> 
 		</node>
 		<node AuthorId="0" Line="Voy a matarte por lo que has hecho."> 
 		</node>
@@ -245,7 +245,7 @@
 	<Dialogue Id="16">
 		<node AuthorId="3" Line="Antes quería tomarme las cosas con calma, ahora vas a morir aplastado como tu madre."> 
 		</node>
-		<node AuthorId="0" Line="No te atrevas a hablar asi de mi mad..."> 
+		<node AuthorId="0" Line="No te atrevas a hablar así de mí mad..."> 
 		</node>
 	</Dialogue>
 
@@ -256,9 +256,9 @@
 		</node>
 		<node AuthorId="7" Line="Quédate entre los vivos Paul."> 
 		</node>
-		<node AuthorId="0" Line="... (Paul tose recobrando la respiracion)"> 
+		<node AuthorId="0" Line="... (Paul tose recobrando la respiración)"> 
 		</node>
-		<node AuthorId="1" Line="Me tenias con el corazon en un puño."> 
+		<node AuthorId="1" Line="Me tenías con el corazón en un puño."> 
 		</node>
 		<node AuthorId="7" Line="A poder ser ahórranos estos sustos de ahora en adelante."> 
 		</node>
@@ -267,11 +267,11 @@
 	<Dialogue Id="18">
 		<node AuthorId="0" Line="Nos hemos librado de Rabban."> 
 		</node>
-		<node AuthorId="1" Line="Si, pero me temo que otros vendran."> 
+		<node AuthorId="1" Line="Sí, pero me temo que otros vendrán."> 
 		</node>
 		<node AuthorId="7" Line="Matar a Rabban traerá consecuencias."> 
 		</node>
-		<node AuthorId="0" Line="Con el liderazgo de los Fremen, Arrakis prosperara."> 
+		<node AuthorId="0" Line="Con el liderazgo de los Fremen, Arrakis prosperará."> 
 		</node>
 		<node AuthorId="7" Line="Habrá que prepararse, formar a civiles, reparar los daños..."> 
 		</node>

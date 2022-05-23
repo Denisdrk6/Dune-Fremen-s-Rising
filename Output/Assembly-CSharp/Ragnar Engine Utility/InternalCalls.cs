@@ -84,6 +84,12 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern int GetMouseY();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void SetCursorState(int state);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern int GetCursorState();
     }
 
     public partial class Debug
@@ -417,6 +423,29 @@ namespace RagnarEngine
         }
     }
 }
+
+enum CursorState
+{
+    NORMAL = 0,
+
+    //Paul abilitites
+    PAUL_1,
+    PAUL_2,
+    PAUL_3,
+    PAUL_4,
+
+    //Chani abilities
+    CHANI_1,
+    CHANI_2,
+    CHANI_3,
+    CHANI_4,
+
+    //Stilgar abilities
+    STILGAR_1,
+    STILGAR_2,
+    STILGAR_3,
+    STILGAR_4,
+};
 
 public enum KeyCode
 {

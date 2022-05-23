@@ -190,31 +190,52 @@ vec4 CalculateShadow(vec4 fragPosLightSpace, vec3 normal, vec3 lightDir)
 	float shadow = 0;
 	float dx = dFdx(texCoord.s);
 	float dy = dFdy(texCoord.t);
-	float bias = max(0.0000011 * (1.0 - dot(normal, lightDir)), 0.00000011);
-	for (int i = 0; i < 3; ++i)
-	{
-		for (int j = 0; j < 3; ++j)
-		{
-			texCoord += vec2(dx * i, dy * j);
-			colorSum += texture(tex, texCoord);
+	float bias = max(0.000011 * (1.0 - dot(normal, lightDir)), 0.0000011);
 
-			float pcfDepth = texture(depthTexture, projCoords.xy + vec2(i * 0.5, j * 0.5) * depthTexSize).x;
+	int sampleRadius = 1;
+	vec2 pixelSize = 1.0 / textureSize(depthTexture, 0);
+	for (int y = -sampleRadius; y <= sampleRadius; y++)
+	{
+		for (int x = -sampleRadius; x <= sampleRadius; x++)
+		{
+			texCoord += vec2(dx * x, dy * y);
+			colorSum += texture(tex, texCoord);
+			float pcfDepth = texture(depthTexture, projCoords.xy + vec2(x, y) * pixelSize).x;
 			shadow += currentDepth + bias > pcfDepth ? 1 : 0;
 		}
 	}
-	
-	colorSum = colorSum / 9;
-	shadow = shadow / 9;
-	shadow = smoothstep(0, 2, shadow);
-	// ========================
+	colorSum /= (sampleRadius * 2 + 1);
+	shadow /= pow((sampleRadius * 2 + 1), 2);
 
-	vec4 result = mix(vec4(1), normalize(colorSum), shadow);
+	vec4 result = mix(vec4(1), normalize(colorSum) * 1.25, shadow);
+
+	//for (int i = 0; i < 3; ++i)
+	//{
+	//	for (int j = 0; j < 3; ++j)
+	//	{
+	//		texCoord += vec2(dx * i, dy * j);
+	//		colorSum += texture(tex, texCoord);
+	//
+	//		float pcfDepth = texture(depthTexture, projCoords.xy + vec2(i * 0.5, j * 0.5) * depthTexSize).x;
+	//		shadow += currentDepth + bias > pcfDepth ? 1 : 0;
+	//	}
+	//}
+	//
+	//colorSum = colorSum / 9;
+	//shadow = shadow / 9;
+	//shadow = smoothstep(0, 2, shadow);
+	//// ========================
+	//
+	//vec4 result = mix(vec4(1), normalize(colorSum), shadow);
 
 	return result;	
 }
 
 vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
 {
+	if (light.intensity == 0)
+		return vec3(0);
+
 	vec3 lightDir = normalize(-light.direction);
 
 	// Diffuse shading
@@ -246,6 +267,9 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
 
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
 {
+	if (light.intensity == 0)
+		return vec3(0);
+
 	vec3 lightDir = normalize(light.position - fragPos);
 
 	// Diffuse shading
@@ -283,6 +307,9 @@ vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
 
 vec3 CalcSpotLight(SpotLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
 {	
+	if (light.intensity == 0)
+		return vec3(0);
+
 	vec3 lightDir = normalize(light.position - fragPos);
 	
 	float diff = max(dot(normal, lightDir), 0.0);

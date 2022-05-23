@@ -1,5 +1,6 @@
 #pragma once
 #include "Math/float4x4.h"
+#include "Geometry/Frustum.h"
 
 enum class LightType
 {
@@ -37,6 +38,8 @@ public:
 
         lightSpace = float4x4::identity;
 
+        //frustum.SetKind(FrustumProjectiveSpace::FrustumSpaceGL, FrustumHandedness::FrustumRightHanded);
+
         Light();
     }
 
@@ -44,6 +47,7 @@ public:
     float3 dir;
     bool generateShadows;
     float4x4 lightSpace;
+    //Frustum frustum;
 };
 
 class PointLight : public Light

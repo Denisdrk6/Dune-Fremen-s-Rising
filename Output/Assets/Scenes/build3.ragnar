@@ -53,7 +53,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Level_3",
-                    "pointer": 554104896,
+                    "pointer": 448486672,
                     "type": 4,
                     "componentTable": 0,
                     "characters": 0,
@@ -144,9 +144,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -17.149606704711914,
+                        -28.536191940307617,
                         0,
-                        75.850799560546875
+                        93.010665893554688
                     ],
                     "Quaternion": [
                         0,
@@ -207,12 +207,12 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.42143398523330688,
+                    "Vertical Fov": -1.5718119144439697,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -51.919754028320312,
+                        -63.306343078613281,
                         55,
-                        111.78361511230469
+                        128.9434814453125
                     ],
                     "Type": 3,
                     "Zoom": -20,
@@ -222,9 +222,9 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -17.149606704711914,
+                        -28.536191940307617,
                         0,
-                        75.850799560546875
+                        93.010665893554688
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
@@ -369,8 +369,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -402,7 +402,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "pauseMenuButton",
-                    "pointer": 554107784,
+                    "pointer": 448493360,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -440,8 +440,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -571,8 +571,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -702,8 +702,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -833,8 +833,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -897,8 +897,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -961,8 +961,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1025,8 +1025,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1156,8 +1156,8 @@
                     ],
                     "buttonWidth": 400,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1689,8 +1689,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1758,8 +1758,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1827,8 +1827,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1896,8 +1896,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2004,8 +2004,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2068,8 +2068,8 @@
                     ],
                     "buttonWidth": 263,
                     "buttonHeight": 52.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2132,8 +2132,8 @@
                     ],
                     "buttonWidth": 254.5,
                     "buttonHeight": 46,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2263,8 +2263,8 @@
                     ],
                     "buttonWidth": 650,
                     "buttonHeight": 650,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2327,8 +2327,8 @@
                     ],
                     "buttonWidth": 376.5,
                     "buttonHeight": 42.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2458,8 +2458,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2589,8 +2589,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2653,8 +2653,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2784,8 +2784,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2848,8 +2848,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2979,8 +2979,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3043,8 +3043,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3127,8 +3127,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3211,8 +3211,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3295,8 +3295,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3364,8 +3364,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3433,8 +3433,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3458,8 +3458,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3542,8 +3542,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3567,8 +3567,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3651,8 +3651,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3676,8 +3676,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3760,8 +3760,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3785,8 +3785,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3869,8 +3869,8 @@
                     ],
                     "buttonWidth": 250,
                     "buttonHeight": 60,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4021,8 +4021,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4090,8 +4090,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4159,8 +4159,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4228,8 +4228,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4359,8 +4359,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4490,8 +4490,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4621,8 +4621,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4752,8 +4752,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4883,8 +4883,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5014,8 +5014,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5145,8 +5145,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5276,8 +5276,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5407,8 +5407,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5538,8 +5538,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5669,8 +5669,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5800,8 +5800,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5931,8 +5931,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6062,8 +6062,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6193,8 +6193,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6324,8 +6324,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6455,8 +6455,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6586,8 +6586,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6717,8 +6717,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6848,8 +6848,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6979,8 +6979,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7110,8 +7110,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7241,8 +7241,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7411,8 +7411,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7480,8 +7480,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7544,8 +7544,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7608,8 +7608,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7672,8 +7672,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7803,8 +7803,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7934,8 +7934,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8065,8 +8065,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8196,8 +8196,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8260,8 +8260,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8324,8 +8324,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8388,8 +8388,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8452,8 +8452,8 @@
                     ],
                     "buttonWidth": 513,
                     "buttonHeight": 214,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8516,8 +8516,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 90,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8580,8 +8580,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8644,8 +8644,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8708,8 +8708,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8772,8 +8772,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8841,8 +8841,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8905,8 +8905,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -8969,8 +8969,8 @@
                     ],
                     "buttonWidth": 186.5,
                     "buttonHeight": 55,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9100,8 +9100,8 @@
                     ],
                     "buttonWidth": 36.5,
                     "buttonHeight": 81,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9164,8 +9164,8 @@
                     ],
                     "buttonWidth": 36.5,
                     "buttonHeight": 81,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9228,8 +9228,8 @@
                     ],
                     "buttonWidth": 36.5,
                     "buttonHeight": 81,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9292,8 +9292,8 @@
                     ],
                     "buttonWidth": 122,
                     "buttonHeight": 83,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9356,8 +9356,8 @@
                     ],
                     "buttonWidth": 122,
                     "buttonHeight": 83,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9420,8 +9420,8 @@
                     ],
                     "buttonWidth": 123,
                     "buttonHeight": 83,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9484,8 +9484,8 @@
                     ],
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9548,8 +9548,8 @@
                     ],
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9612,8 +9612,8 @@
                     ],
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9676,8 +9676,8 @@
                     ],
                     "buttonWidth": 80.5,
                     "buttonHeight": 63,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9740,8 +9740,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9809,8 +9809,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9878,8 +9878,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9947,8 +9947,8 @@
                     ],
                     "buttonWidth": 84,
                     "buttonHeight": 26,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10011,8 +10011,8 @@
                     ],
                     "buttonWidth": 84,
                     "buttonHeight": 26,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10075,8 +10075,8 @@
                     ],
                     "buttonWidth": 84,
                     "buttonHeight": 26,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10139,8 +10139,8 @@
                     ],
                     "buttonWidth": 84,
                     "buttonHeight": 26,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10242,8 +10242,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10311,8 +10311,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10380,8 +10380,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10449,8 +10449,8 @@
                     ],
                     "buttonWidth": 45,
                     "buttonHeight": 45,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10518,8 +10518,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 90,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10582,8 +10582,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 90,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10756,8 +10756,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -10820,8 +10820,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -10884,8 +10884,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -10948,8 +10948,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -11012,8 +11012,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -11076,8 +11076,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -11140,8 +11140,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -11204,8 +11204,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_palmtree_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -11310,7 +11310,7 @@
                     "Active": true,
                     "Position": [
                         0,
-                        5.9897603988647461,
+                        6.1013050079345703,
                         -50.619834899902344
                     ],
                     "Quaternion": [
@@ -11320,9 +11320,9 @@
                         1
                     ],
                     "RotationEditor": [
+                        -0,
                         0,
-                        0,
-                        0
+                        -0
                     ],
                     "Scale": [
                         1,
@@ -11332,8 +11332,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_bigtable_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_bigtable_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -12356,8 +12356,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -12420,8 +12420,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -12484,8 +12484,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -12548,8 +12548,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -12612,8 +12612,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -12676,8 +12676,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_small_table_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -13610,8 +13610,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -13674,8 +13674,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -13738,8 +13738,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -13802,8 +13802,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -13866,8 +13866,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -13930,8 +13930,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -13994,8 +13994,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14058,8 +14058,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14122,8 +14122,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14186,8 +14186,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14250,8 +14250,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14314,8 +14314,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14355,9 +14355,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        1.687086820602417,
-                        5.4485154151916504,
-                        -47.758033752441406
+                        1.4500000476837158,
+                        5.4485158920288086,
+                        -47.639999389648438
                     ],
                     "Quaternion": [
                         0,
@@ -14366,9 +14366,9 @@
                         1
                     ],
                     "RotationEditor": [
+                        -0,
                         0,
-                        0,
-                        0
+                        -0
                     ],
                     "Scale": [
                         1,
@@ -14378,8 +14378,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14442,8 +14442,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14483,9 +14483,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        1.687086820602417,
-                        5.4485154151916504,
-                        -53.355861663818359
+                        1.4500000476837158,
+                        5.4485158920288086,
+                        -53.355857849121094
                     ],
                     "Quaternion": [
                         0,
@@ -14494,9 +14494,9 @@
                         1
                     ],
                     "RotationEditor": [
+                        -0,
                         0,
-                        0,
-                        0
+                        -0
                     ],
                     "Scale": [
                         1,
@@ -14506,8 +14506,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14547,8 +14547,8 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -1.5910656452178955,
-                        5.4485154151916504,
+                        -1.4500000476837158,
+                        5.4485158920288086,
                         -53.355857849121094
                     ],
                     "Quaternion": [
@@ -14558,9 +14558,9 @@
                         1
                     ],
                     "RotationEditor": [
+                        -0,
                         0,
-                        0,
-                        0
+                        -0
                     ],
                     "Scale": [
                         1,
@@ -14570,8 +14570,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14611,7 +14611,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -3.9146733283996582,
+                        -3.809999942779541,
                         5.4485154151916504,
                         -50.79803466796875
                     ],
@@ -14634,8 +14634,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -14675,9 +14675,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -1.5910656452178955,
+                        -1.4500000476837158,
                         5.4485154151916504,
-                        -47.758033752441406
+                        -47.639999389648438
                     ],
                     "Quaternion": [
                         0,
@@ -14686,9 +14686,9 @@
                         1
                     ],
                     "RotationEditor": [
+                        -0,
                         0,
-                        0,
-                        0
+                        -0
                     ],
                     "Scale": [
                         1,
@@ -14698,8 +14698,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_chair_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18346,8 +18346,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_basemap.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18410,8 +18410,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_basemap.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18474,8 +18474,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_basemap.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18538,8 +18538,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_basemap.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18602,8 +18602,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_basemap.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18666,8 +18666,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_basemap.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level2\/Textures\/prop_barrel_defaultmaterial_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18794,8 +18794,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -18927,8 +18927,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -19060,8 +19060,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -19193,8 +19193,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -19326,8 +19326,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -19459,8 +19459,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -19592,8 +19592,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -19725,8 +19725,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level3\/Textures\/prop_stairs1_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -21267,7 +21267,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "QuestSystem",
-                    "pointer": 554094256,
+                    "pointer": 696242512,
                     "type": 4,
                     "componentTable": 0,
                     "questList": 0,
@@ -21311,8 +21311,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21442,8 +21442,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21573,8 +21573,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21642,8 +21642,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21711,8 +21711,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21780,8 +21780,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21849,8 +21849,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21918,8 +21918,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -21987,8 +21987,8 @@
                     ],
                     "buttonWidth": 732,
                     "buttonHeight": 495,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -22051,8 +22051,8 @@
                     ],
                     "buttonWidth": 732.5,
                     "buttonHeight": 492,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 6,
+                    "lastButtonHeight": -14.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -22148,13 +22148,13 @@
                 {
                     "Type": 4,
                     "ScriptName": "Boss",
-                    "pointer": 667979680,
+                    "pointer": 696253760,
                     "type": 4,
                     "componentTable": 0,
                     "state": 0,
                     "index": 0,
                     "colliders": 0,
-                    "barrelLocations": 217329208,
+                    "barrelLocations": 151596712,
                     "barrelCount": 0,
                     "stunnedHits": 0
                 },

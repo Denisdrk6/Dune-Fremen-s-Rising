@@ -135,7 +135,7 @@ bool Scene::PostUpdate()
 	return true;
 }
 
-bool Scene::Draw(const AABB* shadowsIntersectionAABB)
+bool Scene::Draw()
 {
 	RG_PROFILING_FUNCTION("Scene PostUpdate");
 
@@ -152,29 +152,12 @@ bool Scene::Draw(const AABB* shadowsIntersectionAABB)
 		if (go->GetActive())
 		{
 			if (go != app->editor->GetGO() && !go->isUI)
-			{
-				if (app->renderer3D->genShadows)
-				{
-					if(shadowsIntersectionAABB->Contains(go->GetAABB()))
-						go->Draw(nullptr);
-				}
-				else
-				{
-					go->Draw(nullptr);
-				}
-
-			}
+				go->Draw(nullptr);
 
 			for (int i = 0; i < go->GetChilds().size(); ++i)
 				stack.push(go->GetChilds()[i]);
 		}
 	}
-	//for (int i = 0; i < root->GetChilds().size(); ++i)
-	//{
-	//	GameObject* go = root->GetChilds()[i];
-	//	if (go->GetActive())
-	//		go->Draw();
-	//}
 
 	return true;
 }

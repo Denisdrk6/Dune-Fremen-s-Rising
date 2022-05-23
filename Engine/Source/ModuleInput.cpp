@@ -46,7 +46,36 @@ bool ModuleInput::Init(JsonParsing& node)
 
 	FillScancodeNameList();
 
+	defaultCursor = CopyCursor(LoadCursor(0, IDC_ARROW));
+	LoadCursors();
+	currentCursor = CursorState::NORMAL;
+
 	return ret;
+}
+
+void ModuleInput::LoadCursors()
+{
+	std::string path;
+#ifdef DIST
+	ImportToLibrary();
+	path = "Library/Cursors/";
+#else
+	path = "Assets/Resources/Cursor/";
+#endif
+
+	cursors.push_back(defaultCursor);
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "chani_crysknife.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "paul_voice.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "paul_throwing_knife.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "paul_throw_stone.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "chani_crysknife.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "chani_camouflage.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "chani_hunter_seeker.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "chani_spice_grenade.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "stilgar_sword.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "stilgar_stunner.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "stilgar_trap.cur").c_str()));
+	cursors.push_back(LoadCursorFromFileA(std::string(path + "stilgar_whistle.cur").c_str()));
 }
 
 // Called every draw update
@@ -224,11 +253,18 @@ bool ModuleInput::PreUpdate(float dt)
 bool ModuleInput::CleanUp()
 {
 	DEBUG_LOG("Quitting SDL input event subsystem");
+
+	HCURSOR hCurDef = CopyCursor(defaultCursor);
+	SetSystemCursor(hCurDef, OCR_NORMAL);
+	DestroyCursor(hCurDef);
+
+	cursors.clear();
 	if (pad != NULL)
 	{
 		SDL_GameControllerClose(pad);
 		pad = nullptr;
 	}
+
 	SDL_QuitSubSystem(SDL_INIT_EVENTS);
 	return true;
 }
@@ -352,14 +388,29 @@ bool ModuleInput::GetAxis(int joystickId, JAxis axis)
 	return 0.0f;
 }
 
-HCURSOR ModuleInput::LoadCursorIcon(const char* iconPath, int width, int height)
+void ModuleInput::SetCursorState(int state)
 {
-	HICON i = (HICON)LoadImage(0, iconPath, IMAGE_ICON, width, height, LR_LOADFROMFILE);
+	currentCursor = (CursorState)state;
+	HCURSOR hCurDef = CopyCursor(cursors[state]);
+	SetSystemCursor(hCurDef, OCR_NORMAL);
+	DestroyCursor(hCurDef);
+}
 
-	ICONINFO icoInfo;
-	GetIconInfo(i, &icoInfo);
-	icoInfo.xHotspot = 0;
-	icoInfo.yHotspot = 0;
+void ModuleInput::ImportToLibrary()
+{
+	std::vector<std::string> files;
+	app->fs->DiscoverFiles("Assets/Resources/Cursor/", files);
 
-	return CreateIconIndirect(&icoInfo);
+	for (std::vector<std::string>::iterator it = files.begin(); it != files.end(); ++it)
+	{
+		std::string ext = (*it).substr((*it).find_last_of("."), (*it).length());
+		if (ext == ".cur")
+		{
+			std::string assetsPath = "Assets/Resources/Cursor/";
+			assetsPath += (*it);
+			std::string libraryPath = "Library/Cursors/";
+			libraryPath += (*it);
+			CopyFileA(assetsPath.c_str(), libraryPath.c_str(), false);
+		}
+	}
 }

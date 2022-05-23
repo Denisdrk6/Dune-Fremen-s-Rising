@@ -1,5 +1,6 @@
 #pragma once
 #include "Component.h"
+#include "Geometry/Frustum.h"
 
 class Light;
 class TransformComponent;

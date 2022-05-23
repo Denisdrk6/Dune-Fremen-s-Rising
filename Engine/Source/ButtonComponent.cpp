@@ -55,10 +55,8 @@ ButtonComponent::ButtonComponent(GameObject* own,bool isPart)
 	actual = normalMaterial;
 	LoadFont(fontPath.c_str());
 	
-
 	planeToDraw = new MyPlane(float3{ 0,0,0 }, float3{ 1,1,1 });
 	planeToDraw->own = own;
-
 }
 void ButtonComponent::LoadFont(const char* path) {
 	FT_Library ft;
@@ -140,6 +138,7 @@ void ButtonComponent::LoadFont(const char* path) {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 
+	RELEASE(shader);
 	shader = new Shadert("", "");
 }
 ButtonComponent::~ButtonComponent()

@@ -124,11 +124,15 @@ void DropDownComponent::loadFont(const char* path) {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 	glBindVertexArray(0);
 
+	RELEASE(shader);
 	shader = new Shadert("", "");
 }
 DropDownComponent::~DropDownComponent()
 {
 	RELEASE(planeToDraw);
+	RELEASE(shader);
+	//for (auto& i : buttonsArray) RELEASE(i);//must die here?
+	buttonsArray.clear();
 }
 std::string DropDownComponent::GetSelect() 
 {
