@@ -160,7 +160,7 @@ bool ModuleRenderer3D::Init(JsonParsing& node)
 	unsigned int indices[] = { 0,1,2,2,3,0 };
 
 	distVbo = new VertexBuffer();
-	distVbo->SetData(vertices, sizeof(vertices));
+	distVbo->SetData(vertices, sizeof(vertices), false);
 	distVbo->SetLayout({
 		{ShaderDataType::VEC3F, "position"},
 		{ShaderDataType::VEC2F, "texCoords"},
@@ -185,8 +185,16 @@ bool ModuleRenderer3D::Init(JsonParsing& node)
 	ComponentLight* lightComp = (ComponentLight*)goDirLight->CreateComponent(ComponentType::LIGHT);
 	lightComp->SetLight(dirLight);
 
-	vbo = new VertexBuffer();
-	
+
+	conesVao = new VertexArray();
+	conesVbo = new VertexBuffer();
+	conesVbo->SetLayout({
+		{ShaderDataType::VEC3F, "position"},
+		{ShaderDataType::VEC4F, "color"},
+	});
+	conesVao->AddVertexBuffer(*conesVbo);
+
+
 	genShadows = true;
 
 
@@ -217,23 +225,6 @@ bool ModuleRenderer3D::Start()
 
 bool ModuleRenderer3D::PreUpdate(float dt)
 {
-#ifndef DIST
-
-	//glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
-	//// Editor Camera FBO
-	//fbo->Bind();
-	//PushCamera(app->camera->matrixProjectionFrustum, app->camera->matrixViewFrustum);
-	//
-	//glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-	//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
-	//
-	//glMatrixMode(GL_PROJECTION);
-	//glLoadMatrixf(app->camera->matrixProjectionFrustum.Transposed().ptr());
-	//glMatrixMode(GL_MODELVIEW);
-	//glLoadMatrixf(app->camera->matrixViewFrustum.Transposed().ptr());
-
-#endif
-
 	return true;
 }
 
@@ -363,28 +354,21 @@ bool ModuleRenderer3D::PostUpdate()
 	}
 
 
-	vbo->SetData(enemyCones.data(), sizeof(float3) * enemyCones.size());
-	vbo->SetLayout({ {ShaderDataType::VEC3F, "position"} });
-	
-	float rcolor = 0;
-	float gcolor = 1;
-	float bcolor = 0;
+	conesVbo->SetData(enemyCones.data(), sizeof(ConeTriangle) * enemyCones.size(), true);
 
 	glEnable(GL_BLEND);
 	coneShader->Bind();
 	coneShader->SetUniformMatrix4f("projection", cam->matrixProjectionFrustum.Transposed());
 	coneShader->SetUniformMatrix4f("view", cam->matrixViewFrustum.Transposed());
-	
-	coneShader->SetUniform1f("rcolor", rcolor);
-	coneShader->SetUniform1f("gcolor", gcolor);
-	coneShader->SetUniform1f("bcolor", bcolor);
-	
-	vbo->Bind();
-	glVertexPointer(3, GL_FLOAT, 0, NULL);
-	glEnableClientState(GL_VERTEX_ARRAY);
-	glDrawArrays(GL_TRIANGLES, 0, enemyCones.size());
-	vbo->Unbind();
 
+	conesVao->Bind();
+	conesVbo->Bind();
+	//glVertexPointer(3, GL_FLOAT, 0, NULL);
+	//glVertexPointer(4, GL_FLOAT, sizeof(float3),(void*)offsetof(ConeTriangle, coneColor));
+	//glEnableClientState(GL_VERTEX_ARRAY);
+	glDrawArrays(GL_TRIANGLES, 0, enemyCones.size());
+	conesVbo->Unbind();
+	conesVao->Unbind();
 	coneShader->Unbind();
     enemyCones.clear();
 	glDisable(GL_BLEND);
@@ -487,11 +471,12 @@ bool ModuleRenderer3D::CleanUp()
 	RELEASE(fbo);
 	RELEASE(mainCameraFbo);
 	RELEASE(dirLight);
+	RELEASE(conesVbo);
+	RELEASE(conesVao);
 	//RELEASE(defaultShader);
 	RELEASE(distVao);
 	RELEASE(distVbo);
 	RELEASE(distIbo);
-	RELEASE(vbo);
 
 	for(auto& pl : pointLights)
 	{

@@ -545,10 +545,11 @@ public class PlayerManager : RagnarComponent
     {
         for (int i = 0; i < players.Length; i++)
         {
+            if (area != null) area[i].GetComponent<Light>().intensity = 0f;
             players[i].GetComponent<Player>().SetControled(false);
         }
         players[id].GetComponent<Player>().SetControled(true);
-        
+
     }
 
     public void SavePlayer()

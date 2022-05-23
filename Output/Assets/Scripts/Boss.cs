@@ -528,7 +528,7 @@ public class Boss : RagnarComponent
 		Vector3 bossForward = gameObject.transform.forward;
 		Vector3 initPos = new Vector3(bossPos.x + (bossForward.x * offset.x * 0.6f), bossPos.y + 0.1f, bossPos.z + (bossForward.z * offset.z * 0.6f));
 
-		index = RayCast.PerceptionCone(initPos, bossForward, angleDegrees, 16, 8, players, players.Length, "Collider");
+		index = RayCast.PerceptionCone(initPos, bossForward, angleDegrees, 16, 8, players, players.Length, "Collider", Time.deltaTime);
 		return (index == -1) ? false : true;
 	}
 

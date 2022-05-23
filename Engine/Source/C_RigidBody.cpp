@@ -743,4 +743,6 @@ void RigidBodyComponent::SetHeight(float height)
 
 		owner->GetComponent<MeshComponent>()->CalculateCM();
 	}
+	body->setActivationState(DISABLE_DEACTIVATION);
+	fActivation = true;
 }

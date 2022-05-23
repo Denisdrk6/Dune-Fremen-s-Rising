@@ -3,6 +3,7 @@
 #include "CameraComponent.h"
 #include "ModuleCamera3D.h"
 #include "ModuleRenderer3D.h"
+#include "ModuleInput.h"
 #include "ModuleEditor.h"
 #include "ModuleNavMesh.h"
 #include "Viewport.h"
@@ -62,7 +63,7 @@ MonoObject* HitToTag(MonoObject* initPos, MonoObject* endPos, MonoObject* tag)
 	return nullptr;
 }
 
-int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int rays, int radius, MonoArray* _players, int playersSize, MonoString* tagName)
+int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int rays, int radius, MonoArray* _players, int playersSize, MonoString* tagName, float time)
 {
 	float3 pointA = app->moduleMono->UnboxVector(initPos);
 	float3 forward = app->moduleMono->UnboxVector(_forward);
@@ -73,11 +74,13 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 
 	float angle = _angle * DEGTORAD;
 	forward = forward * float3x3::RotateY((360-(_angle/2)) * DEGTORAD);
-	std::vector<float3> vertex;
+	std::vector<ConeTriangle> vertex;
 	vertex.reserve(rays);
 	std::map<float, GameObject*> triangleMap;
 	float3 hit = float3::zero;
 
+	ConeTriangle coneTriangle;
+	
 	std::stack<QuadtreeNode*> nodes;
 	std::set<GameObject*> gameObjects;
 	float3 arrayPos[] = { forward * radius, forwardAux * float3x3::RotateY(angle / 2) * radius };
@@ -97,9 +100,16 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 			app->camera->ThrowRayCast(gameObjects, ray, triangleMap, hit);
 		else hit = ray.b;
 		
-		vertex.push_back(pointA); // origin
+		coneTriangle.conePosition = pointA;
+		coneTriangle.coneColor = { time, 1-time, 0, 0.3 };
+
+		vertex.push_back(coneTriangle); // origin
 		if (i != 0) vertex.push_back(vertex.at(vertex.size() - 2)); // previous 
-		vertex.push_back(hit); // this
+
+		coneTriangle.conePosition = hit;
+		coneTriangle.coneColor = { time, 1 - time, 0, 0.3 };
+
+		vertex.push_back(coneTriangle); // this
 
 		if (i == 1)
 		{
@@ -113,7 +123,7 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 	int ret = -1;
 	for (size_t i = 0; i < vertex.size() && ret == -1 ; i+=3)
 	{
-		Triangle t(vertex[i], vertex[i+1], vertex[i+2]);
+		Triangle t(vertex[i].conePosition, vertex[i+1].conePosition, vertex[i+2].conePosition);
 		for (size_t j = 0; j < players.size(); j++)
 		{
 			TransformComponent* transform = players.at(j)->GetComponent<TransformComponent>();
@@ -144,13 +154,13 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 		int numCones = sizeCon / vertex.size();
 		for (int i = 0; i < vertex.size(); i++)
 		{
-			vertex[i].y += 0.01f * numCones;
+			vertex[i].conePosition.y += 0.01f * numCones;
 		}
 	}
 
 	// Add to enemyCones list
 	app->renderer3D->enemyCones.resize(sizeCon + vertex.size());
-	memcpy(&app->renderer3D->enemyCones[sizeCon], &vertex[0], vertex.size() * sizeof(float3));
+	memcpy(&app->renderer3D->enemyCones[sizeCon], &vertex[0], vertex.size() * sizeof(ConeTriangle));
 
 	return ret;
 }

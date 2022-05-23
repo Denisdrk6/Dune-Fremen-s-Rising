@@ -5,6 +5,8 @@
 #include "SDL_video.h"
 #include "Geometry/AABB.h"
 
+#include "ConeTriangle.h"
+
 #include <vector>
 #include <set>
 #include <utility>
@@ -126,7 +128,7 @@ public:
 	std::vector<PointLight*> pointLights;
 	std::vector<SpotLight*> spotLights;
 
-	std::vector<float3> enemyCones;
+	std::vector<ConeTriangle> enemyCones;
 	
 	bool genShadows;
 
@@ -146,7 +148,8 @@ private:
 	std::shared_ptr<Texture> damageTexture;
 	std::shared_ptr<Texture> whiteTexture;
 
-	VertexBuffer* vbo;
+	VertexArray* conesVao;
+	VertexBuffer* conesVbo;
 	std::shared_ptr<Shader> coneShader;
 
 	unsigned int shadowsFbo;

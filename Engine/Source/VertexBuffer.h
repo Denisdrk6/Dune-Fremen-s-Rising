@@ -20,14 +20,15 @@ class VertexBuffer
 {
 public:
 	VertexBuffer();
-	VertexBuffer(const void* data, unsigned int c);
-	VertexBuffer(const std::vector<Vertex>& vertices);
+	VertexBuffer(const void* data, unsigned int c, bool dynamicDraw = false);
+	VertexBuffer(const std::vector<Vertex>& vertices, bool dynamicDraw = false);
 	~VertexBuffer();
 
-	void SetData(const std::vector<Vertex>&);
-	void SetData(float* vertices);
+	void SetData(const std::vector<Vertex>&, bool dynamicDraw = false);
+	void SetData(float* vertices, bool dynamicDraw = false);
+	// Only for DYNAMIC BUFFERS
 	void SetData(unsigned int size);
-	void SetData(void* vertices, uint32_t size);
+	void SetData(void* vertices, uint32_t size, bool dynamicDraw = false);
 
 
 	void Bind() const;

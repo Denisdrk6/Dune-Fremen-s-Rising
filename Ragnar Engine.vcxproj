@@ -292,6 +292,7 @@
     <ClInclude Include="Engine\Source\CameraComponent.h" />
     <ClInclude Include="Engine\Source\CheckBoxComponent.h" />
     <ClInclude Include="Engine\Source\CommandsDispatcher.h" />
+    <ClInclude Include="Engine\Source\ConeTriangle.h" />
     <ClInclude Include="Engine\Source\C_RigidBody.h" />
     <ClInclude Include="Engine\Source\DialogueSystem.h" />
     <ClInclude Include="Engine\Source\DropDownComponent.h" />

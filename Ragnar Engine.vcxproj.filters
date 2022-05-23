@@ -793,6 +793,7 @@
     <ClInclude Include="Engine\Source\InputActionBindings.h">
       <Filter>Sources\Tools\Bindings</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\Source\ConeTriangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Source\C_RigidBody.h">

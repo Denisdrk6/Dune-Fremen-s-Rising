@@ -209,8 +209,6 @@ bool CameraComponent::Update(float dt)
 		targetUID = 0;
 	}*/
 
-	Zoom();
-
 	if (target && app->input->GetKey(SDL_SCANCODE_F) == KeyState::KEY_DOWN)
 	{
 		fixingToTarget ^= true;
@@ -249,6 +247,7 @@ bool CameraComponent::Update(float dt)
 	{
 		UpdateMovement();
 		UpdateRotation();
+		Zoom();
 	}
 
 

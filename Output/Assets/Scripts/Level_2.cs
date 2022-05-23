@@ -39,7 +39,7 @@ public class Level_2 : RagnarComponent
         }
 
         // PLAYERS
-        characters = new Characters[3];
+        characters = new Characters[2];
         // Player 1
         characters[0] = new Characters
         {
@@ -48,7 +48,7 @@ public class Level_2 : RagnarComponent
             state = State.NONE,
             abilities = new Abilities[4],
             hitPoints = 3,
-            pos = new Vector3(-0.25f, 1f, -345.38f)
+            pos = new Vector3(-90.12f, 1f, 95.10f)
         };
         characters[0].abilities[0] = new Abilities
         {
@@ -107,7 +107,7 @@ public class Level_2 : RagnarComponent
             state = State.NONE,
             abilities = new Abilities[4],
             hitPoints = 2,
-            pos = new Vector3(3.29f, 0f, -343.98f)
+            pos = new Vector3(-92.83f, 1f, 89.41f)
         };
         characters[1].abilities[0] = new Abilities
         {
@@ -157,65 +157,6 @@ public class Level_2 : RagnarComponent
             charges = -1,
             cooldown = 30f
         }; // Spice Bomb
-
-        // Player 3
-        characters[2] = new Characters
-        {
-            name = "Stilgar",
-            prefabPath = "Player_3",
-            state = State.NONE,
-            abilities = new Abilities[4],
-            hitPoints = 4,
-            pos = new Vector3(-4.82f, 0f, -347.26f)
-        };
-        characters[2].abilities[0] = new Abilities
-        {
-            name = "Sword Slash",
-            prefabPath = "SwordSlash",
-            transformY = 0.2f,
-            intensity = 1.250f,
-            constant = 0.1f,
-            linear = -0.574f,
-            quadratic = 0f,
-            charges = -1,
-            cooldown = 0f
-        }; // Sword Slash
-        characters[2].abilities[1] = new Abilities
-        {
-            name = "Stunner",
-            prefabPath = "StunnerShot",
-            transformY = 1.32f,
-            intensity = 1.250f,
-            constant = 1.232f,
-            linear = -0.172f,
-            quadratic = 0f,
-            charges = 4,
-            cooldown = 5f
-        }; // Stunner Shot
-        characters[2].abilities[2] = new Abilities
-        {
-            name = "Trap",
-            prefabPath = "Trap",
-            transformY = 0.12f,
-            intensity = 1.250f,
-            constant = 0.100f,
-            linear = -0.942f,
-            quadratic = 0f,
-            charges = 1,
-            cooldown = 0f
-        }; // Trap
-        characters[2].abilities[3] = new Abilities
-        {
-            name = "Whistle",
-            prefabPath = "Whistle",
-            transformY = 1.12f,
-            intensity = 1.250f,
-            constant = 1.232f,
-            linear = -0.201f,
-            quadratic = 0f,
-            charges = -1,
-            cooldown = 6f
-        }; // Whistle
 
         // ENEMIES
         enemies = new Enemies[70];

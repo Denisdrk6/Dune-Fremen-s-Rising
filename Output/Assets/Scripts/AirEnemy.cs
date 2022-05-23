@@ -51,6 +51,9 @@ public class AirEnemy : RagnarComponent
     bool stunned = false;
     float stunnedTimer = -1f;
 
+    float coneTimer = 0.0f;
+    int coneMaxTime = 3;
+
     GameObject[] childs;
     ParticleSystem deathPartSys;
     public void Start()
@@ -109,12 +112,29 @@ public class AirEnemy : RagnarComponent
                         }
                         if (PerceptionCone())
                         {
-                            agents.speed = initialSpeed * 1.2f;
-                            Shoot();
+                            coneTimer += Time.deltaTime;
+
+                            if (coneTimer >= coneMaxTime)
+                            {
+                                agents.speed = initialSpeed * 1.2f;
+                                Shoot();
+                            }
                         }
                         else
                         {
                             agents.speed = initialSpeed;
+                            coneTimer -= Time.deltaTime;
+                            if (coneTimer < 0) coneTimer = 0;
+                        }
+                        if (!canShoot && shootCooldown >= 0)
+                        {
+                            Debug.Log(shootCooldown.ToString());
+                            shootCooldown -= Time.deltaTime;
+                            if (shootCooldown < 0)
+                            {
+                                shootCooldown = 0f;
+                                canShoot = true;
+                            }
                         }
                     }
                 }
@@ -215,7 +235,7 @@ public class AirEnemy : RagnarComponent
         Vector3 enemyForward = gameObject.transform.forward;
         Vector3 initPos = new Vector3(enemyPos.x + (enemyForward.x * offset.x * 0.6f), enemyPos.y + 0.1f, enemyPos.z + (enemyForward.z * offset.z * 0.6f));
 
-        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 12, players, players.Length, "Collider");
+        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 12, players, players.Length, "Collider", Time.deltaTime);
         if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }
@@ -229,7 +249,7 @@ public class AirEnemy : RagnarComponent
             //TODO_AUDIO
             audioComponent.PlayClip("EDRONE_SHOOT");
             canShoot = false;
-            shootCooldown = 4f;
+            shootCooldown = 1f;
 
             Vector3 pos = gameObject.transform.globalPosition;
             pos.y += 0.5f;
@@ -239,19 +259,6 @@ public class AirEnemy : RagnarComponent
             bulletScript.enemy = gameObject;
             bulletScript.index = index;
             bulletScript.offset = offset;
-        }
-
-        if (!canShoot)
-        {
-            if (shootCooldown >= 0)
-            {
-                shootCooldown -= Time.deltaTime;
-                if (shootCooldown < 0)
-                {
-                    shootCooldown = 0f;
-                    canShoot = true;
-                }
-            }
         }
     }
 
