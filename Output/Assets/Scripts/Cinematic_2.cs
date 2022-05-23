@@ -33,12 +33,14 @@ public class Cinematic_2 : RagnarComponent
         GameObject char_enemy2 = GameObject.Find("char_enemy2");
         GameObject char_enemy3 = GameObject.Find("char_enemy3");
         GameObject char_enemy4 = GameObject.Find("char_enemy4");
+        GameObject char_hostage = GameObject.Find("char_hostage");
 
         char_boss.GetComponent<Animation>().PlayAnimation("Run");
         char_enemy1.GetComponent<Animation>().PlayAnimation("Idle");
         char_enemy2.GetComponent<Animation>().PlayAnimation("Idle");
         char_enemy3.GetComponent<Animation>().PlayAnimation("Idle");
         char_enemy4.GetComponent<Animation>().PlayAnimation("Idle");
+        char_hostage.GetComponent<Animation>().PlayAnimation("Knee Idle");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 

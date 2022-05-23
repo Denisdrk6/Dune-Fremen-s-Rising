@@ -53,12 +53,13 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_2",
-                    "pointer": 564297088,
+                    "pointer": 532463584,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
                     "bands": 0,
-                    "IdDialogue": 0
+                    "IdDialogue": 0,
+                    "IdLine": 0
                 }
             ]
         },
@@ -144,19 +145,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        36.698886871337891,
+                        30.140748977661133,
                         0,
-                        -28.838663101196289
+                        -27.600305557250977
                     ],
                     "Quaternion": [
                         0,
-                        0.97652792930603027,
+                        0.94213622808456421,
                         0,
-                        0.21539078652858734
+                        0.33523336052894592
                     ],
                     "RotationEditor": [
                         -3.1415927410125732,
-                        0.43418398499488831,
+                        -1.5746361017227173,
                         -3.1415927410125732
                     ],
                     "Scale": [
@@ -183,14 +184,14 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
-                        61.659397125244141,
-                        -56.053977966308594
+                        -2.86102294921875e-06,
+                        48.34063720703125,
+                        -43.946037292480469
                     ],
                     "Quaternion": [
                         0.34202015399932861,
-                        -1.1212962114370839e-08,
-                        0,
+                        7.9287394427751678e-09,
+                        7.9287412191320072e-09,
                         0.93969273567199707
                     ],
                     "RotationEditor": [
@@ -201,35 +202,35 @@
                     "Scale": [
                         1.414210319519043,
                         1.0000002384185791,
-                        1.0000003576278687
+                        1.0000004768371582
                     ]
                 },
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.39351186156272888,
+                    "Vertical Fov": 0.39120060205459595,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        13.11802864074707,
-                        61.659397125244141,
-                        22.015600204467773
+                        2.3805856704711914,
+                        48.34063720703125,
+                        6.4693741798400879
                     ],
                     "Type": 3,
-                    "Zoom": -14,
+                    "Zoom": -11,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        36.698886871337891,
+                        30.140748977661133,
                         0,
-                        -28.838663101196289
+                        -27.600305557250977
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 155.12309265136719,
+                    "Horizontal Angle": 205.52328491210938,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -8766,7 +8767,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 564302408,
+                    "pointer": 532472552,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -8804,8 +8805,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1439,
-                    "lastButtonHeight": 692.5,
+                    "lastButtonWidth": 1431,
+                    "lastButtonHeight": 684.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9286,7 +9287,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -254,
+                        -249.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -9301,8 +9302,8 @@
                     ],
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1439,
-                    "lastButtonHeight": 692.5,
+                    "lastButtonWidth": 1431,
+                    "lastButtonHeight": 684.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9350,7 +9351,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        255,
+                        250,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -9365,8 +9366,8 @@
                     ],
                     "buttonWidth": 2028.5,
                     "buttonHeight": 183.5,
-                    "lastButtonWidth": 1439,
-                    "lastButtonHeight": 692.5,
+                    "lastButtonWidth": 1431,
+                    "lastButtonHeight": 684.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -9560,7 +9561,7 @@
             "Name": "char_hostage",
             "Active": true,
             "Static": false,
-            "PrefabID": false,
+            "PrefabID": true,
             "Prefab Path": "Assets\/Prefabs\/Hostage.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
@@ -9631,6 +9632,48 @@
                     "NumPolys": 0,
                     "NumStraight": 0,
                     "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Up",
+                    "Animations": [
+                        {
+                            "State": "Idle Sad",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Knee Down",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneedown__char_hostagefemale_kneedown|char_hostage_kneedown|char_hostage_kneedown|char_hostage_kneedo.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneeidle__char_hostagefemale_kneeidle|char_hostage_kneeidle|char_hostage_kneeidle|char_hostage_kneeid.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_run__char_hostagefemale_run|char_hostage_run|char_hostage_run|char_hostage_run.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_walk__char_hostagefemale_walk|char_hostage_walksad|char_hostage_walksad|char_hostage_walksad.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Turn Around",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_turnaround__char_hostagefemale_turnaround|char_hostage_turnaround|char_hostage_turnaround|char_hostage_tu.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Up",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_up__char_hostagefemale_up|char_hostage_up|char_hostage_up|char_hostage_up.fbx",
+                            "Loop": false
+                        }
+                    ]
                 }
             ]
         }
