@@ -101,13 +101,15 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 		else hit = ray.b;
 		
 		coneTriangle.conePosition = pointA;
-		coneTriangle.coneColor = { time, 1-time, 0, 0.3 };
+		coneTriangle.coneColor = { time, 1 - time, 0, 0.3 };
+		//coneTriangle.detectionTime = time;
 
 		vertex.push_back(coneTriangle); // origin
 		if (i != 0) vertex.push_back(vertex.at(vertex.size() - 2)); // previous 
 
 		coneTriangle.conePosition = hit;
 		coneTriangle.coneColor = { time, 1 - time, 0, 0.3 };
+		//coneTriangle.detectionTime = time;
 
 		vertex.push_back(coneTriangle); // this
 
@@ -137,6 +139,18 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 					if (t.Intersects(Capsule(bottomPoint, topPoint, 0.60f))) 
 					{
 						ret = j;
+						//float3 maxDistance = (transform->GetGlobalPosition() - float3(radius));
+						float3 dist = (transform->GetGlobalPosition() - pointA);
+						
+						//float distance = (transform->GetGlobalPosition() - pointA).Length()/* / md*/;
+						//float distance = float3(dist / maxDistance).Length() / (radius + 0.5);
+						float maxDistance = (transform->GetGlobalPosition() - pointA).Length();
+						//float distance = 0;
+
+						float distance = maxDistance * time;
+						vertex.at(i).distance = time;
+						DEBUG_LOG("DISTANCE %f", vertex.at(i).distance);
+						DEBUG_LOG("RADIUUUUUUUUUUUUUUS %i", radius);
 						break;
 					}
 				}

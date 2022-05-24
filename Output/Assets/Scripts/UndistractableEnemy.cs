@@ -148,7 +148,6 @@ public class UndistractableEnemy : RagnarComponent
                         }
                         if (!canShoot && shootCooldown >= 0)
                         {
-                            Debug.Log(shootCooldown.ToString());
                             shootCooldown -= Time.deltaTime;
                             if (shootCooldown < 0)
                             {

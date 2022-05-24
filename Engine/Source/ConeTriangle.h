@@ -3,7 +3,7 @@
 
 struct ConeTriangle
 {
-
 	float3 conePosition;
 	float4 coneColor;
+	float distance = -1;
 };

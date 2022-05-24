@@ -191,6 +191,7 @@ bool ModuleRenderer3D::Init(JsonParsing& node)
 	conesVbo->SetLayout({
 		{ShaderDataType::VEC3F, "position"},
 		{ShaderDataType::VEC4F, "color"},
+		{ShaderDataType::FLOAT, "detectionTime"},
 	});
 	conesVao->AddVertexBuffer(*conesVbo);
 
@@ -363,10 +364,9 @@ bool ModuleRenderer3D::PostUpdate()
 
 	conesVao->Bind();
 	conesVbo->Bind();
-	//glVertexPointer(3, GL_FLOAT, 0, NULL);
-	//glVertexPointer(4, GL_FLOAT, sizeof(float3),(void*)offsetof(ConeTriangle, coneColor));
-	//glEnableClientState(GL_VERTEX_ARRAY);
+	
 	glDrawArrays(GL_TRIANGLES, 0, enemyCones.size());
+	
 	conesVbo->Unbind();
 	conesVao->Unbind();
 	coneShader->Unbind();
