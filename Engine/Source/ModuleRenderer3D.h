@@ -93,7 +93,7 @@ public:
 private:
 	void PushCamera(const float4x4& proj, const float4x4& view);
 	void DebugDraw(GameObject* objSelected);
-	void GenerateShadows(const std::set<GameObject*>& objects, CameraComponent* gameCam, AABB& shadowsAABB);
+	void GenerateShadows(const std::set<GameObject*>& objects, CameraComponent* gameCam);
 
 	void DrawDamageFeedback();
 

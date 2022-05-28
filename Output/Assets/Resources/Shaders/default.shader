@@ -199,7 +199,7 @@ vec4 CalculateShadow(vec4 fragPosLightSpace, vec3 normal, vec3 lightDir)
 		for (int x = -sampleRadius; x <= sampleRadius; x++)
 		{
 			texCoord += vec2(dx * x, dy * y);
-			colorSum += texture(tex, texCoord);
+			colorSum += texture(tex, vTexCoords);
 			float pcfDepth = texture(depthTexture, projCoords.xy + vec2(x, y) * pixelSize).x;
 			shadow += currentDepth + bias > pcfDepth ? 1 : 0;
 		}
@@ -337,14 +337,14 @@ void main()
 	vec3 viewDir = normalize(vCamPos - vPosition);
 	vec3 result = CalcDirLight(dirLight, norm, viewDir);
 	
-	for (int i = 0; i < MAX_POINT_LIGHTS; ++i)
-		result += CalcPointLight(pointLights[i], norm, vPosition, viewDir);
-	
-	for (int i = 0; i < MAX_SPOT_LIGHTS; ++i)
-		result += CalcSpotLight(spotLights[i], norm, vPosition, viewDir);
+	//for (int i = 0; i < MAX_POINT_LIGHTS; ++i)
+	//	result += CalcPointLight(pointLights[i], norm, vPosition, viewDir);
+	//
+	//for (int i = 0; i < MAX_SPOT_LIGHTS; ++i)
+	//	result += CalcSpotLight(spotLights[i], norm, vPosition, viewDir);
 
 
-	fragColor = texture(tex , vTexCoords) * vec4(result, opacity);
+	fragColor = texture(tex , vTexCoords) * vec4(result, 1);
 	fragColor.rgb += interCol * isInteractuable * interColIntensity;
 
 	fragColor += emissiveEnabled * vec4(material.emissiveColor, 1);

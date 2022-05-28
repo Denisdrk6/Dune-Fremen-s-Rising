@@ -239,7 +239,6 @@ bool ModuleRenderer3D::PostUpdate()
 	// TODO: wtf quadtree man.
 	app->sceneManager->GetCurrentScene()->GetQuadtree().Intersect(objects, app->sceneManager->GetCurrentScene()->mainCamera, 1.75f);
 	
-	AABB shadowsAABB;
 #ifndef DIST
 
 	PushCamera(app->camera->matrixProjectionFrustum, app->camera->matrixViewFrustum);
@@ -266,7 +265,7 @@ bool ModuleRenderer3D::PostUpdate()
 	
 	if (dirLight->generateShadows)
 	{
-		GenerateShadows(objects, nullptr, shadowsAABB);
+		GenerateShadows(objects, nullptr);
 	}
 
 	// Scene Pass ====================================
@@ -316,14 +315,16 @@ bool ModuleRenderer3D::PostUpdate()
 
 	if (dirLight->generateShadows)
 	{
-		GenerateShadows(objects, app->sceneManager->GetCurrentScene()->mainCamera, shadowsAABB);
+		GenerateShadows(objects, app->sceneManager->GetCurrentScene()->mainCamera);
 	}
-
+	
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
 	// Scene Pass ====================================
 	mainCameraFbo->Bind();
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+	
 #ifdef DIST
 	GLenum drawBuffers[] = { GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1 };
 #endif
@@ -810,7 +811,7 @@ void ModuleRenderer3D::DebugDraw(GameObject* objSelected)
 	}
 }
 
-void ModuleRenderer3D::GenerateShadows(const std::set<GameObject*>& objects, CameraComponent* gameCam, AABB& shadAABB)
+void ModuleRenderer3D::GenerateShadows(const std::set<GameObject*>& objects, CameraComponent* gameCam)
 {
 	glBindFramebuffer(GL_FRAMEBUFFER, shadowsFbo);
 	glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -821,9 +822,6 @@ void ModuleRenderer3D::GenerateShadows(const std::set<GameObject*>& objects, Cam
 
 	glCullFace(GL_FRONT);
 	genShadows = true;
-
-	AABB shadowsAABB = shadAABB;
-	shadowsAABB.SetNegativeInfinity();
 
 	std::vector<GameObject*> gos;
 	if (!gameCam)
