@@ -32,6 +32,7 @@ public class BackStabEnemy : RagnarComponent
 		{
 			backstabed = true;
 			Vector3 behind = selectedEnemy.transform.globalPosition - (selectedEnemy.transform.forward * 1);
+			behind.y = -0.8f;
 			enemyPlayer.GetComponent<Rigidbody>().SetBodyPosition(behind);
 			if (selectedEnemy.GetComponent<BasicEnemy>().ToString() == "BasicEnemy")
 			{

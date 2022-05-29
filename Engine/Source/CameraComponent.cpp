@@ -603,10 +603,3 @@ void CameraComponent::Shake(float dt)
 		camera.SetPos(originalPos);
 	}
 }
-
-// Scripting
-void CameraComponent::ScriptMovement(float x, float y, float z)
-{
-	controllerTrans->SetPosition(float3(x, y, z));
-	controllerTrans->ForceUpdateTransform();
-}

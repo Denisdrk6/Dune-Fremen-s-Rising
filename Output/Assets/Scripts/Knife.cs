@@ -36,21 +36,19 @@ public class Knife : RagnarComponent
         gameObject.transform.localPosition = pos;
 
         Vector3 direction = HitEnemy(agent, player);
-		if(direction != null)
-        {
-			Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
-			goRB.SetBodyPosition(pos);
 
-			Vector3 newForward = direction.normalized;
-			double angle = Math.Atan2(newForward.x, newForward.z);
-			Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
-			goRB.SetBodyRotation(rot);
+        Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
+        goRB.SetBodyPosition(pos);
 
-			goRB.IgnoreCollision(player, true);
-			goRB.ApplyCentralForce(newForward * force);
-		}
+		Vector3 newForward = direction.normalized;
+		double angle = Math.Atan2(newForward.x, newForward.z);
+		Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+		goRB.SetBodyRotation(rot);
 
- 		agent.hitPosition = player.transform.globalPosition;
+        goRB.IgnoreCollision(player, true);
+        goRB.ApplyCentralForce(newForward * force);
+
+		agent.hitPosition = player.transform.globalPosition;
 	}
 
     public void Update()
@@ -72,7 +70,6 @@ public class Knife : RagnarComponent
 			if (!grabOnce)
 			{
 				grabOnce = true;
-				GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].cooldown;
 				audioSourceComponent.PlayClip("WPN_THORWINGKNIFERECOVERSAND");
 			}
 
@@ -83,23 +80,17 @@ public class Knife : RagnarComponent
 
 	private Vector3 HitEnemy(NavAgent agent, GameObject player)
 	{
-		GameObject enemy = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
-		if (enemy != null && Transform.GetDistanceBetween(player.transform.globalPosition, enemy.transform.globalPosition) < 15)
+		
+			
+		GameObject obj = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+
+		if (obj != null)
 		{
-			switch (enemy.GetComponent<BasicEnemy>().state)
-			{
-				case EnemyState.DEATH:
-					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].cooldown;
-					return null;
-				case EnemyState.IS_DYING:
-					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].cooldown;
-					return null;
-				default:
-					return enemy.transform.globalPosition - player.transform.globalPosition;
-			}
+			//Debug.Log(obj.name.ToString());
+			return obj.transform.globalPosition - player.transform.globalPosition;
 		}
-		GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].cooldown;
-		return null;
+
+		return agent.hitPosition - player.transform.globalPosition;
 	}
 
 	public void OnCollision(Rigidbody other)

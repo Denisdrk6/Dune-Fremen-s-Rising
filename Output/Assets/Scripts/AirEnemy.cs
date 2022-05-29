@@ -52,7 +52,7 @@ public class AirEnemy : RagnarComponent
     float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
-    int coneMaxTime = 1;
+    int coneMaxTime = 3;
 
     GameObject[] childs;
     ParticleSystem deathPartSys;

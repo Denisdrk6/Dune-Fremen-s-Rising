@@ -45,9 +45,9 @@ public class Credits : RagnarComponent
 		Pos.Set(-140, -(InternalCalls.GetRegionGame().y / 2) -50, 36.1f);
 		TextTitles.GetComponent<Transform2D>().position2D = Pos;
 
-		Pos.Set(20, -(InternalCalls.GetRegionGame().y / 2) - 5000, -10.4f);
+		Pos.Set(20, -(InternalCalls.GetRegionGame().y / 2) - 4300, -10.4f);
 		UPCLogo.GetComponent<Transform2D>().position2D = Pos;
-		Pos.Set(30, -(InternalCalls.GetRegionGame().y / 2) - 5150, -10.4f);
+		Pos.Set(30, -(InternalCalls.GetRegionGame().y / 2) - 4450, -10.4f);
 		RagnarLogo.GetComponent<Transform2D>().position2D = Pos;
 
 		finish = false;

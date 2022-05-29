@@ -54,7 +54,6 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.Input::SetCursorState", SetCursorState);
 	mono_add_internal_call("RagnarEngine.Input::GetCursorState", GetCursorState);
 	mono_add_internal_call("RagnarEngine.Input::SetEagleCursor", SetEagleCursor);
-	mono_add_internal_call("RagnarEngine.Input::RestoreDefaultCursor", RestoreDefaultCursor);
 	// Input =====================
 
 	// Transform =================
@@ -224,7 +223,6 @@ bool MonoManager::Init(JsonParsing& node)
 	// Camera ====================
 	mono_add_internal_call("RagnarEngine.Camera::LookAt", LookAt);
 	mono_add_internal_call("RagnarEngine.Camera::ChangeFov", ChangeFov);
-	mono_add_internal_call("RagnarEngine.Camera::ScriptMovement", ScriptMovement);
 
 	// Camera ====================
 

@@ -39,12 +39,6 @@ void ChangeFov(MonoObject* go, float newFov)
 	camComp->CompileBuffers();
 }
 
-void ScriptMovement(MonoObject* go, float x, float y, float z)
-{
-	CameraComponent* cam = GetComponentMono<CameraComponent*>(go);
-	cam->ScriptMovement(x, y, z);
-}
-
 MonoObject* HitToTag(MonoObject* initPos, MonoObject* endPos, MonoObject* tag)
 {
 	float3 pointA = app->moduleMono->UnboxVector(initPos);

@@ -26,11 +26,7 @@ public class HunterSeeker : RagnarComponent
 		Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
 		rb.SetBodyRotation(rot);
 		rb.SetBodyPosition(pos);
-
-        for (int i = 0; i < GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters.Length; i++)
-        {
-			rb.IgnoreCollision(GameObject.Find("PlayerManager").GetComponent<PlayerManager>().players[i], true);
-		}
+		rb.IgnoreCollision(player, true);
 
         sceneAudio = GameObject.Find("AudioLevel1");
         sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_HUNTERSEEKERNEEDLE");
@@ -69,7 +65,7 @@ public class HunterSeeker : RagnarComponent
 		}
 		if (Input.GetKey(KeyCode.ALPHA1) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA2) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA3) == KeyState.KEY_DOWN)
 		{
-			GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[1].abilities[2].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[1].abilities[2].cooldown;
+			GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[1].abilities[2].cooldown = 0;
 			leftParticles.Pause();
 			rightParticles.Pause();
 			InternalCalls.Destroy(gameObject);

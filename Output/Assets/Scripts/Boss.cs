@@ -89,7 +89,6 @@ public class Boss : RagnarComponent
 	bool bossStop = false;
 	float countDown = 5.0f;
 
-	bool hitted = false;
 
 	string[] animations = new string[14];
 	//int indexAnim = 0;
@@ -147,37 +146,17 @@ public class Boss : RagnarComponent
 			NextState();
 		}
 
-		if (!hitted)
+		if (state == BossState.PHASE2)
 		{
-			if (state == BossState.PHASE2)
-			{
-				Phase2();
-			}
-			else if (state == BossState.PHASE3)
-			{
-				Phase3();
-			}
-			else if (state == BossState.PHASE4)
-			{
-				Phase4();
-			}
+			Phase2();
 		}
-        else 
+		else if (state == BossState.PHASE3)
 		{
-			if (animationComponent.HasFinished())
-			{
-				hitted = false;
-				if (state == BossState.PHASE4)
-				{
-					SceneManager.LoadScene("WinScene");
-					InternalCalls.Destroy(gameObject);
-				}
-				else
-				{
-					state++;
-					NextState();
-				}
-			}
+			Phase3();
+		}
+		else if (state == BossState.PHASE4)
+		{
+			Phase4();
 		}
 
 		//if (Input.GetKey(KeyCode.M) == KeyState.KEY_DOWN)
@@ -229,11 +208,11 @@ public class Boss : RagnarComponent
 	{
 		animationComponent.PlayAnimation("CallBackup");
 
-		GameObject enemy1 = InternalCalls.InstancePrefab("Basic Enemy 15", new Vector3(5.56f, 9.34f, -53.60f));
-		enemy1.GetComponent<BasicEnemy>().state = EnemyState.IDLE;
+		GameObject enemy1 = InternalCalls.InstancePrefab("Basic Enemy 15", new Vector3(2.07f, 6.66f, -19.0f));
+		enemy1.GetComponent<EnemyBoss>().colliders = colliders;
 
-		GameObject enemy2 = InternalCalls.InstancePrefab("Basic Enemy 16", new Vector3(-5.56f, 9.34f, -53.60f));
-		enemy2.GetComponent<BasicEnemy>().state = EnemyState.IDLE;
+		GameObject enemy2 = InternalCalls.InstancePrefab("Basic Enemy 16", new Vector3(0.61f, 6.66f, -8.0f));
+		enemy2.GetComponent<EnemyBoss>().colliders = colliders;
 	}
 	public void GenerateRocks()
 	{
@@ -611,16 +590,9 @@ public class Boss : RagnarComponent
 	{
 		if (!shieldInmunity)
 		{
-			if (state == BossState.PHASE4)
-            {
-				animationComponent.PlayAnimation("Execdie");
-			}
-			else
-            {
-				animationComponent.PlayAnimation("Die");
-			}
+			state++;
 			stabParticles.Play();
-			hitted = true;
+			NextState();
 		}
 	}
 	public void OnCollision(Rigidbody other)
@@ -628,11 +600,9 @@ public class Boss : RagnarComponent
 		if (other.gameObject.name == "BackStab" && !shieldInmunity)
 		{
 			state++;
-			animationComponent.PlayAnimation("Die");
-			hitted = true;
+			NextState();
 			if (state == BossState.PHASE4)
 			{
-				Input.RestoreDefaultCursor();
 				SceneManager.LoadScene("WinScene");
 			}
 		}
