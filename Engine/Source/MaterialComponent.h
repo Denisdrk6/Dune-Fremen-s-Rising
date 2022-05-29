@@ -90,5 +90,4 @@ private:
 	float refreshShaderTimer;
 	bool defaultMat;
 	bool emissiveEnabled;
-	float colorMultiplier;
 };
