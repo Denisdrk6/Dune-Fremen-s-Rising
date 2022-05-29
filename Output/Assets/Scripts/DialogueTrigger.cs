@@ -104,6 +104,7 @@ public class DialogueTrigger : RagnarComponent
             nexLevel = true;
             isUsed = false;
             GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveTest("WIIIIIN", gameObject.transform.globalPosition);
+            Input.RestoreDefaultCursor();
             SceneManager.LoadScene("WinScene");
         }
     }

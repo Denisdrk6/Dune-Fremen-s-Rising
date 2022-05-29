@@ -50,7 +50,7 @@ public class TankEnemy : RagnarComponent
     float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
-    int coneMaxTime = 3;
+    int coneMaxTime = 1;
 
     Animation animation;
     Rigidbody rigidbody;

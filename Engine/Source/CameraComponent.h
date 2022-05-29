@@ -50,6 +50,8 @@ public:
 
 	bool lock = false;
 
+	void ScriptMovement(float x, float y, float z);
+
 private:
 	void Shake(float dt);
 

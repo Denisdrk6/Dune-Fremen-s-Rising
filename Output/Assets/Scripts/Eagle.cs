@@ -9,8 +9,8 @@ public class Eagle : RagnarComponent
     private float cooldown = 6f;
     private bool pendingToDelete = false;
     Rigidbody goRB;
-    ParticleSystem leftParticles;
-    ParticleSystem rightParticles;
+    //ParticleSystem leftParticles;
+    //ParticleSystem rightParticles;
     bool hasArrived = false;
     NavAgent agent;
     public void Start()
@@ -28,22 +28,27 @@ public class Eagle : RagnarComponent
         Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
         goRB.SetBodyRotation(rot);
         goRB.SetBodyPosition(pos);
-        goRB.IgnoreCollision(player, true);
+        for (int i = 0; i < GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters.Length; i++)
+        {
+            goRB.IgnoreCollision(GameObject.Find("PlayerManager").GetComponent<PlayerManager>().players[i], true);
+        }
         agent.CalculatePath(agent.hitPosition);
 
         player.GetComponent<Player>().PlayAudioClip("EBOSS_THROWOBJECT");
-        leftParticles = GameObject.Find("LeftWingParticles").GetComponent<ParticleSystem>();
-        rightParticles = GameObject.Find("RightWingParticles").GetComponent<ParticleSystem>();
-        leftParticles.Play();
-        rightParticles.Play();
+        //leftParticles = GameObject.Find("LeftWingParticles").GetComponent<ParticleSystem>();
+        //rightParticles = GameObject.Find("RightWingParticles").GetComponent<ParticleSystem>();
+        //leftParticles.Play();
+        //rightParticles.Play();
+
+        gameObject.GetComponent<Animation>().PlayAnimation("Idle");
     }
 	public void Update()
 	{
         agent.MovePath();
         if (((agent.hitPosition - gameObject.transform.globalPosition).magnitude < 4.0f) && !hasArrived)
         {
-            leftParticles.Pause();
-            rightParticles.Pause();
+            //leftParticles.Pause();
+            //rightParticles.Pause();
             hasArrived = true;
             GameObject sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition, true);
             sound.GetComponent<Rigidbody>().SetRadiusSphere(6.7f);
@@ -59,8 +64,8 @@ public class Eagle : RagnarComponent
             cooldown -= Time.deltaTime;
             if (cooldown < 0)
             {
-                leftParticles.Pause();
-                rightParticles.Pause();
+                //leftParticles.Pause();
+                //rightParticles.Pause();
                 InternalCalls.Destroy(gameObject);
             }
         }

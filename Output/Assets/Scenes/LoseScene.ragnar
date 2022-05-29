@@ -10,6 +10,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
+            "Is Interactuable": true,
             "Components": []
         },
         {
@@ -22,6 +23,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
@@ -58,21 +60,21 @@
                         0.42233258485794067
                     ],
                     "Ambient": [
-                        0.25,
-                        0.25,
-                        0.25
+                        1,
+                        0,
+                        0
                     ],
                     "Diffuse": [
-                        0.75,
-                        0.75,
-                        0.75
+                        1,
+                        0.7764706015586853,
+                        0.48235294222831726
                     ],
                     "Specular": [
-                        1,
-                        1,
-                        1
+                        0,
+                        0,
+                        0
                     ],
-                    "Intensity": 0,
+                    "Intensity": 4,
                     "Shadows": true
                 }
             ]
@@ -87,30 +89,31 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -4.9477472305297852,
-                        0,
-                        -2.2581052780151367
+                        10.699999809265137,
+                        -22.340000152587891,
+                        35.409999847412109
                     ],
                     "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
+                        -0.25521358847618103,
+                        0.16298399865627289,
+                        -0.0076868943870067596,
+                        0.95302373170852661
                     ],
                     "RotationEditor": [
-                        0,
-                        0,
-                        0
+                        -0.5288347601890564,
+                        0.30543261766433716,
+                        0.062831848859786987
                     ],
                     "Scale": [
-                        1,
-                        1,
-                        1
+                        0.9999842643737793,
+                        0.9999992847442627,
+                        0.9999997615814209
                     ]
                 }
             ]
@@ -125,6 +128,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
@@ -146,50 +150,51 @@
                         0
                     ],
                     "Scale": [
-                        1.4142135381698608,
-                        1,
-                        1
+                        1.0000112056732178,
+                        1.0000045299530029,
+                        1.0000096559524536
                     ]
                 },
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 1.046697735786438,
+                    "Vertical Fov": 1.0597295761108398,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
-                        -4.9477472305297852,
-                        55,
-                        -52.258106231689453
+                        -8.7986268997192383,
+                        1.2915611267089844,
+                        -32.312717437744141
                     ],
                     "Type": 3,
-                    "Zoom": 79,
-                    "Zoom Min": 0,
-                    "Zoom Max": 0,
-                    "Zoom Speed": 0,
+                    "Zoom": 30.799995422363281,
+                    "Zoom Min": -30,
+                    "Zoom Max": 30,
+                    "Zoom Speed": 1,
+                    "Lock": true,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -4.9477472305297852,
-                        0,
-                        -2.2581052780151367
+                        10.699999809265137,
+                        -22.340000152587891,
+                        35.409999847412109
                     ],
                     "Movement Speed": 0.5,
                     "Rotation Speed": 0.5,
                     "Radius": 20,
-                    "Horizontal Angle": 189.39971923828125,
+                    "Horizontal Angle": 3.39971923828125,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
                     "Limits": [
-                        0,
-                        0,
-                        0,
-                        0
+                        -100,
+                        -100,
+                        100,
+                        100
                     ]
                 }
             ]
         },
         {
-            "UUID": 2001316928,
+            "UUID": 2040928622,
             "Parent UUID": 417171234,
             "Name": "Background",
             "Active": true,
@@ -198,6 +203,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Active": true,
@@ -205,7 +211,7 @@
                     "Position": [
                         0,
                         0,
-                        35
+                        36
                     ],
                     "Scale": [
                         0.1666666716337204,
@@ -219,17 +225,30 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 792.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/ui_losescreen.png",
+                    "Diffuse Path": "Assets\/Resources\/UI\/transparent_tex.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
                 },
                 {
                     "Type": 13,
@@ -239,328 +258,23 @@
                 {
                     "Type": 4,
                     "ScriptName": "loseScreen",
-                    "pointer": 388268912,
+                    "pointer": 484084760,
                     "type": 4,
                     "componentTable": 0
                 }
             ]
         },
         {
-            "UUID": 728783742,
-            "Parent UUID": 417171234,
-            "Name": "ButtonRetry",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        -521,
-                        -100.5,
-                        36.099998474121094
-                    ],
-                    "Scale": [
-                        0.48333331942558289,
-                        0.07083333283662796,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 290,
-                    "buttonHeight": 42.5,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": false
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 12,
-                    "buttonText": "Restart",
-                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
-                    "fontScale": 1,
-                    "textColor.r": 1,
-                    "textColor.g": 1,
-                    "textColor.b": 1,
-                    "textPositionX": -20.799999237060547,
-                    "textPositionY": -4.1999998092651367,
-                    "alpha": 1
-                }
-            ]
-        },
-        {
-            "UUID": 1227373047,
-            "Parent UUID": 417171234,
-            "Name": "ButtonMenu",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        -523.5,
-                        -196,
-                        36.099998474121094
-                    ],
-                    "Scale": [
-                        0.48333331942558289,
-                        0.07083333283662796,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 290,
-                    "buttonHeight": 42.5,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": false
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 12,
-                    "buttonText": "Main Menu",
-                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
-                    "fontScale": 1,
-                    "textColor.r": 1,
-                    "textColor.g": 1,
-                    "textColor.b": 1,
-                    "textPositionX": -22,
-                    "textPositionY": -3.5999999046325684,
-                    "alpha": 1
-                }
-            ]
-        },
-        {
-            "UUID": 213403760,
-            "Parent UUID": 417171234,
-            "Name": "MenuImage",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        -533,
-                        -206,
-                        36.099998474121094
-                    ],
-                    "Scale": [
-                        0.48333331942558289,
-                        0.074166662991046906,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 290,
-                    "buttonHeight": 44.5,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": false
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1218133383,
-            "Parent UUID": 417171234,
-            "Name": "RetryImage",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        -530,
-                        -109.5,
-                        36.099998474121094
-                    ],
-                    "Scale": [
-                        0.48333331942558289,
-                        0.074166662991046906,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 290,
-                    "buttonHeight": 44.5,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": false
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1234207866,
-            "Parent UUID": 417171234,
-            "Name": "textImage",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        -364,
-                        132.5,
-                        36.099998474121094
-                    ],
-                    "Scale": [
-                        0.62666666507720947,
-                        0.1666666716337204,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 376,
-                    "buttonHeight": 100,
-                    "lastButtonWidth": 1227,
-                    "lastButtonHeight": 708,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/lose_game_over_text.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader"
-                },
-                {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
-                }
-            ]
-        },
-        {
-            "UUID": 355691705,
+            "UUID": 828963847,
             "Parent UUID": 417171234,
             "Name": "AudioLoseScene",
             "Active": true,
             "Static": true,
             "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/AudioLoseScene.rgprefab",
+            "Prefab Path": "Assets\/Prefabs\/AudioMainMenu.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
@@ -598,6 +312,9 @@
                         },
                         {
                             "1": "UISELECT"
+                        },
+                        {
+                            "2": "MUSICPLAY"
                         }
                     ]
                 },
@@ -606,6 +323,1446 @@
                     "Active": true
                 }
             ]
+        },
+        {
+            "UUID": 392827484,
+            "Parent UUID": 417171234,
+            "Name": "ButtonMenu",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        -553,
+                        -320,
+                        36.099998474121094
+                    ],
+                    "Scale": [
+                        0.53833335638046265,
+                        0.078333333134651184,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 323,
+                    "buttonHeight": 47,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 792.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": false
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 12,
+                    "buttonText": "Main Menu",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
+                    "fontScale": 1,
+                    "textColor.r": 1,
+                    "textColor.g": 1,
+                    "textColor.b": 1,
+                    "textPositionX": -31.399999618530273,
+                    "textPositionY": -3,
+                    "alpha": 1
+                }
+            ]
+        },
+        {
+            "UUID": 1352949494,
+            "Parent UUID": 417171234,
+            "Name": "MenuImage",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        -543,
+                        -322.5,
+                        36.099998474121094
+                    ],
+                    "Scale": [
+                        0.51499998569488525,
+                        0.073333330452442169,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 309,
+                    "buttonHeight": 44,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 792.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": false
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1691310750,
+            "Parent UUID": 417171234,
+            "Name": "ButtonRetry",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        -553,
+                        -210,
+                        36.099998474121094
+                    ],
+                    "Scale": [
+                        0.53833335638046265,
+                        0.078333333134651184,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 323,
+                    "buttonHeight": 47,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 792.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": false
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_button.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 12,
+                    "buttonText": "Replay Level",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
+                    "fontScale": 1,
+                    "textColor.r": 1,
+                    "textColor.g": 1,
+                    "textColor.b": 1,
+                    "textPositionX": -27.799999237060547,
+                    "textPositionY": -3,
+                    "alpha": 1
+                }
+            ]
+        },
+        {
+            "UUID": 552672263,
+            "Parent UUID": 417171234,
+            "Name": "RetryImage",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        -543,
+                        -212.5,
+                        36.099998474121094
+                    ],
+                    "Scale": [
+                        0.51499998569488525,
+                        0.073333330452442169,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 309,
+                    "buttonHeight": 44,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 792.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": false
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_rectange_lines.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 65654866,
+            "Parent UUID": 417171234,
+            "Name": "Dunes",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.29282808303833008,
+                        -0.89913046360015869,
+                        1.3604781627655029
+                    ],
+                    "Quaternion": [
+                        -0.7071068286895752,
+                        0,
+                        0,
+                        0.70710670948028564
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/scene_desert__Dunes.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1238096408,
+            "Parent UUID": 417171234,
+            "Name": "RockMedium1_low",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -6.3687982559204102,
+                        -0.49311873316764832,
+                        -19.400344848632812
+                    ],
+                    "Quaternion": [
+                        0.024275230243802071,
+                        0.99360203742980957,
+                        -0.04536781832575798,
+                        -0.10053596645593643
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000300407409668,
+                        0.99999934434890747,
+                        1.0000262260437012
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/scene_desert__RockMedium1_low.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Player",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -8.4099998474121094,
+                        -0.44999998807907104,
+                        -23.999420166015625
+                    ],
+                    "Quaternion": [
+                        0.046011310070753098,
+                        0.9706999659538269,
+                        -0.013597587123513222,
+                        0.23548540472984314
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        -0.5253441333770752,
+                        0.095993109047412872
+                    ],
+                    "Scale": [
+                        1.0000288486480713,
+                        1,
+                        1.0000288486480713
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_paul_lose__Mesh.001.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_lose__char_paul_lose|char_paul_lose.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Player_2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -8.2399997711181641,
+                        -0.81999999284744263,
+                        -25.299999237060547
+                    ],
+                    "Quaternion": [
+                        -0.059357590973377228,
+                        0.74452239274978638,
+                        -0.066348560154438019,
+                        0.66163504123687744
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000536441802979,
+                        1,
+                        1.0000462532043457
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_chani_lose__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_lose__char_chani_lose|char_chani_lose.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1353793875,
+            "Parent UUID": 417171234,
+            "Name": "Player_3",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -5.4950785636901855,
+                        -0.86626589298248291,
+                        -25.988483428955078
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.99435293674468994,
+                        0,
+                        0.1061243936419487
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.1415927410125732,
+                        0
+                    ],
+                    "Scale": [
+                        1.0002431869506836,
+                        1,
+                        1.0002431869506836
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_stilgar_lose__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_lose__char_stilgar_lose|char_stilgar_lose.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 698691274,
+            "Parent UUID": 417171234,
+            "Name": "Skybox",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        97.659187316894531,
+                        -0.12999999523162842,
+                        24.827041625976562
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.71325582265853882,
+                        0,
+                        0.70090377330780029
+                    ],
+                    "RotationEditor": [
+                        0,
+                        1.5882495641708374,
+                        0
+                    ],
+                    "Scale": [
+                        1.3500198125839233,
+                        148.5,
+                        313.74081420898438
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/skybox.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": false,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Settings\/EngineResources\/__Cube.mesh",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 514655822,
+            "Parent UUID": 417171234,
+            "Name": "prop_ornithopter",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        1,
+                        6,
+                        4.6999998092651367
+                    ],
+                    "Quaternion": [
+                        -0.058175381273031235,
+                        -0.95469915866851807,
+                        -0.0087471166625618935,
+                        -0.29178336262702942
+                    ],
+                    "RotationEditor": [
+                        -0.58643060922622681,
+                        -1.9949114322662354,
+                        0.45902156829833984
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Ornithopter\/prop_ornithopter_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_ornithopter_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/Ornithopter\/prop_ornithopter__prop_ornithopter.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 677600294,
+            "Parent UUID": 514655822,
+            "Name": "Fire&Smoke",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -7.4000000953674316,
+                        -1.2000000476837158,
+                        -3.5
+                    ],
+                    "Quaternion": [
+                        0.26892673969268799,
+                        0.75981318950653076,
+                        0.49688345193862915,
+                        -0.32168769836425781
+                    ],
+                    "RotationEditor": [
+                        -1.1222467422485352,
+                        0.26529005169868469,
+                        0
+                    ],
+                    "Scale": [
+                        5,
+                        5,
+                        5
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        5.0099101066589355,
+                        4.0089068412780762,
+                        11.658298492431641
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 400,
+                            "Emitter: Particles Per Second": 10,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.10000000149011612,
+                            "Emitter: Current Timer": 0.0039999894797801971,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0.019999999552965164
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PEV: Min Velocity": [
+                                        0,
+                                        -0,
+                                        -0.0099999997764825821
+                                    ],
+                                    "PEV: Max Velocity": [
+                                        -0.029999999329447746,
+                                        0.0010000000474974513,
+                                        0.0099999997764825821
+                                    ],
+                                    "Effect Type": 0
+                                },
+                                {
+                                    "PES: Start size": 1.5,
+                                    "PES: End size": 1,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.24485123157501221,
+                                        0.24485123157501221,
+                                        0.24485123157501221,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.43707096576690674,
+                                        0.43707096576690674,
+                                        0.43707096576690674,
+                                        0
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 31294412,
+            "Parent UUID": 514655822,
+            "Name": "FireParticles",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/FireParticles.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -8.8000001907348633,
+                        -1,
+                        -5.6999998092651367
+                    ],
+                    "Quaternion": [
+                        0.95467978715896606,
+                        -0.058174453675746918,
+                        -0.29176315665245056,
+                        -0.0087477341294288635
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        3.1415927410125732
+                    ],
+                    "Scale": [
+                        4.8000001907348633,
+                        4.8000001907348633,
+                        4.8000001907348633
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        4.9554548263549805,
+                        4.0828089714050293,
+                        14.272259712219238
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 1000,
+                            "Emitter: Particles Per Second": 20,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.05000000074505806,
+                            "Emitter: Current Timer": 0.018000001087784767,
+                            "Emitter: Is Cubical": true,
+                            "Cubical: Spread on X": 0.5,
+                            "Cubical: Spread on Y": 0.10000000149011612,
+                            "Cubical: Spread on Z": 0.5,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 5,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_fire.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 1,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0.49427914619445801,
+                                        0,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 200,
+                            "Emitter: Particles Per Second": 50,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.019999999552965164,
+                            "Emitter: Current Timer": 0.019999999552965164,
+                            "Emitter: Is Cubical": true,
+                            "Cubical: Spread on X": 0.5,
+                            "Cubical: Spread on Y": 0.20000000298023224,
+                            "Cubical: Spread on Z": 0.5,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0,
+                                -0.0099999997764825821,
+                                0
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 1,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 5,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_fire.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.5,
+                                    "PES: End size": 0.20000000298023224,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        1,
+                                        0,
+                                        0,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        1,
+                                        0.98855835199356079,
+                                        0,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1783065202,
+            "Parent UUID": 417171234,
+            "Name": "LoseText",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        -248,
+                        339.5,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        1.34333336353302,
+                        0.2916666567325592,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 806,
+                    "buttonHeight": 175,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 792.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/lose_game_over_text.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Basic Enemy",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Basic Enemy Menu.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -12.039999961853027,
+                        -0.55000001192092896,
+                        -23.770000457763672
+                    ],
+                    "Quaternion": [
+                        0.051597855985164642,
+                        0.74501544237136841,
+                        -0.062529772520065308,
+                        0.66211849451065063
+                    ],
+                    "RotationEditor": [
+                        -2.9792768955230713,
+                        1.2088150978088379,
+                        -3.1415927410125732
+                    ],
+                    "Scale": [
+                        1.0000332593917847,
+                        1,
+                        1.0000332593917847
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy1_lose2__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_lose2__nme_enemy1_lose2|nme_enemy1_lose2.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Tank Enemy",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Tank Enemy.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -1.8971803188323975,
+                        -1.4751183986663818,
+                        -27.030458450317383
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.75783288478851318,
+                        0,
+                        0.65244871377944946
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000070333480835,
+                        1,
+                        1.0000070333480835
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy2_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy2_lose__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy2_lose__nme_enemy2_lose|nme_enemy2_lose.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "NavMesh": [
+        {
+            "cellSize": 0.30000001192092896,
+            "cellHeight": 0.20000000298023224,
+            "agentHeight": 2,
+            "agentRadius": 0.5,
+            "agentMaxClimb": 0,
+            "agentMaxSlope": 0.10000000149011612,
+            "regionMinSize": 8,
+            "regionMergeSize": 20,
+            "edgeMaxLen": 12,
+            "edgeMaxError": 1.2999999523162842,
+            "vertsPerPoly": 6,
+            "detailSampleDist": 6,
+            "detailSampleMaxError": 1,
+            "partitionType": 0,
+            "tileSize": 32
         }
     ]
 }

@@ -8,13 +8,15 @@ public class GameData
     public bool shadowsEnabled = false;
     public bool fullScreen = false;
     public int language = 0;
+    public int actualControlOption = 1;
 
-    public GameData(bool vs, bool shadows, bool fs, int languageType)
+    public GameData(bool vs, bool shadows, bool fs, int languageType, int controlPresset)
     {
         vsync = vs;
         shadowsEnabled = shadows;
         fullScreen = fs;
         language = languageType;
+        actualControlOption = controlPresset;
     }
 
 }

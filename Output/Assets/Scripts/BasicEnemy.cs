@@ -57,7 +57,7 @@ public class BasicEnemy : RagnarComponent
     float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
-    int coneMaxTime = 3;
+    int coneMaxTime = 1;
 
     // Cone
     public bool coneRotate = true;

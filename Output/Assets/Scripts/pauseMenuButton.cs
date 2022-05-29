@@ -5,15 +5,14 @@ public class pauseMenuButton : RagnarComponent
 {
 	string actualOption = "Screen";
 	Vector3 pos;
-	Vector3 mouseLastposition;
 	Vector3 bounds;
-	bool isOptions = false;
-	bool isSowing = false;
+	public bool isOptions = false;
+	public bool isSowing = false;
 	bool isFirstS = true;
 	bool isFirstE = true;
 	bool isFirstO = true;
 	GameObject[] players;
-
+	float genealDT = 0;
 	//////////////PAUSE//////////////
 	GameObject Image;
 	GameObject Resume;
@@ -38,6 +37,9 @@ public class pauseMenuButton : RagnarComponent
 	bool isFirstOcontrolsL = true;
 	bool isFirstOcontrolsR = true;
 	float lastWindowW = 0;
+	float actualDtAnimation = 0;
+	bool isPlayng = false;
+	GameObject presetText;
 	GameObject optionsBack;
 	GameObject optionsBackImage;
 	GameObject optionsBackButton;
@@ -99,7 +101,8 @@ public class pauseMenuButton : RagnarComponent
 	bool isAnimating = false;
 	float actualDT = 0;
 	public GameObject selectedPlayer;
-    GameObject playerManager;
+    PlayerManager playerManager;
+	InputAction inputAction;
 	string lastPlayerSelected;
 	bool isFirstA1 = true;
 	bool isFirstA2 = true;
@@ -120,6 +123,8 @@ public class pauseMenuButton : RagnarComponent
 	GameObject cd2;
 	GameObject cd3;
 	GameObject cd4;
+
+	GameObject UICrouch;
 
 	GameObject UICharPhoto;
 	GameObject UIAbilityArray;
@@ -165,7 +170,6 @@ public class pauseMenuButton : RagnarComponent
 	public void Start()
 	{
 		pos = new Vector3(0.0f, 0.0f, 0.0f);
-		mouseLastposition = new Vector3(0.0f, 0.0f, 0.0f);
 		bounds = new Vector3(0.0f, 0.0f, 0.0f);
 		//////////////AUDIO//////////////
 		SceneAudio = GameObject.Find("AudioLevel1");
@@ -239,12 +243,6 @@ public class pauseMenuButton : RagnarComponent
         optionsGeneralSound = GameObject.Find("optionsGeneralSound");
 		lastWindowW = (InternalCalls.GetRegionGame().x / 2);
 
-        GameData load = SaveSystem.LoadGameConfig();
-        if (load != null)
-        {
-            LoadOptions(load);
-        }
-
         optionsControlText = GameObject.Find("optionsControlText");
 		optionsControlText1 = GameObject.Find("optionsControlText1");
 		optionsControlText2 = GameObject.Find("optionsControlText2");
@@ -282,21 +280,51 @@ public class pauseMenuButton : RagnarComponent
 		optionsControl5.GetComponent<UIButton>().text = "R Click";
 		optionsControl6.GetComponent<UIButton>().text = "L Click";
 		optionsControl7.GetComponent<UIButton>().text = "Space";
-		optionsControl8.GetComponent<UIButton>().text = "Drag";
-		optionsControl9.GetComponent<UIButton>().text = "Crl L";
+		optionsControl8.GetComponent<UIButton>().text = "WASD";
+		optionsControl9.GetComponent<UIButton>().text = "Q E";
 		optionsControl10.GetComponent<UIButton>().text = "Drag";
 		optionsControl11.GetComponent<UIButton>().text = "F1";
 		optionsControl12.GetComponent<UIButton>().text = "F5";
 		optionsControl13.GetComponent<UIButton>().text = "F6";
-		optionsControl14.GetComponent<UIButton>().text = "A";
-		optionsControl15.GetComponent<UIButton>().text = "S";
-		optionsControl16.GetComponent<UIButton>().text = "D";
-		optionsControl17.GetComponent<UIButton>().text = "F";
-		optionsControl18.GetComponent<UIButton>().text = "G";
+		optionsControl14.GetComponent<UIButton>().text = "Z";
+		optionsControl15.GetComponent<UIButton>().text = "X";
+		optionsControl16.GetComponent<UIButton>().text = "C";
+		optionsControl17.GetComponent<UIButton>().text = "V";
+		optionsControl18.GetComponent<UIButton>().text = "B";
 		optionsControl19.GetComponent<UIButton>().text = "R Click";
 		optionsControl20.GetComponent<UIButton>().text = "L Click";
 		optionsControl21.GetComponent<UIButton>().text = "J";
 		optionsControl22.GetComponent<UIButton>().text = "Shift";
+
+		float y = (InternalCalls.GetRegionGame().y / 2);
+		float x = (InternalCalls.GetRegionGame().x / 2);
+		float sum = (lastWindowW - x);
+
+		presetText = GameObject.Find("presetText");
+		presetText.GetComponent<UIText>().text = "PRESET 1";
+
+		pos.Set(-sum + 430, y - 810, 36.1f);
+		optionsControl9.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(-sum + 430, y - 740, 36.1f);
+		optionsControl8.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(-sum + 750, y - 540, 36.1f);
+		optionsControl14.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(-sum + 750, y - 610, 36.1f);
+		optionsControl15.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(-sum + 750, y - 680, 36.1f);
+		optionsControl16.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(-sum + 750, y - 750, 36.1f);
+		optionsControl17.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(-sum + 750, y - 820, 36.1f);
+		optionsControl18.GetComponent<Transform2D>().position2D = pos;
+
+
 		OptionsBackHide();
 		//////////////GAME//////////////
 		CharacterPhotoBord = GameObject.Find("Char");
@@ -312,6 +340,8 @@ public class pauseMenuButton : RagnarComponent
 		cd2 = GameObject.Find("cd2");
 		cd3 = GameObject.Find("cd3");
 		cd4 = GameObject.Find("cd4");
+
+		UICrouch = GameObject.Find("UICrouch");
 
 		AbilityBord = GameObject.Find("AbilImage");
 
@@ -364,13 +394,19 @@ public class pauseMenuButton : RagnarComponent
 
 		AbilityLeft= GameObject.Find("AbilityLeft");
 		AbilityRight = GameObject.Find("AbilityRight");
-
+		GameData load = SaveSystem.LoadGameConfig();
+		if (load != null)
+		{
+			LoadOptions(load);
+		}
+		FillPlayers();
+	}
+	public void FillPlayers()
+    {
 		players = GameObject.FindGameObjectsWithTag("Player");
-        playerManager = GameObject.Find("PlayerManager");
-		selectedPlayer = players[playerManager.GetComponent<PlayerManager>().characterSelected];
-		
-		lastPlayerSelected = selectedPlayer.name;
-		lastHitPoint= selectedPlayer.GetComponent<Player>().hitPoints;
+		playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
+		inputAction = GameObject.Find("PlayerManager").GetComponent<InputAction>();
+		ChangePresset();
 	}
     void LoadOptions(GameData load)
     {
@@ -378,30 +414,35 @@ public class pauseMenuButton : RagnarComponent
         optionsScreenVSCH.GetComponent<UICheckbox>().SetCheckboxState(load.vsync);
         optionsScreenSDCH.GetComponent<UICheckbox>().SetCheckboxState(load.shadowsEnabled);
         optionsLanguaje.GetComponent<UIDropDown>().SetSelected(load.language);
-    }
+
+		actualControlOption = load.actualControlOption;
+		if (actualControlOption == 0)
+			presetText.GetComponent<UIText>().text = "PRESET 1";
+		else presetText.GetComponent<UIText>().text = "PRESET 2";
+	}
     void SaveOptions()
     {
         GameData ej = new GameData(
             optionsScreenVSCH.GetComponent<UICheckbox>().GetIsChecked(),
             optionsScreenSDCH.GetComponent<UICheckbox>().GetIsChecked(),
             optionsScreenFSCH.GetComponent<UICheckbox>().GetIsChecked(),
-            optionsLanguaje.GetComponent<UIDropDown>().GetLenguaje());
+            optionsLanguaje.GetComponent<UIDropDown>().GetLenguaje(), actualControlOption);
         SaveSystem.SaveGameConfig(ej);
     }
 
     public void Update()
 	{
-        //para pillar el hitPoint del mouse Pick
-        //selectedPlayer.GetComponent<NavAgent>().hitPosition
-        players = GameObject.FindGameObjectsWithTag("Player");
-        selectedPlayer = players[playerManager.GetComponent<PlayerManager>().characterSelected];
-		
+		//para pillar el hitPoint del mouse Pick
+		//selectedPlayer.GetComponent<NavAgent>().hitPosition
+		selectedPlayer = players[playerManager.characterSelected];
+		genealDT = Time.deltaTime;
 		SetAllPositions();
 		UpdateMenu();
 		UpdateOptions();
 		UpdatePlayerPause();
 		if (Input.GetKey(KeyCode.I) == KeyState.KEY_DOWN)
         {
+			Input.RestoreDefaultCursor();
 			SceneManager.LoadScene("WinScene");
         }
 	}
@@ -425,6 +466,11 @@ public class pauseMenuButton : RagnarComponent
 		}
     }
 	//////////////OPTIONS//////////////
+	double easeOutQuint(float x)
+	{
+
+		return 1 - Math.Pow(1 - x, 5);
+	}
 	void OptionsControlShow()
 	{
 		float y = (InternalCalls.GetRegionGame().y / 2);
@@ -459,11 +505,13 @@ public class pauseMenuButton : RagnarComponent
 		optionsControl22.isActive = true;
 		optionsControlR.isActive = true;
 		optionsControlL.isActive = true;
-		pos.Set(-sum + 600, y - 780, 36.1f);
+		presetText.isActive = true;
+		pos.Set(-sum + 100, y - 220, 36.1f);
 		optionsControlL.GetComponent<Transform2D>().position2D = pos;
-		pos.Set(-sum + 800, y - 780, 36.1f);
+		pos.Set(-sum + 400, y - 220, 36.1f);
 		optionsControlR.GetComponent<Transform2D>().position2D = pos;
-
+		pos.Set(-sum + 200, y - 225, 36.1f);
+		presetText.GetComponent<Transform2D>().position2D = pos;
 		int a = optionsControlL.GetComponent<UIButton>().GetButtonState();
 		switch (a)
 		{
@@ -484,12 +532,12 @@ public class pauseMenuButton : RagnarComponent
 					if (actualControlOption == 0)
 					{
 						actualControlOption = 1;
-
 					}
 					else
 					{
 						actualControlOption--;
 					}
+					isPlayng = true;
 					//actualControlOption = 0;
 					SceneAudio.GetComponent<AudioSource>().SetClipVolume(currVolume);
 					SceneAudio.GetComponent<AudioSource>().PlayClip("UI_SELECT");
@@ -520,12 +568,13 @@ public class pauseMenuButton : RagnarComponent
 					if (actualControlOption == 1)
 					{
 						actualControlOption = 0;
-
 					}
 					else
 					{
+						
 						actualControlOption++;
 					}
+					isPlayng = true;
 					SceneAudio.GetComponent<AudioSource>().SetClipVolume(currVolume);
 					SceneAudio.GetComponent<AudioSource>().PlayClip("UI_SELECT");
 				}
@@ -535,118 +584,176 @@ public class pauseMenuButton : RagnarComponent
 				break;
 		}
 		if (actualControlOption != lastControls) 
-		{ 
-			if (actualControlOption == 0)
-			{
-			
-				playerManager.GetComponent<InputAction>().SetActionMap(1);
-				abilityLeters.GetComponent<UIImage>().LoadTexture("Assets/Resources/UI/ui_ability_letters1.png");
-				optionsControl8.GetComponent<UIButton>().text = "Drag";
-				optionsControl9.GetComponent<UIButton>().text = "Crl L";
-				optionsControl14.GetComponent<UIButton>().text = "A";
-				optionsControl15.GetComponent<UIButton>().text = "S";
-				optionsControl16.GetComponent<UIButton>().text = "D";
-				optionsControl17.GetComponent<UIButton>().text = "F";
-				optionsControl18.GetComponent<UIButton>().text = "G";
-			}
-			else if(actualControlOption == 1)
-			{
-			 playerManager.GetComponent<InputAction>().SetActionMap(0);
-				abilityLeters.GetComponent<UIImage>().LoadTexture("Assets/Resources/UI/ui_ability_letters.png");
-				optionsControl9.GetComponent<UIButton>().text = "Q E";
-				optionsControl8.GetComponent<UIButton>().text = "WASD";
+			ChangePresset();
 
-				optionsControl14.GetComponent<UIButton>().text = "Z";
-				optionsControl15.GetComponent<UIButton>().text = "X";
-				optionsControl16.GetComponent<UIButton>().text = "C";
-				optionsControl17.GetComponent<UIButton>().text = "V";
-				optionsControl18.GetComponent<UIButton>().text = "B";
+
+		if (isPlayng)
+		{
+			Debug.Log((float)genealDT);
+			actualDtAnimation +=0.05f;
+			if (actualDtAnimation >= 2)
+			{
+				isPlayng = false;
+				actualDtAnimation = 0;
 			}
-			lastControls = actualControlOption;
+			else if (actualDtAnimation < 1)
+			{
+				
+				float actualvalue = (float)easeOutQuint(actualDtAnimation);
+
+				pos.Set((optionsControl9.GetComponent<Transform2D>().position2D.x -0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl9.GetComponent<Transform2D>().position2D.x + 0.5f)), optionsControl9.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl9.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl8.GetComponent<Transform2D>().position2D.x - 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl8.GetComponent<Transform2D>().position2D.x + 0.5f)), optionsControl8.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl8.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl14.GetComponent<Transform2D>().position2D.x - 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl14.GetComponent<Transform2D>().position2D.x + 0.5f)), optionsControl14.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl14.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl15.GetComponent<Transform2D>().position2D.x - 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl15.GetComponent<Transform2D>().position2D.x + 0.5f)), optionsControl15.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl15.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl16.GetComponent<Transform2D>().position2D.x - 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl16.GetComponent<Transform2D>().position2D.x + 0.5f)), optionsControl16.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl16.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl17.GetComponent<Transform2D>().position2D.x - 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl17.GetComponent<Transform2D>().position2D.x + 0.5f)), optionsControl17.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl17.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl18.GetComponent<Transform2D>().position2D.x - 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl18.GetComponent<Transform2D>().position2D.x + 0.5f)), optionsControl18.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl18.GetComponent<Transform2D>().position2D = pos;
+
+
+			}
+			else
+			{
+				float actualvalue = (float)easeOutQuint(actualDtAnimation - 1);
+
+				pos.Set((optionsControl9.GetComponent<Transform2D>().position2D.x + 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl9.GetComponent<Transform2D>().position2D.x - 0.5f)), optionsControl9.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl9.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl8.GetComponent<Transform2D>().position2D.x + 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl8.GetComponent<Transform2D>().position2D.x - 0.5f)), optionsControl8.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl8.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl14.GetComponent<Transform2D>().position2D.x + 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl14.GetComponent<Transform2D>().position2D.x - 0.5f)), optionsControl14.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl14.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl15.GetComponent<Transform2D>().position2D.x + 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl15.GetComponent<Transform2D>().position2D.x - 0.5f)), optionsControl15.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl15.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl16.GetComponent<Transform2D>().position2D.x + 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl16.GetComponent<Transform2D>().position2D.x - 0.5f)), optionsControl16.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl16.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl17.GetComponent<Transform2D>().position2D.x + 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl17.GetComponent<Transform2D>().position2D.x - 0.5f)), optionsControl17.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl17.GetComponent<Transform2D>().position2D = pos;
+
+				pos.Set((optionsControl18.GetComponent<Transform2D>().position2D.x + 0.5f) * actualvalue + ((1 - actualvalue) * (optionsControl18.GetComponent<Transform2D>().position2D.x - 0.5f)), optionsControl18.GetComponent<Transform2D>().position2D.y, 36.1f);
+				optionsControl18.GetComponent<Transform2D>().position2D = pos;
+
+
+			}
+
 		}
 
-		pos.Set(-sum - 100, y - 230, 36.1f);
+
+
+
+
+
+		pos.Set(-sum - 100, y - 330, 36.1f);
 		optionsControlText.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 250, y - 230, 36.1f);
+		pos.Set(-sum + 250, y - 330, 36.1f);
 		optionsControlText1.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 550, y - 230, 36.1f);
+		pos.Set(-sum + 550, y - 330, 36.1f);
 		optionsControlText2.GetComponent<Transform2D>().position2D = pos;
 
 
-		pos.Set(-sum + 150, y - 220, 36.1f);
+		pos.Set(-sum + 150, y - 320, 36.1f);
 		optionsControl1.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 150, y - 280, 36.1f);
+		pos.Set(-sum + 150, y - 380, 36.1f);
 		optionsControl2.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 150, y - 340, 36.1f);
+		pos.Set(-sum + 150, y - 440, 36.1f);
 		optionsControl3.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 150, y - 410, 36.1f);
+		pos.Set(-sum + 150, y - 510, 36.1f);
 		optionsControl4.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 150, y - 480, 36.1f);
+		pos.Set(-sum + 150, y - 580, 36.1f);
 		optionsControl5.GetComponent<Transform2D>().position2D = pos;
 		optionsControl5.GetComponent<UIButton>().SetTextPosition(-30,-3.2f);
 
-		pos.Set(-sum + 150, y - 540, 36.1f);
+		pos.Set(-sum + 150, y - 640, 36.1f);
 		optionsControl6.GetComponent<Transform2D>().position2D = pos;
 		optionsControl6.GetComponent<UIButton>().SetTextPosition(-30, -3.2f);
 
-		pos.Set(-sum + 150, y - 585, 36.1f);
+		pos.Set(-sum + 150, y - 685, 36.1f);
 		optionsControl7.GetComponent<Transform2D>().position2D = pos;
 		optionsControl7.GetComponent<UIButton>().SetTextPosition(-30, -3.2f);
 
-		pos.Set(-sum + 150, y - 640, 36.1f);
-		optionsControl8.GetComponent<Transform2D>().position2D = pos;
+		
 
-		pos.Set(-sum + 150, y - 710, 36.1f);
-		optionsControl9.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 150, y - 780, 36.1f);
+		pos.Set(-sum + 150, y - 880, 36.1f);
 		optionsControl10.GetComponent<Transform2D>().position2D = pos;
 
 
 
-		pos.Set(-sum + 470, y - 230, 36.1f);
+		pos.Set(-sum + 470, y - 330, 36.1f);
 		optionsControl11.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 470, y - 300, 36.1f);
+		pos.Set(-sum + 470, y - 400, 36.1f);
 		optionsControl12.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 470, y - 370, 36.1f);
+		pos.Set(-sum + 470, y - 470, 36.1f);
 		optionsControl13.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 470, y - 440, 36.1f);
-		optionsControl14.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 470, y - 510, 36.1f);
-		optionsControl15.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 470, y - 580, 36.1f);
-		optionsControl16.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 470, y - 650, 36.1f);
-		optionsControl17.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 470, y - 720, 36.1f);
-		optionsControl18.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 470, y - 790, 36.1f);
+		pos.Set(-sum + 470, y - 890, 36.1f);
 		optionsControl19.GetComponent<Transform2D>().position2D = pos;
 
 
 
-		pos.Set(-sum + 750, y - 230, 36.1f);
+		pos.Set(-sum + 750, y - 330, 36.1f);
 		optionsControl20.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 750, y - 300, 36.1f);
+		pos.Set(-sum + 750, y - 400, 36.1f);
 		optionsControl21.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 750, y - 370, 36.1f);
+		pos.Set(-sum + 750, y - 470, 36.1f);
 		optionsControl22.GetComponent<Transform2D>().position2D = pos;
+	}
+
+	void ChangePresset()
+    {
+		if (actualControlOption == 0)
+		{
+			inputAction.SetActionMap(1);
+			abilityLeters.GetComponent<UIImage>().LoadTexture("Assets/Resources/UI/ui_ability_letters1.png");
+			optionsControl8.GetComponent<UIButton>().text = "Drag";
+			optionsControl9.GetComponent<UIButton>().text = "Crl L";
+			optionsControl14.GetComponent<UIButton>().text = "A";
+			optionsControl15.GetComponent<UIButton>().text = "S";
+			optionsControl16.GetComponent<UIButton>().text = "D";
+			optionsControl17.GetComponent<UIButton>().text = "F";
+			optionsControl18.GetComponent<UIButton>().text = "G";
+			presetText.GetComponent<UIText>().text = "PRESET 1";
+		}
+		else if (actualControlOption == 1)
+		{
+			inputAction.SetActionMap(0);
+			abilityLeters.GetComponent<UIImage>().LoadTexture("Assets/Resources/UI/ui_ability_letters.png");
+			optionsControl9.GetComponent<UIButton>().text = "Q E";
+			optionsControl8.GetComponent<UIButton>().text = "WASD";
+
+			optionsControl14.GetComponent<UIButton>().text = "Z";
+			optionsControl15.GetComponent<UIButton>().text = "X";
+			optionsControl16.GetComponent<UIButton>().text = "C";
+			optionsControl17.GetComponent<UIButton>().text = "V";
+			optionsControl18.GetComponent<UIButton>().text = "B";
+			presetText.GetComponent<UIText>().text = "PRESET 2";
+		}
+		lastControls = actualControlOption;
 	}
 	void OptionsControlHide()
 	{
@@ -678,7 +785,7 @@ public class pauseMenuButton : RagnarComponent
 		optionsControl22.isActive = false;
 		optionsControlR.isActive = false;
 		optionsControlL.isActive = false;
-
+		presetText.isActive = false;
 	}
 	void UpdateOptions()
     {
@@ -750,10 +857,10 @@ public class pauseMenuButton : RagnarComponent
 		optionsBack.isActive = true;
 		//////////
 
-		pos.Set(X - 600, 0.0f, -10.400f);
+		pos.Set(X - 600, -50.0f, -10.400f);
 		optionsTransCuad.GetComponent<Transform2D>().position2D = pos;
 
-		bounds.Set(X, (InternalCalls.GetRegionGame().y-300), -10.400f);
+		bounds.Set(X, (InternalCalls.GetRegionGame().y-200), -10.400f);
 		optionsTransCuad.GetComponent<Transform2D>().SetSize(bounds);
 		optionsTransCuad.isActive = true;
 		//////////
@@ -1219,7 +1326,7 @@ public class pauseMenuButton : RagnarComponent
 					GameObject.Find("LevelManager").GetComponent<Level_1>().runGame = false;
 
 				currentCursor = Input.GetCursorState();
-				Input.SetCursorState(0);
+				Input.RestoreDefaultCursor();
 			}
 		}
 	}
@@ -1262,6 +1369,7 @@ public class pauseMenuButton : RagnarComponent
 			cd2.isActive = false;
 			cd3.isActive = false;
 			cd4.isActive = false;
+			UICrouch.isActive = false;
 		}
         else
         {
@@ -1460,6 +1568,10 @@ public class pauseMenuButton : RagnarComponent
 
 		pos.Set(x + 540, y - 5, -10.400f);
 		litleLive3.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(x + 630f, y - 25, -10.400f);
+		UICrouch.GetComponent<Transform2D>().position2D = pos;
+
 
 
 
@@ -1917,19 +2029,21 @@ public class pauseMenuButton : RagnarComponent
 				}
                 else
                 {
-
 					if (selectedPlayer.name == "Player")//paul
 					{
-
-						Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
-						Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
-						Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
-						Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
-
+						// This only affect on lvl1 by progress system
+						if(playerManager.canDoAbility1)
+                        {
+							Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+							Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+							Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+							Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+						}						
 
 						Ability1.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_paul_crysknife.png");
 						Ability2.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_paul_voice.png");
 						Ability3.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_paul_throwing_knife.png");
+
 						if (players.Length == 1)
 						{
 							Ability4.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_paul_throw_stone.png");
@@ -1942,12 +2056,10 @@ public class pauseMenuButton : RagnarComponent
 					}
 					else if (selectedPlayer.name == "Player_2")//chani
 					{
-
 						Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
 						Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
 						Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
 						Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(244, 60, 255);
-
 
 						Ability1.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_chani_crysknife.png");
 						Ability2.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_chani_camouflage.png");
@@ -1956,7 +2068,6 @@ public class pauseMenuButton : RagnarComponent
 					}
 					else if (selectedPlayer.name == "Player_3")//stilgar
 					{
-
 						Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(83, 168, 208);
 						Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(83, 168, 208);
 						Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(83, 168, 208);
@@ -1967,6 +2078,7 @@ public class pauseMenuButton : RagnarComponent
 						Ability3.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_stilgar_trap.png");
 						Ability4.GetComponent<UIButton>().LoadButtonTexture("Assets/Resources/UI/ui_stilgar_whistle.png");
 					}
+
 					Ability1.GetComponent<UIButton>().SetButtonAlpha((2 * actualDT)-1);
 					Ability2.GetComponent<UIButton>().SetButtonAlpha((2 * actualDT) - 1);
 					Ability3.GetComponent<UIButton>().SetButtonAlpha((2 * actualDT) - 1);
@@ -1985,7 +2097,6 @@ public class pauseMenuButton : RagnarComponent
 					AbilityBG4.GetComponent<UIImage>().SetImageAlpha((2 * actualDT) - 1);
 
 					abilityLeters.GetComponent<UIImage>().SetImageAlpha((2 * actualDT) - 1);
-
 
 					pos.Set((-492 * actualDT) + 224, y - 30, -10.400f);
                     AbilityLeft.GetComponent<Transform2D>().position2D = pos;

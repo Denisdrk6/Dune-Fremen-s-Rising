@@ -10,13 +10,11 @@ public class Level_2 : RagnarComponent
     public bool runGame = true;
     public UIButton chrono;
     public Vector3 hitPoint;
-
-    private GameObject preClick;
-    private GameObject preNonClick;
     private Transform camera;
     public void Start()
 	{
         Input.SetEagleCursor(true);
+        Input.SetCursorState(0);
         //Play Level Soundtrack
         SceneAudio = GameObject.Find("AudioLevel1");
         SceneAudio.GetComponent<AudioSource>().PlayClip("MUSICPLAY");
@@ -28,9 +26,6 @@ public class Level_2 : RagnarComponent
         chrono = GameObject.Find("UI Counter").GetComponent<UIButton>();
         chrono.SetTextPosition(-26, -4);
         timer = new Chronometer();
-
-        preClick = GameObject.Find("preClick");
-        preNonClick = GameObject.Find("preNonClick");
         camera = GameObject.Find("Camera").transform;
 
         if (SaveSystem.fromContinue)
@@ -780,24 +775,9 @@ public class Level_2 : RagnarComponent
 	{
         if (runGame) timer.Update();
         chrono.text = timer.GetTimeToString();
-
         hitPoint = RayCast.ReturnHitpoint();
-        hitPoint.y -= 0.5f;
-        GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
-        if (hittedGO != null)
-        {
-            preClick.isActive = true;
-            preNonClick.isActive = false;
-        }
-        else
-        {
-            preClick.isActive = false;
-            preNonClick.isActive = true;
-        }
 
-        hitPoint.y += 0.54f;
-        if (preClick.isActive) preClick.transform.globalPosition = hitPoint;
-        if (preNonClick.isActive) preNonClick.transform.globalPosition = hitPoint;
+        //GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
     }
 
 }

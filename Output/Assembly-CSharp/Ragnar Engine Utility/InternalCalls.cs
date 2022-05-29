@@ -93,6 +93,9 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern void SetEagleCursor(bool ret);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void RestoreDefaultCursor();
     }
 
     public partial class Debug
@@ -442,6 +445,9 @@ enum CursorState
     STILGAR_2,
     STILGAR_3,
     STILGAR_4,
+
+    CLICKABLE,
+    NON_CLICKABLE,
 };
 
 public enum KeyCode

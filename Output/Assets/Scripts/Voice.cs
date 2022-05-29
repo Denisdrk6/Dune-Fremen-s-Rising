@@ -47,16 +47,16 @@ public class Voice : RagnarComponent
 			switch(enemy.GetComponent<BasicEnemy>().state)
             {
 				case EnemyState.DEATH:
-					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown = 0;
+					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown;
 					return null;
 				case EnemyState.IS_DYING:
-					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown = 0;
+					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown;
 					return null;
 				default:
 					return enemy;
 			}			
         }
-		GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown = 0;
+		GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown;
 		return null;
 
 	}
