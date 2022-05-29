@@ -67,6 +67,7 @@ MaterialComponent::MaterialComponent(GameObject* own, bool defaultMat) : default
 	emissiveColor = float3::zero;
 	emissiveEnabled = false;
 	refreshShaderTimer = 0.0f;
+	colorMultiplier = 1.0f;
 }
 
 MaterialComponent::MaterialComponent(MaterialComponent* mat)
@@ -398,7 +399,8 @@ bool MaterialComponent::OnLoad(JsonParsing& node)
 	opacity = node.GetJsonNumber("Opacity");
 	emissiveEnabled = node.GetJsonBool("Emissive Enabled");
 	emissiveColor = node.GetJson3Number(node, "Emissive Color");
-
+	colorMultiplier = node.GetJsonNumber("Color Multiplier");
+	if (colorMultiplier == 0) colorMultiplier = 1;
 	return true;
 }
 
@@ -416,6 +418,7 @@ bool MaterialComponent::OnSave(JsonParsing& node, JSON_Array* array)
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Opacity", opacity);
 	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Emissive Enabled", emissiveEnabled);
 	file.SetNewJson3Number(file, "Emissive Color", emissiveColor);
+	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Color Multiplier", colorMultiplier);
 
 	node.SetValueToArray(array, file.GetRootValue());
 
@@ -502,6 +505,9 @@ void MaterialComponent::Bind(CameraComponent* gameCam)
 
 		shader->SetUniform1f("interColIntensity", intensity);
 	}
+
+	shader->SetUniform1f("colorMultiplier", colorMultiplier);
+
 
 	glActiveTexture(GL_TEXTURE1);
 	glBindTexture(GL_TEXTURE_2D, app->renderer3D->shadowsDepthTexture);
@@ -660,8 +666,9 @@ void MaterialComponent::DisplayTexturesInfo()
 		{
 			showTexMenu = true;
 			textureTypeToChange = TextureType::DIFFUSE;
-
 		}
+		
+		ImGui::DragFloat("Color Multiplier", &colorMultiplier, 0.05, 0.0);
 
 		ImGui::Image((ImTextureID)diff->GetId(), ImVec2(128, 128));
 		ImGui::Indent();

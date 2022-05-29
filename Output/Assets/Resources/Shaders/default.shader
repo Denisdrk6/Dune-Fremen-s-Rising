@@ -100,6 +100,8 @@ uniform vec3 interCol;
 uniform float interColIntensity;
 
 uniform float opacity;
+uniform float colorMultiplier;
+
 
 float pi = 3.14159265359;
 
@@ -243,7 +245,7 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
 
 	vec4 shadow = light.genShadows ? CalculateShadow(fragPosLightSpace, normal, lightDir) : vec4(1);
 	
-	return ((ambient + shadow.rgb * shadow.a) * (diffuse + specular)) * light.intensity;
+	return ((ambient + shadow.rgb * shadow.a) * colorMultiplier * (diffuse + specular)) * light.intensity;
 }
 
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
@@ -337,14 +339,14 @@ void main()
 	vec3 viewDir = normalize(vCamPos - vPosition);
 	vec3 result = CalcDirLight(dirLight, norm, viewDir);
 	
-	//for (int i = 0; i < MAX_POINT_LIGHTS; ++i)
-	//	result += CalcPointLight(pointLights[i], norm, vPosition, viewDir);
-	//
-	//for (int i = 0; i < MAX_SPOT_LIGHTS; ++i)
-	//	result += CalcSpotLight(spotLights[i], norm, vPosition, viewDir);
+	for (int i = 0; i < MAX_POINT_LIGHTS; ++i)
+		result += CalcPointLight(pointLights[i], norm, vPosition, viewDir);
+	
+	for (int i = 0; i < MAX_SPOT_LIGHTS; ++i)
+		result += CalcSpotLight(spotLights[i], norm, vPosition, viewDir);
 
 
-	fragColor = texture(tex , vTexCoords) * vec4(result, 1);
+	fragColor = texture(tex , vTexCoords) * vec4(result, opacity) /** colorMultiplier*/;
 	fragColor.rgb += interCol * isInteractuable * interColIntensity;
 
 	fragColor += emissiveEnabled * vec4(material.emissiveColor, 1);
