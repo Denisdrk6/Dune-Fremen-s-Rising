@@ -49,7 +49,7 @@ public:
 	
 	void Intersect(std::vector<GameObject*>& gos, Ray primitive);
 	
-	void Intersect(std::set<GameObject*>& gos, CameraComponent* frustum);
+	void Intersect(std::set<GameObject*>& gos, CameraComponent* frustum, float scaleFactor = 1);
 	void CollectGo(std::set<GameObject*>& gos, std::stack<QuadtreeNode*>& nodes);
 	void CollectGoOnlyStatic(std::set<GameObject*>& gos, std::stack<QuadtreeNode*>& nodes);
 	void CollectGoByTag(std::set<GameObject*>& gos, std::stack<QuadtreeNode*>& nodes, std::string tag);

@@ -45,6 +45,50 @@ public class Barrel : RagnarComponent
         }
     }
 
+    public void Explode()
+    {
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        Debug.Log("Explota hijo de tu chingada madre");
+        if (boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude < 2.0f)
+        {
+            bossComponent.stunnedHits++;
+        }
+        bossComponent.barrelCount--;
+        bossComponent.barrelLocations[barrelIndex].isDestroyed = true;
+        for (int i = 0; i < gameObject.childs.Length; ++i)
+        {
+            if (gameObject.childs[i].name == "BarrelExplosion")
+            {
+                gameObject.childs[i].GetComponent<ParticleSystem>().Play();
+                break;
+            }
+        }
+        deathTimer = 0.4f;
+    }
+
     public void OnCollision(Rigidbody other)
     {
         if (other.gameObject.name == "Knife" || other.gameObject.name == "BackStab")

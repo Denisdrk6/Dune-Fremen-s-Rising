@@ -9,7 +9,6 @@ public class AirEnemy : RagnarComponent
     private AudioSource audioComponent;
     private Animation animationComponent;
     private ParticleSystem particleComponent;
-    private EnemyBullet bulletScript;
     private Rigidbody rb;
 
     /////////////
@@ -32,7 +31,6 @@ public class AirEnemy : RagnarComponent
     // Player tracker
     public GameObject[] players;
     public GameObject[] colliders;
-    GameObject SceneAudio;
     private Vector3 offset;
     public int index = 0;
 
@@ -42,7 +40,7 @@ public class AirEnemy : RagnarComponent
 
     // Timers
     public float shootCooldown = 0f;
-    float deathTimer = -1f;
+    bool isDying = false;
 
     float initialSpeed;
 
@@ -52,23 +50,22 @@ public class AirEnemy : RagnarComponent
     float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
-    int coneMaxTime = 3;
+    int coneMaxTime = 1;
+    private int radius = 12;
+    private int angle = 60;
 
     GameObject[] childs;
     ParticleSystem deathPartSys;
+    public bool canLookOut = false;
+    int retardedFrames;
+
     public void Start()
     {
         // Get components
-        audioComponent = gameObject.GetComponent<AudioSource>();
         animationComponent = gameObject.GetComponent<Animation>();
         particleComponent = gameObject.GetComponent<ParticleSystem>();
         rb = gameObject.GetComponent<Rigidbody>();
- 
-        players = GameObject.FindGameObjectsWithTag("Player");
-        SceneAudio = GameObject.Find("AudioLevel1");
         offset = gameObject.GetSizeAABB();
-
-        agents = gameObject.GetComponent<NavAgent>();
 
         if (state != EnemyState.DEATH)
         {
@@ -94,62 +91,28 @@ public class AirEnemy : RagnarComponent
         }
 
         deathPartSys.Pause();
+        retardedFrames = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().retardedFrames;
+    }
+
+    public void OnCreation()
+    {
+        players = GameObject.FindGameObjectsWithTag("Player");
+        agents = gameObject.GetComponent<NavAgent>();
+        audioComponent = gameObject.GetComponent<AudioSource>();
     }
 
     public void Update()
     {
-        if(state != EnemyState.DEATH)
+        if (state != EnemyState.DEATH && state != EnemyState.IS_DYING)
         {
-            if (!pendingToDelete && deathTimer == -1)
+            if (!pendingToDelete && !isDying && !stunned)
             {
-                if (!pendingToDelete && deathTimer == -1)
+                if (!distracted && waypoints.Count != 0)
                 {
-                    if (!stunned)
-                    {
-                        if (!distracted && waypoints.Count != 0)
-                        {
-                            Patrol();
-                        }
-                        if (PerceptionCone())
-                        {
-                            coneTimer += Time.deltaTime;
-
-                            if (coneTimer >= coneMaxTime)
-                            {
-                                agents.speed = initialSpeed * 1.2f;
-                                Shoot();
-                            }
-                        }
-                        else
-                        {
-                            agents.speed = initialSpeed;
-                            coneTimer -= Time.deltaTime;
-                            if (coneTimer < 0) coneTimer = 0;
-                        }
-                        if (!canShoot && shootCooldown >= 0)
-                        {
-                            Debug.Log(shootCooldown.ToString());
-                            shootCooldown -= Time.deltaTime;
-                            if (shootCooldown < 0)
-                            {
-                                shootCooldown = 0f;
-                                canShoot = true;
-                            }
-                        }
-                    }
+                    Patrol();
                 }
-            }
-
-            if (deathTimer >= 0)
-            {
-                state = EnemyState.IS_DYING;
-                deathTimer -= Time.deltaTime;
-                if (deathTimer < 0)
-                {
-                    audioComponent.PlayClip("EDRONE_DESTROYED");
-                    deathTimer = -1f;
-                    pendingToDelete = true;
-                }
+                if (canLookOut)
+                    LookOut(retardedFrames);
             }
 
             if (stunnedTimer >= 0)
@@ -172,6 +135,16 @@ public class AirEnemy : RagnarComponent
                 }
             }
         }
+        if (isDying)
+        {
+            state = EnemyState.IS_DYING;
+            if (animationComponent.HasFinished())
+            {
+                audioComponent.PlayClip("EDRONE_DESTROYED");
+                isDying = false;
+                pendingToDelete = true;
+            }
+        }
     }
 
     public void OnCollision(Rigidbody other)
@@ -180,10 +153,10 @@ public class AirEnemy : RagnarComponent
         {
             if (other.gameObject.name == "Knife")
             {
-                if (deathTimer == -1f)
+                if (!isDying)
                 {
                     audioComponent.PlayClip("EDRONE_GETDAMAGE");
-                    deathTimer = 4f;
+                    isDying = true;
                     deathPartSys.Play();
                     animationComponent.PlayAnimation("Dying");
                 }
@@ -193,10 +166,10 @@ public class AirEnemy : RagnarComponent
             }
             if (other.gameObject.name == "StunnerShot")
             {
-                if (deathTimer == -1f)
+                if (!isDying)
                 {
                     audioComponent.PlayClip("EDRONE_GETDAMAGE");
-                    deathTimer = 2f;
+                    isDying = true;
                     deathPartSys.Play();
                     animationComponent.PlayAnimation("Dying");
                 }
@@ -212,7 +185,7 @@ public class AirEnemy : RagnarComponent
 
     public void OnTrigger(Rigidbody other)
     {
-        if (state != EnemyState.DEATH || state != EnemyState.IS_DYING)
+        if (state != EnemyState.DEATH && state != EnemyState.IS_DYING)
         {
             //// Stilgar =====================================
             if (other.gameObject.name == "Trap")
@@ -229,6 +202,35 @@ public class AirEnemy : RagnarComponent
         }
     }
 
+    public void LookOut(int frames)
+    {
+        if ((frames == retardedFrames) ? PerceptionCone() : PlayerIsNear())
+        {
+            coneTimer += Time.deltaTime * retardedFrames;
+
+            if (coneTimer >= coneMaxTime)
+            {
+                agents.speed = initialSpeed * 1.2f;
+                Shoot();
+            }
+        }
+        else
+        {
+            agents.speed = initialSpeed;
+            coneTimer -= Time.deltaTime * retardedFrames;
+            if (coneTimer < 0) coneTimer = 0;
+        }
+        if (!canShoot && shootCooldown >= 0)
+        {
+            shootCooldown -= Time.deltaTime * retardedFrames;
+            if (shootCooldown < 0)
+            {
+                shootCooldown = 0f;
+                canShoot = true;
+            }
+        }
+        canLookOut = false;
+    }
     private bool PerceptionCone()
     {
         Vector3 enemyPos = gameObject.transform.globalPosition;
@@ -240,9 +242,28 @@ public class AirEnemy : RagnarComponent
         return (index == -1) ? false : true;
     }
 
+    public bool PlayerIsNear()
+    {
+        for (int i = 0; i < players.Length; i++)
+        {
+            if ((gameObject.transform.globalPosition - players[i].transform.globalPosition).magnitude <= radius)
+            {
+                if (Transform.GetAngleBetween(gameObject.transform.globalPosition, players[i].transform.globalPosition) <= angle * 0.5f)
+                {
+                    if (players[i].GetComponent<Player>().invisible || players[i].GetComponent<Player>().dead || players[i].GetComponent<Player>().isHidden)
+                        return false;
+
+                    if (RayCast.HitToTag(gameObject.transform.globalPosition, players[i].transform.globalPosition, "Player") != null)
+                        return true;
+                }
+            }
+        }
+        return false;
+    }
+
     private void Shoot()
     {
-        SceneAudio.GetComponent<AudioSource>().SetState("MUSIC", "LEVEL1_BATTLE");
+        audioComponent.SetState("MUSIC", "LEVEL1_BATTLE");
 
         if (canShoot)
         {
@@ -253,9 +274,9 @@ public class AirEnemy : RagnarComponent
 
             Vector3 pos = gameObject.transform.globalPosition;
             pos.y += 0.5f;
-            GameObject bullet = InternalCalls.InstancePrefab("EnemyBullet", pos, true);
+            GameObject bullet = InternalCalls.InstancePrefab("EnemyBullet", pos);
             bullet.GetComponent<Rigidbody>().IgnoreCollision(gameObject, true);
-            bulletScript = bullet.GetComponent<EnemyBullet>();
+            EnemyBullet bulletScript = bullet.GetComponent<EnemyBullet>();
             bulletScript.enemy = gameObject;
             bulletScript.index = index;
             bulletScript.offset = offset;

@@ -33,7 +33,7 @@ public class Boss : RagnarComponent
 	////////////
 
 	public Material material;
-	public Rigidbody rigidbody;
+
 
 	public BossState state;
 
@@ -89,18 +89,17 @@ public class Boss : RagnarComponent
 	bool bossStop = false;
 	float countDown = 5.0f;
 
+	bool hitted = false;
 
 	string[] animations = new string[14];
 	//int indexAnim = 0;
 	public void Start()
 	{
-
 		// Get Components
 		animationComponent = gameObject.GetComponent<Animation>();
 		stabParticles = GameObject.Find("StabParticlesBoss").GetComponent<ParticleSystem>();
 		shieldParticles = GameObject.Find("BossShieldParticles").GetComponent<ParticleSystem>();
 		rb = gameObject.GetComponent<Rigidbody>();
-
 
 		animations[0] = "CallBackup";
 		animations[1] = "Die";
@@ -129,8 +128,6 @@ public class Boss : RagnarComponent
 		waypoints[1] = GameObject.Find("29");
 		waypoints[2] = GameObject.Find("30");
 
-		rigidbody = gameObject.GetComponent<Rigidbody>();
-
 		agent = gameObject.GetComponent<NavAgent>();
 
 		animationComponent.PlayAnimation("SitIdle");
@@ -150,17 +147,37 @@ public class Boss : RagnarComponent
 			NextState();
 		}
 
-		if (state == BossState.PHASE2)
+		if (!hitted)
 		{
-			Phase2();
+			if (state == BossState.PHASE2)
+			{
+				Phase2();
+			}
+			else if (state == BossState.PHASE3)
+			{
+				Phase3();
+			}
+			else if (state == BossState.PHASE4)
+			{
+				Phase4();
+			}
 		}
-		else if (state == BossState.PHASE3)
+        else 
 		{
-			Phase3();
-		}
-		else if (state == BossState.PHASE4)
-		{
-			Phase4();
+			if (animationComponent.HasFinished())
+			{
+				hitted = false;
+				if (state == BossState.PHASE4)
+				{
+					SceneManager.LoadScene("WinScene");
+					InternalCalls.Destroy(gameObject);
+				}
+				else
+				{
+					state++;
+					NextState();
+				}
+			}
 		}
 
 		//if (Input.GetKey(KeyCode.M) == KeyState.KEY_DOWN)
@@ -185,25 +202,25 @@ public class Boss : RagnarComponent
 			case BossState.PHASE2:
 				//GenerateEnemies();
 				players = GameObject.FindGameObjectsWithTag("Player");
-				rigidbody.linearVelocity = GameObject.Find("Player").GetComponent<Rigidbody>().linearVelocity * 0.5f;
+				rb.linearVelocity = GameObject.Find("Player").GetComponent<Rigidbody>().linearVelocity * 0.5f;
 				GotoNextPoint();
 				break;
 			case BossState.PHASE3:
 				GameObject.Find("BossShieldParticles").GetComponent<ParticleSystem>().Play();
-				rigidbody.linearVelocity = GameObject.Find("Player").GetComponent<Rigidbody>().linearVelocity * 0.75f;
+				rb.linearVelocity = GameObject.Find("Player").GetComponent<Rigidbody>().linearVelocity * 0.75f;
 				barrelCooldown = 0.0f;
 				GenerateBarrels();
 				break;
 			case BossState.PHASE4:
-				//if (!shieldInmunity)
-				//{
-				rigidbody.linearVelocity = GameObject.Find("Player").GetComponent<Rigidbody>().linearVelocity * 1.2f;
-				animationComponent.PlayAnimation("Run");
-				//}
-				//else state--;
+				if (!shieldInmunity)
+				{
+					rb.linearVelocity = GameObject.Find("Player").GetComponent<Rigidbody>().linearVelocity * 1.2f;
+					animationComponent.PlayAnimation("Run");
+				}
+				else state--;
 				break;
 			default:
-				state--;
+				InternalCalls.Destroy(gameObject);
 				break;
 		}
 	}
@@ -212,11 +229,11 @@ public class Boss : RagnarComponent
 	{
 		animationComponent.PlayAnimation("CallBackup");
 
-		GameObject enemy1 = InternalCalls.InstancePrefab("Basic Enemy 16", new Vector3(2.07f, 6.66f, -19.0f));
-		enemy1.GetComponent<EnemyBoss>().colliders = colliders;
+		GameObject enemy1 = InternalCalls.InstancePrefab("Basic Enemy 15", new Vector3(5.56f, 9.34f, -53.60f));
+		enemy1.GetComponent<BasicEnemy>().state = EnemyState.IDLE;
 
-		GameObject enemy2 = InternalCalls.InstancePrefab("Basic Enemy 17", new Vector3(0.61f, 6.66f, -8.0f));
-		enemy2.GetComponent<EnemyBoss>().colliders = colliders;
+		GameObject enemy2 = InternalCalls.InstancePrefab("Basic Enemy 16", new Vector3(-5.56f, 9.34f, -53.60f));
+		enemy2.GetComponent<BasicEnemy>().state = EnemyState.IDLE;
 	}
 	public void GenerateRocks()
 	{
@@ -251,7 +268,7 @@ public class Boss : RagnarComponent
 			if (animationComponent.HasFinished())
 			{
 				// Move to new location as soon as phase 2 starts
-				Vector3 destination = new Vector3(0.0f, 9.24f, 18.53f);
+				Vector3 destination = waypoints[2].transform.globalPosition;
 
 				animationComponent.PlayAnimation("WalkNormal");
 				agent.MoveTo(destination);
@@ -269,8 +286,8 @@ public class Boss : RagnarComponent
 				{
 					for (int i = 0; i < players.Length; ++i)
 					{
-						if (players[i].transform.globalPosition.magnitude <= area.magnitude &&
-							players[i].transform.globalPosition.magnitude < jumpTo.magnitude)
+						if (Math.Abs(players[i].transform.globalPosition.magnitude) <= Math.Abs(area.magnitude) &&
+							Math.Abs(players[i].transform.globalPosition.magnitude) < Math.Abs(jumpTo.magnitude))
 						{
 							jumpTo = players[i].transform.globalPosition;
 							indexPlayerTarget = i;
@@ -282,7 +299,7 @@ public class Boss : RagnarComponent
 				if (jumpTo != new Vector3(100.0f, 100.0f, 100.0f) && players[indexPlayerTarget] != null)
 				{
 					agent.MoveTo(jumpTo);
-					if ((players[indexPlayerTarget].transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude) <= 2.0f)
+					if (Math.Abs(players[indexPlayerTarget].transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude) <= 2.0f)
 					{
 						// Play sweep attack animation
 
@@ -315,7 +332,7 @@ public class Boss : RagnarComponent
 		}
         else
         {
-            Debug.Log("Needs to be stunned");
+            //Debug.Log("Needs to be stunned");
 			ExplodeBarrels();
 			if (shieldInmunity) GenerateBarrels();
 			if (stunnedHits < 3 && barrelCount < 3)
@@ -538,8 +555,8 @@ public class Boss : RagnarComponent
 		//gameObject.GetComponent<Animation>().PlayAnimation("WalkNormal");
 
 		//Debug.Log(waypoints[destPoint].transform.globalPosition.ToString());
-		agent.CalculatePath(waypoints[destPoint].transform.globalPosition);
 		destPoint = (destPoint + 1) % waypoints.Length;
+		agent.CalculatePath(waypoints[destPoint].transform.globalPosition);
 	}
 
 	private void Patrol()
@@ -549,6 +566,7 @@ public class Boss : RagnarComponent
 		{
 			Debug.Log("Stopped");
 			bossStop = true;
+			animationComponent.PlayAnimation("Shield");
 		}
 
 		if (bossStop)
@@ -559,6 +577,7 @@ public class Boss : RagnarComponent
 				bossStop = false;
 				countDown = 5.0f;
 				GotoNextPoint();
+				animationComponent.PlayAnimation("WalkNormal");
 			}
 		}
 	}
@@ -592,9 +611,16 @@ public class Boss : RagnarComponent
 	{
 		if (!shieldInmunity)
 		{
-			state++;
+			if (state == BossState.PHASE4)
+            {
+				animationComponent.PlayAnimation("Execdie");
+			}
+			else
+            {
+				animationComponent.PlayAnimation("Die");
+			}
 			stabParticles.Play();
-			NextState();
+			hitted = true;
 		}
 	}
 	public void OnCollision(Rigidbody other)
@@ -602,9 +628,11 @@ public class Boss : RagnarComponent
 		if (other.gameObject.name == "BackStab" && !shieldInmunity)
 		{
 			state++;
-			NextState();
+			animationComponent.PlayAnimation("Die");
+			hitted = true;
 			if (state == BossState.PHASE4)
 			{
+				Input.RestoreDefaultCursor();
 				SceneManager.LoadScene("WinScene");
 			}
 		}

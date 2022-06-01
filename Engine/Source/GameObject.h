@@ -87,7 +87,7 @@ public:
 	std::string tag;
 	std::string layer;
 	std::string prefabPath;
-
+	bool hasBeenUpdate = true;
 	bool isUI = false;
 
 	std::vector<SerializedField*> csReferences;

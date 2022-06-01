@@ -16,5 +16,17 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void ChangeFov(float fov);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void ScriptMovement(float x, float y, float z);
+
+        public extern bool lockCam
+        {
+            [MethodImplAttribute(MethodImplOptions.InternalCall)]
+            get;
+
+            [MethodImplAttribute(MethodImplOptions.InternalCall)]
+            set;
+        }
     }
 }

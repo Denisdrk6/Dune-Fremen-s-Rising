@@ -152,7 +152,7 @@ void ModuleCamera3D::ThrowRayCast(std::set<GameObject*>& gameObjects, math::Line
 		if ((*it)->GetAABB().IsFinite() && transform)
 		{
 			picking = prevLine;
-			if (picking.Intersects((*it)->GetAABB()))
+			if (picking.Intersects((*it)->GetOOB()))
 			{
 				MeshComponent* meshComponent = (*it)->GetComponent<MeshComponent>();
 				if (meshComponent)

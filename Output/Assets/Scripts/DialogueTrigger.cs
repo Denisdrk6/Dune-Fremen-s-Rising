@@ -31,11 +31,12 @@ public class DialogueTrigger : RagnarComponent
                     break;
             case 1:
                 // Gameplay
+                InternalCalls.Destroy(gameObject);
                 break;
             case 2:
                 // Gameplay
+                InternalCalls.Destroy(gameObject);
                 break;
-
             case 3:
                 if (isUsed)
                     if (dialogueManager.GetEndDialogue())
@@ -44,16 +45,14 @@ public class DialogueTrigger : RagnarComponent
                         ActiveDialoguebyID(4);
                     }
                 break;
-
             case 4:
                 if (isUsed)
                     LoadSceneWin();
                 break;
-
             case 5:
                 // Gameplay
+                InternalCalls.Destroy(gameObject);
                 break;
-
             case 6:
                 if (dialogueManager.GetEndDialogue())
                 {
@@ -61,7 +60,6 @@ public class DialogueTrigger : RagnarComponent
                     ActiveDialoguebyID(7);
                 }
                 break;
-
             case 7:
                 if (dialogueManager.GetEndDialogue())
                 {
@@ -69,28 +67,26 @@ public class DialogueTrigger : RagnarComponent
                     ActiveDialoguebyID(8);
                 }
                 break;
-
             case 8:
                 // Gameplay
+                InternalCalls.Destroy(gameObject);
                 break;
-
             case 9:
                 // Gameplay
+                InternalCalls.Destroy(gameObject);
                 break;
-
             case 10:
                 if (isUsed)
                     LoadSceneWin();
                 break;
-
             case 11:
                 // Gameplay
+                InternalCalls.Destroy(gameObject);
                 break;
-
             case 12:
                 // Gameplay
+                InternalCalls.Destroy(gameObject);
                 break;
-
             default:
                 break;
         }
@@ -103,8 +99,10 @@ public class DialogueTrigger : RagnarComponent
         {
             nexLevel = true;
             isUsed = false;
-            GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveTest("WIIIIIN", gameObject.transform.globalPosition);
+            //GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveTest("WIIIIIN", gameObject.transform.globalPosition);
+            Input.RestoreDefaultCursor();
             SceneManager.LoadScene("WinScene");
+            InternalCalls.Destroy(gameObject);
         }
     }
     public void ActiveDialogue()

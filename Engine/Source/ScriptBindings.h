@@ -72,6 +72,49 @@ int GetCursorState()
 		return app->input->GetCursorState();
 }
 
+void RestoreDefaultCursor()
+{
+	if (app != nullptr)
+		app->input->RestoreDefaultCursor();
+}
+
+void SetEagleCursor(bool ret)
+{
+	if (app != nullptr)
+	{
+		if (ret)
+		{
+			int i = 0;
+			for (std::vector<HCURSOR>::iterator it = app->input->GetCursors()->begin(); it != app->input->GetCursors()->end(); ++it)
+			{
+				if (i == 4)
+				{
+					std::string path = "Library/Cursors/";
+					app->input->GetCursors()->erase(it);
+					app->input->GetCursors()->insert(it, LoadCursorFromFileA(std::string(path + "ui_eagle.cur").c_str()));
+					break;
+				}
+				i++;
+			}
+		}
+		else
+		{
+			int i = 0;
+			for (std::vector<HCURSOR>::iterator it = app->input->GetCursors()->begin(); it != app->input->GetCursors()->end(); ++it)
+			{
+				if (i == 4)
+				{
+					std::string path = "Library/Cursors/";
+					app->input->GetCursors()->erase(it);
+					app->input->GetCursors()->insert(it, LoadCursorFromFileA(std::string(path + "paul_throw_stone.cur").c_str()));
+					break;
+				}
+				i++;
+			}
+		}		
+	}
+}
+
 // Input bindings ===============================================================================
 
 // Component bindings ===============================================================================
@@ -190,6 +233,7 @@ float GetDistanceBetween(MonoObject* vector1, MonoObject* vector2)
 {
 	float3 vec1 = app->moduleMono->UnboxVector(vector1);
 	float3 vec2 = app->moduleMono->UnboxVector(vector2);
+	DEBUG_LOG("%f", vec1.Distance(vec2));
 	return vec1.Distance(vec2);
 }
 MonoObject* RotateY(MonoObject* vector, float anglesDegrees)
@@ -572,6 +616,13 @@ void SetGameObjectIsActive(MonoObject* go, MonoBoolean value)
 	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
 	gameObject->EnableDisableActive(value);
 }
+
+MonoBoolean GetHasBeenUpdate(MonoObject* go)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	return gameObject->hasBeenUpdate;
+}
+
 MonoBoolean GetActiveComponent(MonoObject* go)
 {
 	Component* comp = GetComponentMono<Component*>(go);
@@ -748,7 +799,6 @@ void SetDirectionParticle(MonoObject* go, MonoObject* direction)
 // Scene Manager
 void NextScene()
 {
-	app->input->SetCursorState(0);
 	app->sceneManager->NextScene();
 	app->renderer3D->gosToDrawOutline.clear();
 	app->renderer3D->ClearPointLights();
@@ -762,7 +812,6 @@ void SaveScene(MonoString* string)
 
 void LoadScene(MonoString* string)
 {
-	app->input->SetCursorState(0);
 	char* name = mono_string_to_utf8(string);
 	app->sceneManager->NextScene(name);
 	app->renderer3D->gosToDrawOutline.clear();
@@ -801,6 +850,16 @@ MonoObject* GetRegionGame()
 void RequestDamageFeedback()
 {
 	app->renderer3D->RequestDamageFeedback();
+}
+
+void RequestScreenRectangle(MonoObject* color)
+{
+	app->renderer3D->RequestScreenRectangle(app->moduleMono->UnboxQuat(color).CastToFloat4());
+}
+
+void EndRequestScreenRectangle()
+{
+	app->renderer3D->EndRequestScreenRectangle();
 }
 
 // Dialogue System ======================================

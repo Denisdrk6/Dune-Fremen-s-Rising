@@ -8,6 +8,7 @@ public class Voice : RagnarComponent
 	public GameObject[] enemies;
 	public PlayerManager playerManager;
 	NavAgent agent;
+	bool check = false;
 
 	public void Start()
 	{
@@ -22,6 +23,11 @@ public class Voice : RagnarComponent
 		selectedEnemy = EnemyFound();
 		if (selectedEnemy != null && selectedEnemy.GetComponent<AirEnemy>().enemyType != EnemyType.AIR)
 		{
+			if(!check)
+            {
+				player.GetComponent<Player>().PlayAudioClip("WPN_VOICE");
+				check = true;
+            }
 			BasicEnemy enemyScript = selectedEnemy.GetComponent<BasicEnemy>();
 			ActivateVoice();
 			enemyScript.initialPos = selectedEnemy.transform.globalPosition;
@@ -41,16 +47,16 @@ public class Voice : RagnarComponent
 			switch(enemy.GetComponent<BasicEnemy>().state)
             {
 				case EnemyState.DEATH:
-					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown = 0;
+					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown;
 					return null;
 				case EnemyState.IS_DYING:
-					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown = 0;
+					GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown;
 					return null;
 				default:
 					return enemy;
 			}			
         }
-		GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown = 0;
+		GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[1].cooldown;
 		return null;
 
 	}

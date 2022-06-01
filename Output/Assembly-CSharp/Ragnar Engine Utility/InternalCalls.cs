@@ -56,6 +56,10 @@ namespace RagnarEngine
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern void RequestDamageFeedback();
 
+        // It is a quaternion because there is not a Vector4 class, but inside the engine is interpreted as a float4
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void RequestScreenRectangle(Quaternion color);
+
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern Vector3 GetMousePosition();
     }
@@ -90,6 +94,12 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern int GetCursorState();
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void SetEagleCursor(bool ret);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void RestoreDefaultCursor();
     }
 
     public partial class Debug
@@ -445,6 +455,9 @@ enum CursorState
     STILGAR_2,
     STILGAR_3,
     STILGAR_4,
+
+    CLICKABLE,
+    NON_CLICKABLE,
 };
 
 public enum KeyCode

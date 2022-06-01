@@ -100,6 +100,7 @@ uniform vec3 interCol;
 uniform float interColIntensity;
 
 uniform float opacity;
+uniform float colorMultiplier;
 
 float pi = 3.14159265359;
 
@@ -185,7 +186,7 @@ vec4 CalculateShadow(vec4 fragPosLightSpace, vec3 normal, vec3 lightDir)
 
 	// Change the color and apply blur so it is not full black
 	// ========================
-	vec4 colorSum = vec4(0);
+	//vec4 colorSum = vec4(0);
 	vec2 texCoord = gl_FragCoord.xy / texSize;
 	float shadow = 0;
 	float dx = dFdx(texCoord.s);
@@ -199,35 +200,14 @@ vec4 CalculateShadow(vec4 fragPosLightSpace, vec3 normal, vec3 lightDir)
 		for (int x = -sampleRadius; x <= sampleRadius; x++)
 		{
 			texCoord += vec2(dx * x, dy * y);
-			colorSum += texture(tex, texCoord);
+			//colorSum += texture(tex, vTexCoords);
 			float pcfDepth = texture(depthTexture, projCoords.xy + vec2(x, y) * pixelSize).x;
 			shadow += currentDepth + bias > pcfDepth ? 1 : 0;
 		}
 	}
-	colorSum /= (sampleRadius * 2 + 1);
 	shadow /= pow((sampleRadius * 2 + 1), 2);
 
-	vec4 result = mix(vec4(1), normalize(colorSum) * 1.25, shadow);
-
-	//for (int i = 0; i < 3; ++i)
-	//{
-	//	for (int j = 0; j < 3; ++j)
-	//	{
-	//		texCoord += vec2(dx * i, dy * j);
-	//		colorSum += texture(tex, texCoord);
-	//
-	//		float pcfDepth = texture(depthTexture, projCoords.xy + vec2(i * 0.5, j * 0.5) * depthTexSize).x;
-	//		shadow += currentDepth + bias > pcfDepth ? 1 : 0;
-	//	}
-	//}
-	//
-	//colorSum = colorSum / 9;
-	//shadow = shadow / 9;
-	//shadow = smoothstep(0, 2, shadow);
-	//// ========================
-	//
-	//vec4 result = mix(vec4(1), normalize(colorSum), shadow);
-
+	vec4 result = vec4(vec3(1 - shadow * 0.3), 0.5);
 	return result;	
 }
 
@@ -241,10 +221,10 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
 	// Diffuse shading
 	float diff = max(dot(lightDir, normal), 0.0);
 	
-	if (diff < csp.a) diff = 0.05f;
-	else if (diff < csp.b) diff = csp.b;
-	else if (diff < csp.c) diff = csp.c;
-	else if (diff < csp.d) diff = csp.d;
+	//if (diff < csp.a) diff = 0.05f;
+	//else if (diff < csp.b) diff = csp.b;
+	//if (diff < csp.c) diff = csp.c;
+	if (diff < csp.d) diff = csp.d;
 	else if (diff < csp.e) diff = csp.e;
 	else if (diff < csp.f) diff = csp.f;
 	else diff = csp.g;
@@ -262,7 +242,9 @@ vec3 CalcDirLight(DirLight light, vec3 normal, vec3 viewDir)
 
 	vec4 shadow = light.genShadows ? CalculateShadow(fragPosLightSpace, normal, lightDir) : vec4(1);
 	
-	return ((ambient + shadow.rgb * shadow.a) * (diffuse + specular)) * light.intensity;
+	
+	//return ((ambient + shadow.rgb * shadow.a) * (diffuse + specular)) * light.intensity;
+	return (mix(ambient, shadow.rgb, 1) * (diffuse + specular)) * light.intensity;
 }
 
 vec3 CalcPointLight(PointLight light, vec3 normal, vec3 fragPos, vec3 viewDir)
@@ -363,7 +345,7 @@ void main()
 		result += CalcSpotLight(spotLights[i], norm, vPosition, viewDir);
 
 
-	fragColor = texture(tex , vTexCoords) * vec4(result, opacity);
+	fragColor = texture(tex, vTexCoords) * vec4(result, opacity) * colorMultiplier;
 	fragColor.rgb += interCol * isInteractuable * interColIntensity;
 
 	fragColor += emissiveEnabled * vec4(material.emissiveColor, 1);

@@ -16,6 +16,8 @@ public class Whistle : RagnarComponent
 		Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
 		goRB.SetBodyPosition(pos);
 		goRB.IgnoreCollision(player, true);
+
+		player.GetComponent<Player>().PlayAudioClip("WPN_WHISTLE");
 	}
 	public void Update()
 	{

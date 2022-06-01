@@ -143,6 +143,12 @@ namespace RagnarEngine
             set;
         }
 
+        public extern bool hasBeenUpdate
+        {
+            [MethodImplAttribute(MethodImplOptions.InternalCall)]
+            get;
+        }
+
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         extern public Vector3 GetSizeAABB();
 

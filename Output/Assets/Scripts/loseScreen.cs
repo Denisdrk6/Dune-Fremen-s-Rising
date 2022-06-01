@@ -11,10 +11,30 @@ public class loseScreen : RagnarComponent
 	GameObject RetryImage;
 	GameObject AudioManager;
 
+	GameObject[] players;
+	GameObject[] enemies;
+
 	bool isFirstM = true;
 	bool isFirstR = true;
 	public void Start()
 	{
+		Input.RestoreDefaultCursor();
+		players = new GameObject[3];
+		players = GameObject.FindGameObjectsWithTag("Player");
+
+		enemies = new GameObject[2];
+		enemies = GameObject.FindGameObjectsWithTag("Enemies");
+
+		foreach (var item in enemies)
+		{
+			item.GetComponent<Animation>().PlayAnimation("Idle");
+		}
+
+		foreach (var item in players)
+		{
+			item.GetComponent<Animation>().PlayAnimation("Idle");
+		}
+
 		Back = GameObject.Find("Background");
 		Menu = GameObject.Find("ButtonMenu");
 		Retry = GameObject.Find("ButtonRetry");
@@ -23,6 +43,12 @@ public class loseScreen : RagnarComponent
 		AudioManager = GameObject.Find("AudioLoseScene");
 		Pos = new Vector3(0, 0, 0);
         AudioManager.GetComponent<AudioSource>().PlayClip("UI_LOSESCREEN");
+
+		Pos.Set(MenuImage.GetComponent<Transform2D>().position2D.x - 5, MenuImage.GetComponent<Transform2D>().position2D.y, 36.1f);
+		MenuImage.GetComponent<Transform2D>().position2D = Pos;
+
+		Pos.Set(RetryImage.GetComponent<Transform2D>().position2D.x - 5, RetryImage.GetComponent<Transform2D>().position2D.y, 36.1f);
+		RetryImage.GetComponent<Transform2D>().position2D = Pos;
 	}
 	void MenuAction()
 	{

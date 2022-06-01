@@ -1,4 +1,3 @@
-using System;
 using RagnarEngine;
 
 public class BackStabEnemy : RagnarComponent
@@ -31,20 +30,19 @@ public class BackStabEnemy : RagnarComponent
 		if (selectedEnemy != null && backstabed == false)
 		{
 			backstabed = true;
-			Vector3 behind = selectedEnemy.transform.globalPosition - (selectedEnemy.transform.forward * 1);
-			behind.y = -0.8f;
-			enemyPlayer.GetComponent<Rigidbody>().SetBodyPosition(behind);
+			//Vector3 behind = selectedEnemy.transform.globalPosition - (selectedEnemy.transform.forward * 1);
+			//enemyPlayer.GetComponent<Rigidbody>().SetBodyPosition(behind);
 			if (selectedEnemy.GetComponent<BasicEnemy>().ToString() == "BasicEnemy")
 			{
-				selectedEnemy.GetComponent<BasicEnemy>().pendingToDelete = true;
+				selectedEnemy.GetComponent<BasicEnemy>().isDying = true;
 			}
-			if (selectedEnemy.GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy")
+			else if (selectedEnemy.GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy")
 			{
-				selectedEnemy.GetComponent<UndistractableEnemy>().pendingToDelete = true;
+				selectedEnemy.GetComponent<UndistractableEnemy>().isDying = true;
 			}
-			if (selectedEnemy.GetComponent<TankEnemy>().ToString() == "TankEnemy")
+			else if (selectedEnemy.GetComponent<TankEnemy>().ToString() == "TankEnemy")
 			{
-				selectedEnemy.GetComponent<TankEnemy>().pendingToDelete = true;
+				selectedEnemy.GetComponent<TankEnemy>().isDying = true;
 			}
 			selectedEnemy.GetComponent<Animation>().PlayAnimation("Dying");
 		}

@@ -16,7 +16,7 @@ public class Camouflage : RagnarComponent
 		playerScript = player.GetComponent<Player>();
 
 		SceneAudio = GameObject.Find("AudioLevel1");
-        SceneAudio.GetComponent<AudioSource>().PlayClip("WPN_CAMOUFLAGEACTIVATE");
+        player.GetComponent<Player>().PlayAudioClip("WPN_CAMOUFLAGEACTIVATE");
     }
 	public void Update()
 	{

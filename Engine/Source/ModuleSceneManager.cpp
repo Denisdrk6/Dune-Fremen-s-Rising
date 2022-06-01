@@ -121,6 +121,7 @@ bool ModuleSceneManager::Update(float dt)
 			currentScene->UnLoad();
 			currentScene = scenes[index];
 			currentScene->Load();
+			app->renderer3D->frames = 0;
 			newSceneLoaded = true;
 			app->navMesh->BakeNavMesh();
 			fadeInCompleted = false;

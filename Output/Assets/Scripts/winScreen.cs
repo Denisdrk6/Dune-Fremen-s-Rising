@@ -35,8 +35,29 @@ public class winScren : RagnarComponent
 	bool isFirstA = false;
 	bool isFirstR = false;
 	bool isFirst = true;
+
+	GameObject[] players;
+	GameObject[] enemies;
+
 	public void Start()
 	{
+		Input.RestoreDefaultCursor();
+		players = new GameObject[3];
+		players = GameObject.FindGameObjectsWithTag("Player");
+
+		enemies = new GameObject[2];
+		enemies = GameObject.FindGameObjectsWithTag("Enemies");
+
+		foreach (var item in enemies)
+		{
+			item.GetComponent<Animation>().PlayAnimation("Idle");
+		}
+
+		foreach (var item in players)
+		{
+			item.GetComponent<Animation>().PlayAnimation("Idle");
+		}
+
 		Back = GameObject.Find("Background");
 		Menu = GameObject.Find("ButtonMenu");
 		Next = GameObject.Find("ButtonNextLevel");
@@ -68,8 +89,9 @@ public class winScren : RagnarComponent
 		Pos.Set(InternalCalls.GetRegionGame().x / 2 + 200, nextTransform.position2D.y, 36.1f);
 		nextTransform.position2D = Pos;
 
-		Pos.Set(InternalCalls.GetRegionGame().x / 2 +200, nextImageTransform.position2D.y, 36.1f);
-		nextImageTransform.position2D = Pos;
+
+		Pos.Set(menuImageTransform.position2D.x -5, menuImageTransform.position2D.y, 36.1f);
+		menuImageTransform.position2D = Pos;
 	}
 	void MenuAction()
 	{
@@ -116,7 +138,7 @@ public class winScren : RagnarComponent
 		}
 	}
 	void NextAction()
-	{		
+	{
 		int a = nextButton.GetButtonState();
 		switch (a)
 		{
@@ -128,13 +150,15 @@ public class winScren : RagnarComponent
 			{
 				Pos.Set((InternalCalls.GetRegionGame().x / 2)-100, nextTransform.position2D.y, 36.1f);
 				nextTransform.position2D = Pos;
+					Pos.Set((InternalCalls.GetRegionGame().x / 2) - 115, nextImageTransform.position2D.y, 36.1f);
+					nextImageTransform.position2D = Pos;
 
-				Pos.Set((InternalCalls.GetRegionGame().x / 2)-100, nextImageTransform.position2D.y, 36.1f);
-				nextImageTransform.position2D = Pos;
-				isFirstA = true;
+
+					isFirstA = true;
 			}
-			// normal Mode
-			break;
+				
+				// normal Mode
+				break;
 		case 2:
 			// focused mode
 			if (isFirstA)
@@ -142,7 +166,7 @@ public class winScren : RagnarComponent
 				Pos.Set((InternalCalls.GetRegionGame().x / 2) - 120, nextTransform.position2D.y, 36.1f);
 				nextTransform.position2D = Pos;
 				isFirst = false;
-				Pos.Set((InternalCalls.GetRegionGame().x / 2) - 120, nextImageTransform.position2D.y, 36.1f);
+				Pos.Set((InternalCalls.GetRegionGame().x / 2) - 135, nextImageTransform.position2D.y, 36.1f);
 				nextImageTransform.position2D = Pos;
 				managerAudioSource.PlayClip("UI_HOVER");
 				isFirstA = false;
@@ -178,7 +202,7 @@ public class winScren : RagnarComponent
 				Size.Set(301.5f - 20,51.5f, 0);
 				replayTransform.SetSize(Size);
 
-				Size.Set(294 - 20, 46.5f, 0);
+				Size.Set(294 -10, 46.5f, 0);
 				replayImageTransform.SetSize(Size);
 				isFirstR = true;
 				
@@ -227,7 +251,7 @@ public class winScren : RagnarComponent
 		Pos.Set((InternalCalls.GetRegionGame().x / 2) - 100, nextTransform.position2D.y, 36.1f);
 		nextTransform.position2D = Pos;
 
-		Pos.Set((InternalCalls.GetRegionGame().x / 2) - 100, nextImageTransform.position2D.y, 36.1f);
+		Pos.Set((InternalCalls.GetRegionGame().x / 2) - 115, nextImageTransform.position2D.y, 36.1f);
 		nextImageTransform.position2D = Pos;
 	}
 

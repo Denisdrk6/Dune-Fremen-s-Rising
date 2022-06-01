@@ -12,11 +12,13 @@ public class Level_1 : RagnarComponent
     public Vector3 hitPoint;
 
     private GameObject SceneAudio;
-    private GameObject preClick;
-    private GameObject preNonClick;
     private Transform camera;
+    private pauseMenuButton pause;
+
     public void Start()
 	{
+        Input.SetEagleCursor(false);
+        Input.SetCursorState(0);
         // Camera Starting Position
         //GameObject.Find("cameraController").transform.globalPosition = new Vector3(-52.79f, 0f, 89.05f);
         GameObject.Find("UI Counter").GetComponent<Transform2D>().position2D = new Vector3(0, (0.5f * InternalCalls.GetRegionGame().y) -28, 0);
@@ -28,14 +30,18 @@ public class Level_1 : RagnarComponent
         SceneAudio = GameObject.Find("AudioLevel1");
         SceneAudio.GetComponent<AudioSource>().PlayClip("MUSICPLAY");
         SceneAudio.GetComponent<AudioSource>().SetState("MUSIC", "LEVEL1_BASE");
-        preClick = GameObject.Find("preClick");
-        preNonClick = GameObject.Find("preNonClick");
         camera = GameObject.Find("Camera").transform;
+        pause = GameObject.Find("Background").GetComponent<pauseMenuButton>();
 
         if (SaveSystem.fromContinue)
         {
             TimerData data = SaveSystem.LoadTimer();
             timer.timer = data.timer;
+        }
+        else
+        { 
+            SaveSystem.SaveScene();
+            SaveSystem.SaveTimer(timer.timer);
         }
 
         // PLAYERS
@@ -47,7 +53,7 @@ public class Level_1 : RagnarComponent
             prefabPath = "Player",
             state = State.NONE,
             abilities = new Abilities[4],
-            hitPoints = 3,
+            hitPoints = 4,
             pos = new Vector3(-43.69f, 0f, 199.77f)
         };
         characters[0].abilities[0] = new Abilities
@@ -92,11 +98,11 @@ public class Level_1 : RagnarComponent
             prefabPath = "Rock",
             transformY = 1.15f,
             intensity = 1.250f,
-            constant = 1.350f,
+            constant = 2.5f,
             linear = -0.172f,
             quadratic = 0f,
             charges = -1,
-            cooldown = 20f
+            cooldown = 3f
         }; // Rock/Eagle
 
         // ENEMIES
@@ -299,7 +305,7 @@ public class Level_1 : RagnarComponent
 
         enemies[23] = new Enemies
         {
-            name = "Basic Enemy 17",
+            name = "Basic Enemy 19",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_23"),
@@ -307,7 +313,7 @@ public class Level_1 : RagnarComponent
         };
         enemies[24] = new Enemies
         {
-            name = "Basic Enemy 17",
+            name = "Basic Enemy 20",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_24"),
@@ -315,7 +321,7 @@ public class Level_1 : RagnarComponent
         };
         enemies[25] = new Enemies
         {
-            name = "Basic Enemy 17",
+            name = "Basic Enemy 21",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_25"),
@@ -331,6 +337,7 @@ public class Level_1 : RagnarComponent
         InternalCalls.InstancePrefab("Dialogue", Vector3.zero);
         InternalCalls.InstancePrefab("DialogueLevel1", Vector3.zero);
     }
+
 	public void Update()
 	{
         if (runGame) timer.Update();
@@ -341,21 +348,15 @@ public class Level_1 : RagnarComponent
             SceneManager.LoadScene("Cinematic_1");
         }
         hitPoint = RayCast.ReturnHitpoint();
-        hitPoint.y -= 0.5f;
-        GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
-        if (hittedGO != null)
-        {
-            preClick.isActive = true;
-            preNonClick.isActive = false;
-        }
-        else
-        {
-            preClick.isActive = false;
-            preNonClick.isActive = true;
-        }
 
-        hitPoint.y += 0.54f;
-        if (preClick.isActive) preClick.transform.globalPosition = hitPoint;
-        if (preNonClick.isActive) preNonClick.transform.globalPosition = hitPoint;
+        //if(!pause.isSowing || !pause.isOptions)
+        //{
+        //    GameObject hittedGO = RayCast.HitToTag(camera.globalPosition, hitPoint, "Ground");
+
+        //    if (hittedGO != null)
+        //        Input.SetCursorState((int)CursorState.CLICKABLE);
+        //    else
+        //        Input.SetCursorState((int)CursorState.NON_CLICKABLE);
+        //}        
     }
 }

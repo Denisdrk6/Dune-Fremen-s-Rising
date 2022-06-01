@@ -92,7 +92,7 @@ void Quadtree::Intersect(std::vector<GameObject*>& gos, Ray ray)
 	}
 }
 
-void Quadtree::Intersect(std::set<GameObject*>& gos, CameraComponent* frustum)
+void Quadtree::Intersect(std::set<GameObject*>& gos, CameraComponent* frustum, float scaleFactor)
 {
 	if (root != nullptr && frustum != nullptr)
 	{
@@ -107,12 +107,18 @@ void Quadtree::Intersect(std::set<GameObject*>& gos, CameraComponent* frustum)
 
 			int intersect = 0;
 			if (node)
-				intersect = frustum->ContainsAaBox(node->GetBox());
+			{
+				AABB aabb = node->GetBox();
+				aabb.Scale(aabb.CenterPoint(), scaleFactor);
+				intersect = frustum->ContainsAaBox(aabb);
+			}
 			if (intersect == 1 || intersect == 2)
 			{
 				for (std::vector<GameObject*>::const_iterator it = node->GetObjects().begin(); it != node->GetObjects().end(); ++it)
 				{
-					intersect = frustum->ContainsAaBox((*it)->GetAABB());
+					AABB aabb = (*it)->GetAABB();
+					aabb.Scale(aabb.CenterPoint(), scaleFactor);
+					intersect = frustum->ContainsAaBox(aabb);
 					if ((*it)->active && (intersect == 1 || intersect == 2))
 						gos.insert(*it);
 				}

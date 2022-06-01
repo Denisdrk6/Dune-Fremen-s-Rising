@@ -3,9 +3,9 @@ using RagnarEngine;
 
 public class SpiceGranade : RagnarComponent
 {
+	public GameObject player;
 	Rigidbody goRB;
-
-	public float explosionRadius = 6f;
+	public float explosionRadius = 6.7f;
 	private float cooldown = 0f;
 	private Vector3 relativePos;
 
@@ -13,9 +13,12 @@ public class SpiceGranade : RagnarComponent
     private GameObject sceneAudio;
 	public void Start()
 	{
+		player = GameObject.Find("Player_2");
 		goRB = gameObject.GetComponent<Rigidbody>();
         sceneAudio = GameObject.Find("AudioLevel1");
 		AimMethod();
+
+		player.GetComponent<Player>().PlayAudioClip("SMOKEGRENADE_ACTIVATE");
 	}
 	public void Update()
 	{
@@ -33,7 +36,6 @@ public class SpiceGranade : RagnarComponent
 	}
 	private void AimMethod()
 	{
-		GameObject player = GameObject.Find("Player_2");
 		Vector3 pos = player.transform.globalPosition;
 		pos.y += 1.5f;
 		goRB.SetBodyPosition(pos);

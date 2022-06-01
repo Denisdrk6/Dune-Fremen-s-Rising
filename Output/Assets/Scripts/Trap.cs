@@ -14,39 +14,28 @@ public class Trap : RagnarComponent
 	public void Start()
 	{
 		player = GameObject.Find("Player_3");
+
 		Vector3 pos = player.transform.globalPosition;
-		pos.y += gameObject.transform.globalPosition.y;
+
+        gameObject.GetComponent<Rigidbody>().SetBodyPosition(pos);
 		gameObject.transform.localPosition = pos;
 
         playerManagerScript = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
         GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Pause();
+        player.GetComponent<Player>().PlayAudioClip("WPN_TRAPACTIVE");
     }
 	public void Update()
 	{
-        if (placingTrap)
-        {
-            if (timer > 0f)
-            {
-                playerManagerScript.characters[2].state = State.POSTCAST;
-                timer -= Time.deltaTime;
-            }
-            else
-            {
-                placingTrap = false;
-                playerManagerScript.characters[2].state = State.NONE;
-            }
-        }
-        if (!placingTrap && !canReload) ReloadCondition();
-		if (canReload) ReloadTrap();
-		if (pendingToDelete) InternalCalls.Destroy(gameObject);
-
-	}
+        if (!canReload) ReloadCondition();
+        if (canReload) ReloadTrap();
+        if (pendingToDelete) InternalCalls.Destroy(gameObject);
+    }
 
     private void ReloadCondition()
     {
         double distance = CalculateDistance();
 
-        if (distance > 3.0f)
+        if (distance > 2.0f)
         {
             canReload = true;
         }

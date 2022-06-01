@@ -89,6 +89,8 @@ public:
 	void RemoveSpotLight(SpotLight* light);
 
 	void RequestDamageFeedback();
+	void RequestScreenRectangle(float4 color);
+	void EndRequestScreenRectangle();
 
 private:
 	void PushCamera(const float4x4& proj, const float4x4& view);
@@ -131,7 +133,7 @@ public:
 	std::vector<ConeTriangle> enemyCones;
 	
 	bool genShadows;
-
+	int frames = 0;
 private:
 	Material* defaultMaterial;
 	unsigned int defaultShader;
@@ -145,6 +147,7 @@ private:
 	std::shared_ptr<Shader> postProcessingShader;
 	
 	std::shared_ptr<Shader> textureShader;
+	std::shared_ptr<Shader> colorShader;
 	std::shared_ptr<Texture> damageTexture;
 	std::shared_ptr<Texture> whiteTexture;
 
@@ -156,4 +159,7 @@ private:
 	
 	bool dmgFeedbackRequested;
 	float damageTextureAlpha = 0.f;
+
+	bool screenRectRequested = false;
+	float4 screenRectColor;
 };

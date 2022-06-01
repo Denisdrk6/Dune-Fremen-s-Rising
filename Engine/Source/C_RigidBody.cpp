@@ -725,7 +725,7 @@ void RigidBodyComponent::SetHeight(float height)
 		capsule.transform.Rotate(body->getWorldTransform().getRotation().getAngle() * RADTODEG, Vec3(0,1,0));
 		capsule.SetPos(pos.x, pos.y - offset.y, pos.z);
 		capsule.radius *= obb.r.MaxElementXZ();
-		capsule.height *= obb.Size().y * 0.5 * height;
+		capsule.height *= obb.Size().y * 0.5 * height - 0.1f;
 
 		CreateBody(false);
 		owner->SetOffsetCM(owner->GetOffsetCM() - offset);

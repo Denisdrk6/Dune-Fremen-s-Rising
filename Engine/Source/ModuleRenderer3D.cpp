@@ -217,6 +217,8 @@ bool ModuleRenderer3D::Start()
 	postProcessingShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/postProcessing.shader")));
 	coneShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/basic.shader")));
 	textureShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/texture.shader")));
+	colorShader = std::static_pointer_cast<Shader>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/Shaders/color.shader")));
+
 	damageTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/damage.png")));
 	whiteTexture = std::static_pointer_cast<Texture>(ResourceManager::GetInstance()->LoadResource(std::string("Assets/Resources/white.png")));
 
@@ -236,7 +238,7 @@ bool ModuleRenderer3D::PostUpdate()
 	std::set<GameObject*> objects;
 
 	// TODO: wtf quadtree man.
-	app->sceneManager->GetCurrentScene()->GetQuadtree().Intersect(objects, app->sceneManager->GetCurrentScene()->mainCamera);
+	app->sceneManager->GetCurrentScene()->GetQuadtree().Intersect(objects, app->sceneManager->GetCurrentScene()->mainCamera, 1.75f);
 	
 	AABB shadowsAABB;
 #ifndef DIST
@@ -363,14 +365,14 @@ bool ModuleRenderer3D::PostUpdate()
 
 	conesVao->Bind();
 	conesVbo->Bind();
-	//glVertexPointer(3, GL_FLOAT, 0, NULL);
-	//glVertexPointer(4, GL_FLOAT, sizeof(float3),(void*)offsetof(ConeTriangle, coneColor));
-	//glEnableClientState(GL_VERTEX_ARRAY);
 	glDrawArrays(GL_TRIANGLES, 0, enemyCones.size());
 	conesVbo->Unbind();
 	conesVao->Unbind();
 	coneShader->Unbind();
-    enemyCones.clear();
+
+	frames++;
+	if((frames + 1) % 4 == 0) // 4 must be to retardedFrames on EnemyManager.cs
+		enemyCones.clear();
 	glDisable(GL_BLEND);
 
 #ifndef DIST 
@@ -418,8 +420,20 @@ bool ModuleRenderer3D::PostUpdate()
 		DrawDamageFeedback();
 	}
 
+	// When a new ability is discovered, screen gets gray
+	if (screenRectRequested)
+	{
+		glEnable(GL_BLEND);
+		colorShader->Bind();
+		colorShader->SetUniformVec4f("color", screenRectColor);
+		glDrawElements(GL_TRIANGLES, distIbo->GetCount(), GL_UNSIGNED_INT, 0);
+		colorShader->Unbind();
+		glDisable(GL_BLEND);
+	}
+
 	distIbo->Unbind();
 	distVao->Unbind();
+
 
 #else
 	app->editor->Draw(fbo, mainCameraFbo);
@@ -743,13 +757,6 @@ void ModuleRenderer3D::RemoveSpotLight(SpotLight* light)
 		{
 			light->intensity = 0;
 			(*it)->toDelete = false;
-			//delete (*it);
-			//*it = nullptr;
-			//delete* it;
-			//delete light;
-			//light = 0;
-			//*it = 0;
-			//pointLights.erase(it);
 			break;
 		}
 	}
@@ -761,13 +768,22 @@ void ModuleRenderer3D::RequestDamageFeedback()
 	dmgFeedbackRequested = true;
 }
 
+void ModuleRenderer3D::RequestScreenRectangle(float4 color)
+{
+	screenRectRequested = true;
+	screenRectColor = color;
+}
+
+void ModuleRenderer3D::EndRequestScreenRectangle()
+{
+	screenRectRequested = false;
+}
+
 void ModuleRenderer3D::PushCamera(const float4x4& proj, const float4x4& view)
 {
-	//glPushMatrix();
 	glMatrixMode(GL_PROJECTION);
 	glLoadMatrixf(proj.Transposed().ptr());
 
-	//glPushMatrix();
 	glMatrixMode(GL_MODELVIEW);
 	glLoadMatrixf(view.Transposed().ptr());
 }
@@ -825,6 +841,7 @@ void ModuleRenderer3D::GenerateShadows(const std::set<GameObject*>& objects, Cam
 	AABB shadowsAABB = shadAABB;
 	shadowsAABB.SetNegativeInfinity();
 
+	std::vector<GameObject*> gos;
 	if (!gameCam)
 	{
 		if (app->camera->visualizeFrustum)
@@ -837,7 +854,7 @@ void ModuleRenderer3D::GenerateShadows(const std::set<GameObject*>& objects, Cam
 		else app->sceneManager->GetCurrentScene()->Draw();
 	}
 	else
-	{		
+	{
 		for (std::set<GameObject*>::iterator it = objects.begin(); it != objects.end(); ++it)
 		{
 			(*it)->Draw(gameCam);
@@ -873,4 +890,5 @@ void ModuleRenderer3D::DrawDamageFeedback()
 
 	glBindTexture(GL_TEXTURE_2D, 0);
 	damageTexture->Unbind();
+	textureShader->Unbind();
 }
