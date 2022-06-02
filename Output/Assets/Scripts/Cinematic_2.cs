@@ -9,6 +9,8 @@ public class Cinematic_2 : RagnarComponent
     public int IdDialogue = 0;
 
     CinematicManager dialogues;
+    GameObject paul;
+    GameObject chani;
 
     public int IdLine = 0;
     enum CinematicState
@@ -19,30 +21,37 @@ public class Cinematic_2 : RagnarComponent
 
     public void Start()
     {
+        Debug.Log("Cinematic 2 Start");
+
         //Set UI Bands
-        bands = new GameObject[2];
-        bands[0] = GameObject.Find("High_Band");
-        bands[1] = GameObject.Find("Low_Band");
+        //bands = new GameObject[2];
+        //bands[0] = GameObject.Find("High_Band");
+        //bands[1] = GameObject.Find("Low_Band");
+        //bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
+        //bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
-        bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
-        bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
+        paul = InternalCalls.InstancePrefab("Player", new Vector3(-43.69f, 0f, 199.77f));
+        chani = InternalCalls.InstancePrefab("Player_2", new Vector3(-42, 3, 200));
 
-        // Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
-        GameObject char_boss = GameObject.Find("char_boss");
-        GameObject char_enemy1 = GameObject.Find("char_enemy1");
-        GameObject char_enemy2 = GameObject.Find("char_enemy2");
-        GameObject char_enemy3 = GameObject.Find("char_enemy3");
-        GameObject char_enemy4 = GameObject.Find("char_enemy4");
-        GameObject char_hostage = GameObject.Find("char_hostage");
+        //paul.GetComponent<Animation>().PlayAnimation("Idle");
+        //chani.GetComponent<Animation>().PlayAnimation("Idle");
 
-        char_boss.GetComponent<Animation>().PlayAnimation("Run");
-        char_enemy1.GetComponent<Animation>().PlayAnimation("Idle");
-        char_enemy2.GetComponent<Animation>().PlayAnimation("Idle");
-        char_enemy3.GetComponent<Animation>().PlayAnimation("Idle");
-        char_enemy4.GetComponent<Animation>().PlayAnimation("Idle");
-        char_hostage.GetComponent<Animation>().PlayAnimation("Knee Idle");
+        //// Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
+        //GameObject char_boss = GameObject.Find("char_boss");
+        //GameObject char_enemy1 = GameObject.Find("char_enemy1");
+        //GameObject char_enemy2 = GameObject.Find("char_enemy2");
+        //GameObject char_enemy3 = GameObject.Find("char_enemy3");
+        //GameObject char_enemy4 = GameObject.Find("char_enemy4");
+        //GameObject char_hostage = GameObject.Find("char_hostage");
+        //
+        //char_boss.GetComponent<Animation>().PlayAnimation("Run");
+        //char_enemy1.GetComponent<Animation>().PlayAnimation("Idle");
+        //char_enemy2.GetComponent<Animation>().PlayAnimation("Idle");
+        //char_enemy3.GetComponent<Animation>().PlayAnimation("Idle");
+        //char_enemy4.GetComponent<Animation>().PlayAnimation("Idle");
+        //char_hostage.GetComponent<Animation>().PlayAnimation("Knee Idle");
 
-        dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
+        dialogues = GameObject.Find("Cinematic2").GetComponent<CinematicManager>();
 
         //-----------
         state = CinematicState.FIRST;

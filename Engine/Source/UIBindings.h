@@ -16,7 +16,10 @@
 
 MonoObject* Get2DPosition(MonoObject* go)
 {
+	char* goName = mono_string_to_utf8(mono_object_to_string(go, 0));
+	DEBUG_LOG(goName);
 	ComponentTransform2D* tr = GetComponentMono<ComponentTransform2D*>(go);
+	
 	//float3 position = ;
 	MonoObject* vec = app->moduleMono->Float3ToCS(tr->GetPosition());
 	char* name = mono_string_to_utf8(mono_object_to_string(vec, 0));
