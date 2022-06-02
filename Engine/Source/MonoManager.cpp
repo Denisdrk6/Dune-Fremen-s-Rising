@@ -230,6 +230,8 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.Camera::ScriptMovement", ScriptMovement);
 	mono_add_internal_call("RagnarEngine.Camera::get_lockCam", GetLock);
 	mono_add_internal_call("RagnarEngine.Camera::set_lockCam", SetLock);
+	mono_add_internal_call("RagnarEngine.Camera::get_horizontalAngle", GetHorizontalAngle);
+	mono_add_internal_call("RagnarEngine.Camera::set_horizontalAngle", SetHorizontalAngle);
 	// Camera ====================
 
 	// Scene Manager =============

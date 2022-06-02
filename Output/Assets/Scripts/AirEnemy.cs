@@ -183,7 +183,7 @@ public class AirEnemy : RagnarComponent
         }
     }
 
-    public void OnTrigger(Rigidbody other)
+    public void OnTriggerEnter(Rigidbody other)
     {
         if (state != EnemyState.DEATH && state != EnemyState.IS_DYING)
         {
@@ -204,31 +204,34 @@ public class AirEnemy : RagnarComponent
 
     public void LookOut(int frames)
     {
-        if ((frames == retardedFrames) ? PerceptionCone() : PlayerIsNear())
+        if (state != EnemyState.DEATH && state != EnemyState.IS_DYING && !stunned)
         {
-            coneTimer += Time.deltaTime * retardedFrames;
+            if ((frames == retardedFrames) ? PerceptionCone() : PlayerIsNear())
+            {
+                coneTimer += Time.deltaTime * retardedFrames;
 
-            if (coneTimer >= coneMaxTime)
-            {
-                agents.speed = initialSpeed * 1.2f;
-                Shoot();
+                if (coneTimer >= coneMaxTime)
+                {
+                    agents.speed = initialSpeed * 1.2f;
+                    Shoot();
+                }
             }
-        }
-        else
-        {
-            agents.speed = initialSpeed;
-            coneTimer -= Time.deltaTime * retardedFrames;
-            if (coneTimer < 0) coneTimer = 0;
-        }
-        if (!canShoot && shootCooldown >= 0)
-        {
-            shootCooldown -= Time.deltaTime * retardedFrames;
-            if (shootCooldown < 0)
+            else
             {
-                shootCooldown = 0f;
-                canShoot = true;
+                agents.speed = initialSpeed;
+                coneTimer -= Time.deltaTime * retardedFrames;
+                if (coneTimer < 0) coneTimer = 0;
             }
-        }
+            if (!canShoot && shootCooldown >= 0)
+            {
+                shootCooldown -= Time.deltaTime * retardedFrames;
+                if (shootCooldown < 0)
+                {
+                    shootCooldown = 0f;
+                    canShoot = true;
+                }
+            }
+        }            
         canLookOut = false;
     }
     private bool PerceptionCone()
@@ -246,9 +249,10 @@ public class AirEnemy : RagnarComponent
     {
         for (int i = 0; i < players.Length; i++)
         {
-            if ((gameObject.transform.globalPosition - players[i].transform.globalPosition).magnitude <= radius)
+            Vector3 vecDir = players[i].transform.globalPosition - gameObject.transform.globalPosition;
+            if ((vecDir).magnitude <= radius)
             {
-                if (Transform.GetAngleBetween(gameObject.transform.globalPosition, players[i].transform.globalPosition) <= angle * 0.5f)
+                if (Transform.GetAngleBetween(gameObject.transform.forward, vecDir) <= angle * 0.5f)
                 {
                     if (players[i].GetComponent<Player>().invisible || players[i].GetComponent<Player>().dead || players[i].GetComponent<Player>().isHidden)
                         return false;

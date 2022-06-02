@@ -2027,9 +2027,9 @@ public class pauseMenuButton : RagnarComponent
 
 					abilityLeters.GetComponent<UIImage>().SetImageAlpha(1 - (2 * actualDT));
 
-					pos.Set(-268+ (492 * actualDT), y - 30, -10.400f);
+					pos.Set(-268 + (492 * actualDT), y - 30, -10.400f);
 					AbilityLeft.GetComponent<Transform2D>().position2D = pos;
-					pos.Set(258-(472 * actualDT), y - 30, -10.400f);
+					pos.Set(258 - (472 * actualDT), y - 30, -10.400f);
 					AbilityRight.GetComponent<Transform2D>().position2D = pos;
 				}
                 else
@@ -2120,6 +2120,13 @@ public class pauseMenuButton : RagnarComponent
 				AbilityRight.GetComponent<Transform2D>().position2D = pos;
 			}
         }
+        else
+        {
+			pos.Set(-246, y - 30, -10.400f);
+			AbilityLeft.GetComponent<Transform2D>().position2D = pos;
+			pos.Set(236, y - 30, -10.400f);
+			AbilityRight.GetComponent<Transform2D>().position2D = pos;
+		}
 		
 		bounds.Set(300, 280, 0);
 		CharFocusedImage.GetComponent<Transform2D>().SetSize(bounds);

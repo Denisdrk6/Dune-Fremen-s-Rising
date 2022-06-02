@@ -94,7 +94,7 @@ public class PlayerManager : RagnarComponent
         ability3Bg = GameObject.Find("Ability3Bg").GetComponent<UIImage>();
         ability4Bg = GameObject.Find("Ability4Bg").GetComponent<UIImage>();
 
-        if (SceneManager.currentSceneName == "build")
+        if (SceneManager.currentSceneName == "build" && !SaveSystem.fromContinue)
         {
             canDoAbility1 = false;
             ability1Bg.SetImageGeneralColor(128, 128, 128);
@@ -536,18 +536,21 @@ public class PlayerManager : RagnarComponent
     {
         SaveSystem.DeleteDirectoryFiles("Library/SavedGame/Players");
         SaveSystem.SaveScene();
+        bool[] ret = { true, true, true};
+        Transform cam = GameObject.Find("cameraController").transform;
         switch (SceneManager.currentSceneName)
         {
             case "build":
-                SaveSystem.SaveTimer(GameObject.Find("LevelManager").GetComponent<Level_1>().timer.timer);
+                bool[] abi = { canDoAbility1, canDoAbility2 ,canDoAbility3};
+                SaveSystem.SaveLevel(GameObject.Find("LevelManager").GetComponent<Level_1>().timer.timer, cam.globalPosition, cam.globalRotation, camComponent.horizontalAngle, abi);
                 GameObject.Find("Dialogue").GetComponent<DialogueManager>().SaveDialogue();
                 break;
             case "build2":
-                SaveSystem.SaveTimer(GameObject.Find("LevelManager").GetComponent<Level_2>().timer.timer);
+                SaveSystem.SaveLevel(GameObject.Find("LevelManager").GetComponent<Level_2>().timer.timer, cam.globalPosition, cam.globalRotation, camComponent.horizontalAngle, ret);
                 GameObject.Find("Dialogue").GetComponent<DialogueManager>().SaveDialogue();
                 break;
             case "build3":
-                SaveSystem.SaveTimer(GameObject.Find("LevelManager").GetComponent<Level_3>().timer.timer);
+                SaveSystem.SaveLevel(GameObject.Find("LevelManager").GetComponent<Level_3>().timer.timer, cam.globalPosition, cam.globalRotation, camComponent.horizontalAngle, ret);
                 GameObject.Find("Dialogue").GetComponent<DialogueManager>().SaveDialogue();
                 break;
         }

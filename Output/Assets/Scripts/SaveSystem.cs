@@ -136,16 +136,14 @@ public static class SaveSystem
         return File.Exists(path);
     }
 
-    public static void SaveTimer(float timer)
+    public static void SaveLevel(float timer, Vector3 posCam, Quaternion rot, float angle, bool[] ret)
     {
         // Cuidado, si no guarda los enemies, mirar aqui (hay un poltergeist aqui)
         BinaryFormatter formatter = new BinaryFormatter();
-
-        string path = "Library/SavedGame/Scenes/" + "Timer" + ".ragnar";
+        string path = "Library/SavedGame/Scenes/Level.ragnar";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        TimerData data = new TimerData(timer);
-
+        LevelData data = new LevelData(timer, posCam, rot, angle, ret);
         formatter.Serialize(stream, data);
 
         stream.Close();
@@ -185,16 +183,16 @@ public static class SaveSystem
         stream.Close();
     }
 
-    public static TimerData LoadTimer()
+    public static LevelData LoadLevel()
     {
-        string path = "Library/SavedGame/Scenes/" + "Timer" + ".ragnar";
+        string path = "Library/SavedGame/Scenes/" + "Level" + ".ragnar";
 
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream stream = new FileStream(path, FileMode.Open);
 
-            TimerData data = formatter.Deserialize(stream) as TimerData;
+            LevelData data = formatter.Deserialize(stream) as LevelData;
 
             stream.Close();
 

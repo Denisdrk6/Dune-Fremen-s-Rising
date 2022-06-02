@@ -12,6 +12,7 @@ public class Level_3 : RagnarComponent
 
     private GameObject SceneAudio;
     private Transform camera;
+    private Transform cameraController;
     public void Start()
 	{
         Input.SetCursorState(0);
@@ -27,16 +28,21 @@ public class Level_3 : RagnarComponent
         chrono.SetTextPosition(-26, -4);
         timer = new Chronometer();
         camera = GameObject.Find("Camera").transform;
+        cameraController = GameObject.Find("cameraController").transform;
 
         if (SaveSystem.fromContinue)
         {
-            TimerData data = SaveSystem.LoadTimer();
+            LevelData data = SaveSystem.LoadLevel();
             timer.timer = data.timer;
+            cameraController.globalPosition = new Vector3(data.posCam[0], data.posCam[1], data.posCam[2]);
+            cameraController.globalRotation = new Quaternion(data.rotCam[0], data.rotCam[1], data.rotCam[2], data.rotCam[3]);
+            GameObject.Find("Camera").GetComponent<Camera>().horizontalAngle = data.angle;
         }
         else
         {
             SaveSystem.SaveScene();
-            SaveSystem.SaveTimer(timer.timer);
+            bool[] ret = { true, true, true };
+            SaveSystem.SaveLevel(timer.timer, cameraController.globalPosition, cameraController.globalRotation, GameObject.Find("Camera").GetComponent<Camera>().horizontalAngle, ret);
         }
 
         // PLAYERS

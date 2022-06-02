@@ -280,7 +280,7 @@ public class EnemyBoss : RagnarComponent
             pos.y += 0.5f;
             pos.x += gameObject.transform.forward.x * offset.x * 0.6f;
             pos.z += gameObject.transform.forward.z * offset.z * 0.6f;
-            EnemyBullet bulletScript = InternalCalls.InstancePrefab("EnemyBullet", pos, true).GetComponent<EnemyBullet>();
+            EnemyBullet bulletScript = InternalCalls.InstancePrefab("EnemyBullet", pos).GetComponent<EnemyBullet>();
             bulletScript.enemy = gameObject;
             bulletScript.index = index;
             bulletScript.offset = offset;

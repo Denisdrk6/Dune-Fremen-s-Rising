@@ -54,7 +54,7 @@ public class DialogueManager : RagnarComponent
 
     void InitPosDialogueBox()
     {
-        float posY = InternalCalls.GetRegionGame().y, posX = InternalCalls.GetRegionGame().x;
+        float posY = InternalCalls.GetRegionGame().y, posX;
         posY *= 0.33f;
         posX = 0;
         //boxTextBox
@@ -69,7 +69,7 @@ public class DialogueManager : RagnarComponent
         pos.Set(posX, posY - 2, image.GetComponent<Transform2D>().position2D.z + 20);
         image.GetComponent<Transform2D>().position2D = pos;
 
-        posX += 47.0f;
+        posX = InternalCalls.GetRegionGame().x * 0.025f;
         //author
         //pos.Set(posX - 195.0f, boxTextBox.GetComponent<Transform2D>().position2D.y + 60, name.GetComponent<Transform2D>().position2D.z + 20);
         pos.Set(posX, boxTextBox.GetComponent<Transform2D>().position2D.y + 60, name.GetComponent<Transform2D>().position2D.z + 20);
@@ -83,6 +83,14 @@ public class DialogueManager : RagnarComponent
 
     public void Update()
     {
+        if(gameObject.isActive)
+        {
+            Vector3 pos = name.GetComponent<Transform2D>().position2D;
+            pos.x = -220;
+            name.GetComponent<Transform2D>().position2D = pos;
+            pos.y -= 50;
+            text.GetComponent<Transform2D>().position2D = pos;
+        }
         // Next Line
         if (Input.GetKey(KeyCode.SPACE) == KeyState.KEY_UP && gameObject.isActive)
         {

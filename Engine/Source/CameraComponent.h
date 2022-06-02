@@ -49,7 +49,7 @@ public:
 	float4x4 matrixProjectionFrustum;
 
 	bool lock = false;
-
+	float horizontalAngle = 0.0f;
 	void ScriptMovement(float x, float y, float z);
 
 private:
@@ -90,7 +90,6 @@ private:
 	float movementSpeed = 0.05f;
 	float rotationSpeed = 0.5f;
 	float radius = 20.0f;
-	float horizontalAngle = 0.0f;
 
 	//int targetUID = 0;
 
