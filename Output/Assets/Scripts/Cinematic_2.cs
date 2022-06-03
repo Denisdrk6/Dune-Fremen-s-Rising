@@ -24,9 +24,8 @@ public class Cinematic_2 : RagnarComponent
         Debug.Log("Cinematic 2 Start");
 
         //Set UI Bands
-        //bands = new GameObject[2];
-        //bands[0] = GameObject.Find("High_Band");
-        //bands[1] = GameObject.Find("Low_Band");
+        GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -447f, -10.4f);
+        GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         //bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         //bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
