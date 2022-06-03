@@ -10,7 +10,11 @@ public class Cinematic_2 : RagnarComponent
 
     CinematicManager dialogues;
 
-    public Characters[] characters;
+    GameObject paul;
+    Animation paulAnimation;
+    GameObject chani;
+    Animation chaniAnimation;
+
 
     public int IdLine = 0;
     enum CinematicState
@@ -27,8 +31,12 @@ public class Cinematic_2 : RagnarComponent
         GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -447f, -10.4f);
         GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, 449f, -10.4f);
 
-        //paul.GetComponent<Animation>().PlayAnimation("Idle");
-        //chani.GetComponent<Animation>().PlayAnimation("Idle");
+        paul = GameObject.Find("Player");
+        chani = GameObject.Find("Player_2");
+        paulAnimation = paul.GetComponent<Animation>();
+        //paulAnimation.PlayAnimation("Idle");
+        chaniAnimation = chani.GetComponent<Animation>();
+        //chaniAnimation.PlayAnimation("Idle");
 
         //// Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
         //GameObject char_boss = GameObject.Find("char_boss");
@@ -65,7 +73,7 @@ public class Cinematic_2 : RagnarComponent
                 break;
             case CinematicState.TRANSITION:
                 //Aqui no pasara nada
-
+                //state = CinematicState.ANIMATIONS;
                 break;
             case CinematicState.ANIMATIONS:
 
@@ -93,10 +101,12 @@ public class Cinematic_2 : RagnarComponent
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
             case 0:
+                Debug.Log("CASE 0");
+                //paulAnimation.PlayAnimation("Idle");
+                //chaniAnimation.PlayAnimation("Idle");
 
                 break;
             case 1:
-
                 break;
             case 2:
 

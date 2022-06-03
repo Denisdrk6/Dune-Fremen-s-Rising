@@ -124,6 +124,12 @@ public class CinematicManager : RagnarComponent
 
         // For animations
         cinematic.GetComponent<Cinematic_1>().SetLine(indexLine);
+        cinematic.GetComponent<Cinematic_2>().SetLine(indexLine);
+        cinematic.GetComponent<Cinematic_3>().SetLine(indexLine);
+        cinematic.GetComponent<Cinematic_4>().SetLine(indexLine);
+        cinematic.GetComponent<Cinematic_5>().SetLine(indexLine);
+        cinematic.GetComponent<Cinematic_6>().SetLine(indexLine);
+        cinematic.GetComponent<Cinematic_7>().SetLine(indexLine);
 
     }
 
