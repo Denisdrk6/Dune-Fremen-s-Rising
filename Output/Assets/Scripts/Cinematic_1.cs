@@ -28,8 +28,8 @@ public class Cinematic_1 : RagnarComponent
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
         // Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
-        GameObject characterPaul = GameObject.Find("char_paul");
-        GameObject characterChani = GameObject.Find("char_chani");
+        GameObject characterPaul = GameObject.Find("Player");
+        GameObject characterChani = GameObject.Find("Player_2");
 
         characterPaul.GetComponent<Animation>().PlayAnimation("Talk");
         characterChani.GetComponent<Animation>().PlayAnimation("Talk");
