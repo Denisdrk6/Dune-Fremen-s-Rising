@@ -75,7 +75,6 @@
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Quaternion.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Time.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Vector3.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_4.cs" />
     <Compile Include="Assets\Scripts\Credits.cs" />
     <Compile Include="Assets\Scripts\AirEnemy.cs" />
     <Compile Include="Assets\Scripts\BasicEnemy.cs" />
@@ -83,7 +82,6 @@
     <Compile Include="Assets\Scripts\HunterSeeker.cs" />
     <Compile Include="Assets\Scripts\DialoguesManager.cs" />
     <Compile Include="Assets\Scripts\EnemyAbilities.cs" />
-    <Compile Include="Assets\Scripts\LevelData.cs" />
     <Compile Include="Assets\Scripts\LoseScreen.cs" />
     <Compile Include="Assets\Scripts\MainMenuBackScreen.cs" />
     <Compile Include="Assets\Scripts\DialogueData.cs" />
@@ -95,6 +93,7 @@
     <Compile Include="Assets\Scripts\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\SoundAreaManager.cs" />
     <Compile Include="Assets\Scripts\TankEnemy.cs" />
+    <Compile Include="Assets\Scripts\LevelData.cs" />
     <Compile Include="Assets\Scripts\UndistractableEnemy.cs" />
     <Compile Include="Assets\Scripts\WinScreen.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
@@ -124,14 +123,6 @@
     <Compile Include="Assets\Scripts\EnemyData.cs" />
     <Compile Include="Assets\Scripts\QuestSystem.cs" />
     <Compile Include="Assets\Scripts\BackStabEnemy.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_1.cs" />
-    <Compile Include="Assets\Scripts\CinematicManager.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_7.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_3.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_7.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_2.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_5.cs" />
-    <Compile Include="Assets\Scripts\Cinematic_6.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assembly-CSharp\App.config" />

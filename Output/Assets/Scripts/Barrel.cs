@@ -47,31 +47,6 @@ public class Barrel : RagnarComponent
 
     public void Explode()
     {
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
-        Debug.Log("Explota hijo de tu chingada madre");
         if (boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude < 2.0f)
         {
             bossComponent.stunnedHits++;

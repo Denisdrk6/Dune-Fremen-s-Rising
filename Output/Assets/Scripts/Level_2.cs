@@ -166,7 +166,7 @@ public class Level_2 : RagnarComponent
         }; // Spice Bomb
 
         // ENEMIES
-        enemies = new Enemies[67];
+        enemies = new Enemies[58];
 
         enemies[0] = new Enemies
         {
@@ -246,7 +246,7 @@ public class Level_2 : RagnarComponent
 
         enemies[9] = new Enemies
         {
-            name = "Tank Oficial Enemy 1",
+            name = "Basic Oficial Enemy 1",
             type = EnemyType.TANK,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_partrol_10")
@@ -266,7 +266,7 @@ public class Level_2 : RagnarComponent
 
         enemies[11] = new Enemies
         {
-            name = "Basic Enemy 11",
+            name = "Basic Enemy 12",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_12")
@@ -274,7 +274,7 @@ public class Level_2 : RagnarComponent
 
         enemies[12] = new Enemies
         {
-            name = "Basic Enemy 12",
+            name = "Basic Enemy 13",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_13")
@@ -282,23 +282,31 @@ public class Level_2 : RagnarComponent
 
         enemies[13] = new Enemies
         {
-            name = "Basic Enemy 13",
+            name = "Basic Enemy 14",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_14")
         };
 
+        //enemies[14] = new Enemies
+        //{
+        //    name = "Basic Enemy 15",
+        //    type = EnemyType.BASIC,
+        //    state = EnemyState.IDLE,
+        //    spawnPoint = GameObject.Find("basic_static_14")
+        //};
+
         enemies[14] = new Enemies
         {
-            name = "Basic Enemy 14",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 16",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_15")
+            spawnPoint = GameObject.Find("undistractable_static_15")
         };
 
         enemies[15] = new Enemies
         {
-            name = "Basic Enemy 15",
+            name = "Basic Enemy 17",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_16")
@@ -306,7 +314,7 @@ public class Level_2 : RagnarComponent
 
         enemies[16] = new Enemies
         {
-            name = "Basic Enemy 1x",
+            name = "Basic Enemy 18",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_17")
@@ -314,23 +322,28 @@ public class Level_2 : RagnarComponent
 
         enemies[17] = new Enemies
         {
-            name = "Undistractable Enemy 16",
-            type = EnemyType.UNDISTRACTABLE,
+            name = "Basic Enemy 19",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_static_18")
+            spawnPoint = GameObject.Find("basic_static_18")
         };
 
         enemies[18] = new Enemies
         {
-            name = "Basic Enemy 17",
-            type = EnemyType.BASIC,
+            name = "Dron Enemy 1",
+            type = EnemyType.AIR,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_19")
+            spawnPoint = GameObject.Find("dron_patrol_19")
         };
+        enemies[18].waypoints.Add(GameObject.Find("9"));
+        enemies[18].waypoints.Add(GameObject.Find("10"));
+        enemies[18].waypoints.Add(GameObject.Find("11"));
+        enemies[18].waypoints.Add(GameObject.Find("12"));
+        enemies[18].waypoints.Add(GameObject.Find("13"));
 
         enemies[19] = new Enemies
         {
-            name = "Basic Enemy 18",
+            name = "Basic Enemy 21",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_20")
@@ -338,7 +351,7 @@ public class Level_2 : RagnarComponent
 
         enemies[20] = new Enemies
         {
-            name = "Basic Enemy 19",
+            name = "Basic Enemy 22",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_21")
@@ -346,7 +359,7 @@ public class Level_2 : RagnarComponent
 
         enemies[21] = new Enemies
         {
-            name = "Basic Enemy 20",
+            name = "Basic Enemy 23",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_22")
@@ -354,20 +367,15 @@ public class Level_2 : RagnarComponent
 
         enemies[22] = new Enemies
         {
-            name = "Dron Enemy 1",
-            type = EnemyType.AIR,
+            name = "Basic Enemy 27",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("dron_patrol_23")
+            spawnPoint = GameObject.Find("basic_static_23")
         };
-        enemies[22].waypoints.Add(GameObject.Find("9"));
-        enemies[22].waypoints.Add(GameObject.Find("10"));
-        enemies[22].waypoints.Add(GameObject.Find("11"));
-        enemies[22].waypoints.Add(GameObject.Find("12"));
-        enemies[22].waypoints.Add(GameObject.Find("13"));
 
         enemies[23] = new Enemies
         {
-            name = "Basic Enemy 21",
+            name = "Basic Enemy 28",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_24")
@@ -375,7 +383,7 @@ public class Level_2 : RagnarComponent
 
         enemies[24] = new Enemies
         {
-            name = "Basic Enemy 22",
+            name = "Basic Enemy 29",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_25")
@@ -383,64 +391,65 @@ public class Level_2 : RagnarComponent
 
         enemies[25] = new Enemies
         {
-            name = "Basic Enemy 23",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 3",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_26")
+            spawnPoint = GameObject.Find("undistractable_patrol_26")
         };
+        enemies[25].waypoints.Add(GameObject.Find("29"));
+        enemies[25].waypoints.Add(GameObject.Find("30"));
 
         enemies[26] = new Enemies
         {
-            name = "Basic Enemy 24",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 4",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_27")
+            spawnPoint = GameObject.Find("undistractable_patrol_27")
         };
+        enemies[26].waypoints.Add(GameObject.Find("27"));
+        enemies[26].waypoints.Add(GameObject.Find("28"));
 
         enemies[27] = new Enemies
         {
-            name = "Tank Enemy 1",
-            type = EnemyType.TANK,
+            name = "Undistractable Enemy 5",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("tank_patrol_28")
+            spawnPoint = GameObject.Find("undistractable_patrol_28")
         };
-        enemies[27].waypoints.Add(GameObject.Find("14"));
-        enemies[27].waypoints.Add(GameObject.Find("15"));
-        enemies[27].waypoints.Add(GameObject.Find("16"));
-        enemies[27].waypoints.Add(GameObject.Find("17"));
+        enemies[27].waypoints.Add(GameObject.Find("25"));
+        enemies[27].waypoints.Add(GameObject.Find("26"));
 
         enemies[28] = new Enemies
         {
-            name = "Basic Enemy 25",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 30",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_patrol_29")
+            spawnPoint = GameObject.Find("undistractable_patrol_29")
         };
-        enemies[28].waypoints.Add(GameObject.Find("18"));
-        enemies[28].waypoints.Add(GameObject.Find("19"));
+        enemies[28].waypoints.Add(GameObject.Find("23"));
+        enemies[28].waypoints.Add(GameObject.Find("24"));
 
         enemies[29] = new Enemies
         {
-            name = "Undistractable Enemy 26",
-            type = EnemyType.UNDISTRACTABLE,
+            name = "Dron Enemy 31",
+            type = EnemyType.AIR,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_static_30")
+            spawnPoint = GameObject.Find("dron_patrol_30")
         };
+        enemies[29].waypoints.Add(GameObject.Find("31"));
+        enemies[29].waypoints.Add(GameObject.Find("32"));
 
         enemies[30] = new Enemies
         {
-            name = "Undistractable Enemy 2",
-            type = EnemyType.UNDISTRACTABLE,
+            name = "Dron Enemy 2",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_31")
+            spawnPoint = GameObject.Find("basic_static_31")
         };
-        enemies[30].waypoints.Add(GameObject.Find("20"));
-        enemies[30].waypoints.Add(GameObject.Find("21"));
-        enemies[30].waypoints.Add(GameObject.Find("22"));
 
         enemies[31] = new Enemies
         {
-            name = "Basic Enemy 27",
+            name = "Basic Enemy 32",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_32")
@@ -448,73 +457,68 @@ public class Level_2 : RagnarComponent
 
         enemies[32] = new Enemies
         {
-            name = "Basic Enemy 28",
+            name = "Basic Enemy 33",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_33")
+            spawnPoint = GameObject.Find("basic_patrol_33")
         };
+        enemies[32].waypoints.Add(GameObject.Find("33"));
+        enemies[32].waypoints.Add(GameObject.Find("34"));
 
         enemies[33] = new Enemies
         {
-            name = "Basic Enemy 29",
+            name = "Basic Enemy 34",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_34")
+            spawnPoint = GameObject.Find("basic_patrol_34")
         };
+        enemies[33].waypoints.Add(GameObject.Find("35"));
+        enemies[33].waypoints.Add(GameObject.Find("36"));
 
         enemies[34] = new Enemies
         {
-            name = "Undistractable Enemy 3",
-            type = EnemyType.UNDISTRACTABLE,
+            name = "Basic Enemy 35",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_35")
+            spawnPoint = GameObject.Find("basic_static_35")
         };
-        enemies[34].waypoints.Add(GameObject.Find("29"));
-        enemies[34].waypoints.Add(GameObject.Find("30"));
 
         enemies[35] = new Enemies
         {
-            name = "Undistractable Enemy 4",
-            type = EnemyType.UNDISTRACTABLE,
+            name = "Basic Enemy 36",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_36")
+            spawnPoint = GameObject.Find("basic_static_36")
         };
-        enemies[35].waypoints.Add(GameObject.Find("27"));
-        enemies[35].waypoints.Add(GameObject.Find("28"));
 
         enemies[36] = new Enemies
         {
-            name = "Undistractable Enemy 5",
-            type = EnemyType.UNDISTRACTABLE,
+            name = "Basic Enemy 37",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_37")
+            spawnPoint = GameObject.Find("basic_static_37")
         };
-        enemies[36].waypoints.Add(GameObject.Find("25"));
-        enemies[36].waypoints.Add(GameObject.Find("26"));
 
         enemies[37] = new Enemies
         {
-            name = "Undistractable Enemy 30",
-            type = EnemyType.UNDISTRACTABLE,
+            name = "Basic Enemy 38",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_38")
+            spawnPoint = GameObject.Find("basic_static_38")
         };
-        enemies[37].waypoints.Add(GameObject.Find("23"));
-        enemies[37].waypoints.Add(GameObject.Find("24"));
 
         enemies[38] = new Enemies
         {
-            name = "Dron Enemy 31",
-            type = EnemyType.AIR,
+            name = "Basic Enemy 39",
+            type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("dron_patrol_39")
+            spawnPoint = GameObject.Find("basic_static_39")
         };
-        enemies[38].waypoints.Add(GameObject.Find("31"));
-        enemies[38].waypoints.Add(GameObject.Find("32"));
+
 
         enemies[39] = new Enemies
         {
-            name = "Basic Enemy 2x",
+            name = "Basic Enemy 40",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_40")
@@ -522,7 +526,7 @@ public class Level_2 : RagnarComponent
 
         enemies[40] = new Enemies
         {
-            name = "Basic Enemy 32",
+            name = "Basic Enemy 41",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_41")
@@ -530,51 +534,55 @@ public class Level_2 : RagnarComponent
 
         enemies[41] = new Enemies
         {
-            name = "Basic Enemy 33",
+            name = "Basic Enemy 42",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_patrol_42")
+            spawnPoint = GameObject.Find("basic_static_42")
         };
-        enemies[41].waypoints.Add(GameObject.Find("33"));
-        enemies[41].waypoints.Add(GameObject.Find("34"));
 
         enemies[42] = new Enemies
         {
-            name = "Basic Enemy 34",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 43",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_patrol_43")
+            spawnPoint = GameObject.Find("undistractable_patrol_43")
         };
-        enemies[42].waypoints.Add(GameObject.Find("35"));
-        enemies[42].waypoints.Add(GameObject.Find("36"));
+        enemies[42].waypoints.Add(GameObject.Find("37"));
+        enemies[42].waypoints.Add(GameObject.Find("38"));
 
         enemies[43] = new Enemies
         {
-            name = "Basic Enemy 35",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 44",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_44")
+            spawnPoint = GameObject.Find("undistractable_patrol_44")
         };
+        enemies[43].waypoints.Add(GameObject.Find("39"));
+        enemies[43].waypoints.Add(GameObject.Find("40"));
 
         enemies[44] = new Enemies
         {
-            name = "Basic Enemy 36",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 45",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_45")
+            spawnPoint = GameObject.Find("undistractable_patrol_45")
         };
+        enemies[44].waypoints.Add(GameObject.Find("41"));
+        enemies[44].waypoints.Add(GameObject.Find("42"));
 
         enemies[45] = new Enemies
         {
-            name = "Basic Enemy 37",
-            type = EnemyType.BASIC,
+            name = "Undistractable Enemy 46",
+            type = EnemyType.UNDISTRACTABLE,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_46")
+            spawnPoint = GameObject.Find("undistractable_patrol_46")
         };
+        enemies[45].waypoints.Add(GameObject.Find("43"));
+        enemies[45].waypoints.Add(GameObject.Find("44"));
 
         enemies[46] = new Enemies
         {
-            name = "Basic Enemy 38",
+            name = "Basic Enemy 47",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_47")
@@ -582,190 +590,109 @@ public class Level_2 : RagnarComponent
 
         enemies[47] = new Enemies
         {
-            name = "Basic Enemy 39",
+            name = "Basic Enemy 48",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
             spawnPoint = GameObject.Find("basic_static_48")
         };
 
-
         enemies[48] = new Enemies
         {
-            name = "Basic Enemy 40",
-            type = EnemyType.BASIC,
+            name = "Dron Enemy 49",
+            type = EnemyType.AIR,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_49")
+            spawnPoint = GameObject.Find("dron_patrol_49")
         };
+        enemies[48].waypoints.Add(GameObject.Find("45"));
+        enemies[48].waypoints.Add(GameObject.Find("46"));
 
         enemies[49] = new Enemies
         {
-            name = "Basic Enemy 41",
+            name = "Dron Enemy 3",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_50")
+            spawnPoint = GameObject.Find("basic_patrol_50")
         };
+        enemies[49].waypoints.Add(GameObject.Find("47"));
+        enemies[49].waypoints.Add(GameObject.Find("48"));
+        enemies[49].waypoints.Add(GameObject.Find("49"));
+        enemies[49].waypoints.Add(GameObject.Find("50"));
+        enemies[49].waypoints.Add(GameObject.Find("51"));
 
         enemies[50] = new Enemies
-        {
-            name = "Basic Enemy 42",
-            type = EnemyType.BASIC,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_51")
-        };
-
-        enemies[51] = new Enemies
-        {
-            name = "Undistractable Enemy 43",
-            type = EnemyType.UNDISTRACTABLE,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_52")
-        };
-        enemies[51].waypoints.Add(GameObject.Find("37"));
-        enemies[51].waypoints.Add(GameObject.Find("38"));
-
-        enemies[52] = new Enemies
-        {
-            name = "Undistractable Enemy 44",
-            type = EnemyType.UNDISTRACTABLE,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_53")
-        };
-        enemies[52].waypoints.Add(GameObject.Find("39"));
-        enemies[52].waypoints.Add(GameObject.Find("40"));
-
-        enemies[53] = new Enemies
-        {
-            name = "Undistractable Enemy 45",
-            type = EnemyType.UNDISTRACTABLE,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_54")
-        };
-        enemies[53].waypoints.Add(GameObject.Find("41"));
-        enemies[53].waypoints.Add(GameObject.Find("42"));
-
-        enemies[54] = new Enemies
-        {
-            name = "Undistractable Enemy 46",
-            type = EnemyType.UNDISTRACTABLE,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("undistractable_patrol_55")
-        };
-        enemies[54].waypoints.Add(GameObject.Find("43"));
-        enemies[54].waypoints.Add(GameObject.Find("44"));
-
-        enemies[55] = new Enemies
-        {
-            name = "Undistractable Enemy 47",
-            type = EnemyType.UNDISTRACTABLE,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_57")
-        };
-
-        enemies[56] = new Enemies
-        {
-            name = "Basic Enemy 48",
-            type = EnemyType.BASIC,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_58")
-        };
-
-        enemies[57] = new Enemies
-        {
-            name = "Drone Enemy 49",
-            type = EnemyType.AIR,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("dron_patrol_59")
-        };
-        enemies[57].waypoints.Add(GameObject.Find("45"));
-        enemies[57].waypoints.Add(GameObject.Find("46"));
-
-        enemies[58] = new Enemies
-        {
-            name = "Basic Enemy 3x",
-            type = EnemyType.BASIC,
-            state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_patrol_60")
-        };
-        enemies[58].waypoints.Add(GameObject.Find("47"));
-        enemies[58].waypoints.Add(GameObject.Find("48"));
-        enemies[58].waypoints.Add(GameObject.Find("49"));
-        enemies[58].waypoints.Add(GameObject.Find("50"));
-        enemies[58].waypoints.Add(GameObject.Find("51"));
-
-        enemies[59] = new Enemies
         {
             name = "Basic Enemy 50",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_patrol_61")
+            spawnPoint = GameObject.Find("basic_patrol_51")
         };
-        enemies[59].waypoints.Add(GameObject.Find("47"));
-        enemies[59].waypoints.Add(GameObject.Find("48"));
-        enemies[59].waypoints.Add(GameObject.Find("49"));
-        enemies[59].waypoints.Add(GameObject.Find("50"));
-        enemies[59].waypoints.Add(GameObject.Find("51"));
+        enemies[50].waypoints.Add(GameObject.Find("47"));
+        enemies[50].waypoints.Add(GameObject.Find("48"));
+        enemies[50].waypoints.Add(GameObject.Find("49"));
+        enemies[50].waypoints.Add(GameObject.Find("50"));
+        enemies[50].waypoints.Add(GameObject.Find("51"));
 
-        enemies[60] = new Enemies
+        enemies[51] = new Enemies
         {
             name = "Basic Enemy 51",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_patrol_62")
+            spawnPoint = GameObject.Find("basic_patrol_52")
         };
-        enemies[60].waypoints.Add(GameObject.Find("47"));
-        enemies[60].waypoints.Add(GameObject.Find("48"));
-        enemies[60].waypoints.Add(GameObject.Find("49"));
-        enemies[60].waypoints.Add(GameObject.Find("50"));
-        enemies[60].waypoints.Add(GameObject.Find("51"));
+        enemies[51].waypoints.Add(GameObject.Find("47"));
+        enemies[51].waypoints.Add(GameObject.Find("48"));
+        enemies[51].waypoints.Add(GameObject.Find("49"));
+        enemies[51].waypoints.Add(GameObject.Find("50"));
+        enemies[51].waypoints.Add(GameObject.Find("51"));
 
-        enemies[61] = new Enemies
+        enemies[52] = new Enemies
         {
             name = "Basic Enemy 52",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_patrol_63")
+            spawnPoint = GameObject.Find("basic_patrol_53")
         };
-        enemies[61].waypoints.Add(GameObject.Find("52"));
-        enemies[61].waypoints.Add(GameObject.Find("53"));
+        enemies[52].waypoints.Add(GameObject.Find("52"));
+        enemies[52].waypoints.Add(GameObject.Find("53"));
 
-        enemies[62] = new Enemies
+        enemies[53] = new Enemies
         {
             name = "Basic Enemy 53",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_64")
+            spawnPoint = GameObject.Find("basic_static_54")
         };
 
-        enemies[63] = new Enemies
+        enemies[54] = new Enemies
         {
             name = "Basic Enemy 54",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_65")
+            spawnPoint = GameObject.Find("basic_static_55")
         };
 
-        enemies[64] = new Enemies
+        enemies[55] = new Enemies
         {
             name = "Basic Enemy 55",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_66")
+            spawnPoint = GameObject.Find("basic_static_56")
         };
 
-        enemies[65] = new Enemies
+        enemies[56] = new Enemies
         {
             name = "Basic Enemy 56",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_67")
+            spawnPoint = GameObject.Find("basic_static_57")
         };
 
-        enemies[66] = new Enemies
+        enemies[57] = new Enemies
         {
-            name = "Basic Enemy 6x",
+            name = "Basic Enemy 6",
             type = EnemyType.BASIC,
             state = EnemyState.IDLE,
-            spawnPoint = GameObject.Find("basic_static_68")
+            spawnPoint = GameObject.Find("basic_static_58")
         };
         ///////////////////////////////////////////////////////////////////
 

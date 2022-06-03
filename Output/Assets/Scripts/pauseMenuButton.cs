@@ -592,7 +592,6 @@ public class pauseMenuButton : RagnarComponent
 
 		if (isPlayng)
 		{
-			Debug.Log((float)genealDT);
 			actualDtAnimation +=0.05f;
 			if (actualDtAnimation >= 2)
 			{

@@ -61,16 +61,11 @@ public class Voice : RagnarComponent
 
 	}
 	public void ActivateVoice()
-    {
-		Debug.Log("Is Changing");
-        
+    {        
 		playerManager.players[playerManager.characterSelected].GetComponent<Player>().SetControled(false);
 		if (selectedEnemy.GetComponent<BasicEnemy>().ToString() == "BasicEnemy") selectedEnemy.GetComponent<BasicEnemy>().SetControled(true);
 		if (selectedEnemy.GetComponent<TankEnemy>().ToString() == "TankEnemy") selectedEnemy.GetComponent<TankEnemy>().SetControled(true);
 		if (selectedEnemy.GetComponent<UndistractableEnemy>().ToString() == "UndistractableEnemy") selectedEnemy.GetComponent<UndistractableEnemy>().SetControled(true);
-		
-
-		Debug.Log("Is Changed");
 	}
 }
 

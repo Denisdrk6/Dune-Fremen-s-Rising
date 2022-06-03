@@ -458,7 +458,6 @@ public class PlayerManager : RagnarComponent
                     lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
-                    Debug.Log("Character Changed");
                 }
                 goto case 3;
             case 3:
@@ -477,7 +476,6 @@ public class PlayerManager : RagnarComponent
                     lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
-                    Debug.Log("Character Changed");
                 }
                 goto case 2;
             case 2:
@@ -496,7 +494,6 @@ public class PlayerManager : RagnarComponent
                     lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
-                    Debug.Log("Character Changed");
                 }
                 goto case 1;
             case 1:
@@ -515,7 +512,6 @@ public class PlayerManager : RagnarComponent
                     lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
-                    Debug.Log("Character Changed");
                 }
                 break;
         }

@@ -104,7 +104,6 @@ public class BackStab : RagnarComponent
 		}
 
 		barrels = GameObject.FindGameObjectsWithTag("Barrels");
-		Debug.Log(barrels.Length);
 		for (int i = 0; i < barrels.Length; ++i)
         {
 			if (Math.Abs((barrels[i].transform.globalPosition - gameObject.transform.globalPosition).magnitude) <= 3.0f)

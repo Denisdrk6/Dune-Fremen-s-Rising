@@ -15,7 +15,6 @@ public class BackStabEnemy : RagnarComponent
 		enemies = GameObject.FindGameObjectsWithTag("Enemies");
 		enemyPlayer = GetEnemy();
 		enemyPlayer.tag = "wwwwwwww";
-		//Debug.Log(enemyPlayer.name.ToString());
 		pos = enemyPlayer.transform.globalPosition;
 		pos.y += 1;
 		gameObject.transform.localPosition = pos;

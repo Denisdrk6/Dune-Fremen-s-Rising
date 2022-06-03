@@ -222,7 +222,7 @@ public class BasicEnemy : RagnarComponent
 
     public void OnCollision(Rigidbody other)
     {
-        if (state != EnemyState.DEATH)
+        if (state != EnemyState.DEATH && state != EnemyState.IS_DYING)
         {
             //gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_SCREAM");
             if (other.gameObject.name == "Knife")
@@ -240,8 +240,6 @@ public class BasicEnemy : RagnarComponent
                     }
                     animationComponent.PlayAnimation("Dying");
                 }
-                // WHEN RUNES FUNCTIONAL
-                // deathTimer = 0f;
             }
             if (other.gameObject.tag == "Player")
             {
@@ -271,9 +269,6 @@ public class BasicEnemy : RagnarComponent
                     isDying = true;
                     animationComponent.PlayAnimation("Dying");
                 }
-
-                // WHEN RUNES FUNCTIONAL
-                // EXPLOSION AREA
             }
         }
     }
@@ -322,9 +317,6 @@ public class BasicEnemy : RagnarComponent
                 patrol = false;
                 stoppedTime = 5f;
                 agents.CalculatePath(other.gameObject.transform.globalPosition);
-
-                // WHEN RUNES FUNCTIONAL
-                // STUN (BLIND) 3s
             }
             if (other.gameObject.name == "Trap")
             {

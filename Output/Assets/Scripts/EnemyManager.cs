@@ -100,10 +100,8 @@ public class EnemyManager : RagnarComponent
                         enemyGOs[i].GetComponent<AirEnemy>().pendingToDelete = false;
                         break;
                     case EnemyType.TANK:
-                        Debug.Log("CASE TANK");
                         enemyGOs[i].ChangeMesh("3_modeldeath");
                         //enemyGOs[i].GetComponent<TankEnemy>().stunPartSys.Pause();
-                        Debug.Log("TANK STUNPART SYS");
                         break;
                     case EnemyType.UNDISTRACTABLE:
                         enemyGOs[i].ChangeMesh("2_modeldeath");
@@ -112,7 +110,10 @@ public class EnemyManager : RagnarComponent
                 };
 
                 GameObject sound = InternalCalls.InstancePrefab("SoundArea", enemyGOs[i].transform.globalPosition);
-                sound.GetComponent<Rigidbody>().SetRadiusSphere(10f);
+                if(enemyGOs[i].name.Contains("Dron"))
+                    sound.GetComponent<Rigidbody>().SetRadiusSphere(15);
+                else
+                    sound.GetComponent<Rigidbody>().SetRadiusSphere(10);
                 sound.transform.globalPosition = enemyGOs[i].transform.globalPosition;
 
                 ChangeEnemyState(enemyGOs[i], EnemyState.DEATH);

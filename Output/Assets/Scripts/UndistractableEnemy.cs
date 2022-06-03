@@ -218,7 +218,7 @@ public class UndistractableEnemy : RagnarComponent
 
     public void OnCollision(Rigidbody other)
     {
-        if (state != EnemyState.DEATH)
+        if (state != EnemyState.DEATH && state != EnemyState.IS_DYING)
         {
             if (other.gameObject.name == "Knife")
             {
@@ -235,9 +235,6 @@ public class UndistractableEnemy : RagnarComponent
                     }
                     animation.PlayAnimation("Dying");
                 }
-
-                // WHEN RUNES FUNCTIONAL
-                // deathTimer = 0f;
             }
             if (other.gameObject.tag == "Player")
             {
@@ -247,6 +244,7 @@ public class UndistractableEnemy : RagnarComponent
             {
                 if (!isDying)
                 {
+                    audioSource.PlayClip("EBASIC_BULLETHIT");
                     isDying = true;
                     for (int i = 0; i < childs.Length; ++i)
                     {
@@ -266,9 +264,6 @@ public class UndistractableEnemy : RagnarComponent
                     isDying = true;
                     animation.PlayAnimation("Dying");
                 }
-
-                // WHEN RUNES FUNCTIONAL
-                // EXPLOSION AREA
             }
         }
     }
@@ -281,6 +276,7 @@ public class UndistractableEnemy : RagnarComponent
             if (other.gameObject.name == "SpiceGrenade")
             {
                 // STUN (BLIND)
+                audioSource.PlayClip("EBASIC_SCREAM");
                 Stun(5f);
                 stunPartSys.Play();
             }
@@ -289,6 +285,7 @@ public class UndistractableEnemy : RagnarComponent
             //// Stilgar =====================================
             if (other.gameObject.name == "SwordSlash")
             {
+                audioSource.PlayClip("WPN_SWORDHIT");
                 isDying = true;
                 for (int i = 0; i < childs.Length; ++i)
                 {
@@ -300,19 +297,10 @@ public class UndistractableEnemy : RagnarComponent
                 }
                 animation.PlayAnimation("Dying");
             }
-            if (other.gameObject.name == "Whistle")
-            {
-                // NEED TO CREATE FUNCTION TO INITIATE STOPPED TIME WHEN ARRIVES TO THE POSITION
-                patrol = false;
-                stoppedTime = 5f;
-                agents.CalculatePath(other.gameObject.transform.globalPosition);
-
-                // WHEN RUNES FUNCTIONAL
-                // STUN (BLIND) 3s
-            }
             if (other.gameObject.name == "Trap")
             {
                 // STUN (BLIND)
+                audioSource.PlayClip("EBASIC_SCREAM");
                 Stun(5f);
                 GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Play();
                 stunPartSys.Play();
@@ -357,7 +345,7 @@ public class UndistractableEnemy : RagnarComponent
         Vector3 enemyForward = gameObject.transform.forward;
         Vector3 initPos = new Vector3(enemyPos.x + (enemyForward.x * offset.x * 0.6f), enemyPos.y + 0.1f, enemyPos.z + (enemyForward.z * offset.z * 0.6f));
 
-        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 12, players, players.Length, "Collider", Time.deltaTime);
+        index = RayCast.PerceptionCone(initPos, enemyForward, 60, 10, 12, players, players.Length, "Collider", coneTimer / coneMaxTime);
         if (index != -1 && (players[index].GetComponent<Player>().invisible || players[index].GetComponent<Player>().dead || players[index].GetComponent<Player>().isHidden)) return false;
         return (index == -1) ? false : true;
     }
