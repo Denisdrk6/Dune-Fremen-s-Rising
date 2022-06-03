@@ -75,6 +75,14 @@
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Quaternion.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Time.cs" />
     <Compile Include="Assembly-CSharp\Ragnar Engine Utility\Vector3.cs" />
+    <Compile Include="Assets\Scripts\CinematicManager.cs" />
+    <Compile Include="Assets\Scripts\Cinematic_1.cs" />
+    <Compile Include="Assets\Scripts\Cinematic_2.cs" />
+    <Compile Include="Assets\Scripts\Cinematic_3.cs" />
+    <Compile Include="Assets\Scripts\Cinematic_4.cs" />
+    <Compile Include="Assets\Scripts\Cinematic_5.cs" />
+    <Compile Include="Assets\Scripts\Cinematic_6.cs" />
+    <Compile Include="Assets\Scripts\Cinematic_7.cs" />
     <Compile Include="Assets\Scripts\Credits.cs" />
     <Compile Include="Assets\Scripts\AirEnemy.cs" />
     <Compile Include="Assets\Scripts\BasicEnemy.cs" />
