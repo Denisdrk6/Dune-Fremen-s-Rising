@@ -73,8 +73,7 @@ public class Cinematic_6 : RagnarComponent
     {
         //var1: ID del dialogo que se hara en la cinematica(variable arriba)
         //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
-        //var3: Numera de la cinematica (Ej: Cinematica_1 = 1)
-        dialogues.SetIDDialogue(IdDialogue, "build", 6);
+        dialogues.SetIDDialogue(IdDialogue, "build");
     }
 
     private void Animations()

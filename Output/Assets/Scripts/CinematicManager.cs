@@ -127,13 +127,13 @@ public class CinematicManager : RagnarComponent
 
     }
 
-    public void SetIDDialogue(int ID,String _nextScene,int cinematicNumber) {
+    public void SetIDDialogue(int ID,String _nextScene) {
         endDialogue = false;
         IdDialogue = ID;
 
         Dialogue.LoadDialogueFile("");
         Dialogue.StartDialogueById(IdDialogue);
         nextScene = _nextScene;
-        cinematic = GameObject.Find("Cinematic"+ cinematicNumber.ToString());
+        cinematic = GameObject.Find("Cinematic");
     }
 }

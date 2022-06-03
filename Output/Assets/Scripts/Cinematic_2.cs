@@ -26,26 +26,6 @@ public class Cinematic_2 : RagnarComponent
         //Set UI Bands
         GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -447f, -10.4f);
         GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, 449f, -10.4f);
-        //bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
-        //bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
-
-        characters = new Characters[1];
-        characters[0] = new Characters
-        {
-            name = "Paul Atreides",
-            prefabPath = "Player",
-            state = State.NONE,
-            abilities = new Abilities[0],
-            hitPoints = 4,
-            pos = new Vector3(-43.69f, 0f, 199.77f)
-        };
-
-        //paul = InternalCalls.InstancePrefab("Player", new Vector3(-43.69f, 0f, 199.77f));
-        //chani = InternalCalls.InstancePrefab("Player_2", new Vector3(-42, 3, 200));
-
-        GameObject pm = InternalCalls.InstancePrefab("PlayerManager", Vector3.zero);
-        pm.GetComponent<PlayerManager>().characters = characters;
-
 
         //paul.GetComponent<Animation>().PlayAnimation("Idle");
         //chani.GetComponent<Animation>().PlayAnimation("Idle");
@@ -65,7 +45,7 @@ public class Cinematic_2 : RagnarComponent
         //char_enemy4.GetComponent<Animation>().PlayAnimation("Idle");
         //char_hostage.GetComponent<Animation>().PlayAnimation("Knee Idle");
 
-        dialogues = GameObject.Find("Cinematic2").GetComponent<CinematicManager>();
+        dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
         //-----------
         state = CinematicState.FIRST;
@@ -103,8 +83,7 @@ public class Cinematic_2 : RagnarComponent
     {
         //var1: ID del dialogo que se hara en la cinematica(variable arriba)
         //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
-        //var3: Numera de la cinematica (Ej: Cinematica_1 = 1)
-        dialogues.SetIDDialogue(IdDialogue, "build", 2);
+        dialogues.SetIDDialogue(IdDialogue, "build");
     }
 
     private void Animations()
