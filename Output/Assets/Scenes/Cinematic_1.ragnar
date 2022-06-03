@@ -1,7 +1,7 @@
 {
     "Game Objects": [
         {
-            "UUID": 53078851,
+            "UUID": 417174321,
             "Parent UUID": 0,
             "Name": "Cinematic_1",
             "Active": true,
@@ -11,228 +11,11 @@
             "tag": "Untagged",
             "layer": "Default",
             "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "Cinematic_1",
-                    "pointer": 392793608,
-                    "type": 4,
-                    "componentTable": 0,
-                    "runGame": true,
-                    "bands": 0,
-                    "IdDialogue": 0,
-                    "IdLine": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1340834672,
-            "Parent UUID": 53078851,
-            "Name": "Directional Light",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -131.01097106933594,
-                        27.612594604492188,
-                        -106.40683746337891
-                    ],
-                    "Quaternion": [
-                        0.67389911413192749,
-                        -0.59794372320175171,
-                        0.41976538300514221,
-                        -0.11009232699871063
-                    ],
-                    "RotationEditor": [
-                        2.6255867481231689,
-                        0.77178704738616943,
-                        1.6650934219360352
-                    ],
-                    "Scale": [
-                        1.0000151395797729,
-                        1.0000368356704712,
-                        1.0000402927398682
-                    ]
-                },
-                {
-                    "Type": 8,
-                    "Active": true,
-                    "Light Type": 1,
-                    "Direction": [
-                        0.67802053689956665,
-                        -0.60160064697265625,
-                        0.42233258485794067
-                    ],
-                    "Ambient": [
-                        1,
-                        0,
-                        0
-                    ],
-                    "Diffuse": [
-                        1,
-                        0.77788156270980835,
-                        0.48333334922790527
-                    ],
-                    "Specular": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Intensity": 4,
-                    "Shadows": true
-                }
-            ]
-        },
-        {
-            "UUID": 2128337088,
-            "Parent UUID": 53078851,
-            "Name": "cameraController",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -37.830001831054688,
-                        -45.700000762939453,
-                        88.550003051757812
-                    ],
-                    "Quaternion": [
-                        -0.0014221933670341969,
-                        0.93265897035598755,
-                        -0.010841436684131622,
-                        0.36061641573905945
-                    ],
-                    "RotationEditor": [
-                        -3.1223938465118408,
-                        2.3645720481872559,
-                        -3.1520648002624512
-                    ],
-                    "Scale": [
-                        1.0000262260437012,
-                        1,
-                        1.0000262260437012
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 360238450,
-            "Parent UUID": 2128337088,
-            "Name": "Camera",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        55,
-                        -50
-                    ],
-                    "Quaternion": [
-                        0.34202012419700623,
-                        0,
-                        0,
-                        0.93969261646270752
-                    ],
-                    "RotationEditor": [
-                        0.78539824485778809,
-                        0,
-                        -0
-                    ],
-                    "Scale": [
-                        1.4142098426818848,
-                        1.0000002384185791,
-                        1.0000005960464478
-                    ]
-                },
-                {
-                    "Near Plane": 1,
-                    "Far Plane": 155,
-                    "Vertical Fov": 0.42143398523330688,
-                    "Horizontal Fov": 0.78539818525314331,
-                    "Camera Pos": [
-                        -71.181488037109375,
-                        10.246719360351562,
-                        124.36778259277344
-                    ],
-                    "Type": 3,
-                    "Zoom": -18,
-                    "Zoom Min": -20,
-                    "Zoom Max": 30,
-                    "Zoom Speed": 1,
-                    "Lock": true,
-                    "Free Movement": true,
-                    "Default Target Pos": [
-                        -37.830001831054688,
-                        -45.700000762939453,
-                        88.550003051757812
-                    ],
-                    "Movement Speed": 0.25,
-                    "Rotation Speed": 0.80000001192092896,
-                    "Radius": 20,
-                    "Horizontal Angle": 91.123794555664062,
-                    "Shake Strength": 0.60000002384185791,
-                    "Shake Duration": 1,
-                    "Shake Smooth": 0,
-                    "Limits": [
-                        -80,
-                        -50,
-                        60,
-                        90
-                    ]
-                }
-            ]
+            "Components": []
         },
         {
             "UUID": 1205518201,
-            "Parent UUID": 53078851,
+            "Parent UUID": 417174321,
             "Name": "Tutorial",
             "Active": true,
             "Static": false,
@@ -1440,24 +1223,24 @@
             ]
         },
         {
-            "UUID": 1664051899,
-            "Parent UUID": 53078851,
-            "Name": "Floor",
+            "UUID": 1011093402,
+            "Parent UUID": 417174321,
+            "Name": "AudioLevel1",
             "Active": true,
             "Static": true,
             "PrefabID": false,
-            "Prefab Path": "None",
+            "Prefab Path": "Assets\/Prefabs\/AudioLevel1.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -78.013542175292969,
-                        -3.0517578125e-05,
-                        160.80180358886719
+                        0,
+                        0,
+                        0
                     ],
                     "Quaternion": [
                         0,
@@ -1477,67 +1260,27 @@
                     ]
                 },
                 {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__Floor_01.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 5,
-                    "Normal": [
-                        0,
-                        1,
-                        0
-                    ],
-                    "Constant": 1,
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "fActivation": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "LEVEL1BGMUSIC"
+                        },
+                        {
+                            "1": "UIHOVER"
+                        },
+                        {
+                            "2": "UISELECT"
+                        }
+                    ]
                 }
             ]
         },
         {
             "UUID": 2021177439,
-            "Parent UUID": 53078851,
+            "Parent UUID": 417174321,
             "Name": "Player",
             "Active": true,
             "Static": true,
@@ -1551,15 +1294,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -48.699882507324219,
-                        0,
-                        198.87750244140625
+                        -41.572738647460938,
+                        1.0734691619873047,
+                        203.24266052246094
                     ],
                     "Quaternion": [
                         0,
-                        -0.54154956340789795,
+                        -0.67388540506362915,
                         0,
-                        0.84066879749298096
+                        0.73883587121963501
                     ],
                     "RotationEditor": [
                         -0,
@@ -1567,9 +1310,9 @@
                         -0
                     ],
                     "Scale": [
+                        1.0000076293945312,
                         1,
-                        1,
-                        1
+                        1.0000076293945312
                     ]
                 },
                 {
@@ -1710,38 +1453,6 @@
                 {
                     "Type": 6,
                     "Active": true
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "Player",
-                    "pointer": 435444504,
-                    "type": 4,
-                    "componentTable": 0,
-                    "hitPoints": 0,
-                    "force": 100,
-                    "paused": false,
-                    "invisible": false,
-                    "dead": false,
-                    "isHidden": false,
-                    "godMode": false,
-                    "stunned": false,
-                    "controled": false
-                },
-                {
-                    "Type": 20,
-                    "Active": true,
-                    "Radius": 0.30000001192092896,
-                    "Height": 2,
-                    "StopHeight": 0.89999997615814209,
-                    "MaxSlope": 45,
-                    "Speed": 6,
-                    "AngularSpeed": 180,
-                    "Acceleration": 1,
-                    "StoppingDistance": 0,
-                    "PathType": 1,
-                    "NumPolys": 0,
-                    "NumStraight": 0,
-                    "NumSmooth": 0
                 }
             ]
         },
@@ -1787,9 +1498,9 @@
                     "Active": true,
                     "Light Type": 2,
                     "Position": [
-                        16.466567993164062,
-                        1.3585714101791382,
-                        216.2933349609375
+                        14.270305633544922,
+                        2.4320406913757324,
+                        241.07916259765625
                     ],
                     "Ambient": [
                         1,
@@ -1859,9 +1570,9 @@
                         10
                     ],
                     "Offset": [
-                        -48.699882507324219,
-                        0,
-                        198.87750244140625
+                        -41.572738647460938,
+                        1.0734691619873047,
+                        203.24266052246094
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -1872,7 +1583,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.52000081539154053,
+                            "Emitter: Current Timer": 0.53600078821182251,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -1940,7 +1651,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.66400057077407837,
+                            "Emitter: Current Timer": 0.68000054359436035,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -2052,9 +1763,9 @@
                         10
                     ],
                     "Offset": [
-                        -48.699882507324219,
-                        1.1074999570846558,
-                        198.87750244140625
+                        -41.572738647460938,
+                        2.18096923828125,
+                        203.24266052246094
                     ],
                     "MaxDuration": 0.39500001072883606,
                     "Looping": false,
@@ -2233,9 +1944,9 @@
                         10
                     ],
                     "Offset": [
-                        -48.560829162597656,
-                        -0.011444180272519588,
-                        198.821533203125
+                        -41.423015594482422,
+                        1.0620249509811401,
+                        203.23542785644531
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -2246,7 +1957,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.17333331704139709,
+                            "Emitter: Current Timer": 0.18933331966400146,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -2314,7 +2025,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.31733334064483643,
+                            "Emitter: Current Timer": 0.3333333432674408,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -2426,9 +2137,9 @@
                         10
                     ],
                     "Offset": [
-                        -49.980690002441406,
-                        -0.045323491096496582,
-                        199.22471618652344
+                        -42.896568298339844,
+                        1.0281456708908081,
+                        203.15034484863281
                     ],
                     "MaxDuration": 0.39500001072883606,
                     "Looping": false,
@@ -2516,7 +2227,7 @@
         },
         {
             "UUID": 2021177439,
-            "Parent UUID": 53078851,
+            "Parent UUID": 417174321,
             "Name": "Player_2",
             "Active": true,
             "Static": true,
@@ -2530,15 +2241,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -51.576225280761719,
-                        -5.3215103434922639e-06,
-                        200.31903076171875
+                        -43.565784454345703,
+                        1.0737557411193848,
+                        203.86834716796875
                     ],
                     "Quaternion": [
                         0,
-                        0.84876573085784912,
+                        0.86771535873413086,
                         0,
-                        0.52876907587051392
+                        0.49706143140792847
                     ],
                     "RotationEditor": [
                         0,
@@ -2546,9 +2257,9 @@
                         0
                     ],
                     "Scale": [
-                        1.0000032186508179,
+                        1.0000150203704834,
                         1,
-                        1.0000032186508179
+                        1.0000150203704834
                     ]
                 },
                 {
@@ -2669,38 +2380,6 @@
                 {
                     "Type": 6,
                     "Active": true
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "Player",
-                    "pointer": 435462744,
-                    "type": 4,
-                    "componentTable": 0,
-                    "hitPoints": 0,
-                    "force": 100,
-                    "paused": false,
-                    "invisible": false,
-                    "dead": false,
-                    "isHidden": false,
-                    "godMode": false,
-                    "stunned": false,
-                    "controled": false
-                },
-                {
-                    "Type": 20,
-                    "Active": true,
-                    "Radius": 0.30000001192092896,
-                    "Height": 2,
-                    "StopHeight": 0.89999997615814209,
-                    "MaxSlope": 45,
-                    "Speed": 6,
-                    "AngularSpeed": 180,
-                    "Acceleration": 1,
-                    "StoppingDistance": 0,
-                    "PathType": 1,
-                    "NumPolys": 0,
-                    "NumStraight": 0,
-                    "NumSmooth": 0
                 }
             ]
         },
@@ -2746,9 +2425,9 @@
                     "Active": true,
                     "Light Type": 2,
                     "Position": [
-                        -210.35467529296875,
-                        0.199997678399086,
-                        178.22294616699219
+                        -203.54399108886719,
+                        1.2737587690353394,
+                        193.55252075195312
                     ],
                     "Ambient": [
                         0.93333333730697632,
@@ -2818,9 +2497,9 @@
                         10
                     ],
                     "Offset": [
-                        -51.576225280761719,
-                        1.107494592666626,
-                        200.31903076171875
+                        -43.565784454345703,
+                        2.1812558174133301,
+                        203.86834716796875
                     ],
                     "MaxDuration": 0.39500001072883606,
                     "Looping": false,
@@ -2999,9 +2678,9 @@
                         10
                     ],
                     "Offset": [
-                        -51.576225280761719,
-                        -5.3215103434922639e-06,
-                        200.31903076171875
+                        -43.565784454345703,
+                        1.0737557411193848,
+                        203.86834716796875
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -3012,7 +2691,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.18400079011917114,
+                            "Emitter: Current Timer": 0.20000079274177551,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -3080,7 +2759,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.32800081372261047,
+                            "Emitter: Current Timer": 0.34400081634521484,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -3192,9 +2871,9 @@
                         10
                     ],
                     "Offset": [
-                        -51.713523864746094,
-                        -0.011449501849710941,
-                        200.37918090820312
+                        -43.698268890380859,
+                        1.0623115301132202,
+                        203.93846130371094
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -3205,7 +2884,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.15733331441879272,
+                            "Emitter: Current Timer": 0.17333331704139709,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -3273,7 +2952,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.30133333802223206,
+                            "Emitter: Current Timer": 0.31733334064483643,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -3385,9 +3064,9 @@
                         10
                     ],
                     "Offset": [
-                        -50.306507110595703,
-                        -0.045328810811042786,
-                        199.9332275390625
+                        -42.327991485595703,
+                        1.0284322500228882,
+                        203.38986206054688
                     ],
                     "MaxDuration": 0.39500001072883606,
                     "Looping": false,
@@ -3474,23 +3153,203 @@
             ]
         },
         {
-            "UUID": 47152571,
-            "Parent UUID": 53078851,
-            "Name": "High_Band",
+            "UUID": 1340874673,
+            "Parent UUID": 417174321,
+            "Name": "Directional Light",
             "Active": true,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -131.01097106933594,
+                        27.612594604492188,
+                        -106.40683746337891
+                    ],
+                    "Quaternion": [
+                        0.67389911413192749,
+                        -0.59794372320175171,
+                        0.41976538300514221,
+                        -0.11009232699871063
+                    ],
+                    "RotationEditor": [
+                        2.6255867481231689,
+                        0.77178704738616943,
+                        1.6650934219360352
+                    ],
+                    "Scale": [
+                        1.0000151395797729,
+                        1.0000368356704712,
+                        1.0000402927398682
+                    ]
+                },
+                {
+                    "Type": 8,
+                    "Active": true,
+                    "Light Type": 1,
+                    "Direction": [
+                        0.67802053689956665,
+                        -0.60160064697265625,
+                        0.42233258485794067
+                    ],
+                    "Ambient": [
+                        1,
+                        0,
+                        0
+                    ],
+                    "Diffuse": [
+                        1,
+                        0.77788156270980835,
+                        0.48333334922790527
+                    ],
+                    "Specular": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Intensity": 4,
+                    "Shadows": true
+                }
+            ]
+        },
+        {
+            "UUID": 2128337085,
+            "Parent UUID": 417174321,
+            "Name": "cameraController",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -65.056503295898438,
+                        20,
+                        182.18096923828125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.34928658604621887,
+                        0,
+                        0.93701595067977905
+                    ],
+                    "RotationEditor": [
+                        -3.1415927410125732,
+                        0.14101520180702209,
+                        -3.1415927410125732
+                    ],
+                    "Scale": [
+                        1.0000373125076294,
+                        0.9999803900718689,
+                        1.0000373125076294
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 360238400,
+            "Parent UUID": 2128337085,
+            "Name": "Camera",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        55,
+                        -50
+                    ],
+                    "Quaternion": [
+                        0.34202012419700623,
+                        0,
+                        0,
+                        0.93969261646270752
+                    ],
+                    "RotationEditor": [
+                        0.78539824485778809,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1.414210319519043,
+                        1.0000002384185791,
+                        1.0000004768371582
+                    ]
+                },
+                {
+                    "Near Plane": 1,
+                    "Far Plane": 155,
+                    "Vertical Fov": 0.42075249552726746,
+                    "Horizontal Fov": 0.78539818525314331,
+                    "Camera Pos": [
+                        -97.78643798828125,
+                        74.998916625976562,
+                        144.37966918945312
+                    ],
+                    "Type": 3,
+                    "Zoom": 11,
+                    "Zoom Min": -20,
+                    "Zoom Max": 30,
+                    "Zoom Speed": 1,
+                    "Lock": false,
+                    "Free Movement": true,
+                    "Default Target Pos": [
+                        -65.056503295898438,
+                        20,
+                        182.18096923828125
+                    ],
+                    "Movement Speed": 0.25,
+                    "Rotation Speed": 0.80000001192092896,
+                    "Radius": 20,
+                    "Horizontal Angle": 171.92042541503906,
+                    "Shake Strength": 0.60000002384185791,
+                    "Shake Duration": 1,
+                    "Shake Smooth": 0,
+                    "Limits": [
+                        -90,
+                        -50,
+                        60,
+                        195
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1184583527,
+            "Parent UUID": 417174321,
+            "Name": "Low_Band",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Active": true,
                     "Type": 19,
                     "Position": [
                         0,
-                        352.5,
+                        -376.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3506,7 +3365,72 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1353,
-                    "lastButtonHeight": 767.5,
+                    "lastButtonHeight": 697.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": false,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 47152571,
+            "Parent UUID": 417174321,
+            "Name": "High_Band",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        376.5,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        3.3333332538604736,
+                        0.23333333432674408,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 2000,
+                    "buttonHeight": 140,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 697.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3539,49 +3463,49 @@
             ]
         },
         {
-            "UUID": 1184583527,
-            "Parent UUID": 53078851,
-            "Name": "Low_Band",
+            "UUID": 1664051899,
+            "Parent UUID": 417174321,
+            "Name": "Floor",
             "Active": true,
             "Static": true,
             "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
+                    "Type": 0,
                     "Active": true,
-                    "Type": 19,
                     "Position": [
-                        0,
-                        -352.5,
-                        -10.399999618530273
+                        -78.013542175292969,
+                        -3.0517578125e-05,
+                        160.80180358886719
                     ],
-                    "Scale": [
-                        3.3333332538604736,
-                        0.23333333432674408,
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
                         1
                     ],
-                    "rotationEuler": [
+                    "RotationEditor": [
                         0,
                         0,
                         0
                     ],
-                    "buttonWidth": 2000,
-                    "buttonHeight": 140,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 767.5,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": false,
+                    "Cast Shadows": true,
                     "Interactuable Color": [
                         0,
                         0.30000001192092896,
@@ -3597,9 +3521,206 @@
                     "Color Multiplier": 1
                 },
                 {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__Floor_01.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 5,
+                    "Normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "Constant": 1,
+                    "Gravity": false,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": false,
+                    "Mass": 0,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1822328168,
+            "Parent UUID": 417174321,
+            "Name": "Cinematic",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Cinematic.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "Cinematic_2",
+                    "pointer": 507253632,
+                    "type": 4,
+                    "componentTable": 0,
+                    "runGame": true,
+                    "bands": 0,
+                    "IdDialogue": 0,
+                    "IdLine": 0
+                }
+            ]
+        },
+        {
+            "UUID": 81378638,
+            "Parent UUID": 417174321,
+            "Name": "CinematicDialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "CinematicManager",
+                    "pointer": 507255000,
+                    "type": 4,
+                    "componentTable": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1777589784,
+            "Parent UUID": 81378638,
+            "Name": "Dialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        244.46501159667969,
+                        9.6000003814697266
+                    ],
+                    "Scale": [
+                        0.1666666716337204,
+                        0.1666666716337204,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 100,
+                    "buttonHeight": 100,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 697.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 16,
+                    "buttonText": "Rabban ha atacado dos asentamientos más al\noeste de aquí, te está buscando Paul.",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
+                    "fontScale": 0.5,
+                    "textColor.r": 1,
+                    "textColor.g": 1,
+                    "textColor.b": 1,
+                    "TextFile": "-"
                 }
             ]
         }

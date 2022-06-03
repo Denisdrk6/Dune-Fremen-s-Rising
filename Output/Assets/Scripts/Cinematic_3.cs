@@ -10,6 +10,11 @@ public class Cinematic_3 : RagnarComponent
 
     CinematicManager dialogues;
 
+    GameObject paul;
+    Animation paulAnimation;
+    GameObject chani;
+    Animation chaniAnimation;
+
     public int IdLine = 0;
     enum CinematicState
     {
@@ -27,12 +32,12 @@ public class Cinematic_3 : RagnarComponent
         bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
-        // Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
-        GameObject characterPaul = GameObject.Find("char_paul");
-        GameObject characterBoss = GameObject.Find("char_boss");
-
-        characterPaul.GetComponent<Animation>().PlayAnimation("Idle");
-        characterBoss.GetComponent<Animation>().PlayAnimation("Run");
+        paul = GameObject.Find("Player");
+        chani = GameObject.Find("Player_2");
+        paulAnimation = paul.GetComponent<Animation>();
+        //paulAnimation.PlayAnimation("Idle");
+        chaniAnimation = chani.GetComponent<Animation>();
+        //chaniAnimation.PlayAnimation("Idle");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 

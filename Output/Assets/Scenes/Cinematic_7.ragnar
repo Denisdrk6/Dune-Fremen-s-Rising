@@ -16,7 +16,7 @@
         {
             "UUID": 53078851,
             "Parent UUID": 417171234,
-            "Name": "Cinematic7",
+            "Name": "Cinematic",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -53,12 +53,13 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_7",
-                    "pointer": 392925096,
+                    "pointer": 467080352,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
                     "bands": 0,
-                    "IdDialogue": 0
+                    "IdDialogue": 0,
+                    "IdLine": 0
                 }
             ]
         },
@@ -207,7 +208,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.42143398523330688,
+                    "Vertical Fov": 0.48124173283576965,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
                         -30.566238403320312,
@@ -404,7 +405,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -468,7 +470,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -532,7 +535,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -596,7 +600,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -660,7 +665,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -724,7 +730,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -788,7 +795,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -852,7 +860,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -916,7 +925,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -980,7 +990,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1044,7 +1055,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1108,7 +1120,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1172,7 +1185,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1236,7 +1250,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1300,7 +1315,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1364,7 +1380,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1428,7 +1445,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1492,7 +1510,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1556,7 +1575,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1620,7 +1640,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1684,7 +1705,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1748,7 +1770,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1812,7 +1835,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1876,7 +1900,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1940,7 +1965,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2004,7 +2030,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2068,7 +2095,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2132,7 +2160,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2196,7 +2225,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2260,7 +2290,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2324,7 +2355,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2388,7 +2420,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2452,7 +2485,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2516,7 +2550,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2610,7 +2645,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2699,7 +2735,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2788,7 +2825,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2882,7 +2920,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2976,7 +3015,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3070,7 +3110,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3164,7 +3205,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3258,7 +3300,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3322,7 +3365,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3386,7 +3430,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3450,7 +3495,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3514,7 +3560,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3578,7 +3625,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3642,7 +3690,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3706,7 +3755,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3770,7 +3820,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3834,7 +3885,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3898,7 +3950,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3962,7 +4015,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4026,7 +4080,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4090,7 +4145,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4154,7 +4210,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4218,7 +4275,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4282,7 +4340,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4346,7 +4405,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4410,7 +4470,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4474,7 +4535,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4538,7 +4600,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4602,7 +4665,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4666,7 +4730,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4730,7 +4795,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4794,7 +4860,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4858,7 +4925,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4922,7 +4990,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -4986,7 +5055,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5050,7 +5120,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5114,7 +5185,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5178,7 +5250,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5242,7 +5315,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5306,7 +5380,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5370,7 +5445,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5434,7 +5510,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5498,7 +5575,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5562,7 +5640,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5626,7 +5705,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5690,7 +5770,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5754,7 +5835,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5818,7 +5900,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5882,7 +5965,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -5946,7 +6030,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6010,7 +6095,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6074,7 +6160,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6138,7 +6225,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6202,7 +6290,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6266,7 +6355,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6330,7 +6420,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6394,7 +6485,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6458,7 +6550,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6522,7 +6615,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6586,7 +6680,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6650,7 +6745,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6714,7 +6810,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6778,7 +6875,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6842,7 +6940,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6906,7 +7005,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -6970,7 +7070,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7034,7 +7135,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7098,7 +7200,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7162,7 +7265,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7226,7 +7330,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7290,7 +7395,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7354,7 +7460,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7418,7 +7525,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7482,7 +7590,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7546,7 +7655,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7610,7 +7720,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7674,7 +7785,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7738,7 +7850,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7802,7 +7915,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7866,7 +7980,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7930,7 +8045,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -7994,7 +8110,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8058,7 +8175,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8122,7 +8240,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8186,7 +8305,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8250,7 +8370,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8314,7 +8435,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8378,7 +8500,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8442,7 +8565,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8506,7 +8630,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8639,7 +8764,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8772,7 +8898,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -8905,7 +9032,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9038,7 +9166,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9171,7 +9300,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9304,7 +9434,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9437,7 +9568,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9570,7 +9702,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9634,7 +9767,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9698,7 +9832,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9762,7 +9897,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9826,7 +9962,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9890,7 +10027,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -9954,7 +10092,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -10003,7 +10142,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 392931024,
+                    "pointer": 467078680,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -10041,8 +10180,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 801.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10064,7 +10203,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 16,
@@ -10110,8 +10250,8 @@
                     ],
                     "buttonWidth": 2500,
                     "buttonHeight": 183,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 801.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10133,7 +10273,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -10174,8 +10315,8 @@
                     ],
                     "buttonWidth": 2500,
                     "buttonHeight": 183,
-                    "lastButtonWidth": 1343,
-                    "lastButtonHeight": 693.5,
+                    "lastButtonWidth": 1353,
+                    "lastButtonHeight": 801.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -10197,7 +10338,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -10212,7 +10354,7 @@
             "Name": "char_paul",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/char_paul.rgprefab",
             "tag": "Player",
             "layer": "Default",
@@ -10261,7 +10403,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -10354,7 +10497,7 @@
             "Name": "char_chani",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/char_chani.rgprefab",
             "tag": "Player",
             "layer": "Default",
@@ -10403,7 +10546,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -10476,7 +10620,7 @@
             "Name": "char_stilgar",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/char_stilgar.rgprefab",
             "tag": "Player",
             "layer": "Default",
@@ -10525,7 +10669,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
