@@ -9,8 +9,8 @@ public class Cinematic_2 : RagnarComponent
     public int IdDialogue = 0;
 
     CinematicManager dialogues;
-    GameObject paul;
-    GameObject chani;
+
+    public Characters[] characters;
 
     public int IdLine = 0;
     enum CinematicState
@@ -30,8 +30,23 @@ public class Cinematic_2 : RagnarComponent
         //bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         //bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
-        paul = InternalCalls.InstancePrefab("Player", new Vector3(-43.69f, 0f, 199.77f));
-        chani = InternalCalls.InstancePrefab("Player_2", new Vector3(-42, 3, 200));
+        characters = new Characters[1];
+        characters[0] = new Characters
+        {
+            name = "Paul Atreides",
+            prefabPath = "Player",
+            state = State.NONE,
+            abilities = new Abilities[0],
+            hitPoints = 4,
+            pos = new Vector3(-43.69f, 0f, 199.77f)
+        };
+
+        //paul = InternalCalls.InstancePrefab("Player", new Vector3(-43.69f, 0f, 199.77f));
+        //chani = InternalCalls.InstancePrefab("Player_2", new Vector3(-42, 3, 200));
+
+        GameObject pm = InternalCalls.InstancePrefab("PlayerManager", Vector3.zero);
+        pm.GetComponent<PlayerManager>().characters = characters;
+
 
         //paul.GetComponent<Animation>().PlayAnimation("Idle");
         //chani.GetComponent<Animation>().PlayAnimation("Idle");
