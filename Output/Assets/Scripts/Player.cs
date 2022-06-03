@@ -38,6 +38,7 @@ public class Player : RagnarComponent
     NavAgent agent;
     DialogueManager dialogue;
     GameObject sound;
+    SoundAreaManager soundManag;
 
     GameObject uiCrouch;
 
@@ -73,7 +74,8 @@ public class Player : RagnarComponent
 
         sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition);
         gameObject.AddChild(sound);
-        //sound.transform.globalPosition = gameObject.transform.globalPosition;
+        soundManag = sound.GetComponent<SoundAreaManager>();
+        soundManag.UpdateRadius(0f);
 
         uiCrouch = GameObject.Find("UICrouch");
 
@@ -273,7 +275,7 @@ public class Player : RagnarComponent
 
                 walkPartSys.Pause();
                 runPartSys.Pause();
-                sound.GetComponent<Rigidbody>().SetRadiusSphere(0f);
+                soundManag.UpdateRadius(0f);
                 audioSourceComponent.StopCurrentClip("PAUL_WALKSAND");
                 break;
 
@@ -282,15 +284,15 @@ public class Player : RagnarComponent
                 {
                     case Actions.NONE:
                         animationComponent.PlayAnimation("Walk");
-                        sound.GetComponent<Rigidbody>().SetRadiusSphere(2f);
+                        soundManag.UpdateRadius(2f);
                         break;
                     case Actions.CROUCH:
                         animationComponent.PlayAnimation("CrouchWalk");
-                        sound.GetComponent<Rigidbody>().SetRadiusSphere(0f);
+                        soundManag.UpdateRadius(0f);
                         break;
                     case Actions.CARRY:
                         animationComponent.PlayAnimation("CorpseWalk");
-                        sound.GetComponent<Rigidbody>().SetRadiusSphere(3f);
+                        soundManag.UpdateRadius(3f);
                         break;
                 }
 
@@ -302,11 +304,11 @@ public class Player : RagnarComponent
                 {
                     case Actions.NONE:
                         animationComponent.PlayAnimation("Run");
-                        sound.GetComponent<Rigidbody>().SetRadiusSphere(5f);
+                        soundManag.UpdateRadius(5f);
                         break;
                     case Actions.CROUCH:
                         //gameObject.GetComponent<Animation>().PlayAnimation("CrouchRun");
-                        //sound.GetComponent<Rigidbody>().SetRadiusSphere(2f);
+                        //soundManag.UpdateRadius(2f);
 
                         move = Movement.WALK;
                         agent.speed = speedBase;
@@ -314,7 +316,7 @@ public class Player : RagnarComponent
                         break;
                     case Actions.CARRY:
                         animationComponent.PlayAnimation("CorpseRun");
-                        sound.GetComponent<Rigidbody>().SetRadiusSphere(6f);
+                        soundManag.UpdateRadius(6f);
                         break;
                 }
 

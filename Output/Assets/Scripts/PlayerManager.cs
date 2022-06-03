@@ -160,29 +160,41 @@ public class PlayerManager : RagnarComponent
     // LETRA Z --> HABILIDAD 1 DE TODOS LOS PJS
     public void Ability1()
     {
-        if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility1)
-            SpawnArea(State.ABILITY_1);
+        if(characters[characterSelected].abilities[0].charges != 0)
+        {
+            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility1)
+                SpawnArea(State.ABILITY_1);
+        }
     }
 
     // LETRA X --> HABILIDAD 2 DE TODOS LOS PJS
     public void Ability2()
     {
-        if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility2)
-            SpawnArea(State.ABILITY_2);
+        if (characters[characterSelected].abilities[1].charges != 0)
+        {
+            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility2)
+                SpawnArea(State.ABILITY_2);
+        }
     }
 
     // LETRA C --> HABILIDAD 3 DE TODOS LOS PJS
     public void Ability3()
     {
-        if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility3)
-            SpawnArea(State.ABILITY_3);
+        if (characters[characterSelected].abilities[2].charges != 0)
+        {
+            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility3)
+                SpawnArea(State.ABILITY_3);
+        }
     }
 
     // LETRA V --> HABILIDAD 4 DE TODOS LOS PJS
     public void Ability4()
     {
-        if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility4)
-            SpawnArea(State.ABILITY_4);
+        if (characters[characterSelected].abilities[3].charges != 0)
+        {
+            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead && canDoAbility4)
+                SpawnArea(State.ABILITY_4);
+        }
     }
 
     // LETRA B --> ARRASTRAR CUERPOS

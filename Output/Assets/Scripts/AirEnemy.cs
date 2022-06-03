@@ -77,7 +77,7 @@ public class AirEnemy : RagnarComponent
             } 
         }
 
-        initialSpeed = agents.speed;
+        initialSpeed = 6;
 
         childs = gameObject.childs;
 

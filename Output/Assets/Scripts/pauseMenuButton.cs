@@ -306,25 +306,25 @@ public class pauseMenuButton : RagnarComponent
 		presetText = GameObject.Find("presetText");
 		presetText.GetComponent<UIText>().text = "PRESET 1";
 
-		pos.Set(-sum + 430, y - 810, 36.1f);
+		pos.Set(-sum +10, y - 810, 36.1f);
 		optionsControl9.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 430, y - 740, 36.1f);
+		pos.Set(-sum +10, y - 740, 36.1f);
 		optionsControl8.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 750, y - 540, 36.1f);
+		pos.Set(-sum + 330, y - 540, 36.1f);
 		optionsControl14.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 750, y - 610, 36.1f);
+		pos.Set(-sum + 330, y - 610, 36.1f);
 		optionsControl15.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 750, y - 680, 36.1f);
+		pos.Set(-sum + 330, y - 680, 36.1f);
 		optionsControl16.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 750, y - 750, 36.1f);
+		pos.Set(-sum + 330, y - 750, 36.1f);
 		optionsControl17.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 750, y - 820, 36.1f);
+		pos.Set(-sum + 330, y - 820, 36.1f);
 		optionsControl18.GetComponent<Transform2D>().position2D = pos;
 
 

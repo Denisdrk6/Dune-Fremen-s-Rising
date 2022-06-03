@@ -91,7 +91,7 @@ public class BasicEnemy : RagnarComponent
             }
         }
 
-        initialSpeed = agents.speed;
+        initialSpeed = 6;
 
         childs = gameObject.childs;
 
@@ -175,9 +175,12 @@ public class BasicEnemy : RagnarComponent
             {
                 if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
                 {
-                    agents.CalculatePath(agents.hitPosition);
+                    if (agents.CalculatePath(agents.hitPosition).Length > 0)
+                        animationComponent.PlayAnimation("Walk");
                 }
-                agents.MovePath();
+                if (agents.MovePath())
+                    animationComponent.PlayAnimation("Idle");
+
                 if (!backstab && Input.GetKey(KeyCode.Z) == KeyState.KEY_REPEAT)
                 {
                     backstab = true;
