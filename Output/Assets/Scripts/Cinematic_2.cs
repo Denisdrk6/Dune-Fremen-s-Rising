@@ -25,20 +25,15 @@ public class Cinematic_2 : RagnarComponent
 
     public void Start()
     {
-        Vector3 size = InternalCalls.GetRegionGame();
-        //GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -size.y - 100, -10.4f);
-        //GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, size.y + 100, -10.4f);
-
-        //GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -447f, -10.4f);
-        //GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, 449f, -10.4f);
-
         paul = GameObject.Find("Player");
         chani = GameObject.Find("Player_2");
         paulAnimation = paul.GetComponent<Animation>();
         chaniAnimation = chani.GetComponent<Animation>();
+        GameObject.Find("WalkParticles").GetComponent<ParticleSystem>().Pause();
+        GameObject.Find("RunParticles").GetComponent<ParticleSystem>().Pause();
 
-        //GameObject.Find("Camera").transform.globalPosition = new Vector3(0f, 37f, -50f);
-        //GameObject.Find("cameraController").transform.globalPosition = new Vector3(-43f, 0f, 144f);
+        GameObject.Find("WalkParticles_2").GetComponent<ParticleSystem>().Pause();
+        GameObject.Find("RunParticles_2").GetComponent<ParticleSystem>().Pause();
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
@@ -60,7 +55,7 @@ public class Cinematic_2 : RagnarComponent
                 break;
             case CinematicState.TRANSITION:
                 //Aqui no pasara nada
-                //state = CinematicState.ANIMATIONS;
+
                 break;
             case CinematicState.ANIMATIONS:
 
@@ -88,9 +83,9 @@ public class Cinematic_2 : RagnarComponent
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
             case 0:
-                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                paul.GetComponent<Animation>().PlayAnimation("Crouch");
                 // If chani var is used this crashes
-                GameObject.Find("Player_2").GetComponent<Animation>().PlayAnimation("Idle");
+                GameObject.Find("Player_2").GetComponent<Animation>().PlayAnimation("Crouch");
 
                 break;
             

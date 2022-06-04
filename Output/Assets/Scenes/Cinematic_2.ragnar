@@ -29,19 +29,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -48.435276031494141,
-                        0,
-                        190.74786376953125
+                        -33.040000915527344,
+                        -25.799999237060547,
+                        199.02999877929688
                     ],
                     "Quaternion": [
                         0,
-                        0.24123714864253998,
+                        0.56438452005386353,
                         0,
-                        0.97046619653701782
+                        0.82551205158233643
                     ],
                     "RotationEditor": [
                         -0,
-                        0.48728090524673462,
+                        1.1993751525878906,
                         -0
                     ],
                     "Scale": [
@@ -92,29 +92,29 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.56459856033325195,
+                    "Vertical Fov": 0.4563063383102417,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -71.847137451171875,
-                        55,
-                        146.56625366210938
+                        -79.6318359375,
+                        29.200000762939453,
+                        180.88250732421875
                     ],
                     "Type": 3,
-                    "Zoom": -20,
+                    "Zoom": 22,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -48.435276031494141,
-                        0,
-                        190.74786376953125
+                        -33.040000915527344,
+                        -25.799999237060547,
+                        199.02999877929688
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 27.919139862060547,
+                    "Horizontal Angle": 68.719123840332031,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -1578,9 +1578,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -43.64044189453125,
+                        -47.317012786865234,
                         0,
-                        196.75694274902344
+                        194.67399597167969
                     ],
                     "Quaternion": [
                         0,
@@ -1786,9 +1786,9 @@
                         10
                     ],
                     "Offset": [
-                        -43.64044189453125,
+                        -47.317012786865234,
                         0,
-                        196.75694274902344
+                        194.67399597167969
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -1934,187 +1934,6 @@
             ]
         },
         {
-            "UUID": 1223679345,
-            "Parent UUID": 2021177439,
-            "Name": "GetHitParticles",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        1.1074999570846558,
-                        0
-                    ],
-                    "Quaternion": [
-                        0.70779472589492798,
-                        0,
-                        0,
-                        0.70641815662384033
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1.0000039339065552,
-                        1.0000039339065552
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -43.64044189453125,
-                        1.1074999570846558,
-                        196.75694274902344
-                    ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": 1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.10000000149011612,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": -1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
             "Name": "RunParticles",
@@ -2160,9 +1979,9 @@
                         10
                     ],
                     "Offset": [
-                        -43.490585327148438,
+                        -47.167156219482422,
                         -0.011444180272519588,
-                        196.75360107421875
+                        194.670654296875
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -2308,140 +2127,6 @@
             ]
         },
         {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "FallDeadParticles_1",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -0.21340128779411316,
-                        -0.045323491096496582,
-                        1.309762716293335
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -44.961418151855469,
-                        -0.045323491096496582,
-                        196.63026428222656
-                    ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 30,
-                            "Emitter: Is Active": false,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.033333335071802139,
-                            "Emitter: Current Timer": 0.0013333335518836975,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 0.5,
-                            "Cubical: Spread on Y": 0,
-                            "Cubical: Spread on Z": 0.5,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.0020000000949949026,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 10,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 0.10000000149011612,
-                            "Tiles: X": 5,
-                            "Tiles: Y": 4,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_dust_corpse.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.60000002384185791,
-                                    "PESpawnCone: Height": 0.20000000298023224,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 2021177439,
             "Parent UUID": 417174774,
             "Name": "Player_2",
@@ -2457,15 +2142,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -48.006198883056641,
-                        0,
-                        197.50331115722656
+                        -48.767284393310547,
+                        3.167561226291582e-05,
+                        193.82933044433594
                     ],
                     "Quaternion": [
                         0,
-                        0.75602579116821289,
+                        0.4138224720954895,
                         0,
-                        0.65454185009002686
+                        0.91035759449005127
                     ],
                     "RotationEditor": [
                         0,
@@ -2473,9 +2158,9 @@
                         0
                     ],
                     "Scale": [
-                        1.0000030994415283,
+                        1.0000029802322388,
                         1,
-                        1.0000030994415283
+                        1.0000029802322388
                     ]
                 },
                 {
@@ -2600,187 +2285,6 @@
             ]
         },
         {
-            "UUID": 1223679345,
-            "Parent UUID": 2021177439,
-            "Name": "GetHitParticles_2",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        1.1074999570846558,
-                        0
-                    ],
-                    "Quaternion": [
-                        0.70779472589492798,
-                        0,
-                        0,
-                        0.70641815662384033
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1.0000039339065552,
-                        1.0000039339065552
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -48.006198883056641,
-                        1.1074999570846558,
-                        197.50331115722656
-                    ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": 1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.10000000149011612,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": -1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
             "Name": "WalkParticles_2",
@@ -2826,9 +2330,9 @@
                         10
                     ],
                     "Offset": [
-                        -48.006198883056641,
-                        0,
-                        197.50331115722656
+                        -48.767284393310547,
+                        3.167561226291582e-05,
+                        193.82933044433594
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -3019,9 +2523,9 @@
                         10
                     ],
                     "Offset": [
-                        -48.155345916748047,
-                        -0.011444180272519588,
-                        197.51828002929688
+                        -48.875823974609375,
+                        -0.011412505060434341,
+                        193.7259521484375
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -3167,140 +2671,6 @@
             ]
         },
         {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "FallDeadParticles_2",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -0.21340128779411316,
-                        -0.045323491096496582,
-                        1.309762716293335
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -46.679374694824219,
-                        -0.045323491096496582,
-                        197.52702331542969
-                    ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 30,
-                            "Emitter: Is Active": false,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.033333335071802139,
-                            "Emitter: Current Timer": 0.0013333335518836975,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 0.5,
-                            "Cubical: Spread on Y": 0,
-                            "Cubical: Spread on Z": 0.5,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.0020000000949949026,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 10,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 0.10000000149011612,
-                            "Tiles: X": 5,
-                            "Tiles: Y": 4,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_dust_corpse.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.60000002384185791,
-                                    "PESpawnCone: Height": 0.20000000298023224,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 47152571,
             "Parent UUID": 417174774,
             "Name": "High_Band",
@@ -3317,7 +2687,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        450.5,
+                        439.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3333,7 +2703,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 907.5,
+                    "lastButtonHeight": 726.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3382,7 +2752,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -450,
+                        -439.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -3398,7 +2768,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 907.5,
+                    "lastButtonHeight": 726.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3470,7 +2840,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_2",
-                    "pointer": 432765408,
+                    "pointer": 501218312,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -3520,7 +2890,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 432768144,
+                    "pointer": 501215424,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -3543,7 +2913,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        244.46501159667969,
+                        182.46501159667969,
                         9.6000003814697266
                     ],
                     "Scale": [
@@ -3559,7 +2929,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 907.5,
+                    "lastButtonHeight": 726.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
