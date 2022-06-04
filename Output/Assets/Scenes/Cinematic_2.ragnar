@@ -29,9 +29,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -49.097980499267578,
+                        -48.435276031494141,
                         0,
-                        191.09901428222656
+                        190.74786376953125
                     ],
                     "Quaternion": [
                         0,
@@ -92,12 +92,12 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.43014833331108093,
+                    "Vertical Fov": 0.56459856033325195,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -72.509841918945312,
+                        -71.847137451171875,
                         55,
-                        146.91738891601562
+                        146.56625366210938
                     ],
                     "Type": 3,
                     "Zoom": -20,
@@ -107,9 +107,9 @@
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -49.097980499267578,
+                        -48.435276031494141,
                         0,
-                        191.09901428222656
+                        190.74786376953125
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
@@ -1618,7 +1618,7 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.3999999761581421
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2497,7 +2497,7 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.3999999761581421
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -3306,7 +3306,7 @@
             "Name": "High_Band",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -3333,7 +3333,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 683.5,
+                    "lastButtonHeight": 907.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3371,7 +3371,7 @@
             "Name": "Low_Band",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -3398,7 +3398,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 683.5,
+                    "lastButtonHeight": 907.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3436,7 +3436,7 @@
             "Name": "Cinematic",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Cinematic.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
@@ -3470,7 +3470,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_2",
-                    "pointer": 528672952,
+                    "pointer": 432765408,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -3486,7 +3486,7 @@
             "Name": "CinematicDialogue",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
@@ -3520,7 +3520,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 528673256,
+                    "pointer": 432768144,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -3532,7 +3532,7 @@
             "Name": "Dialogue",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -3559,7 +3559,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 683.5,
+                    "lastButtonHeight": 907.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
