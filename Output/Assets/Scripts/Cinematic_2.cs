@@ -25,33 +25,20 @@ public class Cinematic_2 : RagnarComponent
 
     public void Start()
     {
-        Debug.Log("Cinematic 2 Start");
+        Vector3 size = InternalCalls.GetRegionGame();
+        //GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -size.y - 100, -10.4f);
+        //GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, size.y + 100, -10.4f);
 
-        //Set UI Bands
-        GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -447f, -10.4f);
-        GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, 449f, -10.4f);
+        //GameObject.Find("High_Band").transform.globalPosition = new Vector3(0f, -447f, -10.4f);
+        //GameObject.Find("Low_Band").transform.globalPosition = new Vector3(0f, 449f, -10.4f);
 
         paul = GameObject.Find("Player");
         chani = GameObject.Find("Player_2");
         paulAnimation = paul.GetComponent<Animation>();
-        //paulAnimation.PlayAnimation("Idle");
         chaniAnimation = chani.GetComponent<Animation>();
-        //chaniAnimation.PlayAnimation("Idle");
 
-        //// Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
-        //GameObject char_boss = GameObject.Find("char_boss");
-        //GameObject char_enemy1 = GameObject.Find("char_enemy1");
-        //GameObject char_enemy2 = GameObject.Find("char_enemy2");
-        //GameObject char_enemy3 = GameObject.Find("char_enemy3");
-        //GameObject char_enemy4 = GameObject.Find("char_enemy4");
-        //GameObject char_hostage = GameObject.Find("char_hostage");
-        //
-        //char_boss.GetComponent<Animation>().PlayAnimation("Run");
-        //char_enemy1.GetComponent<Animation>().PlayAnimation("Idle");
-        //char_enemy2.GetComponent<Animation>().PlayAnimation("Idle");
-        //char_enemy3.GetComponent<Animation>().PlayAnimation("Idle");
-        //char_enemy4.GetComponent<Animation>().PlayAnimation("Idle");
-        //char_hostage.GetComponent<Animation>().PlayAnimation("Knee Idle");
+        //GameObject.Find("Camera").transform.globalPosition = new Vector3(0f, 37f, -50f);
+        //GameObject.Find("cameraController").transform.globalPosition = new Vector3(-43f, 0f, 144f);
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
@@ -101,13 +88,16 @@ public class Cinematic_2 : RagnarComponent
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
             case 0:
-                Debug.Log("CASE 0");
-                //paulAnimation.PlayAnimation("Idle");
-                //chaniAnimation.PlayAnimation("Idle");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                // If chani var is used this crashes
+                GameObject.Find("Player_2").GetComponent<Animation>().PlayAnimation("Idle");
 
                 break;
+            
             case 1:
+
                 break;
+            
             case 2:
 
                 break;
