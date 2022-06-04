@@ -95,20 +95,20 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -81.495162963867188,
+                        -104.8201904296875,
                         0,
-                        -104.47194671630859
+                        -93.302032470703125
                     ],
                     "Quaternion": [
                         0,
-                        0.25457000732421875,
+                        0.71019995212554932,
                         0,
-                        0.96705436706542969
+                        -0.70399999618530273
                     ],
                     "RotationEditor": [
-                        -0,
-                        0.51480609178543091,
-                        -0
+                        -3.1415927410125732,
+                        -1.5620275735855103,
+                        -3.1415927410125732
                     ],
                     "Scale": [
                         1.0000262260437012,
@@ -134,15 +134,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -1.52587890625e-05,
-                        65.359054565429688,
-                        -59.417312622070312
+                        0,
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
-                        1.1212948791694544e-08,
+                        0.34202012419700623,
                         0,
-                        0.93969273567199707
+                        0,
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -150,7 +150,7 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142119884490967,
+                        1.4142118692398071,
                         1.0000004768371582,
                         1.0000007152557373
                     ]
@@ -161,26 +161,26 @@
                     "Vertical Fov": 0.41793009638786316,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -110.75101470947266,
-                        65.359054565429688,
-                        -156.18942260742188
+                        -54.82080078125,
+                        55,
+                        -92.863624572753906
                     ],
                     "Type": 3,
-                    "Zoom": -8,
+                    "Zoom": 3,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -81.495162963867188,
+                        -104.8201904296875,
                         0,
-                        -104.47194671630859
+                        -93.302032470703125
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 29.496217727661133,
+                    "Horizontal Angle": 269.49761962890625,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -41118,9 +41118,9 @@
                         0.70710599422454834
                     ],
                     "RotationEditor": [
-                        0,
-                        0,
-                        0
+                        -1.5707964897155762,
+                        3.4924596548080444e-10,
+                        -0.0028785478789359331
                     ],
                     "Scale": [
                         0.99999994039535522,
@@ -45598,12 +45598,12 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_4",
-                    "pointer": 532507232,
+                    "pointer": 489931320,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
                     "bands": 0,
-                    "IdDialogue": 0,
+                    "IdDialogue": 6,
                     "IdLine": 0
                 }
             ]
@@ -45648,7 +45648,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 532506472,
+                    "pointer": 489929496,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -45741,7 +45741,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -429.5,
+                        -584.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -45806,7 +45806,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        426,
+                        581,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -45857,9 +45857,9 @@
         {
             "UUID": 587016443,
             "Parent UUID": 417171234,
-            "Name": "HostageFemale",
+            "Name": "Hostage F 1",
             "Active": true,
-            "Static": false,
+            "Static": true,
             "PrefabID": true,
             "Prefab Path": "Assets\/Prefabs\/HostageFemale.rgprefab",
             "tag": "Untagged",
@@ -45870,25 +45870,25 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
+                        -114.67472839355469,
                         0.89752542972564697,
-                        0
+                        -101.07946014404297
                     ],
                     "Quaternion": [
                         0,
-                        -1.7881393432617188e-07,
+                        0.9999619722366333,
                         0,
-                        1
+                        0.0087264943867921829
                     ],
                     "RotationEditor": [
                         0,
-                        0,
+                        3.1241393089294434,
                         0
                     ],
                     "Scale": [
-                        0.99998897314071655,
+                        0.99999433755874634,
                         1,
-                        0.99998897314071655
+                        0.99999433755874634
                     ]
                 },
                 {
@@ -45980,10 +45980,10 @@
         {
             "UUID": 1532534970,
             "Parent UUID": 417171234,
-            "Name": "HostageMale",
+            "Name": "Hostage M 1",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/HostageMale.rgprefab",
             "tag": "Untagged",
             "layer": "Default",
@@ -45993,31 +45993,31 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
+                        -111.64576721191406,
                         0,
-                        0,
-                        0
+                        -105.83237457275391
                     ],
                     "Quaternion": [
                         0,
+                        0.95463889837265015,
                         0,
-                        0,
-                        1
+                        -0.29776597023010254
                     ],
                     "RotationEditor": [
                         0,
-                        0,
+                        3.2882001399993896,
                         0
                     ],
                     "Scale": [
+                        1.0000617504119873,
                         1,
-                        1,
-                        1
+                        1.0000617504119873
                     ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagemale_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -46117,6 +46117,1241 @@
                             "Loop": true
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "UUID": 587016443,
+            "Parent UUID": 417171234,
+            "Name": "Hostage F 2",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/HostageFemale.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -121.20645904541016,
+                        0.89752423763275146,
+                        -101.62391662597656
+                    ],
+                    "Quaternion": [
+                        -3.7848643330562481e-08,
+                        0.84666109085083008,
+                        2.3789322511902355e-08,
+                        0.53213250637054443
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        2.019345760345459,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000183582305908,
+                        1,
+                        1.0000183582305908
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Up",
+                    "Animations": [
+                        {
+                            "State": "Idle Sad",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Knee Down",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneedown__char_hostagefemale_kneedown|char_hostage_kneedown|char_hostage_kneedown|char_hostage_kneedo.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneeidle__char_hostagefemale_kneeidle|char_hostage_kneeidle|char_hostage_kneeidle|char_hostage_kneeid.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_run__char_hostagefemale_run|char_hostage_run|char_hostage_run|char_hostage_run.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_walk__char_hostagefemale_walk|char_hostage_walksad|char_hostage_walksad|char_hostage_walksad.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Turn Around",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_turnaround__char_hostagefemale_turnaround|char_hostage_turnaround|char_hostage_turnaround|char_hostage_tu.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Up",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_up__char_hostagefemale_up|char_hostage_up|char_hostage_up|char_hostage_up.fbx",
+                            "Loop": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 587016443,
+            "Parent UUID": 417171234,
+            "Name": "Hostage F 3",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/HostageFemale.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -104.58750152587891,
+                        0.89752542972564697,
+                        -104.79156494140625
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.91874885559082031,
+                        0,
+                        -0.39484268426895142
+                    ],
+                    "RotationEditor": [
+                        0,
+                        4.2324233055114746,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000087022781372,
+                        1,
+                        1.0000087022781372
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Up",
+                    "Animations": [
+                        {
+                            "State": "Idle Sad",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Knee Down",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneedown__char_hostagefemale_kneedown|char_hostage_kneedown|char_hostage_kneedown|char_hostage_kneedo.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneeidle__char_hostagefemale_kneeidle|char_hostage_kneeidle|char_hostage_kneeidle|char_hostage_kneeid.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_run__char_hostagefemale_run|char_hostage_run|char_hostage_run|char_hostage_run.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_walk__char_hostagefemale_walk|char_hostage_walksad|char_hostage_walksad|char_hostage_walksad.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Turn Around",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_turnaround__char_hostagefemale_turnaround|char_hostage_turnaround|char_hostage_turnaround|char_hostage_tu.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Up",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_up__char_hostagefemale_up|char_hostage_up|char_hostage_up|char_hostage_up.fbx",
+                            "Loop": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 587016443,
+            "Parent UUID": 417171234,
+            "Name": "Hostage F 4",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/HostageFemale.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -108.61579132080078,
+                        0.89752542972564697,
+                        -101.47225189208984
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.96901583671569824,
+                        0,
+                        -0.24699877202510834
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.6407568454742432,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999517202377319,
+                        1,
+                        0.99999517202377319
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Up",
+                    "Animations": [
+                        {
+                            "State": "Idle Sad",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Knee Down",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneedown__char_hostagefemale_kneedown|char_hostage_kneedown|char_hostage_kneedown|char_hostage_kneedo.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneeidle__char_hostagefemale_kneeidle|char_hostage_kneeidle|char_hostage_kneeidle|char_hostage_kneeid.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_run__char_hostagefemale_run|char_hostage_run|char_hostage_run|char_hostage_run.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_walk__char_hostagefemale_walk|char_hostage_walksad|char_hostage_walksad|char_hostage_walksad.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Turn Around",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_turnaround__char_hostagefemale_turnaround|char_hostage_turnaround|char_hostage_turnaround|char_hostage_tu.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Up",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_up__char_hostagefemale_up|char_hostage_up|char_hostage_up|char_hostage_up.fbx",
+                            "Loop": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 587016443,
+            "Parent UUID": 417171234,
+            "Name": "Hostage F 5",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/HostageFemale.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -106.06942749023438,
+                        0.89752542972564697,
+                        -103.63101959228516
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.91496038436889648,
+                        0,
+                        -0.40354377031326294
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.9723694324493408,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000011920928955,
+                        1,
+                        1.0000011920928955
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Up",
+                    "Animations": [
+                        {
+                            "State": "Idle Sad",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Knee Down",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneedown__char_hostagefemale_kneedown|char_hostage_kneedown|char_hostage_kneedown|char_hostage_kneedo.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneeidle__char_hostagefemale_kneeidle|char_hostage_kneeidle|char_hostage_kneeidle|char_hostage_kneeid.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_run__char_hostagefemale_run|char_hostage_run|char_hostage_run|char_hostage_run.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_walk__char_hostagefemale_walk|char_hostage_walksad|char_hostage_walksad|char_hostage_walksad.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Turn Around",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_turnaround__char_hostagefemale_turnaround|char_hostage_turnaround|char_hostage_turnaround|char_hostage_tu.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Up",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_up__char_hostagefemale_up|char_hostage_up|char_hostage_up|char_hostage_up.fbx",
+                            "Loop": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 587016443,
+            "Parent UUID": 417171234,
+            "Name": "Hostage F 6",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/HostageFemale.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -110.89733123779297,
+                        0.89752542972564697,
+                        -101.12155151367188
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.99984771013259888,
+                        0,
+                        0.017452841624617577
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.1066861152648926,
+                        0
+                    ],
+                    "Scale": [
+                        1.000002384185791,
+                        1,
+                        1.000002384185791
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Up",
+                    "Animations": [
+                        {
+                            "State": "Idle Sad",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Knee Down",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneedown__char_hostagefemale_kneedown|char_hostage_kneedown|char_hostage_kneedown|char_hostage_kneedo.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneeidle__char_hostagefemale_kneeidle|char_hostage_kneeidle|char_hostage_kneeidle|char_hostage_kneeid.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_run__char_hostagefemale_run|char_hostage_run|char_hostage_run|char_hostage_run.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_walk__char_hostagefemale_walk|char_hostage_walksad|char_hostage_walksad|char_hostage_walksad.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Turn Around",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_turnaround__char_hostagefemale_turnaround|char_hostage_turnaround|char_hostage_turnaround|char_hostage_tu.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Up",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_up__char_hostagefemale_up|char_hostage_up|char_hostage_up|char_hostage_up.fbx",
+                            "Loop": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 587016443,
+            "Parent UUID": 417171234,
+            "Name": "Hostage F 7",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/HostageFemale.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -164.10592651367188,
+                        1.7950458526611328,
+                        40.586845397949219
+                    ],
+                    "Quaternion": [
+                        1.9878504176062961e-08,
+                        -0.44463086128234863,
+                        4.0041182813865817e-08,
+                        0.8957139253616333
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.3423054218292236,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000189542770386,
+                        1,
+                        1.0000189542770386
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_hostagefemale_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_hostagefemale__char_hostagefemale.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Up",
+                    "Animations": [
+                        {
+                            "State": "Idle Sad",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Knee Down",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneedown__char_hostagefemale_kneedown|char_hostage_kneedown|char_hostage_kneedown|char_hostage_kneedo.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_kneeidle__char_hostagefemale_kneeidle|char_hostage_kneeidle|char_hostage_kneeidle|char_hostage_kneeid.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_run__char_hostagefemale_run|char_hostage_run|char_hostage_run|char_hostage_run.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_walk__char_hostagefemale_walk|char_hostage_walksad|char_hostage_walksad|char_hostage_walksad.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Turn Around",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_turnaround__char_hostagefemale_turnaround|char_hostage_turnaround|char_hostage_turnaround|char_hostage_tu.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Up",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_hostagefemale_up__char_hostagefemale_up|char_hostage_up|char_hostage_up|char_hostage_up.fbx",
+                            "Loop": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1724506246,
+            "Parent UUID": 417171234,
+            "Name": "Rabann",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Boss.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -113.90702056884766,
+                        0,
+                        -108.15885162353516
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.29811149835586548,
+                        0,
+                        0.95453107357025146
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        0.99999988079071045,
+                        1,
+                        0.99999988079071045
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_boss_walknormal__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "WalkNormal",
+                    "Animations": [
+                        {
+                            "State": "CallBackup",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Die",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_die__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Execdie",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_execdie__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Exhausted",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_exhausted__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "HitGround",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_hitground__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ntoa",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_ntoa__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_run__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shield",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shield__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShieldDestroy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shielddestroy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShotCrazy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shotcrazy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "SitIdle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_sitidle__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Throw",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "WalkAngry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walkangry__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "WalkNormal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walknormal__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Basic Enemy 1",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Basic Enemy.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -111.14346313476562,
+                        0,
+                        -110.97115325927734
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1.3999999761581421
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy1_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Dying",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_idle__Armature|Armature|nme_enemy2_idle|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_shot__Armature|Armature|nme_enemy2_shot|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Dying",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_dying__Armature|Armature|nme_enemy2_dying|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Basic Enemy 2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Basic Enemy.rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -117.37215423583984,
+                        0,
+                        -106.51924133300781
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.43825376033782959,
+                        0,
+                        0.89885127544403076
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000001192092896,
+                        1,
+                        1.0000001192092896
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy1_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1.3999999761581421
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy1_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Dying",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_idle__Armature|Armature|nme_enemy2_idle|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_shot__Armature|Armature|nme_enemy2_shot|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Dying",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_dying__Armature|Armature|nme_enemy2_dying|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417171234,
+            "Name": "Stilgar",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/char_stilgar.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -113.04710388183594,
+                        0,
+                        -91.898574829101562
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.99967598915100098,
+                        0,
+                        0.02545439824461937
+                    ],
+                    "RotationEditor": [
+                        0,
+                        3.1415927410125732,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000002384185791,
+                        1,
+                        1.0000002384185791
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_stilgar_walk__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Death",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_walk__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_idle__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_shootstunner__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Crouch",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouch__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Death",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_die__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CrouchWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouchwalk__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CrouchShoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouchshot__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
                 }
             ]
         }
