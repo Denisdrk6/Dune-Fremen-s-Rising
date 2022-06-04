@@ -16,6 +16,7 @@ public class Cinematic_2 : RagnarComponent
     Animation chaniAnimation;
 
     NavAgent chaniNavAgent;
+    ParticleSystem walkPartSys;
 
     GameObject audio;
     GameObject exitPoint;
@@ -33,20 +34,16 @@ public class Cinematic_2 : RagnarComponent
     {
         paul = GameObject.Find("Player");
         chani = GameObject.Find("Player_2");
-        paulAnimation = paul.GetComponent<Animation>();
-        chaniAnimation = chani.GetComponent<Animation>();
+
         GameObject.Find("WalkParticles").GetComponent<ParticleSystem>().Pause();
         GameObject.Find("RunParticles").GetComponent<ParticleSystem>().Pause();
 
         GameObject.Find("WalkParticles_2").GetComponent<ParticleSystem>().Pause();
-        GameObject.Find("RunParticles_2").GetComponent<ParticleSystem>().Pause();
+        walkPartSys = GameObject.Find("RunParticles_2").GetComponent<ParticleSystem>();
+        walkPartSys.Pause();
 
         audio = GameObject.Find("Audio");
         exitPoint = GameObject.Find("ExitPoint");
-        if(exitPoint != null)
-        {
-            Debug.Log("Exit Point NOT NULL");
-        }
 
         chaniNavAgent = GameObject.Find("Player_2").GetComponent<NavAgent>();
         chaniNavAgent.speed = 0;
@@ -62,9 +59,6 @@ public class Cinematic_2 : RagnarComponent
     {
         if (moving)
         {
-            chaniNavAgent.speed = 5;
-            GameObject.Find("Player_2").GetComponent<Animation>().PlayAnimation("Walk");
-            
             chaniNavAgent.CalculatePath(GameObject.Find("ExitPoint").transform.globalPosition);
             chaniNavAgent.MovePath();
         }
@@ -126,11 +120,13 @@ public class Cinematic_2 : RagnarComponent
                 break;
 
             case 4:
-
+                //Animation anim = GameObject.Find("Player_2").GetComponent<Animation>();
+                //anim.PlayAnimation("Idle");
                 break;
 
             case 5:
                 MoveChani();
+                
                 break;
 
             case 6:
@@ -154,10 +150,11 @@ public class Cinematic_2 : RagnarComponent
 
     void MoveChani()
     {
-        //GameObject.Find("Audio").GetComponent<AudioSource>().PlayClip("CHANI_WALKSAND");
-        Debug.Log("Move chani");
-        
+        walkPartSys.Play();
+        chaniNavAgent.speed = 5;
+        Animation anim = GameObject.Find("Player_2").GetComponent<Animation>();
+        anim.PlayAnimation("Walk");
+
         moving = true;
-        Debug.Log("Final Move chani");
     }
 }
