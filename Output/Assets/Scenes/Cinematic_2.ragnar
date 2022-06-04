@@ -29,19 +29,19 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -33.040000915527344,
+                        -31.559638977050781,
                         -25.799999237060547,
-                        199.02999877929688
+                        199.27188110351562
                     ],
                     "Quaternion": [
                         0,
-                        0.56438452005386353,
+                        0.64758259057998657,
                         0,
-                        0.82551205158233643
+                        0.76199531555175781
                     ],
                     "RotationEditor": [
                         -0,
-                        1.1993751525878906,
+                        1.4088157415390015,
                         -0
                     ],
                     "Scale": [
@@ -68,15 +68,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
-                        55,
-                        -50
+                        7.62939453125e-05,
+                        68.318771362304688,
+                        -62.108024597167969
                     ],
                     "Quaternion": [
-                        0.34202012419700623,
+                        0.34202015399932861,
+                        -6.7676104720248986e-09,
                         0,
-                        0,
-                        0.93969261646270752
+                        0.93969273567199707
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -84,7 +84,7 @@
                         -0
                     ],
                     "Scale": [
-                        1.414210319519043,
+                        1.4142102003097534,
                         1.0000002384185791,
                         1.0000004768371582
                     ]
@@ -92,29 +92,29 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.4563063383102417,
+                    "Vertical Fov": 0.45084419846534729,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -79.6318359375,
-                        29.200000762939453,
-                        180.88250732421875
+                        -92.856246948242188,
+                        42.518768310546875,
+                        189.25517272949219
                     ],
                     "Type": 3,
-                    "Zoom": 22,
+                    "Zoom": 4,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -33.040000915527344,
+                        -31.559638977050781,
                         -25.799999237060547,
-                        199.02999877929688
+                        199.27188110351562
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 68.719123840332031,
+                    "Horizontal Angle": 80.719169616699219,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -123,6 +123,59 @@
                         -50,
                         60,
                         200
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1011093402,
+            "Parent UUID": 417174774,
+            "Name": "Audio",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/AudioLevel1.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "LEVEL1BGMUSIC"
+                        },
+                        {
+                            "1": "CHANI_WALKSAND"
+                        }
                     ]
                 }
             ]
@@ -2281,6 +2334,22 @@
                 {
                     "Type": 6,
                     "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
                 }
             ]
         },
@@ -2703,7 +2772,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 726.5,
+                    "lastButtonHeight": 717.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2768,7 +2837,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 726.5,
+                    "lastButtonHeight": 717.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2840,7 +2909,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_2",
-                    "pointer": 501218312,
+                    "pointer": 380770288,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -2890,7 +2959,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 501215424,
+                    "pointer": 380771656,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -2929,7 +2998,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 726.5,
+                    "lastButtonHeight": 717.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2963,6 +3032,45 @@
                     "textColor.g": 1,
                     "textColor.b": 1,
                     "TextFile": "-"
+                }
+            ]
+        },
+        {
+            "UUID": 87527391,
+            "Parent UUID": 417174774,
+            "Name": "ExitPoint",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -62.088214874267578,
+                        0,
+                        207.50048828125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
                 }
             ]
         }

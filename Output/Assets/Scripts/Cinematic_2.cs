@@ -15,6 +15,12 @@ public class Cinematic_2 : RagnarComponent
     GameObject chani;
     Animation chaniAnimation;
 
+    NavAgent chaniNavAgent;
+
+    GameObject audio;
+    GameObject exitPoint;
+
+    bool moving = false;
 
     public int IdLine = 0;
     enum CinematicState
@@ -35,8 +41,17 @@ public class Cinematic_2 : RagnarComponent
         GameObject.Find("WalkParticles_2").GetComponent<ParticleSystem>().Pause();
         GameObject.Find("RunParticles_2").GetComponent<ParticleSystem>().Pause();
 
-        dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
+        audio = GameObject.Find("Audio");
+        exitPoint = GameObject.Find("ExitPoint");
+        if(exitPoint != null)
+        {
+            Debug.Log("Exit Point NOT NULL");
+        }
 
+        chaniNavAgent = GameObject.Find("Player_2").GetComponent<NavAgent>();
+        chaniNavAgent.speed = 0;
+
+        dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
         //-----------
         state = CinematicState.FIRST;
         //-----------
@@ -45,6 +60,15 @@ public class Cinematic_2 : RagnarComponent
 
     public void Update()
     {
+        if (moving)
+        {
+            chaniNavAgent.speed = 5;
+            GameObject.Find("Player_2").GetComponent<Animation>().PlayAnimation("Walk");
+            
+            chaniNavAgent.CalculatePath(GameObject.Find("ExitPoint").transform.globalPosition);
+            chaniNavAgent.MovePath();
+        }
+
         switch (state)
         {
             case CinematicState.FIRST:
@@ -96,16 +120,24 @@ public class Cinematic_2 : RagnarComponent
             case 2:
 
                 break;
+
             case 3:
 
                 break;
+
             case 4:
 
                 break;
+
             case 5:
+                MoveChani();
+                break;
+
+            case 6:
 
                 break;
-            case 6:
+
+            case 7:
 
                 break;
 
@@ -118,5 +150,14 @@ public class Cinematic_2 : RagnarComponent
     {
         IdLine = line;
         state = CinematicState.ANIMATIONS;
+    }
+
+    void MoveChani()
+    {
+        //GameObject.Find("Audio").GetComponent<AudioSource>().PlayClip("CHANI_WALKSAND");
+        Debug.Log("Move chani");
+        
+        moving = true;
+        Debug.Log("Final Move chani");
     }
 }
