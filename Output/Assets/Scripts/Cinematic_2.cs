@@ -120,21 +120,13 @@ public class Cinematic_2 : RagnarComponent
                 break;
 
             case 4:
-                //Animation anim = GameObject.Find("Player_2").GetComponent<Animation>();
-                //anim.PlayAnimation("Idle");
                 break;
 
-            case 5:
-                MoveChani();
-                
+            case 5:                
                 break;
 
             case 6:
-
-                break;
-
-            case 7:
-
+                MoveChani();
                 break;
 
             default:
