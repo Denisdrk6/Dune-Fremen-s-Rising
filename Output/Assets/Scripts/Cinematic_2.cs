@@ -6,14 +6,16 @@ public class Cinematic_2 : RagnarComponent
     public bool runGame = true;
     public GameObject[] bands;
 
-    public int IdDialogue = 0;
+    public int IdDialogue = 1;
 
     CinematicManager dialogues;
 
     GameObject paul;
-    //Animation paulAnimation;
+    // Dont remove it, it will crash
+    Animation paulAnimation;
     GameObject chani;
-    //Animation chaniAnimation;
+    Animation chaniAnimation;
+    // =================
 
     NavAgent chaniNavAgent;
     ParticleSystem walkPartSys;
@@ -107,25 +109,43 @@ public class Cinematic_2 : RagnarComponent
 
                 break;
             
-            case 1:
+            //case 1:
+            //
+            //    break;
+            //
+            //case 2:
+            //
+            //    break;
+            //
+            //case 3:
+            //
+            //    break;
+            //
+            //case 4:
+            //    break;
+            //
+            //case 5:                
+            //    break;
+            //
+            //case 6:
+            //    break;
+            //
+            //case 7:
+            //    break;
+            //
+            //case 8:
+            //    break;
+            //
+            //case 9:
+            //    break;
+            //
+            //case 10:
+            //    break;
+            //
+            //case 11:
+            //    break;
 
-                break;
-            
-            case 2:
-
-                break;
-
-            case 3:
-
-                break;
-
-            case 4:
-                break;
-
-            case 5:                
-                break;
-
-            case 6:
+            case 11:
                 MoveChani();
                 break;
 
