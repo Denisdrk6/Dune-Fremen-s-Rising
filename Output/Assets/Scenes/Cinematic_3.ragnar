@@ -1,7 +1,7 @@
 {
     "Game Objects": [
         {
-            "UUID": 417174313,
+            "UUID": 417174774,
             "Parent UUID": 0,
             "Name": "Cinematic_3",
             "Active": true,
@@ -14,11 +14,178 @@
             "Components": []
         },
         {
-            "UUID": 1205518201,
-            "Parent UUID": 417174313,
+            "UUID": 2128337033,
+            "Parent UUID": 417174774,
+            "Name": "cameraController",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -31.559638977050781,
+                        -25.799999237060547,
+                        199.27188110351562
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.64758259057998657,
+                        0,
+                        0.76199531555175781
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        1.4088157415390015,
+                        -0
+                    ],
+                    "Scale": [
+                        1.0000261068344116,
+                        1,
+                        1.0000261068344116
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 360238481,
+            "Parent UUID": 2128337033,
+            "Name": "Camera",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        9.1552734375e-05,
+                        72.758392333984375,
+                        -66.144035339355469
+                    ],
+                    "Quaternion": [
+                        0.34202015399932861,
+                        -6.7676104720248986e-09,
+                        0,
+                        0.93969273567199707
+                    ],
+                    "RotationEditor": [
+                        0.78539824485778809,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1.4142100811004639,
+                        1.0000002384185791,
+                        1.0000004768371582
+                    ]
+                },
+                {
+                    "Near Plane": 1,
+                    "Far Plane": 155,
+                    "Vertical Fov": 0.51418185234069824,
+                    "Horizontal Fov": 0.78539818525314331,
+                    "Camera Pos": [
+                        -96.839523315429688,
+                        46.958393096923828,
+                        188.60423278808594
+                    ],
+                    "Type": 3,
+                    "Zoom": -20,
+                    "Zoom Min": -20,
+                    "Zoom Max": 30,
+                    "Zoom Speed": 1,
+                    "Lock": false,
+                    "Free Movement": true,
+                    "Default Target Pos": [
+                        -31.559638977050781,
+                        -25.799999237060547,
+                        199.27188110351562
+                    ],
+                    "Movement Speed": 0.25,
+                    "Rotation Speed": 0.80000001192092896,
+                    "Radius": 20,
+                    "Horizontal Angle": 80.719169616699219,
+                    "Shake Strength": 0.60000002384185791,
+                    "Shake Duration": 1,
+                    "Shake Smooth": 0,
+                    "Limits": [
+                        -90,
+                        -50,
+                        60,
+                        200
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1011093402,
+            "Parent UUID": 417174774,
+            "Name": "Audio",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/AudioLevel1.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "LEVEL1BGMUSIC"
+                        },
+                        {
+                            "1": "CHANI_WALKSAND"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1918518122,
+            "Parent UUID": 417174774,
             "Name": "Tutorial",
             "Active": true,
-            "Static": false,
+            "Static": true,
             "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Tutorial.rgprefab",
             "tag": "Untagged",
@@ -53,398 +220,8 @@
             ]
         },
         {
-            "UUID": 1709086894,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low46",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        9.9097919464111328,
-                        23.334480285644531,
-                        170.61215209960938
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low46.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 2136629455,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium1_low44",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        31.752336502075195,
-                        21.330528259277344,
-                        218.28025817871094
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.89591753482818604,
-                        0,
-                        -0.44422045350074768
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low44.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 390719736,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low45",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -111.17425537109375,
-                        16.823905944824219,
-                        223.42866516113281
-                    ],
-                    "Quaternion": [
-                        -0.0093520944938063622,
-                        -0.46051257848739624,
-                        -0.018021753057837486,
-                        0.88742095232009888
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        0.99999994039535522,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low45.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 805034307,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low44",
-            "Active": true,
-            "Static": false,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -163.31150817871094,
-                        10.673864364624023,
-                        171.93601989746094
-                    ],
-                    "Quaternion": [
-                        0.88745391368865967,
-                        -0.010372285731136799,
-                        0.46074831485748291,
-                        -0.0053851520642638206
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low44.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1218165321,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium1_low40",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -79.336990356445312,
-                        1.4033336639404297,
-                        152.34800720214844
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.2796865701675415,
-                        0,
-                        0.96009135246276855
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low40.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1698619842,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium1_low39",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -46.845001220703125,
-                        1.4033336639404297,
-                        192.07598876953125
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.99957472085952759,
-                        0,
-                        0.029160257428884506
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low40.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1956287163,
-            "Parent UUID": 1205518201,
+            "UUID": 734565213,
+            "Parent UUID": 1918518122,
             "Name": "RockMedium1_low38",
             "Active": true,
             "Static": true,
@@ -458,7 +235,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -50.264686584472656,
+                        -45.560001373291016,
                         1.1715333461761475,
                         94.217140197753906
                     ],
@@ -481,8 +258,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/prop_smallrocks_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_normal.png",
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -508,138 +285,8 @@
             ]
         },
         {
-            "UUID": 263498267,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium1_low37",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -70.791511535644531,
-                        4.1243362426757812,
-                        189.56086730957031
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.92880630493164062,
-                        0,
-                        0.37056559324264526
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low37.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 645647936,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low36",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -66.606170654296875,
-                        7.568537712097168,
-                        203.38458251953125
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low36.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1073608223,
-            "Parent UUID": 1205518201,
+            "UUID": 1756786454,
+            "Parent UUID": 1918518122,
             "Name": "RockMedium1_low36",
             "Active": true,
             "Static": true,
@@ -653,9 +300,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -95.546318054199219,
+                        -98.963973999023438,
                         4.2315406799316406,
-                        154.49053955078125
+                        156.90336608886719
                     ],
                     "Quaternion": [
                         0,
@@ -703,268 +350,8 @@
             ]
         },
         {
-            "UUID": 1472745416,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low35",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -49.652641296386719,
-                        3.3293666839599609,
-                        160.73597717285156
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0.70710676908493042,
-                        0.70710676908493042
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low35.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1868819285,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low34",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -47.973148345947266,
-                        11.504787445068359,
-                        231.89207458496094
-                    ],
-                    "Quaternion": [
-                        0.70705622434616089,
-                        0.69778245687484741,
-                        -0.11445387452840805,
-                        0.0084536029025912285
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        0.99999994039535522,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low34.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 114763909,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low33",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -12.242474555969238,
-                        15.404747009277344,
-                        176.64802551269531
-                    ],
-                    "Quaternion": [
-                        0.54711335897445679,
-                        0.54711335897445679,
-                        0.44795867800712585,
-                        0.44795864820480347
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low33.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 556926880,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium1_low35",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -93.549522399902344,
-                        11.499602317810059,
-                        189.0767822265625
-                    ],
-                    "Quaternion": [
-                        0,
-                        -0.65507060289382935,
-                        0,
-                        0.75556772947311401
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        0.99999994039535522,
-                        1,
-                        0.99999994039535522
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low35.fbx",
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 945829786,
-            "Parent UUID": 1205518201,
+            "UUID": 1468459906,
+            "Parent UUID": 1918518122,
             "Name": "RockMedium2_low32",
             "Active": true,
             "Static": true,
@@ -978,8 +365,8 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -94.72674560546875,
-                        1.1837563514709473,
+                        -91.430000305175781,
+                        -6.3585672378540039,
                         112.66297912597656
                     ],
                     "Quaternion": [
@@ -1028,9 +415,9 @@
             ]
         },
         {
-            "UUID": 1383606634,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium2_low43",
+            "UUID": 510357521,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium1_low37",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -1043,15 +430,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -123.31308746337891,
-                        8.7116622924804688,
-                        132.40251159667969
+                        -70.791511535644531,
+                        -9.802154541015625,
+                        189.56086730957031
                     ],
                     "Quaternion": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        0,
+                        0.92880630493164062,
+                        0,
+                        0.37056559324264526
                     ],
                     "RotationEditor": [
                         0,
@@ -1066,8 +453,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
-                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -1087,14 +474,14 @@
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low43.fbx",
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low37.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1751623240,
-            "Parent UUID": 1205518201,
+            "UUID": 1514616544,
+            "Parent UUID": 1918518122,
             "Name": "RockMedium1_low42",
             "Active": true,
             "Static": true,
@@ -1108,8 +495,8 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -54.302284240722656,
-                        11.67298412322998,
+                        -53.099998474121094,
+                        -2.2535061836242676,
                         136.85287475585938
                     ],
                     "Quaternion": [
@@ -1158,9 +545,9 @@
             ]
         },
         {
-            "UUID": 1675503,
-            "Parent UUID": 1205518201,
-            "Name": "RockMedium1_low43",
+            "UUID": 388797170,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low44",
             "Active": true,
             "Static": true,
             "PrefabID": false,
@@ -1173,15 +560,80 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -41.525657653808594,
-                        3.7503335475921631,
-                        170.70979309082031
+                        -160.41000366210938,
+                        -3.2526259422302246,
+                        171.93601989746094
                     ],
                     "Quaternion": [
+                        0.88745391368865967,
+                        -0.01037227176129818,
+                        0.46074831485748291,
+                        -0.0053851804696023464
+                    ],
+                    "RotationEditor": [
                         0,
-                        0.92880630493164062,
                         0,
-                        0.37056559324264526
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low44.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 21498591,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low43",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -114.12000274658203,
+                        2.0388197898864746,
+                        139.83464050292969
+                    ],
+                    "Quaternion": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "RotationEditor": [
                         0,
@@ -1217,30 +669,225 @@
                 },
                 {
                     "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low43.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 999719360,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium1_low43",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -41.962398529052734,
+                        -10.176156997680664,
+                        171.17001342773438
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.92880630493164062,
+                        0,
+                        0.37056559324264526
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
                     "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low43.fbx",
                     "Active": true
                 }
             ]
         },
         {
-            "UUID": 1011093402,
-            "Parent UUID": 417174313,
-            "Name": "AudioLevel1",
+            "UUID": 1938952369,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low35",
             "Active": true,
             "Static": true,
             "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/AudioLevel1.rgprefab",
+            "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
+                        -49.652641296386719,
+                        -10.597124099731445,
+                        160.73597717285156
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0.70710676908493042,
+                        0.70710676908493042
+                    ],
+                    "RotationEditor": [
                         0,
                         0,
                         0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low35.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 835202852,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low33",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -14.149985313415527,
+                        1.4782567024230957,
+                        177.031982421875
+                    ],
+                    "Quaternion": [
+                        0.54711335897445679,
+                        0.54711335897445679,
+                        0.44795867800712585,
+                        0.44795864820480347
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low33.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1790587933,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low46",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -91.489997863769531,
+                        17.684465408325195,
+                        170.61215209960938
                     ],
                     "Quaternion": [
                         0,
@@ -1260,27 +907,717 @@
                     ]
                 },
                 {
-                    "Type": 5,
-                    "Volume": 50,
-                    "Pitch": 0,
-                    "Mute": false,
-                    "AudioClips": [
-                        {
-                            "0": "LEVEL1BGMUSIC"
-                        },
-                        {
-                            "1": "UIHOVER"
-                        },
-                        {
-                            "2": "UISELECT"
-                        }
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low46.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 624945347,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium1_low44",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        31.549999237060547,
+                        7.4040379524230957,
+                        218.28025817871094
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.89591753482818604,
+                        0,
+                        -0.44422042369842529
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
                     ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low44.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1626001804,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low45",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -111.17425537109375,
+                        2.8974156379699707,
+                        223.42866516113281
+                    ],
+                    "Quaternion": [
+                        -0.0093520944938063622,
+                        -0.46051257848739624,
+                        -0.018021753057837486,
+                        0.88742095232009888
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low45.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 449289479,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium1_low35",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -93.549522399902344,
+                        -2.4268879890441895,
+                        189.0767822265625
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.65507060289382935,
+                        0,
+                        0.75556772947311401
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low35.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1553106532,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low36",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -72.169998168945312,
+                        -4.21160888671875,
+                        177.21000671386719
+                    ],
+                    "Quaternion": [
+                        -0.045462634414434433,
+                        -0.12761099636554718,
+                        0.33250471949577332,
+                        0.93332159519195557
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        0.99999994039535522,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low36.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 410369255,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low34",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -48.270000457763672,
+                        -2.559999942779541,
+                        234.86000061035156
+                    ],
+                    "Quaternion": [
+                        0.70705622434616089,
+                        0.69778245687484741,
+                        -0.11445389688014984,
+                        0.0084535814821720123
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.99999994039535522,
+                        1,
+                        0.99999994039535522
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low34.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1314025933,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium1_low45",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -39.229999542236328,
+                        0.44100585579872131,
+                        173.17999267578125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.99694830179214478,
+                        0,
+                        -0.078064732253551483
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium1_low45.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 141421247,
+            "Parent UUID": 1918518122,
+            "Name": "SmartCombine_19",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -51.349998474121094,
+                        1,
+                        187.69999694824219
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.70710676908493042,
+                        0,
+                        0.70710676908493042
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__SmartCombine_19.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                }
+            ]
+        },
+        {
+            "UUID": 1809631845,
+            "Parent UUID": 1918518122,
+            "Name": "SmartCombine_20",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -74.610000610351562,
+                        0.77901530265808105,
+                        152.45991516113281
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.70710676908493042,
+                        0,
+                        0.70710676908493042
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__SmartCombine_19.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_smallrocks_color.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                }
+            ]
+        },
+        {
+            "UUID": 829970852,
+            "Parent UUID": 1918518122,
+            "Name": "RockMedium2_low47",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -69.110000610351562,
+                        -6.3579525947570801,
+                        203.38458251953125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_color.png",
+                    "Normal Map Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_mediumrock_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/tutorial_lvl1__RockMedium2_low47.fbx",
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 1989293743,
+            "Parent UUID": 417174774,
+            "Name": "Floor",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -62.699806213378906,
+                        0,
+                        162.44302368164062
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__Floor_01.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 5,
+                    "Normal": [
+                        0,
+                        1,
+                        0
+                    ],
+                    "Constant": 0,
+                    "Gravity": false,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": false,
+                    "Mass": 0,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
                 }
             ]
         },
         {
             "UUID": 2021177439,
-            "Parent UUID": 417174313,
+            "Parent UUID": 417174774,
             "Name": "Player",
             "Active": true,
             "Static": true,
@@ -1288,21 +1625,21 @@
             "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
             "tag": "Player",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -41.572738647460938,
-                        1.0734691619873047,
-                        203.24266052246094
+                        -47.317012786865234,
+                        0,
+                        194.67399597167969
                     ],
                     "Quaternion": [
                         0,
-                        -0.67388540506362915,
+                        -0.68342351913452148,
                         0,
-                        0.73883587121963501
+                        0.73002219200134277
                     ],
                     "RotationEditor": [
                         -0,
@@ -1310,9 +1647,9 @@
                         -0
                     ],
                     "Scale": [
-                        1.0000076293945312,
+                        1.000001072883606,
                         1,
-                        1.0000076293945312
+                        1.000001072883606
                     ]
                 },
                 {
@@ -1334,7 +1671,7 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.3999999761581421
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1457,74 +1794,6 @@
             ]
         },
         {
-            "UUID": 2143263803,
-            "Parent UUID": 2021177439,
-            "Name": "Area",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "AbilityRange",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        42.800544738769531,
-                        1.3585714101791382,
-                        -52.135311126708984
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        -0,
-                        0,
-                        -0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 8,
-                    "Active": true,
-                    "Light Type": 2,
-                    "Position": [
-                        14.270305633544922,
-                        2.4320406913757324,
-                        241.07916259765625
-                    ],
-                    "Ambient": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Diffuse": [
-                        0.0055555552244186401,
-                        0.022560402750968933,
-                        0.25
-                    ],
-                    "Specular": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Intensity": 0,
-                    "Constant": 0.28400000929832458,
-                    "Linear": -0.50099998712539673,
-                    "Quadratic": 0
-                }
-            ]
-        },
-        {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
             "Name": "WalkParticles",
@@ -1534,7 +1803,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
@@ -1570,9 +1839,9 @@
                         10
                     ],
                     "Offset": [
-                        -41.572738647460938,
-                        1.0734691619873047,
-                        203.24266052246094
+                        -47.317012786865234,
+                        0,
+                        194.67399597167969
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -1583,7 +1852,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.53600078821182251,
+                            "Emitter: Current Timer": 0.52000081539154053,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -1651,7 +1920,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.68000054359436035,
+                            "Emitter: Current Timer": 0.66400057077407837,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -1718,187 +1987,6 @@
             ]
         },
         {
-            "UUID": 1223679345,
-            "Parent UUID": 2021177439,
-            "Name": "GetHitParticles",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        1.1074999570846558,
-                        0
-                    ],
-                    "Quaternion": [
-                        0.70779472589492798,
-                        0,
-                        0,
-                        0.70641815662384033
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1.0000039339065552,
-                        1.0000039339065552
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -41.572738647460938,
-                        2.18096923828125,
-                        203.24266052246094
-                    ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": 1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.10000000149011612,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": -1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
             "Name": "RunParticles",
@@ -1908,7 +1996,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
@@ -1944,9 +2032,9 @@
                         10
                     ],
                     "Offset": [
-                        -41.423015594482422,
-                        1.0620249509811401,
-                        203.23542785644531
+                        -47.167156219482422,
+                        -0.011444180272519588,
+                        194.670654296875
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -1957,7 +2045,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.18933331966400146,
+                            "Emitter: Current Timer": 0.17333331704139709,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -2025,7 +2113,7 @@
                             "Emitter: Is Active": true,
                             "Emitter: To Delete": false,
                             "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.3333333432674408,
+                            "Emitter: Current Timer": 0.31733334064483643,
                             "Emitter: Is Cubical": false,
                             "Cubical: Spread on X": 2,
                             "Cubical: Spread on Y": 2,
@@ -2092,142 +2180,8 @@
             ]
         },
         {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "FallDeadParticles_1",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -0.21340128779411316,
-                        -0.045323491096496582,
-                        1.309762716293335
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -42.896568298339844,
-                        1.0281456708908081,
-                        203.15034484863281
-                    ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 30,
-                            "Emitter: Is Active": false,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.033333335071802139,
-                            "Emitter: Current Timer": 0.0013333335518836975,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 0.5,
-                            "Cubical: Spread on Y": 0,
-                            "Cubical: Spread on Z": 0.5,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.0020000000949949026,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 10,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 0.10000000149011612,
-                            "Tiles: X": 5,
-                            "Tiles: Y": 4,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_dust_corpse.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.60000002384185791,
-                                    "PESpawnCone: Height": 0.20000000298023224,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 2021177439,
-            "Parent UUID": 417174313,
+            "Parent UUID": 417174774,
             "Name": "Player_2",
             "Active": true,
             "Static": true,
@@ -2235,21 +2189,21 @@
             "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
             "tag": "Player",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -43.565784454345703,
-                        1.0737557411193848,
-                        203.86834716796875
+                        -54.569999694824219,
+                        3.167561226291582e-05,
+                        186.22999572753906
                     ],
                     "Quaternion": [
                         0,
-                        0.86771535873413086,
+                        0.4138224720954895,
                         0,
-                        0.49706143140792847
+                        0.91035759449005127
                     ],
                     "RotationEditor": [
                         0,
@@ -2257,9 +2211,9 @@
                         0
                     ],
                     "Scale": [
-                        1.0000150203704834,
+                        1.0000029802322388,
                         1,
-                        1.0000150203704834
+                        1.0000029802322388
                     ]
                 },
                 {
@@ -2281,7 +2235,7 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.3999999761581421
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -2380,6 +2334,933 @@
                 {
                     "Type": 6,
                     "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1863195749,
+            "Parent UUID": 2021177439,
+            "Name": "WalkParticles_2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.1365548372268677,
+                        1.1365548372268677,
+                        1.1365548372268677
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        -54.569999694824219,
+                        3.167561226291582e-05,
+                        186.22999572753906
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.18400079011917114,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91666668653488159,
+                                        0.59888887405395508,
+                                        0.18333332240581512,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.98333334922790527,
+                                        0.61731487512588501,
+                                        0.25129631161689758,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.32800081372261047,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                -0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91764706373214722,
+                                        0.60000002384185791,
+                                        0.18431372940540314,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.9843137264251709,
+                                        0.61568629741668701,
+                                        0.25098040699958801,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1863195749,
+            "Parent UUID": 2021177439,
+            "Name": "RunParticles_2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.0065307985059916973,
+                        -0.011444180272519588,
+                        -0.14975264668464661
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.1365548372268677,
+                        1.1365548372268677,
+                        1.1365548372268677
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        -54.678539276123047,
+                        -0.011412505060434341,
+                        186.12661743164062
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 3,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.3333333432674408,
+                            "Emitter: Current Timer": 0.15733331441879272,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0.0030000000260770321,
+                                0.0020000000949949026,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.69999998807907104,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91666668653488159,
+                                        0.59888887405395508,
+                                        0.18333332240581512,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.98333334922790527,
+                                        0.61731487512588501,
+                                        0.25129631161689758,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 3,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.3333333432674408,
+                            "Emitter: Current Timer": 0.30133333802223206,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                -0.0030000000260770321,
+                                0.0020000000949949026,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.69999998807907104,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91764706373214722,
+                                        0.60000002384185791,
+                                        0.18431372940540314,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.9843137264251709,
+                                        0.61568629741668701,
+                                        0.25098040699958801,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 47152571,
+            "Parent UUID": 417174774,
+            "Name": "High_Band",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        683.5,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        3.3333332538604736,
+                        0.23333333432674408,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 2000,
+                    "buttonHeight": 140,
+                    "lastButtonWidth": 746,
+                    "lastButtonHeight": 473.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1184583527,
+            "Parent UUID": 417174774,
+            "Name": "Low_Band",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        -683.5,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        3.3333332538604736,
+                        0.23333333432674408,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 2000,
+                    "buttonHeight": 140,
+                    "lastButtonWidth": 746,
+                    "lastButtonHeight": 473.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": false,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1822328168,
+            "Parent UUID": 417174774,
+            "Name": "Cinematic",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Cinematic.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "Cinematic_3",
+                    "pointer": 828144520,
+                    "type": 4,
+                    "componentTable": 0,
+                    "runGame": true,
+                    "bands": 0,
+                    "IdDialogue": 0,
+                    "IdLine": 0
+                }
+            ]
+        },
+        {
+            "UUID": 81378638,
+            "Parent UUID": 417174774,
+            "Name": "CinematicDialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "CinematicManager",
+                    "pointer": 828141024,
+                    "type": 4,
+                    "componentTable": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1777589784,
+            "Parent UUID": 81378638,
+            "Name": "Dialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        426.46502685546875,
+                        9.6000003814697266
+                    ],
+                    "Scale": [
+                        0.1666666716337204,
+                        0.1666666716337204,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 100,
+                    "buttonHeight": 100,
+                    "lastButtonWidth": 746,
+                    "lastButtonHeight": 473.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 16,
+                    "buttonText": "Rabban ha atacado dos asentamientos más al\noeste de aquí, te está buscando Paul.",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
+                    "fontScale": 0.5,
+                    "textColor.r": 1,
+                    "textColor.g": 1,
+                    "textColor.b": 1,
+                    "TextFile": "-"
+                }
+            ]
+        },
+        {
+            "UUID": 87527391,
+            "Parent UUID": 417174774,
+            "Name": "ExitPoint",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -62.088214874267578,
+                        0,
+                        207.50048828125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417174774,
+            "Name": "Player_3",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "Assets\/Prefabs\/Player_3.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -54.299999237060547,
+                        0,
+                        184.80000305175781
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        -5.5879354476928711e-09,
+                        1.0000013113021851
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1.3999999761581421
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_stilgar_walk__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Death",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_walk__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_idle__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_shootstunner__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Crouch",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouch__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Death",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_die__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CrouchWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouchwalk__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CrouchShoot",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouchshot__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "WEAPONSWORDHIT"
+                        },
+                        {
+                            "1": "PLAYERDEATH"
+                        },
+                        {
+                            "2": "WEAPONSTUNNERSHOT"
+                        },
+                        {
+                            "3": "FOOTSTEPS"
+                        }
+                    ]
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 60,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "Player",
+                    "pointer": 828158352,
+                    "type": 4,
+                    "componentTable": 0,
+                    "hitPoints": 0,
+                    "force": 100,
+                    "paused": false,
+                    "invisible": false,
+                    "dead": false,
+                    "isHidden": false,
+                    "godMode": false,
+                    "stunned": false,
+                    "controled": false
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
                 }
             ]
         },
@@ -2389,7 +3270,7 @@
             "Name": "Area",
             "Active": true,
             "Static": true,
-            "PrefabID": false,
+            "PrefabID": true,
             "Prefab Path": "None",
             "tag": "AbilityRange",
             "layer": "Default",
@@ -2399,9 +3280,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        89.82379150390625,
-                        0.2000029981136322,
-                        -132.77935791015625
+                        89.604888916015625,
+                        0.20000520348548889,
+                        -130.45269775390625
                     ],
                     "Quaternion": [
                         0,
@@ -2425,14 +3306,14 @@
                     "Active": true,
                     "Light Type": 2,
                     "Position": [
-                        -203.54399108886719,
-                        1.2737587690353394,
-                        193.55252075195312
+                        35.304889678955078,
+                        0.2000042051076889,
+                        54.347305297851562
                     ],
                     "Ambient": [
-                        0.93333333730697632,
-                        0.58074069023132324,
-                        0.58074069023132324
+                        1,
+                        1,
+                        1
                     ],
                     "Diffuse": [
                         0.0039215688593685627,
@@ -2452,12 +3333,12 @@
             ]
         },
         {
-            "UUID": 1223679345,
+            "UUID": 1863195749,
             "Parent UUID": 2021177439,
-            "Name": "GetHitParticles_2",
+            "Name": "WalkParticles_3",
             "Active": true,
             "Static": true,
-            "PrefabID": false,
+            "PrefabID": true,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -2468,8 +3349,326 @@
                     "Active": true,
                     "Position": [
                         0,
-                        1.1074999570846558,
+                        0,
                         0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.1365548372268677,
+                        1.1365548372268677,
+                        1.1365548372268677
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        -54.299999237060547,
+                        0,
+                        184.80000305175781
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.18400079011917114,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91666668653488159,
+                                        0.59888887405395508,
+                                        0.18333332240581512,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.98333334922790527,
+                                        0.61731487512588501,
+                                        0.25129631161689758,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.32800081372261047,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                -0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91764706373214722,
+                                        0.60000002384185791,
+                                        0.18431372940540314,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.9843137264251709,
+                                        0.61568629741668701,
+                                        0.25098040699958801,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 917754249,
+            "Parent UUID": 2021177439,
+            "Name": "SlashParticles",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -0.69811022281646729,
+                        1.8857455253601074,
+                        -0.035354375839233398
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        0.55379998683929443,
+                        0.55379998683929443,
+                        0.55379998683929443
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        -54.99810791015625,
+                        1.8857455253601074,
+                        184.7646484375
+                    ],
+                    "MaxDuration": 1.0529999732971191,
+                    "Looping": false,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1000,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.0010000000474974513,
+                            "Emitter: Current Timer": 0.0010000000474974513,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0.059999998658895493,
+                                -0.059999998658895493,
+                                0.15999999642372131
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                -0.029999999329447746
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.69999998807907104,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/white.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.83066362142562866,
+                                        0.83066362142562866,
+                                        0.83066362142562866,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.41418766975402832,
+                                        0.41418766975402832,
+                                        0.41418766975402832,
+                                        1
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1223679345,
+            "Parent UUID": 2021177439,
+            "Name": "GetHitParticles_3",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        1.345757007598877,
+                        0.00046384023153223097
                     ],
                     "Quaternion": [
                         0.70779472589492798,
@@ -2497,9 +3696,9 @@
                         10
                     ],
                     "Offset": [
-                        -43.565784454345703,
-                        2.1812558174133301,
-                        203.86834716796875
+                        -54.299999237060547,
+                        1.345757007598877,
+                        184.80046081542969
                     ],
                     "MaxDuration": 0.39500001072883606,
                     "Looping": false,
@@ -2635,203 +3834,10 @@
         {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
-            "Name": "WalkParticles_2",
+            "Name": "RunParticles_3",
             "Active": true,
             "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -43.565784454345703,
-                        1.0737557411193848,
-                        203.86834716796875
-                    ],
-                    "MaxDuration": 0,
-                    "Looping": true,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 1,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.20000079274177551,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0.0099999997764825821,
-                                0.004999999888241291,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.5,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 1,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.34400081634521484,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                -0.0099999997764825821,
-                                0.004999999888241291,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.5,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91764706373214722,
-                                        0.60000002384185791,
-                                        0.18431372940540314,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.9843137264251709,
-                                        0.61568629741668701,
-                                        0.25098040699958801,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "RunParticles_2",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
+            "PrefabID": true,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -2871,9 +3877,9 @@
                         10
                     ],
                     "Offset": [
-                        -43.698268890380859,
-                        1.0623115301132202,
-                        203.93846130371094
+                        -54.293468475341797,
+                        -0.011444180272519588,
+                        184.65025329589844
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -3021,10 +4027,10 @@
         {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
-            "Name": "FallDeadParticles_2",
+            "Name": "FallDeadParticles_3",
             "Active": true,
             "Static": true,
-            "PrefabID": false,
+            "PrefabID": true,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -3064,9 +4070,9 @@
                         10
                     ],
                     "Offset": [
-                        -42.327991485595703,
-                        1.0284322500228882,
-                        203.38986206054688
+                        -54.513401031494141,
+                        -0.045323487371206284,
+                        186.10977172851562
                     ],
                     "MaxDuration": 0.39500001072883606,
                     "Looping": false,
@@ -3149,578 +4155,6 @@
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "UUID": 1340874673,
-            "Parent UUID": 417174313,
-            "Name": "Directional Light",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -131.01097106933594,
-                        27.612594604492188,
-                        -106.40683746337891
-                    ],
-                    "Quaternion": [
-                        0.67389911413192749,
-                        -0.59794372320175171,
-                        0.41976538300514221,
-                        -0.11009232699871063
-                    ],
-                    "RotationEditor": [
-                        2.6255867481231689,
-                        0.77178704738616943,
-                        1.6650934219360352
-                    ],
-                    "Scale": [
-                        1.0000151395797729,
-                        1.0000368356704712,
-                        1.0000402927398682
-                    ]
-                },
-                {
-                    "Type": 8,
-                    "Active": true,
-                    "Light Type": 1,
-                    "Direction": [
-                        0.67802053689956665,
-                        -0.60160064697265625,
-                        0.42233258485794067
-                    ],
-                    "Ambient": [
-                        1,
-                        0,
-                        0
-                    ],
-                    "Diffuse": [
-                        1,
-                        0.77788156270980835,
-                        0.48333334922790527
-                    ],
-                    "Specular": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Intensity": 4,
-                    "Shadows": true
-                }
-            ]
-        },
-        {
-            "UUID": 2128337085,
-            "Parent UUID": 417174313,
-            "Name": "cameraController",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -65.056503295898438,
-                        20,
-                        182.18096923828125
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.34928658604621887,
-                        0,
-                        0.93701595067977905
-                    ],
-                    "RotationEditor": [
-                        -3.1415927410125732,
-                        0.14101520180702209,
-                        -3.1415927410125732
-                    ],
-                    "Scale": [
-                        1.0000373125076294,
-                        0.9999803900718689,
-                        1.0000373125076294
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 360238400,
-            "Parent UUID": 2128337085,
-            "Name": "Camera",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        3.0517578125e-05,
-                        72.758468627929688,
-                        -66.144187927246094
-                    ],
-                    "Quaternion": [
-                        0.34202015399932861,
-                        0,
-                        0,
-                        0.93969273567199707
-                    ],
-                    "RotationEditor": [
-                        0.78539824485778809,
-                        0,
-                        -0
-                    ],
-                    "Scale": [
-                        1.414210319519043,
-                        1.0000002384185791,
-                        1.0000004768371582
-                    ]
-                },
-                {
-                    "Near Plane": 1,
-                    "Far Plane": 155,
-                    "Vertical Fov": 0.43303355574607849,
-                    "Horizontal Fov": 0.78539818525314331,
-                    "Camera Pos": [
-                        -108.3543701171875,
-                        92.757034301757812,
-                        132.17422485351562
-                    ],
-                    "Type": 3,
-                    "Zoom": -13,
-                    "Zoom Min": -20,
-                    "Zoom Max": 30,
-                    "Zoom Speed": 1,
-                    "Lock": false,
-                    "Free Movement": true,
-                    "Default Target Pos": [
-                        -65.056503295898438,
-                        20,
-                        182.18096923828125
-                    ],
-                    "Movement Speed": 0.25,
-                    "Rotation Speed": 0.80000001192092896,
-                    "Radius": 20,
-                    "Horizontal Angle": 171.92042541503906,
-                    "Shake Strength": 0.60000002384185791,
-                    "Shake Duration": 1,
-                    "Shake Smooth": 0,
-                    "Limits": [
-                        -90,
-                        -50,
-                        60,
-                        195
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 1184583527,
-            "Parent UUID": 417174313,
-            "Name": "Low_Band",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        0,
-                        -376.5,
-                        -10.399999618530273
-                    ],
-                    "Scale": [
-                        3.3333332538604736,
-                        0.23333333432674408,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 2000,
-                    "buttonHeight": 140,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 718.5,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": false,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
-                }
-            ]
-        },
-        {
-            "UUID": 47152571,
-            "Parent UUID": 417174313,
-            "Name": "High_Band",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        0,
-                        376.5,
-                        -10.399999618530273
-                    ],
-                    "Scale": [
-                        3.3333332538604736,
-                        0.23333333432674408,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 2000,
-                    "buttonHeight": 140,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 718.5,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1664051899,
-            "Parent UUID": 417174313,
-            "Name": "Floor",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -78.013542175292969,
-                        -3.0517578125e-05,
-                        160.80180358886719
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/Levels\/Level1\/Textures\/prop_plane_desert_albedo.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Levels\/Level1\/lvl1__Floor_01.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 5,
-                    "Normal": [
-                        0,
-                        1,
-                        0
-                    ],
-                    "Constant": 1,
-                    "Gravity": false,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "fActivation": false,
-                    "Mass": 0,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1822328168,
-            "Parent UUID": 417174313,
-            "Name": "Cinematic",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Cinematic.rgprefab",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "Cinematic_3",
-                    "pointer": 648344632,
-                    "type": 4,
-                    "componentTable": 0,
-                    "runGame": true,
-                    "bands": 0,
-                    "IdDialogue": 0,
-                    "IdLine": 0
-                }
-            ]
-        },
-        {
-            "UUID": 81378638,
-            "Parent UUID": 417174313,
-            "Name": "CinematicDialogue",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "CinematicManager",
-                    "pointer": 648347672,
-                    "type": 4,
-                    "componentTable": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1777589784,
-            "Parent UUID": 81378638,
-            "Name": "Dialogue",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        0,
-                        244.46501159667969,
-                        9.6000003814697266
-                    ],
-                    "Scale": [
-                        0.1666666716337204,
-                        0.1666666716337204,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 100,
-                    "buttonHeight": 100,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 718.5,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 16,
-                    "buttonText": "Rabban ha atacado dos asentamientos más al\noeste de aquí, te está buscando Paul.",
-                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
-                    "fontScale": 0.5,
-                    "textColor.r": 1,
-                    "textColor.g": 1,
-                    "textColor.b": 1,
-                    "TextFile": "-"
                 }
             ]
         }
