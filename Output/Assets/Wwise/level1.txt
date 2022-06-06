@@ -40,6 +40,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	648607005	VOICE_SP_4_4			\Default Work Unit\Voces\4\ESP\VOICE_SP_4_4	
 	648607006	VOICE_SP_4_7			\Default Work Unit\Voces\4\ESP\VOICE_SP_4_7	
 	648607007	VOICE_SP_4_6			\Default Work Unit\Voces\4\ESP\VOICE_SP_4_6	
+	648754160	VOICE_SP_5_0			\Default Work Unit\Voces\5\ESP\VOICE_SP_5_0	
+	648754161	VOICE_SP_5_1			\Default Work Unit\Voces\5\ESP\VOICE_SP_5_1	
+	648754162	VOICE_SP_5_2			\Default Work Unit\Voces\5\ESP\VOICE_SP_5_2	
+	648754163	VOICE_SP_5_3			\Default Work Unit\Voces\5\ESP\VOICE_SP_5_3	
+	648754164	VOICE_SP_5_4			\Default Work Unit\Voces\5\ESP\VOICE_SP_5_4	
+	649048282	VOICE_SP_7_4			\Default Work Unit\Voces\7\ESP\VOICE_SP_7_4	
+	649048284	VOICE_SP_7_2			\Default Work Unit\Voces\7\ESP\VOICE_SP_7_2	
+	649048285	VOICE_SP_7_3			\Default Work Unit\Voces\7\ESP\VOICE_SP_7_3	
+	649048286	VOICE_SP_7_0			\Default Work Unit\Voces\7\ESP\VOICE_SP_7_0	
+	649048287	VOICE_SP_7_1			\Default Work Unit\Voces\7\ESP\VOICE_SP_7_1	
+	649195444	VOICE_SP_8_1			\Default Work Unit\Voces\8\ESP\VOICE_SP_8_1	
+	649195445	VOICE_SP_8_0			\Default Work Unit\Voces\8\ESP\VOICE_SP_8_0	
 	1645258888	VOICE_ENG_0_0			\Default Work Unit\Voces\0\ENG\VOICE_ENG_0_0	
 	1645258889	VOICE_ENG_0_1			\Default Work Unit\Voces\0\ENG\VOICE_ENG_0_1	
 	1645258890	VOICE_ENG_0_2			\Default Work Unit\Voces\0\ENG\VOICE_ENG_0_2	
@@ -63,6 +75,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	1722124388	VOICE_SP_3_6			\Default Work Unit\Voces\3\ESP\VOICE_SP_3_6	
 	1722124390	VOICE_SP_3_4			\Default Work Unit\Voces\3\ESP\VOICE_SP_3_4	
 	1722124391	VOICE_SP_3_5			\Default Work Unit\Voces\3\ESP\VOICE_SP_3_5	
+	1722668835	VOICE_SP_6_4			\Default Work Unit\Voces\6\ESP\VOICE_SP_6_4	
+	1722668836	VOICE_SP_6_3			\Default Work Unit\Voces\6\ESP\VOICE_SP_6_3	
+	1722668837	VOICE_SP_6_2			\Default Work Unit\Voces\6\ESP\VOICE_SP_6_2	
+	1722668838	VOICE_SP_6_1			\Default Work Unit\Voces\6\ESP\VOICE_SP_6_1	
+	1722668839	VOICE_SP_6_0			\Default Work Unit\Voces\6\ESP\VOICE_SP_6_0	
 	4093236464	VOICE_SP_4_18			\Default Work Unit\Voces\4\ESP\VOICE_SP_4_18	
 	4093236465	VOICE_SP_4_19			\Default Work Unit\Voces\4\ESP\VOICE_SP_4_19	
 	4093236472	VOICE_SP_4_10			\Default Work Unit\Voces\4\ESP\VOICE_SP_4_10	
@@ -78,30 +95,42 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	33319236	ladyjess_3	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\ladyjess_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\ladyjess_3		608160
 	72307201	chani_voice_esp_8	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_03\chani_voice_esp_8		345184
 	79058827	stilgar_voice_esp_7	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\stilgar_voice_esp_7		743496
+	100694367	paul_voice_esp_18	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_18_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_06\paul_voice_esp_18		329612
 	128469227	chani_voice_esp_13	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\chani_voice_esp_13		290692
 	152112363	ladyjess_4	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\ladyjess_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\ladyjess_4		359628
+	154357249	rabban_voice_esp_20	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_20_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_07\rabban_voice_esp_20		394316
 	156508275	rabban_voice_esp_16	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\rabban_voice_esp_16		1058908
 	163255263	paul_voice_esp_10	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\paul_voice_esp_10		122120
 	170357621	ladyjess_1	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\ladyjess_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\ladyjess_1		530692
 	172715751	chani_voice_esp_7	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\chani_voice_esp_7		268488
 	203712219	stilgar_voice_esp_11	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\stilgar_voice_esp_11		1158708
+	216288636	stilgar_voice_esp_13	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_05\stilgar_voice_esp_13		1014432
+	235892322	rabban_voice_esp_22	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_22_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_07\rabban_voice_esp_22		732244
+	281409739	paul_voice_esp_17	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_17_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_05\paul_voice_esp_17		408392
 	301672743	rabban_voice_esp_14	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\rabban_voice_esp_14		889944
 	312238013	paul_voice_esp_12	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_03\paul_voice_esp_12		239732
 	327033297	rabban_voice_esp_1	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_0\rabban_voice_esp_1		976304
+	344476280	stilgar_voice_esp_16	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_06\stilgar_voice_esp_16		553504
 	361459342	chani_voice_esp_4	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\chani_voice_esp_4		464260
 	369335686	ladyjess_2	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\ladyjess_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\ladyjess_2		185656
 	371012977	chani_voice_esp_11	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_03\chani_voice_esp_11		575260
 	371887022	paul_esp_5	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_esp_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\paul_esp_5		265252
+	371915655	stilgar_voice_esp_15	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_06\stilgar_voice_esp_15		520464
 	385825909	paul_esp_6	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_esp_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\paul_esp_6		159848
 	392309853	stilgar_voice_esp_3	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\stilgar_voice_esp_3		1345028
 	417663134	stilgar_voice_esp_6	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\stilgar_voice_esp_6		454384
 	419314560	paul_esp_2	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_esp_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\paul_esp_2		905488
 	432538367	chani_voice_esp_12	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\chani_voice_esp_12		639844
 	438170740	rabban_voice_esp_3	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_0\rabban_voice_esp_3		1509484
+	447777754	stilgar_voice_esp_12	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_05\stilgar_voice_esp_12		216484
+	457581597	chani_voice_esp_15	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_06\chani_voice_esp_15		252344
 	479694859	rabban_voice_esp_12	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_12_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\rabban_voice_esp_12		1254156
+	480586299	rabban_voice_esp_23	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_23_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_08\rabban_voice_esp_23		1276684
+	488577099	ladyjess_5	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\ladyjess_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_07\ladyjess_5		146116
 	523345356	stilgar_voice_esp_5	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\stilgar_voice_esp_5		855836
 	548574525	stilgar_voice_esp_2	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\stilgar_voice_esp_2		498988
 	550713262	stilgar_voice_esp_4	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\stilgar_voice_esp_4		996260
+	563925229	stilgar_voice_esp_14	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_06\stilgar_voice_esp_14		507248
 	566411707	paul_esp_9	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_esp_9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\paul_esp_9		308528
 	573359933	rabban_voice_esp_9	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\rabban_voice_esp_9		1629636
 	580223267	chani_voice_esp_3	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\chani_voice_esp_3		728648
@@ -114,18 +143,22 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	733301192	chani_voice_esp_6	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\chani_voice_esp_6		863864
 	759638072	rabban_voice_esp_4	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_0\rabban_voice_esp_4		822356
 	781278305	paul_voice_esp_13	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_13_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\paul_voice_esp_13		168724
+	792244083	paul_voice_esp_16	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_16_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_05\paul_voice_esp_16		456104
 	801524936	rabban_voice_esp_8	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_0\rabban_voice_esp_8		728492
 	812545017	rabban_voice_esp_17	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_17_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\rabban_voice_esp_17		886188
 	815502061	paul_esp_4	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_esp_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\paul_esp_4		670252
 	826347539	rabban_voice_esp_11	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_02\rabban_voice_esp_11		1415612
 	827067538	stilgar_voice_esp_10	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\stilgar_voice_esp_10		429076
+	829725503	chani_voice_esp_14	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_14_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_05\chani_voice_esp_14		660028
 	834301267	chani_voice_esp_2	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\chani_voice_esp_2		623696
 	835454591	rabban_voice_esp_2	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_0\rabban_voice_esp_2		1092704
 	839588528	rabban_voice_esp_15	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\rabban_voice_esp_15		1295460
 	860760566	paul_esp_1	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_esp_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\paul_esp_1		1029756
 	880553832	chani_voice_esp_10	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_03\chani_voice_esp_10		565168
+	899233905	paul_voice_esp_19	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_19_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_07\paul_voice_esp_19		377324
 	906852776	chani_voice_esp_5	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\chani_voice_esp_5		504624
 	917982312	rabban_voice_esp_7	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_0\rabban_voice_esp_7		995080
+	925855081	rabban_voice_esp_21	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_21_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_07\rabban_voice_esp_21		728492
 	926606592	chani_voice_esp_1	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_01\chani_voice_esp_1		855792
 	941281497	paul_voice_esp_15	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\paul_voice_esp_15		286336
 	954472628	rabban_voice_esp_19	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_19_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\rabban_voice_esp_19		916224
@@ -137,4 +170,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1008759339	rabban_voice_esp_6	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\rabban_voice_esp_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_0\rabban_voice_esp_6		987568
 	1037630312	chani_voice_esp_9	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_voice_esp_9_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_03\chani_voice_esp_9		575260
 	1038631083	stilgar_voice_esp_8	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\stilgar_voice_esp_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_04\stilgar_voice_esp_8		946696
+	1048022178	paul_voice_esp_20	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\paul_voice_esp_20_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Voices\ESP\Dialogue_08\paul_voice_esp_20		388704
 

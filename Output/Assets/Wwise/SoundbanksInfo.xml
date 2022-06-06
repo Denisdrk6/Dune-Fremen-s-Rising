@@ -972,7 +972,7 @@
 				<AuxBus Id="1632408463" Name="ReverbZone" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\ReverbZone"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2678230382" Language="SFX" Hash="4180388915">
+		<SoundBank Id="2678230382" Language="SFX" Hash="2515646747">
 			<ObjectPath>\SoundBanks\Default Work Unit\level1</ObjectPath>
 			<ShortName>level1</ShortName>
 			<Path>level1.bnk</Path>
@@ -1524,6 +1524,142 @@
 						<File Id="812545017" Language="SFX">
 							<ShortName>rabban_voice_esp_17.wav</ShortName>
 							<Path>SFX\rabban_voice_esp_17_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="648754160" Name="VOICE_SP_5_0" ObjectPath="\Events\Default Work Unit\Voces\5\ESP\VOICE_SP_5_0">
+					<IncludedMemoryFiles>
+						<File Id="447777754" Language="SFX">
+							<ShortName>stilgar_voice_esp_12.wav</ShortName>
+							<Path>SFX\stilgar_voice_esp_12_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="648754161" Name="VOICE_SP_5_1" ObjectPath="\Events\Default Work Unit\Voces\5\ESP\VOICE_SP_5_1">
+					<IncludedMemoryFiles>
+						<File Id="792244083" Language="SFX">
+							<ShortName>paul_voice_esp_16.wav</ShortName>
+							<Path>SFX\paul_voice_esp_16_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="648754162" Name="VOICE_SP_5_2" ObjectPath="\Events\Default Work Unit\Voces\5\ESP\VOICE_SP_5_2">
+					<IncludedMemoryFiles>
+						<File Id="216288636" Language="SFX">
+							<ShortName>stilgar_voice_esp_13.wav</ShortName>
+							<Path>SFX\stilgar_voice_esp_13_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="648754163" Name="VOICE_SP_5_3" ObjectPath="\Events\Default Work Unit\Voces\5\ESP\VOICE_SP_5_3">
+					<IncludedMemoryFiles>
+						<File Id="281409739" Language="SFX">
+							<ShortName>paul_voice_esp_17.wav</ShortName>
+							<Path>SFX\paul_voice_esp_17_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="648754164" Name="VOICE_SP_5_4" ObjectPath="\Events\Default Work Unit\Voces\5\ESP\VOICE_SP_5_4">
+					<IncludedMemoryFiles>
+						<File Id="829725503" Language="SFX">
+							<ShortName>chani_voice_esp_14.wav</ShortName>
+							<Path>SFX\chani_voice_esp_14_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1722668839" Name="VOICE_SP_6_0" ObjectPath="\Events\Default Work Unit\Voces\6\ESP\VOICE_SP_6_0">
+					<IncludedMemoryFiles>
+						<File Id="563925229" Language="SFX">
+							<ShortName>stilgar_voice_esp_14.wav</ShortName>
+							<Path>SFX\stilgar_voice_esp_14_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1722668838" Name="VOICE_SP_6_1" ObjectPath="\Events\Default Work Unit\Voces\6\ESP\VOICE_SP_6_1">
+					<IncludedMemoryFiles>
+						<File Id="371915655" Language="SFX">
+							<ShortName>stilgar_voice_esp_15.wav</ShortName>
+							<Path>SFX\stilgar_voice_esp_15_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1722668837" Name="VOICE_SP_6_2" ObjectPath="\Events\Default Work Unit\Voces\6\ESP\VOICE_SP_6_2">
+					<IncludedMemoryFiles>
+						<File Id="344476280" Language="SFX">
+							<ShortName>stilgar_voice_esp_16.wav</ShortName>
+							<Path>SFX\stilgar_voice_esp_16_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1722668836" Name="VOICE_SP_6_3" ObjectPath="\Events\Default Work Unit\Voces\6\ESP\VOICE_SP_6_3">
+					<IncludedMemoryFiles>
+						<File Id="457581597" Language="SFX">
+							<ShortName>chani_voice_esp_15.wav</ShortName>
+							<Path>SFX\chani_voice_esp_15_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1722668835" Name="VOICE_SP_6_4" ObjectPath="\Events\Default Work Unit\Voces\6\ESP\VOICE_SP_6_4">
+					<IncludedMemoryFiles>
+						<File Id="100694367" Language="SFX">
+							<ShortName>paul_voice_esp_18.wav</ShortName>
+							<Path>SFX\paul_voice_esp_18_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="649048286" Name="VOICE_SP_7_0" ObjectPath="\Events\Default Work Unit\Voces\7\ESP\VOICE_SP_7_0">
+					<IncludedMemoryFiles>
+						<File Id="488577099" Language="SFX">
+							<ShortName>ladyjess_5.wav</ShortName>
+							<Path>SFX\ladyjess_5_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="649048287" Name="VOICE_SP_7_1" ObjectPath="\Events\Default Work Unit\Voces\7\ESP\VOICE_SP_7_1">
+					<IncludedMemoryFiles>
+						<File Id="154357249" Language="SFX">
+							<ShortName>rabban_voice_esp_20.wav</ShortName>
+							<Path>SFX\rabban_voice_esp_20_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="649048284" Name="VOICE_SP_7_2" ObjectPath="\Events\Default Work Unit\Voces\7\ESP\VOICE_SP_7_2">
+					<IncludedMemoryFiles>
+						<File Id="925855081" Language="SFX">
+							<ShortName>rabban_voice_esp_21.wav</ShortName>
+							<Path>SFX\rabban_voice_esp_21_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="649048285" Name="VOICE_SP_7_3" ObjectPath="\Events\Default Work Unit\Voces\7\ESP\VOICE_SP_7_3">
+					<IncludedMemoryFiles>
+						<File Id="899233905" Language="SFX">
+							<ShortName>paul_voice_esp_19.wav</ShortName>
+							<Path>SFX\paul_voice_esp_19_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="649048282" Name="VOICE_SP_7_4" ObjectPath="\Events\Default Work Unit\Voces\7\ESP\VOICE_SP_7_4">
+					<IncludedMemoryFiles>
+						<File Id="235892322" Language="SFX">
+							<ShortName>rabban_voice_esp_22.wav</ShortName>
+							<Path>SFX\rabban_voice_esp_22_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="649195445" Name="VOICE_SP_8_0" ObjectPath="\Events\Default Work Unit\Voces\8\ESP\VOICE_SP_8_0">
+					<IncludedMemoryFiles>
+						<File Id="480586299" Language="SFX">
+							<ShortName>rabban_voice_esp_23.wav</ShortName>
+							<Path>SFX\rabban_voice_esp_23_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="649195444" Name="VOICE_SP_8_1" ObjectPath="\Events\Default Work Unit\Voces\8\ESP\VOICE_SP_8_1">
+					<IncludedMemoryFiles>
+						<File Id="1048022178" Language="SFX">
+							<ShortName>paul_voice_esp_20.wav</ShortName>
+							<Path>SFX\paul_voice_esp_20_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
