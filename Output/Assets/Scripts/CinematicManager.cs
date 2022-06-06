@@ -10,7 +10,7 @@ public class CinematicManager : RagnarComponent
     private int indexLine;
 
     private bool endDialogue;
-    //private GameObject SceneAudio;
+    private AudioSource SceneAudio;
 
     enum State
     {
@@ -29,7 +29,7 @@ public class CinematicManager : RagnarComponent
 	{
         indexLine = 0;
         text = GameObject.Find("Dialogue");
-        //SceneAudio = GameObject.Find("AudioLevel");
+        SceneAudio = GameObject.Find("Audio").GetComponent<AudioSource>();
 
         state = 0;
         
@@ -99,6 +99,14 @@ public class CinematicManager : RagnarComponent
 
     void UpdateDialogue()
     {
+        //Stop Previous Dialogue
+        if (indexLine > 0)
+        {
+            int lastIndex = indexLine - 1;
+            string lastVoicePath = "VOICE_" + lenguage + "_" + IdDialogue.ToString() + "_" + lastIndex.ToString();
+            SceneAudio.StopCurrentClip(lastVoicePath);
+        }
+
         //Text
         text.GetComponent<UIText>().text = Dialogue.GetDialogueLine().ToString();
         Debug.Log(text.GetComponent<UIText>().text);
@@ -111,16 +119,16 @@ public class CinematicManager : RagnarComponent
                 lenguage = "SP";
                 break;
             case 1:
-                lenguage = "ING";
+                lenguage = "ENG";
                 break;
             default:
                 break;
         }
 
         // VOICE
-        String voicePath = "VOICE_" + lenguage + "_" + IdDialogue.ToString() + indexLine.ToString();
-        //Debug.Log(voicePath);
-        //SceneAudio.GetComponent<AudioSource>().PlayClip(voicePath);
+        String voicePath = "VOICE_" + lenguage + "_" + IdDialogue.ToString() + "_" + indexLine.ToString();
+        Debug.Log(voicePath);
+        SceneAudio.PlayClip2(voicePath);
 
         // For animations
         cinematic.GetComponent<Cinematic_1>().SetLine(indexLine);

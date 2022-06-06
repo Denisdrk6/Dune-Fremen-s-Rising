@@ -61,10 +61,15 @@ State Group	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Music	
 
 State	ID	Name	State Group			Notes
-	706284710	Level1_Base	Music			
+	188277187	Boss_Stage4	Music			
+	188277188	Boss_Stage3	Music			
+	188277189	Boss_Stage2	Music			
+	188277190	Boss_Stage1	Music			
+	710332713	Level2_Music	Music			
 	748895195	None	Music			
+	1522595433	Credits_Music	Music			
+	2026953958	Level1_Music	Music			
 	3604647259	MainMenu	Music			
-	3739419631	Level1_Battle	Music			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2415836739	Volume			\Default Work Unit\Volume	
@@ -72,7 +77,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	15534167	char_stilgar_sandsteps	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\char_stilgar_sandsteps_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stilgar_Char\char_stilgar_sandsteps		128672
 	16442463	char_chani_death	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\char_chani_death_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chani_Char\char_chani_death		170048
-	38158366	mainmenu_music	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\mainmenu_music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MainMenu\mainmenu_music\mainmenu_music		17287344
+	38158366	mainmenu_music	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\mainmenu_music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Main_Menu\mainmenu_music\mainmenu_music		17287344
 	77273793	consumable_smokegranade_activate	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\consumable_smokegranade_activate_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Consumable\consumable_smokegranade_activate		49928
 	88308321	enemy_gunshot	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\enemy_gunshot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyBasic\enemy_gunshot		263524
 	98133405	consumable_smokegranade_explosion	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\consumable_smokegranade_explosion_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Consumable\consumable_smokegranade_explosion		995048
@@ -93,7 +98,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	340100191	enemy_tank_walkrock	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\enemy_tank_walkrock_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyTank\enemy_tank_walkrock		103768
 	370101064	chani_talktoenemy	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\chani_talktoenemy_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chani_Char\chani_talktoenemy		41658
 	376459162	consumable_bandage	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\consumable_bandage_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Consumable\consumable_bandage		336064
-	470470188	level1_music	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\level1_music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Level1_Base\level1_music\level1_music		4618540
+	470470188	level1_music	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\level1_music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Level1_Music\level1_music\level1_music		4618540
 	532392836	char_stilgar_walk_city	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\char_stilgar_walk_city_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stilgar_Char\char_stilgar_walk_city		91652
 	538431545	enemy_undistractable_scream	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\enemy_undistractable_scream_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyTank\enemy_undistractable_scream		54480
 	555033912	char_stilgar_walk_rock	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\char_stilgar_walk_rock_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Stilgar_Char\char_stilgar_walk_rock		108860
@@ -102,7 +107,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	593933077	enemy_boss_hitground	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\enemy_boss_hitground_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyBoss\enemy_boss_hitground		131284
 	615312907	enemy_boss_throwobject	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\enemy_boss_throwobject_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyBoss\enemy_boss_throwobject		77364
 	639073334	enemy_basic_walkrock	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\enemy_basic_walkrock_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyBasic\enemy_basic_walkrock		143480
-	710741448	level1_battle_music	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\level1_battle_music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Level1_Battle\level1_battle_music\level1_battle_music		3079048
+	710741448	level1_battle_music	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\level1_battle_music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Level2_Music\level1_battle_music\level1_battle_music		3079048
 	714965375	char_general_bullethit	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\char_general_bullethit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General_Char\char_general_bullethit		228128
 	719599117	char_general_hideonsand	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\char_general_hideonsand_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\General_Char\char_general_hideonsand		155712
 	738145204	enemy_drone_getdamage	D:\Descargas\RagnarEngineSound\.cache\Windows\SFX\enemy_drone_getdamage_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDrone\enemy_drone_getdamage		269076

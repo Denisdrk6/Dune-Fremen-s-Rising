@@ -11,9 +11,9 @@ public class Cinematic_4 : RagnarComponent
     CinematicManager dialogues;
 
     GameObject stilgar;
-    GameObject jessica;
+    //GameObject jessica;
     Animation stilgarAnimation;
-    Animation jessicaAnimation;
+    //Animation jessicaAnimation;
 
     GameObject rabann;
     GameObject enemy1;
@@ -30,7 +30,7 @@ public class Cinematic_4 : RagnarComponent
     GameObject hostageFemale05;
     GameObject hostageFemale06;
     GameObject hostageFemale07;
-    Animation hostageDiscussionAnimation;
+    //Animation hostageDiscussionAnimation;
     Animation hostageFemale01Animation;
     Animation hostageFemale02Animation;
     Animation hostageFemale03Animation;

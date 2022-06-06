@@ -11,9 +11,9 @@ public class Cinematic_2 : RagnarComponent
     CinematicManager dialogues;
 
     GameObject paul;
-    Animation paulAnimation;
+    //Animation paulAnimation;
     GameObject chani;
-    Animation chaniAnimation;
+    //Animation chaniAnimation;
 
     NavAgent chaniNavAgent;
     ParticleSystem walkPartSys;
