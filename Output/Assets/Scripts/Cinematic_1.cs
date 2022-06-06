@@ -10,6 +10,16 @@ public class Cinematic_1 : RagnarComponent
 
     CinematicManager dialogues;
 
+
+    GameObject boss;
+    Animation bossA;
+    GameObject  Enemy1;
+    Animation   EnemyA1;
+    GameObject  Enemy2;
+    Animation   EnemyA2;
+    GameObject  Enemy3;
+    Animation   EnemyA3;
+
     public int IdLine = 0;
     enum CinematicState
     {
@@ -27,12 +37,20 @@ public class Cinematic_1 : RagnarComponent
         bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
-        // Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
-        GameObject characterPaul = GameObject.Find("Player");
-        GameObject characterChani = GameObject.Find("Player_2");
+        boss = GameObject.Find("Boss");
+        //paulAnimation.PlayAnimation("Idle");
+        Enemy1 = GameObject.Find("BEnemy1");
+        Enemy2 = GameObject.Find("BEnemy2");
+        Enemy3 = GameObject.Find("BEnemy3");
+        bossA   = boss.GetComponent<Animation>();
+        EnemyA1 = Enemy1.GetComponent<Animation>();
+        EnemyA2 = Enemy2.GetComponent<Animation>();
+        EnemyA3 = Enemy3.GetComponent<Animation>();
 
-        characterPaul.GetComponent<Animation>().PlayAnimation("Talk");
-        characterChani.GetComponent<Animation>().PlayAnimation("Talk");
+        bossA.PlayAnimation("Talk");
+        EnemyA1.PlayAnimation("Talk");
+        EnemyA2.PlayAnimation("Talk");
+        EnemyA3.PlayAnimation("Talk");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
