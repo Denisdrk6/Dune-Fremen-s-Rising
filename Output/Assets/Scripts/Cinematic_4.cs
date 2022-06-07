@@ -6,40 +6,13 @@ public class Cinematic_4 : RagnarComponent
     public bool runGame = true;
     public GameObject[] bands;
 
-    public int IdDialogue = 6;
+    public int IdDialogue = 4;
+    public int IdLine = 0;
 
     CinematicManager dialogues;
 
-    GameObject stilgar;
-    //GameObject jessica;
-    Animation stilgarAnimation;
-    //Animation jessicaAnimation;
+    GameObject audio;
 
-    GameObject rabann;
-    GameObject enemy1;
-    GameObject enemy2;
-    Animation rabannAnimation;
-    Animation enemy1Animation;
-    Animation enemy2Animation;
-    
-    GameObject hostageDiscussion;
-    GameObject hostageFemale01;
-    GameObject hostageFemale02;
-    GameObject hostageFemale03;
-    GameObject hostageFemale04;
-    GameObject hostageFemale05;
-    GameObject hostageFemale06;
-    GameObject hostageFemale07;
-    //Animation hostageDiscussionAnimation;
-    Animation hostageFemale01Animation;
-    Animation hostageFemale02Animation;
-    Animation hostageFemale03Animation;
-    Animation hostageFemale04Animation;
-    Animation hostageFemale05Animation;
-    Animation hostageFemale06Animation;
-    Animation hostageFemale07Animation;
-
-    public int IdLine = 0;
     enum CinematicState
     {
         FIRST, TRANSITION, ANIMATIONS
@@ -56,50 +29,23 @@ public class Cinematic_4 : RagnarComponent
         bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
-        // Find all the necessary GameObjects
-        stilgar = GameObject.Find("Stilgar");
-        //jessica = GameObject.Find("LadyJessica");
+        audio = GameObject.Find("Audio");
 
-        rabann = GameObject.Find("Rabann");
-        enemy1 = GameObject.Find("Basic Enemy 1");
-        enemy2 = GameObject.Find("Basic Enemy 2");
+        GameObject.Find("Stilgar").GetComponent<Animation>().PlayAnimation("Idle");
+        //GameObject.Find("LadyJessica").GetComponent<Animation>().PlayAnimation("Idle");
 
-        hostageDiscussion = GameObject.Find("Hostage M 1"); 
-        hostageFemale01 = GameObject.Find("Hostage F 1");
-        hostageFemale02 = GameObject.Find("Hostage F 2");
-        hostageFemale03 = GameObject.Find("Hostage F 3");
-        hostageFemale04 = GameObject.Find("Hostage F 4");
-        hostageFemale05 = GameObject.Find("Hostage F 5");
-        hostageFemale06 = GameObject.Find("Hostage F 6");
-        hostageFemale07 = GameObject.Find("Hostage F 7");
+        GameObject.Find("Rabann").GetComponent<Animation>().PlayAnimation("WalkAngry");
+        GameObject.Find("Basic Enemy 1").GetComponent<Animation>().PlayAnimation("Idle");
+        GameObject.Find("Basic Enemy 2").GetComponent<Animation>().PlayAnimation("Idle");
 
-        // Set and play default animations for all the GameObjects
-        stilgarAnimation = stilgar.GetComponent<Animation>();
-        stilgarAnimation.PlayAnimation("Idle");
-        //jessicaAnimation = jessica.GetComponent<Animation>();
-        //chaniAnimation.PlayAnimation("Idle");
-
-        rabannAnimation = rabann.GetComponent<Animation>();
-        rabannAnimation.PlayAnimation("WalkAngry");
-        enemy1Animation = enemy1.GetComponent<Animation>();
-        enemy1Animation.PlayAnimation("Idle");
-        enemy2Animation = enemy2.GetComponent<Animation>();
-        enemy2Animation.PlayAnimation("Idle");
-
-        hostageFemale01Animation = hostageFemale01.GetComponent<Animation>();
-        hostageFemale01Animation.PlayAnimation("Idle Sad");
-        hostageFemale02Animation = hostageFemale02.GetComponent<Animation>();
-        hostageFemale02Animation.PlayAnimation("Idle Sad");
-        hostageFemale03Animation = hostageFemale03.GetComponent<Animation>();
-        hostageFemale03Animation.PlayAnimation("Idle Sad");
-        hostageFemale04Animation = hostageFemale04.GetComponent<Animation>();
-        hostageFemale04Animation.PlayAnimation("Idle Sad");
-        hostageFemale05Animation = hostageFemale05.GetComponent<Animation>();
-        hostageFemale05Animation.PlayAnimation("Idle Sad");
-        hostageFemale06Animation = hostageFemale06.GetComponent<Animation>();
-        hostageFemale06Animation.PlayAnimation("Idle Sad");
-        hostageFemale07Animation = hostageFemale07.GetComponent<Animation>();
-        hostageFemale07Animation.PlayAnimation("Idle Sad");
+        GameObject.Find("Hostage M 1").GetComponent<Animation>().PlayAnimation("Idle");
+        GameObject.Find("Hostage F 1").GetComponent<Animation>().PlayAnimation("IdleSad");
+        GameObject.Find("Hostage F 2").GetComponent<Animation>().PlayAnimation("IdleSad");
+        GameObject.Find("Hostage F 3").GetComponent<Animation>().PlayAnimation("IdleSad");
+        GameObject.Find("Hostage F 4").GetComponent<Animation>().PlayAnimation("IdleSad");
+        GameObject.Find("Hostage F 5").GetComponent<Animation>().PlayAnimation("IdleSad");
+        GameObject.Find("Hostage F 6").GetComponent<Animation>().PlayAnimation("IdleSad");
+        GameObject.Find("Hostage F 7").GetComponent<Animation>().PlayAnimation("IdleSad");             
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
