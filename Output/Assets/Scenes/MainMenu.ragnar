@@ -158,7 +158,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 0.94384151697158813,
+                    "Vertical Fov": 0.97362363338470459,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -1.6946995258331299,
@@ -225,8 +225,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -249,7 +249,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -259,7 +261,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "mainMenuBackScreen",
-                    "pointer": 442540656,
+                    "pointer": 503559264,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -341,7 +343,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -625.5,
+                        -632.5,
                         -98.5,
                         36.099998474121094
                     ],
@@ -357,8 +359,8 @@
                     ],
                     "buttonWidth": 323,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -381,7 +383,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -402,7 +406,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -423,7 +429,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -444,7 +452,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -476,7 +486,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -518,
+                        -525,
                         27,
                         36.099998474121094
                     ],
@@ -492,8 +502,8 @@
                     ],
                     "buttonWidth": 345.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -516,7 +526,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -537,7 +549,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -558,7 +572,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -579,7 +595,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -611,7 +629,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -666.5,
+                        -673.5,
                         -157.5,
                         36.099998474121094
                     ],
@@ -627,8 +645,8 @@
                     ],
                     "buttonWidth": 302.5,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -651,7 +669,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -672,7 +692,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -693,7 +715,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -714,7 +738,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -746,7 +772,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -566,
+                        -573,
                         -36.5,
                         36.099998474121094
                     ],
@@ -762,8 +788,8 @@
                     ],
                     "buttonWidth": 316,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -786,7 +812,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -807,7 +835,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -828,7 +858,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -849,7 +881,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -881,7 +915,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -476.5,
+                        -483.5,
                         89.5,
                         36.099998474121094
                     ],
@@ -897,8 +931,8 @@
                     ],
                     "buttonWidth": 407.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -921,7 +955,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -942,7 +978,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -963,7 +1001,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -984,7 +1024,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -1016,7 +1058,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -480,
+                        -487,
                         88,
                         36.099998474121094
                     ],
@@ -1032,8 +1074,8 @@
                     ],
                     "buttonWidth": 410,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1056,7 +1098,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1081,7 +1125,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -536.5,
+                        -543.5,
                         25,
                         36.099998474121094
                     ],
@@ -1097,8 +1141,8 @@
                     ],
                     "buttonWidth": 387,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1121,7 +1165,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1146,7 +1192,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -593,
+                        -600,
                         -40,
                         36.099998474121094
                     ],
@@ -1162,8 +1208,8 @@
                     ],
                     "buttonWidth": 372.5,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1186,7 +1232,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1211,7 +1259,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -622.5,
+                        -629.5,
                         -102,
                         36.099998474121094
                     ],
@@ -1227,8 +1275,8 @@
                     ],
                     "buttonWidth": 309,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1251,7 +1299,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1276,7 +1326,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -666,
+                        -673,
                         -160,
                         36.099998474121094
                     ],
@@ -1292,8 +1342,8 @@
                     ],
                     "buttonWidth": 295,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -1316,7 +1366,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1352,7 +1404,7 @@
                         0.70710670948028564
                     ],
                     "RotationEditor": [
-                        0,
+                        -1.5707964897155762,
                         0,
                         0
                     ],
@@ -1381,7 +1433,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1412,7 +1466,7 @@
                     ],
                     "Quaternion": [
                         -0.04569583386182785,
-                        0.99284744262695313,
+                        0.99284744262695312,
                         -0.038181319832801819,
                         -0.10347956418991089
                     ],
@@ -1446,7 +1500,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1511,7 +1567,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": false,
+                    "Outline Normals Thickness": 0.05000000074505806
                 },
                 {
                     "Type": 1,
@@ -1588,7 +1646,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 0.05000000074505806
                 },
                 {
                     "Type": 1,
@@ -1665,7 +1725,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 0.05000000074505806
                 },
                 {
                     "Type": 1,
@@ -1742,7 +1804,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1819,7 +1883,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1884,7 +1950,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -2240,7 +2308,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -194.5,
+                        -201.5,
                         358,
                         -10.399999618530273
                     ],
@@ -2256,8 +2324,8 @@
                     ],
                     "buttonWidth": 806,
                     "buttonHeight": 175,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2280,7 +2348,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -2360,8 +2430,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2384,7 +2454,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -2425,8 +2497,8 @@
                     ],
                     "buttonWidth": 263,
                     "buttonHeight": 52.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2449,7 +2521,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -2490,8 +2564,8 @@
                     ],
                     "buttonWidth": 254.5,
                     "buttonHeight": 46,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2514,7 +2588,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2535,7 +2611,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2556,7 +2634,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2577,7 +2657,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -2625,8 +2707,8 @@
                     ],
                     "buttonWidth": 650,
                     "buttonHeight": 650,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2649,7 +2731,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -2690,8 +2774,8 @@
                     ],
                     "buttonWidth": 376.5,
                     "buttonHeight": 42.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2714,7 +2798,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2735,7 +2821,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2756,7 +2844,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2777,7 +2867,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -2825,8 +2917,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2849,7 +2941,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2870,7 +2964,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2891,7 +2987,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -2912,7 +3010,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -2960,8 +3060,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2984,7 +3084,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -3025,8 +3127,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3049,7 +3151,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3070,7 +3174,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3091,7 +3197,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3112,7 +3220,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -3160,8 +3270,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3184,7 +3294,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -3225,8 +3337,8 @@
                     ],
                     "buttonWidth": 275,
                     "buttonHeight": 58.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3249,7 +3361,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3270,7 +3384,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3291,7 +3407,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3312,7 +3430,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -3360,8 +3480,8 @@
                     ],
                     "buttonWidth": 273.5,
                     "buttonHeight": 48,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3384,7 +3504,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -3425,8 +3547,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3449,7 +3571,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3470,7 +3594,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 14,
@@ -3511,8 +3637,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3535,7 +3661,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3556,7 +3684,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 14,
@@ -3597,8 +3727,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3621,7 +3751,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3642,7 +3774,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 14,
@@ -3683,8 +3817,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3707,7 +3841,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,
@@ -3753,8 +3889,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3777,7 +3913,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,
@@ -3823,8 +3961,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3848,8 +3986,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3872,7 +4010,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -3893,7 +4033,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 15,
@@ -3934,8 +4076,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3959,8 +4101,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3983,7 +4125,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4004,7 +4148,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 15,
@@ -4045,8 +4191,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4070,8 +4216,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4094,7 +4240,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4115,7 +4263,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 15,
@@ -4156,8 +4306,8 @@
                     ],
                     "buttonWidth": 550,
                     "buttonHeight": 16,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4181,8 +4331,8 @@
                     ],
                     "buttonWidth": 20,
                     "buttonHeight": 36,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4205,7 +4355,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4226,7 +4378,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 15,
@@ -4267,8 +4421,8 @@
                     ],
                     "buttonWidth": 250,
                     "buttonHeight": 60,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4291,7 +4445,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4312,7 +4468,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4333,7 +4491,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4354,7 +4514,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 18,
@@ -4423,8 +4585,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4447,7 +4609,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,
@@ -4493,8 +4657,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4517,7 +4681,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,
@@ -4563,8 +4729,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4587,7 +4753,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,
@@ -4633,8 +4801,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4657,7 +4825,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4678,7 +4848,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4699,7 +4871,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4720,7 +4894,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -4768,8 +4944,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4792,7 +4968,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4813,7 +4991,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4834,7 +5014,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4855,7 +5037,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -4903,8 +5087,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -4927,7 +5111,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4948,7 +5134,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4969,7 +5157,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -4990,7 +5180,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5038,8 +5230,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5062,7 +5254,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5083,7 +5277,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5104,7 +5300,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5125,7 +5323,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5173,8 +5373,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5197,7 +5397,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5218,7 +5420,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5239,7 +5443,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5260,7 +5466,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5308,8 +5516,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5332,7 +5540,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5353,7 +5563,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5374,7 +5586,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5395,7 +5609,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5443,8 +5659,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5467,7 +5683,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5488,7 +5706,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5509,7 +5729,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5530,7 +5752,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5578,8 +5802,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5602,7 +5826,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5623,7 +5849,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5644,7 +5872,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5665,7 +5895,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5713,8 +5945,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5737,7 +5969,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5758,7 +5992,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5779,7 +6015,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5800,7 +6038,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5848,8 +6088,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -5872,7 +6112,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5893,7 +6135,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5914,7 +6158,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -5935,7 +6181,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -5983,8 +6231,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6007,7 +6255,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6028,7 +6278,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6049,7 +6301,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6070,7 +6324,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -6118,8 +6374,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6142,7 +6398,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6163,7 +6421,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6184,7 +6444,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6205,7 +6467,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -6253,8 +6517,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6277,7 +6541,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6298,7 +6564,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6319,7 +6587,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6340,7 +6610,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -6388,8 +6660,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6412,7 +6684,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6433,7 +6707,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6454,7 +6730,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6475,7 +6753,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -6523,8 +6803,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6547,7 +6827,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6568,7 +6850,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6589,7 +6873,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6610,7 +6896,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -6658,8 +6946,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6682,7 +6970,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6703,7 +6993,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6724,7 +7016,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6745,7 +7039,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -6793,8 +7089,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6817,7 +7113,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6838,7 +7136,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6859,7 +7159,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6880,7 +7182,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -6928,8 +7232,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -6952,7 +7256,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6973,7 +7279,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -6994,7 +7302,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7015,7 +7325,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -7063,8 +7375,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7087,7 +7399,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7108,7 +7422,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7129,7 +7445,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7150,7 +7468,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -7198,8 +7518,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7222,7 +7542,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7243,7 +7565,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7264,7 +7588,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7285,7 +7611,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -7333,8 +7661,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7357,7 +7685,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7378,7 +7708,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7399,7 +7731,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7420,7 +7754,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -7468,8 +7804,8 @@
                     ],
                     "buttonWidth": 150,
                     "buttonHeight": 44.5,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7492,7 +7828,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7513,7 +7851,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7534,7 +7874,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7555,7 +7897,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -7603,8 +7947,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7627,7 +7971,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7648,7 +7994,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7669,7 +8017,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7690,7 +8040,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -7738,8 +8090,8 @@
                     ],
                     "buttonWidth": 50,
                     "buttonHeight": 50,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7762,7 +8114,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7783,7 +8137,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7804,7 +8160,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -7825,7 +8183,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -7873,8 +8233,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1300,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonWidth": 1314,
+                    "lastButtonHeight": 695.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -7897,7 +8257,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Enabled": true,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,

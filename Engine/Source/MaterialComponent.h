@@ -66,6 +66,7 @@ private:
 	float interIntensity = 1.0f;
 	float3 interColor = { 0,0.3,0 };
 	float opacity = 1.0f;
+	float outlineNormalsThickness = 1.0f;
 
 	TransformComponent* ownerTransform;
 	TextEditor editor;

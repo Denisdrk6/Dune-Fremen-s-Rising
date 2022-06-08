@@ -43,8 +43,8 @@ void main()
 	float dy = dFdy(vTexCoords.t);
 	if (realPixelNormal.a < 1)
 	{
-		dx /= 16;
-		dy /= 16;
+		dx /= 8;
+		dy /= 8;
 	}
 
 	vec4 result = texture(colorTexture, vTexCoords);
@@ -56,8 +56,6 @@ void main()
 		{
 			for (int j = -1; j <= 1; j++)
 			{
-				// Get the current surrounding pixel texCoords
-				//texCoord = (gl_FragCoord.xy + vec2(i, j) * realPixelNormal.a) / texSize;
 				texCoord += vec2(dx * i, dy * j);
 				vec4 currentPixelDepth = texture(depthTexture, texCoord);
 				vec4 currentPixelNormal = texture(normalTexture, texCoord);
@@ -68,7 +66,7 @@ void main()
 		}
 
 		float normalThreshold = 0.2f;
-		float depthThreshold = 0.01f;
+		float depthThreshold = 0.005f;
 
 		if (maxNormal > normalThreshold || maxDepth > depthThreshold)
 		{

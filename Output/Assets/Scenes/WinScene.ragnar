@@ -158,7 +158,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 0.94633930921554565,
+                    "Vertical Fov": 0.95731288194656372,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -8.5100669860839844,
@@ -226,7 +226,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -249,7 +249,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -259,7 +261,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "winScren",
-                    "pointer": 406519856,
+                    "pointer": 369654536,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -358,7 +360,7 @@
                     "buttonWidth": 323,
                     "buttonHeight": 47,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -381,7 +383,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -402,7 +406,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -423,7 +429,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -444,7 +452,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -493,7 +503,7 @@
                     "buttonWidth": 309,
                     "buttonHeight": 44,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -516,7 +526,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -558,7 +570,7 @@
                     "buttonWidth": 345.5,
                     "buttonHeight": 47.5,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -581,7 +593,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -602,7 +616,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -623,7 +639,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -644,7 +662,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -693,7 +713,7 @@
                     "buttonWidth": 387,
                     "buttonHeight": 44,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -716,7 +736,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -758,7 +780,7 @@
                     "buttonWidth": 407.5,
                     "buttonHeight": 47.5,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -781,7 +803,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -802,7 +826,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -823,7 +849,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 2,
@@ -844,7 +872,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 12,
@@ -893,7 +923,7 @@
                     "buttonWidth": 372.5,
                     "buttonHeight": 44,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -916,7 +946,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -981,7 +1013,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1046,7 +1080,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1065,13 +1101,13 @@
             "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
             "tag": "Player",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -7.8335342407226563,
+                        -7.8335342407226562,
                         -0.94506388902664185,
                         -26.458703994750977
                     ],
@@ -1111,7 +1147,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 0.44999998807907104
                 },
                 {
                     "Type": 1,
@@ -1142,7 +1180,7 @@
             "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
             "tag": "Player",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
@@ -1188,7 +1226,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 0.44999998807907104
                 },
                 {
                     "Type": 1,
@@ -1265,7 +1305,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 0.44999998807907104
                 },
                 {
                     "Type": 1,
@@ -1342,7 +1384,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1407,7 +1451,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1780,7 +1826,7 @@
                     "buttonWidth": 806,
                     "buttonHeight": 175,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 663.5,
+                    "lastButtonHeight": 672.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1803,7 +1849,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1822,7 +1870,7 @@
             "Prefab Path": "Assets\/Prefabs\/Basic Enemy Menu.rgprefab",
             "tag": "Enemies",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
@@ -1868,7 +1916,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 0.44999998807907104
                 },
                 {
                     "Type": 1,
@@ -1899,7 +1949,7 @@
             "Prefab Path": "Assets\/Prefabs\/Basic Enemy Menu.rgprefab",
             "tag": "Enemies",
             "layer": "Default",
-            "Is Interactuable": true,
+            "Is Interactuable": false,
             "Components": [
                 {
                     "Type": 0,
@@ -1945,7 +1995,9 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Depth Thickness": 1,
+                    "Outline Normals Thickness": 0.44999998807907104
                 },
                 {
                     "Type": 1,

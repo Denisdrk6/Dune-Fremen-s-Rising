@@ -138,6 +138,7 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.GameObject::EraseChild", EraseChild);
 	mono_add_internal_call("RagnarEngine.GameObject::GetParent", GetItsParent);
 	mono_add_internal_call("RagnarEngine.GameObject::SubmitOutlineDrawing", GameObjectDrawOutline);
+	mono_add_internal_call("RagnarEngine.GameObject::UnSubmitOutlineDrawing", GameObjectStopDrawOutline);
 	mono_add_internal_call("RagnarEngine.GameObject::get_isInteractuable", GetGameObjectIsInteractuable);
 	mono_add_internal_call("RagnarEngine.GameObject::set_isInteractuable", SetGameObjectIsInteractuable);
 	mono_add_internal_call("RagnarEngine.GameObject::get_interactuableColor", GetGameObjectInteractuableColor);

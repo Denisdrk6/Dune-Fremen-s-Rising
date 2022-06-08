@@ -414,6 +414,16 @@ void GameObjectDrawOutline(MonoObject* gameObject, MonoObject* color)
 	app->renderer3D->gosToDrawOutline.push_back(p);
 }
 
+void GameObjectStopDrawOutline(MonoObject* go)
+{
+	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
+	std::pair<GameObject*, float3> p(gameObject, float3::one);
+
+	for (int i = 0; i < app->renderer3D->gosToDrawOutline.size(); ++i)
+		if (app->renderer3D->gosToDrawOutline[i].first == p.first)
+			app->renderer3D->gosToDrawOutline.erase(app->renderer3D->gosToDrawOutline.begin() + i);
+}
+
 MonoObject* InstantiateGameObject(MonoObject* name, MonoObject* position, MonoObject* rotation)
 {
 	GameObject* go = app->sceneManager->GetCurrentScene()->CreateGameObject(nullptr);

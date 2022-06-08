@@ -29,6 +29,8 @@ public class Knife : RagnarComponent
 
 		player.GetComponent<Player>().PlayAudioClip("WPN_THORWINGKNIFETHROW");
 		player.GetComponent<Animation>().PlayAnimation("Ability4");
+
+		//gameObject.SubmitOutlineDrawing(new Vector3(0.3f, 0.95f, 0.15f));
 	}
 
     private void AimMethod()
@@ -51,6 +53,9 @@ public class Knife : RagnarComponent
 			goRB.SetBodyRotation(rot);
 			player.GetComponent<Rigidbody>().SetBodyRotation(rot);
 
+			gameObject.isInteractuable = true;
+			gameObject.interactuableColor = new Vector3(0, 1, 0);
+
 			goRB.IgnoreCollision(player, true);
 			goRB.ApplyCentralForce(newForward * force);
 		}
@@ -65,7 +70,11 @@ public class Knife : RagnarComponent
     public void Update()
 	{
 		if (canReload) ReloadKnife();
-		if (pendingToDelete) InternalCalls.Destroy(gameObject);
+		if (pendingToDelete)
+		{
+			//gameObject.UnSubmitOutlineDrawing();
+			InternalCalls.Destroy(gameObject);
+		}
 
 	}
 	private void ReloadKnife()

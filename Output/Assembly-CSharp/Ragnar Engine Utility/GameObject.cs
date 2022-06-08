@@ -164,6 +164,9 @@ namespace RagnarEngine
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         extern public void SubmitOutlineDrawing(Vector3 color);
 
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        extern public void UnSubmitOutlineDrawing();
+
         public extern bool isInteractuable
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]

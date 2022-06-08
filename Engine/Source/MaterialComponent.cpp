@@ -111,6 +111,7 @@ void MaterialComponent::OnEditor()
 			ImGui::ColorEdit3("Interactuable Color", interColor.ptr());
 
 		ImGui::DragFloat("Opacity", &opacity, 0.01, 0, 1);
+		ImGui::DragFloat("Outline Normals Thickness", &outlineNormalsThickness, 0.01, 0, 1);
 
 		DisplayTexturesInfo();
 
@@ -401,6 +402,9 @@ bool MaterialComponent::OnLoad(JsonParsing& node)
 	colorMultiplier = node.GetJsonNumber("Color Multiplier");
 	if (colorMultiplier == 0) colorMultiplier = 1;
 
+	outlineNormalsThickness = node.GetJsonNumber("Outline Normals Thickness");
+	if (outlineNormalsThickness == 0) outlineNormalsThickness = 1;
+
 	return true;
 }
 
@@ -419,6 +423,7 @@ bool MaterialComponent::OnSave(JsonParsing& node, JSON_Array* array)
 	file.SetNewJsonBool(file.ValueToObject(file.GetRootValue()), "Emissive Enabled", emissiveEnabled);
 	file.SetNewJson3Number(file, "Emissive Color", emissiveColor);
 	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Color Multiplier", colorMultiplier);
+	file.SetNewJsonNumber(file.ValueToObject(file.GetRootValue()), "Outline Normals Thickness", outlineNormalsThickness);
 
 	node.SetValueToArray(array, file.GetRootValue());
 
@@ -428,7 +433,7 @@ bool MaterialComponent::OnSave(JsonParsing& node, JSON_Array* array)
 void MaterialComponent::Bind(CameraComponent* gameCam)
 {
 	// Crash when creating a primitive
-	if (!this)
+	if (!this || !owner->GetComponent<MeshComponent>())
 		return;
 
 	float4x4 model = ownerTransform->GetGlobalTransform();
@@ -489,12 +494,15 @@ void MaterialComponent::Bind(CameraComponent* gameCam)
 	//normalMat.Inverse();
 	//shader->SetUniformMatrix3f("normalMatrix", normalMat.Float3x3Part().Transposed());
 
-	if (std::string(owner->GetName()).find("Player") != std::string::npos)
-		shader->SetUniform1f("normalsThickness", 0);
-	else if (std::string(owner->GetName()).find("Enemy") != std::string::npos)
-		shader->SetUniform1f("normalsThickness", 0);
-	else
-		shader->SetUniform1f("normalsThickness", 1);
+	//if (std::string(owner->GetName()).find("Player") != std::string::npos)
+	//	shader->SetUniform1f("normalsThickness", 0.5);
+	//else if (std::string(owner->GetName()).find("Enemy") != std::string::npos)
+	//	shader->SetUniform1f("normalsThickness", 0.5);
+	//else if (std::string(owner->GetName()).find("Knife") != std::string::npos)
+	//	shader->SetUniform1f("normalsThickness", 0.1);
+	//else
+
+	shader->SetUniform1f("normalsThickness", outlineNormalsThickness);
 
 	shader->SetUniform1i("isInteractuable", owner->isInteractuable);
 	if (owner->isInteractuable)
@@ -521,8 +529,7 @@ void MaterialComponent::Bind(CameraComponent* gameCam)
 		texLoc = glGetUniformLocation(shader->GetId(), "normalMap");
 		glUniform1i(texLoc, 2);
 	}
-	else
-		shader->SetUniform1i("hasNormalMap", 0);	
+	else shader->SetUniform1i("hasNormalMap", 0);	
 
 	
 	glActiveTexture(GL_TEXTURE3);
