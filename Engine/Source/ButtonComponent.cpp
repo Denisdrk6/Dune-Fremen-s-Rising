@@ -338,3 +338,10 @@ bool ButtonComponent::OnSave(JsonParsing& node, JSON_Array* array)
 
 	return true;
 }
+void ButtonComponent::setParent(float x, float y) {
+
+	
+	//DEBUG_LOG("%f",total.x);
+	buttonText.SetPositionX(x);
+	buttonText.SetPositionY(y);
+}

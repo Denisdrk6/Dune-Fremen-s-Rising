@@ -61,6 +61,9 @@ namespace RagnarEngine
         public static extern void RequestScreenRectangle(Quaternion color);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern void EndRequestScreenRectangle();        
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public static extern Vector3 GetMousePosition();
     }
 

@@ -61,20 +61,46 @@ public class QuestSystem : RagnarComponent
 
 	public GameObject questBc;
 	public GameObject questBord;
-
+	GameObject MissButton;
 	Transform2D questBcT;
 	Transform2D questBordT;
-
+	GameObject GameState;
 	public bool showJournal;
 	public bool showActive;
 	public bool showCompleted;
 	public Vector3 position;
 
-	private int captainsDefeated;
-
 	private string activeQuests;
 	private string completedQuests;
+	private int level = 0;
 
+	//Check Quests Vars General
+	public bool levelFinished = false;
+	public bool damageRecieved = false;
+	public bool hasKilledEnemies = false;
+	//Check Quests Vars Lvl 1
+	public int enemiesControlled = 0;
+	public int enemiesThrowingKnife = 0;
+	public int enemiesDistractedStone = 0;
+	//Check Quests Vars Lvl 2
+	public bool doorsLevel = false;
+	public bool midLevel = false;
+	public bool camouflageActive = false;
+	public int enemiesCamouflage = 0;
+	public int enemiesHunterSeeker = 0;
+	public int enemiesGrenade = 0;
+	//Check Quests Vars Lvl 3
+	public bool firstPhaseCompleted = false;
+	public bool lastPhaseCompleted = false;
+	public bool killWithPaul = false;
+	public bool killWithChani = false;
+	public bool killWithStilgar = false;
+	public bool triggerQuest = true;
+	public bool triggerStunner = true;
+	public bool completeStunner = false;
+	public int enemiesTrap = 0;
+	public int enemiesWhistle = 0;
+	private bool changePage = false;
 
 	// Easing
 	float actualDt = 0;
@@ -152,6 +178,13 @@ public class QuestSystem : RagnarComponent
 		completedQuestList = new List<Quest>();
 		activeQuestList = new List<Quest>();
 
+		if (SceneManager.currentSceneName == "build")
+			level = 1;
+		if (SceneManager.currentSceneName == "build2")
+			level = 2;
+		if (SceneManager.currentSceneName == "build3")
+			level = 3;
+
 		activeQuestNames = GameObject.Find("Titulo Activas");
 		completedQuestNames = GameObject.Find("Titulo Completadas");
 		questDescription = GameObject.Find("Descripcion");
@@ -165,8 +198,9 @@ public class QuestSystem : RagnarComponent
 		activeButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
 		questBc = GameObject.Find("questBc");
 		questBord = GameObject.Find("questBord");
-		
-		questBordT= questBord.GetComponent<Transform2D>();
+		MissButton = GameObject.Find("MissButton");
+		GameState = GameObject.Find("Background");
+		questBordT = questBord.GetComponent<Transform2D>();
 		questBcT = questBc.GetComponent<Transform2D>();
 
 		showJournal = false;
@@ -185,24 +219,183 @@ public class QuestSystem : RagnarComponent
 		questBc.isActive = false;
 		questBord.isActive = false;
 
-		CreateQuest(0, "Elimina a los 3 capitanes", "Elimina a los 3 capitanes", QuestState.ACTIVE, QuestType.MAIN);
-		CreateQuest(1, "Sal de la cantera/cañon", "Sal de la cantera/cañon", QuestState.ACTIVE, QuestType.MAIN);
-		CreateQuest(2, "Consigue la llave para abrir el muro", "Consigue la llave para abrir el muro", QuestState.ACTIVE, QuestType.MAIN);
-		CreateQuest(3, "Reunete con Jessica y Stilgard en la plaza", "Reunete con Jessica y Stilgard en la plaza", QuestState.ACTIVE, QuestType.MAIN);
-		CreateQuest(4, "Llega al palacio", "Llega al palacio", QuestState.ACTIVE, QuestType.MAIN);
-		CreateQuest(5, "Busca como entrar", "Busca como entrar", QuestState.ACTIVE, QuestType.MAIN);
-		CreateQuest(6, "Derrota a Rabban", "Derrota a Rabban", QuestState.ACTIVE, QuestType.MAIN);
-
-		captainsDefeated = 0;
+		switch (level)
+        {
+			case 1:
+				//Main Quests
+				CreateQuest(0, "Ábrete paso a través del cañón", "Encuéntrate con Chani al final del cañón", QuestState.ACTIVE, QuestType.MAIN);
+				//Secondaries Quests
+				CreateQuest(1, "Intocable", "Completa el nivel sin recibir daño", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(2, "Pacifista", "Completa el nivel sin matar a nadie", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(3, "Azotador de mentes", "Controla mentalmente a tres enemigos", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(4, "Pilla esta!", "Acaba con 5 enemigos utilizando el cuchillo arrojadizo", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(5, "Habrá sido el viento", "Distrae a 5 enemigos con piedras", QuestState.ACTIVE, QuestType.SECONDARY);
+				//Auxiliar quest (Solve a Bug)
+				CreateQuest(6, "", "", QuestState.ACTIVE, QuestType.SECONDARY);
+				break;
+			case 2:
+				//Main Quests
+				CreateQuest(7, "Visita no grata", "Infiltrate en Arrakeen", QuestState.ACTIVE, QuestType.MAIN);
+				CreateQuest(8, "La Reunión", "Encuentra a Stilgar y Lady Jessica", QuestState.ACTIVE, QuestType.MAIN);
+				CreateQuest(9, "Cambio de planes", "Rescata a Stilgar de los soldados Harkonnen", QuestState.ACTIVE, QuestType.MAIN);
+				//Secondaries Quests
+				CreateQuest(10, "Intocable", "Completa el nivel sin recibir daño", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(11, "Pacifista", "Completa el nivel sin matar a nadie", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(12, "Desde las sombras", "Acaba con 3 enemigos mientras estás camuflado", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(13, "Detrás de ti", "Usa el Hunter-seeker contra 3 enemigos", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(14, "Toque especial", "Aturde a 4 enemigos con granadas", QuestState.ACTIVE, QuestType.SECONDARY);
+				//Auxiliar quest (Solve a Bug)
+				CreateQuest(15, "", "", QuestState.ACTIVE, QuestType.SECONDARY);
+				break;
+			case 3:
+				//Main Quests
+				CreateQuest(16, "De nuevo en casa", "Rescata a Lady Jessica de los Harkonnen", QuestState.ACTIVE, QuestType.MAIN);
+				CreateQuest(17, "Yo soy la venganza", "Acaba con Rabban", QuestState.ACTIVE, QuestType.MAIN);
+				//Secondaries Quests
+				CreateQuest(18, "Intocable", "Completa el nivel sin recibir daño", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(19, "Trabajo en equipo", "Mata 1 enemigo con cada personaje", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(20, "Mano fácil", "Gasta toda la munición de la Stunner", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(21, "Atrapado", "Consigue que 3 enemigos caigan en tus trampas", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(22, "Sirena", "Atrae 3 enemigos con silbidos", QuestState.ACTIVE, QuestType.SECONDARY);
+				//Auxiliar quest (Solve a Bug)
+				CreateQuest(23, "", "", QuestState.ACTIVE, QuestType.SECONDARY);
+				break;
+        }
 	}
 	public void Update()
 	{
+		if(changePage)
+        {
+			changePage = false;
+			GameObject.Find("PlayerManager").GetComponent<PlayerManager>().GetPlayerSelected().PlayerPause();
+        }
+		// Logic from quests
+		switch (level)
+        {
+			case 1:
+				if (levelFinished)
+                {
+					CompleteQuest(GetQuestByID(0));
+					if (!damageRecieved) CompleteQuest(GetQuestByID(1));
+					if (!hasKilledEnemies) CompleteQuest(GetQuestByID(2));
+					levelFinished = false;
+				}
+				if (enemiesControlled == 3)
+				{
+					CompleteQuest(GetQuestByID(3));
+					enemiesControlled = -100;
+				}
+				if (enemiesThrowingKnife == 5)
+				{
+					CompleteQuest(GetQuestByID(4));
+					enemiesThrowingKnife = -100;
+				}
+				if (enemiesDistractedStone == 5)
+				{
+					CompleteQuest(GetQuestByID(5));
+					enemiesDistractedStone = -100;
+				}
+				break;
+			case 2:
+				if (levelFinished)
+                {
+					CompleteQuest(GetQuestByID(7));
+					CompleteQuest(GetQuestByID(9));
+					if (!damageRecieved) CompleteQuest(GetQuestByID(10));
+					if (!hasKilledEnemies) CompleteQuest(GetQuestByID(11));
+					levelFinished = false;
+				}
+				if (doorsLevel)
+				{
+					CompleteQuest(GetQuestByID(7));
+					doorsLevel = false;
+				}
+				if (midLevel)
+                {
+					CompleteQuest(GetQuestByID(8));
+					midLevel = false;
+                }
+				if (enemiesCamouflage == 3)
+                {
+					CompleteQuest(GetQuestByID(12));
+					enemiesCamouflage = -100;
+				}
+				if (enemiesHunterSeeker == 3)
+				{
+					CompleteQuest(GetQuestByID(13));
+					enemiesHunterSeeker = -100;
+				}
+				if (enemiesGrenade == 4)
+				{
+					CompleteQuest(GetQuestByID(14));
+					enemiesGrenade = -100;
+				}
+				break;
+			case 3:
+				if (firstPhaseCompleted)
+                {
+					CompleteQuest(GetQuestByID(16));
+					firstPhaseCompleted = false;
+				}
+				if (lastPhaseCompleted)
+				{
+					CompleteQuest(GetQuestByID(17));
+					if (!damageRecieved) CompleteQuest(GetQuestByID(18));
+
+					lastPhaseCompleted = false;
+				}
+				if (triggerQuest && (killWithChani && killWithPaul && killWithStilgar))
+                {
+					CompleteQuest(GetQuestByID(19));
+					triggerQuest = false;
+				}
+				if (triggerStunner && completeStunner)
+                {
+					CompleteQuest(GetQuestByID(20));
+					completeStunner = false;
+					triggerStunner = false;
+				}
+				if (enemiesTrap == 3)
+                {
+					CompleteQuest(GetQuestByID(21));
+					enemiesTrap = -100;
+				}
+				if (enemiesWhistle == 3)
+                {
+					CompleteQuest(GetQuestByID(22));
+					enemiesWhistle = -100;
+				}
+				break;
+		}
+
+
+		// Drawing
 		float xCorner = (InternalCalls.GetRegionGame().x / 2);
 		float yCorner = (InternalCalls.GetRegionGame().y / 2);
 
-		if (Input.GetKey(KeyCode.J) == KeyState.KEY_DOWN){
-			showJournal = !showJournal;
-			isPlayng = true;
+		position.Set(xCorner-70 , yCorner-70, 1000000.0f);
+		MissButton.GetComponent<Transform2D>().position2D = position;
+		int a = MissButton.GetComponent<UIButton>().GetButtonState();
+		switch (a)
+		{
+			case 3:
+                // pressed mode
+                if (!isPlayng)
+                {
+					showJournal = !showJournal;
+					isPlayng = true;
+				}
+				
+
+				break;
+		}
+		if (Input.GetKey(KeyCode.J) == KeyState.KEY_DOWN)
+		{
+			if (!isPlayng)
+			{
+				showJournal = !showJournal;
+				isPlayng = true;
+			}
 		}
 		if (showJournal)
         {
@@ -219,25 +412,25 @@ public class QuestSystem : RagnarComponent
 					float actualvalue = (float)EasingFunction(actualDt);
 
 
-					position.Set((xCorner - 400) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 280, 0);
+					position.Set((xCorner - 500) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 280, 0);
 
 					questBcT.position2D = position;
 					questBordT.position2D = position;
 
-					position.Set((xCorner - 579.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
+					position.Set((xCorner - 679.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
 					activeButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner - 220.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
+					position.Set((xCorner - 320.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
 					completedButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner - 700) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 150, 1000000.0f);
+					position.Set((xCorner - 800) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 150, 1000000.0f);
 					activeQuestNames.GetComponent<Transform2D>().position2D = position;
 
 					completedQuestNames.GetComponent<Transform2D>().position2D = position;
 				}
 
 			}
-
+			
 			activeButton.isActive = true;
 			completedButton.isActive = true;
 			questBc.isActive = true;
@@ -288,18 +481,18 @@ public class QuestSystem : RagnarComponent
 					float actualvalue = (float)EasingFunction(actualDt);
 
 
-					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 400)), yCorner - 280, 0);
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 500)), yCorner - 280, 0);
 
 					questBcT.position2D = position;
 					questBordT.position2D = position;
 
-					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 579.5f)), yCorner - 70.5f, 1000000.0f);
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 679.5f)), yCorner - 70.5f, 1000000.0f);
 					activeButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 220.5f)), yCorner - 70.5f, 1000000.0f);
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 320.5f)), yCorner - 70.5f, 1000000.0f);
 					completedButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 700)), yCorner - 150, 1000000.0f);
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 800)), yCorner - 150, 1000000.0f);
 					activeQuestNames.GetComponent<Transform2D>().position2D = position;
 
 					completedQuestNames.GetComponent<Transform2D>().position2D = position;
@@ -308,7 +501,19 @@ public class QuestSystem : RagnarComponent
 			}
 			
 		}
-
+		if (GameState.GetComponent<pauseMenuButton>().isSowing || GameState.GetComponent<pauseMenuButton>().isOptions)
+		{
+			activeButton.isActive = false;
+			completedButton.isActive = false;
+			activeQuestNames.isActive = false;
+			completedQuestNames.isActive = false;
+			questDescription.isActive = false;
+			questId.isActive = false;
+			questState.isActive = false;
+			questType.isActive = false;
+			questBc.isActive = false;
+			questBord.isActive = false;
+		}
 		activeQuests = "";
 		completedQuests = "";
 
@@ -334,11 +539,13 @@ public class QuestSystem : RagnarComponent
 		else
         {
 			completedQuests = "No completed quests available";
-        }
-
-		
-
-		
+			//completedQuests += "Camuflaje:";
+			//completedQuests += enemiesCamouflage.ToString();
+			//completedQuests += "Hunter Seeker:";
+			//completedQuests += enemiesHunterSeeker.ToString();
+			//completedQuests += "Granada:";
+			//completedQuests += enemiesGrenade.ToString();
+		}
 
 		position.Set(365.5f, 69.5f, 0);
 		activeButton.GetComponent<Transform2D>().SetSize(position);
@@ -368,7 +575,7 @@ public class QuestSystem : RagnarComponent
 		else
 			completedQuestNames.GetComponent<UIText>().SetTextTextColor(255, 255, 255);
 
-		int a = activeButton.GetComponent<UIButton>().GetButtonState();
+		a = activeButton.GetComponent<UIButton>().GetButtonState();
 		switch (a)
 		{
 			case 3:
@@ -377,25 +584,21 @@ public class QuestSystem : RagnarComponent
 				activeButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
 				showActive = true;
 				showCompleted = false;
-				
+				changePage = true;
 				break;
 		}
 
-		int b = completedButton.GetComponent<UIButton>().GetButtonState();
-		switch (b)
+		a = completedButton.GetComponent<UIButton>().GetButtonState();
+		switch (a)
 		{
-
 			case 3:
 				// pressed mode
 				activeButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
 				completedButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
 				showActive = false;
 				showCompleted = true;
-				
+				changePage = true;
 				break;
 		}
-
-		if (Input.GetKey(KeyCode.M) == KeyState.KEY_DOWN && captainsDefeated < 3) ++captainsDefeated;
-		if (captainsDefeated == 3 && GetQuestByName("Elimina a los 3 capitanes").GetQuestState() == QuestState.ACTIVE) CompleteQuest(GetQuestByName("Elimina a los 3 capitanes"));
 	}
 }

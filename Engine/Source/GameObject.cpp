@@ -70,7 +70,7 @@ bool GameObject::Update(float dt)
 			components[i]->Update(dt);
 		}
 
-		if (app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->Intersects(globalAabb) || !globalAabb.IsFinite() || tag == "Player" || tag == "Ability" || components[i]->type == ComponentType::PARTICLE_SYSTEM)
+		if (app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->Intersects(globalAabb) || !globalAabb.IsFinite() || tag == "Player" || tag == "Ability" || name == "Boss" || components[i]->type == ComponentType::PARTICLE_SYSTEM)
 		{
 			hasBeenUpdate = true;
 			components[i]->Update(dt);

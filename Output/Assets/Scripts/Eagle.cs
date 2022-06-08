@@ -26,6 +26,7 @@ public class Eagle : RagnarComponent
         Vector3 newForward = agent.hitPosition - pos;
         double angle = Math.Atan2(newForward.x, newForward.z);
         Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+        player.GetComponent<Rigidbody>().SetBodyRotation(rot);
         goRB.SetBodyRotation(rot);
         goRB.SetBodyPosition(pos);
         for (int i = 0; i < GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters.Length; i++)
@@ -35,6 +36,7 @@ public class Eagle : RagnarComponent
         agent.CalculatePath(agent.hitPosition);
 
         player.GetComponent<Player>().PlayAudioClip("EBOSS_THROWOBJECT");
+        player.GetComponent<Animation>().PlayAnimation("Ability3");
         //leftParticles = GameObject.Find("LeftWingParticles").GetComponent<ParticleSystem>();
         //rightParticles = GameObject.Find("RightWingParticles").GetComponent<ParticleSystem>();
         //leftParticles.Play();
@@ -52,6 +54,7 @@ public class Eagle : RagnarComponent
             //rightParticles.Pause();
             hasArrived = true;
             GameObject sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition);
+            goRB.IgnoreCollision(sound, true);
             sound.GetComponent<SoundAreaManager>().stablishedTimer = 6f;
             sound.GetComponent<SoundAreaManager>().UpdateRadius(6.7f);
 

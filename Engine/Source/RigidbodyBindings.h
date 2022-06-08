@@ -152,3 +152,11 @@ void SetRadiusSphere(MonoObject* go, float rad)
 	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
 	static_cast<btSphereShape*>(rb->GetBody()->getCollisionShape())->setUnscaledRadius(rad);
 }
+
+void EraseTrigger(MonoObject* go, MonoObject* other)
+{
+	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
+	RigidBodyComponent* rbOther = GetComponentMono<RigidBodyComponent*>(other);
+	if(std::find(rb->triggerList.begin(), rb->triggerList.end(), rbOther) != rb->triggerList.end())
+		rb->triggerList.erase(std::find(rb->triggerList.begin(), rb->triggerList.end(), rbOther));
+}

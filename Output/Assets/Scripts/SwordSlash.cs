@@ -6,6 +6,7 @@ public class SwordSlash : RagnarComponent
 	public float timeAlive = 0f;
 	public bool pendingToDelete = false;
     GameObject player;
+    GameObject sword;
 	public void Start()
     {
         timeAlive = 0.1f;
@@ -23,8 +24,17 @@ public class SwordSlash : RagnarComponent
         rb.IgnoreCollision(player, true);
         rb.SetAsTrigger();
 
+        Vector3 direction = GameObject.Find("LevelManager").GetComponent<Level_3>().hitPoint - pos;
+        Vector3 newForward = direction.normalized;
+        double angle = Math.Atan2(newForward.x, newForward.z);
+        Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+        player.GetComponent<Rigidbody>().SetBodyRotation(rot);
+
         player.GetComponent<Player>().PlayAudioClip("WPN_SWORDHIT");
+        player.GetComponent<Animation>().PlayAnimation("Ability1");
         GameObject.Find("SlashParticles").GetComponent<ParticleSystem>().Play();
+        sword = GameObject.Find("Sword");
+        sword.GetComponent<Animation>().PlayAnimation("Attack");
     }
 
     public void Update()

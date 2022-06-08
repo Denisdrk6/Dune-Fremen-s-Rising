@@ -30,4 +30,10 @@ public:
 		X = pos.x;
 		Y = pos.y;
 	}
+	void SetPositionX(float x ) {
+		X = x;
+	}
+	void SetPositionY(float y) {
+		Y = y;
+	}
 };

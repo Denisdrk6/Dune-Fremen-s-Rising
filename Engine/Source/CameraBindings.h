@@ -159,7 +159,7 @@ int PerceptionCone(MonoObject* initPos, MonoObject* _forward, int _angle, int ra
 			TransformComponent* transform = players.at(j)->GetComponent<TransformComponent>();
 			if (transform->GetGlobalPosition().Distance(pointA) < radius + 0.5) 
 			{
-				if (t.Intersects(players.at(j)->GetOOB()))
+				if (t.Intersects(players.at(j)->GetAABB()))
 				{
 					vec bottomPoint = transform->GetGlobalPosition();
 					vec topPoint = bottomPoint;

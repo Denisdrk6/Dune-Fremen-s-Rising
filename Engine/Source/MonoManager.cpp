@@ -176,6 +176,7 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.Rigidbody::GetBodyRotation", GetBodyRotation);
 	mono_add_internal_call("RagnarEngine.Rigidbody::ApplyVelocity", ApplyVelocity);
 	mono_add_internal_call("RagnarEngine.Rigidbody::SetRadiusSphere", SetRadiusSphere);
+	mono_add_internal_call("RagnarEngine.Rigidbody::EraseTrigger", EraseTrigger);
 	// Rigidbody =================
 
 	// Animation =================
@@ -473,22 +474,6 @@ MonoObject* MonoManager::GoToCSGO(GameObject* inGo) const
 	uintptr_t transPTR = reinterpret_cast<uintptr_t>(inGo->GetComponent<TransformComponent>());
 	args[2] = &transPTR;
 
-	//uintptr_t audioSourcePTR = reinterpret_cast<uintptr_t>(inGo->GetComponent<AudioSourceComponent>());
-	//args[3] = &audioSourcePTR;
-	//
-	//uintptr_t audioListenerPTR = reinterpret_cast<uintptr_t>(inGo->GetComponent<ListenerComponent>());
-	//args[4] = &audioListenerPTR;
-	//
-	//uintptr_t rbPTR = reinterpret_cast<uintptr_t>(inGo->GetComponent<RigidBodyComponent>());
-	//args[5] = &rbPTR;
-	//
-	//uintptr_t animPTR = reinterpret_cast<uintptr_t>(inGo->GetComponent<AnimationComponent>());
-	//args[6] = &animPTR;
-	//
-	//uintptr_t camPTR = reinterpret_cast<uintptr_t>(inGo->GetComponent<CameraComponent>());
-	//args[7] = &camPTR;
-
-	//MonoMethodDesc* constructorDesc = mono_method_desc_new("RagnarEngine.GameObject:.ctor(string,uintptr,uintptr,uintptr,uintptr,uintptr,uintptr)", true);
 	MonoMethodDesc* constructorDesc = mono_method_desc_new("RagnarEngine.GameObject:.ctor(string,uintptr,uintptr)", true);
 	MonoMethod* method = mono_method_desc_search_in_class(constructorDesc, goClass);
 	MonoObject* goObj = mono_object_new(domain, goClass);
@@ -509,13 +494,6 @@ MonoObject* MonoManager::ComponentToCS(Component* comp) const
 	
 	MonoMethod* contstructorMethod = mono_method_desc_search_in_class(constructorDesc, compClass);
 	MonoObject* compObj = mono_object_new(domain, compClass);
-	//uint32_t fieldToken = mono_gchandle_new(goObj, false);
-
-	//MonoClass* monoClass = mono_object_get_class(goObj);
-	//MonoClassField* field = mono_class_get_field(monoClass, fieldToken);
-
-	//uintptr_t compPTR = reinterpret_cast<uintptr_t>(comp);
-	//mono_field_set_value(goObj, field, comp);
 	
 	void* args[1];
 	uintptr_t compPTR = reinterpret_cast<uintptr_t>(comp);

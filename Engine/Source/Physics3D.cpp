@@ -109,13 +109,15 @@ bool Physics3D::PreUpdate(float dt)
 						}
 						else if (app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->Intersects(obAobject->owner->GetAABB()) || !obAobject->owner->GetAABB().IsFinite())
 						{
-							if (!obAobject->GetOnTrigger())
+							if (std::find(obAobject->triggerList.begin(), obAobject->triggerList.end(), obBobject) == obAobject->triggerList.end())
 							{
-								obAobject->SetOnTrigger(true);
+								obAobject->triggerList.push_back(obBobject);
 								script->CallOnTriggerEnter(obBobject);
 							}
 							else
+							{
 								script->CallOnTrigger(obBobject);
+							}
 						}
 					}
 					
@@ -136,9 +138,9 @@ bool Physics3D::PreUpdate(float dt)
 						}
 						else if (app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->Intersects(obBobject->owner->GetAABB()) || !obBobject->owner->GetAABB().IsFinite())
 						{
-							if (!obBobject->GetOnTrigger())
+							if (std::find(obBobject->triggerList.begin(), obBobject->triggerList.end(), obAobject) == obBobject->triggerList.end())
 							{
-								obBobject->SetOnTrigger(true);
+								obBobject->triggerList.push_back(obAobject);
 								script->CallOnTriggerEnter(obAobject);
 							}
 							else
@@ -147,17 +149,17 @@ bool Physics3D::PreUpdate(float dt)
 					}
 				}	
 				else // OnTriggerExit
-				{
-					if (obAobject->GetOnTrigger() && !obAobject->trigger && obBobject->trigger && obAobject->owner->GetComponent<ScriptComponent>())
+				{			
+					if (!obAobject->trigger && obBobject->trigger && obAobject->owner->GetComponent<ScriptComponent>() && std::find(obAobject->triggerList.begin(), obAobject->triggerList.end(), obBobject) != obAobject->triggerList.end())
 					{
 						script = obAobject->owner->GetComponent<ScriptComponent>();
-						obAobject->SetOnTrigger(false);
+						obAobject->triggerList.erase(std::find(obAobject->triggerList.begin(), obAobject->triggerList.end(), obBobject));
 						script->CallOnTriggerExit(obBobject);
 					}
-					if (obBobject->GetOnTrigger() && !obBobject->trigger && obAobject->trigger && obBobject->owner->GetComponent<ScriptComponent>())
+					if (!obBobject->trigger && obAobject->trigger && obBobject->owner->GetComponent<ScriptComponent>() && std::find(obBobject->triggerList.begin(), obBobject->triggerList.end(), obAobject) != obBobject->triggerList.end())
 					{
 						script = obBobject->owner->GetComponent<ScriptComponent>();
-						obBobject->SetOnTrigger(false);
+						obBobject->triggerList.erase(std::find(obBobject->triggerList.begin(), obBobject->triggerList.end(), obAobject));
 						script->CallOnTriggerExit(obAobject);
 					}
 				}
@@ -366,11 +368,19 @@ void Physics3D::DeleteBody(RigidBodyComponent* body, std::string name)
 				}
 			}
 		}
-		for (std::vector<RigidBodyComponent*>::iterator i = bodies.begin(); i != bodies.end(); ++i)
+		for (std::vector<RigidBodyComponent*>::iterator it = bodies.begin(); it != bodies.end(); ++it)
 		{
-			if (*i._Ptr == body)
+			if (!(*it)->triggerList.empty())
 			{
-				bodies.erase(i);
+				if (std::find((*it)->triggerList.begin(), (*it)->triggerList.end(), body) != (*it)->triggerList.end())
+					(*it)->triggerList.erase(std::find((*it)->triggerList.begin(), (*it)->triggerList.end(), body));
+			}
+		}		
+		for (std::vector<RigidBodyComponent*>::iterator it = bodies.begin(); it != bodies.end(); ++it)
+		{
+			if (*it._Ptr == body)
+			{
+				bodies.erase(it);
 				break;
 			}
 		}

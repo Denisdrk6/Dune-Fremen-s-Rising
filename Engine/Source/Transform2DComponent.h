@@ -21,7 +21,7 @@ public:
 	Quat FromEulerToQuat(float3 eulerAngles);
 	float3 FromQuatToEuler(Quat quatAngles);
 
-	inline float3 GetPosition() { return position; };
+	float3 GetPosition() { return position; };
 	inline void SetPosition(float3 pos) { position = pos; };
 
 	inline float3 GetInternalPosition() { return internalPosition; };
@@ -34,7 +34,7 @@ public:
 	inline void SetButtonHeight(float height) { buttonHeight = height; };
 	inline void SetShowEdit(bool Set) {showEdit = Set;};
 		
-	
+	float3 position = { 1,1,100.0f };
 	void UpdateChilds(float3 newPosition, float2 newScale);
 private:
 	std::vector<float3> vertices_aux;
@@ -42,7 +42,7 @@ private:
 	float4x4 transmat;
 
 	float3 rotationEuler;
-	float3 position = {1,1,100.0f};
+	
 	float3 internalPosition;
 	float3 scale;
 	float4 lastViewportBounds;

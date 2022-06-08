@@ -233,7 +233,6 @@ float GetDistanceBetween(MonoObject* vector1, MonoObject* vector2)
 {
 	float3 vec1 = app->moduleMono->UnboxVector(vector1);
 	float3 vec2 = app->moduleMono->UnboxVector(vector2);
-	DEBUG_LOG("%f", vec1.Distance(vec2));
 	return vec1.Distance(vec2);
 }
 MonoObject* RotateY(MonoObject* vector, float anglesDegrees)
@@ -279,26 +278,26 @@ void SetDiffuseAlpha(MonoObject* go, float value)
 
 MonoBoolean GetEmissiveEnabled(MonoObject* go)
 {
-	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
-	return gameObject->GetComponent<MaterialComponent>()->IsEmissiveEnabled();
+	MaterialComponent* mat = GetComponentMono<MaterialComponent*>(go);
+	return mat->IsEmissiveEnabled();
 }
 
 void SetEmissiveEnabled(MonoObject* go, MonoBoolean value)
 {
-	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
-	gameObject->GetComponent<MaterialComponent>()->SetEmissiveEnabled(value);
+	MaterialComponent* mat = GetComponentMono<MaterialComponent*>(go);
+	mat->SetEmissiveEnabled(value);
 }
 
 MonoObject* GetEmissiveColor(MonoObject* go)
 {
-	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
-	return app->moduleMono->Float3ToCS(gameObject->GetComponent<MaterialComponent>()->GetEmissiveColor());
+	MaterialComponent* mat = GetComponentMono<MaterialComponent*>(go);
+	return app->moduleMono->Float3ToCS(mat->GetEmissiveColor());
 }
 
 void SetEmissiveColor(MonoObject* go, MonoObject* color)
 {
-	GameObject* gameObject = app->moduleMono->GameObjectFromCSGO(go);
-	gameObject->GetComponent<MaterialComponent>()->SetEmissiveColor(app->moduleMono->UnboxVector(color));
+	MaterialComponent* mat = GetComponentMono<MaterialComponent*>(go);
+	mat->SetEmissiveColor(app->moduleMono->UnboxVector(color));
 }
 
 // Light ============================

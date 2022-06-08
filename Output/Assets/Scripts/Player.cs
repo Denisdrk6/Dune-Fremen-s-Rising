@@ -54,6 +54,11 @@ public class Player : RagnarComponent
 
     pauseMenuButton pause;
 
+    GameObject sword;
+    GameObject stunner;
+    public GameObject pointCharacter;
+    Light pointerLight;
+
     /*
     DialogueManager dialogue;
     dialogue = GameObject.Find("Dialogue").GetComponent<DialogueManager>();
@@ -73,12 +78,12 @@ public class Player : RagnarComponent
         dialogue = GameObject.Find("Dialogue").GetComponent<DialogueManager>();
 
         sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition);
+        rb.IgnoreCollision(sound, true);
         gameObject.AddChild(sound);
         soundManag = sound.GetComponent<SoundAreaManager>();
-        soundManag.UpdateRadius(0f);
 
         uiCrouch = GameObject.Find("UICrouch");
-
+        pointerLight = pointCharacter.GetComponent<Light>();
         // Asignation of particles depending of the character
         if (gameObject.name == "Player")
         {
@@ -100,6 +105,8 @@ public class Player : RagnarComponent
             runPartSys = GameObject.Find("RunParticles_3").GetComponent<ParticleSystem>();
             getHitPartSys = GameObject.Find("GetHitParticles_3").GetComponent<ParticleSystem>();
             deadPartSys = GameObject.Find("FallDeadParticles_3").GetComponent<ParticleSystem>();
+            sword = GameObject.Find("Sword");
+            stunner = GameObject.Find("Stunner");
         }
         getHitPartSys.Pause();
         pause = GameObject.Find("Background").GetComponent<pauseMenuButton>();
@@ -152,13 +159,14 @@ public class Player : RagnarComponent
                                 ReloadState();
                                 uiCrouch.isActive = true;
                             }
-                            else if (action == Actions.CROUCH)
+                            else if (action == Actions.CROUCH && isHidden == false)
                             {
                                 action = Actions.NONE;
                                 rb.SetHeight(1); // 1 = 100% = Reset
                                 ReloadState();
                                 uiCrouch.isActive = false;
                             }
+                            rb.IgnoreCollision(sound, true);
                         }
 
                         // Run
@@ -178,6 +186,8 @@ public class Player : RagnarComponent
                         {
                             if (agent.CalculatePath(agent.hitPosition).Length > 0)
                             {
+                                pointCharacter.transform.globalPosition = agent.hitPosition;
+                                pointerLight.intensity = 10;
                                 ReloadState();
                                 //Play audio when calculating movement to not repeat the same audio
                                 audioSourceComponent.PlayClip("PAUL_WALKSAND");
@@ -187,6 +197,7 @@ public class Player : RagnarComponent
                         {
                             agent.ClearPath();
                             move = Movement.IDLE;
+                            pointerLight.intensity = 0;
                             ReloadState();
                         }
                     }
@@ -194,6 +205,7 @@ public class Player : RagnarComponent
                 if (agent.MovePath())
                 {
                     move = Movement.IDLE;
+                    pointerLight.intensity = 0;
                     ReloadState();
                 }
                 else if (agent.PathSize() > 0)
@@ -215,11 +227,15 @@ public class Player : RagnarComponent
             }
             //////////////////////////
 
+            //Effect PointerCharacter
+            if (pointerLight.intensity > 0)
+            {
+                pointerLight.linear = Mathf.PingPongFloat(pointerLight.linear, Time.deltaTime / 5, -2.05f, -2.12f, true);
+            }
+
             //SaveTest File for Debugging
             if (pendingToDelete && (animationComponent.GetLoopTime() > animationComponent.GetDuration() - 1))
             {
-                Debug.Log(animationComponent.GetLoopTime().ToString());
-                Debug.Log(animationComponent.GetDuration().ToString());
                 deadPartSys.Play();
             }
 
@@ -248,11 +264,16 @@ public class Player : RagnarComponent
             Time.timeScale = 1.0f;
     }
 
-    private void PlayerPause()
+    public void PlayerPause()
     {
         agent.ClearPath();
         move = Movement.IDLE;
-        ReloadState();
+        animationComponent.PlayAnimation("Talk");
+        if (gameObject.name == "Player_3")
+        {
+            stunner.isActive = false;
+            sword.isActive = false;
+        }
     }
 
     private void ReloadState()
@@ -323,6 +344,12 @@ public class Player : RagnarComponent
                 runPartSys.Play();
                 break;
         }
+
+        if (gameObject.name == "Player_3")
+        {
+            stunner.isActive = false;
+            sword.isActive = false;
+        }
     }
 
     private void Die()
@@ -337,12 +364,18 @@ public class Player : RagnarComponent
         {
             InternalCalls.Destroy(GameObject.Find("Knife"));
         }
+        soundManag.UpdateRadius(0f);
         InternalCalls.Destroy(sound);
+        if (gameObject.name == "Player_3")
+        {
+            stunner.isActive = false;
+            sword.isActive = false;
+        }
     }
 
     public void OnCollision(Rigidbody other)
     {
-        if (other.gameObject.name == "Rocks")
+        if (other.gameObject.tag == "RockThrown")
             GetHit(1);
     }
     //public void OnTrigger(Rigidbody other)
@@ -359,15 +392,21 @@ public class Player : RagnarComponent
             InternalCalls.Destroy(other.gameObject);
             return;
         }
-        if (other.gameObject.tag == "Hidde")
+        if (other.gameObject.tag == "Hidden" && isHidden == false)
+        {
+            //action = Actions.CROUCH;
+            //rb.SetHeight(0.6f); // 0.6 = 60%
+            //ReloadState();
+
             isHidden = true;
+        }
 
         if (other.gameObject.name == "Trigger1")
         {
             GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility1 = true;
             PlayerPause();
             pause.SetFocusedAbility(1);
-            InternalCalls.Destroy(other.gameObject);
+            other.gameObject.name = "www";
             return;
         }
         if (other.gameObject.name == "Trigger2")
@@ -375,7 +414,7 @@ public class Player : RagnarComponent
             GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
             PlayerPause();
             pause.SetFocusedAbility(3);
-            InternalCalls.Destroy(other.gameObject);
+            other.gameObject.name = "www";
             return;
         }
         if (other.gameObject.name == "Trigger3")
@@ -383,7 +422,13 @@ public class Player : RagnarComponent
             GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility2 = true;
             PlayerPause();
             pause.SetFocusedAbility(2);
-            InternalCalls.Destroy(other.gameObject);
+            other.gameObject.name = "www";
+            return;
+        }
+        if (other.gameObject.name == "Mision1")
+        {
+            GameObject.Find("Quest System").GetComponent<QuestSystem>().doorsLevel = true;
+            other.gameObject.name = "www";
             return;
         }
         // Dialogues =========================================================
@@ -395,6 +440,7 @@ public class Player : RagnarComponent
         }
         if (other.gameObject.name == "DialogueTrigger3")
         {
+            GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
             other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(3);
@@ -407,6 +453,7 @@ public class Player : RagnarComponent
         }
         if (other.gameObject.name == "DialogueTrigger6")
         {
+            GameObject.Find("Quest System").GetComponent<QuestSystem>().midLevel = true;
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
             other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(6);
@@ -419,6 +466,7 @@ public class Player : RagnarComponent
         }
         if (other.gameObject.name == "DialogueTrigger10")
         {
+            GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
             other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(10);
@@ -452,8 +500,14 @@ public class Player : RagnarComponent
 
     public void OnTriggerExit(Rigidbody other)
     {
-        if (other.gameObject.tag == "Hidde")
+        if (other.gameObject.tag == "Hidden" && isHidden == true)
+        {
+            //action = Actions.NONE;
+            //rb.SetHeight(1); // 1 = 100% = Reset
+            //ReloadState();
+
             isHidden = false;
+        }
     }
 
     public void SetControled(bool var)
@@ -481,6 +535,8 @@ public class Player : RagnarComponent
         gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_BULLETHIT");
         hitPoints -= dmg;
         getHitPartSys.Play();
+
+        GameObject.Find("Quest System").GetComponent<QuestSystem>().damageRecieved = true;
     }
 
     public void PlayAudioClip(string clip)

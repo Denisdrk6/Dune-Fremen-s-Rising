@@ -36,6 +36,7 @@ public class EnemyBullet : RagnarComponent
 		{
 			//Debug.Log(obj.name.ToString());
 			obj.GetComponent<Player>().GetHit(1);
+			obj.GetComponent<Animation>().PlayAnimation("Hit");
 			InternalCalls.RequestDamageFeedback();
 		}
 

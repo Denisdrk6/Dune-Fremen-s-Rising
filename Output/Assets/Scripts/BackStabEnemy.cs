@@ -1,3 +1,4 @@
+using System;
 using RagnarEngine;
 
 public class BackStabEnemy : RagnarComponent
@@ -47,7 +48,7 @@ public class BackStabEnemy : RagnarComponent
 		}
 		if (boss != null)
 		{
-			if ((boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude) < 0.5f)
+			if (Math.Abs(boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude) < 1.5f)
 			{
 				boss.GetComponent<Boss>().GetBackstabbed();
 			}

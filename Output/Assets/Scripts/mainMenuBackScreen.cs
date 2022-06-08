@@ -229,26 +229,7 @@ public class mainMenuBackScreen : RagnarComponent
 		float y = (InternalCalls.GetRegionGame().y / 2);
 		float x = (InternalCalls.GetRegionGame().x / 2);
 		float sum = (lastWindowW - x);
-		pos.Set(-sum + 430, y - 810, 36.1f);
-		optionsControl9.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(-sum + 430, y - 740, 36.1f);
-		optionsControl8.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 750, y - 540, 36.1f);
-		optionsControl14.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 750, y - 610, 36.1f);
-		optionsControl15.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 750, y - 680, 36.1f);
-		optionsControl16.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 750, y - 750, 36.1f);
-		optionsControl17.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(-sum + 750, y - 820, 36.1f);
-		optionsControl18.GetComponent<Transform2D>().position2D = pos;
 		presetText = GameObject.Find("presetText");
 		GameData load = SaveSystem.LoadGameConfig();
 		if (load != null)
@@ -941,6 +922,34 @@ public class mainMenuBackScreen : RagnarComponent
 
 		pos.Set(-sum + 750, y - 470, 36.1f);
 		optionsControl22.GetComponent<Transform2D>().position2D = pos;
+
+
+        //
+        if (!isPlayng)
+        {
+
+        
+			pos.Set(-sum + 150, y - 810, 36.1f);
+			optionsControl9.GetComponent<Transform2D>().position2D = pos;
+
+			pos.Set(-sum + 150, y - 740, 36.1f);
+			optionsControl8.GetComponent<Transform2D>().position2D = pos;
+
+			pos.Set(-sum + 470, y - 540, 36.1f);
+			optionsControl14.GetComponent<Transform2D>().position2D = pos;
+
+			pos.Set(-sum + 470, y - 610, 36.1f);
+			optionsControl15.GetComponent<Transform2D>().position2D = pos;
+
+			pos.Set(-sum + 470, y - 680, 36.1f);
+			optionsControl16.GetComponent<Transform2D>().position2D = pos;
+
+			pos.Set(-sum + 470, y - 750, 36.1f);
+			optionsControl17.GetComponent<Transform2D>().position2D = pos;
+
+			pos.Set(-sum + 470, y - 820, 36.1f);
+			optionsControl18.GetComponent<Transform2D>().position2D = pos;
+		}
 	}
 	void OptionsControlHide()
 	{

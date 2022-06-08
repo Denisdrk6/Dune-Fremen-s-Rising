@@ -76,6 +76,9 @@ namespace RagnarEngine
         extern private void SetIgnoreCollision(Rigidbody other, bool value);
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void EraseTrigger(Rigidbody owner, Rigidbody other);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void SetCollisionType(CollisionType type);
         public extern Vector3 linearVelocity
         {

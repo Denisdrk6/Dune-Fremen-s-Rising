@@ -18,6 +18,7 @@ public class Rock : RagnarComponent
 		gameObject.GetComponent<ParticleSystem>().Play();
 
 		player.GetComponent<Player>().PlayAudioClip("EBOSS_THROWOBJECT");
+		player.GetComponent<Animation>().PlayAnimation("Ability3");
 	}
 
 	private void AimMethod()
@@ -38,6 +39,11 @@ public class Rock : RagnarComponent
 			pos.y += 1.31f;
 			relativePos = newPos - pos;
         }
+
+		Vector3 newForward = relativePos.normalized;
+		double angle = Math.Atan2(newForward.x, newForward.z);
+		Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+		player.GetComponent<Rigidbody>().SetBodyRotation(rot);
 
 		goRB.IgnoreCollision(player, true);
 	}
@@ -64,6 +70,7 @@ public class Rock : RagnarComponent
 			goRB.SetAsStatic();
 
 			GameObject sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition);
+			goRB.IgnoreCollision(sound, true);
 			sound.GetComponent<SoundAreaManager>().stablishedTimer = 2f;
 			sound.GetComponent<SoundAreaManager>().UpdateRadius(7.0f);
 

@@ -66,23 +66,26 @@ public class Barrel : RagnarComponent
 
     public void OnCollision(Rigidbody other)
     {
-        if (other.gameObject.name == "Knife" || other.gameObject.name == "BackStab")
+        if (deathTimer == -1.0f)
         {
-            if (boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude < 2.0f)
+            if ((other.gameObject.name == "Boss" && boss.GetComponent<Boss>().charging) || other.gameObject.name == "Knife" || other.gameObject.name == "BackStab")
             {
-                boss.GetComponent<Boss>().stunnedHits++;
-            }
-            bossComponent.barrelCount--;
-            bossComponent.barrelLocations[barrelIndex].isDestroyed = true;
-            for (int i = 0; i < gameObject.childs.Length; ++i)
-            {
-                if (gameObject.childs[i].name == "BarrelExplosion")
+                if (boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude < 2.0f)
                 {
-                    gameObject.childs[i].GetComponent<ParticleSystem>().Play();
-                    break;
+                    boss.GetComponent<Boss>().stunnedHits++;
                 }
+                bossComponent.barrelCount--;
+                bossComponent.barrelLocations[barrelIndex].isDestroyed = true;
+                for (int i = 0; i < gameObject.childs.Length; ++i)
+                {
+                    if (gameObject.childs[i].name == "BarrelExplosion")
+                    {
+                        gameObject.childs[i].GetComponent<ParticleSystem>().Play();
+                        break;
+                    }
+                }
+                deathTimer = 0.4f;
             }
-            deathTimer = 0.4f;
         }
     }
     void NotifyBoss()

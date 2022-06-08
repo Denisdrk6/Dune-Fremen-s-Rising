@@ -158,7 +158,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 1.0597295761108398,
+                    "Vertical Fov": 0.94633930921554565,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -8.5100669860839844,
@@ -225,8 +225,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -248,7 +248,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -258,7 +259,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "winScren",
-                    "pointer": 413372080,
+                    "pointer": 406519856,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -340,7 +341,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -552.5,
+                        -524,
                         -425,
                         36.099998474121094
                     ],
@@ -356,8 +357,8 @@
                     ],
                     "buttonWidth": 323,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -379,7 +380,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -399,7 +401,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -419,7 +422,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -439,7 +443,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 12,
@@ -471,7 +476,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -543,
+                        -514.5,
                         -427,
                         36.099998474121094
                     ],
@@ -487,8 +492,8 @@
                     ],
                     "buttonWidth": 309,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -510,7 +515,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -551,8 +557,8 @@
                     ],
                     "buttonWidth": 345.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -574,7 +580,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -594,7 +601,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -614,7 +622,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -634,7 +643,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 12,
@@ -682,8 +692,8 @@
                     ],
                     "buttonWidth": 387,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -705,7 +715,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -730,7 +741,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        660,
+                        688.5,
                         -425,
                         36.099998474121094
                     ],
@@ -746,8 +757,8 @@
                     ],
                     "buttonWidth": 407.5,
                     "buttonHeight": 47.5,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -769,7 +780,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -789,7 +801,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -809,7 +822,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -829,7 +843,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 12,
@@ -861,7 +876,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        560,
+                        588.5,
                         -423,
                         36.099998474121094
                     ],
@@ -877,8 +892,8 @@
                     ],
                     "buttonWidth": 372.5,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -900,7 +915,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -964,7 +980,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1028,7 +1045,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1059,14 +1077,14 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.9996955394744873,
+                        -0.049332857131958008,
                         0,
-                        -0.024673886597156525
+                        -0.99878251552581787
                     ],
                     "RotationEditor": [
-                        -0,
-                        0,
-                        -0
+                        -3.1415927410125732,
+                        3.1415927410125732,
+                        -3.1415927410125732
                     ],
                     "Scale": [
                         1.0000288486480713,
@@ -1076,8 +1094,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_highpoly_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_highpoly_normalmap.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -1092,11 +1110,12 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_paul_win__Mesh.001.fbx",
+                    "Path": "Assets\/Resources\/Animations\/char_paul_highpoly_win__Mesh.fbx",
                     "Active": true
                 },
                 {
@@ -1106,7 +1125,7 @@
                     "Animations": [
                         {
                             "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_win__char_paul_win|char_paul_win.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_highpoly_win__char_paul_highpoly_win|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         }
                     ]
@@ -1134,26 +1153,26 @@
                         -24.016841888427734
                     ],
                     "Quaternion": [
-                        0.002341739134863019,
-                        0.99559229612350464,
-                        -0.088994100689888,
-                        -0.029504872858524323
+                        -0.089024700224399567,
+                        0.0019505908712744713,
+                        0.00012116090510971844,
+                        0.99602752923965454
                     ],
                     "RotationEditor": [
-                        0,
-                        0,
-                        0
+                        2.9632725715637207,
+                        3.1415927410125732,
+                        3.141002893447876
                     ],
                     "Scale": [
-                        1.0000510215759277,
+                        1.0000497102737427,
                         0.99999988079071045,
-                        1.000043511390686
+                        1.0000429153442383
                     ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_highpoly_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_highpoly_normalmap.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -1168,11 +1187,12 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_chani_win__Mesh.fbx",
+                    "Path": "Assets\/Resources\/Animations\/char_chani_highpoly_win__Mesh.fbx",
                     "Active": true
                 },
                 {
@@ -1182,7 +1202,7 @@
                     "Animations": [
                         {
                             "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_win__char_chani_win|char_chani_win.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_highpoly_win__char_chani_highpoly_win|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         }
                     ]
@@ -1211,24 +1231,24 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.99702858924865723,
-                        0,
-                        -0.077032431960105896
+                        0.077032223343849182,
+                        -0,
+                        0.99702858924865723
                     ],
                     "RotationEditor": [
                         0,
-                        3.1415927410125732,
+                        0,
                         0
                     ],
                     "Scale": [
-                        1.0000081062316895,
-                        1,
-                        1.0000081062316895
+                        1.1700094938278198,
+                        1.1699999570846558,
+                        1.1700094938278198
                     ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_basecolor.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_highpoly_basecolor.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -1244,11 +1264,12 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_stilgar_win__Mesh.fbx",
+                    "Path": "Assets\/Resources\/Animations\/char_stilgar_highpoly_win__Mesh.fbx",
                     "Active": true
                 },
                 {
@@ -1258,7 +1279,7 @@
                     "Animations": [
                         {
                             "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_win__char_stilgar_win|char_stilgar_win.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_highpoly_win__char_stilgar_highpoly_win|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         }
                     ]
@@ -1320,7 +1341,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1384,7 +1406,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1740,7 +1763,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -248,
+                        -219.5,
                         349,
                         -10.399999618530273
                     ],
@@ -1756,8 +1779,8 @@
                     ],
                     "buttonWidth": 806,
                     "buttonHeight": 175,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1779,7 +1802,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -1843,7 +1867,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1919,7 +1944,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,

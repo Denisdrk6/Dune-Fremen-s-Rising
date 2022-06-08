@@ -519,7 +519,11 @@ void ModuleUI::CleanText(std::string& text)
 				text.replace(i, 2, "ü");
 				continue;
 			}
-			text.replace(i, 2, "í");
+			if ((text[i + 1]) == -83) {
+				text.replace(i, 2, "í");
+				continue;
+			}
+			text.replace(i, 2, "Á");
 		}
 		
 	}

@@ -36,6 +36,7 @@ DropDownComponent::DropDownComponent(GameObject* own)
 		actual = normalMaterial;
 		loadFont(fontPath.c_str());
 		transform->SetButtonHeight(75);
+
 	}
 	//
 	//app->userInterface->loadFont("Library/Fonts/Montserrat-Bold.ttf", &characters, shader, VAO, VBO);
@@ -394,8 +395,17 @@ void DropDownComponent::SetFocusedButtons()
 void DropDownComponent::UpdateButtons(GameObject* auxiliar) 
 {
 	ButtonComponent* auxiliarButton = (ButtonComponent*)auxiliar->GetComponent<ButtonComponent>();
-	/*auxiliarButton->GetButtonText().SetOnlyPosition(float2(auxiliarButton->GetParentPosition().x + auxiliarButton->GetTextPosition().x, auxiliarButton->GetParentPosition().y + auxiliarButton->GetTextPosition().y));*/
-	auxiliarButton->setParent();
+	ComponentTransform2D* auxiliarButtonTrans = (ComponentTransform2D*)auxiliar->GetComponent<ComponentTransform2D>();
+	//auxiliarButton->GetButtonText().SetOnlyPosition(float2(auxiliarButton->GetParentPosition().x + auxiliarButton->GetTextPosition().x, auxiliarButton->GetParentPosition().y + auxiliarButton->GetTextPosition().y));
+	int positionx = auxiliarButtonTrans->position.x;
+	int positiony = auxiliarButtonTrans->position.y;
+	
+
+	float toatalx = 100;
+	float toataly = 100;
+	auxiliarButton->setParent((positionx*0.5f)+ auxiliarButton->GetTextPosition().x, (positiony * 0.5f)+ auxiliarButton->GetTextPosition().y);
+
+
 	if (auxiliarButton->GetState() != State::DISABLED)
 	{
 		if (focusedGameObject == auxiliar)

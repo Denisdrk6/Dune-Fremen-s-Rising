@@ -18,6 +18,7 @@ public class Whistle : RagnarComponent
 		goRB.IgnoreCollision(player, true);
 
 		player.GetComponent<Player>().PlayAudioClip("WPN_WHISTLE");
+		player.GetComponent<Animation>().PlayAnimation("Ability4");
 	}
 	public void Update()
 	{

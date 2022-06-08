@@ -34,6 +34,7 @@ public class UndistractableEnemy : RagnarComponent
     public bool pendingToDelete = false;
     public bool controlled = false;
     public bool returning = false;
+    public bool enterStunner = true;
 
     // Timers
     public float shootCooldown = 0f;
@@ -62,6 +63,11 @@ public class UndistractableEnemy : RagnarComponent
     public bool canLookOut = false;
     int retardedFrames;
 
+    UIText buffCounter;
+    float buffTemp;
+    public GameObject circle;
+    GameObject pointCharacter;
+    Light pointerLight;
     public void Start()
     {
         offset = gameObject.GetSizeAABB();
@@ -104,6 +110,11 @@ public class UndistractableEnemy : RagnarComponent
 
         stunPartSys.Pause();
         retardedFrames = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().retardedFrames;
+
+        buffCounter = GameObject.Find("UIB").GetComponent<UIText>();
+
+        pointCharacter = GameObject.Find("PlayerReminder").childs[3];
+        pointerLight = pointCharacter.GetComponent<Light>();
     }
 
     public void OnCreation()
@@ -146,6 +157,7 @@ public class UndistractableEnemy : RagnarComponent
                         stunPartSys.Pause();
                         stunned = false;
                         stunnedTimer = -1f;
+                        enterStunner = true;
                     }
                 }
 
@@ -164,10 +176,17 @@ public class UndistractableEnemy : RagnarComponent
                 if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
                 {
                     if (agents.CalculatePath(agents.hitPosition).Length > 0)
+                    {
+                        pointCharacter.transform.globalPosition = agents.hitPosition;
+                        pointerLight.intensity = 10;
                         animation.PlayAnimation("Walk");
+                    }
                 }
                 if (agents.MovePath())
+                {
+                    pointerLight.intensity = 0;
                     animation.PlayAnimation("Idle");
+                }
 
                 if (!backstab && Input.GetKey(KeyCode.Z) == KeyState.KEY_REPEAT)
                 {
@@ -184,19 +203,41 @@ public class UndistractableEnemy : RagnarComponent
                 {
                     backstab = false;
                 }
-                if (Input.GetKey(KeyCode.ALPHA1) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA2) == KeyState.KEY_DOWN || Input.GetKey(KeyCode.ALPHA3) == KeyState.KEY_DOWN)
+                buffTemp = controlledCooldown;
+                buffTemp = (float)Math.Round((double)buffTemp, 0);
+                buffCounter.text = buffTemp.ToString();
+
+                if (Input.GetKey(KeyCode.ALPHA1) == KeyState.KEY_DOWN || (Input.GetKey(KeyCode.ALPHA2) == KeyState.KEY_DOWN && players.Length > 1) || (Input.GetKey(KeyCode.ALPHA3) == KeyState.KEY_DOWN && players.Length > 2))
                 {
+                    pointerLight.intensity = 0;
                     controlled = false;
                     returning = true;
+                    gameObject.EraseChild(circle);
+                    buffCounter.text = "";
                 }
+
                 controlledCooldown -= Time.deltaTime;
                 if (controlledCooldown < 0)
                 {
+                    pointerLight.intensity = 0;
                     controlledCooldown = 0f;
+                    buffCounter.text = "";
                     controlled = false;
-                    players[0].GetComponent<Player>().SetControled(true);
+                    gameObject.EraseChild(circle);
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().ChangeCharacter(0);
                     if (waypoints.Count != 0) agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
                     else returning = true;
+                }
+                else if (controlledCooldown < 3)
+                {
+                    float value = circle.GetComponent<Material>().emissiveColor.x;
+                    circle.GetComponent<Material>().emissiveColor = new Vector3(Mathf.PingPongFloat(value, Time.deltaTime * 2, 1, 0.1f, false), 0, 0);
+                }
+
+                //Effect PointerCharacter
+                if (pointerLight.intensity > 0)
+                {
+                    pointerLight.linear = Mathf.PingPongFloat(pointerLight.linear, Time.deltaTime / 5, -2.05f, -2.12f, true);
                 }
             }
         }
@@ -236,6 +277,11 @@ public class UndistractableEnemy : RagnarComponent
                         }
                     }
                     animation.PlayAnimation("Dying");
+                    QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+                    system.hasKilledEnemies = true;
+                    system.killWithPaul = true;
+                    if (system.camouflageActive)
+                        system.enemiesCamouflage++;
                 }
             }
             if (other.gameObject.tag == "Player")
@@ -257,6 +303,11 @@ public class UndistractableEnemy : RagnarComponent
                         }
                     }
                     animation.PlayAnimation("Dying");
+                    QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+                    system.hasKilledEnemies = true;
+                    system.killWithStilgar = true;
+                    if (system.camouflageActive)
+                        system.enemiesCamouflage++;
                 }
             }
             if (other.gameObject.name == "HunterSeeker")
@@ -265,6 +316,11 @@ public class UndistractableEnemy : RagnarComponent
                 {
                     isDying = true;
                     animation.PlayAnimation("Dying");
+                    QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+                    system.hasKilledEnemies = true;
+                    system.killWithChani = true;
+                    if (system.camouflageActive)
+                        system.enemiesCamouflage++;
                 }
             }
         }
@@ -281,6 +337,11 @@ public class UndistractableEnemy : RagnarComponent
                 audioSource.PlayClip("EBASIC_SCREAM");
                 Stun(5f);
                 stunPartSys.Play();
+                if (enterStunner)
+                {
+                    GameObject.Find("Quest System").GetComponent<QuestSystem>().enemiesGrenade++;
+                    enterStunner = false;
+                }
             }
 
 
@@ -298,6 +359,11 @@ public class UndistractableEnemy : RagnarComponent
                     }
                 }
                 animation.PlayAnimation("Dying");
+                QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+                system.hasKilledEnemies = true;
+                system.killWithStilgar = true;
+                if (system.camouflageActive)
+                    system.enemiesCamouflage++;
             }
             if (other.gameObject.name == "Trap")
             {
@@ -306,6 +372,7 @@ public class UndistractableEnemy : RagnarComponent
                 Stun(5f);
                 GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Play();
                 stunPartSys.Play();
+                GameObject.Find("Quest System").GetComponent<QuestSystem>().enemiesTrap++;
             }
         }
     }

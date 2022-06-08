@@ -159,6 +159,11 @@ public class AirEnemy : RagnarComponent
                     audioComponent.PlayClip("EDRONE_GETDAMAGE");
                     deathPartSys.Play();
                     animationComponent.PlayAnimation("Dying");
+                    QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+                    system.hasKilledEnemies = true;
+                    system.killWithPaul = true;
+                    if (system.camouflageActive)
+                        system.enemiesCamouflage++;
                 }
             }
             if (other.gameObject.tag == "Player")
@@ -173,6 +178,11 @@ public class AirEnemy : RagnarComponent
                     audioComponent.PlayClip("EDRONE_GETDAMAGE");
                     deathPartSys.Play();
                     animationComponent.PlayAnimation("Dying");
+                    QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+                    system.hasKilledEnemies = true;
+                    system.killWithStilgar = true;
+                    if (system.camouflageActive)
+                        system.enemiesCamouflage++;
                 }
             }
             if (other.gameObject.name == "HunterSeeker")
@@ -181,6 +191,11 @@ public class AirEnemy : RagnarComponent
                 {
                     isDying = true;
                     animationComponent.PlayAnimation("Dying");
+                    QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+                    system.hasKilledEnemies = true;
+                    system.killWithChani = true;
+                    if (system.camouflageActive)
+                        system.enemiesCamouflage++;
                 }
             }
         }

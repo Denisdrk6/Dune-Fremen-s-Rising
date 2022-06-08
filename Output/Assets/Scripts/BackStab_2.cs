@@ -33,6 +33,13 @@ public class BackStab_2 : RagnarComponent
 		if (selectedEnemy != null && backstabed == false)
 		{
 			backstabed = true;
+
+			Vector3 newForward = selectedEnemy.transform.globalPosition - player.transform.globalPosition;
+			double angle = Math.Atan2(newForward.x, newForward.z);
+			Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+			player.GetComponent<Rigidbody>().SetBodyRotation(rot);
+			player.GetComponent<Animation>().PlayAnimation("Ability1");
+
 			player.GetComponent<Player>().PlayAudioClip("WPN_CRYSKNIFESTAB");
 			//Vector3 behind = selectedEnemy.transform.globalPosition - (selectedEnemy.transform.forward * 1);
 			//player.GetComponent<Rigidbody>().SetBodyPosition(behind);
@@ -58,12 +65,24 @@ public class BackStab_2 : RagnarComponent
 				}
 			}
 			selectedEnemy.GetComponent<Animation>().PlayAnimation("Dying");
+			QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
+			system.hasKilledEnemies = true;
+			system.killWithPaul = true;
+			if (system.camouflageActive)
+				system.enemiesCamouflage++;
 		}
 		if (boss != null)
 		{
+			Vector3 newForward = boss.transform.globalPosition - player.transform.globalPosition;
+			double angle = Math.Atan2(newForward.x, newForward.z);
+			Quaternion rot = new Quaternion(0, (float)(1 * Math.Sin(angle / 2)), 0, (float)Math.Cos(angle / 2));
+			player.GetComponent<Rigidbody>().SetBodyRotation(rot);
+			player.GetComponent<Animation>().PlayAnimation("Ability1");
+
 			player.GetComponent<Player>().PlayAudioClip("WPN_CRYSKNIFESTAB");
-			if ((boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude) < 0.5f)
+			if (Math.Abs(boss.transform.globalPosition.magnitude - gameObject.transform.globalPosition.magnitude) < 1.5f)
 			{
+				Debug.Log("Backstabbing");
 				boss.GetComponent<Boss>().GetBackstabbed();
 			}
 		}

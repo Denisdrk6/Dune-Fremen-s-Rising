@@ -158,7 +158,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 100,
-                    "Vertical Fov": 1.0597295761108398,
+                    "Vertical Fov": 0.94633930921554565,
                     "Horizontal Fov": 1.5707963705062866,
                     "Camera Pos": [
                         -8.7986268997192383,
@@ -225,8 +225,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -248,7 +248,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -258,7 +259,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "loseScreen",
-                    "pointer": 484084760,
+                    "pointer": 391337112,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -340,7 +341,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -553,
+                        -524.5,
                         -320,
                         36.099998474121094
                     ],
@@ -356,8 +357,8 @@
                     ],
                     "buttonWidth": 323,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -379,7 +380,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -399,7 +401,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -419,7 +422,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -439,7 +443,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 12,
@@ -471,7 +476,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -543,
+                        -514.5,
                         -322.5,
                         36.099998474121094
                     ],
@@ -487,8 +492,8 @@
                     ],
                     "buttonWidth": 309,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -510,7 +515,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -535,7 +541,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -553,
+                        -524.5,
                         -210,
                         36.099998474121094
                     ],
@@ -551,8 +557,8 @@
                     ],
                     "buttonWidth": 323,
                     "buttonHeight": 47,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -574,7 +580,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -594,7 +601,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -614,7 +622,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 2,
@@ -634,7 +643,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 12,
@@ -666,7 +676,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -543,
+                        -514.5,
                         -212.5,
                         36.099998474121094
                     ],
@@ -682,8 +692,8 @@
                     ],
                     "buttonWidth": 309,
                     "buttonHeight": 44,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": false
                 },
@@ -705,7 +715,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -769,7 +780,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -796,7 +808,7 @@
                     "Position": [
                         -6.3687982559204102,
                         -0.49311873316764832,
-                        -19.400344848632812
+                        -19.400344848632813
                     ],
                     "Quaternion": [
                         0.024275230243802071,
@@ -833,7 +845,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -863,26 +876,26 @@
                         -23.999420166015625
                     ],
                     "Quaternion": [
-                        0.046011310070753098,
-                        0.9706999659538269,
-                        -0.013597587123513222,
-                        0.23548540472984314
+                        -0.15342007577419281,
+                        0.77790188789367676,
+                        0.58430737257003784,
+                        0.17296198010444641
                     ],
                     "RotationEditor": [
-                        -0,
-                        -0.5253441333770752,
-                        0.095993109047412872
+                        3.0875599384307861,
+                        0.47340568900108337,
+                        -3.0338280200958252
                     ],
                     "Scale": [
-                        1.0000288486480713,
-                        1,
-                        1.0000288486480713
+                        1.0000882148742676,
+                        1.0000066757202148,
+                        1.0000734329223633
                     ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_highpoly_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_highpoly_normalmap.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -897,11 +910,12 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_paul_lose__Mesh.001.fbx",
+                    "Path": "Assets\/Resources\/Animations\/char_paul_highpoly_lose__Mesh.001.fbx",
                     "Active": true
                 },
                 {
@@ -911,7 +925,7 @@
                     "Animations": [
                         {
                             "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_lose__char_paul_lose|char_paul_lose.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_highpoly_lose__char_paul_highpoly_lose|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         }
                     ]
@@ -939,10 +953,10 @@
                         -25.299999237060547
                     ],
                     "Quaternion": [
-                        -0.059357590973377228,
-                        0.74452239274978638,
-                        -0.066348560154438019,
-                        0.66163504123687744
+                        0.030203027650713921,
+                        0.88127464056015015,
+                        -0.12875628471374512,
+                        0.45372307300567627
                     ],
                     "RotationEditor": [
                         0,
@@ -950,15 +964,15 @@
                         0
                     ],
                     "Scale": [
-                        1.0000536441802979,
+                        1.0000675916671753,
                         1,
-                        1.0000462532043457
+                        1.0000612735748291
                     ]
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_highpoly_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_highpoly_normalmap.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -973,7 +987,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1016,13 +1031,13 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.99435293674468994,
+                        -0.10612443834543228,
                         0,
-                        0.1061243936419487
+                        0.99435293674468994
                     ],
                     "RotationEditor": [
                         0,
-                        3.1415927410125732,
+                        0,
                         0
                     ],
                     "Scale": [
@@ -1033,7 +1048,7 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_basecolor.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_stilgar_highpoly_basecolor.png",
                     "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
@@ -1049,11 +1064,12 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_stilgar_lose__Mesh.fbx",
+                    "Path": "Assets\/Resources\/Animations\/char_stilgar_highpoly_lose__Mesh.fbx",
                     "Active": true
                 },
                 {
@@ -1063,7 +1079,7 @@
                     "Animations": [
                         {
                             "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_lose__char_stilgar_lose|char_stilgar_lose.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_highpoly_lose__char_stilgar_highpoly_lose|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         }
                     ]
@@ -1088,7 +1104,7 @@
                     "Position": [
                         97.659187316894531,
                         -0.12999999523162842,
-                        24.827041625976562
+                        24.827041625976563
                     ],
                     "Quaternion": [
                         0,
@@ -1125,7 +1141,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1189,7 +1206,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1545,7 +1563,7 @@
                     "Active": true,
                     "Type": 19,
                     "Position": [
-                        -248,
+                        -219.5,
                         339.5,
                         -10.399999618530273
                     ],
@@ -1561,8 +1579,8 @@
                     ],
                     "buttonWidth": 806,
                     "buttonHeight": 175,
-                    "lastButtonWidth": 1353,
-                    "lastButtonHeight": 792.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1584,7 +1602,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 13,
@@ -1648,7 +1667,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,
@@ -1724,7 +1744,8 @@
                         0,
                         0,
                         0
-                    ]
+                    ],
+                    "Color Multiplier": 1
                 },
                 {
                     "Type": 1,

@@ -32,9 +32,7 @@ public:
 	State GetState() { return state; };
 	void SetState(int newState) {state=(State)newState; }; 
 		
-	void setParent() {
-		buttonText.SetOnlyPosition(float2(GetParentPosition().x + textPos.x, GetParentPosition().y + textPos.y));
-	}
+	void setParent(float x,float y);
 		
 	inline Text GetButtonText() { return buttonText; };
 	inline char* GetText() { return text; };
@@ -81,6 +79,7 @@ public:
 	uint VAO = 0, VBO = 0;
 	std::map<char, Character> characters;
 	Shadert* shader = nullptr;
+	ComponentTransform2D* transform;
 private:
 	bool visualDisabled = false;
 	float alpha = 1.0f;
@@ -98,5 +97,5 @@ private:
 	char text[64] = "Button";
 	float fontScale = 1;
 
-	ComponentTransform2D* transform;
+	
 };

@@ -89,7 +89,7 @@ public class Level_1 : RagnarComponent
             prefabPath = "Rock",
             transformY = 1.15f,
             intensity = 1.250f,
-            constant = 1.350f,
+            constant = 2.5f,
             linear = -0.172f,
             quadratic = 0f,
             charges = -1,
