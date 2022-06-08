@@ -14,11 +14,15 @@ public class Cinematic_1 : RagnarComponent
     GameObject boss;
     Animation bossA;
     GameObject  Enemy1;
-    Animation   EnemyA1;
     GameObject  Enemy2;
+    GameObject  Fremen;
+    //GameObject  Enemy3;
+
+    Animation   EnemyA1;
     Animation   EnemyA2;
-    GameObject  Enemy3;
-    Animation   EnemyA3;
+    Animation  FremenA;
+
+    //Animation   EnemyA3;
 
     public int IdLine = 0;
     enum CinematicState
@@ -38,19 +42,21 @@ public class Cinematic_1 : RagnarComponent
         bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
 
         boss = GameObject.Find("Boss");
-        //paulAnimation.PlayAnimation("Idle");
-        Enemy1 = GameObject.Find("BEnemy1");
-        Enemy2 = GameObject.Find("BEnemy2");
-        Enemy3 = GameObject.Find("BEnemy3");
+        Enemy1 = GameObject.Find("Enemy1");
+        Enemy2 = GameObject.Find("Enemy2");
+        Fremen = GameObject.Find("Fremen");
+        //Enemy3 = GameObject.Find("BEnemy3");
+
         bossA   = boss.GetComponent<Animation>();
         EnemyA1 = Enemy1.GetComponent<Animation>();
         EnemyA2 = Enemy2.GetComponent<Animation>();
-        EnemyA3 = Enemy3.GetComponent<Animation>();
+        FremenA = Fremen.GetComponent<Animation>();
+        //EnemyA3 = Enemy3.GetComponent<Animation>();
 
-        bossA.PlayAnimation("Talk");
-        EnemyA1.PlayAnimation("Talk");
-        EnemyA2.PlayAnimation("Talk");
-        EnemyA3.PlayAnimation("Talk");
+        bossA.PlayAnimation("Idle");
+        EnemyA1.PlayAnimation("Idle");
+        EnemyA2.PlayAnimation("Idle");
+        FremenA.PlayAnimation("Idle");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
@@ -100,9 +106,14 @@ public class Cinematic_1 : RagnarComponent
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
             case 0:
-
+                Animation anim = GameObject.Find("Fremen").GetComponent<Animation>();
+                anim.PlayAnimation("Talk");
+                Debug.Log("Habla");
                 break;
             case 1:
+                Animation anim2 = GameObject.Find("Fremen").GetComponent<Animation>();
+                anim2.PlayAnimation("Idle");
+                Debug.Log("deja de hablar");
 
                 break;
             case 2:
@@ -112,6 +123,12 @@ public class Cinematic_1 : RagnarComponent
 
                 break;
             case 4:
+                Animation anim3 = GameObject.Find("Enemy1").GetComponent<Animation>();
+                anim3.PlayAnimation("Shoot");
+
+                Animation anim4 = GameObject.Find("Fremen").GetComponent<Animation>();
+                anim4.PlayAnimation("Death");
+                Debug.Log("Se muere");
 
                 break;
             case 5:
@@ -130,5 +147,7 @@ public class Cinematic_1 : RagnarComponent
     {
         IdLine = line;
         state = CinematicState.ANIMATIONS;
+        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+
     }
 }
