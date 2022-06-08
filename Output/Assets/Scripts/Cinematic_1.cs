@@ -23,7 +23,7 @@ public class Cinematic_1 : RagnarComponent
     Animation  FremenA;
 
     //Animation   EnemyA3;
-
+    bool shoot;
     public int IdLine = 0;
     enum CinematicState
     {
@@ -63,7 +63,7 @@ public class Cinematic_1 : RagnarComponent
         //-----------
         state = CinematicState.FIRST;
         //-----------
-
+        shoot = false;
     }
 
     public void Update()
@@ -78,7 +78,15 @@ public class Cinematic_1 : RagnarComponent
                 break;
             case CinematicState.TRANSITION:
                 //Aqui no pasara nada
-
+                
+                if (shoot)
+                {
+                    if (EnemyA1.HasFinished())
+                    {
+                        shoot = false;
+                        EnemyA1.PlayAnimation("Idle");
+                    }
+                }
                 break;
             case CinematicState.ANIMATIONS:
 
@@ -96,11 +104,12 @@ public class Cinematic_1 : RagnarComponent
     {
         //var1: ID del dialogo que se hara en la cinematica(variable arriba)
         //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
-        dialogues.SetIDDialogue(IdDialogue, "build");
+        dialogues.SetIDDialogue(IdDialogue, "Cinematic_2");
     }
 
     private void Animations()
     {
+
         switch (IdLine)
         {   // EL dialogo puede tener mas o menos lineas
             // Tened en cuenta que por aqui solo pasara...
@@ -123,9 +132,8 @@ public class Cinematic_1 : RagnarComponent
 
                 break;
             case 4:
-                Animation anim3 = GameObject.Find("Enemy1").GetComponent<Animation>();
-                anim3.PlayAnimation("Shoot");
-
+                EnemyA1.PlayAnimation("Shoot");
+                shoot = true;
                 Animation anim4 = GameObject.Find("Fremen").GetComponent<Animation>();
                 anim4.PlayAnimation("Death");
                 Debug.Log("Se muere");
@@ -147,7 +155,5 @@ public class Cinematic_1 : RagnarComponent
     {
         IdLine = line;
         state = CinematicState.ANIMATIONS;
-        Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-
     }
 }
