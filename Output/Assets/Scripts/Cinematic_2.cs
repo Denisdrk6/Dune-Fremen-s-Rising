@@ -38,7 +38,6 @@ public class Cinematic_2 : RagnarComponent
         chani = GameObject.Find("Player_2");
 
         GameObject.Find("WalkParticles").GetComponent<ParticleSystem>().Pause();
-        GameObject.Find("RunParticles").GetComponent<ParticleSystem>().Pause();
 
         GameObject.Find("WalkParticles_2").GetComponent<ParticleSystem>().Pause();
         walkPartSys = GameObject.Find("RunParticles_2").GetComponent<ParticleSystem>();

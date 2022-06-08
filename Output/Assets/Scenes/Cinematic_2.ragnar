@@ -29,20 +29,20 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -33.040000915527344,
+                        -17.893613815307617,
                         -25.799999237060547,
-                        199.02999877929688
+                        197.14108276367188
                     ],
                     "Quaternion": [
                         0,
-                        0.64758259057998657,
+                        0.88261687755584717,
                         0,
-                        0.76199531555175781
+                        0.4700930118560791
                     ],
                     "RotationEditor": [
-                        -0,
-                        1.4088157415390015,
-                        -0
+                        -3.1415927410125732,
+                        0.97879225015640259,
+                        -3.1415927410125732
                     ],
                     "Scale": [
                         1.0000261068344116,
@@ -68,13 +68,13 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -4.57763671875e-05,
-                        44.640975952148438,
-                        -40.582645416259766
+                        0.0001068115234375,
+                        79.417709350585938,
+                        -72.198051452636719
                     ],
                     "Quaternion": [
                         0.34202015399932861,
-                        -6.7676104720248986e-09,
+                        -9.5708507785730035e-09,
                         0,
                         0.93969273567199707
                     ],
@@ -84,7 +84,7 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142100811004639,
+                        1.4142099618911743,
                         1.0000002384185791,
                         1.0000004768371582
                     ]
@@ -95,26 +95,26 @@
                     "Vertical Fov": 0.41793009638786316,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -73.09246826171875,
-                        18.840976715087891,
-                        192.48497009277344
+                        -77.806915283203125,
+                        53.617710113525391,
+                        237.43037414550781
                     ],
                     "Type": 3,
-                    "Zoom": 18,
+                    "Zoom": -15,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
                     "Lock": false,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -33.040000915527344,
+                        -17.893613815307617,
                         -25.799999237060547,
-                        199.02999877929688
+                        197.14108276367188
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 80.719169616699219,
+                    "Horizontal Angle": 123.91933441162109,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -273,7 +273,7 @@
                         0,
                         0.98829638957977295,
                         0,
-                        0.15254592895507813
+                        0.15254592895507812
                     ],
                     "RotationEditor": [
                         0,
@@ -336,7 +336,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164063,
+                        0.92880630493164062,
                         0,
                         0.37056559324264526
                     ],
@@ -466,7 +466,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164063,
+                        0.92880630493164062,
                         0,
                         0.37056559324264526
                     ],
@@ -726,7 +726,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164063,
+                        0.92880630493164062,
                         0,
                         0.37056559324264526
                     ],
@@ -1567,7 +1567,7 @@
                     "Position": [
                         -62.699806213378906,
                         0,
-                        162.44302368164063
+                        162.44302368164062
                     ],
                     "Quaternion": [
                         0,
@@ -1642,1130 +1642,6 @@
                     "LinearDamping": 0,
                     "AngularDamping": 0,
                     "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 2021177439,
-            "Parent UUID": 417174774,
-            "Name": "Player",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
-            "tag": "Player",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -47.317012786865234,
-                        0,
-                        194.67399597167969
-                    ],
-                    "Quaternion": [
-                        0,
-                        -0.68342351913452148,
-                        0,
-                        0.73002219200134277
-                    ],
-                    "RotationEditor": [
-                        -0,
-                        0,
-                        -0
-                    ],
-                    "Scale": [
-                        1.000001072883606,
-                        1,
-                        1.000001072883606
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_paul_walk__Malla.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "Current Anim": "CorpseRun",
-                    "Animations": [
-                        {
-                            "State": "Walk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_walk__Armature|Armature|char_paul_walk|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__Armature|Armature|char_paul_idle|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Run",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_run__char_paul_run|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Crouch",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouch__Armature|Armature|char_paul_crouch|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Death",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_dying__Armature|Armature|char_paul_dying|BaseLayer.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "CrouchWalk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouchwalk__Armature|Armature|char_paul_crouchwalking|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "CorpsePick",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpseup__char_paul_corpseup|char_paul_corpsecarry|char_paul_corpsecarry|Armature|mixamo.com.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "CorpseDrop",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsedown__char_paul_corpsedown|char_paul_corpsedown|char_paul_corpsedown|char_paul_corpsecarry.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "CorpseCarry",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsecarry__char_paul_corpsecarry|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "CorpseWalk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsewalk__char_paul_corpsewalk|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "CorpseRun",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpserun__char_paul_corpserun|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
-                        }
-                    ]
-                },
-                {
-                    "Type": 5,
-                    "Volume": 50,
-                    "Pitch": 0,
-                    "Mute": false,
-                    "AudioClips": [
-                        {
-                            "0": "WEAPONTHROWINGKNIFETHROW"
-                        },
-                        {
-                            "1": "PLAYERDEATH"
-                        },
-                        {
-                            "2": "THROWROCK"
-                        },
-                        {
-                            "3": "FOOTSTEPS"
-                        }
-                    ]
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 2,
-                    "Radius": 0.30000001192092896,
-                    "Height": 1.6000000238418579,
-                    "Gravity": true,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "fActivation": true,
-                    "Mass": 60,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true
-                }
-            ]
-        },
-        {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "WalkParticles",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -47.317012786865234,
-                        0,
-                        194.67399597167969
-                    ],
-                    "MaxDuration": 0,
-                    "Looping": true,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 1,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.52000081539154053,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0.0099999997764825821,
-                                0.004999999888241291,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.5,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 1,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.66400057077407837,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                -0.0099999997764825821,
-                                0.004999999888241291,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.5,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91764706373214722,
-                                        0.60000002384185791,
-                                        0.18431372940540314,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.9843137264251709,
-                                        0.61568629741668701,
-                                        0.25098040699958801,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "RunParticles",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.0065307985059916973,
-                        -0.011444180272519588,
-                        -0.14975264668464661
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -47.167156219482422,
-                        -0.011444180272519588,
-                        194.670654296875
-                    ],
-                    "MaxDuration": 0,
-                    "Looping": true,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 3,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.17333331704139709,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0.0030000000260770321,
-                                0.0020000000949949026,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.69999998807907104,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 3,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.31733334064483643,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                -0.0030000000260770321,
-                                0.0020000000949949026,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.69999998807907104,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91764706373214722,
-                                        0.60000002384185791,
-                                        0.18431372940540314,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.9843137264251709,
-                                        0.61568629741668701,
-                                        0.25098040699958801,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 2021177439,
-            "Parent UUID": 417174774,
-            "Name": "Player_2",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
-            "tag": "Player",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -48.767284393310547,
-                        3.167561226291582e-05,
-                        193.82933044433594
-                    ],
-                    "Quaternion": [
-                        0,
-                        0.4138224720954895,
-                        0,
-                        0.91035759449005127
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.0000029802322388,
-                        1,
-                        1.0000029802322388
-                    ]
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 1,
-                    "Path": "Assets\/Resources\/Animations\/char_chani_crouchshot__Malla.fbx",
-                    "Active": true
-                },
-                {
-                    "Type": 9,
-                    "Active": true,
-                    "Current Anim": "CrouchShoot",
-                    "Animations": [
-                        {
-                            "State": "Walk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_walk__Armature|Armature|char_chani_walk|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_idle__Armature|Armature|char_chani_idle|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Shoot",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_shot__Armature|Armature|char_chani_shot|BaseLayer.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "Crouch",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouch__Armature|Armature|char_chani_crouch|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "Death",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_die__Armature|Armature|char_chani_dying|BaseLayer.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "CrouchWalk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchwalk__Armature|Armature|char_chani_crouchwalk|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
-                            "State": "CrouchShoot",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchshot__Armature|Armature|char_chani_crouchshot|BaseLayer.fbx",
-                            "Loop": false
-                        }
-                    ]
-                },
-                {
-                    "Type": 5,
-                    "Volume": 50,
-                    "Pitch": 0,
-                    "Mute": false,
-                    "AudioClips": [
-                        {
-                            "0": "WEAPONCRYSKNIFESTAB"
-                        },
-                        {
-                            "1": "PLAYERDEATH"
-                        },
-                        {
-                            "2": "WEAPONCAMOUFLAGEACTIVATE"
-                        },
-                        {
-                            "3": "FOOTSTEPS"
-                        }
-                    ]
-                },
-                {
-                    "Type": 11,
-                    "CollisionType": 2,
-                    "Radius": 0.30000001192092896,
-                    "Height": 1.6000000238418579,
-                    "Gravity": true,
-                    "Kinematic": false,
-                    "Trigger": false,
-                    "fActivation": true,
-                    "Mass": 60,
-                    "Friction": 1,
-                    "Restitution": 0.20000000298023224,
-                    "MovementConstraint": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "RotationConstraint": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "SizeConstraint": 0,
-                    "LinearDamping": 0,
-                    "AngularDamping": 0,
-                    "Active": true
-                },
-                {
-                    "Type": 6,
-                    "Active": true
-                },
-                {
-                    "Type": 20,
-                    "Active": true,
-                    "Radius": 0.30000001192092896,
-                    "Height": 2,
-                    "StopHeight": 0.89999997615814209,
-                    "MaxSlope": 45,
-                    "Speed": 6,
-                    "AngularSpeed": 180,
-                    "Acceleration": 1,
-                    "StoppingDistance": 0,
-                    "PathType": 1,
-                    "NumPolys": 0,
-                    "NumStraight": 0,
-                    "NumSmooth": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "WalkParticles_2",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -48.767284393310547,
-                        3.167561226291582e-05,
-                        193.82933044433594
-                    ],
-                    "MaxDuration": 0,
-                    "Looping": true,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 1,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.18400079011917114,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0.0099999997764825821,
-                                0.004999999888241291,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.5,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 1,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 1,
-                            "Emitter: Current Timer": 0.32800081372261047,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                -0.0099999997764825821,
-                                0.004999999888241291,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.5,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91764706373214722,
-                                        0.60000002384185791,
-                                        0.18431372940540314,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.9843137264251709,
-                                        0.61568629741668701,
-                                        0.25098040699958801,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "UUID": 1863195749,
-            "Parent UUID": 2021177439,
-            "Name": "RunParticles_2",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0.0065307985059916973,
-                        -0.011444180272519588,
-                        -0.14975264668464661
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -48.875823974609375,
-                        -0.011412505060434341,
-                        193.7259521484375
-                    ],
-                    "MaxDuration": 0,
-                    "Looping": true,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 3,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.15733331441879272,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0.0030000000260770321,
-                                0.0020000000949949026,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.69999998807907104,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 100,
-                            "Emitter: Particles Per Second": 3,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.3333333432674408,
-                            "Emitter: Current Timer": 0.30133333802223206,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                -0.0030000000260770321,
-                                0.0020000000949949026,
-                                -0.0099999997764825821
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 0.69999998807907104,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.10000000149011612,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91764706373214722,
-                                        0.60000002384185791,
-                                        0.18431372940540314,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.9843137264251709,
-                                        0.61568629741668701,
-                                        0.25098040699958801,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                }
-                            ]
-                        }
-                    ]
                 }
             ]
         },
@@ -2939,12 +1815,12 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_2",
-                    "pointer": 614971600,
+                    "pointer": 550606072,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
                     "bands": 0,
-                    "IdDialogue": 0,
+                    "IdDialogue": 1,
                     "IdLine": 0
                 }
             ]
@@ -2989,7 +1865,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 614975400,
+                    "pointer": 550609264,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -3100,6 +1976,1058 @@
                         1,
                         1,
                         1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417174774,
+            "Name": "Player",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -47.542354583740234,
+                        0,
+                        194.66761779785156
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.75042712688446045,
+                        0,
+                        0.66095322370529175
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1.0000019073486328,
+                        1,
+                        1.0000019073486328
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_paul_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_paul_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_paul_walk__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Ability2",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__char_paul_idle|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_walk__char_paul_walk|char_paul_walk|char_paul_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_run__char_paul_run|Armature.001|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Crouch",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouchidle__char_paul_crouchidle|char_paul_crouchidle|char_paul_crouchidle|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CrouchWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouchwalk__char_paul_crouchwalk|Armature.001|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseCarry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsecarry__char_paul_corpsecarry|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsewalk__char_paul_corpsewalk|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseRun",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpserun__char_paul_corpserun|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpsePick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpseup__char_paul_corpseup|char_paul_corpseup|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CorpseDrop",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsedown__char_paul_corpsedown|char_paul_corpsedown|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Hit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_hit__char_paul_hit|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Death",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_die__Armature|Armature|char_paul_dying|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_talk__Armature|Armature.001|char_paul_run|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "NoSignal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_nosignal__char_paul_nosignal|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_throwknife__char_paul_throwknife|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability3",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_throwstone__char_paul_throwstone|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_unsealthknife__char_paul_unsealthknife|Armature.001|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability1",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_stab__char_paul_stab|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability2",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_talk__Armature|Armature.001|char_paul_run|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "WEAPONTHROWINGKNIFETHROW"
+                        },
+                        {
+                            "1": "PLAYERDEATH"
+                        },
+                        {
+                            "2": "THROWROCK"
+                        },
+                        {
+                            "3": "FOOTSTEPS"
+                        }
+                    ]
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 60,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1863195749,
+            "Parent UUID": 2021177439,
+            "Name": "WalkParticles",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.1365548372268677,
+                        1.1365548372268677,
+                        1.1365548372268677
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        -47.542354583740234,
+                        0,
+                        194.66761779785156
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.52000081539154053,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91666668653488159,
+                                        0.59888887405395508,
+                                        0.18333332240581512,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.98333334922790527,
+                                        0.61731487512588501,
+                                        0.25129631161689758,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.66400057077407837,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                -0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91764706373214722,
+                                        0.60000002384185791,
+                                        0.18431372940540314,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.9843137264251709,
+                                        0.61568629741668701,
+                                        0.25098040699958801,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417174774,
+            "Name": "Player_2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
+            "tag": "Player",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -48.801094055175781,
+                        0,
+                        193.89120483398438
+                    ],
+                    "Quaternion": [
+                        0,
+                        0.45037052035331726,
+                        0,
+                        0.89284175634384155
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.0000009536743164,
+                        1,
+                        1.0000009536743164
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/char_chani_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/char_chani_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/char_chani_crouchshot__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Ability2",
+                    "Animations": [
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_idle__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_walk__char_chani_walk|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_run__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Crouch",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchidle__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CrouchWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchwalk__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseCarry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpsecarry__char_chani_corpsecarry|Armature|Armature|Armature|Armature|Armature|Armature|Armature|.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpsewalk__char_chani_corpsewalk|char_chani_corpsewalk|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseRun",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpserun__char_chani_corpserun|char_chani_corpserun|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpsePick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpseup__char_chani_corpseup|Armature|Armature|Armature|Armature|Armature|Armature|Armature|.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CorpseDrop",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpsedown__char_chani_corpsedown|Armature|char_chani_corpsedown|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Hit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_hit__char_chani_hit|Armature|char_chani_hit|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Death",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_die__Armature|Armature|char_chani_dying|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_talk__char_chani_talk|Armature|char_chani_talk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "NoSignal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_nosignal__char_chani_no|Armature|char_chani_no|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability3Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_sgrenadeact__char_chani_sgrenadeact|Armature|char_chani_sgrenadeact|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability3",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_hscontrol__char_chani_hscontrol|Armature|char_chani_hscontrol|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Ability2",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_camouflage__char_chani_camouflage|Armature|char_chani_camouflage|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability1",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_stab__char_chani_stab|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_sgrenadeact__char_chani_sgrenadeact|Armature|char_chani_sgrenadeact|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_sgrenadethrow__char_chani_sgrenadethrow|Armature|char_chani_sgrenadethrow|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "WEAPONCRYSKNIFESTAB"
+                        },
+                        {
+                            "1": "PLAYERDEATH"
+                        },
+                        {
+                            "2": "WEAPONCAMOUFLAGEACTIVATE"
+                        },
+                        {
+                            "3": "FOOTSTEPS"
+                        }
+                    ]
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 60,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 6,
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1863195749,
+            "Parent UUID": 2021177439,
+            "Name": "WalkParticles_2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.1365548372268677,
+                        1.1365548372268677,
+                        1.1365548372268677
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        -48.801094055175781,
+                        0,
+                        193.89120483398438
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.18400079011917114,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91666668653488159,
+                                        0.59888887405395508,
+                                        0.18333332240581512,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.98333334922790527,
+                                        0.61731487512588501,
+                                        0.25129631161689758,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 1,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 1,
+                            "Emitter: Current Timer": 0.32800081372261047,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                -0.0099999997764825821,
+                                0.004999999888241291,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.5,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91764706373214722,
+                                        0.60000002384185791,
+                                        0.18431372940540314,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.9843137264251709,
+                                        0.61568629741668701,
+                                        0.25098040699958801,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1863195749,
+            "Parent UUID": 2021177439,
+            "Name": "RunParticles_2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": true,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0.0065307985059916973,
+                        -0.011444180272519588,
+                        -0.14975264668464661
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1.1365548372268677,
+                        1.1365548372268677,
+                        1.1365548372268677
+                    ]
+                },
+                {
+                    "Type": 21,
+                    "Active": true,
+                    "Size": [
+                        10,
+                        10,
+                        10
+                    ],
+                    "Offset": [
+                        -48.917648315429688,
+                        -0.011444180272519588,
+                        193.79695129394531
+                    ],
+                    "MaxDuration": 0,
+                    "Looping": true,
+                    "Emitters": [
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 3,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.3333333432674408,
+                            "Emitter: Current Timer": 0.15733331441879272,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                0.0030000000260770321,
+                                0.0020000000949949026,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.69999998807907104,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91666668653488159,
+                                        0.59888887405395508,
+                                        0.18333332240581512,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.98333334922790527,
+                                        0.61731487512588501,
+                                        0.25129631161689758,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        },
+                        {
+                            "Emitter: Max Particles": 100,
+                            "Emitter: Particles Per Second": 3,
+                            "Emitter: Is Active": true,
+                            "Emitter: To Delete": false,
+                            "Emitter: Timer": 0.3333333432674408,
+                            "Emitter: Current Timer": 0.30133333802223206,
+                            "Emitter: Is Cubical": false,
+                            "Cubical: Spread on X": 2,
+                            "Cubical: Spread on Y": 2,
+                            "Cubical: Spread on Z": 2,
+                            "Particle Reference Position": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Velocity": [
+                                -0.0030000000260770321,
+                                0.0020000000949949026,
+                                -0.0099999997764825821
+                            ],
+                            "Particle Reference Acceleration": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Direction": [
+                                0,
+                                0,
+                                0
+                            ],
+                            "Particle Reference Color Begin": [
+                                1,
+                                0,
+                                0,
+                                1
+                            ],
+                            "Particle Reference Size Begin": 0.5,
+                            "Particle Reference Lifetime": 0.69999998807907104,
+                            "Particle Reference Rotation Amount": 0,
+                            "Loop Timer": 1,
+                            "Tiles: X": 1,
+                            "Tiles: Y": 1,
+                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_smoke&sand.png",
+                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
+                            "Effects": [
+                                {
+                                    "PES: Start size": 0.10000000149011612,
+                                    "PES: End size": 0.5,
+                                    "Effect Type": 2
+                                },
+                                {
+                                    "PEC: Start color": [
+                                        0.91764706373214722,
+                                        0.60000002384185791,
+                                        0.18431372940540314,
+                                        1
+                                    ],
+                                    "PEC: End color": [
+                                        0.9843137264251709,
+                                        0.61568629741668701,
+                                        0.25098040699958801,
+                                        0.39215686917304993
+                                    ],
+                                    "Effect Type": 3
+                                }
+                            ]
+                        }
                     ]
                 }
             ]
