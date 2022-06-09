@@ -22,7 +22,9 @@ public class Cinematic_1 : RagnarComponent
     Animation   EnemyA2;
     Animation  FremenA;
 
-    //Animation   EnemyA3;
+    AudioSource SoundEfects;
+    
+    
     bool shoot;
     public int IdLine = 0;
     enum CinematicState
@@ -52,11 +54,13 @@ public class Cinematic_1 : RagnarComponent
         EnemyA2 = Enemy2.GetComponent<Animation>();
         FremenA = Fremen.GetComponent<Animation>();
         //EnemyA3 = Enemy3.GetComponent<Animation>();
-
+        
         bossA.PlayAnimation("Idle");
-        EnemyA1.PlayAnimation("Idle");
-        EnemyA2.PlayAnimation("Idle");
+        EnemyA1.PlayAnimation("Talk");
+        EnemyA2.PlayAnimation("Talk");
         FremenA.PlayAnimation("Idle");
+
+        SoundEfects = Enemy1.GetComponent<AudioSource>();
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
@@ -122,7 +126,9 @@ public class Cinematic_1 : RagnarComponent
             case 1:
                 Animation anim2 = GameObject.Find("Fremen").GetComponent<Animation>();
                 anim2.PlayAnimation("Idle");
-                Debug.Log("deja de hablar");
+                Animation anim5 = GameObject.Find("Boss").GetComponent<Animation>();
+                anim5.PlayAnimation("Talk");
+                Debug.Log("Habla Boss");
 
                 break;
             case 2:
@@ -132,24 +138,35 @@ public class Cinematic_1 : RagnarComponent
 
                 break;
             case 4:
-                EnemyA1.PlayAnimation("Shoot");
+                EnemyA1.PlayAnimation("Idle");
                 shoot = true;
                 Animation anim4 = GameObject.Find("Fremen").GetComponent<Animation>();
                 anim4.PlayAnimation("Death");
+
+                // NO SE REPRODUCIR AUDIOS AYUDA
+                //SoundEfects.PlayClip("EBASIC_SHOTGUN");
+
                 Debug.Log("Se muere");
 
                 break;
             case 5:
+                EnemyA1.PlayAnimation("Talk");
 
                 break;
             case 6:
+                Animation anim6 = GameObject.Find("Boss").GetComponent<Animation>();
+                anim6.PlayAnimation("Talk");
 
                 break;
-                
+            case 7:
+                //EnemyA1.PlayAnimation("Talk");
+
+                break;
             default:
                 break;
         }
     }
+    //PlayClip("EBASIC_BULLETHIT");
 
     public void SetLine(int line)
     {

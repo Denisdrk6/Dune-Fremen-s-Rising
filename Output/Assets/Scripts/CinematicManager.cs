@@ -109,7 +109,7 @@ public class CinematicManager : RagnarComponent
 
         //Text
         text.GetComponent<UIText>().text = Dialogue.GetDialogueLine().ToString();
-        Debug.Log(text.GetComponent<UIText>().text);
+        //Debug.Log(text.GetComponent<UIText>().text);
 
         //Voice  
         // SP=0 / ING=1
@@ -127,7 +127,7 @@ public class CinematicManager : RagnarComponent
 
         // VOICE
         String voicePath = "VOICE_" + lenguage + "_" + IdDialogue.ToString() + "_" + indexLine.ToString();
-        Debug.Log(voicePath);
+        //Debug.Log(voicePath);
         SceneAudio.PlayClip2(voicePath);
 
         // For animations

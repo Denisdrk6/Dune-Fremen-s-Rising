@@ -68,15 +68,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -3.0517578125e-05,
-                        40.941295623779297,
-                        -37.219375610351562
+                        0,
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
-                        3.2842248920417205e-09,
-                        7.9287421073104269e-09,
-                        0.93969273567199707
+                        0.34202012419700623,
+                        0,
+                        0,
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -95,16 +95,16 @@
                     "Vertical Fov": 0.40506687760353088,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -24.502979278564453,
-                        25.14129638671875,
-                        189.44065856933594
+                        -13.023403167724609,
+                        39.200000762939453,
+                        195.0595703125
                     ],
                     "Type": 3,
                     "Zoom": 22,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
-                    "Lock": false,
+                    "Lock": true,
                     "Free Movement": true,
                     "Default Target Pos": [
                         -57.933540344238281,
@@ -275,7 +275,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -340,7 +341,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -405,7 +407,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -470,7 +473,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -535,7 +539,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -600,7 +605,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -665,7 +671,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -730,7 +737,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -795,7 +803,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -860,7 +869,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -925,7 +935,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -990,7 +1001,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1055,7 +1067,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1120,7 +1133,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1185,7 +1199,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1250,7 +1265,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1315,7 +1331,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1385,7 +1402,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 }
             ]
         },
@@ -1450,7 +1468,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 }
             ]
         },
@@ -1510,7 +1529,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1580,7 +1600,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 11,
@@ -1632,7 +1653,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        397.5,
+                        376.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1671,7 +1692,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1697,7 +1719,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        -397.5,
+                        -376.5,
                         -10.399999618530273
                     ],
                     "Scale": [
@@ -1736,7 +1758,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1785,7 +1808,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 513938768,
+                    "pointer": 704665896,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -1835,7 +1858,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 513937552,
+                    "pointer": 704664072,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -1858,7 +1881,7 @@
                     "Type": 19,
                     "Position": [
                         0,
-                        140.46501159667969,
+                        119.46501159667969,
                         9.6000003814697266
                     ],
                     "Scale": [
@@ -1897,7 +1920,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,
@@ -1989,8 +2013,8 @@
                 },
                 {
                     "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_boss_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/nme_boss_nomal2.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -2006,7 +2030,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -2043,7 +2068,7 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "Idle",
+                    "Current Anim": "Talk",
                     "Animations": [
                         {
                             "State": "CallBackup",
@@ -2117,8 +2142,13 @@
                         },
                         {
                             "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__char_paul_idle|char_paul_idlethrowknife|char_paul_idlethrowknife|Armature|char.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_idle__Armature|Armature|Take 001|BaseLayer.fbx",
                             "Loop": true
+                        },
+                        {
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
                         }
                     ]
                 }
@@ -2180,7 +2210,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.3999999761581421
+                    "Color Multiplier": 1.3999999761581421,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -2190,7 +2221,7 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "Idle2",
+                    "Current Anim": "Talk",
                     "Animations": [
                         {
                             "State": "Walk",
@@ -2213,9 +2244,9 @@
                             "Loop": false
                         },
                         {
-                            "State": "Idle2",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__char_paul_idle|Armature|mixamo.com|Layer0.fbx",
-                            "Loop": true
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_talk__nme_enemy1_talk|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
                         }
                     ]
                 },
@@ -2304,7 +2335,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.3999999761581421
+                    "Color Multiplier": 1.3999999761581421,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -2314,7 +2346,7 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "Idle2",
+                    "Current Anim": "Talk",
                     "Animations": [
                         {
                             "State": "Walk",
@@ -2337,8 +2369,8 @@
                             "Loop": false
                         },
                         {
-                            "State": "Idle2",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__char_paul_idle|Armature|mixamo.com|Layer0.fbx",
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_idle2__nme_enemy1_idle2|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         }
                     ]
@@ -2378,7 +2410,7 @@
             "Name": "Fremen",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Player_3.rgprefab",
             "tag": "Player",
             "layer": "Default",
@@ -2428,7 +2460,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -2587,7 +2620,7 @@
             "Name": "FallDeadParticles_3",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
