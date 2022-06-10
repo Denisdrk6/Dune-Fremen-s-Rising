@@ -36,12 +36,6 @@ public class PlayerManager : RagnarComponent
     GameObject sword;
     GameObject stunner;
     GameObject circle;
-
-    private Transform camera;
-
-    private int bufferedCharacter;
-    private int bufferedAbility;
-    private bool buffered = false;
     public void Start()
 	{
         foreach (Characters c in characters)
@@ -146,14 +140,8 @@ public class PlayerManager : RagnarComponent
             muestre el rango de habilidad, y entre en un estado de castear o cancelar la habilidad seleccionada (Click derecho cancel/click izquierdo casteo)).
             Aqu� deber�a ir la zona de rango de cada habilidad.*/
             if(players[characterSelected].GetComponent<Player>().controled)
-            {
                 AbilityStateChanger();
-                if (buffered && players[bufferedCharacter].GetComponent<Animation>().HasFinished())
-                {
-                    InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
-                    buffered = false;
-                }
-            }
+            
 
             /*Contador de cooldown para cada habilidad
             Funciona en todos los casos con todos los pjs.*/
@@ -464,11 +452,8 @@ public class PlayerManager : RagnarComponent
 
             if (playableCharacter.pickedEnemy == null)
             {
-                // Instancia la habilidad en cuesti�n.
-                //InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath, playableCharacter.pos);
-                buffered = true;
-                bufferedAbility = (int)playableCharacter.state - 1;
-                bufferedCharacter = characterSelected;
+                // Instancia la habilidad en cuesti�n. 
+                InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath, playableCharacter.pos);
 
                 // Al haberse instanciado una habilidad, comprueba si funciona por cargas. Si lo hace resta una carga a la habilidad.
                 if (playableCharacter.abilities[(int)playableCharacter.state - 1].charges != -1 && playableCharacter.abilities[(int)playableCharacter.state - 1].charges != 0)
