@@ -6,14 +6,16 @@ public class Cinematic_5 : RagnarComponent
     public bool runGame = true;
     public GameObject[] bands;
 
-    public int IdDialogue = 0;
+    public int IdDialogue = 5;
 
     CinematicManager dialogues;
 
     GameObject paul;
-    Animation paulAnimation;
+    Animation paulA;
     GameObject chani;
-    Animation chaniAnimation;
+    Animation chaniA;
+    GameObject stilgar;
+    Animation stilgarA;
 
     public int IdLine = 0;
     enum CinematicState
@@ -34,12 +36,11 @@ public class Cinematic_5 : RagnarComponent
 
         paul = GameObject.Find("Player");
         chani = GameObject.Find("Player_2");
-        paulAnimation = paul.GetComponent<Animation>();
-        //paulAnimation.PlayAnimation("Idle");
-        chaniAnimation = chani.GetComponent<Animation>();
-        //chaniAnimation.PlayAnimation("Idle");
+        stilgar = GameObject.Find("Player_3");
+        paulA = paul.GetComponent<Animation>();
+        chaniA = chani.GetComponent<Animation>();
+        stilgarA = stilgar.GetComponent<Animation>();
 
-        //characterBoss.GetComponent<Animation>().PlayAnimation("WalkAngry");
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
         //-----------
@@ -78,40 +79,47 @@ public class Cinematic_5 : RagnarComponent
     {
         //var1: ID del dialogo que se hara en la cinematica(variable arriba)
         //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
-        dialogues.SetIDDialogue(IdDialogue, "build");
+        dialogues.SetIDDialogue(IdDialogue, "Cinematic_6");
     }
 
     private void Animations()
     {
-        switch (IdLine)
+        /*switch (IdLine)
         {   // EL dialogo puede tener mas o menos lineas
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
             case 0:
+                stilgarA.PlayAnimation("Talk");
+
+                paulA.PlayAnimation("Idle");
+                chaniA.PlayAnimation("Idle");
 
                 break;
             case 1:
+                paulA.PlayAnimation("Talk");
+                stilgarA.PlayAnimation("Idle");
 
                 break;
             case 2:
+                stilgarA.PlayAnimation("Talk");
+                paulA.PlayAnimation("Idle");
 
                 break;
             case 3:
+                paulA.PlayAnimation("Talk");
+                stilgarA.PlayAnimation("Idle");
 
                 break;
             case 4:
+                chaniA.PlayAnimation("Talk");
 
-                break;
-            case 5:
-
-                break;
-            case 6:
-
+                paulA.PlayAnimation("Idle");
+                stilgarA.PlayAnimation("Idle");
                 break;
 
             default:
                 break;
-        }
+        }*/
     }
 
     public void SetLine(int line)
