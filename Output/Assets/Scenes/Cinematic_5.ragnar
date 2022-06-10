@@ -68,14 +68,14 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -7.62939453125e-06,
-                        68.3187255859375,
-                        -62.107917785644531
+                        0,
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
+                        0.34202012419700623,
                         0,
-                        -2.5627504562919512e-09,
+                        0,
                         0.93969261646270752
                     ],
                     "RotationEditor": [
@@ -95,9 +95,9 @@
                     "Vertical Fov": -1.5718119144439697,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -7.2125310897827148,
-                        30.950027465820312,
-                        151.125
+                        -18.652870178222656,
+                        19.886623382568359,
+                        159.53448486328125
                     ],
                     "Type": 3,
                     "Zoom": -11,
@@ -361,7 +361,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_5",
-                    "pointer": 745671472,
+                    "pointer": 654081912,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -411,7 +411,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 729010616,
+                    "pointer": 654081152,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -485,45 +485,6 @@
                     "textColor.g": 1,
                     "textColor.b": 1,
                     "TextFile": "-"
-                }
-            ]
-        },
-        {
-            "UUID": 87527391,
-            "Parent UUID": 417174774,
-            "Name": "ExitPoint",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -62.088214874267578,
-                        0,
-                        207.50048828125
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
                 }
             ]
         },
