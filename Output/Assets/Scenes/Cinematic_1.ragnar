@@ -92,7 +92,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.40506687760353088,
+                    "Vertical Fov": 0.41793009638786316,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
                         -13.023403167724609,
@@ -175,6 +175,36 @@
                         },
                         {
                             "1": "CHANI_WALKSAND"
+                        },
+                        {
+                            "2": "VOICE_SP_0_0"
+                        },
+                        {
+                            "3": "VOICE_SP_0_1"
+                        },
+                        {
+                            "4": "VOICE_SP_0_2"
+                        },
+                        {
+                            "5": "VOICE_SP_0_3"
+                        },
+                        {
+                            "6": "VOICE_SP_0_4"
+                        },
+                        {
+                            "7": "VOICE_SP_0_5"
+                        },
+                        {
+                            "8": "VOICE_SP_0_6"
+                        },
+                        {
+                            "9": "VOICE_SP_0_7"
+                        },
+                        {
+                            "10": "VOICE_SP_0_8"
+                        },
+                        {
+                            "11": "VOICE_SP_0_9"
                         }
                     ]
                 }
@@ -243,7 +273,7 @@
                         0,
                         0.98829638957977295,
                         0,
-                        0.15254592895507812
+                        0.15254592895507813
                     ],
                     "RotationEditor": [
                         0,
@@ -307,7 +337,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -439,7 +469,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -703,7 +733,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -1557,7 +1587,7 @@
                     "Position": [
                         -62.699806213378906,
                         0,
-                        162.44302368164062
+                        162.44302368164063
                     ],
                     "Quaternion": [
                         0,
@@ -1669,7 +1699,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 642.5,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1735,7 +1765,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 642.5,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -1808,7 +1838,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 704665896,
+                    "pointer": 768401256,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -1858,7 +1888,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 704664072,
+                    "pointer": 768401560,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -1897,7 +1927,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 642.5,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },

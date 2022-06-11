@@ -68,14 +68,14 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0,
-                        55,
-                        -50
+                        -7.62939453125e-06,
+                        59.4395751953125,
+                        -54.035964965820313
                     ],
                     "Quaternion": [
-                        0.34202012419700623,
+                        0.34202015399932861,
                         0,
-                        0,
+                        -2.5627504562919512e-09,
                         0.93969261646270752
                     ],
                     "RotationEditor": [
@@ -92,15 +92,15 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": -1.5718119144439697,
+                    "Vertical Fov": 0.41793009638786316,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -18.652870178222656,
-                        19.886623382568359,
-                        159.53448486328125
+                        -14.839424133300781,
+                        23.574424743652344,
+                        156.7313232421875
                     ],
                     "Type": 3,
-                    "Zoom": -11,
+                    "Zoom": -17,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
@@ -221,8 +221,8 @@
                     ],
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
-                    "lastButtonWidth": 6,
-                    "lastButtonHeight": -14.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -287,8 +287,8 @@
                     ],
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
-                    "lastButtonWidth": 6,
-                    "lastButtonHeight": -14.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -361,7 +361,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_5",
-                    "pointer": 654081912,
+                    "pointer": 698752936,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -411,7 +411,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 654081152,
+                    "pointer": 698755824,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -449,8 +449,8 @@
                     ],
                     "buttonWidth": 100,
                     "buttonHeight": 100,
-                    "lastButtonWidth": 6,
-                    "lastButtonHeight": -14.5,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },

@@ -68,14 +68,14 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        0.0001068115234375,
-                        79.417709350585938,
-                        -72.198051452636719
+                        -0.0001220703125,
+                        58.699653625488281,
+                        -53.363410949707031
                     ],
                     "Quaternion": [
                         0.34202015399932861,
-                        -9.5708507785730035e-09,
                         0,
+                        7.9287412191320072e-09,
                         0.93969273567199707
                     ],
                     "RotationEditor": [
@@ -84,7 +84,7 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142099618911743,
+                        1.4142098426818848,
                         1.0000002384185791,
                         1.0000004768371582
                     ]
@@ -95,12 +95,12 @@
                     "Vertical Fov": 0.41793009638786316,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -77.806915283203125,
-                        53.617710113525391,
-                        237.43037414550781
+                        -62.176937103271484,
+                        32.899654388427734,
+                        226.92008972167969
                     ],
                     "Type": 3,
-                    "Zoom": -15,
+                    "Zoom": -20,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
@@ -167,7 +167,7 @@
                 {
                     "Type": 5,
                     "Volume": 50,
-                    "Pitch": 0,
+                    "Pitch": -1243.635986328125,
                     "Mute": true,
                     "AudioClips": [
                         {
@@ -177,34 +177,37 @@
                             "1": "CHANI_WALKSAND"
                         },
                         {
-                            "2": "VOICE_SP_0_0"
+                            "2": "VOICE_SP_1_0"
                         },
                         {
-                            "3": "VOICE_SP_0_1"
+                            "3": "VOICE_SP_1_1"
                         },
                         {
-                            "4": "VOICE_SP_0_2"
+                            "4": "VOICE_SP_1_2"
                         },
                         {
-                            "5": "VOICE_SP_0_3"
+                            "5": "VOICE_SP_1_3"
                         },
                         {
-                            "6": "VOICE_SP_0_5"
+                            "6": "VOICE_SP_1_4"
                         },
                         {
-                            "7": "VOICE_SP_0_4"
+                            "7": "VOICE_SP_1_5"
                         },
                         {
-                            "8": "VOICE_SP_0_6"
+                            "8": "VOICE_SP_1_6"
                         },
                         {
-                            "9": "VOICE_SP_0_7"
+                            "9": "VOICE_SP_1_7"
                         },
                         {
-                            "10": "VOICE_SP_0_8"
+                            "10": "VOICE_SP_1_8"
                         },
                         {
-                            "11": "VOICE_SP_0_9"
+                            "11": "VOICE_SP_1_9"
+                        },
+                        {
+                            "12": "VOICE_SP_1_10"
                         }
                     ]
                 }
@@ -273,7 +276,7 @@
                         0,
                         0.98829638957977295,
                         0,
-                        0.15254592895507812
+                        0.15254592895507813
                     ],
                     "RotationEditor": [
                         0,
@@ -305,7 +308,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -336,7 +340,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -370,7 +374,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -435,7 +440,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -466,7 +472,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -500,7 +506,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -565,7 +572,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -630,7 +638,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -695,7 +704,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -726,7 +736,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -760,7 +770,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -825,7 +836,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -890,7 +902,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -955,7 +968,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1020,7 +1034,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1085,7 +1100,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1150,7 +1166,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1215,7 +1232,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1280,7 +1298,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1345,7 +1364,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1415,7 +1435,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 }
             ]
         },
@@ -1480,7 +1501,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 }
             ]
         },
@@ -1540,7 +1562,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1567,7 +1590,7 @@
                     "Position": [
                         -62.699806213378906,
                         0,
-                        162.44302368164062
+                        162.44302368164063
                     ],
                     "Quaternion": [
                         0,
@@ -1610,7 +1633,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 11,
@@ -1701,7 +1725,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1766,7 +1791,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 13,
@@ -1815,7 +1841,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_2",
-                    "pointer": 550606072,
+                    "pointer": 698752480,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -1865,7 +1891,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 550609264,
+                    "pointer": 698752176,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -1927,7 +1953,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 16,
@@ -1986,7 +2013,7 @@
             "Name": "Player",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
             "tag": "Player",
             "layer": "Default",
@@ -2036,7 +2063,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -2220,7 +2248,7 @@
             "Name": "WalkParticles",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -2413,7 +2441,7 @@
             "Name": "Player_2",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
             "tag": "Player",
             "layer": "Default",
@@ -2463,7 +2491,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -2652,7 +2681,7 @@
             "Name": "WalkParticles_2",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -2845,7 +2874,7 @@
             "Name": "RunParticles_2",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
