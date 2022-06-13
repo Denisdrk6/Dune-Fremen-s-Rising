@@ -13,22 +13,21 @@ public class Knife : RagnarComponent
 	private bool pendingToDelete = false;
 	private bool grabOnce = false;
 	GameObject circle;
+	GameObject popUp;
 	
 	public void Start()
     {
         player = GameObject.Find("Player");
         circle = GameObject.Find("circle_ability");
 		circle.isInteractuable = false;
-        AimMethod();
 
 		// Get components
 		particleComponent = gameObject.GetComponent<ParticleSystem>();
 		audioSourceComponent = gameObject.GetComponent<AudioSource>();
 
-		particleComponent.Play();
+        AimMethod();
 
-		player.GetComponent<Player>().PlayAudioClip("WPN_THORWINGKNIFETHROW");
-		player.GetComponent<Animation>().PlayAnimation("Ability4");
+		particleComponent.Play();
 
 		//gameObject.SubmitOutlineDrawing(new Vector3(0.3f, 0.95f, 0.15f));
 	}
@@ -44,6 +43,9 @@ public class Knife : RagnarComponent
         Vector3 direction = HitEnemy(agent, player);
 		if(direction != null)
         {
+			player.GetComponent<Player>().PlayAudioClip("WPN_THORWINGKNIFETHROW");
+			//player.GetComponent<Animation>().PlayAnimation("Ability4");
+
 			Rigidbody goRB = gameObject.GetComponent<Rigidbody>();
 			goRB.SetBodyPosition(pos);
 
@@ -62,6 +64,7 @@ public class Knife : RagnarComponent
         else
         {
 			pendingToDelete = true;
+			GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].charges += 1;
         }
 
  		agent.hitPosition = player.transform.globalPosition;
@@ -73,6 +76,7 @@ public class Knife : RagnarComponent
 		if (pendingToDelete)
 		{
 			//gameObject.UnSubmitOutlineDrawing();
+			InternalCalls.Destroy(popUp);
 			InternalCalls.Destroy(gameObject);
 		}
 
@@ -91,11 +95,16 @@ public class Knife : RagnarComponent
 			{
 				grabOnce = true;
 				GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].counter = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].cooldown;
+				GameObject.Find("PlayerManager").GetComponent<PlayerManager>().characters[0].abilities[2].charges += 1;
 				audioSourceComponent.PlayClip("WPN_THORWINGKNIFERECOVERSAND");
 			}
 
 			pendingToDelete = true;
 			canReload = false;
+		}
+		if(popUp != null)
+        {
+			popUp.GetComponent<Transform2D>().position2D = Camera.WorldToScreen(gameObject.transform.globalPosition);
 		}
 	}
 
@@ -128,6 +137,7 @@ public class Knife : RagnarComponent
 			circle.isActive = true;
 			gameObject.transform.globalRotation = Quaternion.identity;
 			particleComponent.Pause();
+			popUp = InternalCalls.InstancePrefab("PopUp", Vector3.one);
 		}
         else
         {

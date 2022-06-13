@@ -31,7 +31,7 @@ public class SwordSlash : RagnarComponent
         player.GetComponent<Rigidbody>().SetBodyRotation(rot);
 
         player.GetComponent<Player>().PlayAudioClip("WPN_SWORDHIT");
-        player.GetComponent<Animation>().PlayAnimation("Ability1");
+        //player.GetComponent<Animation>().PlayAnimation("Ability1");
         GameObject.Find("SlashParticles").GetComponent<ParticleSystem>().Play();
         sword = GameObject.Find("Sword");
         sword.GetComponent<Animation>().PlayAnimation("Attack");

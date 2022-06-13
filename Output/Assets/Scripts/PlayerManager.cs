@@ -36,20 +36,26 @@ public class PlayerManager : RagnarComponent
     GameObject sword;
     GameObject stunner;
     GameObject circle;
+
+    private Transform camera;
+
+    private int bufferedCharacter;
+    private int bufferedAbility;
+    private bool buffered = false;
     public void Start()
-	{
+    {
         foreach (Characters c in characters)
         {
             InternalCalls.InstancePrefab(c.prefabPath, c.pos);
         }
 
         players = GameObject.FindGameObjectsWithTag("Player");
-        Vector3[] outlineColors = new Vector3[3] { new Vector3(0,1,0), new Vector3(0.5f,0,0.5f), new Vector3(0,0,1) };
+        Vector3[] outlineColors = new Vector3[3] { new Vector3(0, 1, 0), new Vector3(0.5f, 0, 0.5f), new Vector3(0, 0, 1) };
         for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<Rigidbody>().SetBodyPosition(characters[i].pos);
-            if(i == 0 && SceneManager.currentSceneName == "build")
-                players[i].GetComponent<Rigidbody>().SetBodyRotation(Quaternion.RotateAroundAxis(new Vector3(0,1,0), 180));
+            if (i == 0 && SceneManager.currentSceneName == "build")
+                players[i].GetComponent<Rigidbody>().SetBodyRotation(Quaternion.RotateAroundAxis(new Vector3(0, 1, 0), 180));
             players[i].SubmitOutlineDrawing(outlineColors[i]);
         }
 
@@ -61,12 +67,12 @@ public class PlayerManager : RagnarComponent
                 players[i].GetComponent<Rigidbody>().IgnoreCollision(players[j], true);
             }
         }
-        circle = InternalCalls.InstancePrefab("Circle", new Vector3(0, 0, 0));        
+        circle = InternalCalls.InstancePrefab("Circle", new Vector3(0, 0, 0));
         circle.isInteractuable = false;
         circle.GetComponent<Material>().emissiveEnabled = true;
         ChangeCharacter(characterSelected);
         playableCharacter = characters[characterSelected];
-        for(int i = 0; i < players.Length; i++)
+        for (int i = 0; i < players.Length; i++)
         {
             players[i].GetComponent<Player>().hitPoints = characters[i].hitPoints;
         }
@@ -118,7 +124,7 @@ public class PlayerManager : RagnarComponent
             players[i].GetComponent<Player>().pointCharacter = pointer.childs[i];
     }
 
-	public void Update()
+    public void Update()
     {
         if (Input.GetKey(KeyCode.F6) == KeyState.KEY_DOWN)
         {
@@ -139,9 +145,15 @@ public class PlayerManager : RagnarComponent
             /*Cambiador de estados para saber que habilidad estas o no casteando (Basicamente hace que el personaje entre en un estado donde si clickas una tecla
             muestre el rango de habilidad, y entre en un estado de castear o cancelar la habilidad seleccionada (Click derecho cancel/click izquierdo casteo)).
             Aqu� deber�a ir la zona de rango de cada habilidad.*/
-            if(players[characterSelected].GetComponent<Player>().controled)
+            if (players[characterSelected].GetComponent<Player>().controled)
+            {
                 AbilityStateChanger();
-            
+                if (buffered && players[bufferedCharacter].GetComponent<Animation>().HasFinished())
+                {
+                    InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                    buffered = false;
+                }
+            }
 
             /*Contador de cooldown para cada habilidad
             Funciona en todos los casos con todos los pjs.*/
@@ -173,9 +185,9 @@ public class PlayerManager : RagnarComponent
     // LETRA Z --> HABILIDAD 1 DE TODOS LOS PJS
     public void Ability1()
     {
-        if(characters[characterSelected].abilities[0].charges != 0)
+        if (characters[characterSelected].abilities[0].charges != 0)
         {
-            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility1)
+            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead && canDoAbility1)
                 SpawnArea(State.ABILITY_1);
         }
     }
@@ -185,7 +197,7 @@ public class PlayerManager : RagnarComponent
     {
         if (characters[characterSelected].abilities[1].charges != 0)
         {
-            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility2)
+            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead && canDoAbility2)
                 SpawnArea(State.ABILITY_2);
         }
     }
@@ -195,7 +207,7 @@ public class PlayerManager : RagnarComponent
     {
         if (characters[characterSelected].abilities[2].charges != 0)
         {
-            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead&&canDoAbility3)
+            if (players[characterSelected].GetComponent<Player>().controled && playableCharacter.pickedEnemy == null && !players[characterSelected].GetComponent<Player>().dead && canDoAbility3)
                 SpawnArea(State.ABILITY_3);
         }
     }
@@ -270,15 +282,15 @@ public class PlayerManager : RagnarComponent
         {
             playableCharacter.state = State.NONE;
         }
-        
+
         // Entra aqu� si la habilidad tiene cargas o las cargas son -1 (Habilidad infinita (Solo cooldown)). Cambia el estado del player al de la habilidad que haya marcado.
         else if (!playableCharacter.abilities[(int)ability - 1].onCooldown)
         {
 
             SetCursor(ability);
-
             playableCharacter.state = (State)ability;
             lightHab.GetComponent<Light>().intensity = 0f;
+
             // Dibujado del �rea de rango.
             DrawArea((int)ability);
 
@@ -288,7 +300,6 @@ public class PlayerManager : RagnarComponent
         else
         {
             //Debug.Log("Ability on Cooldown! You have" + (playableCharacter.abilities[(int)ability - 1].cooldown - playableCharacter.abilities[(int)ability - 1].counter) + "seconds left to use it again!");
-            
             playableCharacter.state = State.NONE;
         }
     }
@@ -395,7 +406,7 @@ public class PlayerManager : RagnarComponent
             Input.SetCursorState((int)CursorState.NORMAL);
 
             if (playableCharacter.state == State.CARRYING)
-            { 
+            {
                 if (playableCharacter.pickedEnemy != null)
                 {
                     GameObject.ReparentToRoot(playableCharacter.pickedEnemy);
@@ -452,8 +463,69 @@ public class PlayerManager : RagnarComponent
 
             if (playableCharacter.pickedEnemy == null)
             {
-                // Instancia la habilidad en cuesti�n. 
-                InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath, playableCharacter.pos);
+                // Instancia la habilidad en cuesti�n.
+                //InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath, playableCharacter.pos);
+                buffered = true;
+                bufferedAbility = (int)playableCharacter.state - 1;
+                bufferedCharacter = characterSelected;
+
+                switch(characterSelected)
+                {
+                    case 0:
+                        if(playableCharacter.state == State.ABILITY_1)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability1");
+                        }
+                        if (playableCharacter.state == State.ABILITY_2)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability2");
+                        }
+                        if (playableCharacter.state == State.ABILITY_3)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability4");
+                        }
+                        if (playableCharacter.state == State.ABILITY_4)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability3");
+                        }
+                        break;
+                    case 1:
+                        if (playableCharacter.state == State.ABILITY_1)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability1");
+                        }
+                        if (playableCharacter.state == State.ABILITY_2)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability2");
+                        }
+                        if (playableCharacter.state == State.ABILITY_3)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability3");
+                        }
+                        if (playableCharacter.state == State.ABILITY_4)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability4");
+                        }
+                        break;
+                    case 2:
+                        if (playableCharacter.state == State.ABILITY_1)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability1");
+                        }
+                        if (playableCharacter.state == State.ABILITY_2)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability2");
+                        }
+                        if (playableCharacter.state == State.ABILITY_3)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability3");
+                        }
+                        if (playableCharacter.state == State.ABILITY_4)
+                        {
+                            players[characterSelected].GetComponent<Animation>().PlayAnimation("Ability4");
+                        }
+                        break;
+                }
 
                 // Al haberse instanciado una habilidad, comprueba si funciona por cargas. Si lo hace resta una carga a la habilidad.
                 if (playableCharacter.abilities[(int)playableCharacter.state - 1].charges != -1 && playableCharacter.abilities[(int)playableCharacter.state - 1].charges != 0)
@@ -489,11 +561,11 @@ public class PlayerManager : RagnarComponent
             playableCharacter.state = State.POSTCAST;
             players[characterSelected].GetComponent<Player>().SetState(State.POSTCAST);
             players[characterSelected].GetComponent<Animation>().PlayAnimation("NoSignal");
-            if(sword != null)
+            if (sword != null)
             {
                 sword.isActive = false;
                 stunner.isActive = false;
-            }            
+            }
 
             area[characterSelected].GetComponent<Light>().intensity = 0f;
             lightHab.GetComponent<Light>().intensity = 0f;
@@ -540,7 +612,7 @@ public class PlayerManager : RagnarComponent
                     players[characterSelected].EraseChild(circle);
                     characterSelected = 2;
                     playableCharacter.state = State.NONE;
-                    if(area != null) area[characterSelected].GetComponent<Light>().intensity = 0f;
+                    if (area != null) area[characterSelected].GetComponent<Light>().intensity = 0f;
                     lightHab.GetComponent<Light>().intensity = 0f;
                     playableCharacter = characters[characterSelected];
                     ChangeCharacter(characterSelected);
@@ -597,7 +669,7 @@ public class PlayerManager : RagnarComponent
         players[id].GetComponent<Player>().SetControled(true);
         Input.SetCursorState(0);
         players[id].AddChild(circle);
-        if(id == 0)
+        if (id == 0)
             circle.GetComponent<Material>().emissiveColor = new Vector3(0.04f, 0.83f, 0);
         else if (id == 1)
             circle.GetComponent<Material>().emissiveColor = new Vector3(0.95f, 0.23f, 1);
@@ -611,12 +683,12 @@ public class PlayerManager : RagnarComponent
     {
         SaveSystem.DeleteDirectoryFiles("Library/SavedGame/Players");
         SaveSystem.SaveScene();
-        bool[] ret = { true, true, true};
+        bool[] ret = { true, true, true };
         Transform cam = GameObject.Find("cameraController").transform;
         switch (SceneManager.currentSceneName)
         {
             case "build":
-                bool[] abi = { canDoAbility1, canDoAbility2 ,canDoAbility3};
+                bool[] abi = { canDoAbility1, canDoAbility2, canDoAbility3 };
                 SaveSystem.SaveLevel(GameObject.Find("LevelManager").GetComponent<Level_1>().timer.timer, cam.globalPosition, cam.globalRotation, camComponent.horizontalAngle, abi);
                 GameObject.Find("Dialogue").GetComponent<DialogueManager>().SaveDialogue();
                 break;
@@ -631,7 +703,7 @@ public class PlayerManager : RagnarComponent
         }
 
         for (int i = 0; i < players.Length; ++i)
-        { 
+        {
             SaveSystem.SavePlayer(players[i].GetComponent<Player>());
         }
     }
@@ -663,7 +735,7 @@ public class PlayerManager : RagnarComponent
 
         temp = (float)Math.Round((double)temp, 0);
 
-        switch(abilityID)
+        switch (abilityID)
         {
             case 0:
                 cd1.text = temp.ToString();
@@ -764,10 +836,10 @@ public class PlayerManager : RagnarComponent
                     {
                         ability4Bg.SetImageGeneralColor(244, 60, 255);
                     }
-                   else if (playableCharacter.name == "Stilgar")
-                   {
+                    else if (playableCharacter.name == "Stilgar")
+                    {
                         ability4Bg.SetImageGeneralColor(0, 40, 255);
-                   }
+                    }
                 }
                 break;
         }

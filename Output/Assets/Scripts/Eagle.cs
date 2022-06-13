@@ -36,7 +36,7 @@ public class Eagle : RagnarComponent
         agent.CalculatePath(agent.hitPosition);
 
         player.GetComponent<Player>().PlayAudioClip("EBOSS_THROWOBJECT");
-        player.GetComponent<Animation>().PlayAnimation("Ability3");
+        //player.GetComponent<Animation>().PlayAnimation("Ability3");
         //leftParticles = GameObject.Find("LeftWingParticles").GetComponent<ParticleSystem>();
         //rightParticles = GameObject.Find("RightWingParticles").GetComponent<ParticleSystem>();
         //leftParticles.Play();

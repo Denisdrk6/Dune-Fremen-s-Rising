@@ -19,22 +19,22 @@ public class Camouflage : RagnarComponent
 		playerScript = player.GetComponent<Player>();
 
 		SceneAudio = GameObject.Find("AudioLevel1");
-		player.GetComponent<Animation>().PlayAnimation("Ability2");
+		//player.GetComponent<Animation>().PlayAnimation("Ability2");
         player.GetComponent<Player>().PlayAudioClip("WPN_CAMOUFLAGEACTIVATE");
 		buffCounter = GameObject.Find("UIB").GetComponent<UIText>();
+		SetMaterial("Assets/Resources/UI/options_rect.png");
     }
 	public void Update()
 	{
-		SetMaterialTransparent("Assets/Resources/UI/options_rect.png");
 		if(Timer())
         {
             SceneAudio.GetComponent<AudioSource>().PlayClip("WPN_CAMOUFLAGEDEACTIVATE");
-			SetMaterialTransparent("Assets/Resources/CharacterTex/char_chani_basecolor.png");
+			SetMaterial("Assets/Resources/CharacterTex/char_chani_basecolor.png");
 			playerScript.invisible = false;
 			InternalCalls.Destroy(gameObject);
 		}
 	}
-	private void SetMaterialTransparent(string path)
+	private void SetMaterial(string path)
     {
 		player.GetComponent<Material>().SetTexturePath(path);
 		playerScript.invisible = true;

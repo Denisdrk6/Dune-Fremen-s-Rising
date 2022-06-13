@@ -216,6 +216,7 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.NavAgent::MovePath", MoveAgentPath);
 	mono_add_internal_call("RagnarEngine.NavAgent::MoveTo", MoveAgentTo);
 	mono_add_internal_call("RagnarEngine.NavAgent::set_path", SetAgentPath);
+	mono_add_internal_call("RagnarEngine.NavAgent::get_path", GetAgentPath);
 	mono_add_internal_call("RagnarEngine.NavAgent::set_speed", SetAgentSpeed);
 	mono_add_internal_call("RagnarEngine.NavAgent::get_speed", GetAgentSpeed);
 	// NavAgent ==================
@@ -235,6 +236,7 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.Camera::set_lockCam", SetLock);
 	mono_add_internal_call("RagnarEngine.Camera::get_horizontalAngle", GetHorizontalAngle);
 	mono_add_internal_call("RagnarEngine.Camera::set_horizontalAngle", SetHorizontalAngle);
+	mono_add_internal_call("RagnarEngine.Camera::WorldToScreen", WorldToScreen);
 	// Camera ====================
 
 	// Scene Manager =============

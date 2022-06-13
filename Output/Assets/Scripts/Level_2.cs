@@ -90,8 +90,8 @@ public class Level_2 : RagnarComponent
             constant = 1.232f,
             linear = -0.172f,
             quadratic = 0f,
-            charges = -1,
-            cooldown = 25f
+            charges = 1,
+            cooldown = 0f
         }; // Throwing Knife
         characters[0].abilities[3] = new Abilities
         {

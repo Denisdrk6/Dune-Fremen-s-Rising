@@ -55,6 +55,8 @@ namespace RagnarEngine
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]
             set;
+            [MethodImplAttribute(MethodImplOptions.InternalCall)]
+            get;
         }
 
         public extern float speed

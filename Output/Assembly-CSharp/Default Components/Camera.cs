@@ -20,6 +20,9 @@ namespace RagnarEngine
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void ScriptMovement(float x, float y, float z);
 
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public static extern Vector3 WorldToScreen(object target);
+
         public extern bool lockCam
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]
