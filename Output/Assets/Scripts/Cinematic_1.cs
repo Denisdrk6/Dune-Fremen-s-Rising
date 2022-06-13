@@ -25,7 +25,7 @@ public class Cinematic_1 : RagnarComponent
     AudioSource SoundEfects;
     
     
-    bool shoot;
+    //bool shoot;
     public int IdLine = 0;
     enum CinematicState
     {
@@ -67,7 +67,7 @@ public class Cinematic_1 : RagnarComponent
         //-----------
         state = CinematicState.FIRST;
         //-----------
-        shoot = false;
+        //shoot = false;
     }
 
     public void Update()
@@ -83,14 +83,15 @@ public class Cinematic_1 : RagnarComponent
             case CinematicState.TRANSITION:
                 //Aqui no pasara nada
                 
-                if (shoot)
+                /*if (shoot)
                 {
                     if (EnemyA1.HasFinished())
                     {
                         shoot = false;
-                        EnemyA1.PlayAnimation("Idle");
+                        Animation anim8 = GameObject.Find("Enemy1").GetComponent<Animation>();
+                        anim8.PlayAnimation("Idle");
                     }
-                }
+                }*/
                 break;
             case CinematicState.ANIMATIONS:
 
@@ -108,7 +109,8 @@ public class Cinematic_1 : RagnarComponent
     {
         //var1: ID del dialogo que se hara en la cinematica(variable arriba)
         //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
-        dialogues.SetIDDialogue(IdDialogue, "Cinematic_2");
+        //dialogues.SetIDDialogue(IdDialogue, "Cinematic_2");
+        dialogues.SetIDDialogue(IdDialogue, "build");
     }
 
     private void Animations()
@@ -138,8 +140,9 @@ public class Cinematic_1 : RagnarComponent
 
                 break;
             case 4:
-                EnemyA1.PlayAnimation("Idle");
-                shoot = true;
+                Animation anim7 = GameObject.Find("Enemy1").GetComponent<Animation>();
+                anim7.PlayAnimation("Shoot");
+                //shoot = true;
                 Animation anim4 = GameObject.Find("Fremen").GetComponent<Animation>();
                 anim4.PlayAnimation("Death");
 
@@ -150,7 +153,8 @@ public class Cinematic_1 : RagnarComponent
 
                 break;
             case 5:
-                EnemyA1.PlayAnimation("Talk");
+                Animation anim9 = GameObject.Find("Enemy1").GetComponent<Animation>();
+                anim9.PlayAnimation("Talk");
 
                 break;
             case 6:
