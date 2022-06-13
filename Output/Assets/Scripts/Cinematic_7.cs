@@ -4,17 +4,18 @@ using RagnarEngine;
 public class Cinematic_7 : RagnarComponent
 {
     public bool runGame = true;
-    public GameObject[] bands;
 
     public int IdDialogue = 9;
 
     CinematicManager dialogues;
 
+    public int IdLine = 0;
+
     GameObject paul;
     GameObject chani;
     GameObject stilgar;
 
-    public int IdLine = 0;
+
     enum CinematicState
     {
         FIRST, TRANSITION, ANIMATIONS
@@ -26,7 +27,7 @@ public class Cinematic_7 : RagnarComponent
         paul = GameObject.Find("Player");
         chani = GameObject.Find("Player_2");
         stilgar = GameObject.Find("Player_3");
-        
+
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
         //-----------
