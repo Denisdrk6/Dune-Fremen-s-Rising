@@ -28,7 +28,6 @@ public class Cinematic_7 : RagnarComponent
         chani = GameObject.Find("Player_2");
         stilgar = GameObject.Find("Player_3");
 
-
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
         //-----------
         state = CinematicState.FIRST;
@@ -79,24 +78,6 @@ public class Cinematic_7 : RagnarComponent
                 paul.GetComponent<Animation>().PlayAnimation("Idle");
                 chani.GetComponent<Animation>().PlayAnimation("Idle");
                 stilgar.GetComponent<Animation>().PlayAnimation("Idle");
-                break;
-            case 1:
-
-                break;
-            case 2:
-
-                break;
-            case 3:
-
-                break;
-            case 4:
-
-                break;
-            case 5:
-
-                break;
-            case 6:
-
                 break;
 
             default:
