@@ -40,7 +40,6 @@ enum CursorState
 	STILGAR_3,
 	STILGAR_4,
 
-	CLICKABLE,
 	NON_CLICKABLE,
 };
 
@@ -131,8 +130,8 @@ public:
 
 	void SetCursorState(int state);
 	int GetCursorState() { return (int)currentCursor; };
-	std::vector<HCURSOR>* GetCursors() { return &cursors; };
-	void RestoreDefaultCursor();
+	std::vector<SDL_Cursor*>* GetCursors() { return &cursors; };
+	void CreateCursor(const char* path, int x, int y);
 
 	void ImportToLibrary();
 
@@ -151,8 +150,7 @@ private:
 	float mouseYMotion;
 	int mouseZMotion;
 
-	HCURSOR defaultCursor;
-	std::vector<HCURSOR> cursors;
+	std::vector<SDL_Cursor*> cursors;
 	CursorState currentCursor;
 	
 	SDL_GameController* pad;

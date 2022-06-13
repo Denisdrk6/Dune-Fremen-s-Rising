@@ -44,19 +44,23 @@ public class Quest
 };
 public class QuestSystem : RagnarComponent
 {
-	// Lists
 	public List<Quest> questList;
 	public List<Quest> completedQuestList;
-	public List<Quest> activeQuestList;
 
-	public GameObject activeQuestNames;
+	public List<Quest> mainQuestList;
+	public List<Quest> secondaryQuestList;
+
+	public GameObject mainQuestNames;
+	public GameObject secondaryQuestNames;
+
 	public GameObject completedQuestNames;
 	public GameObject questDescription;
 	public GameObject questId;
 	public GameObject questType;
 	public GameObject questState;
 
-	public GameObject activeButton;
+	public GameObject mainButton;
+	public GameObject secondaryButton;
 	public GameObject completedButton;
 
 	public GameObject questBc;
@@ -66,11 +70,14 @@ public class QuestSystem : RagnarComponent
 	Transform2D questBordT;
 	GameObject GameState;
 	public bool showJournal;
-	public bool showActive;
+
+	public bool showMain;
+	public bool showSecondary;
 	public bool showCompleted;
 	public Vector3 position;
 
-	private string activeQuests;
+	private string mainQuests;
+	private string secondaryQuests;
 	private string completedQuests;
 	private int level = 0;
 
@@ -105,6 +112,11 @@ public class QuestSystem : RagnarComponent
 	// Easing
 	float actualDt = 0;
 	bool isPlayng = false;
+	bool isSceneWin=false;
+
+	int mult = 1;
+	int textRepos = 0;
+	int spawnPos = 1;
 	double EasingFunction(float x)
     {
 		float c1 = 1.70158f;
@@ -132,13 +144,22 @@ public class QuestSystem : RagnarComponent
 	public void AddQuest(Quest questToAdd)
     {
 		questList.Add(questToAdd);
-		activeQuestList.Add(questToAdd);
+
+		if (questToAdd.GetQuestType() == QuestType.MAIN)
+			mainQuestList.Add(questToAdd);
+		else if (questToAdd.GetQuestType() == QuestType.SECONDARY)
+			secondaryQuestList.Add(questToAdd);
 	}
 	public void CompleteQuest(Quest questToComplete)
     {
+		QuestType auxType = questToComplete.GetQuestType();
 		completedQuestList.Add(questToComplete);
 		questToComplete.ChangeQuestState(QuestState.COMPLETED);
-		activeQuestList.Remove(questToComplete);
+
+		if (auxType == QuestType.MAIN)
+			mainQuestList.Remove(questToComplete);
+		else if (auxType == QuestType.SECONDARY)
+			secondaryQuestList.Remove(questToComplete);
 	}
 	public void RemoveQuest(Quest questToDelete)
     {
@@ -176,26 +197,40 @@ public class QuestSystem : RagnarComponent
 		// Initialize Lists
 		questList = new List<Quest>();
 		completedQuestList = new List<Quest>();
-		activeQuestList = new List<Quest>();
+		mainQuestList = new List<Quest>();
+		secondaryQuestList = new List<Quest>();
 
 		if (SceneManager.currentSceneName == "build")
 			level = 1;
-		if (SceneManager.currentSceneName == "build2")
+		else if (SceneManager.currentSceneName == "build2")
 			level = 2;
-		if (SceneManager.currentSceneName == "build3")
+		else if (SceneManager.currentSceneName == "build3")
 			level = 3;
 
-		activeQuestNames = GameObject.Find("Titulo Activas");
+		if(level == 0)
+        {
+			isSceneWin = true;
+			if (SceneManager.lastSceneName == "build")
+				level = 1;
+			else if (SceneManager.lastSceneName == "build2")
+				level = 2;
+			else if (SceneManager.lastSceneName == "build3")
+				level = 3;
+		}
+
+		mainQuestNames = GameObject.Find("Titulo Principales");
+		secondaryQuestNames = GameObject.Find("Titulo Secundarias");
 		completedQuestNames = GameObject.Find("Titulo Completadas");
 		questDescription = GameObject.Find("Descripcion");
 		questId = GameObject.Find("Id");
 		questState = GameObject.Find("Estado");
 		questType = GameObject.Find("Tipo");
-
-		activeButton = GameObject.Find("Boton Activas");
+		mainButton = GameObject.Find("Boton Principales");
+		secondaryButton = GameObject.Find("Boton Secundarias");
 		completedButton = GameObject.Find("Boton Completadas");
 		completedButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
-		activeButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+		mainButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+		secondaryButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
 		questBc = GameObject.Find("questBc");
 		questBord = GameObject.Find("questBord");
 		MissButton = GameObject.Find("MissButton");
@@ -204,13 +239,15 @@ public class QuestSystem : RagnarComponent
 		questBcT = questBc.GetComponent<Transform2D>();
 
 		showJournal = false;
-		showActive = true;
+		showMain = true;
+		showSecondary = false;
 		showCompleted = false;
 		position = new Vector3(0.0f, 0.0f, 0.0f);
-
-		activeButton.isActive = false;
+		mainButton.isActive = false;
+		secondaryButton.isActive = false;
 		completedButton.isActive = false;
-		activeQuestNames.isActive = false;
+		mainQuestNames.isActive = false;
+		secondaryQuestNames.isActive = false;
 		completedQuestNames.isActive = false;
 		questDescription.isActive = false;
 		questId.isActive = false;
@@ -228,7 +265,7 @@ public class QuestSystem : RagnarComponent
 				CreateQuest(1, "Intocable", "Completa el nivel sin recibir daño", QuestState.ACTIVE, QuestType.SECONDARY);
 				CreateQuest(2, "Pacifista", "Completa el nivel sin matar a nadie", QuestState.ACTIVE, QuestType.SECONDARY);
 				CreateQuest(3, "Azotador de mentes", "Controla mentalmente a tres enemigos", QuestState.ACTIVE, QuestType.SECONDARY);
-				CreateQuest(4, "Pilla esta!", "Acaba con 5 enemigos utilizando el cuchillo arrojadizo", QuestState.ACTIVE, QuestType.SECONDARY);
+				CreateQuest(4, "Pilla esta!", "Mata 5 enemigos utilizando el cuchillo arrojadizo", QuestState.ACTIVE, QuestType.SECONDARY);
 				CreateQuest(5, "Habrá sido el viento", "Distrae a 5 enemigos con piedras", QuestState.ACTIVE, QuestType.SECONDARY);
 				//Auxiliar quest (Solve a Bug)
 				CreateQuest(6, "", "", QuestState.ACTIVE, QuestType.SECONDARY);
@@ -261,10 +298,20 @@ public class QuestSystem : RagnarComponent
 				CreateQuest(23, "", "", QuestState.ACTIVE, QuestType.SECONDARY);
 				break;
         }
+        if (isSceneWin)
+        {
+			showJournal = true;
+			isPlayng = true;
+		}
+		if (SceneManager.currentSceneName== "WinScene")
+        {
+			LoadMissions();
+        }
+		
 	}
 	public void Update()
 	{
-		if(changePage)
+		if(changePage && !isSceneWin)
         {
 			changePage = false;
 			GameObject.Find("PlayerManager").GetComponent<PlayerManager>().GetPlayerSelected().PlayerPause();
@@ -368,28 +415,40 @@ public class QuestSystem : RagnarComponent
 				break;
 		}
 
-
 		// Drawing
 		float xCorner = (InternalCalls.GetRegionGame().x / 2);
 		float yCorner = (InternalCalls.GetRegionGame().y / 2);
-
-		position.Set(xCorner-70 , yCorner-70, 1000000.0f);
-		MissButton.GetComponent<Transform2D>().position2D = position;
-		int a = MissButton.GetComponent<UIButton>().GetButtonState();
-		switch (a)
+		int a = 0;
+		if (isSceneWin)
 		{
-			case 3:
-                // pressed mode
-                if (!isPlayng)
-                {
-					showJournal = !showJournal;
-					isPlayng = true;
-				}
-				
-
-				break;
+			mult = -1;
+			textRepos = 2750;
+			xCorner *= -1;
+			xCorner -= (InternalCalls.GetRegionGame().x / 20);
+			yCorner -= (InternalCalls.GetRegionGame().y / 4);
+			spawnPos = -1;
 		}
-		if (Input.GetKey(KeyCode.J) == KeyState.KEY_DOWN)
+		if (!isSceneWin)
+        {
+			position.Set(xCorner - 70, yCorner - 70, 1000000.0f);
+			MissButton.GetComponent<Transform2D>().position2D = position;
+			a = MissButton.GetComponent<UIButton>().GetButtonState();
+			
+			switch (a)
+			{
+				case 3:
+					// pressed mode
+					if (!isPlayng)
+					{
+						showJournal = !showJournal;
+						isPlayng = true;
+					}
+
+
+					break;
+			}
+		}
+		if (!isSceneWin && Input.GetKey(KeyCode.J) == KeyState.KEY_DOWN)
 		{
 			if (!isPlayng)
 			{
@@ -397,9 +456,11 @@ public class QuestSystem : RagnarComponent
 				isPlayng = true;
 			}
 		}
+
 		if (showJournal)
-        {
-            if (isPlayng) {
+		{
+			if (isPlayng)
+			{
 				if (actualDt >= 1)
 				{
 					isPlayng = false;
@@ -412,32 +473,51 @@ public class QuestSystem : RagnarComponent
 					float actualvalue = (float)EasingFunction(actualDt);
 
 
-					position.Set((xCorner - 500) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 280, 0);
+					position.Set((xCorner - 500 * (mult)) * actualvalue + ((1 - actualvalue) * (xCorner + 400 * spawnPos)), yCorner - 280, 0);
 
 					questBcT.position2D = position;
 					questBordT.position2D = position;
 
-					position.Set((xCorner - 679.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
-					activeButton.GetComponent<Transform2D>().position2D = position;
+					position.Set((xCorner - 743 * (mult)) * actualvalue + ((1 - actualvalue) * (xCorner + 400 * spawnPos)), yCorner - 70.5f, 1000000.0f);
+					mainButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner - 320.5f) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 70.5f, 1000000.0f);
+					position.Set((xCorner - 500 * (mult)) * actualvalue + ((1 - actualvalue) * (xCorner + 400 * spawnPos)), yCorner - 70.5f, 1000000.0f);
+					secondaryButton.GetComponent<Transform2D>().position2D = position;
+
+					position.Set((xCorner - 258 * (mult)) * actualvalue + ((1 - actualvalue) * (xCorner + 400 * spawnPos)), yCorner - 70.5f, 1000000.0f);
 					completedButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner - 800) * actualvalue + ((1 - actualvalue) * (xCorner + 400)), yCorner - 150, 1000000.0f);
-					activeQuestNames.GetComponent<Transform2D>().position2D = position;
+					position.Set(((xCorner - 800 + (textRepos)) * (mult)) * actualvalue + ((1 - actualvalue) * (xCorner + 400 * spawnPos)), yCorner - 150, 1000000.0f);
+					mainQuestNames.GetComponent<Transform2D>().position2D = position;
+
+					position.Set(((xCorner - 800 + (textRepos)) * (mult)) * actualvalue + ((1 - actualvalue) * (xCorner + 400 * spawnPos)), yCorner - 150, 1000000.0f);
+					secondaryQuestNames.GetComponent<Transform2D>().position2D = position;
 
 					completedQuestNames.GetComponent<Transform2D>().position2D = position;
 				}
 
 			}
-			
-			activeButton.isActive = true;
+
+			mainButton.isActive = true;
+			secondaryButton.isActive = true;
 			completedButton.isActive = true;
 			questBc.isActive = true;
 			questBord.isActive = true;
-			if (showActive)
-            {
-				activeQuestNames.isActive = true;
+
+			if (showMain)
+			{
+				mainQuestNames.isActive = true;
+				secondaryQuestNames.isActive = false;
+				completedQuestNames.isActive = false;
+				questDescription.isActive = false;
+				questId.isActive = false;
+				questState.isActive = false;
+				questType.isActive = false;
+			}
+			if (showSecondary)
+			{
+				mainQuestNames.isActive = false;
+				secondaryQuestNames.isActive = true;
 				completedQuestNames.isActive = false;
 				questDescription.isActive = false;
 				questId.isActive = false;
@@ -445,27 +525,29 @@ public class QuestSystem : RagnarComponent
 				questType.isActive = false;
 			}
 			if (showCompleted)
-            {
-				activeQuestNames.isActive = false;
+			{
+				mainQuestNames.isActive = false;
+				secondaryQuestNames.isActive = false;
 				completedQuestNames.isActive = true;
 				questDescription.isActive = false;
 				questId.isActive = false;
 				questState.isActive = false;
 				questType.isActive = false;
 			}
-        }
-        else
-        {
+		}
+		else
+		{
 			if (isPlayng)
 			{
 				if (actualDt >= 1)
 				{
 					isPlayng = false;
 					actualDt = 0;
-
-					activeButton.isActive = false;
+					mainButton.isActive = false;
+					secondaryButton.isActive = false;
 					completedButton.isActive = false;
-					activeQuestNames.isActive = false;
+					mainQuestNames.isActive = false;
+					secondaryQuestNames.isActive = false;
 					completedQuestNames.isActive = false;
 					questDescription.isActive = false;
 					questId.isActive = false;
@@ -486,26 +568,33 @@ public class QuestSystem : RagnarComponent
 					questBcT.position2D = position;
 					questBordT.position2D = position;
 
-					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 679.5f)), yCorner - 70.5f, 1000000.0f);
-					activeButton.GetComponent<Transform2D>().position2D = position;
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 743)), yCorner - 70.5f, 1000000.0f);
+					mainButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 320.5f)), yCorner - 70.5f, 1000000.0f);
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 500)), yCorner - 70.5f, 1000000.0f);
+					secondaryButton.GetComponent<Transform2D>().position2D = position;
+
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 258)), yCorner - 70.5f, 1000000.0f);
 					completedButton.GetComponent<Transform2D>().position2D = position;
 
-					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 800)), yCorner - 150, 1000000.0f);
-					activeQuestNames.GetComponent<Transform2D>().position2D = position;
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 800 - (textRepos))), yCorner - 150, 1000000.0f);
+					mainQuestNames.GetComponent<Transform2D>().position2D = position;
+
+					position.Set((xCorner + 400) * actualvalue + ((1 - actualvalue) * (xCorner - 800 - (textRepos))), yCorner - 150, 1000000.0f);
+					secondaryQuestNames.GetComponent<Transform2D>().position2D = position;
 
 					completedQuestNames.GetComponent<Transform2D>().position2D = position;
 				}
-
 			}
-			
 		}
-		if (GameState.GetComponent<pauseMenuButton>().isSowing || GameState.GetComponent<pauseMenuButton>().isOptions)
+
+		if (!isSceneWin && (GameState.GetComponent<pauseMenuButton>().isSowing || GameState.GetComponent<pauseMenuButton>().isOptions))
 		{
-			activeButton.isActive = false;
+			mainButton.isActive = false;
+			secondaryButton.isActive = false;
 			completedButton.isActive = false;
-			activeQuestNames.isActive = false;
+			mainQuestNames.isActive = false;
+			secondaryQuestNames.isActive = false;
 			completedQuestNames.isActive = false;
 			questDescription.isActive = false;
 			questId.isActive = false;
@@ -514,59 +603,153 @@ public class QuestSystem : RagnarComponent
 			questBc.isActive = false;
 			questBord.isActive = false;
 		}
-		activeQuests = "";
+
+		mainQuests = "";
+		secondaryQuests = "";
 		completedQuests = "";
 
-		if (activeQuestList.Count > 0)
+		if (mainQuestList.Count > 0)
 		{
-			for (int i = 0; i < activeQuestList.Count; ++i)
+			for (int i = 0; i < mainQuestList.Count; ++i)
 			{
-				activeQuests += activeQuestList[i].GetQuestName().ToString() + "\n\n";
+				mainQuests += (i+1).ToString();
+				mainQuests += ". ";
+				mainQuests += mainQuestList[i].GetQuestName().ToString() + "\n    ";
+				mainQuests += mainQuestList[i].GetQuestDescription().ToString() + "\n\n";
 			}
 		}
-        else
-        {
-			activeQuests = "No active quests available";
-        }
-		
+		else
+		{
+			mainQuests = "No main quests available";
+		}
+
+		if (secondaryQuestList.Count > 0)
+		{
+			for (int i = 0; i < secondaryQuestList.Count-1; ++i)
+			{
+
+				secondaryQuests += (i + 1).ToString();
+				secondaryQuests += ". ";
+				secondaryQuests += secondaryQuestList[i].GetQuestName().ToString();
+				if(secondaryQuestList[i].GetQuestId()==3)
+                {
+					secondaryQuests += "    (" + enemiesControlled.ToString()+ "/3)"+ "\n    ";
+				}
+				else if(secondaryQuestList[i].GetQuestId() == 4) 
+				{
+					secondaryQuests +="    ("+ enemiesThrowingKnife.ToString() + "/5)" + "\n    ";
+				}else if(secondaryQuestList[i].GetQuestId() == 5)
+				{
+					secondaryQuests += "    (" + enemiesDistractedStone.ToString() + "/5)" + "\n    " ;
+                }
+				else if (secondaryQuestList[i].GetQuestId() == 12)
+				{
+					secondaryQuests += "    (" + enemiesCamouflage.ToString() + "/3)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 13)
+				{
+					secondaryQuests += "    (" + enemiesHunterSeeker.ToString() + "/3)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 14)
+				{
+					secondaryQuests += "    (" + enemiesGrenade.ToString() + "/4)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 21)
+				{
+					secondaryQuests += "    (" + enemiesTrap.ToString() + "/3)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 22)
+				{
+					secondaryQuests += "    (" + enemiesWhistle.ToString() + "/3)" + "\n    ";
+				}
+				else
+                {
+					secondaryQuests += "\n    ";
+				}
+				secondaryQuests += secondaryQuestList[i].GetQuestDescription().ToString() + "\n\n";
+			}
+		}
+		else
+		{
+			secondaryQuests = "No secondary quests available";
+		}
+
 		if (completedQuestList.Count > 0)
         {
 			for (int i = 0; i < completedQuestList.Count; ++i)
 			{
-				completedQuests += completedQuestList[i].GetQuestName().ToString() + "\n\n";
+				completedQuests += completedQuestList[i].GetQuestName().ToString();
+				if (secondaryQuestList[i].GetQuestId() == 3)
+				{
+					completedQuests += "    (" + enemiesControlled.ToString() + "/3)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 4)
+				{
+					completedQuests += "    (" + enemiesThrowingKnife.ToString() + "/5)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 5)
+				{
+					completedQuests += "    (" + enemiesDistractedStone.ToString() + "/5)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 12)
+				{
+					completedQuests += "    (" + enemiesCamouflage.ToString() + "/3)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 13)
+				{
+					completedQuests += "    (" + enemiesHunterSeeker.ToString() + "/3)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 14)
+				{
+					completedQuests += "    (" + enemiesGrenade.ToString() + "/4)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 21)
+				{
+					completedQuests += "    (" + enemiesTrap.ToString() + "/3)" + "\n    ";
+				}
+				else if (secondaryQuestList[i].GetQuestId() == 22)
+				{
+					completedQuests += "    (" + enemiesWhistle.ToString() + "/3)" + "\n    ";
+				}
+				else
+				{
+					completedQuests += "\n    ";
+				}
 			}
 		}
 		else
         {
 			completedQuests = "No completed quests available";
-			//completedQuests += "Camuflaje:";
-			//completedQuests += enemiesCamouflage.ToString();
-			//completedQuests += "Hunter Seeker:";
-			//completedQuests += enemiesHunterSeeker.ToString();
-			//completedQuests += "Granada:";
-			//completedQuests += enemiesGrenade.ToString();
 		}
+		position.Set(242, 68.5f, 0);
+		mainButton.GetComponent<Transform2D>().SetSize(position);
+		UIButton mainButtonUI = mainButton.GetComponent<UIButton>();
+		mainButtonUI.SetTextPosition(-45, -5);
+		mainButtonUI.text = "Main";
 
-		position.Set(365.5f, 69.5f, 0);
-		activeButton.GetComponent<Transform2D>().SetSize(position);
-		UIButton activeButtonUI = activeButton.GetComponent<UIButton>();
-		activeButtonUI.SetTextPosition(-45,-5);
-		activeButtonUI.text = "Active Quests";
-		
+		position.Set(242, 68.5f, 0);
+		secondaryButton.GetComponent<Transform2D>().SetSize(position);
+		UIButton secondaryButtonUI = secondaryButton.GetComponent<UIButton>();
+		secondaryButtonUI.SetTextPosition(-45, -5);
+		secondaryButtonUI.text = "Secondary";
 
-		position.Set(365.5f, 69.5f, 0);
+		position.Set(242, 68.5f, 0);
 		completedButton.GetComponent<Transform2D>().SetSize(position);
 		UIButton completedButtonUI = completedButton.GetComponent<UIButton>();
 		completedButtonUI.SetTextPosition(-55, -5);
-		completedButtonUI.text = "Completed Quests";
+		completedButtonUI.text = "Completed";
 		
-
-		activeQuestNames.GetComponent<UIText>().text = activeQuests;
-		
-		if (activeQuests == "No active quests available")
-			activeQuestNames.GetComponent<UIText>().SetTextTextColor(255, 0, 0);
+		mainQuestNames.GetComponent<UIText>().text = mainQuests;
+		if (mainQuests == "No main quests available")
+			mainQuestNames.GetComponent<UIText>().SetTextTextColor(255, 0, 0);
 		else
-			activeQuestNames.GetComponent<UIText>().SetTextTextColor(255, 255, 255);
+			mainQuestNames.GetComponent<UIText>().SetTextTextColor(255, 255, 255);
+
+		secondaryQuestNames.GetComponent<UIText>().text = secondaryQuests;
+		if (secondaryQuests == "No secondary quests available")
+			secondaryQuestNames.GetComponent<UIText>().SetTextTextColor(255, 0, 0);
+		else
+			secondaryQuestNames.GetComponent<UIText>().SetTextTextColor(255, 255, 255);
 
 		completedQuestNames.GetComponent<UIText>().text = completedQuests;
 		
@@ -574,15 +757,31 @@ public class QuestSystem : RagnarComponent
 			completedQuestNames.GetComponent<UIText>().SetTextTextColor(255, 0, 0);
 		else
 			completedQuestNames.GetComponent<UIText>().SetTextTextColor(255, 255, 255);
-
-		a = activeButton.GetComponent<UIButton>().GetButtonState();
+		a = mainButton.GetComponent<UIButton>().GetButtonState();
 		switch (a)
 		{
 			case 3:
 				// pressed mode
 				completedButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
-				activeButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
-				showActive = true;
+				secondaryButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+				mainButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+				showMain = true;
+				showSecondary = false;
+				showCompleted = false;
+				changePage = true;
+				break;
+		}
+
+		a = secondaryButton.GetComponent<UIButton>().GetButtonState();
+		switch (a)
+		{
+			case 3:
+				// pressed mode
+				completedButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+				mainButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+				secondaryButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+				showMain = false;
+				showSecondary = true;
 				showCompleted = false;
 				changePage = true;
 				break;
@@ -593,12 +792,34 @@ public class QuestSystem : RagnarComponent
 		{
 			case 3:
 				// pressed mode
-				activeButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+				mainButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+				secondaryButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
 				completedButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
-				showActive = false;
+				showMain = false;
+				showSecondary = false;
 				showCompleted = true;
 				changePage = true;
 				break;
+		}
+
+	}
+	public void SaveMissions()
+    {
+		SaveSystem.DeleteDirectoryFiles("Library/SavedGame/Quest");
+		for (int i = 0; i < completedQuestList.Count; i++)
+		{
+			SaveSystem.SaveQuest(completedQuestList[i]);
+        }
+    }
+	public void LoadMissions()
+	{		
+		for (int i = 0; i < questList.Count; i++)
+		{	
+			QuestData data = SaveSystem.LoadQuest(questList[i].GetQuestId().ToString());
+			if (data != null&&data.state==QuestState.COMPLETED)
+            {
+				CompleteQuest(questList[i]);
+            }
 		}
 	}
 }

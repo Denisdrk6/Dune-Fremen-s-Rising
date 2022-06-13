@@ -206,3 +206,23 @@ MonoObject* ReturnHitpoint()
 	LineSegment picking = app->sceneManager->GetCurrentScene()->mainCamera->GetFrustum()->UnProjectLineSegment(mousePos.x, mousePos.y);
 	return app->moduleMono->Float3ToCS(app->navMesh->CalculateHitPosition(picking));
 }
+
+// Coordenadas de pantalla = projection * view *  posicionDelObjeto
+MonoObject* WorldToScreen(MonoObject* target)
+{
+	CameraComponent* cam = app->gameCam;
+	float3 tg = app->moduleMono->UnboxVector(target);
+	float4 pos(tg, 1);
+	float4 screenPos = cam->matrixProjectionFrustum.Mul(cam->matrixViewFrustum.Mul(pos));
+	screenPos /= screenPos.w;
+	screenPos.x = (screenPos.x + 1.0f) * 0.5f;
+	screenPos.y = (screenPos.y + 1.0f) * 0.5f;
+
+	screenPos.x *= (float)*app->window->GetWindowWidth();
+	screenPos.x -= (float)*app->window->GetWindowWidth() * 0.5f;
+	screenPos.y *= (float)*app->window->GetWindowHeight();
+	screenPos.y -= (float)*app->window->GetWindowHeight() * 0.5f;
+	screenPos.z = -10.4f;
+
+	return app->moduleMono->Float3ToCS(screenPos.Float3Part());
+}

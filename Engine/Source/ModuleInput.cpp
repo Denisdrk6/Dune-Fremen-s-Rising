@@ -46,7 +46,6 @@ bool ModuleInput::Init(JsonParsing& node)
 
 	FillScancodeNameList();
 
-	defaultCursor = CopyCursor(LoadCursor(0, IDC_ARROW));
 	LoadCursors();
 	currentCursor = CursorState::NORMAL;
 
@@ -63,25 +62,24 @@ void ModuleInput::LoadCursors()
 	path = "Assets/Resources/Cursor/";
 #endif
 
-	cursors.push_back(LoadCursorFromFile(std::string(path + "clickable.ani").c_str()));
+	CreateCursor(std::string(path + "position.bmp").c_str(), 16, 16);
 
-	cursors.push_back(LoadCursorFromFile(std::string(path + "chani_crysknife.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "paul_voice.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "paul_throwing_knife.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "paul_throw_stone.cur").c_str()));
+	CreateCursor(std::string(path + "chani_crysknife.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "paul_voice.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "paul_throwing_knife.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "paul_throw_stone.bmp").c_str(), 0, 0);
 
-	cursors.push_back(LoadCursorFromFile(std::string(path + "chani_crysknife.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "chani_camouflage.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "chani_hunter_seeker.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "chani_spice_grenade.cur").c_str()));
+	CreateCursor(std::string(path + "chani_crysknife.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "chani_camouflage.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "chani_hunter_seeker.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "chani_spice_grenade.bmp").c_str(), 0, 0);
 
-	cursors.push_back(LoadCursorFromFile(std::string(path + "stilgar_sword.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "stilgar_stunner.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "stilgar_trap.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "stilgar_whistle.cur").c_str()));
+	CreateCursor(std::string(path + "stilgar_sword.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "stilgar_stunner.bmp").c_str(), 0, 0);
+	CreateCursor(std::string(path + "stilgar_trap.bmp").c_str(), 20, 20);
+	CreateCursor(std::string(path + "stilgar_whistle.bmp").c_str(), 0, 0);
 
-	cursors.push_back(LoadCursorFromFile(std::string(path + "clickable.cur").c_str()));
-	cursors.push_back(LoadCursorFromFile(std::string(path + "non-clickable.cur").c_str()));
+	CreateCursor(std::string(path + "stop.bmp").c_str(), 16, 16);
 }
 
 // Called every draw update
@@ -260,9 +258,12 @@ bool ModuleInput::CleanUp()
 {
 	DEBUG_LOG("Quitting SDL input event subsystem");
 
-	RestoreDefaultCursor();
-
+	for (size_t i = 0; i < cursors.size(); i++)
+	{
+		SDL_FreeCursor(cursors[i]);
+	}
 	cursors.clear();
+
 	if (pad != NULL)
 	{
 		SDL_GameControllerClose(pad);
@@ -273,11 +274,11 @@ bool ModuleInput::CleanUp()
 	return true;
 }
 
-void ModuleInput::RestoreDefaultCursor()
+void ModuleInput::CreateCursor(const char* path, int x, int y)
 {
-	HCURSOR hCurDef = CopyCursor(defaultCursor);
-	SetSystemCursor(hCurDef, OCR_NORMAL);
-	DestroyCursor(hCurDef);
+	SDL_Surface* surface = SDL_LoadBMP(path);
+	cursors.push_back(SDL_CreateColorCursor(surface, x, y));
+	SDL_FreeSurface(surface);
 }
 
 bool ModuleInput::IsJoystickAvailable(int joystickId)
@@ -402,9 +403,7 @@ bool ModuleInput::GetAxis(int joystickId, JAxis axis)
 void ModuleInput::SetCursorState(int state)
 {
 	currentCursor = (CursorState)state;
-	HCURSOR hCurDef = CopyCursor(cursors[state]);
-	SetSystemCursor(hCurDef, OCR_NORMAL);
-	DestroyCursor(hCurDef);
+	SDL_SetCursor(cursors[state]);
 }
 
 void ModuleInput::ImportToLibrary()
@@ -415,7 +414,7 @@ void ModuleInput::ImportToLibrary()
 	for (std::vector<std::string>::iterator it = files.begin(); it != files.end(); ++it)
 	{
 		std::string ext = (*it).substr((*it).find_last_of("."), (*it).length());
-		if (ext == ".cur" || ext == ".ani")
+		if (ext == ".bmp")
 		{
 			std::string assetsPath = "Assets/Resources/Cursor/";
 			assetsPath += (*it);

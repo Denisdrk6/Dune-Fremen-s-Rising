@@ -16,6 +16,7 @@ class MonoManager;
 class Physics3D;
 class ModuleNavMesh;
 class ModuleUI;
+class CameraComponent;
 
 #define CONFIG_FILENAME	"config.json"
 #define APPLICATION_NAME "Dune: Fremen's Rising"
@@ -70,6 +71,7 @@ public:
 	ModuleNavMesh* navMesh = nullptr;
 
 	JsonParsing jsonFile;
+	CameraComponent* gameCam;
 
 private:
 	std::list<Module*> listModules;

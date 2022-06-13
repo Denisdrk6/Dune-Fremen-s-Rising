@@ -36,9 +36,6 @@ void main()
 	vec4 realPixelDepth = texture(depthTexture, vTexCoords);
 	vec4 realPixelNormal = texture(normalTexture, vTexCoords);
 
-	if (realPixelNormal.a < 0)
-		discard;
-
 	float dx = dFdx(vTexCoords.s);
 	float dy = dFdy(vTexCoords.t);
 	if (realPixelNormal.a < 1)
@@ -48,6 +45,14 @@ void main()
 	}
 
 	vec4 result = texture(colorTexture, vTexCoords);
+
+	if (realPixelNormal.a < 0)
+	{
+		fragColor = result;
+		//discard;
+		return;
+	}
+
 	if (vTexCoords.y > 0.002 && vTexCoords.y < 0.998 && vTexCoords.x > 0.002 && vTexCoords.x < 0.998)
 	{
 		float maxDepth = 0;

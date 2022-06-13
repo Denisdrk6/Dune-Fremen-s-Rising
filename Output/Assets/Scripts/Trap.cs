@@ -24,7 +24,7 @@ public class Trap : RagnarComponent
         playerManagerScript = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
         GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Pause();
         player.GetComponent<Player>().PlayAudioClip("WPN_TRAPACTIVE");
-        player.GetComponent<Animation>().PlayAnimation("Ability3");
+        //player.GetComponent<Animation>().PlayAnimation("Ability3");
     }
 	public void Update()
 	{

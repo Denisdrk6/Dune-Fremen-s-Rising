@@ -481,6 +481,7 @@ bool CameraComponent::OnLoad(JsonParsing& node)
 	limits = node.GetJson4Number(node, "Limits");
 
 	SetPlanes();
+	app->gameCam = this;
 
 	return true;
 }

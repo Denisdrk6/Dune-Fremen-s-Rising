@@ -101,6 +101,9 @@ public class DialogueTrigger : RagnarComponent
             isUsed = false;
             //GameObject.Find("EnemyManager").GetComponent<EnemyManager>().SaveTest("WIIIIIN", gameObject.transform.globalPosition);
             Input.RestoreDefaultCursor();
+
+            GameObject.Find("Quest System").GetComponent<QuestSystem>().SaveMissions();
+            Debug.Log("Holaaaaa");
             SceneManager.LoadScene("WinScene");
             InternalCalls.Destroy(gameObject);
         }

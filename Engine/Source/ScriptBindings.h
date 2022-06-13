@@ -74,15 +74,15 @@ int GetCursorState()
 
 void RestoreDefaultCursor()
 {
-	if (app != nullptr)
-		app->input->RestoreDefaultCursor();
+	/*if (app != nullptr)
+		app->input->RestoreDefaultCursor();*/
 }
 
 void SetEagleCursor(bool ret)
 {
 	if (app != nullptr)
 	{
-		if (ret)
+		/*if (ret)
 		{
 			int i = 0;
 			for (std::vector<HCURSOR>::iterator it = app->input->GetCursors()->begin(); it != app->input->GetCursors()->end(); ++it)
@@ -111,7 +111,7 @@ void SetEagleCursor(bool ret)
 				}
 				i++;
 			}
-		}		
+		}	*/	
 	}
 }
 
@@ -493,8 +493,11 @@ MonoObject* InstancePrefab(MonoObject* name, MonoObject* position, bool begin = 
 	GameObject* go = PrefabManager::GetInstance()->LoadPrefab(path.c_str(), begin);
 
 	float3 pos = app->moduleMono->UnboxVector(position);
-	go->GetComponent<TransformComponent>()->SetGlobalPosition(pos);
-	go->GetComponent<TransformComponent>()->SetAABB();
+	if (TransformComponent* tr = go->GetComponent<TransformComponent>())
+	{
+		tr->SetGlobalPosition(pos);
+		tr->SetAABB();
+	}
 	if (RigidBodyComponent* rb = go->GetComponent<RigidBodyComponent>())
 		rb->GetBody()->getWorldTransform().setOrigin(pos);
 

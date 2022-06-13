@@ -33,7 +33,7 @@ public class HunterSeeker : RagnarComponent
 			rb.IgnoreCollision(GameObject.Find("PlayerManager").GetComponent<PlayerManager>().players[i], true);
 		}
 
-		player.GetComponent<Animation>().PlayAnimation("Ability3");
+		//player.GetComponent<Animation>().PlayAnimation("Ability3");
 		sceneAudio = GameObject.Find("AudioLevel1");
         sceneAudio.GetComponent<AudioSource>().PlayClip("WPN_HUNTERSEEKERNEEDLE");
 
@@ -54,7 +54,8 @@ public class HunterSeeker : RagnarComponent
 			leftParticles.Play();
 			rightParticles.Play();
 		}
-		if(agent.PathSize() == 0)
+		Debug.Log((agent.path - gameObject.transform.globalPosition).magnitude.ToString());
+		if((agent.path - gameObject.transform.globalPosition).magnitude < 1.5f)
         {
 			leftParticles.Pause();
 			rightParticles.Pause();

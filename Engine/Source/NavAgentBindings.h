@@ -101,6 +101,11 @@ void SetAgentPath(MonoObject* go, MonoArray* path)
 	agent->agentProperties->path.clear();
 	agent->agentProperties->path = wayPoints;
 }
+MonoObject* GetAgentPath(MonoObject* go)
+{
+	NavAgentComponent* agent = GetComponentMono<NavAgentComponent*>(go);
+	return  app->moduleMono->Float3ToCS(agent->agentProperties->path[0]);
+}
 
 void SetAgentSpeed(MonoObject* go, float speed)
 {

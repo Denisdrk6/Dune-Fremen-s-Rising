@@ -19,7 +19,7 @@ public class SpiceGranade : RagnarComponent
 		AimMethod();
 
 		player.GetComponent<Player>().PlayAudioClip("SMOKEGRENADE_ACTIVATE");
-		player.GetComponent<Animation>().PlayAnimation("Ability4");
+		//player.GetComponent<Animation>().PlayAnimation("Ability4");
 	}
 	public void Update()
 	{
