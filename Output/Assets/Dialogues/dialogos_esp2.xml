@@ -246,7 +246,7 @@
 	<!-- AuthorId:  0=Paul / 1=Chani / 7=Stilgar -->
 	<!-- Cinemática final, post ultimo golpe del boss, es en interior -->
 	<Dialogue Id="9">
-		<node AuthorId="1" Line="Paul?"> 
+		<!--<node AuthorId="1" Line="Paul?"> 
 		</node>
 		<node AuthorId="7" Line="¿Estás bien chico?"> 
 		</node>
@@ -257,7 +257,7 @@
 		<node AuthorId="1" Line="Me tenías con el corazón en un puño."> 
 		</node>
 		<node AuthorId="7" Line="A poder ser ahórranos estos sustos de ahora en adelante."> 
-		</node>	
+		</node>	-->
 		<node AuthorId="0" Line="Nos hemos librado de Rabban."> 
 		</node>
 		<node AuthorId="1" Line="Sí, pero me temo que otros vendrán."> 

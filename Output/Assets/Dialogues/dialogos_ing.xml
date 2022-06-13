@@ -227,7 +227,7 @@
 	</Dialogue>
 	<!-- AuthorId:  0=Paul / 1=Chani  -->
 	<Dialogue Id="9">
-		<node AuthorId="1" Line="Paul?"> 
+		<!--<node AuthorId="1" Line="Paul?"> 
 		</node>
 		<node AuthorId="7" Line="Are you okay, boy?"> 
 		</node>
@@ -238,7 +238,7 @@
 		<node AuthorId="1" Line="We almost lost you"> 
 		</node>
 		<node AuthorId="7" Line="If possible, save ourselves from these scares from now on."> 
-		</node>	
+		</node>	-->
 		<node AuthorId="0" Line="We got rid of Rabban."> 
 		</node>
 		<node AuthorId="1" Line="Yes, but I'm afraid others will come."> 
@@ -268,4 +268,4 @@
 		</node>
 	</Dialogue>
 	-->
-<dialogueTree>
+</dialogueTree>
