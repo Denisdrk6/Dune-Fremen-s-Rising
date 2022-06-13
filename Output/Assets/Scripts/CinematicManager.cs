@@ -37,10 +37,13 @@ public class CinematicManager : RagnarComponent
         Vector3 pos = new Vector3(0, 0, 0);
         float posY = InternalCalls.GetRegionGame().y, posX = InternalCalls.GetRegionGame().x;
         posY *= 0.33f;
-        posX = 0;
-        pos.Set(posX, posY + 10, text.GetComponent<Transform2D>().position2D.z + 20);
+        posX = -(InternalCalls.GetRegionGame().x / 4);
+        /*pos.Set(posX, posY + 10, text.GetComponent<Transform2D>().position2D.z + 20);
+        text.GetComponent<Transform2D>().position2D = pos;*/
+
+
+        pos.Set(posX, -(InternalCalls.GetRegionGame().y / 2)+400, text.GetComponent<Transform2D>().position2D.z + 20);
         text.GetComponent<Transform2D>().position2D = pos;
-        
     }
 
 	public void Update()

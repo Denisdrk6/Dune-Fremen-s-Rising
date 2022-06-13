@@ -141,7 +141,7 @@ public class Cinematic_1 : RagnarComponent
                 break;
             case 4:
                 Animation anim7 = GameObject.Find("Enemy1").GetComponent<Animation>();
-                anim7.PlayAnimation("Shoot");
+                anim7.PlayAnimation("Idle");
                 //shoot = true;
                 Animation anim4 = GameObject.Find("Fremen").GetComponent<Animation>();
                 anim4.PlayAnimation("Death");
