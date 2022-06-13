@@ -6,9 +6,13 @@ public class Cinematic_7 : RagnarComponent
     public bool runGame = true;
     public GameObject[] bands;
 
-    public int IdDialogue = 0;
+    public int IdDialogue = 9;
 
     CinematicManager dialogues;
+
+    GameObject paul;
+    GameObject chani;
+    GameObject stilgar;
 
     public int IdLine = 0;
     enum CinematicState
@@ -19,22 +23,10 @@ public class Cinematic_7 : RagnarComponent
 
     public void Start()
     {
-        //Set UI Bands
-        bands = new GameObject[2];
-        bands[0] = GameObject.Find("High_Band");
-        bands[1] = GameObject.Find("Low_Band");
-
-        bands[0].transform.globalPosition = new Vector3(0f, 449f, -10.4f);
-        bands[1].transform.globalPosition = new Vector3(0f, -447f, -10.4f);
-
-        // Deberian ser variables publicas para poder ponerles las animaciones en la funcion: Animations()
-        GameObject characterPaul = GameObject.Find("char_paul");
-        GameObject characterChani = GameObject.Find("char_chani");
-        GameObject characterStilgar = GameObject.Find("char_stilgar");
-
-        characterPaul.GetComponent<Animation>().PlayAnimation("Idle");
-        characterChani.GetComponent<Animation>().PlayAnimation("Idle");
-        characterStilgar.GetComponent<Animation>().PlayAnimation("Idle");
+        paul = GameObject.Find("Player");
+        chani = GameObject.Find("Player_2");
+        stilgar = GameObject.Find("Player_3");
+        
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
         //-----------
@@ -73,7 +65,7 @@ public class Cinematic_7 : RagnarComponent
     {
         //var1: ID del dialogo que se hara en la cinematica(variable arriba)
         //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
-        dialogues.SetIDDialogue(IdDialogue, "build");
+        dialogues.SetIDDialogue(IdDialogue, "Credits");
     }
 
     private void Animations()
@@ -83,7 +75,9 @@ public class Cinematic_7 : RagnarComponent
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
             case 0:
-
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                chani.GetComponent<Animation>().PlayAnimation("Idle");
+                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
                 break;
             case 1:
 
