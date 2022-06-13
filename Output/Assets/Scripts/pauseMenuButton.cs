@@ -12,7 +12,7 @@ public class pauseMenuButton : RagnarComponent
 	bool isFirstE = true;
 	bool isFirstO = true;
 	GameObject[] players;
-	float genealDT = 0;
+	//float genealDT = 0;
 	public int abiltyfocused = 0;
 	bool voiceActice = false;
 	bool lastVoiceActice = false;
@@ -392,6 +392,93 @@ public class pauseMenuButton : RagnarComponent
 			LoadOptions(load);
 		}
 		FillPlayers();
+
+		//UI Desactivated for Trailer/////
+		abilityLeters.isActive = false;
+		CharacterPhotoBord.isActive = false;
+		AbilityBord.isActive = false;
+		UICharPhoto.isActive = false;
+		UIAbilityArray.isActive = false;
+		UICharBor1.isActive = false;
+		UICharBor2.isActive = false;
+		UICharBor3.isActive = false;
+		UICharacterName.isActive = false;
+		UISelector.isActive = false;
+		UIPaulImage.isActive = false;
+		UIChaniImage.isActive = false;
+		UIStilgarImage.isActive = false;
+		litleLive1.isActive = false;
+		litleLive2.isActive = false;
+		litleLive3.isActive = false;
+		Ability1Bg.isActive = false;
+		Ability2Bg.isActive = false;
+		Ability3Bg.isActive = false;
+		Ability4Bg.isActive = false;
+		PaulBg.isActive = false;
+		ChaniBg.isActive = false;
+		StilgarBg.isActive = false;
+		StilgarName.isActive = false;
+		PaulName.isActive = false;
+		ChaniName.isActive = false;
+		AbilityBG1.isActive = false;
+		AbilityBG2.isActive = false;
+		AbilityBG3.isActive = false;
+		AbilityBG4.isActive = false;
+		cd1.isActive = false;
+		cd2.isActive = false;
+		cd3.isActive = false;
+		cd4.isActive = false;
+		UICrouch.isActive = false;
+		UIBuff.isActive = false;
+
+		GameObject.Find("UI Counter").isActive = false;
+
+		AbilityLeft.isActive = false;
+		AbilityRight.isActive = false;
+
+		MissButton.isActive = false;
+
+		optionsControlText.isActive = false;
+		optionsControlText1.isActive = false;
+		optionsControlText2.isActive = false;
+
+		optionsControl1.isActive = false;
+		optionsControl2.isActive = false;
+		optionsControl3.isActive = false;
+		optionsControl4.isActive = false;
+		optionsControl5.isActive = false;
+		optionsControl6.isActive = false;
+		optionsControl7.isActive = false;
+		optionsControl8.isActive = false;
+		optionsControl9.isActive = false;
+		optionsControl10.isActive = false;
+		optionsControl11.isActive = false;
+		optionsControl12.isActive = false;
+		optionsControl13.isActive = false;
+		optionsControl14.isActive = false;
+		optionsControl15.isActive = false;
+		optionsControl16.isActive = false;
+		optionsControl17.isActive = false;
+		optionsControl18.isActive = false;
+		optionsControl19.isActive = false;
+		optionsControl20.isActive = false;
+		optionsControl21.isActive = false;
+		optionsControl22.isActive = false;
+		optionsControlR.isActive = false;
+		optionsControlL.isActive = false;
+		presetText.isActive = false;
+
+		optionsBackButton.isActive = false;
+		optionsBackImage.isActive = false;
+
+		optionsTransCuad.isActive = false;
+
+		optionsSoundText.isActive = false;
+		optionsVoicesSound.isActive = false;
+		optionsFXcSound.isActive = false;
+		optionsMusicSound.isActive = false;
+		optionsGeneralSound.isActive = false;
+		//////////////////////////////////////
 	}
 	public void FillPlayers()
     {
@@ -426,18 +513,18 @@ public class pauseMenuButton : RagnarComponent
 	{
 		//para pillar el hitPoint del mouse Pick
 		//selectedPlayer.GetComponent<NavAgent>().hitPosition
-		selectedPlayer = players[playerManager.characterSelected];
-		genealDT = Time.deltaTime;
-		SetAllPositions();
-		UpdateMenu();
-		UpdateOptions();
-		UpdatePlayerPause();
-		if (Input.GetKey(KeyCode.I) == KeyState.KEY_DOWN)
-        {
-			GameObject.Find("Quest System").GetComponent<QuestSystem>().SaveMissions();
-			Input.RestoreDefaultCursor();
-			SceneManager.LoadScene("WinScene");
-        }
+		//selectedPlayer = players[playerManager.characterSelected];
+		//genealDT = Time.deltaTime;
+		//SetAllPositions();
+		//UpdateMenu();
+		//UpdateOptions();
+		//UpdatePlayerPause();
+		//if (Input.GetKey(KeyCode.I) == KeyState.KEY_DOWN)
+  //      {
+		//	GameObject.Find("Quest System").GetComponent<QuestSystem>().SaveMissions();
+		//	Input.RestoreDefaultCursor();
+		//	SceneManager.LoadScene("WinScene");
+  //      }
 	}
 	void UpdatePlayerPause()
     {
