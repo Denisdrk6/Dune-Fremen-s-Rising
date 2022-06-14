@@ -72,7 +72,7 @@
 	</Dialogue>
 	<!-- AuthorId:  0=Paul / 1=Chani -->
 	<Dialogue Id="2">
-		<!--<node AuthorId="3" Line="I thought you would be more smarter than your father, you are a fool coming to me. I'd have more respect for death, boy."> 
+		<node AuthorId="3" Line="I thought you would be more smarter than your father, you are a fool coming to me. I'd have more respect for death, boy."> 
 		</node>
 		<node AuthorId="0" Line="You have no respect for anyone's life, Arrakis people will make you pay, your actions will not leave unpunished Rabban."> 
 		</node>
@@ -85,7 +85,7 @@
 		<node AuthorId="3" Line="It's a shame it can't be here and now, but I'll have time to watch you fall Prince of nowhere."> 
 		</node>
 		<node AuthorId="3" Line="Wait for another shuttle to arrive and take him to the Palace, I have business to attend to before I can enjoy this show."> 
-		</node>-->
+		</node>
 		
 		
 		<node AuthorId="6" Line="Do you realize what could have happened?"> 
@@ -138,7 +138,7 @@
 	
 	<!-- AuthorId:  0=Paul / 1=Chani / 6=Lady Jessica / 7=Stilgar -->
 	<Dialogue Id="4">
-		<!--<node AuthorId="3" Line="Let's see who we have here."> 
+		<node AuthorId="3" Line="Let's see who we have here."> 
 		</node>
 		<node AuthorId="6" Line="What is he doing here?"> 
 		</node>
@@ -169,7 +169,7 @@
 		<node AuthorId="0" Line="I swear I'm gonna..."> 
 		</node>
 		<node AuthorId="1" Line="Hey, hey, hey, hey, stop right there. Have you seen how protected he is?"> 
-		</node>-->
+		</node>
 		<node AuthorId="0" Line="There are two roads that lead to Palace let's go for it."> 
 		</node>
 		<node AuthorId="1" Line="Each one can go one way."> 
@@ -207,10 +207,10 @@
 	</Dialogue>
 	<!-- AuthorId:   3=Rabban / 6=Lady Jessica  -->
 	<Dialogue Id="7">
-		<!--<node AuthorId="6" Line="Go away! (Using voice)."> 
+		<node AuthorId="6" Line="Go away! (Using voice)."> 
 		</node>
 		<node AuthorId="3" Line="Is it so hard to shut the fuck up?"> 
-		</node>-->
+		</node>
 		<node AuthorId="3" Line="You have brought your friends and yourself to die here, Paul."> 
 		</node>
 		<node AuthorId="0" Line="I'm going to kill you for what you've done."> 
