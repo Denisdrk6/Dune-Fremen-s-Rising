@@ -213,9 +213,11 @@ public class Boss : RagnarComponent
 				if (state == BossState.PHASE4)
 				{
 					GameObject.Find("Quest System").GetComponent<QuestSystem>().lastPhaseCompleted = true;
-					SceneManager.LoadScene("WinScene");
-					life.GetComponent<Material>().SetTexturePath("Assets/Resources/UI/ui_boss_lifebar0.png");
-					InternalCalls.Destroy(gameObject);
+                    GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
+                    GameObject.Find("DialogueTrigger11").GetComponent<DialogueTrigger>().SetUsed(false);
+                    GameObject.Find("DialogueTrigger11").GetComponent<DialogueTrigger>().ActiveDialoguebyID(9);
+                    life.GetComponent<Material>().SetTexturePath("Assets/Resources/UI/ui_boss_lifebar0.png");
+					//InternalCalls.Destroy(gameObject);
 				}
 				else
 				{
