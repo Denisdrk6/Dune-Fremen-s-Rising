@@ -55,10 +55,12 @@ public class Cinematic_1 : RagnarComponent
         FremenA = Fremen.GetComponent<Animation>();
         //EnemyA3 = Enemy3.GetComponent<Animation>();
         
-        bossA.PlayAnimation("Idle");
+        bossA.PlayAnimation("Talk");
         EnemyA1.PlayAnimation("Talk");
         EnemyA2.PlayAnimation("Talk");
         FremenA.PlayAnimation("Idle");
+
+        boss.GetComponent<Material>().outlineNormals = 0.0f;
 
         SoundEfects = Enemy1.GetComponent<AudioSource>();
 

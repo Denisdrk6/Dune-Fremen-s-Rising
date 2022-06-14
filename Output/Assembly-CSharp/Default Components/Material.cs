@@ -40,5 +40,14 @@ namespace RagnarEngine
             [MethodImplAttribute(MethodImplOptions.InternalCall)]
             set;
         }
+
+        public extern float outlineNormals
+        {
+            [MethodImplAttribute(MethodImplOptions.InternalCall)]
+            get;
+
+            [MethodImplAttribute(MethodImplOptions.InternalCall)]
+            set;
+        }
     }
 }

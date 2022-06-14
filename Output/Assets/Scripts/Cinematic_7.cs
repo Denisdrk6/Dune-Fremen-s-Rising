@@ -34,7 +34,8 @@ public class Cinematic_7 : RagnarComponent
         chani.GetComponent<Animation>().PlayAnimation("Idle");
         stilgar.GetComponent<Animation>().PlayAnimation("Idle");
         boss.GetComponent<Animation>().PlayAnimation("Dead");
-        
+        boss.GetComponent<Material>().outlineNormals = 0.0f;
+
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
         //-----------
         state = CinematicState.FIRST;

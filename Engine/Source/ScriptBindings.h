@@ -298,6 +298,18 @@ void SetEmissiveColor(MonoObject* go, MonoObject* color)
 	mat->SetEmissiveColor(app->moduleMono->UnboxVector(color));
 }
 
+float GetOutlineNormals(MonoObject* go)
+{
+	MaterialComponent* mat = GetComponentMono<MaterialComponent*>(go);
+	return mat->GetNormalsThickness();
+}
+
+void SetOutlineNormals(MonoObject* go, float value)
+{
+	MaterialComponent* mat = GetComponentMono<MaterialComponent*>(go);
+	mat->SetNormalsThickness(value);
+}
+
 // Light ============================
 
 void SetDirectionalLightShadowsEnabled(MonoBoolean* value)

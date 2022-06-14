@@ -86,6 +86,8 @@ bool MonoManager::Init(JsonParsing& node)
 	mono_add_internal_call("RagnarEngine.Material::set_emissiveEnabled", SetEmissiveEnabled);
 	mono_add_internal_call("RagnarEngine.Material::get_emissiveColor", GetEmissiveColor);
 	mono_add_internal_call("RagnarEngine.Material::set_emissiveColor", SetEmissiveColor);
+	mono_add_internal_call("RagnarEngine.Material::get_outlineNormals", GetOutlineNormals);
+	mono_add_internal_call("RagnarEngine.Material::set_outlineNormals", SetOutlineNormals);
 
 	// Material Comp =============
 	

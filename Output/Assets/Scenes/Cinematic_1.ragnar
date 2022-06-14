@@ -273,7 +273,7 @@
                         0,
                         0.98829638957977295,
                         0,
-                        0.15254592895507813
+                        0.15254592895507812
                     ],
                     "RotationEditor": [
                         0,
@@ -337,7 +337,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164063,
+                        0.92880630493164062,
                         0,
                         0.37056559324264526
                     ],
@@ -469,7 +469,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164063,
+                        0.92880630493164062,
                         0,
                         0.37056559324264526
                     ],
@@ -733,7 +733,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164063,
+                        0.92880630493164062,
                         0,
                         0.37056559324264526
                     ],
@@ -1587,7 +1587,7 @@
                     "Position": [
                         -62.699806213378906,
                         0,
-                        162.44302368164063
+                        162.44302368164062
                     ],
                     "Quaternion": [
                         0,
@@ -1838,7 +1838,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_1",
-                    "pointer": 768401256,
+                    "pointer": 551329536,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -1888,7 +1888,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 768401560,
+                    "pointer": 551332424,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -2044,7 +2044,7 @@
                 {
                     "Type": 2,
                     "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_boss_basecolor.png",
-                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/nme_boss_nomal2.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
                     "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
                     "Cast Shadows": true,
@@ -2053,15 +2053,15 @@
                         0,
                         0
                     ],
-                    "Opacity": 0,
-                    "Emissive Enabled": true,
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
                     "Emissive Color": [
                         0,
                         0,
                         0
                     ],
-                    "Color Multiplier": 1,
-                    "Outline Normals Thickness": 1
+                    "Color Multiplier": 1.4000000476837158,
+                    "Outline Normals Thickness": 0
                 },
                 {
                     "Type": 1,
@@ -2241,7 +2241,7 @@
                         0
                     ],
                     "Color Multiplier": 1.3999999761581421,
-                    "Outline Normals Thickness": 1
+                    "Outline Normals Thickness": 0.11999999731779099
                 },
                 {
                     "Type": 1,
@@ -2366,7 +2366,7 @@
                         0
                     ],
                     "Color Multiplier": 1.3999999761581421,
-                    "Outline Normals Thickness": 1
+                    "Outline Normals Thickness": 0.11999999731779099
                 },
                 {
                     "Type": 1,
@@ -2491,7 +2491,7 @@
                         0
                     ],
                     "Color Multiplier": 1,
-                    "Outline Normals Thickness": 1
+                    "Outline Normals Thickness": 0.11999999731779099
                 },
                 {
                     "Type": 1,

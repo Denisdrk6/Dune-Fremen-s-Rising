@@ -55,6 +55,9 @@ public:
 	inline float GetDiffuseAlpha() { return opacity; }
 	inline void SetDiffuseAlpha(float value) { opacity = value; }
 
+	inline float GetNormalsThickness() { return outlineNormalsThickness; }
+	inline void SetNormalsThickness(float value) { outlineNormalsThickness = value; }
+
 private:
 	void DisplayTexturesInfo();
 
