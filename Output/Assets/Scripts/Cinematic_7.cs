@@ -14,6 +14,7 @@ public class Cinematic_7 : RagnarComponent
     GameObject paul;
     GameObject chani;
     GameObject stilgar;
+    GameObject boss;
 
 
     enum CinematicState
@@ -27,7 +28,13 @@ public class Cinematic_7 : RagnarComponent
         paul = GameObject.Find("Player");
         chani = GameObject.Find("Player_2");
         stilgar = GameObject.Find("Player_3");
+        boss = GameObject.Find("Boss");
 
+        paul.GetComponent<Animation>().PlayAnimation("Idle");
+        chani.GetComponent<Animation>().PlayAnimation("Idle");
+        stilgar.GetComponent<Animation>().PlayAnimation("Idle");
+        boss.GetComponent<Animation>().PlayAnimation("Dead");
+        
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
         //-----------
         state = CinematicState.FIRST;
@@ -51,7 +58,7 @@ public class Cinematic_7 : RagnarComponent
                 break;
             case CinematicState.ANIMATIONS:
 
-                Animations();
+                //Animations();
                 state = CinematicState.TRANSITION;
 
                 break;
@@ -65,7 +72,7 @@ public class Cinematic_7 : RagnarComponent
     {
         //var1: ID del dialogo que se hara en la cinematica(variable arriba)
         //var2: Nombre de la escena a la que se irá cuando acabe el dialogo
-        dialogues.SetIDDialogue(IdDialogue, "Credits");
+        dialogues.SetIDDialogue(IdDialogue, "WinScene");
     }
 
     private void Animations()
@@ -74,12 +81,6 @@ public class Cinematic_7 : RagnarComponent
         {   // EL dialogo puede tener mas o menos lineas
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
-            case 0:
-                paul.GetComponent<Animation>().PlayAnimation("Idle");
-                chani.GetComponent<Animation>().PlayAnimation("Idle");
-                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
-                break;
-
             default:
                 break;
         }

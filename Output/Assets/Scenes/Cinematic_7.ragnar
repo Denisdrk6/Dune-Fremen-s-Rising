@@ -158,7 +158,7 @@
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.55219453573226929,
+                    "Vertical Fov": 0.41793009638786316,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
                         24.73382568359375,
@@ -2829,7 +2829,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 886.5,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2895,7 +2895,7 @@
                     "buttonWidth": 2000,
                     "buttonHeight": 140,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 886.5,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -2968,7 +2968,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_7",
-                    "pointer": 553625544,
+                    "pointer": 634404552,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -3017,7 +3017,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 553626152,
+                    "pointer": 634404856,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -3056,7 +3056,7 @@
                     "buttonWidth": 100,
                     "buttonHeight": 100,
                     "lastButtonWidth": 1296,
-                    "lastButtonHeight": 886.5,
+                    "lastButtonHeight": 663.5,
                     "MoveOnResizeX": true,
                     "MoveOnResizeY": true
                 },
@@ -3091,6 +3091,197 @@
                     "textColor.g": 1,
                     "textColor.b": 1,
                     "TextFile": "-"
+                }
+            ]
+        },
+        {
+            "UUID": 1724506246,
+            "Parent UUID": 417171200,
+            "Name": "Boss",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Boss.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -3.9962618350982666,
+                        9.2189445495605469,
+                        0.56496286392211914
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        0,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_boss_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/nme_boss_nomal2.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_boss_walknormal__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 70,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Dead",
+                    "Animations": [
+                        {
+                            "State": "CallBackup",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Die",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_die__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Execdie",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_execdie__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Exhausted",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_exhausted__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "HitGround",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_hitground__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ntoa",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_ntoa__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_run__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shield",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shield__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShieldDestroy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shielddestroy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShotCrazy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shotcrazy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "SitIdle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_sitidle__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Throw",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "WalkAngry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walkangry__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "WalkNormal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walknormal__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Dead",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_deathpose__nme_boss_deathpose|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        }
+                    ]
                 }
             ]
         }
