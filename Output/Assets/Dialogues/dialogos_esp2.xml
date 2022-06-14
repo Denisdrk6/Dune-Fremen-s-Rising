@@ -146,7 +146,7 @@
 	<!-- AuthorId:  0=Paul / 1=Chani  -->
 	<!-- Cinemática 4, la de la plaza, a mitad del level 2 triggereada cuando Paul y Chani llegan a la entrada, aunque no estarán de forma directa en la escena -->
 	<Dialogue Id="4">
-		<node AuthorId="3" Line="Veamos a quien tenemos aquí."> 
+		<!--<node AuthorId="3" Line="Veamos a quien tenemos aquí."> 
 		</node>
 		<node AuthorId="6" Line="¿Que hace él aquí?"> 
 		</node>
@@ -175,7 +175,7 @@
 		<node AuthorId="7" Line="Pagarás por tus crimenes Rabban"> 
 		</node>
 		<node AuthorId="7" Line="Este desierto te engullirá y se deshará de tí, viva o muera yo."> 
-		</node>
+		</node>-->
 		<!-- Aunque Paul y Chani no salgan en plano, que la camara siga en el sitio y hablen Paul y Chani porque están junto al sitio donde sucede todo -->
 		<node AuthorId="0" Line="Te juro que voy a..."> 
 		</node>
@@ -223,10 +223,10 @@
 	<!-- AuthorId:   3=Rabban / 7=Stilgar -->
 	<!-- Cinemática 6 intro a la bossfight, es en interior, en la sla del boss -->
 	<Dialogue Id="7">
-		<node AuthorId="6" Line="¡Aléjate! (Usando la voz)."> 
+	<!--	<node AuthorId="6" Line="¡Aléjate! (Usando la voz)."> 
 		</node>	
 		<node AuthorId="3" Line="¿Tan difícil es cerrar la boca?"> 
-		</node>
+		</node>-->
 		<!-- Aqui lady jessica debería morir-->
 		<node AuthorId="3" Line="Has traído a tus amigos y a tí mismo a morir aquí, Paul."> 
 		</node>
