@@ -138,7 +138,7 @@
 	
 	<!-- AuthorId:  0=Paul / 1=Chani / 6=Lady Jessica / 7=Stilgar -->
 	<Dialogue Id="4">
-		<node AuthorId="3" Line="Let's see who we have here."> 
+		<!--<node AuthorId="3" Line="Let's see who we have here."> 
 		</node>
 		<node AuthorId="6" Line="What is he doing here?"> 
 		</node>
@@ -165,7 +165,7 @@
 		<node AuthorId="7" Line="You will pay for your crimes Rabban!"> 
 		</node>
 		<node AuthorId="7" Line="This desert will drown you and get rid of you whether I live or die!"> 
-		</node>
+		</node>-->
 		<node AuthorId="0" Line="I swear I'm gonna..."> 
 		</node>
 		<node AuthorId="1" Line="Hey, hey, hey, hey, stop right there. Have you seen how protected he is?"> 
@@ -207,10 +207,10 @@
 	</Dialogue>
 	<!-- AuthorId:   3=Rabban / 6=Lady Jessica  -->
 	<Dialogue Id="7">
-		<node AuthorId="6" Line="Go away! (Using voice)."> 
+		<!--<node AuthorId="6" Line="Go away! (Using voice)."> 
 		</node>
 		<node AuthorId="3" Line="Is it so hard to shut the fuck up?"> 
-		</node>
+		</node>-->
 		<node AuthorId="3" Line="You have brought your friends and yourself to die here, Paul."> 
 		</node>
 		<node AuthorId="0" Line="I'm going to kill you for what you've done."> 

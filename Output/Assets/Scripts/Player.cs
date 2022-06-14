@@ -433,56 +433,58 @@ public class Player : RagnarComponent
             return;
         }
         // Dialogues =========================================================
-        if (other.gameObject.name == "DialogueTrigger0")
+        /*if (other.gameObject.name == "DialogueTrigger0")
         {
             if(!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
             other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(0);
-        }
+        }*/
         if (other.gameObject.name == "DialogueTrigger3")
         {
             GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
+            Input.RestoreDefaultCursor();
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(3);
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveCinematic("Cinematic_3");
         }
         if (other.gameObject.name == "DialogueTrigger5")
         {
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(5);
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(3);
         }
         if (other.gameObject.name == "DialogueTrigger6")
         {
             GameObject.Find("Quest System").GetComponent<QuestSystem>().midLevel = true;
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(6);
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(4);
         }
-        if (other.gameObject.name == "DialogueTrigger9")
-        {
-            if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
-                PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(9);
-        }
+        //if (other.gameObject.name == "DialogueTrigger9")
+        //{
+        //    if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
+        //        PlayerPause();
+        //    other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(9);
+        //}
         if (other.gameObject.name == "DialogueTrigger10")
         {
             GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
+            Input.RestoreDefaultCursor();
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(10);
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveCinematic("Cinematic_5");
         }
         if (other.gameObject.name == "DialogueTrigger11")
         {
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(11);
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(6);
         }
         if (other.gameObject.name == "DialogueTrigger12")
         {
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(12);
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(7);
         }
         if (other.gameObject.name == "DialogueTrigger13")
         {
