@@ -87,6 +87,11 @@ public class CinematicManager : RagnarComponent
             state = 1;
             NextLine();
         }
+
+        if (Input.GetKey(KeyCode.P) == KeyState.KEY_UP)
+        {
+            state = 3;
+        }
     }
 
     void NextLine()

@@ -176,11 +176,11 @@ public class winScren : RagnarComponent
 		case 3:
 			// pressed mode
 			nextButton.SetButtonAlpha(0.75f);
-			if (SceneManager.lastSceneName == "build")
+			if (SceneManager.lastSceneName == "Cinematic_3" || SceneManager.lastSceneName == "build")
 				SceneManager.LoadScene("build2");
-			if (SceneManager.lastSceneName == "build2")
+			if (SceneManager.lastSceneName == "Cinematic_5" || SceneManager.lastSceneName == "build2")
 				SceneManager.LoadScene("build3");
-			if (SceneManager.lastSceneName == "build3")
+			if (SceneManager.lastSceneName == "Cinematic_7" || SceneManager.lastSceneName == "build3")
 				SceneManager.LoadScene("Credits");
 			//cambiar de escena
 			break;
@@ -227,14 +227,14 @@ public class winScren : RagnarComponent
 		case 3:
 			// pressed mode
 			replayButton.SetButtonAlpha(0.75f);
-			if (SceneManager.lastSceneName == "build")
-				SceneManager.LoadScene("build");
-			if (SceneManager.lastSceneName == "build2")
-				SceneManager.LoadScene("build2");
-			if (SceneManager.lastSceneName == "build3")
-				SceneManager.LoadScene("build3");
-				//cambiar de escena
-			break;
+                if (SceneManager.lastSceneName == "Cinematic_3" || SceneManager.lastSceneName == "build")
+                    SceneManager.LoadScene("build");
+                if (SceneManager.lastSceneName == "Cinematic_5" || SceneManager.lastSceneName == "build2")
+                    SceneManager.LoadScene("build2");
+                if (SceneManager.lastSceneName == "Cinematic_7" || SceneManager.lastSceneName == "build3")
+                    SceneManager.LoadScene("build3");
+                //cambiar de escena
+                break;
 		}
 	}
 	public void Update()
