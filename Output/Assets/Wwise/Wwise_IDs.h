@@ -101,6 +101,78 @@ namespace AK
         static const AkUniqueID VOICE_ENG_0_3 = 1645258891U;
         static const AkUniqueID VOICE_ENG_0_4 = 1645258892U;
         static const AkUniqueID VOICE_ENG_0_5 = 1645258893U;
+        static const AkUniqueID VOICE_ENG_0_6 = 1645258894U;
+        static const AkUniqueID VOICE_ENG_0_7 = 1645258895U;
+        static const AkUniqueID VOICE_ENG_0_8 = 1645258880U;
+        static const AkUniqueID VOICE_ENG_0_9 = 1645258881U;
+        static const AkUniqueID VOICE_ENG_1_0 = 1645111825U;
+        static const AkUniqueID VOICE_ENG_1_1 = 1645111824U;
+        static const AkUniqueID VOICE_ENG_1_2 = 1645111827U;
+        static const AkUniqueID VOICE_ENG_1_3 = 1645111826U;
+        static const AkUniqueID VOICE_ENG_1_4 = 1645111829U;
+        static const AkUniqueID VOICE_ENG_1_5 = 1645111828U;
+        static const AkUniqueID VOICE_ENG_1_6 = 1645111831U;
+        static const AkUniqueID VOICE_ENG_1_7 = 1645111830U;
+        static const AkUniqueID VOICE_ENG_1_8 = 1645111833U;
+        static const AkUniqueID VOICE_ENG_1_9 = 1645111832U;
+        static const AkUniqueID VOICE_ENG_1_10 = 1823536896U;
+        static const AkUniqueID VOICE_ENG_2_0 = 571785494U;
+        static const AkUniqueID VOICE_ENG_2_1 = 571785495U;
+        static const AkUniqueID VOICE_ENG_2_2 = 571785492U;
+        static const AkUniqueID VOICE_ENG_2_3 = 571785493U;
+        static const AkUniqueID VOICE_ENG_2_4 = 571785490U;
+        static const AkUniqueID VOICE_ENG_2_5 = 571785491U;
+        static const AkUniqueID VOICE_ENG_2_6 = 571785488U;
+        static const AkUniqueID VOICE_ENG_2_7 = 571785489U;
+        static const AkUniqueID VOICE_ENG_2_8 = 571785502U;
+        static const AkUniqueID VOICE_ENG_2_9 = 571785503U;
+        static const AkUniqueID VOICE_ENG_2_10 = 3182163717U;
+        static const AkUniqueID VOICE_ENG_2_11 = 3182163716U;
+        static const AkUniqueID VOICE_ENG_2_12 = 3182163719U;
+        static const AkUniqueID VOICE_ENG_2_13 = 3182163718U;
+        static const AkUniqueID VOICE_ENG_2_14 = 3182163713U;
+        static const AkUniqueID VOICE_ENG_2_15 = 3182163712U;
+        static const AkUniqueID VOICE_ENG_2_16 = 3182163715U;
+        static const AkUniqueID VOICE_ENG_2_17 = 3182163714U;
+        static const AkUniqueID VOICE_ENG_2_18 = 3182163725U;
+        static const AkUniqueID VOICE_ENG_2_19 = 3182163724U;
+        static const AkUniqueID VOICE_ENG_2_20 = 3131830860U;
+        static const AkUniqueID VOICE_ENG_3_0 = 571638463U;
+        static const AkUniqueID VOICE_ENG_3_1 = 571638462U;
+        static const AkUniqueID VOICE_ENG_3_2 = 571638461U;
+        static const AkUniqueID VOICE_ENG_3_3 = 571638460U;
+        static const AkUniqueID VOICE_ENG_3_4 = 571638459U;
+        static const AkUniqueID VOICE_ENG_3_5 = 571638458U;
+        static const AkUniqueID VOICE_ENG_3_6 = 571638457U;
+        static const AkUniqueID VOICE_ENG_4_0 = 1644567404U;
+        static const AkUniqueID VOICE_ENG_4_1 = 1644567405U;
+        static const AkUniqueID VOICE_ENG_4_2 = 1644567406U;
+        static const AkUniqueID VOICE_ENG_4_3 = 1644567407U;
+        static const AkUniqueID VOICE_ENG_4_4 = 1644567400U;
+        static const AkUniqueID VOICE_ENG_5_0 = 570652725U;
+        static const AkUniqueID VOICE_ENG_5_1 = 570652724U;
+        static const AkUniqueID VOICE_ENG_5_2 = 570652727U;
+        static const AkUniqueID VOICE_ENG_5_3 = 570652726U;
+        static const AkUniqueID VOICE_ENG_5_4 = 570652721U;
+        static const AkUniqueID VOICE_ENG_6_0 = 571197178U;
+        static const AkUniqueID VOICE_ENG_6_1 = 571197179U;
+        static const AkUniqueID VOICE_ENG_6_2 = 571197176U;
+        static const AkUniqueID VOICE_ENG_6_3 = 571197177U;
+        static const AkUniqueID VOICE_ENG_7_0 = 1644714435U;
+        static const AkUniqueID VOICE_ENG_7_1 = 1644714434U;
+        static const AkUniqueID VOICE_ENG_7_2 = 1644714433U;
+        static const AkUniqueID VOICE_ENG_8_0 = 570211440U;
+        static const AkUniqueID VOICE_ENG_8_1 = 570211441U;
+        static const AkUniqueID VOICE_ENG_9_0 = 570064281U;
+        static const AkUniqueID VOICE_ENG_9_1 = 570064280U;
+        static const AkUniqueID VOICE_ENG_9_2 = 570064283U;
+        static const AkUniqueID VOICE_ENG_9_3 = 570064282U;
+        static const AkUniqueID VOICE_ENG_9_4 = 570064285U;
+        static const AkUniqueID VOICE_ENG_9_5 = 570064284U;
+        static const AkUniqueID VOICE_ENG_9_6 = 570064287U;
+        static const AkUniqueID VOICE_ENG_9_7 = 570064286U;
+        static const AkUniqueID VOICE_ENG_9_8 = 570064273U;
+        static const AkUniqueID VOICE_ENG_9_9 = 570064272U;
         static const AkUniqueID VOICE_SP_0_0 = 647915517U;
         static const AkUniqueID VOICE_SP_0_1 = 647915516U;
         static const AkUniqueID VOICE_SP_0_2 = 647915519U;
@@ -148,27 +220,11 @@ namespace AK
         static const AkUniqueID VOICE_SP_3_3 = 1722124385U;
         static const AkUniqueID VOICE_SP_3_4 = 1722124390U;
         static const AkUniqueID VOICE_SP_3_5 = 1722124391U;
-        static const AkUniqueID VOICE_SP_3_6 = 1722124388U;
         static const AkUniqueID VOICE_SP_4_0 = 648607001U;
         static const AkUniqueID VOICE_SP_4_1 = 648607000U;
         static const AkUniqueID VOICE_SP_4_2 = 648607003U;
         static const AkUniqueID VOICE_SP_4_3 = 648607002U;
         static const AkUniqueID VOICE_SP_4_4 = 648607005U;
-        static const AkUniqueID VOICE_SP_4_5 = 648607004U;
-        static const AkUniqueID VOICE_SP_4_6 = 648607007U;
-        static const AkUniqueID VOICE_SP_4_7 = 648607006U;
-        static const AkUniqueID VOICE_SP_4_8 = 648606993U;
-        static const AkUniqueID VOICE_SP_4_9 = 648606992U;
-        static const AkUniqueID VOICE_SP_4_10 = 4093236472U;
-        static const AkUniqueID VOICE_SP_4_11 = 4093236473U;
-        static const AkUniqueID VOICE_SP_4_12 = 4093236474U;
-        static const AkUniqueID VOICE_SP_4_13 = 4093236475U;
-        static const AkUniqueID VOICE_SP_4_14 = 4093236476U;
-        static const AkUniqueID VOICE_SP_4_15 = 4093236477U;
-        static const AkUniqueID VOICE_SP_4_16 = 4093236478U;
-        static const AkUniqueID VOICE_SP_4_17 = 4093236479U;
-        static const AkUniqueID VOICE_SP_4_18 = 4093236464U;
-        static const AkUniqueID VOICE_SP_4_19 = 4093236465U;
         static const AkUniqueID VOICE_SP_5_0 = 648754160U;
         static const AkUniqueID VOICE_SP_5_1 = 648754161U;
         static const AkUniqueID VOICE_SP_5_2 = 648754162U;
@@ -182,8 +238,6 @@ namespace AK
         static const AkUniqueID VOICE_SP_7_0 = 649048286U;
         static const AkUniqueID VOICE_SP_7_1 = 649048287U;
         static const AkUniqueID VOICE_SP_7_2 = 649048284U;
-        static const AkUniqueID VOICE_SP_7_3 = 649048285U;
-        static const AkUniqueID VOICE_SP_7_4 = 649048282U;
         static const AkUniqueID VOICE_SP_8_0 = 649195445U;
         static const AkUniqueID VOICE_SP_8_1 = 649195444U;
         static const AkUniqueID VOICE_SP_9_0 = 1723110124U;
@@ -196,12 +250,6 @@ namespace AK
         static const AkUniqueID VOICE_SP_9_7 = 1723110123U;
         static const AkUniqueID VOICE_SP_9_8 = 1723110116U;
         static const AkUniqueID VOICE_SP_9_9 = 1723110117U;
-        static const AkUniqueID VOICE_SP_9_10 = 2604878631U;
-        static const AkUniqueID VOICE_SP_9_11 = 2604878630U;
-        static const AkUniqueID VOICE_SP_9_12 = 2604878629U;
-        static const AkUniqueID VOICE_SP_9_13 = 2604878628U;
-        static const AkUniqueID VOICE_SP_9_14 = 2604878627U;
-        static const AkUniqueID VOICE_SP_9_15 = 2604878626U;
         static const AkUniqueID WPN_CAMOUFLAGEACTIVATE = 2295428786U;
         static const AkUniqueID WPN_CAMOUFLAGEDEACTIVATE = 675764771U;
         static const AkUniqueID WPN_CRYSKNIFESTAB = 1485433945U;
@@ -245,25 +293,13 @@ namespace AK
                 static const AkUniqueID BOSS_STAGE1 = 188277190U;
                 static const AkUniqueID BOSS_STAGE2 = 188277189U;
                 static const AkUniqueID BOSS_STAGE3 = 188277188U;
-                static const AkUniqueID BOSS_STAGE4 = 188277187U;
-                static const AkUniqueID CREDITS_MUSIC = 1522595433U;
                 static const AkUniqueID LEVEL1_MUSIC = 2026953958U;
                 static const AkUniqueID LEVEL2_MUSIC = 710332713U;
+                static const AkUniqueID LEVEL2_TENSION = 3109816846U;
                 static const AkUniqueID MAINMENU = 3604647259U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace MUSIC
-
-        namespace STEALTH
-        {
-            static const AkUniqueID GROUP = 2909291642U;
-
-            namespace STATE
-            {
-                static const AkUniqueID NONE = 748895195U;
-                static const AkUniqueID SPOTTED = 3214304800U;
-            } // namespace STATE
-        } // namespace STEALTH
 
     } // namespace STATES
 
@@ -288,7 +324,8 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID LEVEL1 = 2678230382U;
+        static const AkUniqueID CINEMATICS = 877642339U;
+        static const AkUniqueID CINEMATICS_2 = 1528784320U;
         static const AkUniqueID RAGNARENGINE = 87917746U;
         static const AkUniqueID RAGNARENGINE_2 = 534548857U;
     } // namespace BANKS
