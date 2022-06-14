@@ -30,7 +30,7 @@ public class Cinematic_7 : RagnarComponent
         stilgar = GameObject.Find("Player_3");
         boss = GameObject.Find("Boss");
 
-        paul.GetComponent<Animation>().PlayAnimation("Idle");
+        paul.GetComponent<Animation>().PlayAnimation("Talk");
         chani.GetComponent<Animation>().PlayAnimation("Idle");
         stilgar.GetComponent<Animation>().PlayAnimation("Idle");
         boss.GetComponent<Animation>().PlayAnimation("Dead");
@@ -59,7 +59,7 @@ public class Cinematic_7 : RagnarComponent
                 break;
             case CinematicState.ANIMATIONS:
 
-                //Animations();
+                Animations();
                 state = CinematicState.TRANSITION;
 
                 break;
@@ -82,6 +82,65 @@ public class Cinematic_7 : RagnarComponent
         {   // EL dialogo puede tener mas o menos lineas
             // Tened en cuenta que por aqui solo pasara...
             // cuando se pase a la siguiente linea de dialogo
+
+            case 0:
+                break;
+
+            case 1:
+                chani.GetComponent<Animation>().PlayAnimation("Talk");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
+            case 2:
+                stilgar.GetComponent<Animation>().PlayAnimation("Talk");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                chani.GetComponent<Animation>().PlayAnimation("Idle");
+
+                break;
+
+            case 3:
+                paul.GetComponent<Animation>().PlayAnimation("Talk");
+                chani.GetComponent<Animation>().PlayAnimation("Idle");
+                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
+            case 4:
+                stilgar.GetComponent<Animation>().PlayAnimation("Talk");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                chani.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
+            case 5:
+                chani.GetComponent<Animation>().PlayAnimation("Talk");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
+            case 6:
+                paul.GetComponent<Animation>().PlayAnimation("Talk");
+                chani.GetComponent<Animation>().PlayAnimation("Idle");
+                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
+            case 7:
+                chani.GetComponent<Animation>().PlayAnimation("Talk");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
+            case 8:
+                stilgar.GetComponent<Animation>().PlayAnimation("Talk");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                chani.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
+            case 9:
+                chani.GetComponent<Animation>().PlayAnimation("Talk");
+                paul.GetComponent<Animation>().PlayAnimation("Idle");
+                stilgar.GetComponent<Animation>().PlayAnimation("Idle");
+                break;
+
             default:
                 break;
         }

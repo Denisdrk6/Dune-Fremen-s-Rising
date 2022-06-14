@@ -2968,7 +2968,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "Cinematic_7",
-                    "pointer": 634404552,
+                    "pointer": 624152808,
                     "type": 4,
                     "componentTable": 0,
                     "runGame": true,
@@ -3017,7 +3017,7 @@
                 {
                     "Type": 4,
                     "ScriptName": "CinematicManager",
-                    "pointer": 634404856,
+                    "pointer": 624151592,
                     "type": 4,
                     "componentTable": 0
                 }
@@ -3150,7 +3150,7 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.4,
+                    "Color Multiplier": 1,
                     "Outline Normals Thickness": 1
                 },
                 {
