@@ -30,6 +30,7 @@ public class PlayerManager : RagnarComponent
     public bool canDoAbility2 = true;
     public bool canDoAbility3 = true;
     public bool canDoAbility4 = true;
+    public bool canMove = true;
 
     public float radius;
 
@@ -37,11 +38,11 @@ public class PlayerManager : RagnarComponent
     GameObject stunner;
     GameObject circle;
 
-    private Transform camera;
-
     private int bufferedCharacter;
     private int bufferedAbility;
-    private bool buffered = false;
+    public bool buffered = false;
+
+    public Vector3 tempPosition;
     public void Start()
     {
         foreach (Characters c in characters)
@@ -148,36 +149,145 @@ public class PlayerManager : RagnarComponent
             if (players[characterSelected].GetComponent<Player>().controled)
             {
                 AbilityStateChanger();
-                if (buffered && players[bufferedCharacter].GetComponent<Animation>().HasFinished())
-                {
-                    InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
-                    buffered = false;
-                }
+                IfBuffered();
             }
 
             /*Contador de cooldown para cada habilidad
             Funciona en todos los casos con todos los pjs.*/
             CooldownCounter();
-
         }
 
     }
 
-    private void CooldownCounter()
+    private void IfBuffered()
     {
-        for (int j = 0; j < characters.Length; j++)
+        if (buffered)
         {
-            for (int i = 0; i < characters[j].abilities.Length; i++)
+            switch (bufferedCharacter)
             {
-                if (characters[j].abilities[i].onCooldown == true)
-                {
-                    characters[j].abilities[i].counter += Time.deltaTime;
-                    if (characters[j].abilities[i].counter >= characters[j].abilities[i].cooldown)
+                case 0:
+                    if (bufferedAbility == 0)
                     {
-                        characters[j].abilities[i].onCooldown = false;
-                        characters[j].abilities[i].counter = 0f;
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1f)
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
                     }
-                }
+                    if (bufferedAbility == 1)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    if (bufferedAbility == 2)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1.2f)
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                            SubstractCharges(bufferedAbility);
+                        }
+                    }
+                    if (bufferedAbility == 3)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 2.5f)
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    break;
+                case 1:
+                    if (bufferedAbility == 0)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1f)
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    if (bufferedAbility == 1)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    if (bufferedAbility == 2)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    if (bufferedAbility == 3)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1f)
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    break;
+                case 2:
+                    if (bufferedAbility == 0)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - players[bufferedCharacter].GetComponent<Animation>().GetDuration())
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    if (bufferedAbility == 1)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 0.8f)
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                            SubstractCharges(bufferedAbility);
+                            if (playableCharacter.abilities[bufferedAbility].charges == 0)
+                            {
+                                GameObject.Find("Quest System").GetComponent<QuestSystem>().completeStunner = true;
+                            }
+                        }
+                    }
+                    if (bufferedAbility == 2)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                            SubstractCharges(bufferedAbility);
+                        }
+                    }
+                    if (bufferedAbility == 3)
+                    {
+                        if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 8f)
+                        {
+                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            buffered = false;
+                            StartCooldown(bufferedAbility);
+                        }
+                    }
+                    break;
+                default:
+                    break;
             }
         }
     }
@@ -229,6 +339,24 @@ public class PlayerManager : RagnarComponent
         {
             playableCharacter.state = State.CARRYING;
             players[characterSelected].GetComponent<Player>().SetState(State.CARRYING);
+        }
+    }
+    private void CooldownCounter()
+    {
+        for (int j = 0; j < characters.Length; j++)
+        {
+            for (int i = 0; i < characters[j].abilities.Length; i++)
+            {
+                if (characters[j].abilities[i].onCooldown == true)
+                {
+                    characters[j].abilities[i].counter += Time.deltaTime;
+                    if (characters[j].abilities[i].counter >= characters[j].abilities[i].cooldown)
+                    {
+                        characters[j].abilities[i].onCooldown = false;
+                        characters[j].abilities[i].counter = 0f;
+                    }
+                }
+            }
         }
     }
 
@@ -404,6 +532,14 @@ public class PlayerManager : RagnarComponent
         if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
         {
             Input.SetCursorState((int)CursorState.NORMAL);
+            GameObject levelManager = GameObject.Find("LevelManager");
+
+            if (levelManager.GetComponent<Level_1>().ToString() == "Level_1")
+                tempPosition = GameObject.Find("LevelManager").GetComponent<Level_1>().hitPoint;
+            else if (levelManager.GetComponent<Level_2>().ToString() == "Level_2")
+                tempPosition = GameObject.Find("LevelManager").GetComponent<Level_2>().hitPoint;
+            else
+                tempPosition = GameObject.Find("LevelManager").GetComponent<Level_3>().hitPoint;
 
             if (playableCharacter.state == State.CARRYING)
             {
@@ -460,11 +596,8 @@ public class PlayerManager : RagnarComponent
                 players[characterSelected].GetComponent<Player>().SetState(State.POSTCAST);
             }
 
-
             if (playableCharacter.pickedEnemy == null)
             {
-                // Instancia la habilidad en cuesti�n.
-                //InternalCalls.InstancePrefab(playableCharacter.abilities[(int)playableCharacter.state - 1].prefabPath, playableCharacter.pos);
                 buffered = true;
                 bufferedAbility = (int)playableCharacter.state - 1;
                 bufferedCharacter = characterSelected;
@@ -526,19 +659,6 @@ public class PlayerManager : RagnarComponent
                         }
                         break;
                 }
-
-                // Al haberse instanciado una habilidad, comprueba si funciona por cargas. Si lo hace resta una carga a la habilidad.
-                if (playableCharacter.abilities[(int)playableCharacter.state - 1].charges != -1 && playableCharacter.abilities[(int)playableCharacter.state - 1].charges != 0)
-                {
-                    playableCharacter.abilities[(int)playableCharacter.state - 1].charges--;
-                    if (playableCharacter.name == "Stilgar" && playableCharacter.abilities[(int)State.ABILITY_2 - 1].charges == 0)
-                    {
-                        GameObject.Find("Quest System").GetComponent<QuestSystem>().completeStunner = true;
-                    }
-                }
-
-                // Pone la habilidad en cooldown y el player en estado de NONE
-                playableCharacter.abilities[(int)playableCharacter.state - 1].onCooldown = true;
                 playableCharacter.state = State.NONE;
 
                 // Se cambia el estado a POSTCAST para evitar que se mueva directamente despu�s de castear la habilidad. En el update de los players se cambiar� a NONE nuevamente para que se pueda mover (Tras un ciclo de update). 
@@ -568,8 +688,21 @@ public class PlayerManager : RagnarComponent
             }
 
             area[characterSelected].GetComponent<Light>().intensity = 0f;
-            lightHab.GetComponent<Light>().intensity = 0f;
+            lightHab.GetComponent<Light>().intensity = 0f;     
         }
+    }
+
+    private void SubstractCharges(int ability)
+    {
+        if (playableCharacter.abilities[ability].charges != -1 && playableCharacter.abilities[ability].charges != 0)
+        {
+            playableCharacter.abilities[ability].charges--;
+        }
+    }
+
+    private void StartCooldown(int ability)
+    {
+        playableCharacter.abilities[ability].onCooldown = true;
     }
 
     private void PlayerCases()

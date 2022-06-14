@@ -44,14 +44,8 @@ public class SpiceGranade : RagnarComponent
 
 		float radius = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().radius;
 		GameObject LevelManager = GameObject.Find("LevelManager");
-		Vector3 hitPoint;
-		if (LevelManager.GetComponent<Level_1>().ToString() == "Level_1")
-			hitPoint = GameObject.Find("LevelManager").GetComponent<Level_1>().hitPoint;
-		else if (LevelManager.GetComponent<Level_2>().ToString() == "Level_2")
-			hitPoint = GameObject.Find("LevelManager").GetComponent<Level_2>().hitPoint;
-		else
-			hitPoint = GameObject.Find("LevelManager").GetComponent<Level_3>().hitPoint;
-
+		Vector3 hitPoint = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().tempPosition;
+		
 		relativePos = hitPoint - pos;
 		if (relativePos.magnitude > radius)
 		{

@@ -9,14 +9,17 @@ public class Knife : RagnarComponent
 	private ParticleSystem particleComponent;
 
 	private float force = 1700;
-	public bool canReload = false;
-	private bool pendingToDelete = false;
-	private bool grabOnce = false;
+	public bool canReload;
+	private bool pendingToDelete;
+	private bool grabOnce;
 	GameObject circle;
 	GameObject popUp;
 	
 	public void Start()
     {
+		canReload = false;
+		grabOnce = false;
+		pendingToDelete = false;
         player = GameObject.Find("Player");
         circle = GameObject.Find("circle_ability");
 		circle.isInteractuable = false;
@@ -41,6 +44,7 @@ public class Knife : RagnarComponent
         gameObject.transform.localPosition = pos;
 
         Vector3 direction = HitEnemy(agent, player);
+		Debug.Log("A");
 		if(direction != null)
         {
 			player.GetComponent<Player>().PlayAudioClip("WPN_THORWINGKNIFETHROW");
@@ -76,10 +80,9 @@ public class Knife : RagnarComponent
 		if (pendingToDelete)
 		{
 			//gameObject.UnSubmitOutlineDrawing();
-			InternalCalls.Destroy(popUp);
+			if(popUp != null) InternalCalls.Destroy(popUp);
 			InternalCalls.Destroy(gameObject);
 		}
-
 	}
 	private void ReloadKnife()
 	{
@@ -101,10 +104,7 @@ public class Knife : RagnarComponent
 
 			pendingToDelete = true;
 			canReload = false;
-		}
-		if(popUp != null)
-        {
-			popUp.GetComponent<Transform2D>().position2D = Camera.WorldToScreen(gameObject.transform.globalPosition);
+			grabOnce = false;
 		}
 	}
 
@@ -138,6 +138,9 @@ public class Knife : RagnarComponent
 			gameObject.transform.globalRotation = Quaternion.identity;
 			particleComponent.Pause();
 			popUp = InternalCalls.InstancePrefab("PopUp", Vector3.one);
+			popUp.GetComponent<PopUp>().target = gameObject;
+			popUp.childs[1].GetComponent<UIImage>().SetImageGeneralColor(11, 212, 0);
+			popUp.childs[2].GetComponent<UIImage>().LoadTexture("Assets/Resources/UI/ui_chani_crysknife.png");
 		}
         else
         {

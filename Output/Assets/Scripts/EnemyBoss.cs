@@ -39,18 +39,19 @@ public class EnemyBoss : RagnarComponent
     // Timers
     public float shootCooldown = 0f;
     float deathTimer = -1f;
-    float controlledCooldown = 10;
+    public float controlledCooldown = 10;
 
     float initialSpeed;
 
     bool distracted = false;
-    float distractedTimer = -1f;
+    public float distractedTimer = -1f;
     bool stunned = false;
-    float stunnedTimer = -1f;
+    public float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
     int coneMaxTime = 4;
 
+    GameObject timerSlider;
     public void Start()
     {
         players = GameObject.FindGameObjectsWithTag("Player");
@@ -205,6 +206,8 @@ public class EnemyBoss : RagnarComponent
                 distracted = true;
                 distractedTimer = 5f;
                 Distraction(other.gameObject.transform.globalPosition);
+                timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+                timerSlider.GetComponent<TimerSlider>().getGa(gameObject, distractedTimer, -1, "distractedTimer");
             }
             if (other.gameObject.name == "Eagle")
             {
@@ -212,6 +215,8 @@ public class EnemyBoss : RagnarComponent
                 distracted = true;
                 distractedTimer = 6f;
                 Distraction(other.gameObject.transform.globalPosition);
+                timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+                timerSlider.GetComponent<TimerSlider>().getGa(gameObject, distractedTimer, -1, "distractedTimer");
             }
 
             //// Chani =======================================
@@ -262,7 +267,11 @@ public class EnemyBoss : RagnarComponent
     public void SetControled(bool flag)
     {
         controlled = flag;
-        if (flag) controlledCooldown = 10;
+        if (flag){
+            timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+            timerSlider.GetComponent<TimerSlider>().getGa(gameObject, controlledCooldown, -1, "controlledCooldown");
+            controlledCooldown = 10; 
+        }
     }
 
     private void Shoot()
@@ -368,5 +377,7 @@ public class EnemyBoss : RagnarComponent
         stunned = true;
         stunnedTimer = timeStunned;
         animationComponent.PlayAnimation("Idle");
+        timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+        timerSlider.GetComponent<TimerSlider>().getGa(gameObject, stunnedTimer, -1, "stunnedTimer");
     }
 }

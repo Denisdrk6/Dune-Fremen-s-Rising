@@ -336,14 +336,12 @@ bool ModuleRenderer3D::PostUpdate()
 	for (int i = 0; i < gosToDrawOutline.size(); ++i)
 		gos.push_back(gosToDrawOutline[i].first);
 
-	glEnable(GL_BLEND);
 	CameraComponent* cam = app->sceneManager->GetCurrentScene()->mainCamera;
 	for (std::set<GameObject*>::iterator it = objects.begin(); it != objects.end(); ++it)
 	{
 		if (std::find(gos.begin(), gos.end(), *it) == gos.end())
 			(*it)->Draw(cam);
 	}
-	glDisable(GL_BLEND);
 
 	for (auto& p : gosToDrawOutline)
 	{

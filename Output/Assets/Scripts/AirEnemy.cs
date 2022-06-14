@@ -45,9 +45,9 @@ public class AirEnemy : RagnarComponent
     float initialSpeed;
 
     bool distracted = false;
-    float distractedTimer = -1f;
+    public float distractedTimer = -1f;
     bool stunned = false;
-    float stunnedTimer = -1f;
+    public float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
     int coneMaxTime = 1;
@@ -58,7 +58,6 @@ public class AirEnemy : RagnarComponent
     ParticleSystem deathPartSys;
     public bool canLookOut = false;
     int retardedFrames;
-
     public void Start()
     {
         // Get components

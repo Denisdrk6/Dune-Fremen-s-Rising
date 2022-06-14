@@ -82,16 +82,15 @@ void SetEagleCursor(bool ret)
 {
 	if (app != nullptr)
 	{
-		/*if (ret)
+		if (ret)
 		{
 			int i = 0;
-			for (std::vector<HCURSOR>::iterator it = app->input->GetCursors()->begin(); it != app->input->GetCursors()->end(); ++it)
+			for (std::vector<SDL_Cursor*>::iterator it = app->input->GetCursors()->begin(); it != app->input->GetCursors()->end(); ++it)
 			{
 				if (i == 4)
 				{
-					std::string path = "Library/Cursors/";
 					app->input->GetCursors()->erase(it);
-					app->input->GetCursors()->insert(it, LoadCursorFromFileA(std::string(path + "ui_eagle.cur").c_str()));
+					app->input->GetCursors()->insert(it, SDL_CreateColorCursor(SDL_LoadBMP("Library/Cursors/ui_eagle.bmp"), 0, 0));
 					break;
 				}
 				i++;
@@ -100,18 +99,17 @@ void SetEagleCursor(bool ret)
 		else
 		{
 			int i = 0;
-			for (std::vector<HCURSOR>::iterator it = app->input->GetCursors()->begin(); it != app->input->GetCursors()->end(); ++it)
+			for (std::vector<SDL_Cursor*>::iterator it = app->input->GetCursors()->begin(); it != app->input->GetCursors()->end(); ++it)
 			{
 				if (i == 4)
 				{
-					std::string path = "Library/Cursors/";
 					app->input->GetCursors()->erase(it);
-					app->input->GetCursors()->insert(it, LoadCursorFromFileA(std::string(path + "paul_throw_stone.cur").c_str()));
+					app->input->GetCursors()->insert(it, SDL_CreateColorCursor(SDL_LoadBMP("Library/Cursors/paul_throw_stone.bmp"), 0, 0));
 					break;
 				}
 				i++;
 			}
-		}	*/	
+		}	
 	}
 }
 

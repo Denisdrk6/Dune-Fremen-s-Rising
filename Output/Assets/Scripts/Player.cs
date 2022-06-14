@@ -184,6 +184,7 @@ public class Player : RagnarComponent
 
                         if (abilityState == State.NONE && Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP && !stunned)
                         {
+                            GameObject.Find("PlayerManager").GetComponent<PlayerManager>().buffered = false;
                             if (agent.CalculatePath(agent.hitPosition).Length > 0)
                             {
                                 pointCharacter.transform.globalPosition = agent.hitPosition;
@@ -432,19 +433,18 @@ public class Player : RagnarComponent
             return;
         }
         // Dialogues =========================================================
-        /*if (other.gameObject.name == "DialogueTrigger0")
+        if (other.gameObject.name == "DialogueTrigger0")
         {
             if(!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(0);
-        }*/
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(1);
+        }
         if (other.gameObject.name == "DialogueTrigger3")
         {
             GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
-            Input.RestoreDefaultCursor();
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveCinematic("Cinematic_3"); 
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(2);
         }
         if (other.gameObject.name == "DialogueTrigger5")
         {
@@ -468,10 +468,9 @@ public class Player : RagnarComponent
         if (other.gameObject.name == "DialogueTrigger10")
         {
             GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
-			Input.RestoreDefaultCursor();
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveCinematic("Cinematic_5");
+            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(5);
         }
         if (other.gameObject.name == "DialogueTrigger11")
         {
@@ -485,17 +484,22 @@ public class Player : RagnarComponent
                 PlayerPause();
             other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(7);
         }
-        if (other.gameObject.name == "DialogueTrigger13")
+        //if (other.gameObject.name == "DialogueTrigger13")
+        //{
+        //    if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
+        //        PlayerPause();
+        //    other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(13);
+        //}
+        //if (other.gameObject.name == "DialogueTrigger14")
+        //{
+        //    if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
+        //        PlayerPause();
+        //    other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(14);
+        //}
+        // Boss ==============================================================
+        if (other.gameObject.name == "BossTrigger")
         {
-            if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
-                PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(13);
-        }
-        if (other.gameObject.name == "DialogueTrigger14")
-        {
-            if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
-                PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(14);
+            GameObject.Find("Boss").GetComponent<Boss>().SetBattle();
         }
         // ===================================================================
     }

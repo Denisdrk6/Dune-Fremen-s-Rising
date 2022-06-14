@@ -29,7 +29,7 @@ public class Rock : RagnarComponent
 		gameObject.transform.globalPosition = pos;
 
 		float radius = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().radius;
-		Vector3 hitPoint = GameObject.Find("LevelManager").GetComponent<Level_1>().hitPoint;
+		Vector3 hitPoint = GameObject.Find("PlayerManager").GetComponent<PlayerManager>().tempPosition;
 		relativePos = hitPoint - pos;
 		if (relativePos.magnitude > radius)
         {

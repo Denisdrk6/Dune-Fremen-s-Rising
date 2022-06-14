@@ -10,8 +10,9 @@ public class Trap : RagnarComponent
 
     GameObject player;
     PlayerManager playerManagerScript;
+    GameObject popUp;
 
-	public void Start()
+    public void Start()
 	{
 		player = GameObject.Find("Player_3");
 
@@ -25,12 +26,21 @@ public class Trap : RagnarComponent
         GameObject.Find("ElectricParticles").GetComponent<ParticleSystem>().Pause();
         player.GetComponent<Player>().PlayAudioClip("WPN_TRAPACTIVE");
         //player.GetComponent<Animation>().PlayAnimation("Ability3");
+
+        popUp = InternalCalls.InstancePrefab("PopUp", Vector3.one);
+        popUp.GetComponent<PopUp>().target = gameObject;
+        popUp.childs[1].GetComponent<UIImage>().SetImageGeneralColor(83, 168, 208);
+        popUp.childs[2].GetComponent<UIImage>().LoadTexture("Assets/Resources/UI/ui_stilgar_trap.png");
     }
 	public void Update()
 	{
         if (!canReload) ReloadCondition();
         if (canReload) ReloadTrap();
-        if (pendingToDelete) InternalCalls.Destroy(gameObject);
+        if (pendingToDelete)
+        {
+            if (popUp != null) InternalCalls.Destroy(popUp);
+            InternalCalls.Destroy(gameObject);
+        }
     }
 
     private void ReloadCondition()

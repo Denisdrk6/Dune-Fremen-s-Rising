@@ -49,14 +49,14 @@ public class BasicEnemy : RagnarComponent
     // Timers
     public float shootCooldown = 0f;
     public bool isDying = false;
-    float controlledCooldown = 10;
+    public float controlledCooldown = 10;
 
     float initialSpeed;
 
     bool distracted = false;
-    float distractedTimer = -1f;
+    public float distractedTimer = -1f;
     bool stunned = false;
-    float stunnedTimer = -1f;
+    public float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
     int coneMaxTime = 1;
@@ -79,6 +79,14 @@ public class BasicEnemy : RagnarComponent
     public GameObject circle;
     GameObject pointCharacter;
     Light pointerLight;
+    public Light abilityLight;
+
+    GameObject timerSlider;
+
+    GameObject Ability1Bg;
+    GameObject Ability2Bg;
+    GameObject Ability3Bg;
+    GameObject Ability4Bg;
     public void Start()
     {
         // Get all Components
@@ -130,6 +138,12 @@ public class BasicEnemy : RagnarComponent
 
         pointCharacter = GameObject.Find("PlayerReminder").childs[3];
         pointerLight = pointCharacter.GetComponent<Light>();
+
+
+        Ability1Bg = GameObject.Find("Ability1Bg");
+        Ability2Bg = GameObject.Find("Ability2Bg");
+        Ability3Bg = GameObject.Find("Ability3Bg");
+        Ability4Bg = GameObject.Find("Ability4Bg");
     }
     public void OnCreation()
     {
@@ -168,6 +182,10 @@ public class BasicEnemy : RagnarComponent
                     if (stunnedTimer < 0)
                     {
                         stunPartSys.Pause();
+                        if (waypoints.Count != 0)
+                            animationComponent.PlayAnimation("Walk");
+                        else
+                            animationComponent.PlayAnimation("Idle");
                         stunned = false;
                         stunnedTimer = -1f;
                         enterStunner = true;
@@ -177,6 +195,7 @@ public class BasicEnemy : RagnarComponent
                 if (distractedTimer >= 0)
                 {
                     distractedTimer -= Time.deltaTime;
+                    
                     if (distractedTimer < 0)
                     {
                         distracted = false;
@@ -187,7 +206,7 @@ public class BasicEnemy : RagnarComponent
             }
             else
             {
-                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
+                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP && !backstab)
                 {
                     if (agents.CalculatePath(agents.hitPosition).Length > 0)
                     {
@@ -205,37 +224,53 @@ public class BasicEnemy : RagnarComponent
                 if (!backstab && Input.GetKey(KeyCode.Z) == KeyState.KEY_REPEAT)
                 {
                     backstab = true;
-                    //area de luz
+                    abilityLight.intensity = 1;
                 }
-                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_DOWN && backstab)
+                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP && backstab)
                 {
                     InternalCalls.InstancePrefab("BackStabEnemy", gameObject.transform.globalPosition);
+                    abilityLight.intensity = 0;
                     backstab = false;
                 }
                 if (Input.GetMouseClick(MouseButton.RIGHT) == KeyState.KEY_DOWN && backstab)
                 {
+                    abilityLight.intensity = 0;
                     backstab = false;
                 }
                 buffTemp = controlledCooldown;
                 buffTemp = (float)Math.Round((double)buffTemp, 0);
                 buffCounter.text = buffTemp.ToString();
 
+                Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = false;
+                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = false;
+
                 if (Input.GetKey(KeyCode.ALPHA1) == KeyState.KEY_DOWN || (Input.GetKey(KeyCode.ALPHA2) == KeyState.KEY_DOWN && players.Length > 1) || (Input.GetKey(KeyCode.ALPHA3) == KeyState.KEY_DOWN && players.Length > 2))
                 {
                     pointerLight.intensity = 0;
+                    abilityLight.intensity = 0;
                     controlled = false;
                     returning = true;
                     gameObject.EraseChild(circle);
                     buffCounter.text = "";
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                 }
 
                 controlledCooldown -= Time.deltaTime;
+                
                 if (controlledCooldown < 0)
                 {
                     pointerLight.intensity = 0;
+                    abilityLight.intensity = 0;
                     Mathf.dir = 0;
                     controlledCooldown = 0f;
                     buffCounter.text = "";
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                     controlled = false;
                     gameObject.EraseChild(circle);
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().ChangeCharacter(0);
@@ -323,6 +358,14 @@ public class BasicEnemy : RagnarComponent
                 if (!isDying)
                 {
                     isDying = true;
+                    for (int i = 0; i < childs.Length; ++i)
+                    {
+                        if (childs[i].name == "StabParticles")
+                        {
+                            childs[i].GetComponent<ParticleSystem>().Play();
+                            break;
+                        }
+                    }
                     animationComponent.PlayAnimation("Dying");
                     QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
                     system.hasKilledEnemies = true;
@@ -344,9 +387,12 @@ public class BasicEnemy : RagnarComponent
                 // DISTRACTION (ROTATE VISION, NO MOVEMENT TO THE DISTRACTION)
                 distracted = true;
                 distractedTimer = 5f;
+                
                 Distraction(other.gameObject.transform.globalPosition);
                 if (enterDistract)
                 {
+                    timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+                    timerSlider.GetComponent<TimerSlider>().getGa(gameObject, distractedTimer, (int)enemyType, "distractedTimer");
                     GameObject.Find("Quest System").GetComponent<QuestSystem>().enemiesDistractedStone++;
                     enterDistract = false;
                 }
@@ -503,7 +549,12 @@ public class BasicEnemy : RagnarComponent
     public void SetControled(bool flag)
     {
         controlled = flag;
-        if (flag) controlledCooldown = 10;
+        if (flag){
+            controlledCooldown = 10;
+            timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+            timerSlider.GetComponent<TimerSlider>().getGa(gameObject, controlledCooldown, (int)enemyType, "controlledCooldown");
+        }
+        
     }
 
     private void Shoot()
@@ -514,6 +565,7 @@ public class BasicEnemy : RagnarComponent
         {
             //TODO_AUDIO
             audioComponent.PlayClip("EBASIC_SHOTGUN");
+            //animationComponent.PlayAnimation("Shoot");
             canShoot = false;
             shootCooldown = 1f;
             Vector3 pos = gameObject.transform.globalPosition;
@@ -540,7 +592,7 @@ public class BasicEnemy : RagnarComponent
 
     public void GotoNextPoint()
     {
-        //gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_WALKSAND");
+        gameObject.GetComponent<AudioSource>().PlayClip("EBASIC_WALKSAND");
         animationComponent.PlayAnimation("Walk");
         agents.CalculatePath(waypoints[destPoint].transform.globalPosition);
         destPoint = (destPoint + 1) % waypoints.Count;
@@ -595,6 +647,8 @@ public class BasicEnemy : RagnarComponent
     {
         stunned = true;
         stunnedTimer = timeStunned;
-        animationComponent.PlayAnimation("Idle");
+        animationComponent.PlayAnimation("Stun");
+        timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+        timerSlider.GetComponent<TimerSlider>().getGa(gameObject, stunnedTimer, (int)enemyType, "stunnedTimer");
     }
 }

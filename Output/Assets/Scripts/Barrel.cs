@@ -9,6 +9,7 @@ public class Barrel : RagnarComponent
     public int barrelIndex = 0;
 
     float deathTimer = -1f;
+    GameObject popUp;
 
     // Use this for initialization
     public void Start()
@@ -24,6 +25,11 @@ public class Barrel : RagnarComponent
                 break;
             }
         }
+
+        popUp = InternalCalls.InstancePrefab("PopUp", Vector3.one);
+        popUp.GetComponent<PopUp>().target = gameObject;
+        popUp.childs[1].GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+        popUp.childs[2].GetComponent<UIImage>().LoadTexture("Assets/Resources/UI/ui_popup_icon_barrel.png");
     }
 
     // Update is called once per frame
@@ -40,6 +46,7 @@ public class Barrel : RagnarComponent
             if (deathTimer < 0)
             {
                 deathTimer = -1f;
+                InternalCalls.Destroy(popUp);
                 InternalCalls.Destroy(gameObject);
             }
         }

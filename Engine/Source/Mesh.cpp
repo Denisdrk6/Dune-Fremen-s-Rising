@@ -6,6 +6,7 @@
 #include "FileSystem.h"
 #include "VertexArray.h"
 #include "IndexBuffer.h"
+#include "ModuleRenderer3D.h"
 
 #include "Profiling.h"
 

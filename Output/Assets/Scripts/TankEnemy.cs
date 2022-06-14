@@ -39,14 +39,14 @@ public class TankEnemy : RagnarComponent
     // Timers
     public float shootCooldown = 0f;
     public bool isDying = false;
-    float controlledCooldown = 10;
+    public float controlledCooldown = 10;
 
     float initialSpeed;
 
     bool distracted = false;
-    float distractedTimer = -1f;
+    public float distractedTimer = -1f;
     bool stunned = false;
-    float stunnedTimer = -1f;
+    public float stunnedTimer = -1f;
 
     float coneTimer = 0.0f;
     int coneMaxTime = 1;
@@ -69,6 +69,13 @@ public class TankEnemy : RagnarComponent
     public GameObject circle;
     GameObject pointCharacter;
     Light pointerLight;
+    public Light abilityLight;
+
+    GameObject timerSlider;
+    GameObject Ability1Bg;
+    GameObject Ability2Bg;
+    GameObject Ability3Bg;
+    GameObject Ability4Bg;
     public void Start()
     {
         offset = gameObject.GetSizeAABB();
@@ -82,10 +89,10 @@ public class TankEnemy : RagnarComponent
             {
                 GotoNextPoint();
                 patrol = false;
-            } 
+            }
         }
 
-        initialSpeed = 6;
+            initialSpeed = 6;
 
         childs = gameObject.childs;
 
@@ -116,6 +123,11 @@ public class TankEnemy : RagnarComponent
 
         pointCharacter = GameObject.Find("PlayerReminder").childs[3];
         pointerLight = pointCharacter.GetComponent<Light>();
+
+        Ability1Bg = GameObject.Find("Ability1Bg");
+        Ability2Bg = GameObject.Find("Ability2Bg");
+        Ability3Bg = GameObject.Find("Ability3Bg");
+        Ability4Bg = GameObject.Find("Ability4Bg");
     }
 
     public void OnCreation()
@@ -156,6 +168,10 @@ public class TankEnemy : RagnarComponent
                     if (stunnedTimer < 0)
                     {
                         stunPartSys.Pause();
+                        if (waypoints.Count != 0)
+                            animation.PlayAnimation("Walk");
+                        else
+                            animation.PlayAnimation("Idle");
                         stunned = false;
                         stunnedTimer = -1f;
                         enterStunner = true;
@@ -174,7 +190,7 @@ public class TankEnemy : RagnarComponent
             }
             else
             {
-                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
+                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP && !backstab)
                 {
                     if (agents.CalculatePath(agents.hitPosition).Length > 0)
                     {
@@ -192,37 +208,52 @@ public class TankEnemy : RagnarComponent
                 if (!backstab && Input.GetKey(KeyCode.Z) == KeyState.KEY_REPEAT)
                 {
                     backstab = true;
-                    //area de luz
+                    abilityLight.intensity = 1;
                 }
-                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_DOWN && backstab)
+                if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP && backstab)
                 {
                     Debug.Log("BackStab enemy");
                     InternalCalls.InstancePrefab("BackStabEnemy", Vector3.zero);
+                    abilityLight.intensity = 0;
                     backstab = false;
                 }
                 if (Input.GetMouseClick(MouseButton.RIGHT) == KeyState.KEY_DOWN && backstab)
                 {
+                    abilityLight.intensity = 0;
                     backstab = false;
                 }
                 buffTemp = controlledCooldown;
                 buffTemp = (float)Math.Round((double)buffTemp, 0);
                 buffCounter.text = buffTemp.ToString();
 
+                Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                Ability3Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                Ability4Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = false;
+                GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = false;
+
                 if (Input.GetKey(KeyCode.ALPHA1) == KeyState.KEY_DOWN || (Input.GetKey(KeyCode.ALPHA2) == KeyState.KEY_DOWN && players.Length > 1) || (Input.GetKey(KeyCode.ALPHA3) == KeyState.KEY_DOWN && players.Length > 2))
                 {
                     pointerLight.intensity = 0;
+                    abilityLight.intensity = 0;
                     controlled = false;
                     returning = true;
                     gameObject.EraseChild(circle);
                     buffCounter.text = "";
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                 }
 
                 controlledCooldown -= Time.deltaTime;
                 if (controlledCooldown < 0)
                 {
                     pointerLight.intensity = 0;
+                    abilityLight.intensity = 0;
                     controlledCooldown = 0f;
                     buffCounter.text = "";
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
+                    GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                     controlled = false;
                     gameObject.EraseChild(circle);
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().ChangeCharacter(0);
@@ -256,7 +287,13 @@ public class TankEnemy : RagnarComponent
     public void SetControled(bool flag)
     {
         controlled = flag;
-        if (flag) controlledCooldown = 10;
+        if (flag){ 
+            
+            controlledCooldown = 10;
+
+            timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+            timerSlider.GetComponent<TimerSlider>().getGa(gameObject, controlledCooldown, (int)enemyType, "controlledCooldown");
+        }
     }
 
     public void OnCollision(Rigidbody other)
@@ -301,6 +338,14 @@ public class TankEnemy : RagnarComponent
                 if (!isDying)
                 {
                     isDying = true;
+                    for (int i = 0; i < childs.Length; ++i)
+                    {
+                        if (childs[i].name == "StabParticles")
+                        {
+                            childs[i].GetComponent<ParticleSystem>().Play();
+                            break;
+                        }
+                    }
                     animation.PlayAnimation("Dying");
                     QuestSystem system = GameObject.Find("Quest System").GetComponent<QuestSystem>();
                     system.hasKilledEnemies = true;
@@ -323,6 +368,8 @@ public class TankEnemy : RagnarComponent
                 distracted = true;
                 distractedTimer = 5f;
                 Distraction(other.gameObject.transform.globalPosition);
+                timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+                timerSlider.GetComponent<TimerSlider>().getGa(gameObject, distractedTimer, (int)enemyType, "distractedTimer");
             }
 
             //// Chani =======================================
@@ -451,6 +498,7 @@ public class TankEnemy : RagnarComponent
         {
             //TODO_AUDIO
             audioSource.PlayClip("EBASIC_SHOTGUN");
+            //animation.PlayAnimation("Shoot");
             canShoot = false;
             shootCooldown = 1f;
             Vector3 pos = gameObject.transform.globalPosition;
@@ -532,6 +580,8 @@ public class TankEnemy : RagnarComponent
     {
         stunned = true;
         stunnedTimer = timeStunned;
-        animation.PlayAnimation("Idle");
+        animation.PlayAnimation("Stun");
+        timerSlider = InternalCalls.InstancePrefab("TimerP", gameObject.transform.globalPosition);
+        timerSlider.GetComponent<TimerSlider>().getGa(gameObject, stunnedTimer, (int)enemyType, "stunnedTimer");
     }
 }

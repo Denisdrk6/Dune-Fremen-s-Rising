@@ -44,16 +44,18 @@ public class HunterSeeker : RagnarComponent
 	}
 	public void Update()
 	{
-		if (Input.GetMouseClick(MouseButton.LEFT) == KeyState.KEY_UP)
-		{
-			GameObject enemy = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
-			if (enemy != null)
-				agent.CalculatePath(enemy.transform.globalPosition);
-			else
-				agent.CalculatePath(agent.hitPosition);
-			leftParticles.Play();
-			rightParticles.Play();
+		GameObject enemy = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
+		if (enemy != null)
+        {
+			agent.CalculatePath(enemy.transform.globalPosition);
+        }
+		else
+        {
+			agent.CalculatePath(agent.hitPosition);
 		}
+		leftParticles.Play();
+		rightParticles.Play();
+		
 		Debug.Log((agent.path - gameObject.transform.globalPosition).magnitude.ToString());
 		if((agent.path - gameObject.transform.globalPosition).magnitude < 1.5f)
         {
