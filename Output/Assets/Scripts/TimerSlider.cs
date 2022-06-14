@@ -26,10 +26,9 @@ public class TimerSlider : RagnarComponent
 
         float x=lastX - newBound;
         newBounds.Set(newBound, 7, 0);
-
+        position.y = position.y + 3;
         //gameObject.GetComponent<Transform>() = position;
         Newposition = Camera.WorldToScreen(position);
-        Newposition.y= Newposition.y + 100;
         Newposition.x = Newposition.x-(x/2);
         gameObject.GetComponent<Transform2D>().position2D= Newposition;
         gameObject.GetComponent<Transform2D>().SetSize(newBounds);
