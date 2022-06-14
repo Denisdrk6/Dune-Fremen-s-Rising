@@ -8,6 +8,7 @@
 #include "ModuleSceneManager.h"
 
 #define MARGIN_IN_TEXT 45
+#define MARGIN_IN_CINEMATIC 100
 
 DialogueSystem* DialogueSystem::instance = nullptr;
 
@@ -330,9 +331,14 @@ void DialogueSystem::LoadLinesXML(pugi::xml_node& node, DialogueXML* dlg)
 		DialogueLineXML* node = new DialogueLineXML;
 		node->authorId = m.attribute("AuthorId").as_int();
 		//node->line.assign(m.attribute("Line").as_string());
-
+		// 
 		//Put enters in a text, never pass de number:MARGIN_IN_TEXT of chars in line
-		node->line.assign(TextWrap(m.attribute("Line").as_string(), MARGIN_IN_TEXT));
+		if (dlg->id == 0 || dlg->id == 1 || dlg->id == 2 || dlg->id == 5 || dlg->id == 9) {
+			node->line.assign(TextWrap(m.attribute("Line").as_string(), MARGIN_IN_CINEMATIC));
+		}
+		else {
+			node->line.assign(TextWrap(m.attribute("Line").as_string(), MARGIN_IN_TEXT));
+		}
 
 		dlg->dialogue.push_back(node);
 	}
