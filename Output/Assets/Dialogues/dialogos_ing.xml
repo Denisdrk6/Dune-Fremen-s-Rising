@@ -136,7 +136,7 @@
 	
 	<!-- AuthorId:  0=Paul / 1=Chani / 6=Lady Jessica / 7=Stilgar -->
 	<Dialogue Id="4">
-		<node AuthorId="6" Line="What is he doing here?"> 
+		<!-- <node AuthorId="6" Line="What is he doing here?"> 
 		</node>
 		<node AuthorId="7" Line="He apparently likes to draw attention to himself, but there are guards everywhere."> 
 		</node>

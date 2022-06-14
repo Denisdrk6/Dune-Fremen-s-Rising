@@ -1,18 +1,14 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	2909291642	Stealth			\Default Work Unit\Stealth	
 	3991942870	Music			\Default Work Unit\Music	
 
 State	ID	Name	State Group			Notes
-	748895195	None	Stealth			
-	3214304800	Spotted	Stealth			
-	188277187	Boss_Stage4	Music			
 	188277188	Boss_Stage3	Music			
 	188277189	Boss_Stage2	Music			
 	188277190	Boss_Stage1	Music			
 	710332713	Level2_Music	Music			
 	748895195	None	Music			
-	1522595433	Credits_Music	Music			
 	2026953958	Level1_Music	Music			
+	3109816846	Level2_Tension	Music			
 	3604647259	MainMenu	Music			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
