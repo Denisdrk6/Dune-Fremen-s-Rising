@@ -557,6 +557,9 @@ public class Boss : RagnarComponent
 					shieldCooldown = 10.0f;
 					shieldBar.GetComponent<Material>().SetTexturePath("Assets/Resources/UI/ui_boss_shieldbar1.png");
 					shieldInmunity = true;
+					attacking = false;
+					charging = false;
+					barrelHit = false;
 					shieldParticles.Play();
 					stunnedHits = 0;
 				}
