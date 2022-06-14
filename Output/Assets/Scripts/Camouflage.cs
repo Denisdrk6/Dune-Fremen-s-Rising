@@ -13,6 +13,8 @@ public class Camouflage : RagnarComponent
 	UIText buffCounter;
 	float buffTemp;
 
+	GameObject buffImg;
+
 	public void Start()
 	{
 		player = GameObject.Find("Player_2");
@@ -21,7 +23,8 @@ public class Camouflage : RagnarComponent
 		SceneAudio = GameObject.Find("AudioLevel1");
 		//player.GetComponent<Animation>().PlayAnimation("Ability2");
         player.GetComponent<Player>().PlayAudioClip("WPN_CAMOUFLAGEACTIVATE");
-		buffCounter = GameObject.Find("UIB").GetComponent<UIText>();
+		buffCounter = GameObject.Find("UIBCamoNum").GetComponent<UIText>();
+		buffImg = GameObject.Find("UIBCamoImg");
 		SetMaterial("Assets/Resources/UI/options_rect.png");
     }
 	public void Update()
@@ -46,6 +49,8 @@ public class Camouflage : RagnarComponent
 		{
 			system.camouflageActive = true;
 
+			buffImg.isActive = true;
+
 			buffTemp = time1;
 			buffTemp = (float)Math.Round((double)buffTemp, 0);
 
@@ -56,6 +61,7 @@ public class Camouflage : RagnarComponent
 		else
 		{
 			system.camouflageActive = false;
+			buffImg.isActive = false;
 			buffCounter.text = "";
 			return true;
 		}

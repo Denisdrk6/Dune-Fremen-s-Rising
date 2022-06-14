@@ -129,7 +129,9 @@ public class pauseMenuButton : RagnarComponent
 
 	GameObject UICrouch;
 
-	GameObject UIBuff;
+	GameObject UIBVoiceNum;
+	GameObject UIBCamoNum;
+	GameObject UIBCamoImg;
 
 	GameObject UICharPhoto;
 	GameObject UIAbilityArray;
@@ -333,7 +335,9 @@ public class pauseMenuButton : RagnarComponent
 
 		UICrouch = GameObject.Find("UICrouch");
 
-		UIBuff = GameObject.Find("UIB");
+		UIBVoiceNum = GameObject.Find("UIBVoiceNum");
+		UIBCamoNum = GameObject.Find("UIBCamoNum");
+		UIBCamoImg = GameObject.Find("UIBCamoImg");
 
 		AbilityBord = GameObject.Find("AbilImage");
 
@@ -1389,7 +1393,9 @@ public class pauseMenuButton : RagnarComponent
 			cd3.isActive = false;
 			cd4.isActive = false;
 			UICrouch.isActive = false;
-			UIBuff.isActive = false;
+			UIBVoiceNum.isActive = false;
+			UIBCamoNum.isActive = false;
+			UIBCamoImg.isActive = false;
 		}
         else
         {
@@ -1427,7 +1433,9 @@ public class pauseMenuButton : RagnarComponent
 			cd2.isActive = true;
 			cd3.isActive = true;
 			cd4.isActive = true;
-			UIBuff.isActive = true;
+			UIBVoiceNum.isActive = true;
+			UIBCamoNum.isActive = true;
+			UIBCamoImg.isActive = false;
 		}
 
 		if(isOptions)
@@ -1544,10 +1552,22 @@ public class pauseMenuButton : RagnarComponent
 		pos.Set(-61.5f, y - 60, -10.400f);
 		AbilityBG2.GetComponent<Transform2D>().position2D = pos;
 
+		pos.Set(-69f, y + 25, -10.400f);
+		UIBCamoNum.GetComponent<Transform2D>().position2D = pos;
+
+		pos.Set(-62f, y + 32, -10.400f);
+		UIBCamoImg.GetComponent<Transform2D>().position2D = pos;
+
 		pos.Set(46.5f, y - 60, -10.400f);
 		AbilityBG3.GetComponent<Transform2D>().position2D = pos;
 
-		pos.Set(158.5f, y - 60, -10.400f);
+        //pos.Set(46.5f, y + 37, -10.400f);
+        //UIBCamoNum.GetComponent<Transform2D>().position2D = pos;
+
+        //pos.Set(46.5f, y + 37, -10.400f);
+        //UIBCamoImg.GetComponent<Transform2D>().position2D = pos;
+
+        pos.Set(158.5f, y - 60, -10.400f);
 		AbilityBG4.GetComponent<Transform2D>().position2D = pos;
 
 
@@ -1592,10 +1612,6 @@ public class pauseMenuButton : RagnarComponent
 
 		pos.Set(x + 630f, y - 25, -10.400f);
 		UICrouch.GetComponent<Transform2D>().position2D = pos;
-
-		pos.Set(x + 1240f, y - 35, -10.400f);
-		UIBuff.GetComponent<Transform2D>().position2D = pos;
-
 
 
 		pos.Set(-4.5f, y-58, -10.400f);

@@ -64,7 +64,7 @@ public class TankEnemy : RagnarComponent
 
     public bool enterStunner = true;
 
-    UIText buffCounter;
+    GameObject buffCounter;
     float buffTemp;
     public GameObject circle;
     GameObject pointCharacter;
@@ -76,11 +76,17 @@ public class TankEnemy : RagnarComponent
     GameObject Ability2Bg;
     GameObject Ability3Bg;
     GameObject Ability4Bg;
+
+    Vector3 pos;
+    Vector3 wPos;
     public void Start()
     {
         offset = gameObject.GetSizeAABB();
         animation = gameObject.GetComponent<Animation>();
         rigidbody = gameObject.GetComponent<Rigidbody>();
+
+        pos = new Vector3(0.0f, 0.0f, 0.0f);
+        wPos = new Vector3(0.0f, 0.0f, 0.0f);
 
         if (state != EnemyState.DEATH)
         {
@@ -119,7 +125,7 @@ public class TankEnemy : RagnarComponent
         stunPartSys.Pause();
         retardedFrames = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().retardedFrames;
 
-        buffCounter = GameObject.Find("UIB").GetComponent<UIText>();
+        buffCounter = GameObject.Find("UIBVoiceNum");
 
         pointCharacter = GameObject.Find("PlayerReminder").childs[3];
         pointerLight = pointCharacter.GetComponent<Light>();
@@ -224,7 +230,14 @@ public class TankEnemy : RagnarComponent
                 }
                 buffTemp = controlledCooldown;
                 buffTemp = (float)Math.Round((double)buffTemp, 0);
-                buffCounter.text = buffTemp.ToString();
+                buffCounter.GetComponent<UIText>().text = buffTemp.ToString();
+
+                if (timerSlider != null)
+                {
+                    pos.Set(timerSlider.GetComponent<Transform2D>().position2D.x, timerSlider.GetComponent<Transform2D>().position2D.y, timerSlider.GetComponent<Transform2D>().position2D.z);
+                    pos.y += 10;
+                    buffCounter.GetComponent<Transform2D>().position2D = pos;
+                }
 
                 Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
                 Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
@@ -240,7 +253,7 @@ public class TankEnemy : RagnarComponent
                     controlled = false;
                     returning = true;
                     gameObject.EraseChild(circle);
-                    buffCounter.text = "";
+                    buffCounter.GetComponent<UIText>().text = "";
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                 }
@@ -251,7 +264,7 @@ public class TankEnemy : RagnarComponent
                     pointerLight.intensity = 0;
                     abilityLight.intensity = 0;
                     controlledCooldown = 0f;
-                    buffCounter.text = "";
+                    buffCounter.GetComponent<UIText>().text = "";
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                     controlled = false;

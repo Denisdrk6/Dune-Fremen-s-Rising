@@ -74,7 +74,7 @@ public class BasicEnemy : RagnarComponent
     public bool canLookOut = false;
     int retardedFrames;
 
-    UIText buffCounter;
+    GameObject buffCounter;
     float buffTemp;
     public GameObject circle;
     GameObject pointCharacter;
@@ -87,11 +87,17 @@ public class BasicEnemy : RagnarComponent
     GameObject Ability2Bg;
     GameObject Ability3Bg;
     GameObject Ability4Bg;
+
+    Vector3 pos;
+    Vector3 wPos;
     public void Start()
     {
         // Get all Components
         animationComponent = gameObject.GetComponent<Animation>();
         rb = gameObject.GetComponent<Rigidbody>();
+
+        pos = new Vector3(0.0f, 0.0f, 0.0f);
+        wPos = new Vector3(0.0f, 0.0f, 0.0f);
 
         SceneAudio = GameObject.Find("AudioLevel1");
         offset = gameObject.GetSizeAABB();
@@ -134,7 +140,7 @@ public class BasicEnemy : RagnarComponent
         stunPartSys.Pause();
         retardedFrames = GameObject.Find("EnemyManager").GetComponent<EnemyManager>().retardedFrames;
 
-        buffCounter = GameObject.Find("UIB").GetComponent<UIText>();
+        buffCounter = GameObject.Find("UIBVoiceNum");
 
         pointCharacter = GameObject.Find("PlayerReminder").childs[3];
         pointerLight = pointCharacter.GetComponent<Light>();
@@ -239,7 +245,14 @@ public class BasicEnemy : RagnarComponent
                 }
                 buffTemp = controlledCooldown;
                 buffTemp = (float)Math.Round((double)buffTemp, 0);
-                buffCounter.text = buffTemp.ToString();
+                buffCounter.GetComponent<UIText>().text = buffTemp.ToString();
+
+                if (timerSlider != null)
+                {
+                    pos.Set(timerSlider.GetComponent<Transform2D>().position2D.x, timerSlider.GetComponent<Transform2D>().position2D.y, timerSlider.GetComponent<Transform2D>().position2D.z);
+                    pos.y += 10;
+                    buffCounter.GetComponent<Transform2D>().position2D = pos;
+                }
 
                 Ability1Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
                 Ability2Bg.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
@@ -255,7 +268,7 @@ public class BasicEnemy : RagnarComponent
                     controlled = false;
                     returning = true;
                     gameObject.EraseChild(circle);
-                    buffCounter.text = "";
+                    buffCounter.GetComponent<UIText>().text = "";
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                 }
@@ -268,7 +281,7 @@ public class BasicEnemy : RagnarComponent
                     abilityLight.intensity = 0;
                     Mathf.dir = 0;
                     controlledCooldown = 0f;
-                    buffCounter.text = "";
+                    buffCounter.GetComponent<UIText>().text = "";
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility3 = true;
                     GameObject.Find("PlayerManager").GetComponent<PlayerManager>().canDoAbility4 = true;
                     controlled = false;
