@@ -58,8 +58,8 @@
 		</node>
 		<node AuthorId="0" Line="No eres la única que tiene alguna cuenta pendiente con los Harkonnen y creo que él tiene un plan."> 
 		</node>
-		<node AuthorId="1" Line="No puede ser..."> 
-		</node>
+		<!--<node AuthorId="1" Line="No puede ser..."> 
+		</node>-->
 		<node AuthorId="0" Line="Los tenemos en nuestra propia puerta, podemos acabar con esto de una vez."> 
 		</node>
 		<node AuthorId="1" Line="Espera, no podemos actuar así sin más."> 

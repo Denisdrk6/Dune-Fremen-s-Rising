@@ -57,8 +57,8 @@
 		</node>
 		<node AuthorId="0" Line="You are not the only one with a score to settle with the Harkonnen and I believe he has a plan."> 
 		</node>
-		<node AuthorId="1" Line="No way..."> 
-		</node>
+		<!--<node AuthorId="1" Line="No way..."> 
+		</node>-->
 		<node AuthorId="0" Line="We have them on our own doorstep, we can end this at once."> 
 		</node>
 		<node AuthorId="1" Line="Wait, we can't just act on that way."> 
