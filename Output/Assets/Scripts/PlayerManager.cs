@@ -555,6 +555,14 @@ public class PlayerManager : RagnarComponent
                     players[characterSelected].GetComponent<Rigidbody>().SetBodyRotation(rot);
                     players[characterSelected].GetComponent<Animation>().PlayAnimation("CorpseDrop");
 
+                    //Animations
+                    if (playableCharacter.pickedEnemy.name.Contains("Basic"))
+                        playableCharacter.pickedEnemy.ChangeMesh("1_modeldeath");
+                    else if (playableCharacter.pickedEnemy.name.Contains("Undistractable"))
+                        playableCharacter.pickedEnemy.ChangeMesh("3_modeldeath");
+                    else if (playableCharacter.pickedEnemy.name.Contains("Tank"))
+                        playableCharacter.pickedEnemy.ChangeMesh("2_modeldeath");
+
                     playableCharacter.pickedEnemy.transform.globalPosition = players[characterSelected].transform.globalPosition;
                     playableCharacter.pickedEnemy.transform.globalRotation = rot;
 
@@ -567,7 +575,7 @@ public class PlayerManager : RagnarComponent
                     NavAgent agent = players[characterSelected].GetComponent<NavAgent>();
                     GameObject obj = RayCast.HitToTag(agent.rayCastA, agent.rayCastB, "Enemies");
 
-                    if (obj != null && obj.GetComponent<BasicEnemy>().state == EnemyState.DEATH && Transform.GetDistanceBetween(obj.transform.globalPosition, players[characterSelected].transform.globalPosition) < 3)
+                    if (obj != null && (obj.GetComponent<BasicEnemy>().state == EnemyState.DEATH || obj.GetComponent<TankEnemy>().state == EnemyState.DEATH || obj.GetComponent<UndistractableEnemy>().state == EnemyState.DEATH) && Transform.GetDistanceBetween(obj.transform.globalPosition, players[characterSelected].transform.globalPosition) < 3)
                     {
                         Vector3 direction = (obj.transform.globalPosition + (obj.transform.forward * 1.5f)) - players[characterSelected].transform.globalPosition;
                         Vector3 newForward = direction.normalized;
@@ -580,11 +588,15 @@ public class PlayerManager : RagnarComponent
 
                         //Position
                         obj.transform.localPosition = Vector3.zero;
-                        obj.transform.localRotation = Quaternion.RotateAroundAxis(new Vector3(0, 1, 0), 0.0174532925199432957f * 120);
-                        obj.transform.localPosition = new Vector3(-1.8f, 1, 0.55f);
 
                         //Animations
-                        obj.GetComponent<Animation>().PlayAnimation("Picked");
+                        if (obj.name.Contains("Basic"))
+                            obj.ChangeMesh("1_pose");
+                        else if (obj.name.Contains("Undistractable"))
+                            obj.ChangeMesh("3_pose");
+                        else if (obj.name.Contains("Tank"))
+                            obj.ChangeMesh("2_pose");
+
                         players[characterSelected].GetComponent<Animation>().PlayAnimation("CorpsePick");
 
                         //Setting Variables

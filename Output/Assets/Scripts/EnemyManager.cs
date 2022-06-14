@@ -82,32 +82,26 @@ public class EnemyManager : RagnarComponent
                 //deadEnemies.Add(enemyGOs[i]);
                 enemyGOs[i].transform.globalRotation = enemyGOs[i].GetComponent<Rigidbody>().GetBodyRotation();
                 enemyGOs[i].DeleteComponent<Rigidbody>(enemyGOs[i].GetComponent<Rigidbody>());
-              
-                switch (enemyGOs[i].GetComponent<BasicEnemy>().enemyType)
+
+                if (enemyGOs[i].name.Contains("Basic"))
                 {
-                    case EnemyType.BASIC:
-                       
-                        enemyGOs[i].ChangeMesh("1_modeldeath");
-                        //enemyGOs[i].GetComponent<BasicEnemy>().stunPartSys.Pause();
-                        enemyGOs[i].GetComponent<BasicEnemy>().pendingToDelete = false;
-                        enemyGOs[i].GetComponent<TankEnemy>().pendingToDelete = false;
-                        enemyGOs[i].GetComponent<AirEnemy>().pendingToDelete = false;
-                        enemyGOs[i].GetComponent<UndistractableEnemy>().pendingToDelete = false;
-                        break;
-                    //TODO: Check if drone destroyed
-                    case EnemyType.AIR:
-                        enemyGOs[i].ChangeMesh("4_modeldeath");
-                        enemyGOs[i].GetComponent<AirEnemy>().pendingToDelete = false;
-                        break;
-                    case EnemyType.TANK:
-                        enemyGOs[i].ChangeMesh("3_modeldeath");
-                        //enemyGOs[i].GetComponent<TankEnemy>().stunPartSys.Pause();
-                        break;
-                    case EnemyType.UNDISTRACTABLE:
-                        enemyGOs[i].ChangeMesh("2_modeldeath");
-                        //enemyGOs[i].GetComponent<UndistractableEnemy>().stunPartSys.Pause();
-                        break;
-                };
+                    enemyGOs[i].ChangeMesh("1_modeldeath");
+                    enemyGOs[i].GetComponent<BasicEnemy>().pendingToDelete = false;
+                }
+                else if (enemyGOs[i].name.Contains("Undistractable"))
+                {
+                    enemyGOs[i].ChangeMesh("3_modeldeath");
+                    enemyGOs[i].GetComponent<UndistractableEnemy>().pendingToDelete = false;
+                }
+                else if (enemyGOs[i].name.Contains("Dron"))
+                {
+                    enemyGOs[i].GetComponent<AirEnemy>().pendingToDelete = false;
+                }
+                else if (enemyGOs[i].name.Contains("Tank"))
+                {
+                    enemyGOs[i].ChangeMesh("2_modeldeath");
+                    enemyGOs[i].GetComponent<TankEnemy>().pendingToDelete = false;
+                }
 
                 GameObject sound = InternalCalls.InstancePrefab("SoundArea", enemyGOs[i].transform.globalPosition);
                 if(enemyGOs[i].name.Contains("Dron"))
