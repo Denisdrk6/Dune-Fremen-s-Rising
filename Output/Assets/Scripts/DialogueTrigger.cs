@@ -18,67 +18,18 @@ public class DialogueTrigger : RagnarComponent
     }
     public void Update()
     {
-        /*
         if (nexLevel == true) return;
         if (!isUsed) return;
         switch (dialogueId)
         {
-            case 0:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 1:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 2:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 3:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 4:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 5:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 6:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 7:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 8:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
             case 9:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
+                LoadSceneWin();
                 break;
-            case 10:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 11:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
-            case 12:
-                // Gameplay
-                InternalCalls.Destroy(gameObject);
-                break;
+
             default:
                 break;
         }
-       */
+
     }
 
     void LoadSceneWin()

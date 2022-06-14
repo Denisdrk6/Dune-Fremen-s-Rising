@@ -215,7 +215,7 @@ public class Boss : RagnarComponent
 					GameObject.Find("Quest System").GetComponent<QuestSystem>().lastPhaseCompleted = true;
                     GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
                     //GameObject.Find("DialogueTrigger11").GetComponent<DialogueTrigger>().SetUsed(false);
-                    GameObject.Find("DialogueTrigger11").GetComponent<DialogueTrigger>().ActiveCinematic("Cinematic_7");
+                    GameObject.Find("DialogueTrigger11").GetComponent<DialogueTrigger>().ActiveDialoguebyID(9);
                     life.GetComponent<Material>().SetTexturePath("Assets/Resources/UI/ui_boss_lifebar0.png");
 					//InternalCalls.Destroy(gameObject);
 				}
