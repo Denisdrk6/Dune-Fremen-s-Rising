@@ -132,6 +132,8 @@
     <Compile Include="Assets\Scripts\EnemyData.cs" />
     <Compile Include="Assets\Scripts\QuestSystem.cs" />
     <Compile Include="Assets\Scripts\BackStabEnemy.cs" />
+    <Compile Include="Assets\Scripts\PopUp.cs" />
+    <Compile Include="Assets\Scripts\TimerSlider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assembly-CSharp\App.config" />
