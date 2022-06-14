@@ -15,6 +15,9 @@ public class TimerSlider : RagnarComponent
         Newposition = new Vector3(0, 0, 0);
         newBounds = new Vector3(0, 0, 0);
         gameObject.GetComponent<UIImage>().SetImageGeneralColor(255, 0, 0);
+        gameObject.childs[0].GetComponent<UIImage>().SetImageGeneralColor(0, 0, 0);
+        newBounds.Set(100, 7, 0);
+        gameObject.childs[0].GetComponent<Transform2D>().SetSize(newBounds);
     }
     void SetTimer(float actualTime,Vector3 position)
     {
@@ -30,6 +33,9 @@ public class TimerSlider : RagnarComponent
         Newposition.x = Newposition.x-(x/2);
         gameObject.GetComponent<Transform2D>().position2D= Newposition;
         gameObject.GetComponent<Transform2D>().SetSize(newBounds);
+        Newposition.y = Newposition.y + 20;
+        Newposition.x = Newposition.x + (x / 2);
+        gameObject.childs[0].GetComponent<Transform2D>().position2D = Newposition;
     }
     public void getGa(GameObject obj,float time,int enemyTy,string action)
     {
