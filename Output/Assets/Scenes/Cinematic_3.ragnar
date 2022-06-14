@@ -2031,7 +2031,7 @@
                         0
                     ],
                     "Color Multiplier": 1,
-                    "Outline Normals Thickness": 1
+                    "Outline Normals Thickness": 0.12
                 },
                 {
                     "Type": 1,
@@ -2252,7 +2252,7 @@
                         0
                     ],
                     "Color Multiplier": 1,
-                    "Outline Normals Thickness": 1
+                    "Outline Normals Thickness": 0.14
                 },
                 {
                     "Type": 1,
@@ -2428,7 +2428,7 @@
                         0
                     ],
                     "Color Multiplier": 1,
-                    "Outline Normals Thickness": 1
+                    "Outline Normals Thickness": 0.14
                 },
                 {
                     "Type": 1,

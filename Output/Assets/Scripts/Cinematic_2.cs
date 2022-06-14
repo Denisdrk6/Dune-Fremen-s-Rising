@@ -12,9 +12,9 @@ public class Cinematic_2 : RagnarComponent
 
     GameObject paul;
     // Dont remove it, it will crash
-    Animation paulAnimation;
+    //Animation paulAnimation;
     GameObject chani;
-    Animation chaniAnimation;
+    //Animation chaniAnimation;
     // =================
 
     NavAgent chaniNavAgent;

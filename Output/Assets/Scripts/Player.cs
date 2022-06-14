@@ -445,7 +445,8 @@ public class Player : RagnarComponent
             Input.RestoreDefaultCursor();
             if (!other.gameObject.GetComponent<DialogueTrigger>().isUsed)
                 PlayerPause();
-            other.gameObject.GetComponent<DialogueTrigger>().ActiveCinematic("Cinematic_3");
+            //other.gameObject.GetComponent<DialogueTrigger>().ActiveCinematic("Cinematic_3");
+            SceneManager.LoadScene("WinScene");
         }
         if (other.gameObject.name == "DialogueTrigger5")
         {
