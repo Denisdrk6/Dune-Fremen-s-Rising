@@ -29,20 +29,20 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -31.559638977050781,
+                        -32.159999847412109,
                         -25.799999237060547,
-                        199.27188110351562
+                        184.89999389648438
                     ],
                     "Quaternion": [
                         0,
-                        0.64758259057998657,
+                        0.87257832288742065,
                         0,
-                        0.76199531555175781
+                        0.48847419023513794
                     ],
                     "RotationEditor": [
-                        -0,
-                        1.4088157415390015,
-                        -0
+                        -3.1415927410125732,
+                        1.0206804275512695,
+                        -3.1415927410125732
                     ],
                     "Scale": [
                         1.0000261068344116,
@@ -68,15 +68,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        9.1552734375e-05,
-                        72.758392333984375,
-                        -66.144035339355469
+                        0,
+                        55,
+                        -50
                     ],
                     "Quaternion": [
-                        0.34202015399932861,
-                        -6.7676104720248986e-09,
+                        0.34202012419700623,
                         0,
-                        0.93969273567199707
+                        0,
+                        0.93969261646270752
                     ],
                     "RotationEditor": [
                         0.78539824485778809,
@@ -84,37 +84,37 @@
                         -0
                     ],
                     "Scale": [
-                        1.4142100811004639,
+                        1.4142093658447266,
                         1.0000002384185791,
-                        1.0000004768371582
+                        1.0000002384185791
                     ]
                 },
                 {
                     "Near Plane": 1,
                     "Far Plane": 155,
-                    "Vertical Fov": 0.51418185234069824,
+                    "Vertical Fov": 0.40506687760353088,
                     "Horizontal Fov": 0.78539818525314331,
                     "Camera Pos": [
-                        -96.839523315429688,
-                        46.958393096923828,
-                        188.60423278808594
+                        -74.784309387207031,
+                        29.200000762939453,
+                        211.03997802734375
                     ],
                     "Type": 3,
-                    "Zoom": -20,
+                    "Zoom": -8,
                     "Zoom Min": -20,
                     "Zoom Max": 30,
                     "Zoom Speed": 1,
-                    "Lock": false,
+                    "Lock": true,
                     "Free Movement": true,
                     "Default Target Pos": [
-                        -31.559638977050781,
+                        -32.159999847412109,
                         -25.799999237060547,
-                        199.27188110351562
+                        184.89999389648438
                     ],
                     "Movement Speed": 0.25,
                     "Rotation Speed": 0.80000001192092896,
                     "Radius": 20,
-                    "Horizontal Angle": 80.719169616699219,
+                    "Horizontal Angle": 121.51931762695313,
                     "Shake Strength": 0.60000002384185791,
                     "Shake Duration": 1,
                     "Shake Smooth": 0,
@@ -168,7 +168,7 @@
                     "Type": 5,
                     "Volume": 50,
                     "Pitch": 0,
-                    "Mute": false,
+                    "Mute": true,
                     "AudioClips": [
                         {
                             "0": "LEVEL1BGMUSIC"
@@ -243,7 +243,7 @@
                         0,
                         0.98829638957977295,
                         0,
-                        0.15254592895507812
+                        0.15254592895507813
                     ],
                     "RotationEditor": [
                         0,
@@ -275,7 +275,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -306,7 +307,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -340,7 +341,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -405,7 +407,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -436,7 +439,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -470,7 +473,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -535,7 +539,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -600,7 +605,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -665,7 +671,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -696,7 +703,7 @@
                     ],
                     "Quaternion": [
                         0,
-                        0.92880630493164062,
+                        0.92880630493164063,
                         0,
                         0.37056559324264526
                     ],
@@ -730,7 +737,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -795,7 +803,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -820,15 +829,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -14.149985313415527,
-                        1.4782567024230957,
-                        177.031982421875
+                        -11.983828544616699,
+                        1.4782588481903076,
+                        165.17591857910156
                     ],
                     "Quaternion": [
-                        0.54711335897445679,
-                        0.54711335897445679,
-                        0.44795867800712585,
-                        0.44795864820480347
+                        0.58976823091506958,
+                        0.58976656198501587,
+                        0.39009532332420349,
+                        0.39009550213813782
                     ],
                     "RotationEditor": [
                         0,
@@ -836,9 +845,9 @@
                         0
                     ],
                     "Scale": [
-                        1,
-                        1,
-                        1
+                        1.000002384185791,
+                        1.0000020265579224,
+                        1.0000025033950806
                     ]
                 },
                 {
@@ -860,7 +869,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -925,7 +935,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -990,7 +1001,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1055,7 +1067,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1120,7 +1133,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1145,7 +1159,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -72.169998168945312,
+                        -72.169998168945313,
                         -4.21160888671875,
                         177.21000671386719
                     ],
@@ -1185,7 +1199,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1210,15 +1225,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -48.270000457763672,
-                        -2.559999942779541,
-                        234.86000061035156
+                        -52.624477386474609,
+                        -2.4452378749847412,
+                        235.51084899902344
                     ],
                     "Quaternion": [
-                        0.70705622434616089,
-                        0.69778245687484741,
-                        -0.11445389688014984,
-                        0.0084535814821720123
+                        0.70705634355545044,
+                        0.69778233766555786,
+                        -0.11445391178131104,
+                        0.0084535321220755577
                     ],
                     "RotationEditor": [
                         0,
@@ -1226,9 +1241,9 @@
                         0
                     ],
                     "Scale": [
+                        1.0000007152557373,
                         0.99999994039535522,
-                        1,
-                        0.99999994039535522
+                        1.0000007152557373
                     ]
                 },
                 {
@@ -1250,7 +1265,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1275,9 +1291,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -39.229999542236328,
+                        -34.106742858886719,
                         0.44100585579872131,
-                        173.17999267578125
+                        172.37271118164063
                     ],
                     "Quaternion": [
                         0,
@@ -1315,7 +1331,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1340,9 +1357,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -51.349998474121094,
+                        -39.75,
                         1,
-                        187.69999694824219
+                        182.60000610351563
                     ],
                     "Quaternion": [
                         0,
@@ -1385,7 +1402,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 }
             ]
         },
@@ -1405,7 +1423,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -74.610000610351562,
+                        -74.610000610351563,
                         0.77901530265808105,
                         152.45991516113281
                     ],
@@ -1450,7 +1468,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 }
             ]
         },
@@ -1470,7 +1489,7 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -69.110000610351562,
+                        -69.110000610351563,
                         -6.3579525947570801,
                         203.38458251953125
                     ],
@@ -1510,7 +1529,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 1,
@@ -1537,7 +1557,7 @@
                     "Position": [
                         -62.699806213378906,
                         0,
-                        162.44302368164062
+                        162.44302368164063
                     ],
                     "Quaternion": [
                         0,
@@ -1580,7 +1600,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
                 },
                 {
                     "Type": 11,
@@ -1616,6 +1637,917 @@
             ]
         },
         {
+            "UUID": 47152571,
+            "Parent UUID": 417174774,
+            "Name": "High_Band",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        568,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        3.3333332538604736,
+                        0.23333333432674408,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 2000,
+                    "buttonHeight": 140,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 642.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1184583527,
+            "Parent UUID": 417174774,
+            "Name": "Low_Band",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        -568,
+                        -10.399999618530273
+                    ],
+                    "Scale": [
+                        3.3333332538604736,
+                        0.23333333432674408,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 2000,
+                    "buttonHeight": 140,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 642.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": false,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 13,
+                    "alpha": 1,
+                    "numOfAnimations": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1822328168,
+            "Parent UUID": 417174774,
+            "Name": "Cinematic",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Cinematic.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "Cinematic_3",
+                    "pointer": 683759376,
+                    "type": 4,
+                    "componentTable": 0,
+                    "runGame": true,
+                    "bands": 0,
+                    "IdDialogue": 2,
+                    "IdLine": 0
+                }
+            ]
+        },
+        {
+            "UUID": 81378638,
+            "Parent UUID": 417174774,
+            "Name": "CinematicDialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 4,
+                    "ScriptName": "CinematicManager",
+                    "pointer": 683759528,
+                    "type": 4,
+                    "componentTable": 0
+                }
+            ]
+        },
+        {
+            "UUID": 1777589784,
+            "Parent UUID": 81378638,
+            "Name": "Dialogue",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Active": true,
+                    "Type": 19,
+                    "Position": [
+                        0,
+                        310.96502685546875,
+                        9.6000003814697266
+                    ],
+                    "Scale": [
+                        0.1666666716337204,
+                        0.1666666716337204,
+                        1
+                    ],
+                    "rotationEuler": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "buttonWidth": 100,
+                    "buttonHeight": 100,
+                    "lastButtonWidth": 1296,
+                    "lastButtonHeight": 642.5,
+                    "MoveOnResizeX": true,
+                    "MoveOnResizeY": true
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/white.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 16,
+                    "buttonText": "Rabban ha atacado dos asentamientos más al\noeste de aquí, te está buscando Paul.",
+                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
+                    "fontScale": 0.5,
+                    "textColor.r": 1,
+                    "textColor.g": 1,
+                    "textColor.b": 1,
+                    "TextFile": "-"
+                }
+            ]
+        },
+        {
+            "UUID": 87527391,
+            "Parent UUID": 417174774,
+            "Name": "ExitPoint",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": false,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -62.088214874267578,
+                        0,
+                        207.50048828125
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 1724506246,
+            "Parent UUID": 417174774,
+            "Name": "Boss",
+            "Active": true,
+            "Static": false,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Boss.rgprefab",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -49.799999237060547,
+                        0,
+                        195.60000610351563
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.23684012889862061,
+                        0,
+                        0.97155874967575073
+                    ],
+                    "RotationEditor": [
+                        -0,
+                        -0.47822019457817078,
+                        -0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_boss_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/nme_boss_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 0,
+                    "Emissive Enabled": true,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_boss_idle__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 70,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.5,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Idle",
+                    "Animations": [
+                        {
+                            "State": "CallBackup",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Die",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_die__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Execdie",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_execdie__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Exhausted",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_exhausted__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "HitGround",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_hitground__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ntoa",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_ntoa__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_run__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shield",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shield__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShieldDestroy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shielddestroy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "ShotCrazy",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_shotcrazy__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "SitIdle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_sitidle__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Throw",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throw__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "WalkAngry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walkangry__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "WalkNormal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_walknormal__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "ThrowHands",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_throwhands__nme_boss_throwhands|nme_boss_throwhands.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_talk__nme_boss_talk|nme_boss_talknme_boss_talk.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Shout",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_callbackup__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_boss_idle__nme_boss_idle|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        }
+                    ]
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "None"
+                        }
+                    ]
+                },
+                {
+                    "Type": 6,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417174774,
+            "Name": "Undistractable Enemy",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "Assets\/Prefabs\/Undistractable Enemy(1).rgprefab",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -47.5,
+                        0,
+                        192.89999389648438
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy3_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/nme_enemy3_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy3_idle__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Die",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_idle__nme_enemy3_idle|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "RifleHit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_riflehit__nme_enemy3_riflehit|nme_enemy3_riflehit.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "PutOnKnee",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_putonknee__nme_enemy3_putonknee|nme_enemy3_putonknee.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Aim",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_aim__nme_enemy3_aim|nme_enemy3_aim.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "AimIdle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_aimidle__nme_enemy3_aimidle|nme_enemy3_aimidle.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoulder",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_shoulderidle__nme_enemy3_shoulder|nme_enemy3_shoulder.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Affirm",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_affirmative__nme_enemy3_affirmative|nme_enemy3_affirmative.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Die",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_dying__nme_enemy3_dying|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 10000,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "None"
+                        }
+                    ]
+                },
+                {
+                    "Type": 6,
+                    "Active": true
+                }
+            ]
+        },
+        {
+            "UUID": 2021177439,
+            "Parent UUID": 417174774,
+            "Name": "Undistractable Enemy 2",
+            "Active": true,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Enemies",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        -46.200000762939453,
+                        0,
+                        195.10000610351563
+                    ],
+                    "Quaternion": [
+                        0,
+                        -0.76605057716369629,
+                        0,
+                        0.64279353618621826
+                    ],
+                    "RotationEditor": [
+                        0,
+                        -1.7453292608261108,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/CharacterTex\/nme_enemy3_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/CharacterTex\/nme_enemy3_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/nme_enemy3_idle__Mesh.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Die",
+                    "Animations": [
+                        {
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy1_walk__Armature|Armature|nme_enemy2_walk|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_idle__nme_enemy3_idle|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "RifleHit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_riflehit__nme_enemy3_riflehit|nme_enemy3_riflehit.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "PutOnKnee",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_putonknee__nme_enemy3_putonknee|nme_enemy3_putonknee.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Aim",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_aim__nme_enemy3_aim|nme_enemy3_aim.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "AimIdle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_aimidle__nme_enemy3_aimidle|nme_enemy3_aimidle.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shoulder",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_shoulderidle__nme_enemy3_shoulder|nme_enemy3_shoulder.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Affirm",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_affirmative__nme_enemy3_affirmative|nme_enemy3_affirmative.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Die",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/nme_enemy3_dying__nme_enemy3_dying|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        }
+                    ]
+                },
+                {
+                    "Type": 11,
+                    "CollisionType": 2,
+                    "Radius": 0.30000001192092896,
+                    "Height": 1.6000000238418579,
+                    "Gravity": true,
+                    "Kinematic": false,
+                    "Trigger": false,
+                    "fActivation": true,
+                    "Mass": 10000,
+                    "Friction": 1,
+                    "Restitution": 0.20000000298023224,
+                    "MovementConstraint": [
+                        1,
+                        1,
+                        1
+                    ],
+                    "RotationConstraint": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "SizeConstraint": 0,
+                    "LinearDamping": 0,
+                    "AngularDamping": 0,
+                    "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
+                },
+                {
+                    "Type": 5,
+                    "Volume": 50,
+                    "Pitch": 0,
+                    "Mute": false,
+                    "AudioClips": [
+                        {
+                            "0": "None"
+                        }
+                    ]
+                },
+                {
+                    "Type": 6,
+                    "Active": true
+                }
+            ]
+        },
+        {
             "UUID": 2021177439,
             "Parent UUID": 417174774,
             "Name": "Player",
@@ -1625,31 +2557,31 @@
             "Prefab Path": "Assets\/Prefabs\/Player.rgprefab",
             "tag": "Player",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -47.317012786865234,
+                        -42.5,
                         0,
-                        194.67399597167969
+                        191.69999694824219
                     ],
                     "Quaternion": [
                         0,
-                        -0.68342351913452148,
+                        -0.49242442846298218,
                         0,
-                        0.73002219200134277
+                        0.8703572154045105
                     ],
                     "RotationEditor": [
                         -0,
-                        0,
+                        -1.0297442674636841,
                         -0
                     ],
                     "Scale": [
-                        1.000001072883606,
                         1,
-                        1.000001072883606
+                        1,
+                        1
                     ]
                 },
                 {
@@ -1671,7 +2603,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1.4700000286102295,
+                    "Outline Normals Thickness": 0.11999999731779099
                 },
                 {
                     "Type": 1,
@@ -1681,47 +2614,32 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "CorpseRun",
+                    "Current Anim": "Celebrate",
                     "Animations": [
                         {
-                            "State": "Walk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_walk__Armature|Armature|char_paul_walk|BaseLayer.fbx",
+                            "State": "Idle",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__char_paul_idle|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         },
                         {
-                            "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_idle__Armature|Armature|char_paul_idle|BaseLayer.fbx",
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_walk__char_paul_walk|char_paul_walk|char_paul_walk|BaseLayer.fbx",
                             "Loop": true
                         },
                         {
                             "State": "Run",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_run__char_paul_run|Armature|mixamo.com|Layer0.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_run__char_paul_run|Armature.001|mixamo.com|Layer0.fbx",
                             "Loop": true
                         },
                         {
                             "State": "Crouch",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouch__Armature|Armature|char_paul_crouch|BaseLayer.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouchidle__char_paul_crouchidle|char_paul_crouchidle|char_paul_crouchidle|BaseLayer.fbx",
                             "Loop": true
-                        },
-                        {
-                            "State": "Death",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_dying__Armature|Armature|char_paul_dying|BaseLayer.fbx",
-                            "Loop": false
                         },
                         {
                             "State": "CrouchWalk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouchwalk__Armature|Armature|char_paul_crouchwalking|BaseLayer.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_crouchwalk__char_paul_crouchwalk|Armature.001|mixamo.com|Layer0.fbx",
                             "Loop": true
-                        },
-                        {
-                            "State": "CorpsePick",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpseup__char_paul_corpseup|char_paul_corpsecarry|char_paul_corpsecarry|Armature|mixamo.com.fbx",
-                            "Loop": false
-                        },
-                        {
-                            "State": "CorpseDrop",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsedown__char_paul_corpsedown|char_paul_corpsedown|char_paul_corpsedown|char_paul_corpsecarry.fbx",
-                            "Loop": false
                         },
                         {
                             "State": "CorpseCarry",
@@ -1737,6 +2655,101 @@
                             "State": "CorpseRun",
                             "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpserun__char_paul_corpserun|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
+                        },
+                        {
+                            "State": "CorpsePick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpseup__char_paul_corpseup|char_paul_corpseup|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CorpseDrop",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_corpsedown__char_paul_corpsedown|char_paul_corpsedown|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Hit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_hit__char_paul_hit|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Death",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_die__Armature|Armature|char_paul_dying|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_talk__Armature|Armature.001|char_paul_run|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "NoSignal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_nosignal__char_paul_nosignal|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_throwknife__char_paul_throwknife|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability3",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_throwstone__char_paul_throwstone|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_unsealthknife__char_paul_unsealthknife|Armature.001|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability1",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_stab__char_paul_stab|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability2",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_talk__Armature|Armature.001|char_paul_run|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "HeadHit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_headhit__char_paul_headhit|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "FallKnee",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_fallknees__char_paul_fallknees|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Knee",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_knees__char_paul_knees|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Shout",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_shouting__char_paul_shouting|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "GrabNeck",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_grabneck__char_paul_grabneck|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Neck",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_neckidle__char_paul_neckidle|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "ArmMove",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_armsmove__char_paul_armsmove|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Celebrate",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_paul_celebrate__char_paul_celebrate|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
                         }
                     ]
                 },
@@ -1790,6 +2803,22 @@
                 {
                     "Type": 6,
                     "Active": true
+                },
+                {
+                    "Type": 20,
+                    "Active": true,
+                    "Radius": 0.30000001192092896,
+                    "Height": 2,
+                    "StopHeight": 0.89999997615814209,
+                    "MaxSlope": 45,
+                    "Speed": 6,
+                    "AngularSpeed": 180,
+                    "Acceleration": 1,
+                    "StoppingDistance": 0,
+                    "PathType": 1,
+                    "NumPolys": 0,
+                    "NumStraight": 0,
+                    "NumSmooth": 0
                 }
             ]
         },
@@ -1803,7 +2832,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
@@ -1839,9 +2868,9 @@
                         10
                     ],
                     "Offset": [
-                        -47.317012786865234,
+                        -42.5,
                         0,
-                        194.67399597167969
+                        191.69999694824219
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -1996,7 +3025,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
@@ -2032,9 +3061,9 @@
                         10
                     ],
                     "Offset": [
-                        -47.167156219482422,
+                        -42.368274688720703,
                         -0.011444180272519588,
-                        194.670654296875
+                        191.62846374511719
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -2189,21 +3218,21 @@
             "Prefab Path": "Assets\/Prefabs\/Player_2.rgprefab",
             "tag": "Player",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -54.569999694824219,
-                        3.167561226291582e-05,
-                        186.22999572753906
+                        -42.400001525878906,
+                        0,
+                        180
                     ],
                     "Quaternion": [
                         0,
-                        0.4138224720954895,
                         0,
-                        0.91035759449005127
+                        0,
+                        1
                     ],
                     "RotationEditor": [
                         0,
@@ -2211,9 +3240,9 @@
                         0
                     ],
                     "Scale": [
-                        1.0000029802322388,
                         1,
-                        1.0000029802322388
+                        1,
+                        1
                     ]
                 },
                 {
@@ -2235,7 +3264,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1
+                    "Color Multiplier": 1.4700000286102295,
+                    "Outline Normals Thickness": 0.11999999731779099
                 },
                 {
                     "Type": 1,
@@ -2245,27 +3275,62 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "CrouchShoot",
+                    "Current Anim": "Ability2",
                     "Animations": [
                         {
-                            "State": "Walk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_walk__Armature|Armature|char_chani_walk|BaseLayer.fbx",
-                            "Loop": true
-                        },
-                        {
                             "State": "Idle",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_idle__Armature|Armature|char_chani_idle|BaseLayer.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_idle__Armature|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
                         },
                         {
-                            "State": "Shoot",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_shot__Armature|Armature|char_chani_shot|BaseLayer.fbx",
-                            "Loop": false
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_walk__char_chani_walk|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_run__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
                         },
                         {
                             "State": "Crouch",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouch__Armature|Armature|char_chani_crouch|BaseLayer.fbx",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchidle__Armature|Armature|mixamo.com|Layer0.fbx",
                             "Loop": true
+                        },
+                        {
+                            "State": "CrouchWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchwalk__Armature|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseCarry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpsecarry__char_chani_corpsecarry|Armature|Armature|Armature|Armature|Armature|Armature|Armature|.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpsewalk__char_chani_corpsewalk|char_chani_corpsewalk|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseRun",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpserun__char_chani_corpserun|char_chani_corpserun|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpsePick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpseup__char_chani_corpseup|Armature|Armature|Armature|Armature|Armature|Armature|Armature|.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CorpseDrop",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_corpsedown__char_chani_corpsedown|Armature|char_chani_corpsedown|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Hit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_hit__char_chani_hit|Armature|char_chani_hit|BaseLayer.fbx",
+                            "Loop": false
                         },
                         {
                             "State": "Death",
@@ -2273,13 +3338,43 @@
                             "Loop": false
                         },
                         {
-                            "State": "CrouchWalk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchwalk__Armature|Armature|char_chani_crouchwalk|BaseLayer.fbx",
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_talk__char_chani_talk|Armature|char_chani_talk|BaseLayer.fbx",
                             "Loop": true
                         },
                         {
-                            "State": "CrouchShoot",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_crouchshot__Armature|Armature|char_chani_crouchshot|BaseLayer.fbx",
+                            "State": "NoSignal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_nosignal__char_chani_no|Armature|char_chani_no|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability3Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_sgrenadeact__char_chani_sgrenadeact|Armature|char_chani_sgrenadeact|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability3",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_hscontrol__char_chani_hscontrol|Armature|char_chani_hscontrol|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Ability2",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_camouflage__char_chani_camouflage|Armature|char_chani_camouflage|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability1",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_stab__char_chani_stab|Armature|mixamo.com|Layer0.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_sgrenadeact__char_chani_sgrenadeact|Armature|char_chani_sgrenadeact|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_chani_sgrenadethrow__char_chani_sgrenadethrow|Armature|char_chani_sgrenadethrow|BaseLayer.fbx",
                             "Loop": false
                         }
                     ]
@@ -2363,7 +3458,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
@@ -2399,9 +3494,9 @@
                         10
                     ],
                     "Offset": [
-                        -54.569999694824219,
-                        3.167561226291582e-05,
-                        186.22999572753906
+                        -42.400001525878906,
+                        0,
+                        180
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -2556,7 +3651,7 @@
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
-            "Is Interactuable": false,
+            "Is Interactuable": true,
             "Components": [
                 {
                     "Type": 0,
@@ -2592,9 +3687,9 @@
                         10
                     ],
                     "Offset": [
-                        -54.678539276123047,
-                        -0.011412505060434341,
-                        186.12661743164062
+                        -42.393470764160156,
+                        -0.011444180272519588,
+                        179.85025024414063
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -2740,347 +3835,12 @@
             ]
         },
         {
-            "UUID": 47152571,
-            "Parent UUID": 417174774,
-            "Name": "High_Band",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        0,
-                        683.5,
-                        -10.399999618530273
-                    ],
-                    "Scale": [
-                        3.3333332538604736,
-                        0.23333333432674408,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 2000,
-                    "buttonHeight": 140,
-                    "lastButtonWidth": 746,
-                    "lastButtonHeight": 473.5,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1184583527,
-            "Parent UUID": 417174774,
-            "Name": "Low_Band",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        0,
-                        -683.5,
-                        -10.399999618530273
-                    ],
-                    "Scale": [
-                        3.3333332538604736,
-                        0.23333333432674408,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 2000,
-                    "buttonHeight": 140,
-                    "lastButtonWidth": 746,
-                    "lastButtonHeight": 473.5,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/UI\/black.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": false,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 13,
-                    "alpha": 1,
-                    "numOfAnimations": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1822328168,
-            "Parent UUID": 417174774,
-            "Name": "Cinematic",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/Cinematic.rgprefab",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "Cinematic_3",
-                    "pointer": 828144520,
-                    "type": 4,
-                    "componentTable": 0,
-                    "runGame": true,
-                    "bands": 0,
-                    "IdDialogue": 0,
-                    "IdLine": 0
-                }
-            ]
-        },
-        {
-            "UUID": 81378638,
-            "Parent UUID": 417174774,
-            "Name": "CinematicDialogue",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "Assets\/Prefabs\/CinematicDialogue.rgprefab",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 4,
-                    "ScriptName": "CinematicManager",
-                    "pointer": 828141024,
-                    "type": 4,
-                    "componentTable": 0
-                }
-            ]
-        },
-        {
-            "UUID": 1777589784,
-            "Parent UUID": 81378638,
-            "Name": "Dialogue",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Active": true,
-                    "Type": 19,
-                    "Position": [
-                        0,
-                        426.46502685546875,
-                        9.6000003814697266
-                    ],
-                    "Scale": [
-                        0.1666666716337204,
-                        0.1666666716337204,
-                        1
-                    ],
-                    "rotationEuler": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "buttonWidth": 100,
-                    "buttonHeight": 100,
-                    "lastButtonWidth": 746,
-                    "lastButtonHeight": 473.5,
-                    "MoveOnResizeX": true,
-                    "MoveOnResizeY": true
-                },
-                {
-                    "Type": 2,
-                    "Diffuse Path": "Assets\/Resources\/white.png",
-                    "Normal Map Path": "Assets\/Resources\/white.png",
-                    "Active": true,
-                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
-                    "Cast Shadows": true,
-                    "Interactuable Color": [
-                        0,
-                        0.30000001192092896,
-                        0
-                    ],
-                    "Opacity": 1,
-                    "Emissive Enabled": false,
-                    "Emissive Color": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Color Multiplier": 1
-                },
-                {
-                    "Type": 16,
-                    "buttonText": "Rabban ha atacado dos asentamientos más al\noeste de aquí, te está buscando Paul.",
-                    "fontPath": "Library\/Fonts\/Montserrat-Bold.ttf",
-                    "fontScale": 0.5,
-                    "textColor.r": 1,
-                    "textColor.g": 1,
-                    "textColor.b": 1,
-                    "TextFile": "-"
-                }
-            ]
-        },
-        {
-            "UUID": 87527391,
-            "Parent UUID": 417174774,
-            "Name": "ExitPoint",
-            "Active": true,
-            "Static": true,
-            "PrefabID": false,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": false,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        -62.088214874267578,
-                        0,
-                        207.50048828125
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 2021177439,
             "Parent UUID": 417174774,
             "Name": "Player_3",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "Assets\/Prefabs\/Player_3.rgprefab",
             "tag": "Player",
             "layer": "Default",
@@ -3090,15 +3850,15 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -54.299999237060547,
+                        -40,
                         0,
-                        184.80000305175781
+                        180
                     ],
                     "Quaternion": [
                         0,
                         0,
-                        -5.5879354476928711e-09,
-                        1.0000013113021851
+                        0,
+                        1
                     ],
                     "RotationEditor": [
                         0,
@@ -3130,7 +3890,8 @@
                         0,
                         0
                     ],
-                    "Color Multiplier": 1.3999999761581421
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 0.11999999731779099
                 },
                 {
                     "Type": 1,
@@ -3140,22 +3901,22 @@
                 {
                     "Type": 9,
                     "Active": true,
-                    "Current Anim": "Death",
+                    "Current Anim": "NoSignal",
                     "Animations": [
-                        {
-                            "State": "Walk",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_walk__Armature|Armature|Take 001|BaseLayer.fbx",
-                            "Loop": true
-                        },
                         {
                             "State": "Idle",
                             "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_idle__Armature|Armature|Take 001|BaseLayer.fbx",
                             "Loop": true
                         },
                         {
-                            "State": "Shoot",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_shootstunner__Armature|Armature|Take 001|BaseLayer.fbx",
-                            "Loop": false
+                            "State": "Walk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_walk__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Run",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_run__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
                         },
                         {
                             "State": "Crouch",
@@ -3163,18 +3924,93 @@
                             "Loop": true
                         },
                         {
-                            "State": "Death",
-                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_die__Armature|Armature|Take 001|BaseLayer.fbx",
-                            "Loop": false
-                        },
-                        {
                             "State": "CrouchWalk",
                             "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouchwalk__Armature|Armature|Take 001|BaseLayer.fbx",
                             "Loop": true
                         },
                         {
-                            "State": "CrouchShoot",
+                            "State": "CrouchStunner",
                             "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_crouchshot__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CorpseCarry",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_corpsecarry__char_stilgar_corpsecarry|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseWalk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_carrywalk__char_stilgar_carrywalk|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpseRun",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_corpserun__char_stilgar_corpserun|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "CorpsePick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_corpseup__char_stilgar_corpseup|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "CorpseDrop",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_corpsedown__char_stilgar_corpsedown|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Hit",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_hitshot__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Death",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_die__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Talk",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_talk__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": true
+                        },
+                        {
+                            "State": "Ability3Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_preparetrap__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability3",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_settrap__char_stilgar_preparetrap|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability2Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_unseathstunner__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability2",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_shootstunner__char_stilgar_shootstunner|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability1Pick",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_unseathsword__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability1",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_cutsword__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Ability4",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_whistle__Armature|Armature|Take 001|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "NoSignal",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/char_stilgar_nosignal__Armature|Armature|Take 001|BaseLayer.fbx",
                             "Loop": false
                         }
                     ]
@@ -3231,22 +4067,6 @@
                     "Active": true
                 },
                 {
-                    "Type": 4,
-                    "ScriptName": "Player",
-                    "pointer": 828158352,
-                    "type": 4,
-                    "componentTable": 0,
-                    "hitPoints": 0,
-                    "force": 100,
-                    "paused": false,
-                    "invisible": false,
-                    "dead": false,
-                    "isHidden": false,
-                    "godMode": false,
-                    "stunned": false,
-                    "controled": false
-                },
-                {
                     "Type": 20,
                     "Active": true,
                     "Radius": 0.30000001192092896,
@@ -3265,80 +4085,12 @@
             ]
         },
         {
-            "UUID": 2143263803,
-            "Parent UUID": 2021177439,
-            "Name": "Area",
-            "Active": true,
-            "Static": true,
-            "PrefabID": true,
-            "Prefab Path": "None",
-            "tag": "AbilityRange",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        89.604888916015625,
-                        0.20000520348548889,
-                        -130.45269775390625
-                    ],
-                    "Quaternion": [
-                        0,
-                        0,
-                        0,
-                        1
-                    ],
-                    "RotationEditor": [
-                        -0,
-                        0,
-                        -0
-                    ],
-                    "Scale": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "Type": 8,
-                    "Active": true,
-                    "Light Type": 2,
-                    "Position": [
-                        35.304889678955078,
-                        0.2000042051076889,
-                        54.347305297851562
-                    ],
-                    "Ambient": [
-                        1,
-                        1,
-                        1
-                    ],
-                    "Diffuse": [
-                        0.0039215688593685627,
-                        0.023529412224888802,
-                        0.25098040699958801
-                    ],
-                    "Specular": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Intensity": 0,
-                    "Constant": 0.10000000149011612,
-                    "Linear": -0.57400000095367432,
-                    "Quadratic": 0
-                }
-            ]
-        },
-        {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
             "Name": "WalkParticles_3",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -3378,9 +4130,9 @@
                         10
                     ],
                     "Offset": [
-                        -54.299999237060547,
+                        -40,
                         0,
-                        184.80000305175781
+                        180
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -3531,7 +4283,7 @@
             "Name": "SlashParticles",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -3571,9 +4323,9 @@
                         10
                     ],
                     "Offset": [
-                        -54.99810791015625,
+                        -40.698108673095703,
                         1.8857455253601074,
-                        184.7646484375
+                        179.96464538574219
                     ],
                     "MaxDuration": 1.0529999732971191,
                     "Looping": false,
@@ -3651,193 +4403,12 @@
             ]
         },
         {
-            "UUID": 1223679345,
-            "Parent UUID": 2021177439,
-            "Name": "GetHitParticles_3",
-            "Active": true,
-            "Static": true,
-            "PrefabID": true,
-            "Prefab Path": "None",
-            "tag": "Untagged",
-            "layer": "Default",
-            "Is Interactuable": true,
-            "Components": [
-                {
-                    "Type": 0,
-                    "Active": true,
-                    "Position": [
-                        0,
-                        1.345757007598877,
-                        0.00046384023153223097
-                    ],
-                    "Quaternion": [
-                        0.70779472589492798,
-                        0,
-                        0,
-                        0.70641815662384033
-                    ],
-                    "RotationEditor": [
-                        0,
-                        0,
-                        0
-                    ],
-                    "Scale": [
-                        1,
-                        1.0000039339065552,
-                        1.0000039339065552
-                    ]
-                },
-                {
-                    "Type": 21,
-                    "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
-                    ],
-                    "Offset": [
-                        -54.299999237060547,
-                        1.345757007598877,
-                        184.80046081542969
-                    ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": 1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        },
-                        {
-                            "Emitter: Max Particles": 500,
-                            "Emitter: Particles Per Second": 10000,
-                            "Emitter: Is Active": true,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 9.9999997473787516e-05,
-                            "Emitter: Current Timer": 9.9999997473787516e-05,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 2,
-                            "Cubical: Spread on Y": 2,
-                            "Cubical: Spread on Z": 2,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.10000000149011612,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 1,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 1,
-                            "Tiles: X": 1,
-                            "Tiles: Y": 1,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_bloodsmall.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 1,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.44999998807907104,
-                                    "PESpawnCone: Height": -1,
-                                    "Effect Type": 4
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "UUID": 1863195749,
             "Parent UUID": 2021177439,
             "Name": "RunParticles_3",
             "Active": true,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -3877,9 +4448,9 @@
                         10
                     ],
                     "Offset": [
-                        -54.293468475341797,
+                        -39.99346923828125,
                         -0.011444180272519588,
-                        184.65025329589844
+                        179.85025024414063
                     ],
                     "MaxDuration": 0,
                     "Looping": true,
@@ -4025,12 +4596,12 @@
             ]
         },
         {
-            "UUID": 1863195749,
+            "UUID": 1314407788,
             "Parent UUID": 2021177439,
-            "Name": "FallDeadParticles_3",
-            "Active": true,
+            "Name": "Sword",
+            "Active": false,
             "Static": true,
-            "PrefabID": true,
+            "PrefabID": false,
             "Prefab Path": "None",
             "tag": "Untagged",
             "layer": "Default",
@@ -4040,9 +4611,9 @@
                     "Type": 0,
                     "Active": true,
                     "Position": [
-                        -0.21340128779411316,
-                        -0.045323491096496582,
-                        1.309762716293335
+                        0,
+                        0,
+                        0
                     ],
                     "Quaternion": [
                         0,
@@ -4056,103 +4627,135 @@
                         0
                     ],
                     "Scale": [
-                        1.1365548372268677,
-                        1.1365548372268677,
-                        1.1365548372268677
+                        1,
+                        1,
+                        1
                     ]
                 },
                 {
-                    "Type": 21,
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Abilities models\/wpn_stilgar_sword_texture_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/white.png",
                     "Active": true,
-                    "Size": [
-                        10,
-                        10,
-                        10
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0.30000001192092896,
+                        0
                     ],
-                    "Offset": [
-                        -54.513401031494141,
-                        -0.045323487371206284,
-                        186.10977172851562
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
                     ],
-                    "MaxDuration": 0.39500001072883606,
-                    "Looping": false,
-                    "Emitters": [
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/wpn_stilgar_unseathsword__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Attack",
+                    "Animations": [
                         {
-                            "Emitter: Max Particles": 200,
-                            "Emitter: Particles Per Second": 30,
-                            "Emitter: Is Active": false,
-                            "Emitter: To Delete": false,
-                            "Emitter: Timer": 0.033333335071802139,
-                            "Emitter: Current Timer": 0.0013333335518836975,
-                            "Emitter: Is Cubical": false,
-                            "Cubical: Spread on X": 0.5,
-                            "Cubical: Spread on Y": 0,
-                            "Cubical: Spread on Z": 0.5,
-                            "Particle Reference Position": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Velocity": [
-                                0,
-                                0.0020000000949949026,
-                                0
-                            ],
-                            "Particle Reference Acceleration": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Direction": [
-                                0,
-                                0,
-                                0
-                            ],
-                            "Particle Reference Color Begin": [
-                                1,
-                                0,
-                                0,
-                                1
-                            ],
-                            "Particle Reference Size Begin": 0.5,
-                            "Particle Reference Lifetime": 10,
-                            "Particle Reference Rotation Amount": 0,
-                            "Loop Timer": 0.10000000149011612,
-                            "Tiles: X": 5,
-                            "Tiles: Y": 4,
-                            "Texture Assets Path": "Assets\/Resources\/ParticlesTexture\/part_dust_corpse.png",
-                            "Shader Assets Path": "Assets\/Resources\/Shaders\/particlesBehaviour.shader",
-                            "Effects": [
-                                {
-                                    "PES: Start size": 0.5,
-                                    "PES: End size": 0.5,
-                                    "Effect Type": 2
-                                },
-                                {
-                                    "PEC: Start color": [
-                                        0.91666668653488159,
-                                        0.59888887405395508,
-                                        0.18333332240581512,
-                                        1
-                                    ],
-                                    "PEC: End color": [
-                                        0.98333334922790527,
-                                        0.61731487512588501,
-                                        0.25129631161689758,
-                                        0.39215686917304993
-                                    ],
-                                    "Effect Type": 3
-                                },
-                                {
-                                    "PEShape: Offset X": 0,
-                                    "PEShape: Offset Y": 0,
-                                    "PEShape: Offset Z": 0,
-                                    "PEShape: Shape Type": 2,
-                                    "PESpawnCone: Radius": 0.60000002384185791,
-                                    "PESpawnCone: Height": 0.20000000298023224,
-                                    "Effect Type": 4
-                                }
-                            ]
+                            "State": "Unseath",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/wpn_stilgar_unseathsword__wpn_stilgar_unseathsword|Armature|wpn_stilgar_unseathsword|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Attack",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/wpn_stilgar_cutsword__wpn_stilgar_cutsword|Armature|wpn_stilgar_cutsword|BaseLayer.fbx",
+                            "Loop": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "UUID": 400394468,
+            "Parent UUID": 2021177439,
+            "Name": "Stunner",
+            "Active": false,
+            "Static": true,
+            "PrefabID": false,
+            "Prefab Path": "None",
+            "tag": "Untagged",
+            "layer": "Default",
+            "Is Interactuable": true,
+            "Components": [
+                {
+                    "Type": 0,
+                    "Active": true,
+                    "Position": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Quaternion": [
+                        0,
+                        0,
+                        0,
+                        1
+                    ],
+                    "RotationEditor": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Scale": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "Type": 2,
+                    "Diffuse Path": "Assets\/Resources\/Abilities models\/wpn_stilgar_stunner_basecolor.png",
+                    "Normal Map Path": "Assets\/Resources\/Abilities models\/wpn_stilgar_stunner_normal.png",
+                    "Active": true,
+                    "Shader Assets Path": "Assets\/Resources\/Shaders\/default.shader",
+                    "Cast Shadows": true,
+                    "Interactuable Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Opacity": 1,
+                    "Emissive Enabled": false,
+                    "Emissive Color": [
+                        0,
+                        0,
+                        0
+                    ],
+                    "Color Multiplier": 1,
+                    "Outline Normals Thickness": 1
+                },
+                {
+                    "Type": 1,
+                    "Path": "Assets\/Resources\/Animations\/wpn_stilgar_shootstunner__Malla.fbx",
+                    "Active": true
+                },
+                {
+                    "Type": 9,
+                    "Active": true,
+                    "Current Anim": "Attack",
+                    "Animations": [
+                        {
+                            "State": "Unseath",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/wpn_stilgar_unseathstunner__wpn_stilgar_unseathstunner|Armature|wpn_stilgar_unseathstunner|BaseLayer.fbx",
+                            "Loop": false
+                        },
+                        {
+                            "State": "Attack",
+                            "Path Anim Assets": "Assets\/Resources\/Animations\/wpn_stilgar_shootstunner__wpn_stilgar_shootstunner|Armature|wpn_stilgar_shootstunner|BaseLayer.fbx",
+                            "Loop": false
                         }
                     ]
                 }
