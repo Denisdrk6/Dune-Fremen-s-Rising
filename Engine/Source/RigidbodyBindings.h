@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Application.h"
+#include "Physics3D.h"
 #include "MonoManager.h"
 
 #include "GameObject.h"
@@ -159,4 +160,11 @@ void EraseTrigger(MonoObject* go, MonoObject* other)
 	RigidBodyComponent* rbOther = GetComponentMono<RigidBodyComponent*>(other);
 	if(std::find(rb->triggerList.begin(), rb->triggerList.end(), rbOther) != rb->triggerList.end())
 		rb->triggerList.erase(std::find(rb->triggerList.begin(), rb->triggerList.end(), rbOther));
+}
+
+void IsActive(MonoObject* go, bool active)
+{
+	RigidBodyComponent* rb = GetComponentMono<RigidBodyComponent*>(go);
+	if (active) app->physics->ActivateCollision(rb->GetBody());
+	else app->physics->DesactivateCollision(rb->GetBody());
 }

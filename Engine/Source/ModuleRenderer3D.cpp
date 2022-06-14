@@ -266,7 +266,7 @@ bool ModuleRenderer3D::PostUpdate()
 
 	// Shadow Pass ===================================
 	
-	if (dirLight->generateShadows)
+	if (dirLight->generateShadows && allShadowsEnabled)
 	{
 		GenerateShadows(objects, nullptr, shadowsAABB);
 	}
@@ -314,13 +314,23 @@ bool ModuleRenderer3D::PostUpdate()
 	//glClear(GL_DEPTH_BUFFER_BIT);
 	fbo->Unbind();
 
+#else
+
+	// Solves the bug of the shadow checkbox
+	static bool state = false;
+	if (!state)
+	{
+		state = true;
+		GenerateShadows(objects, app->sceneManager->GetCurrentScene()->mainCamera, shadowsAABB);
+		return true;
+	}
+	// ====================================
 #endif
 
-	if (dirLight->generateShadows)
+	if (dirLight->generateShadows && allShadowsEnabled)
 	{
 		GenerateShadows(objects, app->sceneManager->GetCurrentScene()->mainCamera, shadowsAABB);
 	}
-
 
 	// Scene Pass ====================================
 	mainCameraFbo->Bind();
@@ -531,6 +541,7 @@ bool ModuleRenderer3D::LoadConfig(JsonParsing& node)
 	wireMode = node.GetJsonBool("wire mode");
 	navMesh = node.GetJsonBool("navmesh");
 	drawGrid = node.GetJsonBool("draw grid");
+	allShadowsEnabled = node.GetJsonBool("shadows");
 
 	SetVsync(vsync);
 	SetDepthTest();
@@ -558,6 +569,7 @@ bool ModuleRenderer3D::SaveConfig(JsonParsing& node)
 	node.SetNewJsonBool(node.ValueToObject(node.GetRootValue()), "wire mode", wireMode);
 	node.SetNewJsonBool(node.ValueToObject(node.GetRootValue()), "navmesh", navMesh);
 	node.SetNewJsonBool(node.ValueToObject(node.GetRootValue()), "draw grid", drawGrid);
+	node.SetNewJsonBool(node.ValueToObject(node.GetRootValue()), "shadows", allShadowsEnabled);
 
 	return true;
 }

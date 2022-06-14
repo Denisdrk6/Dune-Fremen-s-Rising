@@ -80,6 +80,9 @@ namespace RagnarEngine
 
         [MethodImplAttribute(MethodImplOptions.InternalCall)]
         public extern void SetCollisionType(CollisionType type);
+
+        [MethodImplAttribute(MethodImplOptions.InternalCall)]
+        public extern void IsActive(Rigidbody owner, bool active);
         public extern Vector3 linearVelocity
         {
             [MethodImplAttribute(MethodImplOptions.InternalCall)]

@@ -14,7 +14,8 @@ public class Player : RagnarComponent
     {
         NONE,
         CROUCH,
-        CARRY
+        CARRY,
+        TALK
     }
 
     // Components
@@ -220,6 +221,12 @@ public class Player : RagnarComponent
                 gameObject.SetSizeAABB(gameObject.GetMinAABB(), maxPoint);
             }
 
+            if (action == Actions.TALK)
+            {
+                action = Actions.NONE;
+                ReloadState();
+            }
+
             ///////// SOUNDS /////////
             // Reload Sound
             if (Input.GetKey(KeyCode.R) == KeyState.KEY_DOWN)
@@ -269,12 +276,14 @@ public class Player : RagnarComponent
     {
         agent.ClearPath();
         move = Movement.IDLE;
-        animationComponent.PlayAnimation("Talk");
+        if (action == Actions.NONE)
+            action = Actions.TALK;
         if (gameObject.name == "Player_3")
         {
             stunner.isActive = false;
             sword.isActive = false;
         }
+        ReloadState();
     }
 
     private void ReloadState()
@@ -292,6 +301,9 @@ public class Player : RagnarComponent
                         break;
                     case Actions.CARRY:
                         animationComponent.PlayAnimation("CorpseCarry");
+                        break;
+                    case Actions.TALK:
+                        animationComponent.PlayAnimation("Talk");
                         break;
                 }
 

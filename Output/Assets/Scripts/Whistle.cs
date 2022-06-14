@@ -18,11 +18,15 @@ public class Whistle : RagnarComponent
 		goRB.IgnoreCollision(player, true);
 
 		player.GetComponent<Player>().PlayAudioClip("WPN_WHISTLE");
-		//player.GetComponent<Animation>().PlayAnimation("Ability4");
+
+		GameObject sound = InternalCalls.InstancePrefab("SoundArea", gameObject.transform.globalPosition);
+		goRB.IgnoreCollision(sound, true);
+		sound.GetComponent<SoundAreaManager>().stablishedTimer = 1.5f;
+		sound.GetComponent<SoundAreaManager>().UpdateRadius(11.0f);
 	}
 	public void Update()
 	{
-		if(timer > 1.5f)
+		if(timer > 2f)
         {
 			timer = 0f;
 			InternalCalls.Destroy(gameObject);

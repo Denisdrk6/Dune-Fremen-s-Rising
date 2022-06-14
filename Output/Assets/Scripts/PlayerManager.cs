@@ -38,6 +38,7 @@ public class PlayerManager : RagnarComponent
     GameObject stunner;
     GameObject circle;
 
+    public Characters bufferedPlayableCharacter;
     private int bufferedCharacter;
     private int bufferedAbility;
     public bool buffered = false;
@@ -170,7 +171,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1f)
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -179,7 +180,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -188,7 +189,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1.2f)
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                             SubstractCharges(bufferedAbility);
@@ -198,7 +199,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 2.5f)
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -209,7 +210,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1f)
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -218,7 +219,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -227,7 +228,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -236,7 +237,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 1f)
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -247,7 +248,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - players[bufferedCharacter].GetComponent<Animation>().GetDuration())
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -256,11 +257,11 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 0.8f)
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                             SubstractCharges(bufferedAbility);
-                            if (playableCharacter.abilities[bufferedAbility].charges == 0)
+                            if (bufferedPlayableCharacter.abilities[bufferedAbility].charges == 0)
                             {
                                 GameObject.Find("Quest System").GetComponent<QuestSystem>().completeStunner = true;
                             }
@@ -270,7 +271,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().HasFinished())
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                             SubstractCharges(bufferedAbility);
@@ -280,7 +281,7 @@ public class PlayerManager : RagnarComponent
                     {
                         if (players[bufferedCharacter].GetComponent<Animation>().GetLoopTime() > players[bufferedCharacter].GetComponent<Animation>().GetDuration() - 8f)
                         {
-                            InternalCalls.InstancePrefab(playableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
+                            InternalCalls.InstancePrefab(bufferedPlayableCharacter.abilities[bufferedAbility].prefabPath, playableCharacter.pos);
                             buffered = false;
                             StartCooldown(bufferedAbility);
                         }
@@ -601,6 +602,7 @@ public class PlayerManager : RagnarComponent
                 buffered = true;
                 bufferedAbility = (int)playableCharacter.state - 1;
                 bufferedCharacter = characterSelected;
+                bufferedPlayableCharacter = playableCharacter;
 
                 switch(characterSelected)
                 {
@@ -694,15 +696,15 @@ public class PlayerManager : RagnarComponent
 
     private void SubstractCharges(int ability)
     {
-        if (playableCharacter.abilities[ability].charges != -1 && playableCharacter.abilities[ability].charges != 0)
+        if (bufferedPlayableCharacter.abilities[ability].charges != -1 && bufferedPlayableCharacter.abilities[ability].charges != 0)
         {
-            playableCharacter.abilities[ability].charges--;
+            bufferedPlayableCharacter.abilities[ability].charges--;
         }
     }
 
     private void StartCooldown(int ability)
     {
-        playableCharacter.abilities[ability].onCooldown = true;
+        bufferedPlayableCharacter.abilities[ability].onCooldown = true;
     }
 
     private void PlayerCases()
@@ -927,12 +929,15 @@ public class PlayerManager : RagnarComponent
                 if (playableCharacter.abilities[abilityID].onCooldown || !canDoAbility3)
                     ability3Bg.SetImageGeneralColor(128, 128, 128);
 
+                if (playableCharacter.name == "Paul Atreides" && playableCharacter.abilities[abilityID].charges <= 0)
+                    ability3Bg.SetImageGeneralColor(128, 128, 128);
+
                 if (temp <= 0.0f || (playableCharacter.abilities[abilityID].counter <= 0.0f))
                     cd3.text = "";
 
                 if (!playableCharacter.abilities[abilityID].onCooldown && canDoAbility3)
                 {
-                    if (playableCharacter.name == "Paul Atreides")
+                    if (playableCharacter.name == "Paul Atreides" && playableCharacter.abilities[abilityID].charges > 0)
                     {
                         ability3Bg.SetImageGeneralColor(11, 212, 0);
                     }

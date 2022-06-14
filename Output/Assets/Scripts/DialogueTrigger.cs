@@ -132,7 +132,7 @@ public class DialogueTrigger : RagnarComponent
     public void SetUsed(bool used) { isUsed = used; }
 }
 
-/* ESTO DEBE ESTAR EN EL CÓDIGO DEL BOSS CUANDO MUERA
+/* ESTO DEBE ESTAR EN EL Cï¿½DIGO DEL BOSS CUANDO MUERA
    GameObject.Find("Quest System").GetComponent<QuestSystem>().levelFinished = true;
             other.gameObject.GetComponent<DialogueTrigger>().ActiveDialoguebyID(9);
  */
