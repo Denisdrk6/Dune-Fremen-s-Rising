@@ -57,9 +57,7 @@
 		</node>
 		<node AuthorId="0" Line="You are not the only one with a score to settle with the Harkonnen and I believe he has a plan."> 
 		</node>
-		<node AuthorId="1" Line="No way..."> 
-		</node>
-		<node AuthorId="0" Line="We have them on our own doorstep, we can end this at once."> 
+		<node AuthorId="0" Line="They are coming here, we can end this at once."> 
 		</node>
 		<node AuthorId="1" Line="Wait, we can't just act on that way."> 
 		</node>
@@ -138,8 +136,6 @@
 	
 	<!-- AuthorId:  0=Paul / 1=Chani / 6=Lady Jessica / 7=Stilgar -->
 	<Dialogue Id="4">
-		<!--<node AuthorId="3" Line="Let's see who we have here."> 
-		</node>
 		<node AuthorId="6" Line="What is he doing here?"> 
 		</node>
 		<node AuthorId="7" Line="He apparently likes to draw attention to himself, but there are guards everywhere."> 
@@ -199,9 +195,7 @@
 		</node>
 		<node AuthorId="1" Line="We follow you, old man."> 
 		</node>
-		<node AuthorId="0" Line="Let's put an end to this at once."> 
-		</node>
-		<node AuthorId="7" Line="There are more guards since they took the palace, if you find anything useful we can make our way through more easily."> 
+		<node AuthorId="0" Line="Let's finish this."> 
 		</node>
 		
 	</Dialogue>

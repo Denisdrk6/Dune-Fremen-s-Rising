@@ -58,8 +58,6 @@
 		</node>
 		<node AuthorId="0" Line="No eres la única que tiene alguna cuenta pendiente con los Harkonnen y creo que él tiene un plan."> 
 		</node>
-		<node AuthorId="1" Line="No puede ser..."> 
-		</node>
 		<node AuthorId="0" Line="Los tenemos en nuestra propia puerta, podemos acabar con esto de una vez."> 
 		</node>
 		<node AuthorId="1" Line="Espera, no podemos actuar así sin más."> 
@@ -94,8 +92,6 @@
 		<node AuthorId="6" Line="¿Tú te das cuenta de lo que podría haber ocurrido?"> 
 		</node>
 		<node AuthorId="0" Line="Lo tenía delante, sólo necesitaba algo mas de tiempo."> 
-		</node>
-		<node AuthorId="7" Line="¡¿Tiempo? ¿Eres siquiera consciente de las vidas que hay en juego? No todo gira en torno al honor de los Atreides, Paul!."> 
 		</node>
 		<node AuthorId="7" Line="Te has arriesgado demasiado."> 
 		</node>
@@ -137,8 +133,6 @@
 		<node AuthorId="0" Line="Podrían encontrarlos igual."> 
 		</node>
 		<node AuthorId="1" Line="Quieres acercarte a los de la puerta a preguntar si los han visto?"> 
-		</node>
-		<node AuthorId="0" Line="Espera, a dónde vas?"> 
 		</node>
 		<node AuthorId="1" Line="No creerás en serio que ibamos a ir a preguntarles?"> 
 		</node>
