@@ -32,6 +32,8 @@ public class Cinematic_3 : RagnarComponent
     bool kneePaul = false;
     bool moveChani = false;
 
+    //bool inMove = true;
+
     public int IdLine = 0;
     enum CinematicState
     {
@@ -70,6 +72,9 @@ public class Cinematic_3 : RagnarComponent
 
         dialogues = GameObject.Find("CinematicDialogue").GetComponent<CinematicManager>();
 
+        dialogues.SetInMove(true);
+
+
         //-----------
         state = CinematicState.FIRST;
         //-----------
@@ -105,7 +110,10 @@ public class Cinematic_3 : RagnarComponent
         {
             //if (!moveChani)
             //{
-                GameObject.Find("Boss").GetComponent<NavAgent>().CalculatePath(GameObject.Find("ExitPoint").transform.globalPosition);
+            // Empeza liena 6
+            dialogues.SetInMove(true);
+
+            GameObject.Find("Boss").GetComponent<NavAgent>().CalculatePath(GameObject.Find("ExitPoint").transform.globalPosition);
                 GameObject.Find("Boss").GetComponent<NavAgent>().MovePath();
                 GameObject.Find("Undistractable Enemy 2").GetComponent<NavAgent>().CalculatePath(GameObject.Find("ExitPoint").transform.globalPosition);
                 GameObject.Find("Undistractable Enemy 2").GetComponent<NavAgent>().MovePath();
@@ -318,7 +326,9 @@ public class Cinematic_3 : RagnarComponent
         anim4.PlayAnimation("Shout");
         Animation anim = GameObject.Find("Player").GetComponent<Animation>();
         anim.PlayAnimation("HeadHit");
-        
+        //Comienza linea 0
+        dialogues.SetInMove(false);
+
     }
     void KneePaul()
     {
@@ -348,6 +358,8 @@ public class Cinematic_3 : RagnarComponent
 
     void FightChani()
     {
+        //Acaba linea 6
+        dialogues.SetInMove(false);
         GameObject.Find("Player_2").GetComponent<NavAgent>().ClearPath();
         GameObject.Find("Player_3").GetComponent<NavAgent>().speed = 0;
         GameObject.Find("Player_3").GetComponent<NavAgent>().ClearPath();

@@ -12,6 +12,8 @@ public class CinematicManager : RagnarComponent
     private bool endDialogue;
     private AudioSource SceneAudio;
 
+    private bool inMove = false;
+
     enum State
     {
 		START,
@@ -24,8 +26,9 @@ public class CinematicManager : RagnarComponent
     int state;
     String nextScene;
     String lenguage;
-    
-	public void Start()
+
+
+    public void Start()
 	{
         indexLine = 0;
         text = GameObject.Find("Dialogue");
@@ -40,7 +43,7 @@ public class CinematicManager : RagnarComponent
         posX = -(InternalCalls.GetRegionGame().x / 4);
         /*pos.Set(posX, posY + 10, text.GetComponent<Transform2D>().position2D.z + 20);
         text.GetComponent<Transform2D>().position2D = pos;*/
-
+        inMove = false;
 
         pos.Set(posX, -(InternalCalls.GetRegionGame().y / 2)+80, text.GetComponent<Transform2D>().position2D.z + 20);
         text.GetComponent<Transform2D>().position2D = pos;
@@ -53,15 +56,23 @@ public class CinematicManager : RagnarComponent
             case 0:// Start
 
                 indexLine = 0;
+
                 state = 1;
+                
                 break;
             case 1:// Update
+
+                if (IdDialogue == 2 && (indexLine == 0 || indexLine == 6) && inMove == true)
+                {
+                    state = 4;
+                    break;
+                }
 
                 state = 2;
                 UpdateDialogue();
                 break;
             case 2:// Imputs
-
+                
                 InCinematic();
                 break;
             case 3:// End
@@ -72,7 +83,11 @@ public class CinematicManager : RagnarComponent
                 break;
             case 4:// NONE
 
-
+                text.GetComponent<UIText>().text = " ";
+                if (!inMove)
+                {
+                    state = 1;
+                }
                 break;
             default:
                 break;
@@ -102,7 +117,13 @@ public class CinematicManager : RagnarComponent
             indexLine++;
         else // End dialogue
             state = 3;
-        
+
+        if (IdDialogue == 2 && (indexLine == 0 || indexLine == 6))
+        {
+            inMove = true;
+            state = 4;
+        }
+
     }
 
     void UpdateDialogue()
@@ -148,6 +169,10 @@ public class CinematicManager : RagnarComponent
         cinematic.GetComponent<Cinematic_7>().SetLine(indexLine);
 
     }
+
+    public void SetInMove(bool x) { inMove = x; }
+
+    public bool GetInMove() { return inMove; }
 
     public void SetIDDialogue(int ID,String _nextScene) {
         endDialogue = false;
