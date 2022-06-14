@@ -37,7 +37,8 @@ public class DialogueTrigger : RagnarComponent
                 
                 break;
             case 4:
-               
+
+                break;
             case 5:
                 // Gameplay
                 if (isUsed)
@@ -59,7 +60,8 @@ public class DialogueTrigger : RagnarComponent
                     LoadSceneWin();
                 break;
             case 10:
-              
+
+                break;
             case 11:
                 // Gameplay
                 
