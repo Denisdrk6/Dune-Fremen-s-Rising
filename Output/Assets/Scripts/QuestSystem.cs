@@ -207,7 +207,20 @@ public class QuestSystem : RagnarComponent
 		else if (SceneManager.currentSceneName == "build3")
 			level = 3;
 
-		if(level == 0)
+		showJournal = false;
+		showMain = true;
+		showSecondary = false;
+		showCompleted = false;
+
+		completedButton = GameObject.Find("Boton Completadas");
+		mainButton = GameObject.Find("Boton Principales");
+		secondaryButton = GameObject.Find("Boton Secundarias");
+
+		completedButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+		mainButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+		secondaryButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
+
+		if (level == 0)
         {
 			isSceneWin = true;
 			if (SceneManager.lastSceneName == "build")
@@ -216,6 +229,13 @@ public class QuestSystem : RagnarComponent
 				level = 2;
 			else if (SceneManager.lastSceneName == "build3")
 				level = 3;
+
+			showMain = false;
+			showSecondary = false;
+			showCompleted = true;
+
+			completedButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+			mainButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
 		}
 
 		mainQuestNames = GameObject.Find("Titulo Principales");
@@ -225,23 +245,14 @@ public class QuestSystem : RagnarComponent
 		questId = GameObject.Find("Id");
 		questState = GameObject.Find("Estado");
 		questType = GameObject.Find("Tipo");
-		mainButton = GameObject.Find("Boton Principales");
-		secondaryButton = GameObject.Find("Boton Secundarias");
-		completedButton = GameObject.Find("Boton Completadas");
-		completedButton.GetComponent<UIButton>().SetButtonTextColor(81, 81, 81);
-		mainButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
-		secondaryButton.GetComponent<UIButton>().SetButtonTextColor(255, 255, 255);
+		
 		questBc = GameObject.Find("questBc");
 		questBord = GameObject.Find("questBord");
 		MissButton = GameObject.Find("MissButton");
 		GameState = GameObject.Find("Background");
 		questBordT = questBord.GetComponent<Transform2D>();
 		questBcT = questBc.GetComponent<Transform2D>();
-
-		showJournal = false;
-		showMain = true;
-		showSecondary = false;
-		showCompleted = false;
+		
 		position = new Vector3(0.0f, 0.0f, 0.0f);
 		mainButton.isActive = false;
 		secondaryButton.isActive = false;
@@ -678,43 +689,7 @@ public class QuestSystem : RagnarComponent
         {
 			for (int i = 0; i < completedQuestList.Count; ++i)
 			{
-				completedQuests += completedQuestList[i].GetQuestName().ToString();
-				if (secondaryQuestList[i].GetQuestId() == 3)
-				{
-					completedQuests += "    (" + enemiesControlled.ToString() + "/3)" + "\n    ";
-				}
-				else if (secondaryQuestList[i].GetQuestId() == 4)
-				{
-					completedQuests += "    (" + enemiesThrowingKnife.ToString() + "/5)" + "\n    ";
-				}
-				else if (secondaryQuestList[i].GetQuestId() == 5)
-				{
-					completedQuests += "    (" + enemiesDistractedStone.ToString() + "/5)" + "\n    ";
-				}
-				else if (secondaryQuestList[i].GetQuestId() == 12)
-				{
-					completedQuests += "    (" + enemiesCamouflage.ToString() + "/3)" + "\n    ";
-				}
-				else if (secondaryQuestList[i].GetQuestId() == 13)
-				{
-					completedQuests += "    (" + enemiesHunterSeeker.ToString() + "/3)" + "\n    ";
-				}
-				else if (secondaryQuestList[i].GetQuestId() == 14)
-				{
-					completedQuests += "    (" + enemiesGrenade.ToString() + "/4)" + "\n    ";
-				}
-				else if (secondaryQuestList[i].GetQuestId() == 21)
-				{
-					completedQuests += "    (" + enemiesTrap.ToString() + "/3)" + "\n    ";
-				}
-				else if (secondaryQuestList[i].GetQuestId() == 22)
-				{
-					completedQuests += "    (" + enemiesWhistle.ToString() + "/3)" + "\n    ";
-				}
-				else
-				{
-					completedQuests += "\n    ";
-				}
+				completedQuests += completedQuestList[i].GetQuestName().ToString() + "\n\n";				
 			}
 		}
 		else
